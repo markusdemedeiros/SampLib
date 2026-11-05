@@ -4,3 +4,4 @@ import SampLib.Basic
 import SampLib.Templates
 import Samplers
 import SampLib.Samplers.RealCoin
+import SampLib.Samplers.VonNeumann

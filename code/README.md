@@ -8,7 +8,7 @@ Uniform integer/real draws are the only probabilistic primitives used.
 
 This is a broad initial implementation set, not complete coverage of Occil's corpus.
 It has statistical interpreter tests. The [repository README](../README.md#formal-verification)
-lists the sampler with a formal CTE correctness proof.
+lists the samplers with formal CTE correctness proofs.
 
 ## Module layout
 

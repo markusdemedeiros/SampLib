@@ -15,7 +15,11 @@ The interpreter suite checks output laws and seeded environment/substitution agr
 
 [CTE templates](SampLib/Templates.lean) provide `IsDistSpec` for probability measures on arbitrary measurable output types, encoded as ProbLang values. Specifications accept arbitrary measurable continuation credits in the current ghost state and mask. `IsDistSpec.wp` supplies a continuation rule for use under `twp_bind`, including caller resources.
 
-[Continuous threshold Bernoulli (`realCoin`)](SampLib/Samplers/RealCoin.lean) has a CTE specification for mathematical reals and every probability `p ∈ [0,1]`, including the endpoints. The file presents the target law, expected continuation credit, measurable credit kernel, credit-conservation identity, and total weakest-precondition theorem (`twp_realCoin`). The public theorem `realCoin_distSpec` packages it as `IsDistSpec`. Adequacy corollaries are omitted. `lake build` checks the proof. Other samplers remain unverified.
+[Continuous threshold Bernoulli (`realCoin`)](SampLib/Samplers/RealCoin.lean) has a CTE specification for mathematical reals and every probability `p ∈ [0,1]`, including the endpoints. The file presents the target law, expected continuation credit, measurable credit kernel, credit-conservation identity, and total weakest-precondition theorem (`twp_realCoin`). The public theorem `realCoin_distSpec` packages it as `IsDistSpec`.
+
+[Von Neumann's fair-coin extractor](SampLib/Samplers/VonNeumann.lean) is verified from an abstract input-coin `IsDistSpec` with `0 < p < 1`. The proof composes two coin calls, conserves the fair continuation expectation, and uses error amplification on retries to establish total correctness. `vonNeumann_distSpec` exposes the fair output law through the same interface.
+
+Adequacy corollaries are omitted. `lake build` checks both proofs. Other samplers remain unverified.
 
 ## Sampler index
 
