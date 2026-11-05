@@ -1,10 +1,12 @@
-import Samplers.Factories
+import Samplers.Bernoulli.Basic
 
 /-! Uniform random bit streams / geometric bags from exporand.html and
 bernoulli.py. The heap memoizes each digit. These are observable finite operations
 on a lazy uniform, not eager construction of an infinite real. -/
 namespace Occil
+
 open ProbLang
+
 variable {rT : Type _}
 
 /-- A lazy node is unsampled nil, or cons(bit,next node). -/
@@ -29,8 +31,8 @@ variable {rT : Type _}
       let loop := (rec read node remaining acc :=
         if remaining = #0 then acc else
           let p := &uniformBagStep node;
-          let bit := (if (fst(p)) then #1 else #0);
-          read ((snd(p))) (remaining - #1) (acc * #2 + bit));
+          let bit := (if fst(p) then #1 else #0);
+          read (snd(p)) (remaining - #1) (acc * #2 + bit));
       loop bag n #0
 
 /-- Compare the represented U with a rational x/y, with exact integer arithmetic.
@@ -41,9 +43,9 @@ Requires y>0; rationals outside the unit interval are handled by saturation. -/
     if x <= #0 then #false else if y <= x then #true else
       let p := &uniformBagStep bag;
       let twice := #2 * x;
-      if (fst(p)) then
-        if twice < y then #false else compare ((snd(p))) (twice - y) y
-      else if twice < y then compare ((snd(p))) twice y else #true
+      if fst(p) then
+        if twice < y then #false else compare (snd(p)) (twice - y) y
+      else if twice < y then compare (snd(p)) twice y else #true
 
 /-- Draw Bernoulli(U) from a shared uniform bag: choose a geometrically
 located digit. Multiple calls are conditionally independent given U, not
@@ -51,7 +53,7 @@ unconditionally independent (the shared latent probability is intentional). -/
 @[pl_fold] def sampleGeometricBag : Exp rT := pl%
   rec choose bag u :=
     let p := &uniformBagStep bag;
-    if &fairCoin #() then (fst(p)) else choose ((snd(p))) #()
+    if &fairCoin #() then fst(p) else choose (snd(p)) #()
 
 /-- Alternating factorial-series factory. mode=0: exp(-p), mode=1: cos(p),
 mode=2: sin(p)/p, extended to 1 at p=0. Bounds are exact integer fractions

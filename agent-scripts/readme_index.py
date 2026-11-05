@@ -158,6 +158,28 @@ def implementation(label,kind='distribution'):
     return None
 
 
+def implementation_path(label, impl, note=''):
+    """Keep index links on implementations rather than compatibility facades."""
+    if impl == 'Factories':
+        impl = 'Bernoulli/Basic'
+    elif impl == 'Combinatorial':
+        impl = 'Combinatorial/Basic'
+    elif impl == 'More':
+        key = label.lower()
+        if 'bounded' in key and 'geometric' in key:
+            impl = 'Discrete/Bounded'
+        elif any(word in key for word in ('sattolo', 'derangement', 'bit flips')):
+            impl = 'Combinatorial/Permutations'
+        elif key == 'rejection sampling' and 'generic' in note:
+            impl = 'Continuous/Rejection'
+        elif any(word in key for word in ('weighted', 'alias', 'rejection sampling')):
+            impl = 'Weighted/Sequential'
+        elif label in ('Certain Polynomials', 'cλ/(cλ+d)', 'λ/(1+λ)',
+                       'Probability generating function'):
+            impl = 'Bernoulli/Combinators'
+    return f'code/Samplers/{impl}.lean'
+
+
 def main():
     docs={n:load(n) for n in ['randomfunc','randomnotes','bernoulli','exporand','randmisc','bernsupp','randextract']}
     root=docs['randomfunc']
@@ -472,7 +494,7 @@ Generated from the live articles by `python3 agent-scripts/readme_index.py`; rev
             label=label.replace('[','\\[').replace(']','\\]')
             text=f'- [{label}]({url})'
             if impl:
-                path=f'code/Samplers/{impl}.lean'
+                path=implementation_path(label, impl, note)
                 if not (ROOT/path).exists():raise RuntimeError('missing code path '+path)
                 text+=f' — [code]({path})'
                 if note:text+=' ('+note+')'

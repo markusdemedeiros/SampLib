@@ -3,7 +3,9 @@ import Metrology.ProbLang.Syntax.Notation
 /-! Uniform integers and coins. Source: randomfunc.html, Uniform Random Integers
 and Boolean Conditions. Arguments are integers unless explicitly stated otherwise. -/
 namespace Occil
+
 open ProbLang
+
 variable {rT : Type _}
 
 /-- Uniform integer in [0,n). Requires n > 0. -/

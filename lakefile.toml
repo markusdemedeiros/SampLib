@@ -1,6 +1,6 @@
 name = "samplib"
 version = "0.1.0"
-defaultTargets = ["SampLib", "Samplers", "sampler-samples"]
+defaultTargets = ["SampLib", "Samplers", "sampler-samples", "wide-samples"]
 
 [[require]]
 name = "clutch-lean"
@@ -14,7 +14,17 @@ name = "SampLib"
 name = "Samplers"
 srcDir = "code"
 
+[[lean_lib]]
+name = "SamplerFixtures"
+srcDir = "tests"
+roots = ["FactoryFixtures", "VectorFixtures", "PointFixtures"]
+
 [[lean_exe]]
 name = "sampler-samples"
 root = "SampleMain"
+srcDir = "tests"
+
+[[lean_exe]]
+name = "wide-samples"
+root = "WideMain"
 srcDir = "tests"

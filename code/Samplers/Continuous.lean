@@ -1,4 +1,4 @@
-import Samplers.Factories
+import Samplers.Bernoulli.Basic
 import Samplers.Data
 
 /-! Comparison/addition-only continuous sampling. Sources: randomfunc.html
@@ -6,7 +6,9 @@ import Samplers.Data
 normal), bernoulli.html (exponential Bernoulli trials). All terms are generic in
 rT, so the same syntax is executable at Float and can be specified at real ℝ. -/
 namespace Occil
+
 open ProbLang
+
 variable {rT : Type _}
 
 /-- Number of strict decreases below x. -/

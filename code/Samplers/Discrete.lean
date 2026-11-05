@@ -3,7 +3,9 @@ import Samplers.Data
 /-! Discrete samplers from randomfunc.html: dice, Bernoulli trials, weighted
 choice, multinomial and Pólya–Eggenberger urn sampling. -/
 namespace Occil
+
 open ProbLang
+
 variable {rT : Type _}
 
 /-- Direct independent-trial binomial construction; callback returns a Boolean. -/
@@ -30,13 +32,19 @@ with positive success probability; p=0 deliberately diverges. -/
 /-- Cumulative weighted choice: nonnegative integer weights, positive total. -/
 @[pl_fold] def weightedChoice : Exp rT := pl%
   fun weights,
-    let check := (rec valid xs := case! xs | inl(u) => #true
-      | inr(p) => if (fst(p)) < #0 then #false else valid (snd(p)));
+    let check := (rec valid xs :=
+      case! xs
+        | inl(u) => #true
+        | inr(p) => if fst(p) < #0 then #false else valid (snd(p)));
     if check weights then
       let total := &sumInts weights;
       let x := &uniformInt total;
-      let select := (rec go xs value i := case! xs | inl(u) => fail
-        | inr(p) => if value < (fst(p)) then i else go (snd(p)) (value - (fst(p))) (i + #1));
+      let select := (rec go xs value i :=
+        case! xs
+          | inl(u) => fail
+          | inr(p) =>
+            if value < fst(p) then i else
+              go (snd(p)) (value - fst(p)) (i + #1));
       select weights x #0
     else fail
 
@@ -49,7 +57,7 @@ by integer remaining-weight sums. -/
     case! weights
       | inl(u) => if n = #0 then inl(#()) else fail
       | inr(p) =>
-        if (fst(p)) < #0 then fail else
+        if fst(p) < #0 then fail else
         let total := &sumInts weights;
         if total <= #0 then if n = #0 then
           inr((#0, draw #0 (snd(p)))) else fail

@@ -9,6 +9,29 @@ Uniform integer/real draws are the only probabilistic primitives used.
 This is a broad initial implementation set, not complete coverage of Occil's corpus.
 It has statistical interpreter tests, not formal correctness proofs yet.
 
+## Module layout
+
+Import `Samplers` for the complete library, or select a focused family module:
+
+| Entry point | Contents |
+| --- | --- |
+| `Samplers.Discrete.All` | Count laws, compound distributions, urns, and discrete tails |
+| `Samplers.Combinatorial` | Collection sampling, shuffles, and permutations |
+| `Samplers.Weighted.All` | Tables, probability trees, entropy recycling, and dynamic weights |
+| `Samplers.Bernoulli` | Coin composition, linear/rational factories, series, and polynomials |
+| `Samplers.Constants` | Digit/interval engines and named constant coins |
+| `Samplers.Continuous` | Comparison-based ideal continuous samplers |
+| `Samplers.Numeric` | Integer fixed-point arithmetic and elementary functions |
+| `Samplers.Numerical.All` | Numerical scalar distributions, mixtures, and derived families |
+| `Samplers.Multivariate` | Vector laws, copulas, geometry, and phase-type distributions |
+| `Samplers.PSRN` | Lazy-real arithmetic, observations, and exact sampler constructions |
+| `Samplers.General` | General schemes, point selection, and finite data models |
+
+Large families are divided into smaller implementation files beneath these paths.
+The original `More`, `Factories`, `FactoryExtra`, `DiscreteExtra`, `WeightedVariants`,
+and `Specialized` imports remain available as compatibility re-exports. Existing
+`Occil` namespaces and function signatures are unchanged.
+
 ## Conventions
 
 - An integer argument is an object-language integer; `n` and `k` are not Lean indices.
@@ -137,10 +160,10 @@ line. The following deviations are deliberate:
 The source fingerprint file in `agent-docs/OccilSources.json` identifies the documents
 consulted; no claim is made that the website's live pseudocode will stay unchanged.
 
-## Deferred coverage
+## Coverage and remaining work
 
-Fast loaded-dice/tree optimizations, general rational/real-weight samplers, general gamma/beta,
-Box–Muller/polar normal, arbitrary affine scaling, stable/von Mises, multivariate and
-geometric samplers, general PSRN arithmetic and general function-envelope factories are
-not implemented here. See [the consolidated wishlist](../agent-docs/ProbLangWishlist.md)
-for the language, interpreter and proof-library capabilities they need.
+The [repository index](../README.md) lists Occil's sampling techniques and links to
+their implementations. The table above introduces the core routines; the family
+modules also contain the later numerical, multivariate, weighted, and PSRN additions.
+See [the consolidated wishlist](../agent-docs/ProbLangWishlist.md) for the recorded
+language, interpreter, and proof-library requirements.
