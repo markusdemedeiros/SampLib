@@ -1,0 +1,1329 @@
+{
+  "base_seed": 20261105,
+  "requested_count": 8000,
+  "clutch_revision": "54e780e43709d2f28386b83bffccdde498141b25",
+  "per_bound_alpha": 1e-09,
+  "seconds": 37.35299577796832,
+  "total_samples": 691300,
+  "passed": 137,
+  "failed": 0,
+  "results": [
+    {
+      "case": "uniform7",
+      "seed": 20261105,
+      "passed": true,
+      "seconds": 0.2139008231461048,
+      "samples": 8000,
+      "chi2_diagnostic": 3.1700000000000004,
+      "categories": 7,
+      "differential_samples": 12
+    },
+    {
+      "case": "inclusive6",
+      "seed": 20365834,
+      "passed": true,
+      "seconds": 0.22218682896345854,
+      "samples": 8000,
+      "chi2_diagnostic": 13.1415,
+      "categories": 7,
+      "differential_samples": 12
+    },
+    {
+      "case": "range",
+      "seed": 20470563,
+      "passed": true,
+      "seconds": 0.2260505110025406,
+      "samples": 8000,
+      "chi2_diagnostic": 3.346,
+      "categories": 8,
+      "differential_samples": 12
+    },
+    {
+      "case": "range_exc",
+      "seed": 20575292,
+      "passed": true,
+      "seconds": 0.2230670298449695,
+      "samples": 8000,
+      "chi2_diagnostic": 9.937249999999999,
+      "categories": 7,
+      "differential_samples": 12
+    },
+    {
+      "case": "fdr7",
+      "seed": 20680021,
+      "passed": true,
+      "seconds": 0.25572045100852847,
+      "samples": 8000,
+      "chi2_diagnostic": 5.5954999999999995,
+      "categories": 7,
+      "differential_samples": 12
+    },
+    {
+      "case": "fdr257",
+      "seed": 20784750,
+      "passed": true,
+      "seconds": 0.33797562634572387,
+      "samples": 8000,
+      "chi2_diagnostic": 255.8037499999999,
+      "categories": 257,
+      "differential_samples": 12
+    },
+    {
+      "case": "mod_small",
+      "seed": 20889479,
+      "passed": true,
+      "seconds": 0.23280319618061185,
+      "samples": 8000,
+      "chi2_diagnostic": 1.761,
+      "categories": 4,
+      "differential_samples": 12
+    },
+    {
+      "case": "mod_equal",
+      "seed": 20994208,
+      "passed": true,
+      "seconds": 0.22700943192467093,
+      "samples": 8000,
+      "chi2_diagnostic": 4.144499999999999,
+      "categories": 11,
+      "differential_samples": 12
+    },
+    {
+      "case": "mod_large",
+      "seed": 21098937,
+      "passed": true,
+      "seconds": 0.28882443392649293,
+      "samples": 8000,
+      "chi2_diagnostic": 35.64925,
+      "categories": 17,
+      "differential_samples": 12
+    },
+    {
+      "case": "rational",
+      "seed": 21203666,
+      "passed": true,
+      "seconds": 0.23043523402884603,
+      "samples": 8000,
+      "chi2_diagnostic": 2.1333333333333333,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "real_coin",
+      "seed": 21308395,
+      "passed": true,
+      "seconds": 0.2260765922255814,
+      "samples": 8000,
+      "chi2_diagnostic": 1.9339285714285714,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "fair",
+      "seed": 21413124,
+      "passed": true,
+      "seconds": 0.22476474987342954,
+      "samples": 8000,
+      "chi2_diagnostic": 2.5205,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "binomial",
+      "seed": 21517853,
+      "passed": true,
+      "seconds": 0.5353025589138269,
+      "samples": 8000,
+      "chi2_diagnostic": 13.716152031530383,
+      "categories": 13,
+      "differential_samples": 12
+    },
+    {
+      "case": "geometric",
+      "seed": 21622582,
+      "passed": true,
+      "seconds": 0.2582358131185174,
+      "samples": 8000,
+      "chi2_diagnostic": 15.57123854499515,
+      "categories": 26,
+      "differential_samples": 12
+    },
+    {
+      "case": "negative_binomial",
+      "seed": 21727311,
+      "passed": true,
+      "seconds": 0.38670653896406293,
+      "samples": 8000,
+      "chi2_diagnostic": 24.705339683900025,
+      "categories": 26,
+      "differential_samples": 12
+    },
+    {
+      "case": "dice",
+      "seed": 21832040,
+      "passed": true,
+      "seconds": 0.26407113717868924,
+      "samples": 8000,
+      "chi2_diagnostic": 7.0294542857142845,
+      "categories": 16,
+      "differential_samples": 12
+    },
+    {
+      "case": "poisson_one",
+      "seed": 21936769,
+      "passed": true,
+      "seconds": 0.28237502882257104,
+      "samples": 8000,
+      "chi2_diagnostic": 8.018851553834402,
+      "categories": 17,
+      "differential_samples": 12
+    },
+    {
+      "case": "poisson_rational",
+      "seed": 22041498,
+      "passed": true,
+      "seconds": 0.5109642217867076,
+      "samples": 8000,
+      "chi2_diagnostic": 7.042225891417682,
+      "categories": 17,
+      "differential_samples": 12
+    },
+    {
+      "case": "weighted",
+      "seed": 22146227,
+      "passed": true,
+      "seconds": 0.2975407987833023,
+      "samples": 8000,
+      "chi2_diagnostic": 0.7725,
+      "categories": 4,
+      "differential_samples": 12
+    },
+    {
+      "case": "multinomial",
+      "seed": 22250956,
+      "passed": true,
+      "seconds": 1.1985169230028987,
+      "samples": 8000,
+      "chi2_diagnostic": 82.76199777888253,
+      "categories": 66,
+      "differential_samples": 12
+    },
+    {
+      "case": "polya",
+      "seed": 22355685,
+      "passed": true,
+      "seconds": 0.523824951145798,
+      "samples": 8000,
+      "chi2_diagnostic": 7.138621428571408,
+      "categories": 9,
+      "differential_samples": 12
+    },
+    {
+      "case": "hypergeometric",
+      "seed": 22460414,
+      "passed": true,
+      "seconds": 0.4004201078787446,
+      "samples": 8000,
+      "chi2_diagnostic": 2.3602749999999997,
+      "categories": 5,
+      "differential_samples": 12
+    },
+    {
+      "case": "walk",
+      "seed": 22565143,
+      "passed": true,
+      "seconds": 0.3685594070702791,
+      "samples": 8000,
+      "chi2_diagnostic": 7.40192784992785,
+      "categories": 13,
+      "differential_samples": 12
+    },
+    {
+      "case": "choice",
+      "seed": 22669872,
+      "passed": true,
+      "seconds": 0.2515933685936034,
+      "samples": 8000,
+      "chi2_diagnostic": 1.541,
+      "categories": 4,
+      "differential_samples": 12
+    },
+    {
+      "case": "replacement",
+      "seed": 22774601,
+      "passed": true,
+      "seconds": 0.3637008429504931,
+      "samples": 8000,
+      "chi2_diagnostic": 17.933500000000002,
+      "categories": 27,
+      "differential_samples": 12
+    },
+    {
+      "case": "without_replacement",
+      "seed": 22879330,
+      "passed": true,
+      "seconds": 0.4626349899917841,
+      "samples": 8000,
+      "chi2_diagnostic": 55.84000000000002,
+      "categories": 60,
+      "differential_samples": 12
+    },
+    {
+      "case": "in_order",
+      "seed": 22984059,
+      "passed": true,
+      "seconds": 0.33717826567590237,
+      "samples": 8000,
+      "chi2_diagnostic": 12.225,
+      "categories": 10,
+      "differential_samples": 12
+    },
+    {
+      "case": "shuffle",
+      "seed": 23088788,
+      "passed": true,
+      "seconds": 0.438499694224447,
+      "samples": 8000,
+      "chi2_diagnostic": 24.292,
+      "categories": 24,
+      "differential_samples": 12
+    },
+    {
+      "case": "reservoir",
+      "seed": 23193517,
+      "passed": true,
+      "seconds": 0.4126216759905219,
+      "samples": 8000,
+      "chi2_diagnostic": 18.430000000000003,
+      "categories": 20,
+      "differential_samples": 12
+    },
+    {
+      "case": "composition",
+      "seed": 23298246,
+      "passed": true,
+      "seconds": 0.405896392185241,
+      "samples": 8000,
+      "chi2_diagnostic": 32.30124999999999,
+      "categories": 15,
+      "differential_samples": 12
+    },
+    {
+      "case": "weak_composition",
+      "seed": 23402975,
+      "passed": true,
+      "seconds": 0.4311806890182197,
+      "samples": 8000,
+      "chi2_diagnostic": 17.094999999999995,
+      "categories": 15,
+      "differential_samples": 12
+    },
+    {
+      "case": "graph",
+      "seed": 23507704,
+      "passed": true,
+      "seconds": 0.5611733361147344,
+      "samples": 8000,
+      "chi2_diagnostic": 1074.7616135253932,
+      "categories": 1024,
+      "differential_samples": 12
+    },
+    {
+      "case": "complement",
+      "seed": 23612433,
+      "passed": true,
+      "seconds": 0.2257401910610497,
+      "samples": 8000,
+      "chi2_diagnostic": 0.03333333333333333,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "product",
+      "seed": 23717162,
+      "passed": true,
+      "seconds": 0.22858975268900394,
+      "samples": 8000,
+      "chi2_diagnostic": 0.13392857142856573,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "disjunction",
+      "seed": 23821891,
+      "passed": true,
+      "seconds": 0.23423611698672175,
+      "samples": 8000,
+      "chi2_diagnostic": 0.0980392156862707,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "mean",
+      "seed": 23926620,
+      "passed": true,
+      "seconds": 0.2337411167100072,
+      "samples": 8000,
+      "chi2_diagnostic": 2.877237851662424,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "conditional",
+      "seed": 24031349,
+      "passed": true,
+      "seconds": 0.2437157230451703,
+      "samples": 8000,
+      "chi2_diagnostic": 0.031638755980858614,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "extractor",
+      "seed": 24136078,
+      "passed": true,
+      "seconds": 0.3305031806230545,
+      "samples": 8000,
+      "chi2_diagnostic": 0.288,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "race",
+      "seed": 24240807,
+      "passed": true,
+      "seconds": 0.24885640665888786,
+      "samples": 8000,
+      "chi2_diagnostic": 4.602504166666629,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "one_div",
+      "seed": 24345536,
+      "passed": true,
+      "seconds": 0.23494423693045974,
+      "samples": 8000,
+      "chi2_diagnostic": 0.1250000000000011,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "even_parity",
+      "seed": 24450265,
+      "passed": true,
+      "seconds": 0.24037928087636828,
+      "samples": 8000,
+      "chi2_diagnostic": 0.0010125000000001023,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "sqrt",
+      "seed": 24554994,
+      "passed": true,
+      "seconds": 0.25655809231102467,
+      "samples": 8000,
+      "chi2_diagnostic": 0.2228148213985851,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "power_two_thirds",
+      "seed": 24659723,
+      "passed": true,
+      "seconds": 0.25488653127104044,
+      "samples": 8000,
+      "chi2_diagnostic": 0.012251513912028585,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "exp_rational_small",
+      "seed": 24764452,
+      "passed": true,
+      "seconds": 0.2542100101709366,
+      "samples": 8000,
+      "chi2_diagnostic": 2.8965457930739498,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "exp_rational_large",
+      "seed": 24869181,
+      "passed": true,
+      "seconds": 0.30573416501283646,
+      "samples": 8000,
+      "chi2_diagnostic": 7.178850620427251e-05,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "exp_factory",
+      "seed": 24973910,
+      "passed": true,
+      "seconds": 0.24776312615722418,
+      "samples": 8000,
+      "chi2_diagnostic": 1.496686929622275,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "exponential",
+      "seed": 25078639,
+      "passed": true,
+      "seconds": 0.2801765878684819,
+      "samples": 8000,
+      "mean": 0.9947308617856663,
+      "variance": 0.9855059144893872,
+      "ks": 0.009484789767884083,
+      "ks_bound": 0.036585869042488894,
+      "differential_samples": 12
+    },
+    {
+      "case": "laplace",
+      "seed": 25183368,
+      "passed": true,
+      "seconds": 0.29299175599589944,
+      "samples": 8000,
+      "mean": 0.017614429271841377,
+      "variance": 1.9995632039972475,
+      "ks": 0.007295195511909644,
+      "ks_bound": 0.036585869042488894,
+      "differential_samples": 12
+    },
+    {
+      "case": "erlang",
+      "seed": 25288097,
+      "passed": true,
+      "seconds": 0.40507707092911005,
+      "samples": 8000,
+      "mean": 3.0041422695777933,
+      "variance": 3.1008743610919707,
+      "ks": 0.006555465526389415,
+      "ks_bound": 0.036585869042488894,
+      "differential_samples": 12
+    },
+    {
+      "case": "uniform_sum",
+      "seed": 25392826,
+      "passed": true,
+      "seconds": 0.30042660189792514,
+      "samples": 8000,
+      "mean": 1.4901050967117686,
+      "variance": 0.25206109352582023,
+      "ks": 0.011577309845789863,
+      "ks_bound": 0.036585869042488894,
+      "differential_samples": 12
+    },
+    {
+      "case": "uniform_min",
+      "seed": 25497555,
+      "passed": true,
+      "seconds": 0.24302812200039625,
+      "samples": 8000,
+      "mean": 0.3328215364796584,
+      "variance": 0.05482661056772605,
+      "ks": 0.006830957228003587,
+      "ks_bound": 0.036585869042488894,
+      "differential_samples": 12
+    },
+    {
+      "case": "uniform_max",
+      "seed": 25602284,
+      "passed": true,
+      "seconds": 0.24162320187315345,
+      "samples": 8000,
+      "mean": 0.6694448747350717,
+      "variance": 0.05466418339723156,
+      "ks": 0.008493676549826357,
+      "ks_bound": 0.036585869042488894,
+      "differential_samples": 12
+    },
+    {
+      "case": "order_statistic",
+      "seed": 25707013,
+      "passed": true,
+      "seconds": 0.42624696623533964,
+      "samples": 8000,
+      "mean": 0.28434465435521555,
+      "variance": 0.025574627654350392,
+      "ks": 0.007413892563677971,
+      "ks_bound": 0.036585869042488894,
+      "differential_samples": 12
+    },
+    {
+      "case": "mixture",
+      "seed": 25811742,
+      "passed": true,
+      "seconds": 0.23414587741717696,
+      "samples": 8000,
+      "chi2_diagnostic": 0.3900625,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "exp_half",
+      "seed": 25916471,
+      "passed": true,
+      "seconds": 0.2238454702310264,
+      "samples": 8000,
+      "chi2_diagnostic": 0.03560876662567125,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "gaussian",
+      "seed": 26021200,
+      "passed": true,
+      "seconds": 0.48199788201600313,
+      "samples": 8000,
+      "mean": -0.00530000527880086,
+      "variance": 0.9971910214936989,
+      "ks": 0.0072169564213570014,
+      "ks_bound": 0.036585869042488894,
+      "differential_samples": 12
+    },
+    {
+      "case": "bounded_geometric",
+      "seed": 26125929,
+      "passed": true,
+      "seconds": 0.3050580848939717,
+      "samples": 8000,
+      "chi2_diagnostic": 6.339113464355446,
+      "categories": 8,
+      "differential_samples": 12
+    },
+    {
+      "case": "weighted_rejection",
+      "seed": 26230658,
+      "passed": true,
+      "seconds": 0.3920497018843889,
+      "samples": 8000,
+      "chi2_diagnostic": 1.018125,
+      "categories": 4,
+      "differential_samples": 12
+    },
+    {
+      "case": "weighted_without_replacement",
+      "seed": 26335387,
+      "passed": true,
+      "seconds": 0.4282650067470968,
+      "samples": 8000,
+      "chi2_diagnostic": 5.27000000000001,
+      "categories": 6,
+      "differential_samples": 12
+    },
+    {
+      "case": "alias",
+      "seed": 26440116,
+      "passed": true,
+      "seconds": 0.7867741268128157,
+      "samples": 8000,
+      "chi2_diagnostic": 18.121527777777782,
+      "categories": 27,
+      "differential_samples": 12
+    },
+    {
+      "case": "sattolo",
+      "seed": 26544845,
+      "passed": true,
+      "seconds": 0.4374254927970469,
+      "samples": 8000,
+      "chi2_diagnostic": 6.8215,
+      "categories": 6,
+      "differential_samples": 12
+    },
+    {
+      "case": "derangement",
+      "seed": 26649574,
+      "passed": true,
+      "seconds": 0.924028298817575,
+      "samples": 8000,
+      "chi2_diagnostic": 3.2545000000000006,
+      "categories": 9,
+      "differential_samples": 12
+    },
+    {
+      "case": "flip_bits",
+      "seed": 26754303,
+      "passed": true,
+      "seconds": 0.30253408290445805,
+      "samples": 8000,
+      "chi2_diagnostic": 3.9323124999999997,
+      "categories": 8,
+      "differential_samples": 12
+    },
+    {
+      "case": "logistic",
+      "seed": 26859032,
+      "passed": true,
+      "seconds": 0.26079437509179115,
+      "samples": 8000,
+      "chi2_diagnostic": 0.47999999999999093,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "pgf",
+      "seed": 26963761,
+      "passed": true,
+      "seconds": 0.5243240711279213,
+      "samples": 8000,
+      "chi2_diagnostic": 3.224125382245313,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "bernstein",
+      "seed": 27068490,
+      "passed": true,
+      "seconds": 0.3136227698996663,
+      "samples": 8000,
+      "chi2_diagnostic": 0.05073051948051284,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "bag_prefix",
+      "seed": 27173219,
+      "passed": true,
+      "seconds": 0.4484556596726179,
+      "samples": 8000,
+      "chi2_diagnostic": 257.66400000000016,
+      "categories": 256,
+      "differential_samples": 12
+    },
+    {
+      "case": "bag_reread",
+      "seed": 27277948,
+      "passed": true,
+      "seconds": 0.573079904075712,
+      "samples": 8000,
+      "chi2_diagnostic": 223.74400000000009,
+      "categories": 256,
+      "differential_samples": 12
+    },
+    {
+      "case": "bag_compare",
+      "seed": 27382677,
+      "passed": true,
+      "seconds": 0.2749400641769171,
+      "samples": 8000,
+      "chi2_diagnostic": 1.0546875,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "bag_compare_joint",
+      "seed": 27487406,
+      "passed": true,
+      "seconds": 0.3123084492981434,
+      "samples": 8000,
+      "chi2_diagnostic": 3.753,
+      "categories": 3,
+      "differential_samples": 12
+    },
+    {
+      "case": "geometric_bag",
+      "seed": 27592135,
+      "passed": true,
+      "seconds": 0.27180866291746497,
+      "samples": 8000,
+      "chi2_diagnostic": 1.8,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "geometric_bag_joint",
+      "seed": 27696864,
+      "passed": true,
+      "seconds": 0.3124262485653162,
+      "samples": 8000,
+      "chi2_diagnostic": 2.19925,
+      "categories": 4,
+      "differential_samples": 12
+    },
+    {
+      "case": "exp_martingale",
+      "seed": 27801593,
+      "passed": true,
+      "seconds": 0.31621049204841256,
+      "samples": 8000,
+      "chi2_diagnostic": 0.017488090015732725,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "cosine_factory",
+      "seed": 27906322,
+      "passed": true,
+      "seconds": 0.2995382398366928,
+      "samples": 8000,
+      "chi2_diagnostic": 0.03500075290199811,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "sine_factory",
+      "seed": 28011051,
+      "passed": true,
+      "seconds": 0.2698575807735324,
+      "samples": 8000,
+      "chi2_diagnostic": 0.00588834716421744,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "log_factory",
+      "seed": 28115780,
+      "passed": true,
+      "seconds": 0.25797609286382794,
+      "samples": 8000,
+      "chi2_diagnostic": 2.0007042045806296,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "arctan_over_p",
+      "seed": 28220509,
+      "passed": true,
+      "seconds": 0.26644661789759994,
+      "samples": 8000,
+      "chi2_diagnostic": 5.491093751424765,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "arctan_factory",
+      "seed": 28325238,
+      "passed": true,
+      "seconds": 0.25721689267084,
+      "samples": 8000,
+      "chi2_diagnostic": 0.018767079930358616,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "cosine_one",
+      "seed": 28429967,
+      "passed": true,
+      "seconds": 0.38247637590393424,
+      "samples": 8000,
+      "chi2_diagnostic": 0.5342498764404255,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "sine_one",
+      "seed": 28534696,
+      "passed": true,
+      "seconds": 0.35461447667330503,
+      "samples": 8000,
+      "chi2_diagnostic": 0.5502309088454275,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "log_one",
+      "seed": 28639425,
+      "passed": true,
+      "seconds": 0.2598846536129713,
+      "samples": 8000,
+      "chi2_diagnostic": 0.2798759934050793,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "arctan_one",
+      "seed": 28744154,
+      "passed": true,
+      "seconds": 0.2782030669040978,
+      "samples": 8000,
+      "chi2_diagnostic": 2.8338060820252626,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "exp_martingale_one",
+      "seed": 28848883,
+      "passed": true,
+      "seconds": 0.4407618152908981,
+      "samples": 8000,
+      "chi2_diagnostic": 0.3643656304226627,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "alias_balanced",
+      "seed": 28953612,
+      "passed": true,
+      "seconds": 0.4740483178757131,
+      "samples": 8000,
+      "chi2_diagnostic": 20.539,
+      "categories": 27,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_exp_martingale0",
+      "seed": 29058341,
+      "passed": true,
+      "seconds": 0.2014051740989089,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_bounded0",
+      "seed": 29163070,
+      "passed": true,
+      "seconds": 0.20356481615453959,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_alias_single",
+      "seed": 29267799,
+      "passed": true,
+      "seconds": 0.22403650963678956,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_sattolo_empty",
+      "seed": 29372528,
+      "passed": true,
+      "seconds": 0.2025811360217631,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_derangement0",
+      "seed": 29477257,
+      "passed": true,
+      "seconds": 0.2056530569680035,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_bag_zero",
+      "seed": 29581986,
+      "passed": true,
+      "seconds": 0.2026690156199038,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_bag_one",
+      "seed": 29686715,
+      "passed": true,
+      "seconds": 0.20071093505248427,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_cos0",
+      "seed": 29791444,
+      "passed": true,
+      "seconds": 0.2031246959231794,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_sin0",
+      "seed": 29896173,
+      "passed": true,
+      "seconds": 0.19802045170217752,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_log0",
+      "seed": 30000902,
+      "passed": true,
+      "seconds": 0.20556961838155985,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_atan0",
+      "seed": 30105631,
+      "passed": true,
+      "seconds": 0.20454069692641497,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "invalid_alias",
+      "seed": 30210360,
+      "passed": true,
+      "seconds": 0.06338196340948343,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_rejection_envelope",
+      "seed": 30315089,
+      "passed": true,
+      "seconds": 0.06621428392827511,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_weighted_subset",
+      "seed": 30419818,
+      "passed": true,
+      "seconds": 0.06554996408522129,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_derangement",
+      "seed": 30524547,
+      "passed": true,
+      "seconds": 0.06724788481369615,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_logistic",
+      "seed": 30629276,
+      "passed": true,
+      "seconds": 0.06980944704264402,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "edge_zero_coin",
+      "seed": 30734005,
+      "passed": true,
+      "seconds": 0.1974476920440793,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_real_zero",
+      "seed": 30838734,
+      "passed": true,
+      "seconds": 0.1999033740721643,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_real_one",
+      "seed": 30943463,
+      "passed": true,
+      "seconds": 0.1994225736707449,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_poisson0",
+      "seed": 31048192,
+      "passed": true,
+      "seconds": 0.19840045226737857,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_one_coin",
+      "seed": 31152921,
+      "passed": true,
+      "seconds": 0.19929701322689652,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_fdr1",
+      "seed": 31257650,
+      "passed": true,
+      "seconds": 0.20319933630526066,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_rnd0",
+      "seed": 31362379,
+      "passed": true,
+      "seconds": 0.20348325604572892,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_binomial0",
+      "seed": 31467108,
+      "passed": true,
+      "seconds": 0.20097393495962024,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_binomial1",
+      "seed": 31571837,
+      "passed": true,
+      "seconds": 0.20078705484047532,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_geometric1",
+      "seed": 31676566,
+      "passed": true,
+      "seconds": 0.1980794919654727,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_neg_binomial0",
+      "seed": 31781295,
+      "passed": true,
+      "seconds": 0.19896513363346457,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_shuffle_empty",
+      "seed": 31886024,
+      "passed": true,
+      "seconds": 0.19826869200915098,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_shuffle_single",
+      "seed": 31990753,
+      "passed": true,
+      "seconds": 0.19672241201624274,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_reservoir0",
+      "seed": 32095482,
+      "passed": true,
+      "seconds": 0.19580509141087532,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_sample0",
+      "seed": 32200211,
+      "passed": true,
+      "seconds": 0.19916117377579212,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_in_order_all",
+      "seed": 32304940,
+      "passed": true,
+      "seconds": 0.2109893811866641,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_composition",
+      "seed": 32409669,
+      "passed": true,
+      "seconds": 0.2165382648818195,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_weak0",
+      "seed": 32514398,
+      "passed": true,
+      "seconds": 0.20360653707757592,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_one_div1",
+      "seed": 32619127,
+      "passed": true,
+      "seconds": 0.21492414409294724,
+      "samples": 8000,
+      "chi2_diagnostic": 0.45,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_power1",
+      "seed": 32723856,
+      "passed": true,
+      "seconds": 0.19961205311119556,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_exp0",
+      "seed": 32828585,
+      "passed": true,
+      "seconds": 0.20638913940638304,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_exp_factory0",
+      "seed": 32933314,
+      "passed": true,
+      "seconds": 0.1984510524198413,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_exp_factory1",
+      "seed": 33038043,
+      "passed": true,
+      "seconds": 0.2399543607607484,
+      "samples": 8000,
+      "chi2_diagnostic": 1.6878410211602413,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_uniform_sum0",
+      "seed": 33142772,
+      "passed": true,
+      "seconds": 0.20505677768960595,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "invalid_uniform",
+      "seed": 33247501,
+      "passed": true,
+      "seconds": 0.06738632498309016,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_modulus",
+      "seed": 33352230,
+      "passed": true,
+      "seconds": 0.06884376611560583,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_coin",
+      "seed": 33456959,
+      "passed": true,
+      "seconds": 0.07069136714562774,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_real_coin",
+      "seed": 33561688,
+      "passed": true,
+      "seconds": 0.06977956742048264,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_poisson",
+      "seed": 33666417,
+      "passed": true,
+      "seconds": 0.06791872577741742,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_weights",
+      "seed": 33771146,
+      "passed": true,
+      "seconds": 0.0709708072245121,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_negative_weight",
+      "seed": 33875875,
+      "passed": true,
+      "seconds": 0.06495728390291333,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_choice",
+      "seed": 33980604,
+      "passed": true,
+      "seconds": 0.06575224408879876,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_sample",
+      "seed": 34085333,
+      "passed": true,
+      "seconds": 0.06646364415064454,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_composition",
+      "seed": 34190062,
+      "passed": true,
+      "seconds": 0.06675968505442142,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_hypergeometric",
+      "seed": 34294791,
+      "passed": true,
+      "seconds": 0.06604460440576077,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_order",
+      "seed": 34399520,
+      "passed": true,
+      "seconds": 0.07065184786915779,
+      "expected_failure": true,
+      "samples": 0
+    },
+    {
+      "case": "invalid_erlang",
+      "seed": 34504249,
+      "passed": true,
+      "seconds": 0.06762156495824456,
+      "expected_failure": true,
+      "samples": 0
+    }
+  ]
+}

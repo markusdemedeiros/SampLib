@@ -1,0 +1,50 @@
+{
+  "retrieved_utc": "2026-11-05",
+  "sources": [
+    {
+      "url": "https://peteroupc.github.io/randomfunc.html",
+      "sha256": "f120d71e4c3cbd4464561778c639b409de4b4b8f751ad81277095d4052e07025",
+      "bytes": 286691
+    },
+    {
+      "url": "https://peteroupc.github.io/randomnotes.html",
+      "sha256": "99eb5202368b08d98d6130aa4be5e320f0ceb71b30a4ab111a28e48722b4fcf9",
+      "bytes": 66165
+    },
+    {
+      "url": "https://peteroupc.github.io/bernoulli.html",
+      "sha256": "0064808a92d577f9ac61f59501a5a31145bf6a2b01e2b1e983e3629d8b295155",
+      "bytes": 398376
+    },
+    {
+      "url": "https://peteroupc.github.io/bernoulli.py",
+      "sha256": "c4d24c0e15cd479bec96ec4406da57db09ad0663285a6791a578420789501fbf",
+      "bytes": 80599
+    },
+    {
+      "url": "https://peteroupc.github.io/exporand.html",
+      "sha256": "54ed928219caae069ca20facec1da13c982230de02fde69c03303547d2d3cc42",
+      "bytes": 339919
+    },
+    {
+      "url": "https://peteroupc.github.io/bernsupp.html",
+      "sha256": "92856d18f9de472d9255fc69021f901ebf84e966ffa99dc3e0dc3b253082f665",
+      "bytes": 225422
+    },
+    {
+      "url": "https://peteroupc.github.io/randmisc.html",
+      "sha256": "0468687e90ab59a7f945eadaac6745d32ea34eb4c2aa57203569ce962d894b56",
+      "bytes": 167091
+    },
+    {
+      "url": "https://peteroupc.github.io/randextract.html",
+      "sha256": "3fb9d7a96747f8e51ef7044f10ab29d3ee170414285b3c518e8f70971d097747",
+      "bytes": 30745
+    },
+    {
+      "url": "https://peteroupc.github.io/bernapprox.html",
+      "sha256": "34f755385c628c8988c58a1935ec9216544a5d135eac48d975fbca2dce88dfab",
+      "bytes": 100919
+    }
+  ]
+}

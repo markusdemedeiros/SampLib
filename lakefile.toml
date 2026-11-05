@@ -1,0 +1,20 @@
+name = "samplib"
+version = "0.1.0"
+defaultTargets = ["SampLib", "Samplers", "sampler-samples"]
+
+[[require]]
+name = "clutch-lean"
+git = "https://github.com/logsem/clutch-lean.git"
+rev = "54e780e43709d2f28386b83bffccdde498141b25"
+
+[[lean_lib]]
+name = "SampLib"
+
+[[lean_lib]]
+name = "Samplers"
+srcDir = "code"
+
+[[lean_exe]]
+name = "sampler-samples"
+root = "SampleMain"
+srcDir = "tests"
