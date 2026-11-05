@@ -7,7 +7,8 @@ No sampler calls a host implementation, FFI, or an oracle for its target distrib
 Uniform integer/real draws are the only probabilistic primitives used.
 
 This is a broad initial implementation set, not complete coverage of Occil's corpus.
-It has statistical interpreter tests, not formal correctness proofs yet.
+It has statistical interpreter tests. The [repository README](../README.md#formal-verification)
+lists the sampler with a formal CTE correctness proof.
 
 ## Module layout
 

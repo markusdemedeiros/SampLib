@@ -470,7 +470,13 @@ python3 tests/statistical.py
 
 [Implementation details and source corrections](code/README.md) · [ProbLang wishlist](agent-docs/ProbLangWishlist.md) · [Test results](tests/latest-results.json) · [Source inventory](agent-docs/OccilInventory.json)
 
-The interpreter suite checks output laws and seeded environment/substitution agreement; see the recorded test results above. Statistical tests are implementation evidence; sampler correctness proofs remain to be written. The interpreter runs finite-precision Float operations.
+The interpreter suite checks output laws and seeded environment/substitution agreement; see the recorded test results above. Statistical tests are implementation evidence. The interpreter runs finite-precision Float operations.
+
+## Formal verification
+
+[CTE templates](SampLib/Templates.lean) provide `IsDistSpec` for probability measures on arbitrary measurable output types, encoded as ProbLang values. Specifications accept arbitrary measurable continuation credits in the current ghost state and mask. `IsDistSpec.wp` supplies a continuation rule for use under `twp_bind`, including caller resources.
+
+[Continuous threshold Bernoulli (`realCoin`)](SampLib/Samplers/RealCoin.lean) has a CTE specification for mathematical reals and every probability `p ∈ [0,1]`, including the endpoints. The file presents the target law, expected continuation credit, measurable credit kernel, credit-conservation identity, and total weakest-precondition theorem (`twp_realCoin`). The public theorem `realCoin_distSpec` packages it as `IsDistSpec`. Adequacy corollaries are omitted. `lake build` checks the proof. Other samplers remain unverified.
 
 ## Sampler index
 
