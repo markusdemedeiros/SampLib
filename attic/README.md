@@ -1,22 +1,30 @@
 # Attic
 
-Lean modules that the library no longer builds. Nothing here is reviewed or imported by
-`SampLib`, and some files may not compile. Each keeps its old module name, so its own
-imports still say where it used to live. To revive one, move it back under `SampLib/`,
-give it a place in the [layout](../SampLib/README.md#layout), add it to the build and
-build it through `agent-scripts/lean_gate.py`.
+This directory holds Lean modules that the library no longer builds. `SampLib` imports none
+of them, no review covers them, and some of them might not compile.
 
-- `SampLib/`: unbuilt modules from before the [2026-11-06 move](../agent-docs/relocations).
-  The move recorded their paths, and imports of modules that were moved were rewritten.
-- `stopped/`: unfinished work from provers that were stopped in round 2.
-- `drafts/`: two early probes.
+Each module keeps its old module name, so its imports still show where it used to live.
+To revive a module, complete these steps:
+
+1. Move the module back under `SampLib/`, into the directory that the
+   [library layout](../SampLib/README.md#layout) assigns to it.
+2. Add the module to the build.
+3. Build the module through `agent-scripts/lean_gate.py`.
+
+The attic has three parts:
+
+- `SampLib/`: Modules that stopped building before the library was reorganized on
+  6 November 2026. The [relocation record](../agent-docs/relocations) lists their old
+  paths. Their imports of moved modules use the new names.
+- `stopped/`: Unfinished work from the provers that were stopped in round 2.
+- `drafts/`: Two early experiments.
 
 ## Leftovers for deferred samplers
 
-These are starting points for the samplers in
-[the deferral list](../agent-docs/ExactCampaignDeferrals.md).
+These files are starting points for the samplers in the
+[list of deferred samplers](../agent-docs/ExactCampaignDeferrals.md).
 
-| Target | Files |
+| Sampler | Files |
 | --- | --- |
 | `newGamma`, `newDirichlet` | `SampLib/PSRNGammaCore`, `SampLib/PSRNGammaIntegerRepresentedCore`, `SampLib/LatentGamma*`, `SampLib/LatentRepresentedGammaInteger`, `SampLib/Syntax/PSRNGamma`, `SampLib/Distributions/GammaErlang`, `stopped/SampLib/Samplers/PSRNGamma`, `stopped/SampLib/Syntax/PSRNGammaSource` |
 | `newGaussian`, `newSphere`, `newBall`, `newShell` | `SampLib/LatentNormSquared*`, `SampLib/Syntax/PSRNNormSquared`, `SampLib/Distributions/PSRNSphereLaw` |
@@ -25,7 +33,7 @@ These are starting points for the samplers in
 | `newHyperbolicSecant`, `newContinuousBernoulli`, `newCauchy`, `newTulap` | `stopped/SampLib/LatentInlineRejection`, `SampLib/LatentLikelihoodRejection`, `SampLib/LatentPositiveLikelihood`, `SampLib/Distributions/PSRNHyperbolicSecant`, `SampLib/Distributions/AcceptedProposalMap` |
 | `newFGMCopula` | `SampLib/Distributions/PSRNFGM` |
 
-The other `SampLib/` files were superseded. A few still appear in the snapshots of
-superseded receipts (`LatentRootViews` in `ExactSharedRoot001`, for example) or in old
-review callers. Current receipts depend on none of them; `relocation.py --check` and the
-campaign audit confirm this.
+Later proofs superseded the other files in `SampLib/`. A few of those files still appear
+in the snapshots of superseded receipts or in old review callers. For example, the
+`ExactSharedRoot001` receipt lists `LatentRootViews`. No current receipt depends on an
+attic file, as `relocation.py --check` and the campaign audit confirm.

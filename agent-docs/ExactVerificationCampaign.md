@@ -155,10 +155,15 @@ The ledger's `baseline_revalidation` selects the current immutable overlay;
 
 ## Moving modules
 
-Receipts pin each reviewed file by path, so a plain move would void them. Move modules
-with `agent-scripts/relocation.py --apply MOVES.json --output agent-docs/relocations/<NNN>.json`
-from a clean tree. It moves the files, rewrites import lines and the given Markdown links,
-and records every changed file's hashes before and after. The audits translate recorded
-modules, snapshots and contexts through these records, and
+Receipts pin each reviewed file by its path, so a plain move voids them. To move modules,
+run this command from a clean tree:
+
+```sh
+python3 agent-scripts/relocation.py --apply MOVES.json --output agent-docs/relocations/NNN.json
+```
+
+The command moves the files and rewrites their import lines and the Markdown links that you
+name. It then records the hash of every changed file before and after the move. The audits
+translate recorded modules, snapshots, and contexts through these records.
 `python3 agent-scripts/relocation.py --check` replays each record from its base commit, so
-a record cannot hide an edit to proof text. Records are immutable, like receipts.
+a record cannot hide an edit to proof text. Like receipts, records are immutable.

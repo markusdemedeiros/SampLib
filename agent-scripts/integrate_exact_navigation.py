@@ -28,10 +28,10 @@ def main() -> None:
     kinds = Counter(row['classification'] for row in accepted)
     lines = [
         start, '## Exact verification campaign', '',
-        f'**{len(accepted)} of 137 entries accepted** in the '
-        '[current campaign](../agent-docs/ExactVerificationCampaign.md). '
-        'This table extends the historical suite above; supporting interfaces and derived '
-        'wrappers are identified explicitly.', '',
+        'The [current campaign](../agent-docs/ExactVerificationCampaign.md) has accepted '
+        f'**{len(accepted)} of 137 entries**. This table extends the historical suite above. '
+        'The Kind column marks each entry as a core sampler, a derived wrapper, or a '
+        'supporting interface.', '',
         '| Sampler | Kind | Domain | Proof | Review |',
         '| --- | --- | --- | --- | --- |',
     ]

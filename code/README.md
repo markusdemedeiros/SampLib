@@ -1,26 +1,27 @@
 # Occil samplers as ProbLang terms
 
-Import `Samplers`. All algorithms are object-language `pl%` terms in namespace
-`Occil`, generic over the real representation. Instantiating them at `Float` runs
-them in the interpreter; instantiating them at `ℝ` gives future CTE proof targets.
-No sampler calls a host implementation, FFI, or an oracle for its target distribution.
-Uniform integer/real draws are the only probabilistic primitives used.
+Import `Samplers` to use these algorithms. Each algorithm is an object-language `pl%`
+term in the `Occil` namespace, generic over the representation of the reals. At `Float`,
+the terms run in the interpreter. At `ℝ`, they are the targets of the CTE proofs. No
+sampler calls a host implementation, the FFI, or an oracle for its target distribution.
+The only probabilistic primitives are uniform integer and uniform real draws.
 
-This is a broad initial implementation set, not complete coverage of Occil's corpus.
-It has statistical interpreter tests. The [repository README](../README.md#formal-verification)
-lists the samplers with formal CTE correctness proofs.
+This set of implementations is broad, but it does not cover all of Occil's work.
+Statistical interpreter tests cover it. The
+[repository README](../README.md#formal-verification) lists the samplers that have formal
+CTE correctness proofs.
 
 ## Module layout
 
-Import `Samplers` for the complete library, or select a focused family module:
+Import `Samplers` to get the complete library, or import one family module:
 
-| Entry point | Contents |
+| Module | Contents |
 | --- | --- |
 | `Samplers.Discrete.All` | Count laws, compound distributions, urns, and discrete tails |
 | `Samplers.Combinatorial` | Collection sampling, shuffles, and permutations |
 | `Samplers.Weighted.All` | Tables, probability trees, entropy recycling, and dynamic weights |
-| `Samplers.Bernoulli` | Coin composition, linear/rational factories, series, and polynomials |
-| `Samplers.Constants` | Digit/interval engines and named constant coins |
+| `Samplers.Bernoulli` | Coin composition, linear and rational factories, series, and polynomials |
+| `Samplers.Constants` | Digit and interval engines, and coins for named constants |
 | `Samplers.Continuous` | Comparison-based ideal continuous samplers |
 | `Samplers.Numeric` | Integer fixed-point arithmetic and elementary functions |
 | `Samplers.Numerical.All` | Numerical scalar distributions, mixtures, and derived families |
@@ -28,22 +29,26 @@ Import `Samplers` for the complete library, or select a focused family module:
 | `Samplers.PSRN` | Lazy-real arithmetic, observations, and exact sampler constructions |
 | `Samplers.General` | General schemes, point selection, and finite data models |
 
-Large families are divided into smaller implementation files beneath these paths.
-The original `More`, `Factories`, `FactoryExtra`, `DiscreteExtra`, `WeightedVariants`,
-and `Specialized` imports remain available as compatibility re-exports. Existing
-`Occil` namespaces and function signatures are unchanged.
+Large families split into smaller implementation files under these paths. The original
+`More`, `Factories`, `FactoryExtra`, `DiscreteExtra`, `WeightedVariants`, and `Specialized`
+modules still re-export their contents for compatibility. The `Occil` namespaces and
+function signatures did not change.
 
 ## Conventions
 
-- An integer argument is an object-language integer; `n` and `k` are not Lean indices.
-- A coin callback takes unit and returns a Boolean; a sampler callback takes unit and
-  returns a value. Fresh callback calls must be iid and independent of the sampler's
-  auxiliary randomness, including bag digits and selection coins.
-- Lists are `inl(unit)` for nil and `inr((head,tail))` for cons. Pairs encode vectors
-  of size two; heap arrays are internal to shuffle and reservoir algorithms.
-- `fail` signals rejected input. Domains below are preconditions even where a term
-  does not check every assumption (notably abstract-coin probabilities).
-- Geometric and negative-binomial counts mean failures before the required successes.
+- An integer argument is an object-language integer. The names `n` and `k` do not
+  denote Lean indices.
+- A coin callback takes unit and returns a Boolean. A sampler callback takes unit and
+  returns a value. Each fresh callback call must be independent and identically
+  distributed, and independent of the auxiliary randomness of the sampler, including
+  bag digits and selection coins.
+- A list is `inl(unit)` when empty and `inr((head,tail))` otherwise. Pairs encode
+  vectors of size two. Heap arrays appear only inside the shuffle and reservoir
+  algorithms.
+- `fail` signals rejected input. The domains below are preconditions, even where a term
+  does not check every assumption. For example, no term checks the probability of an
+  abstract coin.
+- Geometric and negative-binomial counts are the failures before the required successes.
 - Counts and weights use unbounded integers, not fixed-width machine arithmetic.
 
 ## Implemented techniques and domains
@@ -82,8 +87,8 @@ and `Specialized` imports remain available as compatibility re-exports. Existing
 | `evenParity` | 0<=p<1; 1/(1+p); diverges at p=1 |
 | `fractionalPower` | 0<a<=b; p^(a/b), Mendo's factory; p=0 can have infinite expected cost |
 | `expMinusRational` | x>=0,y>0; exp(-x/y), including integer-part factorization |
-| `expMinusFactory` | exp(-p) from an abstract p-coin, via decreasing uniform trials and thinning |
-| Continuous / `exponential` | Von Neumann unit-rate exponential, via decreasing-chain rejection |
+| `expMinusFactory` | exp(-p) from an abstract p-coin, by decreasing uniform trials and thinning |
+| Continuous / `exponential` | Von Neumann unit-rate exponential, by decreasing-chain rejection |
 | `laplace` | Laplace(0,1), independent exponential magnitude and sign |
 | `erlang` | Positive integer shape, unit rate; independent exponential sum |
 | `uniformSum` | n>=0; Irwin–Hall law, degenerate zero when n=0 |
@@ -97,7 +102,7 @@ and `Specialized` imports remain available as compatibility re-exports. Existing
 | `weightedWithoutReplacement` | Sequential probability-proportional-to-weight ordered indices |
 | `aliasSamples` | Exact integer Walker alias preprocessing in the heap; repeated draws |
 | `sattolo` | Uniform single-cycle permutation, distinct from a uniform derangement |
-| `derangement` | Uniform fixed-point-free permutation of positions, via rejection |
+| `derangement` | Uniform fixed-point-free permutation of positions, by rejection |
 | `flipBits` | Independent callback-directed flips of a Boolean list |
 | `logisticFactory` | cp/(1+cp), c a positive rational |
 | `probabilityGeneratingFactory` | E[p^N] from an abstract nonnegative integer sampler |
@@ -110,19 +115,21 @@ and `Specialized` imports remain available as compatibility re-exports. Existing
 | `logOnePlusFactory` | ln(1+p) from a p-coin and a shared uniform bag |
 | `arctanOverPFactory`, `arctanFactory` | arctan(p)/p (value 1 at p=0), arctan(p) |
 
-`Data` contains list operations; `fillArray`, `readArray`, decreasing-trial,
-iteration, exponential-half coin and Gaussian selectors are supporting pl% routines.
-The Gaussian implementation expands the Karney construction rather than calling
-upstream `Gauss` or the named Gaussian primitive. Its structure follows upstream
-`Metrology/Code/Samplers.lean`, where corresponding CTE examples can guide proofs.
+`Data` contains list operations. The helpers `fillArray` and `readArray`, the
+decreasing-trial and iteration routines, the exponential-half coin, and the Gaussian
+selectors are supporting `pl%` routines. The Gaussian implementation expands the Karney
+construction instead of calling the upstream `Gauss` or the named Gaussian primitive. Its
+structure follows the upstream `Metrology/Code/Samplers.lean`, whose CTE examples can
+guide proofs.
 
-Every Bernstein coefficient must have a positive denominator and numerator between
-zero and that denominator; the routine checks only the selected coefficient.
-Lazy rational comparisons are exact almost surely under the uniform-bit law.
-Dyadic dual representations and all-ones tails are null exceptions, so the comparison
-is not claimed correct for every adversarial infinite bit stream. Repeated geometric
-bag calls intentionally share U; their unconditional pair law is correlated and is
-tested separately from independent coin products.
+Every Bernstein coefficient needs a positive denominator and a numerator between zero and
+that denominator. The routine checks only the coefficient that it selects.
+
+Lazy rational comparisons are exact almost surely under the uniform-bit law. Dyadic
+numbers with two representations and tails of all ones form null exceptions, so the
+comparison is not correct for every adversarial infinite bit stream. Repeated geometric
+bag calls share U on purpose. Their unconditional pair law is therefore correlated, and a
+separate test covers it, apart from independent coin products.
 
 ## Source correspondence and explicit adaptations
 
@@ -133,55 +140,57 @@ Primary sources:
 - [Bernoulli Factory Algorithms](https://peteroupc.github.io/bernoulli.html) and linked `bernoulli.py`
 - [A Note on Randomness Extraction](https://peteroupc.github.io/randextract.html)
 
-This is an algorithmic translation, not a literal transcription of every pseudocode
-line. The following deviations are deliberate:
+The code translates the algorithms. It does not transcribe every line of pseudocode,
+and it deviates from the articles on purpose in these ways:
 
-1. Fisher–Yates uses the selected `j` in both swaps; the article prints `k` there.
+1. Fisher–Yates uses the selected `j` in both swaps. The article prints `k` there.
 2. Ordered subset sampling tests `u < needed`, not `u <= needed`, for u uniform in
-   [0,remaining). The latter selects too frequently and can return too few items.
-3. Pólya urn draws use `ones/(ones+zeros)`; the printed `ZeroOrOne(ones,zeros)`
-   does not match the stated numerator/denominator interface. Nonnegative reinforcement
-   is supported here; negative reinforcement is handled separately by `hypergeometric`.
-4. Multinomial uses remaining integer weight sums for conditional renormalization;
-   the article's inconsistent `t` name is replaced with the current remaining trial count.
-5. `binomial` is the direct trial-sum construction described by the distribution;
-   it is not the optimized bit-decomposition implementation printed as `BinomialInt`.
-6. Compositions use uniform ordered subset cut points rather than rejection of
-   duplicate cut points. The cut-point distribution is the same intended one.
-7. `randomGraph` is the independent-edge construction, not the geometric skip variant.
-8. `expMinusFactory` uses decreasing uniforms thinned by the input coin. Survival
-   through n iterations has probability p^n/n!, so even stopping parity gives exp(-p).
-   This is a comparison-based variant of alternating-series sampling; it is not a
-   transcription of the Python routine's cached uniform/martingale implementation.
-9. Erlang, Laplace, min/max, sum and mixture constructions are compositions of the
-   basic techniques. Their separate test cases exercise the composed output laws.
-10. All samplers use the ideal independence assumptions of ProbLang. The executable
-    interpreter substitutes a seeded PRNG and finite-precision IEEE operations.
-11. `linearLowProbability` supplies margin `1/2` to its inner linear factory.
-    Its advertised bound `μ ≤ ρ < 1/2` ensures `μ/(2ρ) ≤ 1/2`; the previous margin
-    `1−ρ` required the stronger bound `μ ≤ 2ρ²`. The
-    [repair review](../agent-docs/reviews/ExactLowProbabilitySourceRepair001.md)
-    records the exact one-line change and full-domain CTE argument. The
-    [runtime regression](../agent-docs/reviews/LowProbabilityRuntime001.json)
-    covers expanding, contracting, zero and invalid inputs on both interpreters.
+   [0,remaining). The second test selects too often and can return too few items.
+3. Pólya urn draws use `ones/(ones+zeros)`. The printed `ZeroOrOne(ones,zeros)` does not
+   match the stated interface of a numerator and a denominator. This implementation
+   supports nonnegative reinforcement, and `hypergeometric` handles negative
+   reinforcement.
+4. The multinomial sampler renormalizes with the sums of the remaining integer weights.
+   It replaces the inconsistent name `t` in the article with the current count of
+   remaining trials.
+5. `binomial` sums trials directly, as the definition of the distribution describes. It
+   is not the optimized bit-decomposition implementation that the article prints as
+   `BinomialInt`.
+6. Compositions choose uniform ordered subsets as cut points, instead of rejecting
+   duplicate cut points. The cut points have the same intended distribution.
+7. `randomGraph` uses the independent-edge construction, not the geometric skip variant.
+8. `expMinusFactory` uses decreasing uniforms that the input coin thins. The chance of
+   surviving n iterations is p^n/n!, so stopping at an even count gives exp(-p). This
+   comparison-based variant of alternating-series sampling does not transcribe the
+   cached uniform and martingale implementation of the Python routine.
+9. The Erlang, Laplace, minimum, maximum, sum, and mixture samplers compose the basic
+   techniques. Separate test cases exercise each composed output law.
+10. All samplers use the ideal independence assumptions of ProbLang. The interpreter
+    substitutes a seeded PRNG and finite-precision IEEE operations.
+11. `linearLowProbability` passes the margin `1/2` to its inner linear factory. Its stated
+    bound `μ ≤ ρ < 1/2` ensures `μ/(2ρ) ≤ 1/2`. The previous margin, `1−ρ`, required the
+    stronger bound `μ ≤ 2ρ²`. The
+    [repair review](../agent-docs/reviews/ExactLowProbabilitySourceRepair001.md) records
+    the exact one-line change and the CTE argument for the full domain. The
+    [runtime regression](../agent-docs/reviews/LowProbabilityRuntime001.json) covers
+    expanding, contracting, zero, and invalid inputs on both interpreters.
+12. `optimalMatrix` encodes a row with probability one by setting all `k` bits, which
+    represents the cyclic expansion `0.111… = 1`. The previous encoding could overflow the
+    scanned width, so that some distributions, such as `[2, 0]`, looped forever. The
+    [independent repair review](../agent-docs/reviews/ExactOptimalSourceRepair001.md)
+    records the exact change and the argument about row masses. The
+    [interpreter regression](../agent-docs/reviews/OptimalRepairRuntime002.json) passes 88
+    exact matrix checks and 528 runs of the draw and its wrappers. These runs cover every
+    certain position in lists of up to five items, plus nondegenerate controls. The other
+    row encodings and the traversal algorithm did not change.
 
-12. `optimalMatrix` encodes a probability-one row using all `k` bits set to one,
-    representing the cyclic expansion `0.111… = 1`. The previous encoding could
-    overflow the scanned width and make certain distributions such as `[2, 0]`
-    loop forever. The [independent repair review](../agent-docs/reviews/ExactOptimalSourceRepair001.md)
-    records the exact change and the row-mass argument. The
-    [interpreter regression](../agent-docs/reviews/OptimalRepairRuntime002.json)
-    passes 88 exact matrix checks and 528 actual draw/wrapper runs, covering all
-    certain positions in lists up to length five and nondegenerate controls.
-    Other row encodings and the traversal algorithm are preserved.
-
-The source fingerprint file in `agent-docs/OccilSources.json` identifies the documents
-consulted; no claim is made that the website's live pseudocode will stay unchanged.
+The file `agent-docs/OccilSources.json` fingerprints the documents that the translation
+used. The live pseudocode on the website might change.
 
 ## Coverage and remaining work
 
 The [repository index](../README.md) lists Occil's sampling techniques and links to
-their implementations. The table above introduces the core routines; the family
-modules also contain the later numerical, multivariate, weighted, and PSRN additions.
-See [the consolidated wishlist](../agent-docs/ProbLangWishlist.md) for the recorded
-language, interpreter, and proof-library requirements.
+their implementations. The table above introduces the core routines. The family modules
+also contain the later numerical, multivariate, weighted, and PSRN additions. The
+[wishlist](../agent-docs/ProbLangWishlist.md) records what the language, the
+interpreter, and the proof library still need.

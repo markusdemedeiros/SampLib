@@ -1,50 +1,52 @@
 # Verified sampler suite
 
 216 sampler specifications: 214 new verifications and the two initial examples.
-Import `SampLib` for the complete library. Runtime terms remain under `code/Samplers`.
+Import `SampLib` to get the complete library. The runtime terms stay under `code/Samplers`.
 
-Each proof centers on one expectation-preservation argument and a simple CTE
+Each proof rests on one expectation-preservation argument and a simple CTE
 symbolic-execution proof. The public `*_distSpec` theorem uses
-[`IsDistSpec`](Templates.lean): normalized mathematical laws, typed returned values,
-and arbitrary measurable ENNReal continuation credits, including infinity.
-Callback-based samplers assume callback specs; concrete primitives are proved.
-Stateful samplers use [`IsOwnedDistSpec`](Core/OwnedDistSpec.lean) to require and
-preserve their representation invariant while providing the same normalized
-law and arbitrary continuation credits.
-Adequacy corollaries are omitted.
+[`IsDistSpec`](Templates.lean), which states a normalized mathematical law, a typed
+return value, and arbitrary measurable ENNReal continuation credits, including infinity.
+Samplers that take callbacks assume specs for those callbacks, and the proofs cover the
+concrete primitives directly. Stateful samplers use
+[`IsOwnedDistSpec`](Core/OwnedDistSpec.lean). This spec requires and preserves the
+representation invariant of the sampler, and it gives the same normalized law and
+arbitrary continuation credits. The proofs omit adequacy corollaries.
 
 ## Layout
 
 | Path | Contents |
 | --- | --- |
 | [`Templates.lean`](Templates.lean) | `IsDistSpec` and its continuation rule |
-| [`Core/`](Core) | Owned and supported specs, closed-term and list/array helpers, proof-mode extension |
+| [`Core/`](Core) | Owned and supported specs, helpers for closed terms, lists, and arrays, and a proof-mode extension |
 | [`Common/`](Common) | Laws and helpers that several families share |
-| [`Latent/`](Latent) | Shared lazy-real machinery: latent specs, worlds, views and uniform bags |
-| `<Family>/` | One folder per [`code/Samplers`](../code/Samplers) family |
+| [`Latent/`](Latent) | Shared lazy-real machinery: latent specs, worlds, views, and uniform bags |
+| `<Family>/` | One directory for each family in [`code/Samplers`](../code/Samplers) |
 
 The families are [`Uniform`](Uniform), [`Bernoulli`](Bernoulli), [`Constants`](Constants),
 [`Discrete`](Discrete), [`Continuous`](Continuous), [`Combinatorial`](Combinatorial),
-[`Weighted`](Weighted), [`General`](General) and [`PSRN`](PSRN). Inside a family:
+[`Weighted`](Weighted), [`General`](General), and [`PSRN`](PSRN). Each family directory
+has the same parts:
 
-- `*.lean`: public specs, the entry point for each sampler.
-- `Laws/`: the mathematics, meaning target laws, kernels and expectation lemmas.
-- `Syntax/`: unfolding lemmas for the `pl%` source terms.
+- `*.lean`: The public specs. Start here for each sampler.
+- `Laws/`: The mathematics: target laws, kernels, and expectation lemmas.
+- `Syntax/`: Unfolding lemmas for the `pl%` source terms.
 - `Support/`: CTE loop invariants and other program-level helpers.
 
-A module used by one family lives in that family. A module used by several lives in a
-shared folder together with every helper it imports; it may still call another family's
-public spec, such as `RealCoin`. One module stays at its old path:
-[`OptimalScan.lean`](OptimalScan.lean) (Weighted support) exceeds the heartbeat limit under
-any `SampLib.Weighted` module name, and changing its proof would void two reviews.
-Modules that no longer build are kept in
-[`attic/`](../attic). Moves are recorded in [`agent-docs/relocations`](../agent-docs/relocations),
-so earlier reviews still apply.
+A module that one family uses lives in that family. A module that several families use
+lives in a shared directory, together with every helper that it imports. A shared module
+can still call the public spec of a family, such as `RealCoin`.
 
-Unless a row states otherwise, coin biases range over the full unit interval.
-Finite count laws use the standard independent-trial convolution definitions;
-closed-form PMF expansions are not needed by their CTE proofs. Min/max also expose
-their order-statistic CDF or survival function.
+One module stays at its old path. [`OptimalScan.lean`](OptimalScan.lean), a Weighted
+helper, exceeds the heartbeat limit under any `SampLib.Weighted` module name, and a change
+to its proof would void two reviews. Modules that no longer build live in the
+[attic](../attic). The [relocation records](../agent-docs/relocations) list every move, so
+earlier reviews still apply.
+
+Unless a row states otherwise, coin biases range over the full unit interval. Finite
+count laws use the standard convolution definitions for independent trials, so their CTE
+proofs need no closed-form PMF. The minimum and maximum samplers also expose their
+order-statistic CDF or survival function.
 
 ## Uniform draws and primitive coins
 
@@ -112,11 +114,11 @@ their order-statistic CDF or survival function.
 | `Occil.rejection` | μ conditioned on measurable A, μ(A)>0, including μ(A)=1 | [Rejection](Continuous/Rejection.lean) |
 | `Occil.probabilityGeneratingFactory` | Bias E[p^N], any natural-count law; no moment bound | [ProbabilityGeneratingFactory](Bernoulli/ProbabilityGeneratingFactory.lean) |
 
-The exponential-family proofs currently specialize to ProbLang over mathematical
-reals. Exponential is identified with mathlib's `expMeasure 1`; Laplace and Erlang
-use the standard independent-variable constructions, without a Gamma-density
-expansion. The definitionally identical upstream decreasing-chain proof is reused
-through [DecreasingTrial](Common/DecreasingTrial.lean), a supporting helper.
+The exponential-family proofs specialize ProbLang to the mathematical reals. The
+exponential law is mathlib's `expMeasure 1`. Laplace and Erlang use the standard
+constructions from independent variables, without expanding a Gamma density. The helper
+[DecreasingTrial](Common/DecreasingTrial.lean) reuses the upstream proof of the
+decreasing chain, which is definitionally identical.
 
 ## Weighted and collection sampling
 
@@ -138,7 +140,7 @@ of our binomial law with mathlib's.
 <!-- expansion:start -->
 ## Expansion campaign
 
-Accepted additions to the original 47-sampler suite. The [law index](../LAWS.md) also includes unverified implementations.
+This table lists the accepted additions to the original 47-sampler suite. The [law index](../LAWS.md) also lists implementations that have no proof.
 
 | Sampler | Kind | Law and domain | Proof |
 | --- | --- | --- | --- |
@@ -316,14 +318,15 @@ Accepted additions to the original 47-sampler suite. The [law index](../LAWS.md)
 
 ## Reading and checking the proofs
 
-Read the target law and credit kernel, the central expectation lemma, then the
-`twp_*` theorem. Retrying algorithms isolate the amplification facts needed for
-total correctness. `SampleWithReplacement` includes a separate zero-draw public
-spec covering empty input without any uniform-randomness assumption.
+To read a proof, start with the target law and the credit kernel, then read the central
+expectation lemma, and then read the `twp_*` theorem. Retrying algorithms isolate the
+amplification facts that total correctness needs. `SampleWithReplacement` has a separate
+public spec for zero draws, which covers empty input without any assumption about
+uniform randomness.
 
-Independent review findings, suggestions, source snapshots, and reproducible
-caller/boundary/infinite-credit checks are under
-[`agent-docs/reviews`](../agent-docs/reviews). The complete audit is reproducible:
+The [reviews directory](../agent-docs/reviews) holds the independent review findings and
+suggestions, the source snapshots, and reproducible checks of callers, boundaries, and
+infinite credits. To reproduce the complete audit, run these commands:
 
 ```sh
 python3 agent-scripts/lean_gate.py -- python3 agent-scripts/audit_exact_sampler_proofs.py
@@ -331,20 +334,26 @@ python3 agent-scripts/exact_baseline.py --check
 python3 agent-scripts/relocation.py --check
 ```
 
-The first command runs the full project build, binds accepted proofs to reviewer-owned
-receipts and transitive source/dependency snapshots, inspects actual compiled spec program
-heads, audits transitive axioms, and compiles the independent caller checks. The second
-binds this suite's 216 historical reviews to the current dependency pin. The third
-replays recorded module moves from git. Mathematical interpretation and domain adequacy are established by human-style
-source review; the script's structural sanity checks do not decide those claims.
+The commands do these checks:
 
-These are ideal ProbLang correctness proofs. Float interpreter statistics remain
-separate implementation evidence.
+1. The first command builds the whole project. It binds each accepted proof to its
+   reviewer-owned receipt and to snapshots of its transitive sources and dependencies. It
+   then inspects the program heads of the compiled specs, audits the transitive axioms,
+   and compiles the independent caller checks.
+2. The second command binds the 216 historical reviews of this suite to the current
+   dependency pin.
+3. The third command replays the recorded module moves from git.
+
+Source review by people establishes the mathematical interpretation and the adequacy of
+each domain. The structural checks in the scripts do not decide those questions.
+
+These proofs establish correctness for ideal ProbLang. The interpreter statistics, which
+use Float arithmetic, remain separate evidence about the implementations.
 
 <!-- exact:start -->
 ## Exact verification campaign
 
-**120 of 137 entries accepted** in the [current campaign](../agent-docs/ExactVerificationCampaign.md). This table extends the historical suite above; supporting interfaces and derived wrappers are identified explicitly.
+The [current campaign](../agent-docs/ExactVerificationCampaign.md) has accepted **120 of 137 entries**. This table extends the historical suite above. The Kind column marks each entry as a core sampler, a derived wrapper, or a supporting interface.
 
 | Sampler | Kind | Domain | Proof | Review |
 | --- | --- | --- | --- | --- |

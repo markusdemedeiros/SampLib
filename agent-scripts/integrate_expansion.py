@@ -112,8 +112,8 @@ def main() -> None:
     start, end = "<!-- expansion:start -->", "<!-- expansion:end -->"
     new_rows = [row for row in accepted if row["sampler"] not in baseline]
     lines = [start, "## Expansion campaign", "",
-             "Accepted additions to the original 47-sampler suite. The "
-             "[law index](../LAWS.md) also includes unverified implementations.", "",
+             "This table lists the accepted additions to the original 47-sampler suite. "
+             "The [law index](../LAWS.md) also lists implementations that have no proof.", "",
              "| Sampler | Kind | Law and domain | Proof |", "| --- | --- | --- | --- |"]
     for row in new_rows:
         module = row["proof_module"].split(".")[-1]

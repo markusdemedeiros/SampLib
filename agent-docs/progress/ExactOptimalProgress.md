@@ -1,7 +1,7 @@
 # Exact optimal-choice work
 
-> Round-2 working notes, kept as a record and not updated since 2026-11-06. For current
-> status see [LAWS.md](../../LAWS.md) and [the deferral list](../ExactCampaignDeferrals.md).
+> These notes record round 2 and stopped changing on 6 November 2026. For the current
+> status, see [LAWS.md](../../LAWS.md) and the [deferred samplers](../ExactCampaignDeferrals.md).
 
 Owner: `weighted` team (round 2), transferred from `prove_constants` and before that
 `prove_weighted`. Scope: `Occil.WeightedVariants.optimalDraw` and `optimalChoice`.

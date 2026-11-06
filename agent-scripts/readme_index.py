@@ -461,7 +461,9 @@ def main():
 
     header='''# SampLib
 
-Occil samplers as executable ProbLang `pl%` terms, intended for continuous TotalEris (CTE) proofs. Dependency: [logsem/clutch-lean](https://github.com/logsem/clutch-lean), commit `06a7b3e2b26f3e58c01edb12e39bdf439ba5a982`, Lean 4.35.0.
+SampLib expresses Peter Occil's samplers as executable ProbLang `pl%` terms and proves them correct in continuous TotalEris (CTE). It depends on [logsem/clutch-lean](https://github.com/logsem/clutch-lean) at commit `06a7b3e2b26f3e58c01edb12e39bdf439ba5a982` and on Lean 4.35.0.
+
+To build the library and run the statistical tests, run these commands:
 
 ```sh
 lake build
@@ -470,46 +472,51 @@ python3 tests/statistical.py
 
 [Sampler laws](LAWS.md) · [Implementation details and source corrections](code/README.md) · [ProbLang wishlist](agent-docs/ProbLangWishlist.md) · [Test results](tests/latest-results.json) · [Source inventory](agent-docs/OccilInventory.json)
 
-The interpreter suite checks output laws and seeded environment/substitution agreement; see the recorded test results above. Statistical tests are implementation evidence. The interpreter runs finite-precision Float operations.
+The interpreter tests check the output laws, and check that seeded runs agree across environments and substitutions. The test results above record the outcome. These tests are evidence about the implementations, not proofs, and the interpreter uses finite-precision Float arithmetic.
 
 ## Where things live
 
 | Path | Contents |
 | --- | --- |
-| [`code/Samplers`](code/README.md) | Occil's algorithms as `pl%` terms, one folder per family |
-| [`SampLib`](SampLib/README.md#layout) | CTE proofs, in matching family folders over shared `Core`, `Common` and `Latent` |
-| [`LAWS.md`](LAWS.md) | Every sampler's law, linked to its code and any accepted proof |
-| [`agent-docs`](agent-docs/README.md) | Proof standard, campaign ledgers, reviews and deferrals |
-| [`agent-scripts`](agent-scripts) | Audits, integration and index generators |
-| [`tests`](tests) | Interpreter fixtures and statistical checks |
-| [`attic`](attic/README.md) | Unbuilt modules, including leftovers for deferred samplers |
+| [`code/Samplers`](code/README.md) | Occil's algorithms as `pl%` terms, with one directory for each family |
+| [`SampLib`](SampLib/README.md#layout) | The CTE proofs, in family directories that match `code/Samplers`, on top of the shared `Core`, `Common`, and `Latent` directories |
+| [`LAWS.md`](LAWS.md) | The law of every sampler, with links to its code and to any accepted proof |
+| [`agent-docs`](agent-docs/README.md) | The proof standard, campaign ledgers, reviews, and deferrals |
+| [`agent-scripts`](agent-scripts) | Audits, integration scripts, and index generators |
+| [`tests`](tests) | Interpreter fixtures and statistical tests |
+| [`attic`](attic/README.md) | Modules that no longer build, including leftovers for deferred samplers |
 
 ## Formal verification
 
 The active [exact verification campaign](agent-docs/ExactVerificationCampaign.md)
-tracks the [remaining 137 entries](agent-docs/ExactVerificationQueue.md), with
-independent review and explicit domain findings.
+tracks the [remaining 137 entries](agent-docs/ExactVerificationQueue.md). Each entry gets
+an independent review and an explicit finding about its domain.
 
 The completed [baseline suite](SampLib/README.md) contains **216 samplers**, including
-**169 additions to the original 47-sampler suite** added through independent author and reviewer passes. It covers
-uniform integers, Bernoulli factories, finite and geometric count laws, urns,
-exponential-family distributions, weighted sampling, mixtures, rejection, and
-collection sampling. Each public spec uses typed normalized laws and arbitrary
-measurable continuation credits.
+**169 additions to the original 47-sampler suite**. An independent author and an
+independent reviewer handled each addition. The suite covers uniform integers, Bernoulli
+factories, finite and geometric count laws, urns, exponential-family distributions,
+weighted sampling, mixtures, rejection, and collection sampling. Each public spec uses
+typed, normalized laws and arbitrary measurable continuation credits.
 
-The proofs follow the [verification protocol](agent-docs/VerifyingSamplers.md):
-one mathematical expectation-preservation argument and straightforward CTE
-symbolic execution. Review findings and reproducible caller checks are retained.
-Run `python3 agent-scripts/lean_gate.py -- python3 agent-scripts/audit_exact_sampler_proofs.py`
-for the current campaign build, pinned-review, signature, axiom, and caller audit.
-Historical receipts retain their original dependency context. Adequacy corollaries are
-omitted; interpreter statistics do not verify Float rounding.
+The proofs follow the [verification protocol](agent-docs/VerifyingSamplers.md): one
+mathematical expectation-preservation argument, then straightforward CTE symbolic
+execution. The repository keeps every review finding and every reproducible caller check.
+To build the project and audit the pinned reviews, signatures, axioms, and callers of the
+current campaign, run this command:
+
+```sh
+python3 agent-scripts/lean_gate.py -- python3 agent-scripts/audit_exact_sampler_proofs.py
+```
+
+Historical receipts keep their original dependency context. The proofs omit adequacy
+corollaries, and the interpreter statistics do not verify Float rounding.
 
 ## Sampler index
 
-A terse index of Occil's sampler lists and algorithm/distribution tables, grouped by source and technique. Each name links to its source; **code** links to the implementing file when present. A qualifier limits that link to the implemented parameter range or variant. No code link means the listed technique is not implemented here. Aliases and repeated appearances across articles are retained. Benchmark, parameter, and proof-derivation tables are omitted.
+This index lists the sampler lists and the algorithm and distribution tables in Occil's articles, grouped by source and technique. Each name links to its source. A **code** link points to the implementing file, when one exists, and a qualifier limits that link to the implemented parameter range or variant. A missing code link means that this repository does not implement the technique. The index keeps aliases and repeated entries across articles. It omits benchmark, parameter, and proof-derivation tables.
 
-Generated from the live articles by `python3 agent-scripts/readme_index.py`; review code-link mappings when refreshing.
+`python3 agent-scripts/readme_index.py` generates this index from the live articles. When you refresh the index, review the mappings of the code links.
 '''
     # Broken source anchors indicate an extraction/curation error rather than
     # an implemented sampler. Fail before replacing the README.

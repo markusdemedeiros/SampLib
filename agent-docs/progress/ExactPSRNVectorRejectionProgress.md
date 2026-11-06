@@ -1,7 +1,7 @@
 # Exact PSRN vector rejection progress
 
-> Round-2 working notes, kept as a record and not updated since 2026-11-06. For current
-> status see [LAWS.md](../../LAWS.md) and [the deferral list](../ExactCampaignDeferrals.md).
+> These notes record round 2 and stopped changing on 6 November 2026. For the current
+> status, see [LAWS.md](../../LAWS.md) and the [deferred samplers](../ExactCampaignDeferrals.md).
 
 Samplers: `newFGMCopula` and `newRectellipse` in
 [Distributions.lean](../../code/Samplers/PSRN/Distributions.lean). Both are deferred. No
