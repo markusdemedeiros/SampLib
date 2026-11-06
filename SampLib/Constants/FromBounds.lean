@@ -1,4 +1,4 @@
-import SampLib.Common.Laws.BoundsKernel
+import SampLib.Constants.Support.FromBoundsEncoding
 import SampLib.Latent.UniformBagBracket
 import Samplers.Constants.Engines
 
@@ -15,10 +15,6 @@ open scoped ENNReal
 namespace SampLib.FromBounds
 
 noncomputable section
-
-/-- The source callback representation `(lower,(upper,denominator))`. -/
-def encodeInterval {rT : Type} {p : unitInterval} (a : Interval p) : Val rT :=
-  Val.pair (Val.int a.lower) (Val.pair (Val.int a.upper) (Val.int a.denominator))
 
 private theorem denominator_pos {p : unitInterval} (a : Interval p) :
     (0 : ℤ) < a.denominator := by exact_mod_cast a.positive

@@ -1,4 +1,4 @@
-import SampLib.Common.Laws.BooleanEvent
+import SampLib.General.Laws.PermutationTest
 import SampLib.Discrete.Binomial
 import SampLib.Common.Syntax.Shuffle
 import SampLib.Core.SamplerStep
@@ -17,46 +17,11 @@ namespace SampLib.PermutationTest
 
 noncomputable section
 
-set_option maxHeartbeats 400000
-
 variable {α : Type _}
-
-/-- Ties belong to the exceedance event. -/
-def exceeds (xs : List α) (statistic : List α → ℤ)
-    (σ : Equiv.Perm (Fin xs.length)) : Bool :=
-  decide (statistic xs ≤ statistic (Shuffle.output xs σ))
-
-/-- The exact null exceedance probability, retaining all positional multiplicities. -/
-def bias (xs : List α) (statistic : List α → ℤ) : unitInterval :=
-  BooleanEvent.bias (Shuffle.law xs) (exceeds xs statistic)
-
-/-- The number of independently sampled null exceedances. -/
-abbrev law (xs : List α) (statistic : List α → ℤ) (n : ℕ) :=
-  Binomial.law (bias xs statistic) n
 
 /-- The exact numerator and denominator returned by the program. -/
 def encode {rT : Type _} (replicates count : ℕ) : Val rT :=
   .pair (.int (count + 1)) (.int (replicates + 1))
-
-section mathematics
-
-open MeasureTheory
-
-/-- Condition on one uniform null permutation, then count the remaining trials. -/
-theorem expectation (xs : List α) (statistic : List α → ℤ) (n z : ℕ)
-    (F : ℕ → ℝ≥0∞) :
-    ∫⁻ σ, ∫⁻ k,
-        F (if exceeds xs statistic σ then z + 1 + k else z + k)
-          ∂law xs statistic n ∂Shuffle.law xs =
-      ∫⁻ k, F (z + k) ∂law xs statistic (n + 1) := by
-  rw [BooleanEvent.expectation (Shuffle.law xs) (exceeds xs statistic)
-    (measurable_of_countable _)
-    (fun b => ∫⁻ k, F (if b then z + 1 + k else z + k) ∂law xs statistic n)]
-  simpa only [law, Binomial.continuation, bias, add_ite, apply_ite, Nat.add_assoc,
-    Nat.add_left_comm, Nat.add_comm] using
-    Binomial.expectation (bias xs statistic) n (fun k => F (z + k))
-
-end mathematics
 
 private def loop {rT : Type _} [ProbLangℝ rT] (input : α → Val rT)
     (xs : List α) (statistic : Val rT) (observed : ℤ) (replicates : ℕ) : Exp rT :=

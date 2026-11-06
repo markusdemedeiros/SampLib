@@ -123,25 +123,6 @@ theorem fraction_half (rate : ℝ) (hrate : 0 < rate) (a b : ℝ)
     ENNReal.ofReal_mul (bitBias rate (b - a)).2.1]
   ring
 
-/-- Conditioning on any reachable cell gives the source's next-bit probability. -/
-theorem conditional_half (rate : ℝ) (hrate : 0 < rate) (a b : ℝ)
-    (ha : 0 ≤ a) (hab : a < b) (hb : b ≤ 1) :
-    ProbabilityTheory.cond (fraction rate) (Ico a b) (Ico ((a + b) / 2) b) =
-      ofReal (bitBias rate (b - a) : ℝ) := by
-  let := fraction_probability rate hrate
-  rw [ProbabilityTheory.cond_apply measurableSet_Ico]
-  have hi : Ico a b ∩ Ico ((a + b) / 2) b = Ico ((a + b) / 2) b := by
-    apply inter_eq_right.mpr
-    intro x hx
-    exact ⟨by linarith [hx.1], hx.2⟩
-  rw [hi, fraction_half rate hrate a b ha hab.le hb]
-  calc
-    _ = ofReal (bitBias rate (b - a) : ℝ) *
-        ((fraction rate (Ico a b))⁻¹ * fraction rate (Ico a b)) := by ring
-    _ = _ := by
-      rw [ENNReal.inv_mul_cancel (fraction_interval_ne_zero rate hrate a b ha hab hb)
-        (measure_ne_top _ _), mul_one]
-
 end
 
 end SampLib.ExponentialDigits

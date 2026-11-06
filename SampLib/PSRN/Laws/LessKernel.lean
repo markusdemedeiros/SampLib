@@ -1,4 +1,4 @@
-import SampLib.Latent.LatentMeasuredError
+import SampLib.Latent.Laws.MeasuredError
 import SampLib.PSRN.Laws.IntervalComparison
 
 /-! # Joint credits for exact comparison of two shared latent views

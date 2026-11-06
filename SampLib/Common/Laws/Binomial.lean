@@ -1,4 +1,4 @@
-import SampLib.Discrete.Binomial
+import SampLib.Discrete.Laws.Binomial
 import SampLib.Common.Laws.BinomialMeasure
 
 open MeasureTheory

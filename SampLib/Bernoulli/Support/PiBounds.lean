@@ -1,4 +1,5 @@
 import SampLib.Bernoulli.Laws.PiBoundsDefs
+import SampLib.Bernoulli.Support.RealEnclosureEncoding
 import SampLib.Templates
 import SampLib.Core.SamplerStep
 import SampLib.Core.ProofMode.BindFrom
@@ -13,6 +14,8 @@ Their analytic interpretation is supplied separately by the arctangent series.
 open ProbLang
 
 namespace SampLib.PiBounds
+
+export RealEnclosure (encodeTriple)
 
 private def addTerm {rT : Type _} (q n : ℕ) : Exp rT := pl%
   rec addTerm k power numerator denominator :=

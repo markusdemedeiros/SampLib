@@ -95,7 +95,6 @@ private theorem twp_min (E : CoPset) (a b : ℕ) :
     ipureintro
     rw [min_eq_right (by omega)]
 
-set_option maxHeartbeats 600000 in
 /-- Each split executes two lookups, one supported Bernoulli draw, and one deterministic branch. -/
 private theorem twp_round (E : CoPset) {size count : ℕ} (hc : 0 < count) (hs : count < size)
     (s : State size count) (F : List ℤ → ℝ≥0∞)
@@ -229,7 +228,6 @@ theorem inclusionSplitting_zero_distSpec (E : CoPset) (ws : List ℕ) :
   spec F _ := by
     simpa only [MeasureTheory.lintegral_dirac] using wand_entails (twp_zero E ws F)
 
-set_option maxHeartbeats 1000000 in
 /-- Validation and stable preprocessing lead to a full selection or a finite splitting chain. -/
 theorem twp_inclusionSplitting (E : CoPset) (ws : List ℕ) (count : ℕ) (ht : 0 < ws.sum)
     (hc : count ≤ ws.length) (hcap : ∀ w ∈ ws, count * w ≤ ws.sum) (F : List ℤ → ℝ≥0∞) :

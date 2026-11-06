@@ -9,7 +9,6 @@ open scoped ENNReal
 
 namespace SampLib.ReciprocalAffinePower
 
-set_option maxHeartbeats 800000
 
 noncomputable section
 

@@ -1,3 +1,4 @@
+import SampLib.Weighted.Laws.RecycledSamples
 import SampLib.Weighted.RecycledUniform
 import SampLib.Core.ListOperations
 import SampLib.Core.Syntax.ClosedExp
@@ -14,20 +15,6 @@ open scoped ENNReal
 namespace SampLib.RecycledSamples
 
 noncomputable section
-
-/-- Independent uniform draws on `[0,n)`, decoded as a list in sampling order. -/
-def law (n count : ℕ) : Measure (List ℕ) :=
-  (SampleWithReplacement.law (UniformInt.law n) count).map List.ofFn
-
-instance (n count : ℕ) [NeZero n] : IsProbabilityMeasure (law n count) where
-  measure_univ := by
-    rw [law, Measure.map_apply (measurable_of_countable _) MeasurableSet.univ]
-    simp
-
-theorem expectation (n count : ℕ) (F : List ℕ → ℝ≥0∞) (hF : Measurable F) :
-    ∫⁻ xs, F (List.ofFn xs) ∂SampleWithReplacement.law (UniformInt.law n) count =
-      ∫⁻ ys, F ys ∂law n count := by
-  rw [law, lintegral_map hF (measurable_of_countable _)]
 
 private def draw {rT : Type} (pool : Loc) (n : ℕ) : Val rT :=
   ⟨.lam pl(&Occil.Weighted.recycledUniform #loc pool #int (n : ℤ)), .lam (by is_lc), by is_lc⟩

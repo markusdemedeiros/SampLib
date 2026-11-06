@@ -1,6 +1,6 @@
 import SampLib.Bernoulli.Laws.EnvelopeCoefficients
 import SampLib.Bernoulli.Laws.EnvelopeFuture
-import SampLib.Bernoulli.Support.BinomialFinite
+import SampLib.Bernoulli.Laws.BinomialFinite
 
 /-! # Forward binomial steps on the reverse-conditioned shadow histories -/
 

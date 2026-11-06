@@ -1,5 +1,5 @@
 import SampLib.Bernoulli.Laws.FiniteGeometricWalk
-import SampLib.Continuous.IterateCoin
+import SampLib.Continuous.Laws.IterateCoin
 
 /-! # Work estimates for Huber's adaptive power walk
 

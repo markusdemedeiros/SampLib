@@ -1,4 +1,5 @@
 import SampLib.Latent.Laws.Uniform
+import SampLib.Latent.UniformBagPrefix
 import SampLib.Common.PSRNIntegerPower
 import SampLib.Latent.LatentSpec
 import Samplers.PSRN.Core
@@ -36,10 +37,6 @@ def value {rT : Type} (l : Loc) : Val rT :=
       let numerator := &Occil.uniformBagPrefix #loc l bits;
       let denominator := &Occil.PSRN.integerPower #2 bits;
       (numerator, (numerator + #1, denominator))), .lam (by is_lc), by is_lc⟩
-
-/-- Finite observation format: lower numerator, upper numerator, denominator. -/
-def intervalValue {rT : Type} (a b d : ℤ) : Val rT :=
-  .pair (.int a) (.pair (.int b) (.int d))
 
 noncomputable section
 

@@ -1,5 +1,5 @@
 import SampLib.Common.Laws.DyadicPosterior
-import SampLib.Uniform.UniformInt
+import SampLib.Uniform.Laws.UniformInt
 
 /-! # Uniform posteriors after radix digits
 

@@ -143,10 +143,6 @@ theorem interval_tight : RealEnclosure.Tight interval :=
   unfold RealEnclosure.Interval.triple interval
   rw [Int.toNat_of_nonneg (piRaw_den_pos n).le]
 
-@[simp] theorem encode_interval {rT : Type} (n : ℕ) :
-    RealEnclosure.encodeInterval (rT := rT) (interval n) = encodeTriple (piRaw n) := by
-  rw [RealEnclosure.encodeInterval, interval_triple]
-
 end
 
 end SampLib.PiBounds

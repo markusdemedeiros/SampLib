@@ -1,6 +1,7 @@
 import SampLib.PSRN.Laws.RepresentedReciprocal
 import SampLib.PSRN.Syntax.RepresentedReciprocal
-import SampLib.Latent.LatentMeasuredError
+import SampLib.Latent.LatentViews
+import SampLib.Latent.Laws.MeasuredError
 
 /-! # The actual reciprocal observer over one represented latent world
 

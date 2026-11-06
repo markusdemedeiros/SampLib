@@ -1,6 +1,5 @@
-import SampLib.PSRN.Support.PSRNSimplexAllocation
+import SampLib.PSRN.Support.PSRNSimplexModel
 import SampLib.PSRN.Support.PSRNSimplexSource
-import SampLib.PSRN.Support.PSRNSimplexPositive
 import SampLib.PSRN.Support.LatentNormalizationConstructor
 
 /-! # The actual multi-coordinate exponential simplex constructor -/

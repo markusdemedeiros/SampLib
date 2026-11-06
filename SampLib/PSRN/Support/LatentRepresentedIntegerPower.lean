@@ -1,7 +1,8 @@
 import SampLib.PSRN.Support.LatentRepresentedMultiplication
 import SampLib.PSRN.Support.LatentRepresentedAddition
-import SampLib.PSRN.Support.LatentWorldRelations
-import SampLib.Latent.LatentMeasuredError
+import SampLib.PSRN.Support.LatentArithmeticRelations
+import SampLib.Latent.LatentViews
+import SampLib.Latent.Laws.MeasuredError
 import SampLib.PSRN.Syntax.RepresentedIntegerPower
 
 /-! # Represented integer powers over one shared latent world

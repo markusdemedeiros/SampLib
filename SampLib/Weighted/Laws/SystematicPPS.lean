@@ -1,4 +1,5 @@
-import SampLib.Uniform.UniformInt
+import SampLib.Uniform.Laws.UniformInt
+import Metrology.ProbLang.Discrete
 
 /-! # The joint law of systematic probability-proportional-to-size sampling
 

@@ -1,4 +1,4 @@
-import SampLib.Uniform.UniformInt
+import SampLib.Uniform.Laws.UniformInt
 
 /-! # Finite-horizon credit for uniform bit recycling
 
@@ -27,9 +27,6 @@ theorem residual_width_lt (n v : ℕ) (hv : v < n) : v * 2 - n < n := by omega
 
 theorem lower_recycle_lt (n w x : ℕ) (hnx : n ≤ x) (hx : x < w) : x - n < w - n := by
   omega
-
-theorem upper_output_lt (n w x : ℕ) (haccept : w - n ≤ x) (hx : x < w) :
-    x - (w - n) < n := by omega
 
 /-- The common one-bit kernel, after doubling the width and appending the bit. -/
 def kernel (o : Orientation) (n : ℕ) (F : ℕ → ℝ≥0∞) (K : ℕ → ℕ → ℝ≥0∞)

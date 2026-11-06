@@ -1,5 +1,6 @@
 import SampLib.Core.ListEncoding
 import SampLib.Uniform.RealCoin
+import SampLib.Combinatorial.Laws.FlipBits
 import Samplers.Combinatorial.Permutations
 
 /-! # Independent bit flips
@@ -15,44 +16,8 @@ namespace SampLib.FlipBits
 
 noncomputable section
 
-def flip (x c : Bool) : Bool := if c then !x else x
-
 private theorem bool_rec_not (x : Bool) : Bool.rec true false x = !x := by
   cases x <;> rfl
-
-section mathematics
-
-open MeasureTheory
-
-/-- Independent Bernoulli toggles applied to the fixed input bits. -/
-def law (p : unitInterval) : List Bool → Measure (List Bool)
-  | [] => Measure.dirac []
-  | x :: xs => ((RealCoin.law p).prod (law p xs)).map
-      (fun z => flip x z.1 :: z.2)
-
-instance (p : unitInterval) (xs : List Bool) : IsProbabilityMeasure (law p xs) := by
-  induction xs with
-  | nil => dsimp [law]; infer_instance
-  | cons x xs IH =>
-    let := IH
-    constructor
-    rw [law, Measure.map_apply (measurable_of_countable _) MeasurableSet.univ]
-    simp
-
-/-- Conditional credit after the first toggle. -/
-def credit (p : unitInterval) (x : Bool) (xs : List Bool)
-    (F : List Bool → ℝ≥0∞) (c : Bool) : ℝ≥0∞ :=
-  ∫⁻ ys, F (flip x c :: ys) ∂law p xs
-
-/-- Independence separates the first toggle from the remaining bit flips. -/
-theorem expectation (p : unitInterval) (x : Bool) (xs : List Bool)
-    (F : List Bool → ℝ≥0∞) :
-    ∫⁻ c, credit p x xs F c ∂RealCoin.law p = ∫⁻ ys, F ys ∂law p (x :: xs) := by
-  rw [law, lintegral_map (measurable_of_countable _) (measurable_of_countable _),
-    lintegral_prod _ (measurable_of_countable _).aemeasurable]
-  rfl
-
-end mathematics
 
 private theorem encode_cons {rT : Type _} [ProbLangℝ rT] (x : Bool) (xs : List Bool) :
     pl(inr((#bool x, {Exp.ofVal (listVal Val.bool xs)}))) =

@@ -1,5 +1,5 @@
 import SampLib.Bernoulli.Laws.LinearFactory
-import SampLib.Continuous.IterateCoin
+import SampLib.Continuous.Laws.IterateCoin
 
 /-! # Integer stages of Huber's geometric-jump factory -/
 

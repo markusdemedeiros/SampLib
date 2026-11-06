@@ -281,6 +281,12 @@ def run(command: list[str]) -> str:
     return result.stdout
 
 
+def caller_imports(caller: str) -> list[str]:
+    from proof_dependencies import imports_of
+
+    return [module for module in imports_of(ROOT / caller) if module.startswith("SampLib")]
+
+
 def validate_axioms(output: str, specs: list[str]) -> None:
     for spec in specs:
         pattern = re.escape(f"'{spec}' depends on axioms:") + r"\s*\[([^]]*)\]"
@@ -331,7 +337,15 @@ def audit(manifest: Path, metadata_only: bool, require_complete: bool) -> None:
                 "Checked specification/program pairs differ from accepted rows")
         validate_axioms(output, specs)
         for caller in sorted(callers):
+            # Build the caller's imports first: `lake env lean` alone would accept
+            # stale build output for modules that `lake build` no longer covers.
+            run(["lake", "build", *caller_imports(caller)])
             run(["lake", "env", "lean", caller])
+    from statement_pins import PINS, check as changed_statements
+
+    if PINS.exists():
+        changed = changed_statements()
+        require(not changed, "Public statements differ from their pins: " + ", ".join(changed))
     require(read_json(manifest) == campaign,
             "Campaign changed during audit; rerun the current state")
     require(review_context() == context, "Dependency context changed during audit")

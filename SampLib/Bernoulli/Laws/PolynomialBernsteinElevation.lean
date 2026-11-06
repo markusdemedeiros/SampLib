@@ -124,7 +124,8 @@ theorem eventually_admissible_strict (a : ℕ → ℝ) (d : ℕ)
 theorem exists_admissible_degree (a : ℕ → ℝ) (d : ℕ)
     (h : ∀ x : I, value a d x ∈ Ioo (0 : ℝ) 1) :
     ∃ n, d ≤ n ∧ ∀ k ≤ n, coefficient a d n k ∈ Icc (0 : ℝ) 1 := by
-  obtain ⟨n, hn, hcoeff⟩ := ((eventually_ge_atTop d).and (eventually_admissible_strict a d h)).exists
+  obtain ⟨n, hn, hcoeff⟩ :=
+    ((eventually_ge_atTop d).and (eventually_admissible_strict a d h)).exists
   exact ⟨n, hn, fun k hk => ⟨(hcoeff k hk).1.le, (hcoeff k hk).2.le⟩⟩
 
 end

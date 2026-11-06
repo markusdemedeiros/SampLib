@@ -41,14 +41,6 @@ def round (value precision : ℕ) : ℕ :=
 theorem round_exact (value precision : ℕ) (h : value.size ≤ precision) :
     round value precision = value := ite_eq_left h
 
-/-- An already representable multiple of the quantum is unchanged. -/
-theorem round_of_dvd (value precision : ℕ) (h : quantum value precision ∣ value) :
-    round value precision = value := by
-  by_cases hf : value.size ≤ precision
-  · exact round_exact value precision hf
-  · have hq := quantum_pos value precision
-    simpa [round, hf, Nat.mod_eq_zero_of_dvd h, hq.ne'] using Nat.div_mul_cancel h
-
 /-- Midpoint rounding adds the significand's parity bit, producing an even result. -/
 theorem round_tie (value precision : ℕ) (hf : precision < value.size)
     (ht : quantum value precision = 2 * (value % quantum value precision)) :

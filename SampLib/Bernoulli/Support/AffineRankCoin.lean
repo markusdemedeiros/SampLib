@@ -1,4 +1,6 @@
-import SampLib.Bernoulli.OffsetRace
+import SampLib.Bernoulli.Laws.OffsetRace
+import SampLib.Uniform.UniformInt
+import Metrology.Iris.LocalBI
 
 /-! # Affine coins from three uniform-rank intervals
 

@@ -178,12 +178,6 @@ theorem fresh_lc {rT : Type} (nextBit : Val rT) (node : Loc)
   apply Exp.lcb_imp_lc
   simp [fresh, bind, Exp.lcb, hc, hb]
 
-theorem fresh_open {rT : Type} (nextBit : Val rT) (node : Loc)
-    (numerator denominator : ℤ) (k : ℕ) (v : Exp rT) :
-    Exp.openRec k v (fresh nextBit node numerator denominator) =
-      fresh nextBit node numerator denominator :=
-  (Exp.open_lc _ _ _ (fresh_lc nextBit node numerator denominator)).symm
-
 /-- The actual load/conditional callback/store sequence at the current node. -/
 def step {rT : Type} (nextBit : Val rT) (node : Loc) (numerator denominator : ℤ) : Exp rT :=
   let fresh := bind (.app Occil.newUniformBag (.lit .unit))

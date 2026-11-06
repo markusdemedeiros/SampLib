@@ -7,7 +7,8 @@ namespace SampLib.ReciprocalPiProbability
 
 noncomputable section
 
-private def rational (numerator denominator : ℕ) (hd : 0 < denominator) :
+/-- The constant enclosure of a rational number. -/
+def rational (numerator denominator : ℕ) (hd : 0 < denominator) :
     RealEnclosure.Interval ((numerator : ℝ) / denominator) where
   lower := numerator
   upper := numerator
@@ -20,7 +21,7 @@ private def rational (numerator denominator : ℕ) (hd : 0 < denominator) :
     push_cast
     rw [div_mul_cancel₀ _ (by exact_mod_cast hd.ne')]
 
-private theorem pi_left_pos (n : ℕ) : 0 < (PiBounds.interval n).left :=
+theorem pi_left_pos (n : ℕ) : 0 < (PiBounds.interval n).left :=
   lt_trans (by norm_num) (PiBounds.interval_positive n)
 
 def bias (numerator denominator : ℕ) (hd : 0 < denominator)
@@ -43,20 +44,6 @@ theorem tight (numerator denominator : ℕ) (hd : 0 < denominator)
       RealEnclosure.Interval.left, rational, sub_self] using
       (tendsto_const_nhds : Filter.Tendsto (fun _ : ℕ => (0 : ℝ)) _ _)
   · exact PiBounds.interval_width_tendsto
-
-theorem encode {rT : Type} (numerator denominator : ℕ) (hd : 0 < denominator)
-    (hp : (numerator : ℝ) ≤ denominator * Real.pi) (n : ℕ) :
-    FromBounds.encodeInterval (rT := rT) (interval numerator denominator hd hp n) =
-      RealEnclosure.encodeTriple
-        ((numerator : ℤ) * (PiBounds.piRaw n).2.2 * (PiBounds.piRaw n).1,
-          ((numerator : ℤ) * (PiBounds.piRaw n).2.2 * (PiBounds.piRaw n).2.1,
-            (denominator : ℤ) * (PiBounds.piRaw n).1 * (PiBounds.piRaw n).2.1)) := by
-  change RealEnclosure.encodeInterval
-    ((rational numerator denominator hd).quotient (PiBounds.interval n)
-      (by positivity) (pi_left_pos n)) = _
-  rw [RealEnclosure.encodeInterval, RealEnclosure.Interval.quotient_triple]
-  simp only [rational, PiBounds.interval,
-    Int.toNat_of_nonneg (PiBounds.piRaw_den_pos n).le]
 
 end
 

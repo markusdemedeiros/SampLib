@@ -16,8 +16,6 @@ namespace SampLib.ExponentialTwist
 
 noncomputable section
 
-set_option maxHeartbeats 300000
-
 /-- The two accepted masses determine the normalized output bias. -/
 def bias (p : unitInterval) (a b : ℤ) : unitInterval :=
   BernoulliRetry.bias ((p : ℝ) * SigmoidRational.bias a b)

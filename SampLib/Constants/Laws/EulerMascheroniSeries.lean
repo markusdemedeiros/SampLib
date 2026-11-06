@@ -1,4 +1,4 @@
-import SampLib.Constants.Laws.EulerSondow
+import SampLib.Constants.Laws.EulerSondowTail
 import SampLib.Constants.Laws.PositiveSeries
 
 /-! # The positive-series certificate used by Euler's constant coin

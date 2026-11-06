@@ -1,3 +1,4 @@
+import SampLib.Discrete.Laws.NegativeBinomial
 import SampLib.Discrete.Geometric
 import Metrology.Iris.LocalBI
 
@@ -15,40 +16,6 @@ open scoped ENNReal
 namespace SampLib.NegativeBinomial
 
 noncomputable section
-
-section distribution
-
-open MeasureTheory Measure
-
-/-- Sum of `r` independent geometric failure counts; zero successes return zero. -/
-def law (p : unitInterval) : ℕ → Measure ℕ
-  | 0 => dirac 0
-  | r + 1 => ((law p r).prod (Geometric.law p)).map (fun z => z.2 + z.1)
-
-instance (p : unitInterval) (r : ℕ) : IsProbabilityMeasure (law p r) := by
-  induction r with
-  | zero => dsimp [law]; infer_instance
-  | succ r ih =>
-    let := ih
-    constructor
-    rw [law, Measure.map_apply (measurable_of_countable _) MeasurableSet.univ]
-    simp
-
-/-- Expected continuation credit. -/
-def credit (p : unitInterval) (r : ℕ) (F : ℕ → ℝ≥0∞) : ℝ≥0∞ := ∫⁻ n, F n ∂law p r
-
-/-- The remaining credit after observing the first geometric count. -/
-def firstCredit (p : unitInterval) (F : ℕ → ℝ≥0∞) (y : ℕ) : ℝ≥0∞ :=
-  Geometric.credit p (fun x => F (x + y))
-
-/-- Independence turns the convolution expectation into two successive expectations. -/
-theorem credit_succ (p : unitInterval) (r : ℕ) (F : ℕ → ℝ≥0∞) :
-    credit p (r + 1) F = credit p r (firstCredit p F) := by
-  rw [credit, law, lintegral_map (measurable_of_countable _) (measurable_of_countable _),
-    lintegral_prod _ (measurable_of_countable _).aemeasurable]
-  rfl
-
-end distribution
 
 section specification
 

@@ -73,13 +73,6 @@ theorem ae_coordinates (left right : List Bool) {P Q : ℝ → Prop}
       ((Measure.quasiMeasurePreserving_snd
         (μ := DyadicPosterior.law left) (ν := DyadicPosterior.law right)).ae hr)
 
-/-- Interval reads enclose the same two coordinates of the shared latent pair. -/
-theorem ae_enclosures (left right : List Bool) (a b : LatentReal.RationalInterval)
-    (hl : ∀ᵐ x ∂DyadicPosterior.law left, a.Contains x)
-    (hr : ∀ᵐ y ∂DyadicPosterior.law right, b.Contains y) :
-    ∀ᵐ z ∂law left right, a.Contains z.1 ∧ b.Contains z.2 :=
-  ae_coordinates left right hl hr
-
 end
 
 end SampLib.LatentUniformProduct

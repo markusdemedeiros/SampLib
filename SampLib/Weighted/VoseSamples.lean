@@ -1,3 +1,4 @@
+import SampLib.Weighted.Laws.VoseSamples
 import SampLib.Weighted.Support.VoseTable
 import SampLib.Weighted.Syntax.Aliases
 import SampLib.Core.ListOperations
@@ -10,24 +11,6 @@ open scoped ENNReal
 namespace SampLib.VoseSamples
 
 noncomputable section
-
-/-- The independent categorical vector, decoded as a list in sampling order. -/
-def law (ws : List ℕ) (count : ℕ) : Measure (List ℕ) :=
-  (SampleWithReplacement.law (WeightedChoice.law ws) count).map List.ofFn
-
-instance (ws : List ℕ) [NeZero ws.sum] (count : ℕ) : IsProbabilityMeasure (law ws count) where
-  measure_univ := by
-    rw [law, Measure.map_apply (measurable_of_countable _) MeasurableSet.univ]
-    simp
-
-@[simp] theorem law_zero (ws : List ℕ) : law ws 0 = Measure.dirac [] := by
-  simp [law, SampleWithReplacement.law]
-
-/-- Decoding the independent vector preserves arbitrary list continuation credits. -/
-theorem expectation (ws : List ℕ) (count : ℕ) (F : List ℕ → ℝ≥0∞) (hF : Measurable F) :
-    ∫⁻ xs, F (List.ofFn xs) ∂SampleWithReplacement.law (WeightedChoice.law ws) count =
-      ∫⁻ ys, F ys ∂law ws count := by
-  rw [law, lintegral_map hF (measurable_of_countable _)]
 
 private def draw {rT : Type _} [ProbLangℝ rT] (table : Val rT) : Val rT :=
   ⟨.lam pl(&Occil.WeightedVariants.voseDraw &table.fst #()), .lam (by is_lc), by is_lc⟩

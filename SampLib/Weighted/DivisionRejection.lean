@@ -1,3 +1,4 @@
+import SampLib.Weighted.Laws.DivisionRejection
 import SampLib.Weighted.RandomBits
 import SampLib.Weighted.Support.WeightedIntegerPower
 import SampLib.Common.Laws.WordIntervals
@@ -17,44 +18,11 @@ namespace SampLib.DivisionRejection
 
 noncomputable section
 
-section mathematics
-
-open MeasureTheory
-
-def kernel (n width : ℕ) (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞) (k : ℕ) : ℝ≥0∞ :=
-  if k / (width / n) < n then F (k / (width / n))
-  else (∫⁻ i, F i ∂UniformInt.law n) + 2 * ε
-
-/-- Full quotient blocks preserve output credit and finance doubled retry credit. -/
-theorem expectation (n width : ℕ) (hn : 0 < n) (hnw : n ≤ width)
-    (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞) :
-    ∫⁻ k, kernel n width F ε k ∂UniformInt.law width ≤
-      (∫⁻ i, F i ∂UniformInt.law n) + ε := by
-  let q := width / n
-  have hq : 0 < q := Nat.div_pos hnw hn
-  have ha : n * q ≤ width := Nat.mul_div_le width n
-  have hr : width % n < n := Nat.mod_lt width hn
-  have heq : width % n + n * q = width := Nat.mod_add_div width n
-  have hnq : n ≤ n * q := by nlinarith
-  have hhalf : width ≤ 2 * (n * q) := by omega
-  have hcredit := WordIntervals.quotient_expectation q n hq F
-  rw [Nat.mul_comm q n] at hcredit
-  have hkernel : kernel n width F ε =
-      UniformRejection.kernel (n * q) (fun k => F (k / q)) ε := by
-    funext k
-    simp only [kernel, UniformRejection.kernel, ← hcredit, q,
-      Nat.div_lt_iff_lt_mul hq]
-  rw [hkernel, UniformInt.lintegral_law]
-  simpa only [hcredit] using UniformRejection.expectation (n * q) width
-    (Nat.mul_pos hn hq) ha hhalf (fun k => F (k / q)) ε
-
 private theorem valid_test (n bits : ℕ) (hn : 0 < n) (hnw : n ≤ 2 ^ bits) :
     (decide ((n : ℤ) ≤ 0) || decide ((2 : ℤ) ^ bits < n)) = false := by
   have hw : (n : ℤ) ≤ 2 ^ bits := by exact_mod_cast hnw
   simp only [Bool.or_eq_false_iff, decide_eq_false_iff_not]
   omega
-
-end mathematics
 
 private def retry {rT : Type _} (n bits : ℕ) : Exp rT := pl%
   rec draw u :=

@@ -93,11 +93,6 @@ theorem sum_normalize (x : Fin n → ℝ) (hsum : total x ≠ 0) :
   simp only [normalize, ← Finset.sum_div]
   exact div_self hsum
 
-theorem normalize_le_one (x : Fin n → ℝ) (hn : 0 < n) (hx : ∀ i, 0 < x i) (i : Fin n) :
-    normalize x i ≤ 1 := by
-  apply (div_le_one (total_pos x hn hx)).mpr
-  exact Finset.single_le_sum (fun j _ => (hx j).le) (Finset.mem_univ i)
-
 /-- Every normalized coordinate is positive and the shared sum is one almost surely. -/
 theorem ae_simplex (shape : Fin n → ℝ) (hshape : ∀ i, 0 < shape i) (hn : 0 < n) :
     ∀ᵐ y ∂law shape hshape, (∀ i, 0 < y i) ∧ (∑ i, y i) = 1 := by

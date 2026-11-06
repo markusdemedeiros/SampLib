@@ -1,5 +1,5 @@
 import SampLib.Weighted.Laws.KnuthYaoCredits
-import SampLib.Weighted.Support.PowerOfTwoCeiling
+import SampLib.Weighted.Laws.PowerOfTwoCeiling
 
 /-! # Padding and rejection credit for the fast loaded dice roller
 

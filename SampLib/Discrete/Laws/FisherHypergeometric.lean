@@ -1,4 +1,4 @@
-import SampLib.Discrete.WeightedChoice
+import SampLib.Discrete.Laws.WeightedChoice
 import SampLib.Discrete.Laws.FisherWeights
 
 /-! # Fisher's noncentral hypergeometric law

@@ -1,4 +1,4 @@
-import SampLib.PSRN.Support.LatentRootModel
+import SampLib.PSRN.Laws.RootModel
 import SampLib.PSRN.Support.LatentRealMap
 import SampLib.PSRN.Laws.PSRNRayleigh
 

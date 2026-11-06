@@ -1,4 +1,5 @@
 import SampLib.Uniform.UniformInt
+import SampLib.Uniform.Laws.RndInt
 import Samplers.Uniform
 import Metrology.Iris.LocalBI
 
@@ -10,17 +11,6 @@ open scoped ENNReal
 namespace SampLib.RndInt
 
 noncomputable section
-
-/-- Uniform law on `0, …, hi`. -/
-abbrev law (hi : ℕ) := UniformInt.law (hi + 1)
-
-/-- An inclusive bound contributes `hi+1` equally weighted outcomes. -/
-theorem expectation (hi : ℕ) (F : ℕ → ℝ≥0∞) :
-    ∫⁻ k, F k ∂law hi = (∑ k ∈ range (hi + 1), F k) / ((hi + 1 : ℕ) : ℝ≥0∞) :=
-  UniformInt.lintegral_law (hi + 1) F
-
-private theorem credit_zero (F : ℕ → ℝ≥0∞) : ∫⁻ k, F k ∂law 0 = F 0 := by
-  simp [expectation]
 
 theorem rndInt_lc {rT : Type _} : (Occil.rndInt : Exp rT).IsLocallyClosed := by is_lc
 

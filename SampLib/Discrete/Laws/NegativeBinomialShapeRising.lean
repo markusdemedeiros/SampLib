@@ -1,5 +1,5 @@
 import SampLib.Discrete.Laws.MultichooseSeries
-import SampLib.Discrete.PolyaEggenberger
+import SampLib.Discrete.Laws.PolyaEggenberger
 
 /-! # The source's integer rising products equal real multichoose ratios -/
 

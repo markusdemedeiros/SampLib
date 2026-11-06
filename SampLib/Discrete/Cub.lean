@@ -88,7 +88,6 @@ private theorem component_distSpec (E : CoPset) (m c d : ℕ) (hd : 0 < d) (hc :
     E (m - 1) (d - c) d hd (by omega)
   simpa only [BinomialBinary.law, complement_bias c d hd hc] using h
 
-set_option maxHeartbeats 400000 in
 /-- CTE composition of the selector, shifted binomial, and uniform response. -/
 theorem twp_cub (E : CoPset) (m a b c d : ℕ) (hm : 3 ≤ m) (hb : 0 < b)
     (ha : a ≤ b) (hd : 0 < d) (hc : c ≤ d) (F : ℕ → ℝ≥0∞) :

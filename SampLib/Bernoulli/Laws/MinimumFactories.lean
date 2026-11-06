@@ -1,5 +1,5 @@
 import SampLib.Bernoulli.Laws.MinimumComplementWalk
-import SampLib.Bernoulli.CoinMean
+import SampLib.Bernoulli.Laws.CoinMean
 
 /-! # The minimum and three-point piecewise-linear coin laws -/
 

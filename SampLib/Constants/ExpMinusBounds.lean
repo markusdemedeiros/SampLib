@@ -1,4 +1,5 @@
 import SampLib.Constants.Laws.ExponentialBoundsKernel
+import SampLib.Bernoulli.Support.RealEnclosureEncoding
 import Samplers.Constants.Exponential
 import SampLib.Core.Syntax.ClosedExp
 import Metrology.Iris.LocalBI

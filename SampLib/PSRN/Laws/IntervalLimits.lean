@@ -101,12 +101,6 @@ theorem scaleRational (h : Approximates intervals x) (numerator denominator : �
   exact ⟨fun n => contains_scaleRational _ numerator denominator hd (h.1 n),
     by simpa only [width, sub_self] using hhi.sub hlo⟩
 
-/-- Distinct latent values eventually have disjoint observable intervals. -/
-theorem eventually_below (h : Approximates intervals x) (k : Approximates other y)
-    (hxy : x < y) :
-    ∀ᶠ n in atTop, (intervals n).upperReal < (other n).lowerReal :=
-  h.upperReal_tendsto.eventually_lt k.lowerReal_tendsto hxy
-
 /-- A nonzero latent value eventually has a zero-separated interval. -/
 theorem eventually_separated (h : Approximates intervals x) (hx : x ≠ 0) :
     ∀ᶠ n in atTop, 0 < (intervals n).lower ∨ (intervals n).upper < 0 := by

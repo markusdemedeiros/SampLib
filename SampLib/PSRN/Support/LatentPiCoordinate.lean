@@ -1,5 +1,4 @@
 import SampLib.PSRN.Support.LatentPiModel
-import SampLib.PSRN.Support.LatentPiOwnership
 
 /-! # Observing one component of an owned finite product
 

@@ -1,4 +1,5 @@
 import SampLib.General.Laws.LinearBin
+import SampLib.General.Support.IntegerThreshold
 import SampLib.Core.SupportedSpec
 
 /-! # Rejection inside one linearly interpolated integer bin -/

@@ -4,11 +4,19 @@ public import SampLib.Common.Laws.FractionalPower
 
 @[expose] public section
 
-/-! # Quotient/remainder factorization of a nonnegative rational power -/
+/-! # Nonnegative rational powers of a bias
+
+The quotient and remainder of `a / b` split `p^(a/b)` into integer and fractional trials.
+-/
 
 namespace SampLib.RationalPower
 
 noncomputable section
+
+/-- The Bernoulli bias for a nonnegative rational power. -/
+def bias (p : unitInterval) (a b : ℕ) (_hb : 0 < b) : unitInterval :=
+  ⟨(p : ℝ) ^ ((a : ℝ) / b : ℝ), Real.rpow_nonneg p.2.1 _,
+    Real.rpow_le_one p.2.1 p.2.2 (by positivity)⟩
 
 /-- Integer and fractional trials multiply to the original rational exponent. -/
 theorem power_split {p : ℝ} (hp : 0 ≤ p) (a b : ℕ) (hb : 0 < b) :

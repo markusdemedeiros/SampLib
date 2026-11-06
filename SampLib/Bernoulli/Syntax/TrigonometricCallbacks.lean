@@ -3,7 +3,10 @@ import SampLib.Bernoulli.Support.ArcsineCoefficients
 import SampLib.Bernoulli.Support.UniformBagChoice
 import Samplers.Bernoulli.Trigonometric
 
-/-! Pure transport from the source's evaluated local callbacks to their shared binder forms. -/
+/-! # Trigonometric factory callbacks
+
+Pure transport from the source's evaluated local callbacks to their shared binder forms.
+-/
 
 open ProbLang
 

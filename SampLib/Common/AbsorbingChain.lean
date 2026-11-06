@@ -1,4 +1,5 @@
 import SampLib.Templates
+import SampLib.Common.Laws.AbsorbingChain
 
 /-! # CTE induction for an indexed absorbing chain
 
@@ -12,34 +13,6 @@ open scoped ENNReal
 namespace SampLib.AbsorbingChain
 
 noncomputable section
-
-/-- Probability of continuing for `depth` successive transitions from `start`. -/
-def survival (q : ℕ → ℝ≥0∞) : ℕ → ℕ → ℝ≥0∞
-  | _, 0 => 1
-  | start, depth + 1 => q start * survival q (start + 1) depth
-
-@[simp] theorem survival_zero (q : ℕ → ℝ≥0∞) (start : ℕ) :
-    survival q start 0 = 1 := rfl
-
-@[simp] theorem survival_succ (q : ℕ → ℝ≥0∞) (start depth : ℕ) :
-    survival q start (depth + 1) = q start * survival q (start + 1) depth := rfl
-
-/-- Survival is the product of the successive continuation probabilities. -/
-theorem survival_eq_prod (q : ℕ → ℝ≥0∞) (start depth : ℕ) :
-    survival q start depth = ∏ i ∈ Finset.range depth, q (start + i) := by
-  induction depth generalizing start with
-  | zero => simp
-  | succ depth ih =>
-    rw [survival_succ, Finset.prod_range_succ', ih]
-    simp only [Nat.add_zero]
-    simp [Nat.add_left_comm, Nat.add_comm, mul_comm]
-
-/-- Identically distributed continuation trials recover geometric survival. -/
-@[simp] theorem survival_const (q : ℝ≥0∞) (start depth : ℕ) :
-    survival (fun _ => q) start depth = q ^ depth := by
-  induction depth generalizing start with
-  | zero => simp
-  | succ depth ih => simp [survival_succ, ih, pow_succ, mul_comm]
 
 section specification
 

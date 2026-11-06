@@ -49,10 +49,6 @@ theorem sample_fst {rT : Type} : (sampleValue (rT := rT)).fst =
     .lam pl(&Occil.PSRN.newExponential #1 #1 #()) := by
   simp [sampleValue, sample, Exp.close, Exp.closeRec, ClosedExp.closeRec]
 
-theorem sample_opened {rT : Type} : Exp.open' pl(&Occil.PSRN.newExponential #1 #1 #())
-    (Exp.lit (.unit : BaseLit rT)) = pl(&Occil.PSRN.newExponential #1 #1 #()) := by
-  simp [Exp.open', Exp.openRec, ClosedExp.openRec]
-
 @[pl_fold] def source {rT : Type} : Exp rT := pl%
   fun components u,
     if components <= #0 then fail else

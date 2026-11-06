@@ -1,4 +1,5 @@
 import SampLib.Bernoulli.Laws.EulerNumberBounds
+import SampLib.Bernoulli.Laws.RealEnclosure
 import SampLib.Bernoulli.Laws.RealEnclosureTransforms
 
 /-! # Affine and fractional-linear constants from factorial enclosures -/
@@ -48,22 +49,6 @@ theorem threeMinus_tight : FromBounds.Tight threeMinusInterval := by
   intro ε hε
   obtain ⟨n, hn⟩ := EulerEnclosure.tight ε hε
   exact ⟨n, by simpa only [reflected_width] using hn⟩
-
-theorem minusTwo_encode {rT : Type} (n : ℕ) :
-    FromBounds.encodeInterval (rT := rT) (minusTwoInterval n) =
-      RealEnclosure.encodeTriple
-        ((EulerEnclosure.interval n).lower - 2 * (EulerEnclosure.interval n).denominator,
-          ((EulerEnclosure.interval n).upper - 2 * (EulerEnclosure.interval n).denominator,
-            (EulerEnclosure.interval n).denominator)) := by
-  simp [minusTwoInterval, FromBounds.encodeInterval, RealEnclosure.Interval.affine,
-    RealEnclosure.Interval.toProbability, RealEnclosure.encodeTriple]
-
-theorem threeMinus_encode {rT : Type} (n : ℕ) :
-    FromBounds.encodeInterval (rT := rT) (threeMinusInterval n) =
-      RealEnclosure.encodeTriple
-        (3 * (EulerEnclosure.interval n).denominator - (EulerEnclosure.interval n).upper,
-          (3 * (EulerEnclosure.interval n).denominator - (EulerEnclosure.interval n).lower,
-            (EulerEnclosure.interval n).denominator)) := rfl
 
 end
 

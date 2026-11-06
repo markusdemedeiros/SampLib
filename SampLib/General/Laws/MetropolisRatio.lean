@@ -1,5 +1,5 @@
 import SampLib.General.Laws.Metropolis
-import SampLib.General.Support.CappedRationalCoin
+import SampLib.General.Laws.CappedRationalCoin
 
 /-! # A proposal kernel with exact rational acceptance ratios
 

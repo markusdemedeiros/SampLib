@@ -1,7 +1,7 @@
 import SampLib.General.Laws.CountableMetropolis
 import SampLib.General.MetropolisKernel
 
-/-! # Exact rational Metropolis–Hastings transitions
+/-! # Exact rational Metropolis–Hastings on countable states
 
 The finite-step law is an iterate of the independently defined Metropolis kernel.
 No finite-time convergence to a target distribution is assumed.

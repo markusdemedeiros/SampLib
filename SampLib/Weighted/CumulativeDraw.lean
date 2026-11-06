@@ -1,4 +1,4 @@
-import SampLib.Common.Laws.FiniteCDF
+import SampLib.Weighted.Laws.CumulativeDraw
 import SampLib.Core.GeneralSyntax
 import Samplers.Weighted.Tables
 
@@ -16,10 +16,6 @@ namespace SampLib.CumulativeDraw
 noncomputable section
 
 open FiniteCDF
-
-/-- Store the CDF on its natural index grid, with no restriction on plateaus. -/
-def cumulative (D : Model) (n : ℕ) : List ℤ :=
-  List.ofFn (fun i : Fin n => D.cdf (i.val : ℤ))
 
 /-- The table stores its total mass together with the cumulative array. -/
 def table {rT : Type _} [ProbLangℝ rT] (D : Model) (n : ℕ) : Val rT :=

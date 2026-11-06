@@ -1,5 +1,5 @@
 import SampLib.Discrete.Laws.InverseUrn
-import SampLib.Discrete.PolyaEggenberger
+import SampLib.Discrete.Laws.PolyaEggenberger
 
 /-! # The rising-product mass function of the inverse urn -/
 

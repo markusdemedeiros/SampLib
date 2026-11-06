@@ -1,6 +1,6 @@
 import SampLib.General.StratifiedCell
 
-/-! Closedness of the Cartesian-cell sampler under repetition. -/
+/-! # Closedness of the Cartesian cell sampler under repetition -/
 
 open ProbLang
 

@@ -1,6 +1,6 @@
 import SampLib.Common.Laws.AcceptedProposal
 import SampLib.Core.Laws.IntegerIntervals
-import SampLib.General.Support.IntegerThreshold
+import SampLib.General.Laws.IntegerThreshold
 
 /-! # A linearly interpolated density on one half-open integer bin -/
 

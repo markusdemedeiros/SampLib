@@ -1,4 +1,5 @@
 import SampLib.Bernoulli.Laws.LinearFactory
+import SampLib.Bernoulli.HighPowerLogistic
 import SampLib.Core.SupportedSpec
 import SampLib.Core.SamplerStep
 
@@ -15,8 +16,6 @@ open scoped ENNReal NNReal
 namespace SampLib.LinearFactory
 
 noncomputable section
-
-set_option maxHeartbeats 800000
 
 private def source {rT : Type _} : Val rT :=
   ⟨Occil.FactoryExtra.linear, .fix (by is_lc), by is_lc⟩

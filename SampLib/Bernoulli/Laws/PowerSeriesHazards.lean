@@ -1,5 +1,5 @@
 import SampLib.Common.Laws.AbsorbingChain
-import SampLib.Uniform.RationalCoin
+import SampLib.Uniform.Laws.RealCoin
 
 /-! # The absorbing law of a power-series hazard factory
 

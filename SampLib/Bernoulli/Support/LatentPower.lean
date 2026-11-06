@@ -1,4 +1,7 @@
 import SampLib.Bernoulli.Laws.LatentPower
+import SampLib.Bernoulli.TwoCoinPower
+import SampLib.Latent.UniformBagCoin
+import SampLib.Discrete.Geometric
 
 /-! # A power factory retaining an owned shared exponent oracle
 

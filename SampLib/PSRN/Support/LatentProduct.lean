@@ -1,4 +1,4 @@
-import SampLib.PSRN.Support.LatentProductModel
+import SampLib.PSRN.Laws.ProductModel
 import SampLib.Latent.LatentPayloadSpec
 
 /-! # Constructing and observing independent deferred components

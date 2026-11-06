@@ -1,7 +1,7 @@
 import SampLib.PSRN.Laws.FloorKernel
 import SampLib.Latent.Laws.LatentBernoulli
-import SampLib.PSRN.Support.LatentExponentialKernel
-import SampLib.Bernoulli.ExpMinusRational
+import SampLib.PSRN.Laws.CoinExponentialKernel
+import SampLib.Bernoulli.Laws.ExpMinusRational
 
 /-! # Splitting a conditional exponential trial at its integer part
 
@@ -127,15 +127,6 @@ theorem expectation (D : Model Ω S) (s : S) (hnonneg : ∀ᵐ x ∂D.posterior 
   simpa [Floor.outputCredit, Floor.output, floorCredit, afterWhole,
     LatentCoin.kernel, CoinConditional.firstCredit, CoinConditional.law, hsplit,
     RealCoin.lintegral_law, RealCoin.credit, RealCoin.pmf] using h
-
-/-- The observed floor makes the fractional part a genuine unit-interval value. -/
-theorem fraction_mem {D : Model Ω S} {s : S} {z : ℤ}
-    (hfloor : ∀ᵐ x ∂D.posterior s, Floor.output D 1 x = z) :
-    ∀ᵐ x ∂D.posterior s, D.value x - z ∈ Ico (0 : ℝ) 1 := by
-  filter_upwards [hfloor] with x hx
-  have hz : ⌊D.value x⌋ = z := by simpa [Floor.output] using hx
-  rw [← hz]
-  exact ⟨sub_nonneg.mpr (Int.floor_le _), by linarith [Int.lt_floor_add_one (D.value x)]⟩
 
 end
 

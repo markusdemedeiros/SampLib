@@ -1,3 +1,4 @@
+import SampLib.Weighted.CumulativeDraw
 import SampLib.Weighted.Laws.CategoricalCDF
 import SampLib.Common.WeightedValidation
 import SampLib.Core.Syntax.ClosedExp

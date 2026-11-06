@@ -1,6 +1,6 @@
-import SampLib.Discrete.BoundedGeometric
-import SampLib.Uniform.UniformInt
-import SampLib.Uniform.FairCoin
+import SampLib.Discrete.Laws.BoundedGeometric
+import SampLib.Uniform.Laws.UniformInt
+import SampLib.Bernoulli.Laws.VonNeumann
 
 /-! # Truncated binary-format uniforms
 

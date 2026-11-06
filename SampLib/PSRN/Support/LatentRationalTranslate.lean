@@ -25,12 +25,6 @@ def translate (D : Model Ω S) (c : ℝ) : Model Ω S :=
     value := fun x => c + D.value x
     measurable_value := D.measurable_value.const_add c }
 
-theorem translate_law (D : Model Ω S) (c : ℝ) (s : S) :
-    (D.translate c).law s = (D.law s).map (fun x => c + x) := by
-  have hm : Measurable (fun x : ℝ => c + x) := by fun_prop
-  rw [law, law, Measure.map_map hm D.measurable_value]
-  rfl
-
 /-- A zero-width rational interval translates the source enclosure exactly. -/
 theorem encloses_translate (D : Model Ω S) {s : S} {n : ℕ} {I : RationalInterval}
     (hI : D.Encloses s n I) (a b : ℤ) (hb : 0 < b) :

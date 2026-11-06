@@ -1,9 +1,8 @@
 import SampLib.Bernoulli.Laws.AlternatingSeries
-import SampLib.Bernoulli.Support.FactoryFractions
+import SampLib.Bernoulli.Laws.FactoryFractions
 
 /-! # Rational accumulator invariants for the alternating-series engine -/
 
-open ProbLang
 open scoped ENNReal
 
 namespace SampLib.AlternatingSeries

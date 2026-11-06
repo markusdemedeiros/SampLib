@@ -1,6 +1,9 @@
 import SampLib.Bernoulli.Syntax.PolynomialFactoryRound
 
-/-! Initializing the actual polynomial factory, without inspecting its coin callback. -/
+/-! # Opening the polynomial factory
+
+Initializing the actual polynomial factory, without inspecting its coin callback.
+-/
 
 open ProbLang
 

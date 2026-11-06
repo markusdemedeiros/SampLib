@@ -1,4 +1,4 @@
-import SampLib.Discrete.WeightedChoice
+import SampLib.Discrete.Laws.WeightedChoice
 
 /-! # Integer mass conservation for alias tables -/
 

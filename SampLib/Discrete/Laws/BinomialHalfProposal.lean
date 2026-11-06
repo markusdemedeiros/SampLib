@@ -1,7 +1,7 @@
 import SampLib.Discrete.Laws.BinomialHalfEnvelope
-import SampLib.Discrete.UniformFin
-import SampLib.Discrete.Geometric
-import SampLib.Bernoulli.VonNeumann
+import SampLib.Discrete.Laws.UniformFin
+import SampLib.Discrete.Laws.Geometric
+import SampLib.Bernoulli.Laws.VonNeumann
 
 /-! # The signed block proposal for half-binomial rejection
 

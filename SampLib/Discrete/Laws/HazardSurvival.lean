@@ -1,4 +1,4 @@
-import SampLib.Common.AbsorbingChain
+import SampLib.Common.Laws.AbsorbingChain
 import SampLib.Discrete.Laws.HazardProduct
 
 

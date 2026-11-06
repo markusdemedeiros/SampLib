@@ -1,4 +1,4 @@
-import SampLib.Discrete.WeightedChoice
+import SampLib.Discrete.Laws.WeightedChoice
 
 /-! # The categorical singleton shortcut, with arbitrary infinite credits -/
 

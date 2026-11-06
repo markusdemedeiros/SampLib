@@ -1,4 +1,4 @@
-import SampLib.Uniform.RationalCoin
+import SampLib.Uniform.Laws.RationalCoin
 
 /-! # Integer urn proportions -/
 

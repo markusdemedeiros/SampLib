@@ -1,6 +1,7 @@
 import SampLib.Core.GeneralSyntax
 import SampLib.Combinatorial.SampleWithReplacement
 import Samplers.General.DataModels
+import SampLib.General.Laws.Bootstrap
 
 /-! # Independent empirical bootstrap data sets -/
 
@@ -10,25 +11,6 @@ open scoped ENNReal
 namespace SampLib.Bootstrap
 
 noncomputable section
-
-section mathematics
-
-open MeasureTheory
-
-/-- Each bootstrap data set has `n` independent empirical positions. -/
-abbrev blockLaw (n : ℕ) [NeZero n] :=
-  SampleWithReplacement.law (Choice.law n) n
-
-/-- The bootstrap replicates are independent, each with the original sample size. -/
-def law (n : ℕ) [NeZero n] (replicates : ℕ) :=
-  SampleWithReplacement.law (blockLaw n) replicates
-
-instance (n : ℕ) [NeZero n] (replicates : ℕ) :
-    IsProbabilityMeasure (law n replicates) := by
-  dsimp [law]
-  infer_instance
-
-end mathematics
 
 private def blockSampler {rT : Type _} [ProbLangℝ rT] {α : Type _}
     (encode : α → Val rT) (xs : List α) : Val rT :=

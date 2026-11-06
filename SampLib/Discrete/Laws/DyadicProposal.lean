@@ -1,6 +1,6 @@
 import SampLib.Discrete.Laws.DyadicBlocks
-import SampLib.Discrete.Geometric
-import SampLib.Discrete.UniformFin
+import SampLib.Discrete.Laws.Geometric
+import SampLib.Discrete.Laws.UniformFin
 
 /-! # A geometric choice of dyadic block, followed by a uniform rank -/
 

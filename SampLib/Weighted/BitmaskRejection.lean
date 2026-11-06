@@ -1,3 +1,4 @@
+import SampLib.Weighted.Laws.BitmaskRejection
 import SampLib.Weighted.RandomBits
 import SampLib.Weighted.Support.PowerOfTwoCeiling
 import SampLib.Common.Laws.UniformRejection
@@ -15,19 +16,6 @@ namespace SampLib.BitmaskRejection
 
 noncomputable section
 
-section mathematics
-
-open MeasureTheory
-
-/-- Uniform word proposals preserve the target credit and fund bounded rejection. -/
-theorem expectation (n : ℕ) (hn : 0 < n) (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞) :
-    ∫⁻ k, UniformRejection.kernel n F ε k
-      ∂UniformInt.law (PowerOfTwoCeiling.width n) ≤
-      (∫⁻ k, F k ∂UniformInt.law n) + ε := by
-  rw [UniformInt.lintegral_law]
-  exact UniformRejection.expectation n _ hn (PowerOfTwoCeiling.le_width n)
-    (PowerOfTwoCeiling.width_le_double n hn) F ε
-
 private theorem power_test (n : ℕ) : ((2 : ℤ) ^ (n + 1) == 1) = false := by
   apply beq_eq_false_iff_ne.mpr
   have hpos : (0 : ℤ) < 2 ^ n := by positivity
@@ -44,8 +32,6 @@ private theorem prefix_cast (v : ℕ) (b : ℤ) (hb : 0 ≤ b) :
 
 private theorem int_beq {rT : Type _} [BEq rT] (a b : ℤ) :
     ((BaseLit.int a : BaseLit rT) == .int b) = (a == b) := rfl
-
-end mathematics
 
 private def candidate {rT : Type _} : Exp rT := pl%
   rec bits remaining value := if remaining = #1 then value else

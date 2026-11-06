@@ -1,4 +1,4 @@
-import SampLib.PSRN.Support.LatentExponentialKernel
+import SampLib.PSRN.Laws.CoinExponentialKernel
 import SampLib.Core.Syntax.ClosedExp
 
 /-! # A decreasing-uniform exponential factory over an owned latent world

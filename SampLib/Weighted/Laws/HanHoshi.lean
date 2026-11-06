@@ -1,6 +1,4 @@
 import SampLib.Weighted.Laws.RealCategoricalCell
-import SampLib.Latent.Laws.Uniform
-import SampLib.Latent.LatentDigitPrefix
 
 /-! # Whole-cell tests for Han–Hoshi interval refinement -/
 

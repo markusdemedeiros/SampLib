@@ -14,8 +14,6 @@ open ProbLang
 
 namespace SampLib.LinearPowerWalk.Syntax
 
-set_option maxHeartbeats 800000
-
 scoped instance rational_closed {rT : Type} : ClosedExp (Occil.rationalCoin : Exp rT) where
   lc := by is_lc
   fv := RationalCoin.rationalCoin_fv

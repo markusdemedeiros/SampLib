@@ -1,4 +1,6 @@
 import SampLib.Bernoulli.Laws.EpsilonDivision
+import SampLib.Bernoulli.Support.LinearFactorySyntax
+import SampLib.Common.CoinComplement
 import Samplers.Bernoulli.Linear
 
 /-! # Derived epsilon-division factory

@@ -51,12 +51,15 @@ def afterFraction {rT : Type} (z : ℤ) : Exp rT :=
   pl(if &Occil.expMinusRational #int z #1 #() then
     &Occil.expMinusFactory &callback #() else #false)
 
+/-- The trial after the integer read; bound variable 1 is the integer part. -/
+def wholeTail {rT : Type} : Exp rT :=
+  let callback := Exp.lam pl(&Occil.PSRN.coin {Exp.bvar 1} #())
+  pl(if &Occil.expMinusRational {Exp.bvar 1} #1 #() then
+    &Occil.expMinusFactory &callback #() else #false)
+
 def afterWhole {rT : Type} (source : Val rT) : Exp rT :=
   let fraction := pl(&Occil.PSRN.subtract &source.fst (&Occil.PSRN.rational {Exp.bvar 0} #1))
-  let callback := Exp.lam pl(&Occil.PSRN.coin {Exp.bvar 1} #())
-  let tail := pl(if &Occil.expMinusRational {Exp.bvar 1} #1 #() then
-    &Occil.expMinusFactory &callback #() else #false)
-  .cond pl({Exp.bvar 0} < #0) .fail (.app (.lam tail) fraction)
+  .cond pl({Exp.bvar 0} < #0) .fail (.app (.lam wholeTail) fraction)
 
 def fractionBody {rT : Type} (source : Val rT) (z : ℤ) : Exp rT :=
   .app (.lam (afterFraction z))
@@ -65,7 +68,7 @@ def fractionBody {rT : Type} (source : Val rT) (z : ℤ) : Exp rT :=
 theorem opened_afterWhole {rT : Type} (source : Val rT) (z : ℤ) :
     Exp.open' (afterWhole source) (Val.int z).fst =
       .cond pl(#int z < #0) .fail (fractionBody source z) := by
-  simp [Exp.open', afterWhole, afterFraction, fractionBody, Exp.openRec,
+  simp [Exp.open', afterWhole, wholeTail, afterFraction, fractionBody, Exp.openRec,
     ClosedExp.openRec, ProbLang.openRec_val_fst]
 
 theorem opened_afterFraction {rT : Type} (fraction : Val rT) (z : ℤ) :
@@ -88,11 +91,16 @@ theorem source_eq {rT : Type} : (Occil.PSRN.expMinusCoin : Exp rT) =
 theorem sourceBody_lcb {rT : Type} : Exp.lcb 2 (sourceBody : Exp rT) = true := by
   lcb_decide
 
-set_option maxHeartbeats 800000 in
+/-- The source body with its two parameters still bound. -/
+private theorem sourceBody_eq {rT : Type} : (sourceBody : Exp rT) =
+    .app (.lam (.cond pl({Exp.bvar 0} < #0) .fail (.app (.lam wholeTail)
+      pl(&Occil.PSRN.subtract {Exp.bvar 2} (&Occil.PSRN.rational {Exp.bvar 0} #1)))))
+      pl(&Occil.PSRN.floorScaled {Exp.bvar 1} #1) := by
+  kernel_rfl
+
 theorem opened_source {rT : Type} (source : Val rT) :
     CurriedStep.opened [source, .unit] sourceBody = body source := by
-  simp [CurriedStep.opened, sourceBody, Occil.PSRN.expMinusCoin, body, afterWhole,
-    Exp.openRec, Exp.close, Exp.closeRec, Var.internal.injEq,
-    ClosedExp.openRec, ClosedExp.closeRec, ProbLang.openRec_val_fst]
+  simp [CurriedStep.opened, sourceBody_eq, body, afterWhole, wholeTail, Exp.openRec,
+    ClosedExp.openRec, ProbLang.openRec_val_fst]
 
 end SampLib.LatentReal.ExpMinusCoin.Program

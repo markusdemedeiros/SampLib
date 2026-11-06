@@ -116,13 +116,6 @@ theorem ae_coordinates {n : ℕ} (prefixes : Fin n → List Bool) {P : Fin n →
     ∀ᵐ z ∂law prefixes, ∀ i, P i (z i) :=
   ae_all_iff.mpr (fun i => ae_coordinate prefixes i (h i))
 
-/-- Interval reads refer to the same selected coordinate of the shared latent vector. -/
-theorem ae_encloses {n : ℕ} (prefixes : Fin n → List Bool) (i : Fin n)
-    (I : LatentReal.RationalInterval)
-    (h : ∀ᵐ x ∂DyadicPosterior.law (prefixes i), I.Contains x) :
-    ∀ᵐ z ∂law prefixes, I.Contains (z i) :=
-  ae_coordinate prefixes i h
-
 end
 
 end SampLib.UniformVector

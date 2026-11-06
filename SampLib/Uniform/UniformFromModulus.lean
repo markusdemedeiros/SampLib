@@ -1,5 +1,5 @@
 import SampLib.Uniform.Laws.ModulusReduction
-import SampLib.Uniform.Laws.UniformSupport
+import SampLib.Uniform.Laws.UniformInt
 import SampLib.Core.SupportedSpec
 import SampLib.Core.Syntax.ClosedExp
 

@@ -1,4 +1,5 @@
 import SampLib.Templates
+import SampLib.Uniform.Laws.UniformInt
 import Samplers.Uniform
 import Metrology.Iris.LocalBI
 
@@ -10,25 +11,6 @@ open scoped ENNReal
 namespace SampLib.UniformInt
 
 noncomputable section
-
-section distribution
-
-open MeasureTheory Measure
-
-/-- Uniform law on the integers represented by `0, …, n-1`. -/
-def law (n : ℕ) : Measure ℕ := uniformOfFinset (range n)
-
-instance (n : ℕ) [NeZero n] : IsProbabilityMeasure (law n) :=
-  isProbabilityMeasure_uniformOfFinset (nonempty_range_iff.mpr (NeZero.ne n))
-
-/-- Uniform continuation credit is the arithmetic mean over the range. -/
-theorem lintegral_law (n : ℕ) (F : ℕ → ℝ≥0∞) :
-    ∫⁻ k, F k ∂law n = (∑ k ∈ range n, F k) / n := by
-  simp only [law, uniformOfFinset, lintegral_finsetSum_measure,
-    lintegral_smul_measure, lintegral_dirac, smul_eq_mul, card_range]
-  rw [← mul_sum, ENNReal.div_eq_inv_mul]
-
-end distribution
 
 /-- Closedness rewrites preserve the named sampler under enclosing binders. -/
 theorem uniformInt_lc {rT : Type _} : (Occil.uniformInt : Exp rT).IsLocallyClosed := by is_lc

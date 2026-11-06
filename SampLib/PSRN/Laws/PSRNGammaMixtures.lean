@@ -90,15 +90,6 @@ theorem lindley_law_eq_withDensity (rate : ℝ) (hr : 0 < rate) :
       (mul_nonneg hq (gammaPDFReal_nonneg (by norm_num) hr x))]
   exact congrArg ENNReal.ofReal (lindley_density rate hr x)
 
-/-- Normalization of Lindley's density follows from the normalized shape mixture. -/
-theorem lintegral_lindleyPDFReal (rate : ℝ) (hr : 0 < rate) :
-    ∫⁻ x, ENNReal.ofReal (lindleyPDFReal rate x) = 1 := by
-  have := isProbabilityMeasure_law (a := 1) (b := 2)
-    (lindleyWeight rate hr) (by norm_num) (by norm_num) hr
-  have h := measure_univ (μ := law (lindleyWeight rate hr) 1 2 rate)
-  rwa [lindley_law_eq_withDensity rate hr, withDensity_apply _ MeasurableSet.univ,
-    Measure.restrict_univ] at h
-
 end
 
 end SampLib.PSRNGammaMixtures

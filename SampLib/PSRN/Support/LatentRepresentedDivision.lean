@@ -1,7 +1,6 @@
 import SampLib.PSRN.Support.LatentRepresentedReciprocalView
 import SampLib.PSRN.Support.LatentRepresentedMultiplication
-import SampLib.PSRN.Support.LatentArithmeticMeasuredError
-import SampLib.PSRN.Support.LatentWorldRelations
+import SampLib.PSRN.Support.LatentArithmeticRelations
 import SampLib.Core.CurriedStep
 
 /-! # Division views sharing the same represented denominator -/

@@ -1,4 +1,4 @@
-import SampLib.Combinatorial.SampleWithReplacement
+import SampLib.Combinatorial.Laws.SampleWithReplacement
 
 /-! # Independent extrema at positive random counts -/
 

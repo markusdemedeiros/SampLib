@@ -2,7 +2,10 @@ import SampLib.Bernoulli.Support.PolynomialFactoryCheck
 import SampLib.Bernoulli.BernsteinFactory
 import SampLib.Common.Laws.BernoulliMixture
 
-/-! Rational coefficient tables and their polynomial law. -/
+/-! # Polynomial factory coefficient tables
+
+Rational coefficient tables and their polynomial law.
+-/
 
 open Set ProbLang
 open scoped unitInterval ENNReal

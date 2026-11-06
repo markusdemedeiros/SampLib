@@ -1,5 +1,5 @@
 import SampLib.Weighted.Laws.KnuthYaoColumns
-import SampLib.Weighted.Support.PowerOfTwoCeiling
+import SampLib.Weighted.Laws.PowerOfTwoCeiling
 
 /-! # Finite binary columns of the fast loaded dice roller
 

@@ -1,6 +1,6 @@
 import SampLib.General.LatinHypercube1D
 
-/-! Closedness of shuffled stratification under independent repetition. -/
+/-! # Closedness of shuffled stratification under repetition -/
 
 open ProbLang
 

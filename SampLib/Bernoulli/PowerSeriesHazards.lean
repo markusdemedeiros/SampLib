@@ -1,5 +1,6 @@
 import SampLib.Bernoulli.Laws.PowerSeriesHazards
 import Samplers.Bernoulli.Series
+import SampLib.Uniform.RationalCoin
 
 /-! # Infinite nonnegative power-series factories
 

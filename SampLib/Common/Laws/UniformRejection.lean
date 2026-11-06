@@ -1,4 +1,4 @@
-import SampLib.Uniform.UniformInt
+import SampLib.Uniform.Laws.UniformInt
 
 /-! # Credits for rejection from an enclosing uniform range
 

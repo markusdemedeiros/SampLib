@@ -1,6 +1,6 @@
 import SampLib.Constants.Laws.ConditionalCoin
 import SampLib.Constants.Laws.UniformVectorCoin
-import SampLib.Constants.Support.LatentCoinReciprocal
+import SampLib.Constants.Laws.LatentCoinReciprocal
 
 /-! # The zeta coin's conditional and marginal laws -/
 

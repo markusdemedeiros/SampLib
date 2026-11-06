@@ -1,0 +1,64 @@
+import SampLib.Uniform.Laws.RealCoin
+import SampLib.Common.Laws.Geometric
+
+/-!
+# Geometric failures before the first success
+
+Success receives spare termination credit; failure amplifies it by `1+p`. The
+geometric recurrence and `p²+(1-p)(1+p)=1` preserve every continuation credit.
+-/
+
+open ENNReal (ofReal_add)
+open MeasureTheory ProbabilityTheory
+open scoped ENNReal NNReal
+
+namespace SampLib.Geometric
+
+open RealCoin (pmf lintegral_law)
+
+noncomputable section
+
+abbrev law := ProbabilityTheory.geometricMeasure
+
+/-- Expected continuation credit under the geometric law. -/
+def credit (p : unitInterval) (F : ℕ → ℝ≥0∞) : ℝ≥0∞ := ∫⁻ n, F n ∂law p
+
+/-- Amplification remains finite and strictly exceeds one, including at `p=1`. -/
+def terminationFactor (p : unitInterval) : ℝ≥0 := 1 + unitInterval.toNNReal p
+
+theorem one_lt_terminationFactor (p : unitInterval) (hp : 0 < (p : ℝ)) :
+    1 < terminationFactor p := by
+  change 1 < 1 + unitInterval.toNNReal p
+  exact lt_add_of_pos_right _ (by exact_mod_cast hp)
+
+/-- Credit after the coin: stop at zero, or continue with the shifted result. -/
+def coinCredit (p : unitInterval) (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞) : Bool → ℝ≥0∞
+  | true => F 0 + pmf p true * ε
+  | false => credit p (fun n => F (n + 1)) + terminationFactor p * ε
+
+/-- The geometric recurrence and `p²+(1-p)(1+p)=1` preserve all continuation credits. -/
+theorem lintegral_coinCredit (p : unitInterval) (hp : 0 < (p : ℝ))
+    (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞) :
+    ∫⁻ b, coinCredit p F ε b ∂RealCoin.law p = credit p F + ε := by
+  have hpne : p ≠ 0 := by intro h; simp [h] at hp
+  have hrec : credit p F = pmf p true * F 0 +
+      pmf p false * credit p (fun n => F (n + 1)) := by
+    simpa only [credit, law, pmf, ite_true, Bool.false_eq_true, ite_false] using
+      lintegral_geometricMeasure_succ p hpne F
+  have hk : (terminationFactor p : ℝ≥0∞) = 1 + pmf p true := by
+    simp [terminationFactor, ENNReal.coe_nnreal_eq, pmf, ofReal_add zero_le_one p.2.1]
+  have hterm : pmf p true * pmf p true + pmf p false * terminationFactor p = 1 := by
+    calc
+      _ = pmf p true * (pmf p true + pmf p false) + pmf p false := by rw [hk]; ring
+      _ = _ := by simp only [RealCoin.pmf_sum, mul_one]
+  rw [lintegral_law]
+  calc
+    _ = (pmf p true * F 0 + pmf p false * credit p (fun n => F (n + 1))) +
+        (pmf p true * pmf p true + pmf p false * terminationFactor p) * ε := by
+      simp [RealCoin.credit, coinCredit]
+      ring
+    _ = _ := by rw [← hrec, hterm, one_mul]
+
+end
+
+end SampLib.Geometric

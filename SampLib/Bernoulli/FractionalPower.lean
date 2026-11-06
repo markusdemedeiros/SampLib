@@ -1,4 +1,4 @@
-import SampLib.Common.FractionalPowerCore
+import SampLib.Bernoulli.Laws.FractionalPower
 import SampLib.Common.Syntax.FractionalPower
 
 /-! # Mendo's fractional-power Bernoulli factory
@@ -15,16 +15,6 @@ namespace SampLib.FractionalPower
 open Program
 
 noncomputable section
-
-/-- The rational exponent accepted by the original factory. -/
-def exponent (a b : ℕ) (ha : 0 < a) (hab : a ≤ b) : unitInterval :=
-  ⟨(a : ℝ) / b, by positivity,
-    (div_le_one (show (0 : ℝ) < b by exact_mod_cast lt_of_lt_of_le ha hab)).mpr
-      (by exact_mod_cast hab)⟩
-
-abbrev bias (p : unitInterval) (a b : ℕ) (ha : 0 < a) (hab : a ≤ b) : unitInterval :=
-  powerBias p (exponent a b ha hab)
-
 
 private theorem exponent_pos (a b : ℕ) (ha : 0 < a) (hab : a ≤ b) :
     0 < (exponent a b ha hab : ℝ) :=

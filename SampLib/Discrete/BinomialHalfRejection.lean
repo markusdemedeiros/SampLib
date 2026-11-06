@@ -1,6 +1,6 @@
+import SampLib.Discrete.Laws.BinomialHalfBranches
 import SampLib.Discrete.Support.BinomialHalfRejectionCore
 import SampLib.Discrete.Support.BinomialHalfOpening
-import SampLib.Discrete.Laws.BinomialHalfBranches
 
 /-! # Bringmann's half-binomial sampler, including small and odd inputs -/
 

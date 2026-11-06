@@ -1,10 +1,10 @@
-import SampLib.Combinatorial.Laws.Sattolo
 import SampLib.Combinatorial.Support.IntegerRange
 import SampLib.Continuous.Rejection
 import SampLib.Common.Syntax.Shuffle
 import SampLib.Combinatorial.Support.ShuffleVector
 import SampLib.Common.Syntax.Rejection
 import SampLib.Combinatorial.Laws.Derangements
+import SampLib.Combinatorial.Laws.DerangementCheck
 import Samplers.Combinatorial.Permutations
 
 /-! # Uniform fixed-point-free position permutations -/
@@ -20,48 +20,10 @@ private def check {rT : Type} : Exp rT := pl%
   rec go xs i := case! xs | inl(u) => #true | inr(p) =>
     if fst(p) = i then #false else go (snd(p)) (i + #1)
 
-private def avoids (xs : List ℤ) (start : ℤ) : Prop :=
-  ∀ i : Fin xs.length, xs.get i ≠ start + i.val
-
-private theorem avoids_cons (x : ℤ) (xs : List ℤ) (start : ℤ) :
-    avoids (x :: xs) start ↔ x ≠ start ∧ avoids xs (start + 1) := by
-  simp [avoids, Fin.forall_fin_succ, add_left_comm, add_comm]
-
-private theorem avoids_cons_test (x : ℤ) (xs : List ℤ) (start : ℤ) :
-    decide (avoids (x :: xs) start) =
-      if x = start then false else decide (avoids xs (start + 1)) := by
-  rw [avoids_cons]
-  by_cases hx : x = start <;> simp [hx]
-
 private theorem int_eq_test {rT : Type} [BEq rT] (a b : ℤ) :
     ((BaseLit.int a : BaseLit rT) == .int b) = decide (a = b) := by
   change (a == b) = decide (a = b)
   exact Bool.beq_eq_decide_eq a b
-
-private theorem interval_ofFn (lo : ℤ) (n : ℕ) :
-    IntegerRange.interval lo n = List.ofFn (fun i : Fin n => lo + i.val) := by
-  induction n generalizing lo with
-  | zero => rfl
-  | succ n IH =>
-    simpa only [IntegerRange.interval, List.ofFn_succ, Fin.val_zero, Fin.val_succ,
-      Nat.cast_zero, Nat.cast_add_one, add_zero, add_left_comm, add_comm] using
-      congrArg (List.cons lo) (IH (lo + 1))
-
-private theorem avoids_ofFn (n : ℕ) (σ : Perm (Fin n)) :
-    avoids (List.ofFn (fun i => ((σ i).val : ℤ))) 0 ↔
-      σ ∈ derangements (Fin n) := by
-  constructor
-  · intro h i hi
-    have hindex := h ⟨i.val, by simp⟩
-    apply hindex
-    simpa only [List.get_eq_getElem, List.getElem_ofFn, zero_add] using
-      congrArg (fun j : Fin n => (j.val : ℤ)) hi
-  · intro h i hi
-    let j : Fin n := ⟨i.val, by simpa only [List.length_ofFn] using i.isLt⟩
-    apply h j
-    apply Fin.ext
-    apply Int.natCast_inj.mp
-    simpa only [List.get_eq_getElem, List.getElem_ofFn, zero_add] using hi
 
 def output {rT : Type} [ProbLangℝ rT] (n : ℕ) (σ : Perm (Fin n)) : Val rT :=
   listVal Val.int (List.ofFn (fun i => ((σ i).val : ℤ)))

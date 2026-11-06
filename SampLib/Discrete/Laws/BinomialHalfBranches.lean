@@ -1,6 +1,6 @@
 import SampLib.Common.Laws.Binomial
-import SampLib.Uniform.UniformInt
-import SampLib.Bernoulli.VonNeumann
+import SampLib.Uniform.Laws.UniformInt
+import SampLib.Bernoulli.Laws.VonNeumann
 
 /-! # Adding the last fair bit in an odd half-binomial sample -/
 

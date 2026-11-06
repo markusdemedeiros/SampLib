@@ -1,7 +1,10 @@
 import SampLib.Bernoulli.Syntax.PolynomialFactory
 import SampLib.Core.CurriedStep
 
-/-! Cached closure openings for the polynomial conversion loops. -/
+/-! # Polynomial factory conversion loops
+
+Cached closure openings for the polynomial conversion loops.
+-/
 
 open ProbLang
 

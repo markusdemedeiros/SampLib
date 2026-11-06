@@ -1,4 +1,6 @@
 import SampLib.Bernoulli.Laws.AffineRatio
+import SampLib.Bernoulli.OffsetRace
+import SampLib.Bernoulli.Division
 import SampLib.Bernoulli.Support.AffineRankCoin
 
 /-! # The affine ratio factory

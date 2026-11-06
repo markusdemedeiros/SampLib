@@ -1,4 +1,4 @@
-import SampLib.Uniform.RealCoin
+import SampLib.Uniform.Laws.RealCoin
 
 /-! # Marginal law of a measurable conditional Bernoulli coin -/
 

@@ -1,4 +1,4 @@
-import SampLib.Discrete.WeightedChoice
+import SampLib.Discrete.Laws.WeightedChoice
 
 /-! # Exact binary columns and live ranks
 

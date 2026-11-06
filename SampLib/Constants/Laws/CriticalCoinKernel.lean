@@ -1,6 +1,6 @@
 import SampLib.Constants.Laws.CriticalCoin
-import SampLib.Uniform.RealCoin
-import SampLib.Bernoulli.VonNeumann
+import SampLib.Uniform.Laws.RealCoin
+import SampLib.Bernoulli.Laws.VonNeumann
 
 /-! # Continuation credits for critical two-call recursion
 

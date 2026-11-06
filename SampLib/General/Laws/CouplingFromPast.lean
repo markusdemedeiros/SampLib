@@ -42,6 +42,38 @@ theorem coalesces_of_take {n : ℕ} {older : List (Map n)} (L : ℕ)
   have hc := coalesces_append h (older.drop L ++ newer)
   simpa only [← List.append_assoc, List.take_append_drop] using hc
 
+/-- Agreement with the proposed image on all unvisited states. -/
+abbrev AgreeFrom {n : ℕ} (maps : List (Map n)) (first : Fin n) (j : ℕ) : Prop :=
+  ∀ x : Fin n, j ≤ x.val → applyMaps maps x = first
+
+theorem agreeFrom_step {n : ℕ} (maps : List (Map n)) (first : Fin n)
+    (j : ℕ) (hj : j < n) :
+    AgreeFrom maps first j ↔ applyMaps maps ⟨j, hj⟩ = first ∧
+      AgreeFrom maps first (j + 1) := by
+  constructor
+  · intro h
+    exact ⟨h _ le_rfl, fun x hx => h x (by omega)⟩
+  · rintro ⟨hj', ht⟩ x hx
+    by_cases he : x.val = j
+    · have hx' : x = ⟨j, hj⟩ := Fin.ext he
+      simpa only [hx'] using hj'
+    · exact ht x (by omega)
+
+theorem agreeFrom_end {n : ℕ} (maps : List (Map n)) (first : Fin n) :
+    AgreeFrom maps first n := fun x hx => (not_lt_of_ge hx x.isLt).elim
+
+theorem coalesces_iff_agree {n : ℕ} [NeZero n] (maps : List (Map n)) :
+    Coalesces maps ↔ AgreeFrom maps (applyMaps maps 0) 1 := by
+  constructor
+  · exact fun h x _ => h x 0
+  · intro h
+    have hx (x : Fin n) : applyMaps maps x = applyMaps maps 0 := by
+      by_cases he : x.val = 0
+      · have hx' : x = 0 := Fin.ext he
+        rw [hx']
+      · exact h x (by omega)
+    exact fun x y => (hx x).trans (hx y).symm
+
 /-- The Markov kernel induced by one random mapping. -/
 def transition {n : ℕ} (ρ : Measure (Map n)) (x : Fin n) : Measure (Fin n) :=
   ρ.map (fun f => f x)

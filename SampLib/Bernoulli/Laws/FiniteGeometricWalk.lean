@@ -1,4 +1,4 @@
-import SampLib.Bernoulli.CoinConditional
+import SampLib.Bernoulli.Laws.CoinConditional
 
 /-! # Finite geometric walks
 

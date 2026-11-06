@@ -1,4 +1,4 @@
-import SampLib.Bernoulli.CoinMean
+import SampLib.Bernoulli.Laws.CoinMean
 
 /-! # Equal mixtures of Bernoulli continuation credits -/
 

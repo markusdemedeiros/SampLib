@@ -1,7 +1,7 @@
 import SampLib.Core.ListEncoding
 import Samplers.General.DataModels
 
-/-! Exact deterministic splitting of encoded lists. -/
+/-! # Deterministic splitting of encoded lists -/
 
 open ProbLang
 

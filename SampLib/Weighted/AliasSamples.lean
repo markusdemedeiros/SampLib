@@ -1,3 +1,4 @@
+import SampLib.Weighted.Syntax.AliasSamples
 import SampLib.Core.BetaStep
 import SampLib.Weighted.Support.WalkerSetup
 import SampLib.Weighted.Support.WalkerBalance
@@ -21,54 +22,6 @@ abbrev natVal {rT : Type} [ProbLangℝ rT] (n : ℕ) : Val rT := Val.int n
 /-- The ordered independent categorical vector. -/
 abbrev law (ws : List ℕ) (count : ℕ) :=
   SampleWithReplacement.law (WeightedChoice.law ws) count
-
-private def sourceBody {rT : Type} : Exp rT :=
-  match (Occil.aliasSamples : Exp rT) with
-  | .lam body => body
-  | _ => .lit .unit
-
-private def countBody {rT : Type} : Exp rT :=
-  match (sourceBody (rT := rT)) with
-  | .lam body => body
-  | _ => .lit .unit
-
-private theorem countBody_lcb {rT : Type} : Exp.lcb 2 (countBody (rT := rT)) = true := by
-  lcb_decide
-
-private def source {rT : Type} : Val rT := by
-  have hc : (Exp.lam (.lam (countBody (rT := rT)))).IsLocallyClosed :=
-    Exp.lcb_imp_lc (e := .lam (.lam (countBody (rT := rT))))
-      (show Exp.lcb 0 (.lam (.lam (countBody (rT := rT)))) = true from
-        countBody_lcb (rT := rT))
-  exact ⟨.lam (.lam countBody), .lam hc, hc⟩
-
-private theorem source_fst {rT : Type} :
-    (source (rT := rT)).fst = Occil.aliasSamples := rfl
-
-private def weightedSource {rT : Type} (weights : Val rT) : Val rT := by
-  have hc : (Exp.lam (Exp.openRec 1 weights.fst (countBody (rT := rT)))).IsLocallyClosed :=
-    Exp.lcb_imp_lc (e := .lam (Exp.openRec 1 weights.fst (countBody (rT := rT))))
-      (show Exp.lcb 1 (Exp.openRec 1 weights.fst (countBody (rT := rT))) = true from
-        Exp.lcb_openRec (Exp.lcb_ofVal 1 weights) (countBody_lcb (rT := rT)))
-  exact ⟨.lam (Exp.openRec 1 weights.fst countBody), .lam hc, hc⟩
-
-private def normalizedOpening {rT : Type} (weights : Val rT) (count : ℤ) :
-    {e : Exp rT //
-      Exp.open' (Exp.openRec 1 weights.fst countBody) (.lit (.int count)) = e} := by
-  refine ⟨_, by
-    conv_lhs =>
-      simp [countBody, sourceBody, Occil.aliasSamples, Exp.open', Exp.openRec,
-        Exp.close, Exp.closeRec,
-        Var.internal.injEq, ProbLang.openRec_val_fst,
-        ArraySyntax.length_openRec, ArraySyntax.length_closeRec,
-        WeightedValidation.sumInts_openRec, WeightedValidation.sumInts_closeRec,
-        UniformInt.uniformInt_openRec, UniformInt.uniformInt_closeRec,
-        ListOperations.repeatSample_openRec, ListOperations.repeatSample_closeRec]⟩
-
-private theorem opened_source {rT : Type} (weights : Val rT) (count : ℤ) :
-    Exp.open' (Exp.openRec 1 weights.fst countBody) (.lit (.int count)) =
-      (normalizedOpening weights count).val :=
-  (normalizedOpening weights count).property
 
 private def valid {rT : Type} : Exp rT := pl%
   rec check xs := case! xs | inl(u) => #true | inr(p) =>

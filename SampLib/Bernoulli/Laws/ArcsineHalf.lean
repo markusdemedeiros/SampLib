@@ -1,6 +1,6 @@
 import SampLib.Bernoulli.Laws.ArcsineFactoryParameters
-import SampLib.Bernoulli.FractionalPower
-import SampLib.Bernoulli.CoinMean
+import SampLib.Bernoulli.Laws.FractionalPower
+import SampLib.Bernoulli.Laws.CoinMean
 
 /-! The fair arcsine mixture cancels the complementary square-root term. -/
 

@@ -6,7 +6,10 @@ import SampLib.Bernoulli.Support.FactoryChoose
 import SampLib.Core.Syntax.ListAccess
 import SampLib.Core.Syntax.ListValues
 
-/-! Named source continuations for the polynomial factory's deterministic phases. -/
+/-! # Polynomial factory continuations
+
+Named source continuations for the polynomial factory's deterministic phases.
+-/
 
 open ProbLang
 

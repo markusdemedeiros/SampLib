@@ -14,8 +14,8 @@ import re
 import tempfile
 
 from audit_sampler_proofs import BASELINE, CALLERS, LEAN_HEADER
-from audit_exact_sampler_proofs import (agent_identity, local_file, read_json, require, run,
-                                        validate_axioms)
+from audit_exact_sampler_proofs import (agent_identity, caller_imports, local_file, read_json,
+                                        require, run, validate_axioms)
 from proof_dependencies import ROOT, review_context, sha256, source_snapshot
 from relocation import (current_imports, current_path, module_path, relocate_context,
                         relocate_file, relocate_snapshot)
@@ -60,7 +60,14 @@ def source_change_reviews(paths: list[str], context: dict) -> dict[str, dict]:
             require(sampler not in indexed, f"Duplicate source-change review: {sampler}")
             require(row.get("direct_sampler_unchanged") is True,
                     f"Changed historical sampler needs a full new proof review: {sampler}")
-            require({"source", "domain", "unchanged_sampler"} <= set(row.get("checks", [])),
+            required = {"source", "domain", "unchanged_sampler"}
+            if "proof_sha256" in row:
+                # A revised proof: the reviewer re-checked the whole proof, and the
+                # statement pins (checked by the exact audit) fix what it proves.
+                required |= {"proof", "statement", "build", "axioms", "caller"}
+                require(bool(row.get("previous_proof_sha256")),
+                        f"Revised proof must name the proof it replaces: {sampler}")
+            require(required <= set(row.get("checks", [])),
                     f"Incomplete source-change review: {sampler}")
             indexed[sampler] = {"review": name, "review_sha256": sha256(path), "entry": row}
     return indexed
@@ -87,9 +94,13 @@ def current_entries(rows: list[dict], context: dict, reviews: dict) -> tuple[lis
             entry = candidates[0]
             proof = row["proof_module"].replace(".", "/") + ".lean"
             current = sha256(local_file(module_path(row["proof_module"])))
+            reviewed = relocate_file(proof, entry["sha256"])[1]
+            revision = reviews.get(sampler, {}).get("entry", {})
             require(entry["sha256"] == row["reviewed_sha256"] and
-                    relocate_file(proof, entry["sha256"])[1] == current,
-                    f"Historical proof changed: {sampler}")
+                    (reviewed == current or
+                     (revision.get("previous_proof_sha256") in (entry["sha256"], reviewed)
+                      and revision.get("proof_sha256") == current)),
+                    f"Historical proof changed without a revision review: {sampler}")
             require(receipt["reviewer"] == row["reviewer"] != row["owner"],
                     f"Historical independent review mismatch: {sampler}")
             require(receipt["context"]["packages"]["clutch-lean"] ==
@@ -192,6 +203,7 @@ def revalidate(output: Path, log: Path, review_paths: list[str]) -> None:
     validate_axioms(checked, [row["public_spec"] for row in rows])
     for caller in callers:
         print(f"REVALIDATE_CALLER {caller}", flush=True)
+        run(["lake", "build", *caller_imports(current_path(caller))])
         run(["lake", "env", "lean", current_path(caller)])
     require(review_context() == context, "Context changed during baseline revalidation")
     require(current_entries(rows, context, reviews) == (entries, callers),

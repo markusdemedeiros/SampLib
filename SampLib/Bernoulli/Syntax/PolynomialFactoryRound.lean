@@ -1,7 +1,10 @@
 import SampLib.Bernoulli.Syntax.PolynomialFactorySource
 import SampLib.Bernoulli.BernsteinFactory
 
-/-! One search round, with verified closed routines retained as named constants. -/
+/-! # Polynomial factory search round
+
+One search round, with verified closed routines retained as named constants.
+-/
 
 open ProbLang
 

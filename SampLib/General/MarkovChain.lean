@@ -13,8 +13,6 @@ open scoped ENNReal
 
 namespace SampLib.MarkovChain
 
-set_option maxHeartbeats 200000
-
 noncomputable section
 
 section specification

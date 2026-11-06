@@ -1,4 +1,4 @@
-import SampLib.PSRN.Support.LatentRootModel
+import SampLib.PSRN.Laws.RootModel
 import SampLib.PSRN.Support.PSRNLess
 import SampLib.PSRN.Support.LatentConstantView
 import SampLib.Common.PSRNIntegerPower

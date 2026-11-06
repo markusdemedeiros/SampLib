@@ -1,4 +1,4 @@
-import SampLib.Uniform.RealCoin
+import SampLib.Uniform.Laws.RealCoin
 
 /-! # Identifying mixtures of Bernoulli laws
 

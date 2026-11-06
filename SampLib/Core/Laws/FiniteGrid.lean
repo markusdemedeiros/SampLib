@@ -1,5 +1,5 @@
 import SampLib.Core.Laws.IntegerIntervals
-import SampLib.Combinatorial.Choice
+import SampLib.Combinatorial.Laws.Choice
 
 /-! # Finite positions for a uniform integer interval -/
 

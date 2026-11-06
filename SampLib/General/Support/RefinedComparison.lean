@@ -1,5 +1,5 @@
 import SampLib.Common.Laws.RefinedComparison
-import SampLib.General.Syntax.RefinedComparison
+import SampLib.General.Syntax.RefinedComparisonOpen
 import SampLib.Latent.UniformBagCoin
 
 /-! # Refinement relative to an owned cached uniform

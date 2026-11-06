@@ -80,26 +80,6 @@ theorem twp_negate_view (E : CoPset) (source : Val rT) (P : S → IProp GF) (s :
   ipureintro
   exact hv
 
-/-- The pure translation constructor captures the same fixed source. -/
-theorem twp_translate_view (E : CoPset) (source : Val rT) (P : S → IProp GF) (s : S)
-    (a b : ℤ) (hb : 0 < b) :
-    P s ⊢ tglWp E pl(&Occil.PSRN.add (&Occil.PSRN.rational #a #b) &source.fst)
-      (fun v => ViewOwns (translateVal source a b) P v s) := by
-  iintro Hstate
-  iapply tglWp_wand
-  isplitl [Hstate]
-  · iapply twp_translate E (ViewOwns source P) source s a b hb
-    isimp only [ViewOwns]
-    iframe Hstate
-  iintro %v Hstate
-  isimp only [translateOwns, ViewOwns] at Hstate
-  icases Hstate with ⟨%original, %hv, %heq, Hstate⟩
-  subst original
-  isimp only [ViewOwns]
-  iframe Hstate
-  ipureintro
-  exact hv
-
 /-- Negation reads the fixed source and retains its actual reflected interval. -/
 theorem represented_negate_viewSpec (E : CoPset) (D : Model Ω S) (R : Representation D)
     (P : S → IProp GF) (source : Val rT) (hsource : IsRepresentedViewSpec E D R P source) :

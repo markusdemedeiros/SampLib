@@ -1,6 +1,6 @@
 import SampLib.Common.Laws.ListProduct
 import SampLib.Common.Laws.Sorting
-import SampLib.Uniform.RealCoin
+import SampLib.Uniform.Laws.RealCoin
 
 /-! # Independent-edge graphs in canonical edge order
 

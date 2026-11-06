@@ -57,15 +57,6 @@ theorem mass_tendsto_zero (μ : Measure Ω) [IsFiniteMeasure μ]
     hmeas hbound (by simp) hlim
   simpa only [lintegral_indicator_const (hband _), one_mul, lintegral_zero] using h
 
-/-- The finite-horizon proof may choose one unresolved band below its error allowance. -/
-theorem exists_small_mass (μ : Measure Ω) [IsFiniteMeasure μ]
-    {left right : Ω → ℝ} {error : ℕ → Ω → ℝ}
-    (hl : Measurable left) (hr : Measurable right) (he : ∀ n, Measurable (error n))
-    (herror : ∀ᵐ x ∂μ, Tendsto (fun n => error n x) atTop (𝓝 0))
-    (hne : ∀ᵐ x ∂μ, left x ≠ right x) {δ : ℝ≥0∞} (hδ : 0 < δ) :
-    ∃ n, μ (band left right error n) < δ := by
-  exact ((mass_tendsto_zero μ hl hr he herror hne).eventually_lt_const hδ).exists
-
 /-- A horizon can be chosen after any already requested precision. -/
 theorem exists_small_mass_ge (μ : Measure Ω) [IsFiniteMeasure μ]
     {left right : Ω → ℝ} {error : ℕ → Ω → ℝ}

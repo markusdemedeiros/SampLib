@@ -1,7 +1,7 @@
-import SampLib.Latent.UniformVectorModel
-import SampLib.Latent.LatentCoinSpec
+import SampLib.Latent.Laws.UniformVectorModel
+import SampLib.Latent.Laws.LatentCoin
 import SampLib.Latent.Laws.LatentBernoulli
-import SampLib.Bernoulli.CoinProduct
+import SampLib.Bernoulli.Laws.CoinProduct
 
 /-! # One conditional coin in a joint uniform world
 

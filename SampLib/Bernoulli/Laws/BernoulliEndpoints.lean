@@ -1,4 +1,4 @@
-import SampLib.Uniform.RealCoin
+import SampLib.Uniform.Laws.RealCoin
 
 /-! # Continuation credits for deterministic Bernoulli endpoints -/
 

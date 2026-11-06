@@ -1,5 +1,4 @@
 import SampLib.Common.Laws.BoundsKernel
-import SampLib.Constants.FromBounds
 import SampLib.Bernoulli.Laws.AlternatingEnclosure
 
 /-! # Rational enclosures of arbitrary real constants -/
@@ -59,19 +58,9 @@ theorem Tight.toProbability {x : ℝ} {a : ℕ → Interval x} (h : Tight a)
     (p : unitInterval) (hx : (p : ℝ) = x) :
     FromBounds.Tight (fun n => (a n).toProbability p hx) := h
 
-/-- Concrete gateways return an all-integer `(lower,(upper,denominator))` triple. -/
-def encodeTriple {rT : Type} (a : ℤ × (ℤ × ℤ)) : ProbLang.Val rT :=
-  .pair (.int a.1) (.pair (.int a.2.1) (.int a.2.2))
-
+/-- The integer triple `(lower, (upper, denominator))` that concrete gateways return. -/
 def Interval.triple {x : ℝ} (a : Interval x) : ℤ × (ℤ × ℤ) :=
   (a.lower, (a.upper, (a.denominator : ℤ)))
-
-def encodeInterval {rT : Type} {x : ℝ} (a : Interval x) : ProbLang.Val rT :=
-  encodeTriple a.triple
-
-@[simp] theorem encode_toProbability {rT : Type} {x : ℝ} (a : Interval x)
-    (p : unitInterval) (hx : (p : ℝ) = x) :
-    FromBounds.encodeInterval (rT := rT) (a.toProbability p hx) = encodeInterval a := rfl
 
 end
 

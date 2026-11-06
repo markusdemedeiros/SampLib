@@ -1,4 +1,4 @@
-import SampLib.Bernoulli.Laws.ReciprocalPiProbability
+import SampLib.Bernoulli.Support.PiEncodings
 import SampLib.Bernoulli.Support.PiBounds
 import SampLib.Core.Syntax.ClosedExp
 

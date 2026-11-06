@@ -1,5 +1,4 @@
-import SampLib.Bernoulli.Support.LinearFactorySyntax
-import SampLib.Common.CoinComplement
+import SampLib.Bernoulli.Laws.LinearFactory
 import SampLib.Bernoulli.Laws.BernoulliRetry
 
 /-! # Accepted and retried masses for epsilon division

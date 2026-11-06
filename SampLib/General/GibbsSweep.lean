@@ -1,4 +1,5 @@
 import SampLib.General.Laws.FiniteKernels
+import SampLib.Templates
 import Samplers.General.Core
 
 /-! # A sweep of conditional transition kernels

@@ -1,3 +1,4 @@
+import SampLib.Bernoulli.Laws.Subtraction
 import SampLib.Bernoulli.Addition
 import SampLib.Common.CoinComplement
 
@@ -12,31 +13,6 @@ open scoped ENNReal
 namespace SampLib.Subtraction
 
 noncomputable section
-
-private theorem complement_bound (p q : unitInterval) (e f : ℤ)
-    (h : (e : ℝ) / f ≤ (p : ℝ) - q) :
-    (unitInterval.symm p : ℝ) + q ≤ 1 - (e : ℝ) / f := by
-  rw [unitInterval.coe_symm_eq]
-  linarith
-
-/-- The difference bias, normalized by its supplied positive lower margin. -/
-def bias (p q : unitInterval) (e f : ℤ) (he : 0 < e) (hef : e < f)
-    (h : (e : ℝ) / f ≤ (p : ℝ) - q) : unitInterval :=
-  unitInterval.symm (Addition.bias (unitInterval.symm p) q e f he hef
-    (complement_bound p q e f h))
-
-theorem bias_coe (p q : unitInterval) (e f : ℤ) (he : 0 < e) (hef : e < f)
-    (h : (e : ℝ) / f ≤ (p : ℝ) - q) : (bias p q e f he hef h : ℝ) = (p : ℝ) - q := by
-  simp only [bias, unitInterval.coe_symm_eq, Addition.bias_coe]
-  ring
-
-/-- Negation swaps the addition law's two atoms, with no restriction on the credits. -/
-theorem expectation (p q : unitInterval) (e f : ℤ) (he : 0 < e) (hef : e < f)
-    (h : (e : ℝ) / f ≤ (p : ℝ) - q) (F : Bool → ℝ≥0∞) :
-    ∫⁻ b, F (!b) ∂RealCoin.law
-      (Addition.bias (unitInterval.symm p) q e f he hef (complement_bound p q e f h)) =
-      ∫⁻ b, F b ∂RealCoin.law (bias p q e f he hef h) :=
-  Complement.expectation_preservation _ F
 
 private def source {rT : Type _} : Val rT :=
   ⟨Occil.FactoryExtra.subtraction, .lam (by is_lc), by is_lc⟩

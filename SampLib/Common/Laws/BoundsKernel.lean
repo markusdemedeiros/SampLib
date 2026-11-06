@@ -1,5 +1,5 @@
 import SampLib.Common.Laws.DyadicRefinement
-import SampLib.Uniform.RealCoin
+import SampLib.Uniform.Laws.RealCoin
 
 /-! # Finite-horizon credits for rational enclosures
 

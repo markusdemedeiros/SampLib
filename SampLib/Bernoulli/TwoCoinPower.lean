@@ -1,5 +1,4 @@
-import SampLib.Common.FractionalPowerCore
-import SampLib.Bernoulli.CoinProduct
+import SampLib.Bernoulli.Laws.TwoCoinPower
 import SampLib.Bernoulli.Syntax.TwoCoinPower
 
 /-! # The two-coin reciprocal-hazard power factory -/
@@ -12,38 +11,6 @@ namespace SampLib.TwoCoinPower
 open Program
 
 noncomputable section
-
-abbrev bias := FractionalPower.powerBias
-
-def exponentCredit (n : ℕ) (F : Bool → ℝ≥0∞) (c : ℝ≥0∞) : Bool → ℝ≥0∞ :=
-  CoinProduct.firstCredit (FractionalPower.hazardBias 1 n) (FractionalPower.hazardCredit F c)
-
-def firstCredit (q : unitInterval) (n : ℕ) (F : Bool → ℝ≥0∞)
-    (c : ℝ≥0∞) (bit : Bool) : ℝ≥0∞ :=
-  if bit then F true else RealCoin.credit q (exponentCredit n F c)
-
-/-- Testing the exponent coin and `1/(n+1)` coin is a hazard of `q/(n+1)`. -/
-private theorem exponent_expectation (q : unitInterval) (n : ℕ)
-    (F : Bool → ℝ≥0∞) (c : ℝ≥0∞) :
-    RealCoin.credit q (exponentCredit n F c) =
-      RealCoin.credit (FractionalPower.hazardBias q n) (FractionalPower.hazardCredit F c) := by
-  have hb : q * FractionalPower.hazardBias 1 n = FractionalPower.hazardBias q n := by
-    apply Subtype.ext
-    simp [FractionalPower.hazardBias, div_eq_mul_inv]
-  simpa only [exponentCredit, RealCoin.lintegral_law, CoinProduct.law, hb] using
-    CoinProduct.expectation_preservation q (FractionalPower.hazardBias 1 n)
-      (FractionalPower.hazardCredit F c)
-
-/-- First-round conditioning is the same power-law recurrence for arbitrary credits. -/
-theorem round_expectation (p q : unitInterval) (n : ℕ) (F : Bool → ℝ≥0∞) (c : ℝ≥0∞) :
-    ∫⁻ bit, firstCredit q n F c bit ∂RealCoin.law p =
-      FractionalPower.exitCredit p q F n + FractionalPower.continueProb p q n * c := by
-  have hfirst : firstCredit q n F c = FractionalPower.inputCredit q n F c := by
-    funext bit
-    cases bit <;> simp only [firstCredit, FractionalPower.inputCredit,
-      Bool.false_eq_true, ite_false, ite_true, exponent_expectation]
-  rw [hfirst, FractionalPower.round_expectation]
-
 
 private theorem gate_bias_eq (n : ℕ) :
     RationalCoin.bias 1 ((n : ℤ) + 1) (by positivity) (by positivity) (by omega) =

@@ -1,4 +1,4 @@
-import SampLib.Uniform.RationalCoin
+import SampLib.Uniform.Laws.RationalCoin
 import SampLib.PSRN.Laws.PSRNGammaFamilyDensities
 
 /-! # Exact rational selectors for the named gamma-mixture families -/

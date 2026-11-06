@@ -1,4 +1,4 @@
-import SampLib.Constants.Laws.EulerHyperbolic
+import SampLib.Constants.Support.EulerEncodings
 import SampLib.Bernoulli.EulerBounds
 import SampLib.Bernoulli.Syntax.Exponential
 

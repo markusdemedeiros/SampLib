@@ -1,4 +1,5 @@
 import SampLib.General.Laws.MetropolisRatio
+import SampLib.General.Support.CappedRationalCoin
 import SampLib.Core.SupportedSpec
 import SampLib.Core.ProofMode.BindFrom
 import Samplers.General.Core
@@ -12,8 +13,6 @@ symmetric Metropolis instantiate the same symbolic execution.
 
 open ProbLang
 open scoped ENNReal NNReal
-
-set_option maxHeartbeats 200000
 
 namespace SampLib.MetropolisRatio
 

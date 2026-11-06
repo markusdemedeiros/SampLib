@@ -1,4 +1,4 @@
-import SampLib.General.RandomMap
+import SampLib.General.Laws.RandomMap
 import SampLib.General.Laws.CouplingFromPast
 
 /-! # Typed finite maps sampled from stochastic matrices

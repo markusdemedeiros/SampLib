@@ -1,4 +1,5 @@
 import SampLib.Bernoulli.Laws.EulerNumberBounds
+import SampLib.Bernoulli.Laws.RealEnclosure
 import SampLib.Bernoulli.Laws.RealEnclosureTransforms
 
 /-! # The monotone fractional-linear image of the factorial enclosure -/
@@ -25,20 +26,22 @@ theorem bias_coe : (bias : ℝ) = Real.tanh (1 / 2) := by
   rw [Real.tanh_eq, Real.exp_neg, he]
   field_simp
 
-private def lower (n : ℕ) : ℤ :=
+/-- The scaled lower endpoint of `e + 1`. -/
+def lower (n : ℕ) : ℤ :=
   (EulerEnclosure.interval n).lower + (EulerEnclosure.interval n).denominator
 
-private def upper (n : ℕ) : ℤ :=
+/-- The scaled upper endpoint of `e + 1`. -/
+def upper (n : ℕ) : ℤ :=
   (EulerEnclosure.interval n).upper + (EulerEnclosure.interval n).denominator
 
-private theorem lower_pos (n : ℕ) : 0 < lower n := by
+theorem lower_pos (n : ℕ) : 0 < lower n := by
   have hd : (0 : ℤ) < (EulerEnclosure.interval n).denominator := by
     exact_mod_cast (EulerEnclosure.interval n).positive
   have := EulerEnclosure.lower_ge_two n
   dsimp [lower]
   omega
 
-private theorem upper_pos (n : ℕ) : 0 < upper n := by
+theorem upper_pos (n : ℕ) : 0 < upper n := by
   have hd : (0 : ℝ) < (EulerEnclosure.interval n).denominator := by
     exact_mod_cast (EulerEnclosure.interval n).positive
   have he := Real.exp_pos (1 : ℝ)
@@ -153,21 +156,6 @@ theorem tight : FromBounds.Tight interval := by
   intro ε hε
   obtain ⟨n, hn⟩ := ((tendsto_order.mp width_tendsto).2 ε hε).exists
   exact ⟨n, hn.le⟩
-
-theorem encode {rT : Type} (n : ℕ) :
-    FromBounds.encodeInterval (rT := rT) (interval n) =
-      RealEnclosure.encodeTriple
-        (((EulerEnclosure.interval n).lower - (EulerEnclosure.interval n).denominator) *
-            ((EulerEnclosure.interval n).upper + (EulerEnclosure.interval n).denominator),
-          (((EulerEnclosure.interval n).upper - (EulerEnclosure.interval n).denominator) *
-            ((EulerEnclosure.interval n).lower + (EulerEnclosure.interval n).denominator),
-            ((EulerEnclosure.interval n).lower + (EulerEnclosure.interval n).denominator) *
-              ((EulerEnclosure.interval n).upper + (EulerEnclosure.interval n).denominator))) := by
-  have hl : ((lower n).toNat : ℤ) = lower n := Int.toNat_of_nonneg (lower_pos n).le
-  have hu : ((upper n).toNat : ℤ) = upper n := Int.toNat_of_nonneg (upper_pos n).le
-  simp only [FromBounds.encodeInterval, interval, RealEnclosure.encodeTriple,
-    Nat.cast_mul, hl, hu]
-  rfl
 
 end
 

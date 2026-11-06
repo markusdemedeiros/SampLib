@@ -1,6 +1,6 @@
 import SampLib.Common.Laws.AcceptedProposal
-import SampLib.Common.RationalPower
-import SampLib.Discrete.UniformFin
+import SampLib.Common.Laws.RationalPower
+import SampLib.Discrete.Laws.UniformFin
 
 /-! # Finite Zipf laws from uniform rejection
 

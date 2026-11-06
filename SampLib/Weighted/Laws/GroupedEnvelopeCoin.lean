@@ -1,5 +1,5 @@
 import SampLib.Weighted.Laws.GroupedEnvelope
-import SampLib.Uniform.RationalCoin
+import SampLib.Uniform.Laws.RationalCoin
 
 /-! # Uniform cells and acceptance coins inside a dyadic envelope -/
 

@@ -1,4 +1,4 @@
-import SampLib.General.Syntax.RefinedComparison
+import SampLib.General.Syntax.RefinedComparisonOpen
 import SampLib.Core.BetaStep
 
 /-! # Source template for finite inversion with a shared cached uniform -/

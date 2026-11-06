@@ -1,5 +1,5 @@
-import SampLib.General.InverseQuantile
-import SampLib.Uniform.RationalCoin
+import SampLib.General.Laws.InverseQuantile
+import SampLib.Uniform.Laws.RationalCoin
 
 /-! # Quantiles of integer CDFs on finite intervals -/
 

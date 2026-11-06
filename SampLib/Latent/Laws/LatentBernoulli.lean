@@ -1,5 +1,6 @@
 import SampLib.Common.Laws.DyadicRefinement
-import SampLib.Bernoulli.CoinMean
+import SampLib.Bernoulli.Laws.CoinMean
+import SampLib.Uniform.Laws.FairCoin
 
 /-! # Bernoulli kernels over a cached uniform
 

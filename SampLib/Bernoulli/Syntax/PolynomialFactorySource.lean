@@ -1,7 +1,10 @@
 import SampLib.Bernoulli.Syntax.PolynomialFactory
 import SampLib.Core.CurriedStep
 
-/-! Named continuations taken directly from the polynomial source. -/
+/-! # Polynomial factory source continuations
+
+Named continuations taken directly from the polynomial source.
+-/
 
 open ProbLang
 

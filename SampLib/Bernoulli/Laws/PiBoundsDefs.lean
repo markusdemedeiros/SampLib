@@ -4,8 +4,6 @@ import SampLib.Bernoulli.Laws.RealEnclosure
 
 namespace SampLib.PiBounds
 
-export RealEnclosure (encodeTriple)
-
 def sign (k : ℕ) : ℤ := if k % 2 = 0 then 1 else -1
 
 def termDenominator (q k : ℕ) : ℤ := ((2 * k + 1 : ℕ) : ℤ) * (q : ℤ) ^ (2 * k + 1)

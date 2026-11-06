@@ -1,4 +1,4 @@
-import SampLib.Uniform.RealCoin
+import SampLib.Uniform.Laws.RealCoin
 
 /-! # Bernoulli laws from accepted and retried trials
 

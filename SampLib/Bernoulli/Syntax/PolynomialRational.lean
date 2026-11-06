@@ -1,7 +1,10 @@
 import SampLib.Bernoulli.Syntax.PolynomialFactoryOpen
 import SampLib.Bernoulli.BernoulliRace
 
-/-! Source correspondence for polynomial callbacks in the rational factory. -/
+/-! # Rational polynomial factory callbacks
+
+Source correspondence for polynomial callbacks in the rational factory.
+-/
 
 open ProbLang
 

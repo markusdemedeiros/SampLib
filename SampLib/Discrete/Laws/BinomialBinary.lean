@@ -1,6 +1,6 @@
 import SampLib.Discrete.Laws.BinomialThinning
 import SampLib.Common.Laws.Urn
-import SampLib.Bernoulli.VonNeumann
+import SampLib.Bernoulli.Laws.VonNeumann
 
 /-! # Binary refinement of a binomial bias
 

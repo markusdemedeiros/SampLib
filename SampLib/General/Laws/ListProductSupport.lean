@@ -1,6 +1,6 @@
 import SampLib.Common.Laws.ListProduct
 
-/-! Support of independent finite coordinate lists. -/
+/-! # Support of independent coordinate lists -/
 
 open MeasureTheory
 

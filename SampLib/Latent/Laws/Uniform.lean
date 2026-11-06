@@ -1,5 +1,9 @@
-import SampLib.Latent.UniformBagPrefix
-import SampLib.Common.Laws.DyadicRefinement
+module
+
+public import SampLib.Latent.Laws.UniformBag
+public import SampLib.Common.Laws.DyadicRefinement
+
+@[expose] public section
 
 /-! # Exact intervals observed from a cached uniform
 

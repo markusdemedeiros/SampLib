@@ -1,4 +1,4 @@
-import SampLib.Combinatorial.SampleWithReplacement
+import SampLib.Combinatorial.Laws.SampleWithReplacement
 
 /-! # Independent finite lists
 

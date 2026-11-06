@@ -7,7 +7,10 @@ import SampLib.Uniform.RationalCoin
 import SampLib.Core.Syntax.ClosedExp
 import SampLib.Core.BetaStep
 
-/-! The exact padded-binomial tail after the first-passage index is selected. -/
+/-! # Padded binomial tail of the minimum-complement factory
+
+The exact padded-binomial tail after the first-passage index is selected.
+-/
 
 open ProbLang
 open scoped ENNReal

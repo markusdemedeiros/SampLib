@@ -1,6 +1,9 @@
 import SampLib.Bernoulli.Support.PolynomialFactoryCheck
 
-/-! Exact execution of one power-basis to Bernstein coefficient conversion. -/
+/-! # Power-basis to Bernstein conversion
+
+Exact execution of one power-basis to Bernstein coefficient conversion.
+-/
 
 open ProbLang
 

@@ -35,11 +35,6 @@ def scale (D : Model Ω S) (c : ℝ) : Model Ω S :=
     error_tendsto := fun s => (D.error_tendsto s).mono fun _ hx => by
       simpa using hx.mul_const |c| }
 
-theorem negate_law (D : Model Ω S) (s : S) :
-    D.negate.law s = (D.law s).map (fun x => -x) := by
-  rw [law, law, Measure.map_map measurable_neg D.measurable_value]
-  rfl
-
 theorem scale_law (D : Model Ω S) (c : ℝ) (s : S) :
     (D.scale c).law s = (D.law s).map (fun x => x * c) := by
   rw [law, law, Measure.map_map

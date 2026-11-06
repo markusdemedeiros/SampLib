@@ -14,8 +14,6 @@ namespace SampLib.HighPowerLogistic
 
 noncomputable section
 
-set_option maxHeartbeats 600000
-
 private def walk {rT : Type _} (coin : Val rT) (N : ℕ) (a b : ℤ) : Val rT :=
   ⟨.fix (.lam (pl% if {Exp.bvar 0} = #0 then #false else
     if #int ((N - 1 : ℕ) : ℤ) < {Exp.bvar 0} then #true else

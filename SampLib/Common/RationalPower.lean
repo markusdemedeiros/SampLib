@@ -18,11 +18,6 @@ namespace SampLib.RationalPower
 
 noncomputable section
 
-/-- The Bernoulli bias for a nonnegative rational power. -/
-def bias (p : unitInterval) (a b : ℕ) (_hb : 0 < b) : unitInterval :=
-  ⟨(p : ℝ) ^ ((a : ℝ) / b : ℝ), Real.rpow_nonneg p.2.1 _,
-    Real.rpow_le_one p.2.1 p.2.2 (by positivity)⟩
-
 private def suffixBias (p : unitInterval) (a b : ℕ) : unitInterval :=
   ⟨(p : ℝ) ^ ((a % b : ℕ) / (b : ℝ) : ℝ), Real.rpow_nonneg p.2.1 _,
     Real.rpow_le_one p.2.1 p.2.2 (by positivity)⟩

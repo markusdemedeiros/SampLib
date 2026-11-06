@@ -1,4 +1,4 @@
-import SampLib.Uniform.UniformInt
+import SampLib.Uniform.Laws.UniformInt
 
 /-! # Images of a finite uniform word
 

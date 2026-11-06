@@ -61,7 +61,6 @@ theorem stepBody_lcb {rT : Type} (coin : Val rT) : Exp.lcb 7 (stepBody coin) = t
   Exp.lcb_openRec (Exp.lcb_ofVal 7 (loop coin))
     (Exp.lcb_openRec (Exp.lcb_ofVal 8 coin) code_lcb)
 
-set_option maxHeartbeats 800000 in
 def step {rT : Type} (coin : Val rT) (n a b e f numerator denominator : ℤ) :
     {term : Exp rT // CurriedStep.opened
       [Val.int n, .int a, .int b, .int e, .int f, .int numerator, .int denominator]
@@ -106,7 +105,6 @@ theorem sourceBody_lcb {rT : Type} : Exp.lcb 6 (sourceBody : Exp rT) = true := b
 def arguments {rT : Type} (coin : Val rT) (a b e f : ℤ) : List (Val rT) :=
   [coin, .int a, .int b, .int e, .int f, .unit]
 
-set_option maxHeartbeats 800000 in
 theorem opened_source {rT : Type} (coin : Val rT) (a b e f : ℤ) :
     CurriedStep.opened (arguments coin a b e f) sourceBody = body coin a b e f := by
   simp [CurriedStep.opened, arguments, sourceBody, Occil.FactoryExtra.linear2014,

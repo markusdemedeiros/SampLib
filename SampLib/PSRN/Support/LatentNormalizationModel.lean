@@ -1,4 +1,4 @@
-import SampLib.PSRN.Support.LatentRepresentedCoordinateSum
+import SampLib.PSRN.Support.LatentCoordinateSum
 import SampLib.PSRN.Support.LatentRepresentedDivision
 import SampLib.PSRN.Laws.PSRNDirichletTransport
 

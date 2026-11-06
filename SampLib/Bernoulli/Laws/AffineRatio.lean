@@ -1,6 +1,6 @@
-import SampLib.Bernoulli.Division
+import SampLib.Bernoulli.Laws.Division
 import SampLib.Bernoulli.Laws.BernoulliRetry
-import SampLib.Bernoulli.OffsetRace
+import SampLib.Bernoulli.Laws.OffsetRace
 
 /-! # Ratios of affine coin probabilities
 

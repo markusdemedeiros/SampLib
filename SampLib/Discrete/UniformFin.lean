@@ -1,3 +1,4 @@
+import SampLib.Discrete.Laws.UniformFin
 import SampLib.Uniform.UniformInt
 
 /-! # Uniform integer sampling with a bounded mathematical output -/
@@ -9,25 +10,6 @@ namespace SampLib.UniformFin
 
 noncomputable section
 
-section distribution
-
-open MeasureTheory Measure
-
-/-- The bound is retained in the mathematical output type. -/
-def law (n : ℕ) : Measure (Fin n) := uniformOfFinset univ
-
-instance (n : ℕ) [NeZero n] : IsProbabilityMeasure (law n) :=
-  isProbabilityMeasure_uniformOfFinset Finset.univ_nonempty
-
-theorem lintegral_law (n : ℕ) (F : Fin n → ℝ≥0∞) :
-    ∫⁻ k, F k ∂law n = (∑ k, F k) / n := by
-  simp only [law, uniformOfFinset, lintegral_finsetSum_measure,
-    lintegral_smul_measure, lintegral_dirac, smul_eq_mul, card_univ, Fintype.card_fin]
-  rw [← mul_sum, ENNReal.div_eq_inv_mul]
-
-theorem law_singleton (n : ℕ) (k : Fin n) : law n {k} = (n : ℝ≥0∞)⁻¹ := by
-  simp [law, uniformOfFinset_apply_singleton]
-
 private def extend {n : ℕ} (F : Fin n → ℝ≥0∞) (k : ℕ) : ℝ≥0∞ :=
   if h : k < n then F ⟨k, h⟩ else 0
 
@@ -35,8 +17,6 @@ private theorem sum_extend (n : ℕ) (F : Fin n → ℝ≥0∞) :
     ∑ k ∈ range n, extend F k = ∑ k, F k := by
   rw [← Fin.sum_univ_eq_sum_range]
   simp [extend]
-
-end distribution
 
 section specification
 

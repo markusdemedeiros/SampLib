@@ -1,3 +1,4 @@
+import SampLib.Weighted.Laws.FlatChoice
 import SampLib.Common.WeightedValidation
 import SampLib.Core.Syntax.ListAccess
 import SampLib.Core.Syntax.ListValues
@@ -16,32 +17,6 @@ namespace SampLib.FlatChoice
 
 noncomputable section
 
-def table : List ℕ → ℕ → List ℕ
-  | [], _ => []
-  | w :: ws, offset => List.replicate w offset ++ table ws (offset + 1)
-
-@[simp] theorem length_table (ws : List ℕ) (offset : ℕ) :
-    (table ws offset).length = ws.sum := by
-  induction ws generalizing offset with
-  | nil => rfl
-  | cons w ws ih => simp [table, ih]
-
-/-- Table lookup is precisely the category containing the uniform rank. -/
-theorem lookup (ws : List ℕ) (offset k : ℕ) (hk : k < ws.sum) :
-    (table ws offset)[k]?.getD 0 = offset + WeightedChoice.category ws k := by
-  induction ws generalizing offset k with
-  | nil => simp at hk
-  | cons w ws ih =>
-    simp only [table]
-    by_cases h : k < w
-    · rw [List.getElem?_append_left (by simpa using h)]
-      simp [h, WeightedChoice.category]
-    · rw [List.getElem?_append_right (by simpa using Nat.le_of_not_gt h)]
-      simp only [List.length_replicate]
-      rw [ih (offset + 1) (k - w) (by simp only [List.sum_cons] at hk; omega)]
-      simp only [WeightedChoice.category, ite_eq_right h]
-      omega
-
 private def expand {rT : Type _} : Exp rT := pl%
   rec build xs index := case! xs
     | inl(v) => inl(#())
@@ -52,6 +27,7 @@ private def expand {rT : Type _} : Exp rT := pl%
       copies (fst(p))
 
 -- Insert the locally closed continuation directly, without introducing captures.
+
 private def copies {rT : Type _} (next : Exp rT) (offset : ℕ) : Exp rT :=
   .fix (.lam (.cond (.binop .eq (.bvar 0) (.lit (.int 0))) next
     (.inr (.pair (.lit (.int offset))

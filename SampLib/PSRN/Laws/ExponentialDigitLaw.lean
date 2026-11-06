@@ -94,13 +94,6 @@ theorem bitBias_coe_decay (rate width : ℝ) :
   field_simp
   ring
 
-/-- Interpreting the canonical digit stream retains the fractional exponential law. -/
-theorem value_law (rate : ℝ) :
-    (fraction rate).map (fun x => DigitPosterior.value (digits x)) = fraction rate := by
-  have hvalue : (fun x => DigitPosterior.value (digits x)) =ᵐ[fraction rate] id :=
-    (fraction_support rate).mono fun x hx => value_digits hx
-  rw [Measure.map_congr hvalue, Measure.map_id]
-
 end
 
 end SampLib.ExponentialDigits

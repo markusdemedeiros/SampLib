@@ -1,3 +1,4 @@
+import SampLib.Discrete.Laws.Geometric
 import SampLib.Bernoulli.PLogInverse
 import SampLib.Common.Laws.AcceptedProposal
 

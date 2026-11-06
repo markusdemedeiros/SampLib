@@ -1,4 +1,5 @@
 import SampLib.Common.Laws.AbsorbingChain
+import SampLib.Common.AbsorbingChain
 import SampLib.Uniform.RealCoin
 import Samplers.Discrete.Tails
 

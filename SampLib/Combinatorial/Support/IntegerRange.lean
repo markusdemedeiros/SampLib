@@ -1,15 +1,12 @@
 import SampLib.Core.ListEncoding
 import Samplers.Combinatorial.Basic
+import SampLib.Combinatorial.Laws.IntegerRange
 
-/-! # Consecutive integer lists -/
+/-! # Building a consecutive integer list -/
 
 open ProbLang
 
 namespace SampLib.IntegerRange
-
-def interval (lo : ℤ) : ℕ → List ℤ
-  | 0 => []
-  | n + 1 => lo :: interval (lo + 1) n
 
 theorem intRange_lc {rT : Type _} :
     (Occil.intRange : Exp rT).IsLocallyClosed := by is_lc

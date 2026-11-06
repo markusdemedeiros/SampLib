@@ -1,5 +1,4 @@
-import SampLib.Discrete.WeightedChoice
-import SampLib.Core.SupportedSpec
+import SampLib.Discrete.Laws.WeightedChoice
 import SampLib.Common.Laws.WeightedPositiveSupport
 
 /-! # Ordered sampling proportional to remaining weights

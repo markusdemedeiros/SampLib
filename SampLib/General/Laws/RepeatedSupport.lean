@@ -1,6 +1,6 @@
-import SampLib.Combinatorial.SampleWithReplacement
+import SampLib.Combinatorial.Laws.SampleWithReplacement
 
-/-! Almost-sure coordinate properties of independent finite repetitions. -/
+/-! # Almost-sure properties of independent repetitions -/
 
 open MeasureTheory
 

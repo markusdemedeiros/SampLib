@@ -1,7 +1,7 @@
 import SampLib.Discrete.Laws.DyadicPower
 import SampLib.Discrete.Laws.DyadicProposal
-import SampLib.Common.RationalPower
-import SampLib.Bernoulli.VonNeumann
+import SampLib.Common.Laws.RationalPower
+import SampLib.Bernoulli.Laws.VonNeumann
 
 /-! # Dyadic rejection leaves zeta weights
 

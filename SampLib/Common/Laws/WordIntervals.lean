@@ -1,4 +1,4 @@
-import SampLib.Uniform.UniformInt
+import SampLib.Uniform.Laws.UniformInt
 
 /-! # Uniform words grouped into equal intervals
 

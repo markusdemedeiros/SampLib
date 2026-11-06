@@ -2,7 +2,7 @@ import SampLib.Bernoulli.Laws.MinimumComplementCoefficients
 import SampLib.Bernoulli.Laws.MinimumComplementWalk
 import SampLib.Common.Laws.BernoulliMixture
 import SampLib.Common.Laws.Binomial
-import SampLib.Bernoulli.CoinMean
+import SampLib.Bernoulli.Laws.CoinMean
 
 /-! # Expectation kernels for the minimum-complement factory
 

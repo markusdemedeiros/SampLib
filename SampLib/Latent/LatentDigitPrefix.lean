@@ -21,25 +21,6 @@ theorem rank_append (p q : List Bool) :
 
 variable {Ω : Type} [MeasurableSpace Ω]
 
-/-- Every already traversed part of a reachable cache has positive prior mass. -/
-theorem prefix_reachable (μ : Measure Ω) (digits : Ω → ℕ → Bool)
-    {p q : List Bool} (hp : p <+: q)
-    (hq : μ (DigitPosterior.cylinder digits q) ≠ 0) :
-    μ (DigitPosterior.cylinder digits p) ≠ 0 :=
-  fun h => hq (measure_mono_null (DigitPosterior.cylinder_mono hp) h)
-
-/-- Reading under a processed prefix extends only the unread suffix. -/
-theorem append_refines (r : List Bool) {p q : List Bool} (hp : p <+: q) :
-    r ++ p <+: r ++ q := by
-  rcases hp with ⟨s, rfl⟩
-  exact ⟨s, List.append_assoc _ _ _⟩
-
-/-- The accumulator is the rank of the requested prefix, regardless of a longer cache. -/
-theorem accumulated_rank (r q : List Bool) (n : ℕ) (hn : n ≤ q.length) :
-    UniformBag.rank r * 2 ^ n + UniformBag.rank (q.take n) =
-      UniformBag.rank (r ++ q.take n) := by
-  simp only [rank_append, List.length_take, Nat.min_eq_left hn]
-
 /-- Reattach the observed head after recursively reading the retained tail. -/
 theorem readRefines_step {p cached q : List Bool} {b : Bool} {n : ℕ}
     (hs : UniformBag.stepRefines p b cached) (hr : UniformBag.readRefines cached n q) :

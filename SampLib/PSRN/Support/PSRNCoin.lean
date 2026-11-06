@@ -1,8 +1,8 @@
-import SampLib.PSRN.Laws.UniformThreshold
+import SampLib.PSRN.Support.UniformThreshold
 import SampLib.PSRN.Syntax.PSRNCoin
 import SampLib.PSRN.Support.PSRNLess
 import SampLib.PSRN.Support.LatentProduct
-import SampLib.PSRN.Support.LatentCompositeMeasuredError
+import SampLib.PSRN.Support.LatentMixtureModel
 
 /-! # Conditional coins from a deferred real
 

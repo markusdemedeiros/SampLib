@@ -1,5 +1,5 @@
 import SampLib.General.Laws.FiniteKernels
-import SampLib.Uniform.RealCoin
+import SampLib.Uniform.Laws.RealCoin
 
 /-! # The Metropolis acceptance flux
 

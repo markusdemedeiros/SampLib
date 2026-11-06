@@ -311,7 +311,6 @@ private theorem twp_loop (E : CoPset) (A B s t : ℕ) (hA : 0 < A) (hB : 0 < B) 
     iframe Hcredit
     itrivial
 
-set_option maxHeartbeats 1000000 in
 /-- Exact rational-shape negative binomial on its complete valid parameter domain. -/
 theorem polyaRational_distSpec (E : CoPset) (A B s t : ℕ) (hA : 0 < A) (hB : 0 < B)
     (hs : 0 < s) (hst : s ≤ t) :

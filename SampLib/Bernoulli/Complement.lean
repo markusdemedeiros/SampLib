@@ -1,3 +1,4 @@
+import SampLib.Bernoulli.Laws.Complement
 import SampLib.Uniform.RealCoin
 import Samplers.Bernoulli.Basic
 import Metrology.Iris.LocalBI
@@ -10,14 +11,6 @@ open scoped ENNReal
 namespace SampLib.Complement
 
 noncomputable section
-
-abbrev law (p : unitInterval) := RealCoin.law (unitInterval.symm p)
-
-/-- Negating the result swaps the two Bernoulli masses. -/
-theorem expectation_preservation (p : unitInterval) (F : Bool → ℝ≥0∞) :
-    ∫⁻ b, F (!b) ∂RealCoin.law p = ∫⁻ b, F b ∂law p := by
-  simp [law, RealCoin.lintegral_law, RealCoin.credit, RealCoin.pmf,
-    unitInterval.coe_symm_eq, add_comm]
 
 private theorem bool_not (b : Bool) : Bool.rec true false b = !b := by
   cases b <;> rfl

@@ -37,38 +37,6 @@ theorem applyMaps_closeRec {rT : Type _} (k : ℕ) (x : Var) :
     Exp.closeRec k x (Occil.General.applyMaps : Exp rT) = Occil.General.applyMaps :=
   Exp.closeRec_fresh x _ k (by simp [applyMaps_fv])
 
-/-- Agreement with the proposed image on all unvisited states. -/
-abbrev AgreeFrom {n : ℕ} (maps : List (Map n)) (first : Fin n) (j : ℕ) : Prop :=
-  ∀ x : Fin n, j ≤ x.val → applyMaps maps x = first
-
-private theorem agreeFrom_step {n : ℕ} (maps : List (Map n)) (first : Fin n)
-    (j : ℕ) (hj : j < n) :
-    AgreeFrom maps first j ↔ applyMaps maps ⟨j, hj⟩ = first ∧
-      AgreeFrom maps first (j + 1) := by
-  constructor
-  · intro h
-    exact ⟨h _ le_rfl, fun x hx => h x (by omega)⟩
-  · rintro ⟨hj', ht⟩ x hx
-    by_cases he : x.val = j
-    · have hx' : x = ⟨j, hj⟩ := Fin.ext he
-      simpa only [hx'] using hj'
-    · exact ht x (by omega)
-
-private theorem agreeFrom_end {n : ℕ} (maps : List (Map n)) (first : Fin n) :
-    AgreeFrom maps first n := fun x hx => (not_lt_of_ge hx x.isLt).elim
-
-theorem coalesces_iff_agree {n : ℕ} [NeZero n] (maps : List (Map n)) :
-    Coalesces maps ↔ AgreeFrom maps (applyMaps maps 0) 1 := by
-  constructor
-  · exact fun h x _ => h x 0
-  · intro h
-    have hx (x : Fin n) : applyMaps maps x = applyMaps maps 0 := by
-      by_cases he : x.val = 0
-      · have hx' : x = 0 := Fin.ext he
-        rw [hx']
-      · exact h x (by omega)
-    exact fun x y => (hx x).trans (hx y).symm
-
 @[pl_fold] def allStates {rT : Type _} [ProbLangℝ rT] {n : ℕ} (maps : List (Map n))
     (first : Fin n) : Exp rT :=
   .fix (.lam (.cond (.binop .le (.lit (.int n)) (.bvar 0)) (.lit (.bool true))

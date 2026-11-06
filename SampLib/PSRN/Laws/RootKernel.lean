@@ -1,4 +1,4 @@
-import SampLib.PSRN.Support.LatentRootModel
+import SampLib.PSRN.Laws.RootModel
 
 /-! # Finite tail credit for the root oracle's expanding upper bracket
 

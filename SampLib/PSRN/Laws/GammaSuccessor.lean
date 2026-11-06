@@ -130,15 +130,6 @@ theorem expectation (shape rate : ℝ) (hshape : 0 < shape) (hrate : 0 < rate)
   let := isProbabilityMeasure_expMeasure hrate
   rw [← Measure.lintegral_conv hF, gamma_conv_exponential shape rate hshape hrate]
 
-/-- Exponential-first continuation form, matching recursive integer-gamma construction. -/
-theorem exponential_expectation (shape rate : ℝ) (hshape : 0 < shape) (hrate : 0 < rate)
-    (F : ℝ → ℝ≥0∞) (hF : Measurable F) :
-    (∫⁻ x, ∫⁻ y, F (x + y) ∂gammaMeasure shape rate ∂expMeasure rate) =
-      ∫⁻ z, F z ∂gammaMeasure (shape + 1) rate := by
-  let := isProbabilityMeasure_gammaMeasure hshape hrate
-  let := isProbabilityMeasure_expMeasure hrate
-  rw [← Measure.lintegral_conv hF, exponential_conv_gamma shape rate hshape hrate]
-
 end
 
 end SampLib.GammaSuccessor

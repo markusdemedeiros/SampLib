@@ -1,7 +1,7 @@
 import SampLib.Common.Laws.Geometric
 import SampLib.Common.Laws.BernoulliMixture
-import SampLib.Continuous.IterateCoin
-import SampLib.Bernoulli.CoinConditional
+import SampLib.Continuous.Laws.IterateCoin
+import SampLib.Bernoulli.Laws.CoinConditional
 
 /-! # Geometric jumps in the expanding linear factory
 

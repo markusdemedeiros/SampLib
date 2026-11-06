@@ -1,7 +1,7 @@
 import SampLib.Bernoulli.Laws.AlternatingSeries
 import SampLib.Bernoulli.Laws.ShiftedExponential
-import SampLib.Bernoulli.ReciprocalAffine
-import SampLib.Bernoulli.CoinConditional
+import SampLib.Bernoulli.Laws.ReciprocalAffine
+import SampLib.Bernoulli.Laws.CoinConditional
 
 /-! # The continuous extension of `(1-exp(-x))/x` -/
 

@@ -1,6 +1,7 @@
 import SampLib.Latent.Laws.DigitValue
 import SampLib.Latent.LatentUniform
-import SampLib.Latent.LatentMeasuredError
+import SampLib.Latent.LatentViews
+import SampLib.Latent.Laws.MeasuredError
 
 /-! # A shared latent model for conditional binary digits -/
 

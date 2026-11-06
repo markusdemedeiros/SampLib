@@ -1,4 +1,4 @@
-import SampLib.General.Histogram
+import SampLib.General.Laws.Histogram
 
 /-! # Exact integer-grid masses of piecewise constant densities -/
 

@@ -1,5 +1,5 @@
 import SampLib.Discrete.Laws.NegativeBinomialShapeBase
-import SampLib.Discrete.Laws.NegativeBinomialStep
+import SampLib.Discrete.Laws.NegativeBinomial
 
 /-! # The existing integer-shape proposal has the canonical multichoose masses
 

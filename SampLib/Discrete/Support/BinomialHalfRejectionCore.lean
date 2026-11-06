@@ -1,11 +1,11 @@
-import SampLib.Discrete.Laws.BinomialHalfKernel
+import SampLib.Discrete.Laws.BinomialHalfRejection
 import SampLib.Discrete.Support.BinomialHalfBranchesSyntax
 import SampLib.Uniform.RationalCoin
 
-/-! # Bringmann's half-binomial rejection sampler
+/-! # Bringmann's half-binomial rejection loop
 
-Its signed geometric blocks assign exactly one proposal to each integer. The
-acceptance coin cancels the envelope, leaving one sixteenth of the binomial law.
+Each round draws a geometric block, a uniform rank, and a fair sign, then flips
+the acceptance coin. A rejected round retries with amplified termination credit.
 -/
 
 open ProbLang
@@ -17,58 +17,6 @@ noncomputable section
 
 open BinomialHalfEnvelope
 open BinomialHalfProposal (candidate acceptance kernel factor)
-
-abbrev law (n : ℕ) := Binomial.law VonNeumann.fairBias n
-
-section mathematics
-
-open MeasureTheory
-
-private def signCredit (n : ℕ) (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞)
-    (block : ℕ) (rank : Fin (width n)) (sign : Bool) : ℝ≥0∞ :=
-  kernel n F ε (block, rank, sign)
-
-private def rankCredit (n : ℕ) (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞)
-    (block : ℕ) (rank : Fin (width n)) : ℝ≥0∞ :=
-  ∫⁻ sign, signCredit n F ε block rank sign ∂VonNeumann.law
-
-private def blockCredit (n : ℕ) (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞)
-    (block : ℕ) : ℝ≥0∞ :=
-  ∫⁻ rank, rankCredit n F ε block rank ∂UniformFin.law (width n)
-
-private theorem proposal_expectation (n : ℕ) (hn : Even n) (F : ℕ → ℝ≥0∞)
-    (ε : ℝ≥0∞) :
-    ∫⁻ block, blockCredit n F ε block ∂Geometric.law VonNeumann.fairBias =
-      (∫⁻ k, F k ∂law n) + ε := by
-  have : NeZero (width n) := ⟨Nat.ne_of_gt (width_pos n)⟩
-  simp only [blockCredit, rankCredit, signCredit]
-  rw [← BinomialHalfProposal.expectation n hn F ε]
-  unfold BinomialHalfProposal.law
-  rw [lintegral_prod _ (measurable_of_countable _).aemeasurable]
-  apply lintegral_congr
-  intro block
-  rw [lintegral_prod _ (measurable_of_countable _).aemeasurable]
-
-private def bias (n : ℕ) (hn : Even n) (t : ℕ × (Fin (width n) × Bool)) :
-    unitInterval := ⟨acceptance n t, BinomialHalfProposal.acceptance_mem n hn t⟩
-
-private def coinCredit (n : ℕ) (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞)
-    (t : ℕ × (Fin (width n) × Bool)) (b : Bool) : ℝ≥0∞ :=
-  if b then F (candidate n t).toNat else (∫⁻ k, F k ∂law n) + factor * ε
-
-private theorem coin_expectation (n : ℕ) (hn : Even n) (F : ℕ → ℝ≥0∞)
-    (ε : ℝ≥0∞) (t : ℕ × (Fin (width n) × Bool)) :
-    ∫⁻ b, coinCredit n F ε t b ∂RealCoin.law (bias n hn t) = kernel n F ε t := by
-  rw [RealCoin.lintegral_law]
-  rfl
-
-private theorem rejected_credit (n : ℕ) (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞)
-    (t : ℕ × (Fin (width n) × Bool))
-    (h : ¬(0 ≤ candidate n t ∧ candidate n t ≤ n)) :
-    kernel n F ε t = (∫⁻ k, F k ∂law n) + factor * ε := by
-  simp [kernel, acceptance, h]
-
-end mathematics
 
 def loop {rT : Type _} (n : ℕ) : Exp rT := pl%
   rec draw u :=

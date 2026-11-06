@@ -1,7 +1,10 @@
 import SampLib.Bernoulli.Support.PolynomialFactoryTerms
 import SampLib.Bernoulli.Support.PolynomialFactoryTable
 
-/-! Constructing the complete coefficient table, in the source's evaluation order. -/
+/-! # Collecting the polynomial coefficient table
+
+Constructing the complete coefficient table, in the source's evaluation order.
+-/
 
 open ProbLang
 

@@ -1,6 +1,6 @@
-import SampLib.Bernoulli.TwoCoinPower
-import SampLib.Latent.UniformBagCoin
-import SampLib.Discrete.Geometric
+import SampLib.Bernoulli.Laws.TwoCoinPower
+import SampLib.Latent.Laws.LatentBernoulli
+import SampLib.Discrete.Laws.Geometric
 
 /-! # Power-factory credits conditional on a shared latent uniform
 

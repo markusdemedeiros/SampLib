@@ -12,8 +12,6 @@ open scoped ENNReal
 
 namespace SampLib.BetaBinomial
 
-set_option maxHeartbeats 1000000
-
 noncomputable section
 
 /-- Beta-binomial count with shapes `a/b` and `c/d`. -/

@@ -1,7 +1,10 @@
 import SampLib.Bernoulli.Support.FactoryFractions
 import SampLib.Bernoulli.Laws.PolynomialBernsteinElevation
 
-/-! Exact rational data for the power-basis polynomial factory. -/
+/-! # Rational data of the polynomial factory
+
+Exact rational data for the power-basis polynomial factory.
+-/
 
 open Set
 open Finset (range)

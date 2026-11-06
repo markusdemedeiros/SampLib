@@ -1,6 +1,9 @@
 import SampLib.Bernoulli.Syntax.PolynomialFactoryLoops
 
-/-! The source's exact admissibility check on a rational coefficient table. -/
+/-! # Admissibility check of the polynomial factory
+
+The source's exact admissibility check on a rational coefficient table.
+-/
 
 open ProbLang
 

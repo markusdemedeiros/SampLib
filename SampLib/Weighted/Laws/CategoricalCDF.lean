@@ -1,5 +1,5 @@
-import SampLib.Weighted.CumulativeDraw
-import SampLib.Discrete.WeightedChoice
+import SampLib.Weighted.Laws.CumulativeDraw
+import SampLib.Discrete.Laws.WeightedChoice
 
 /-! # Cumulative sums and categorical quantiles
 

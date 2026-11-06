@@ -1,4 +1,4 @@
-import SampLib.Latent.LatentMeasuredError
+import SampLib.Latent.Laws.MeasuredError
 import SampLib.PSRN.Laws.FloorUncertainty
 
 /-! # Joint continuation credits for exact integer-grid observations -/
