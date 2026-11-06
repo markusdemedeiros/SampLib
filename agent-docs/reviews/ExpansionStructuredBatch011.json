@@ -1,0 +1,327 @@
+{
+  "reviewer": "expand_review_structured",
+  "accepted": [
+    {
+      "sampler": "Occil.General.couplingFromPast",
+      "proof_module": "SampLib.Samplers.CouplingFromPast",
+      "public_spec": "SampLib.CouplingFromPast.couplingFromPast_distSpec",
+      "sha256": "eec44bd582231647a80c26d6906c39d32da7cec43f7d8a623728d9f9781607a0",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/DistributionMap.lean": "27a046832a586e1e5e9ac2cce419386ee666cec02cb91f86cf5187aa2ed1a3f4",
+        "SampLib/Distributions/CFTPWork.lean": "c66668de1b7a70c36121a7879f075776836e7ba0eda9ea0db910825ead465775",
+        "SampLib/Distributions/CouplingFromPast.lean": "600f35d09fea504e3b1948a5865e24329d013be619dad80c55b491c331e3530a",
+        "SampLib/Distributions/IIDList.lean": "878162bdcdc7aeebbae09572f1778864fad2e7f17a90a3fb2e5d3f60df8be286",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/ListOperations.lean": "2eda94bd3f1a085faf8bd0feee28e8d55b91f8d18a0515d4a6eb0bbdcaf4c9c9",
+        "SampLib/Samplers/CFTPDeterministic.lean": "455530b61c020cbb54d6b6685d35a0d5a495dd597b648d892413d4cc9a95a49d",
+        "SampLib/Samplers/Choice.lean": "b80822188b067db6777203c9e1e7bae41d78fe1da574267e6486e4da603e6ddc",
+        "SampLib/Samplers/CouplingFromPast.lean": "eec44bd582231647a80c26d6906c39d32da7cec43f7d8a623728d9f9781607a0",
+        "SampLib/Samplers/SampleWithReplacement.lean": "430fa99ae768d75d13501fd70c5302775962a3b21cfadea3a76a2821121069fd",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Syntax/CFTP.lean": "eede8ea438e2abd4e88b1a1d069baa3b19ca8758fe9be8aff603b2939a007da5",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedAmplification.lean": "027bdd1e8378eb09cb5a560ee74f53291eb907fb9ccd4db9e7ed74919274f1dc",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/General/Core.lean": "589c1236ee0851f6c3e75c4edb40cd528b5ebdcb627d698d6f989a684eb08750",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.General.perfectFiniteChain",
+      "proof_module": "SampLib.Samplers.PerfectFiniteChain",
+      "public_spec": "SampLib.PerfectFiniteChain.perfectFiniteChain_distSpec",
+      "sha256": "f13495eb91efbd736c430ffb75b765ef9fab0769b6aaad43df0dd349031eb0ac",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/DistributionMap.lean": "27a046832a586e1e5e9ac2cce419386ee666cec02cb91f86cf5187aa2ed1a3f4",
+        "SampLib/DistributionMapSupported.lean": "951d75160437c983cf1f5e0b38059d97d0484ff0869b5d43324f4aa1658797a9",
+        "SampLib/Distributions/CFTPWork.lean": "c66668de1b7a70c36121a7879f075776836e7ba0eda9ea0db910825ead465775",
+        "SampLib/Distributions/CouplingFromPast.lean": "600f35d09fea504e3b1948a5865e24329d013be619dad80c55b491c331e3530a",
+        "SampLib/Distributions/FiniteKernels.lean": "4511fa9edecd796f31b37015f9ff4fd2c5a60dadf2375b8bb90086a11c3b96a7",
+        "SampLib/Distributions/IIDList.lean": "878162bdcdc7aeebbae09572f1778864fad2e7f17a90a3fb2e5d3f60df8be286",
+        "SampLib/Distributions/Markov.lean": "1219c890844f4330f7898bceb1beded1cfda8a337ec04d5639d0b1cf0e4914c6",
+        "SampLib/Distributions/RandomMapSupport.lean": "99ace953be56c922458272c15ddf776cf45b27d3cd725a853a1a25b6b5689d54",
+        "SampLib/Distributions/WeightedSupport.lean": "1bd3e47e01cc5641f8d5e23eb0ad8257da928e251a6fc4efaedf0f3dc7944fef",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/ListOperations.lean": "2eda94bd3f1a085faf8bd0feee28e8d55b91f8d18a0515d4a6eb0bbdcaf4c9c9",
+        "SampLib/MarkovTerms.lean": "acc68951ea3e8a6fd8fca877f1d6cb3874a553761d5037888ef6d874611d0d2c",
+        "SampLib/ProofMode/BindFrom.lean": "c904ca958308f8d434bbaffa0128cbe5ab31d72ed884886946bcac98f973db54",
+        "SampLib/Samplers/CFTPDeterministic.lean": "455530b61c020cbb54d6b6685d35a0d5a495dd597b648d892413d4cc9a95a49d",
+        "SampLib/Samplers/Choice.lean": "b80822188b067db6777203c9e1e7bae41d78fe1da574267e6486e4da603e6ddc",
+        "SampLib/Samplers/CouplingFromPast.lean": "eec44bd582231647a80c26d6906c39d32da7cec43f7d8a623728d9f9781607a0",
+        "SampLib/Samplers/PerfectFiniteChain.lean": "f13495eb91efbd736c430ffb75b765ef9fab0769b6aaad43df0dd349031eb0ac",
+        "SampLib/Samplers/RandomMap.lean": "ad246faf6c0f3f6e0abedde83e0c60e525b434a18a90bcd62cb25fbebda62d5a",
+        "SampLib/Samplers/SampleWithReplacement.lean": "430fa99ae768d75d13501fd70c5302775962a3b21cfadea3a76a2821121069fd",
+        "SampLib/Samplers/TypedRandomMap.lean": "1e8d0cef6c41a81602b8f3b1ab7955a9a4d274cde88aee2d6d50ba362fa8251b",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Syntax/CFTP.lean": "eede8ea438e2abd4e88b1a1d069baa3b19ca8758fe9be8aff603b2939a007da5",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedAmplification.lean": "027bdd1e8378eb09cb5a560ee74f53291eb907fb9ccd4db9e7ed74919274f1dc",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/General/Core.lean": "589c1236ee0851f6c3e75c4edb40cd528b5ebdcb627d698d6f989a684eb08750",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.General.sliceSampler",
+      "proof_module": "SampLib.Samplers.SliceSampler",
+      "public_spec": "SampLib.SliceSampler.sliceSampler_distSpec",
+      "sha256": "6cd79f2b06ba93bedb3e45400e7f2b7f81008895d0a42db13be0e7e646bd8b59",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/FiniteGrid.lean": "8abf4115d12b14195bca7cf5c0d89fc1cc81987db5f4129a6d92566779fcc101",
+        "SampLib/Distributions/FiniteKernels.lean": "4511fa9edecd796f31b37015f9ff4fd2c5a60dadf2375b8bb90086a11c3b96a7",
+        "SampLib/Distributions/IntegerIntervals.lean": "b80293d2eaea11a39fcf071f444af877d05a0f063bda72a06bf2046ca6c27c89",
+        "SampLib/Distributions/Slice.lean": "e77f5a90e8f099f3e0ffc2f718f4134e7f44a6fdf477da8df04d5659e9f90fc1",
+        "SampLib/FiniteGridSpec.lean": "cad7173165df6427d309a55e69ef9cf6dc00be159e0c510b45ef6e1bcea1f16d",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/Samplers/Choice.lean": "b80822188b067db6777203c9e1e7bae41d78fe1da574267e6486e4da603e6ddc",
+        "SampLib/Samplers/Rejection.lean": "a6f667c40bc8b6375ea16ac7067ab08608e84ea94e041efce7d75deaf378a055",
+        "SampLib/Samplers/RndIntExcRange.lean": "3307969caa795835b6ccc1c68db37333a6902b52859104bf27871ac96c234e51",
+        "SampLib/Samplers/SliceSampler.lean": "6cd79f2b06ba93bedb3e45400e7f2b7f81008895d0a42db13be0e7e646bd8b59",
+        "SampLib/Samplers/SliceStep.lean": "e39077bfe4281961f902e541fee35fe478b59b1f742ed73b55f7f399c7ad4ce2",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/SliceTerms.lean": "480668567b15a6884b6316a818e1a9c29ee3cd7f97bbd63e4b5603ccd05e9591",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Syntax/Rejection.lean": "a446e6afc57688a21d6a22f4035352b3dd7d1f530768a68766a2c373e8c98a52",
+        "SampLib/Syntax/UniformRanges.lean": "eb9205978b13185ff38d2db03fb83f82f242ec1290a557ded19d7a2eea3e739e",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/General/Core.lean": "589c1236ee0851f6c3e75c4edb40cd528b5ebdcb627d698d6f989a684eb08750",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": [
+    {
+      "path": "SampLib/Distributions/IIDList.lean",
+      "sha256": "878162bdcdc7aeebbae09572f1778864fad2e7f17a90a3fb2e5d3f60df8be286",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/CouplingFromPast.lean",
+      "sha256": "600f35d09fea504e3b1948a5865e24329d013be619dad80c55b491c331e3530a",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/CFTPWork.lean",
+      "sha256": "c66668de1b7a70c36121a7879f075776836e7ba0eda9ea0db910825ead465775",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/WeightedAmplification.lean",
+      "sha256": "027bdd1e8378eb09cb5a560ee74f53291eb907fb9ccd4db9e7ed74919274f1dc",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Samplers/CFTPDeterministic.lean",
+      "sha256": "455530b61c020cbb54d6b6685d35a0d5a495dd597b648d892413d4cc9a95a49d",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Syntax/CFTP.lean",
+      "sha256": "eede8ea438e2abd4e88b1a1d069baa3b19ca8758fe9be8aff603b2939a007da5",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/RandomMapSupport.lean",
+      "sha256": "99ace953be56c922458272c15ddf776cf45b27d3cd725a853a1a25b6b5689d54",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Samplers/TypedRandomMap.lean",
+      "sha256": "1e8d0cef6c41a81602b8f3b1ab7955a9a4d274cde88aee2d6d50ba362fa8251b",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/Slice.lean",
+      "sha256": "e77f5a90e8f099f3e0ffc2f718f4134e7f44a6fdf477da8df04d5659e9f90fc1",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Samplers/SliceStep.lean",
+      "sha256": "e39077bfe4281961f902e541fee35fe478b59b1f742ed73b55f7f399c7ad4ce2",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/FiniteGrid.lean",
+      "sha256": "8abf4115d12b14195bca7cf5c0d89fc1cc81987db5f4129a6d92566779fcc101",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/FiniteGridSpec.lean",
+      "sha256": "cad7173165df6427d309a55e69ef9cf6dc00be159e0c510b45ef6e1bcea1f16d",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/SliceTerms.lean",
+      "sha256": "480668567b15a6884b6316a818e1a9c29ee3cd7f97bbd63e4b5603ccd05e9591",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionStructuredBatch011Callers.lean",
+  "caller_sha256": "802580f61782f1165956e5deadd8ae67fc8206e4e71150b9839a9b23077d086e"
+}

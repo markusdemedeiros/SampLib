@@ -1,0 +1,20 @@
+'SampLib.ReciprocalAffine.reciprocalAffine_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalAffinePower.reciprocalAffinePower_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.InverseQuadratic.inverseQuadratic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SqrtTwoMinusOne.sqrtTwoMinusOne_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.InverseSqrtTwo.inverseSqrtTwo_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GoldenFamily.goldenFamily_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OffsetRace.offsetRace_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LogOverAffine.logOverAffine_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalAffine.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalAffinePower.reciprocalAffinePower_zero_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.InverseQuadratic.reciprocal_bias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GoldenFamily.polynomial_sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GoldenFamily.bias_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OffsetRace.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OffsetRace.bias_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LogOverAffine.bias_coe' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,16 @@
+'SampLib.ContinuedFraction.generalizedContinuedFraction_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.ContinuedFraction.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ContinuedFraction.unique_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ContinuedFraction.recursive_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SimpleContinuedFraction.continuedFraction_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SimpleContinuedFraction.twp_continuedFraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Gambler.gambler_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Gambler.gambler_base_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.HighPowerLogistic.highPowerLogistic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.HighPowerLogistic.highPowerLogistic_base_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteGeometricWalk.credit_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteGeometricWalk.work_drift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteGeometricWalk.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteGeometricWalk.initialSlack_budget' depends on axioms: [propext, Classical.choice, Quot.sound]

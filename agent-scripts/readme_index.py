@@ -468,19 +468,25 @@ lake build
 python3 tests/statistical.py
 ```
 
-[Implementation details and source corrections](code/README.md) · [ProbLang wishlist](agent-docs/ProbLangWishlist.md) · [Test results](tests/latest-results.json) · [Source inventory](agent-docs/OccilInventory.json)
+[Sampler laws](LAWS.md) · [Implementation details and source corrections](code/README.md) · [ProbLang wishlist](agent-docs/ProbLangWishlist.md) · [Test results](tests/latest-results.json) · [Source inventory](agent-docs/OccilInventory.json)
 
 The interpreter suite checks output laws and seeded environment/substitution agreement; see the recorded test results above. Statistical tests are implementation evidence. The interpreter runs finite-precision Float operations.
 
 ## Formal verification
 
-[CTE templates](SampLib/Templates.lean) provide `IsDistSpec` for probability measures on arbitrary measurable output types, encoded as ProbLang values. Specifications accept arbitrary measurable continuation credits in the current ghost state and mask. `IsDistSpec.wp` supplies a continuation rule for use under `twp_bind`, including caller resources.
+The [verified sampler suite](SampLib/README.md) contains **216 samplers**, including
+**169 additions to the original 47-sampler suite** added through independent author and reviewer passes. It covers
+uniform integers, Bernoulli factories, finite and geometric count laws, urns,
+exponential-family distributions, weighted sampling, mixtures, rejection, and
+collection sampling. Each public spec uses typed normalized laws and arbitrary
+measurable continuation credits.
 
-[Continuous threshold Bernoulli (`realCoin`)](SampLib/Samplers/RealCoin.lean) has a CTE specification for mathematical reals and every probability `p ∈ [0,1]`, including the endpoints. The file presents the target law, expected continuation credit, measurable credit kernel, credit-conservation identity, and total weakest-precondition theorem (`twp_realCoin`). The public theorem `realCoin_distSpec` packages it as `IsDistSpec`.
-
-[Von Neumann's fair-coin extractor](SampLib/Samplers/VonNeumann.lean) is verified from an abstract input-coin `IsDistSpec` with `0 < p < 1`. The proof composes two coin calls, conserves the fair continuation expectation, and uses error amplification on retries to establish total correctness. `vonNeumann_distSpec` exposes the fair output law through the same interface.
-
-Adequacy corollaries are omitted. `lake build` checks both proofs. Other samplers remain unverified.
+The proofs follow the [verification protocol](agent-docs/VerifyingSamplers.md):
+one mathematical expectation-preservation argument and straightforward CTE
+symbolic execution. Review findings and reproducible caller checks are retained.
+Run `python3 agent-scripts/audit_sampler_proofs.py --check-callers` for the full
+build, pinned-review, signature, axiom, and caller audit. Adequacy corollaries are
+omitted; interpreter statistics do not verify Float rounding.
 
 ## Sampler index
 

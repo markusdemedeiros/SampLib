@@ -1,0 +1,214 @@
+{
+  "reviewer": "/root/expand_review_discrete",
+  "accepted": [
+    {
+      "sampler": "Occil.DiscreteExtra.binomialBinary",
+      "proof_module": "SampLib.Samplers.BinomialBinary",
+      "public_spec": "SampLib.BinomialBinary.binomialBinary_distSpec",
+      "proof_kind": "core",
+      "sha256": "c2096b4455fda295a0a35f6c468a3170e565d64fed848d480b26829270ba3241",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch008.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/BinaryDigits.lean": "0f0566ca8ad3e73231335e9b5ceff2f8a20853e0f08caab9ad8891697e03fc8e",
+        "SampLib/Distributions/Binomial.lean": "332a0b32e0d14943ce264f1c35d85558c615bea81eec88194e5c53e20112124d",
+        "SampLib/Distributions/BinomialBinary.lean": "0ed415e550f31670e057fd1f3700ab45a911a4b7fd703f5a5ef7410c1ce26bde",
+        "SampLib/Distributions/BinomialMeasure.lean": "35eba0a09d4cf117121ca3776843a39c78048b921e3182fccb44b05083c35373",
+        "SampLib/Distributions/BinomialThinning.lean": "ccd9bb7dacc5de34badde21688c5319c594e6f87c7da9665173b90b06943f704",
+        "SampLib/Distributions/Urn.lean": "ec5373077d35e99efc097e209ca8f9746bd72c9226bb6659d5076b782cd06fdd",
+        "SampLib/IntegerPower.lean": "5e738a4f8fcb4d9a2fb783392e96eee4791009f3b34ee1f9e813ec754a1ff0d8",
+        "SampLib/Samplers/Binomial.lean": "76e53294152ed9586f37315a5f27e7257faca3e9bec707ff404c6653d6a9e996",
+        "SampLib/Samplers/BinomialBinary.lean": "c2096b4455fda295a0a35f6c468a3170e565d64fed848d480b26829270ba3241",
+        "SampLib/Samplers/BinomialHalfBits.lean": "97ac81abdbfee3148ab6ad7c554071abf9dc0936db8e2bdb408f787908fea4cf",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Binomial.lean": "92e03310618dac7df9dcc34b3ea769b33776dbf09dcb7419990cb9e9af52c3a3",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      },
+      "review_notes": "Canonical binomial thinning and filling identify the two binary-refinement branches. The expected unresolved population is n/2, funding fixed3/2 error amplification with potential n\u03b4. The CTE proof draws one supported fair-binomial split, follows either branch and applies the same induction hypothesis; \u03b5/(n+1) removes the auxiliary potential. Independent tests check exact nondyadic bias1/3, one-trial atom1/3, mean1 for three1/3 trials, zero-trial and zero/full-bias Dirac laws, the complete two-fair-trial arbitrary-ENNReal expectation, infinite credits and generic framing."
+    },
+    {
+      "sampler": "Occil.DiscreteExtra.cub",
+      "proof_module": "SampLib.Samplers.Cub",
+      "public_spec": "SampLib.Cub.cub_distSpec",
+      "proof_kind": "derived",
+      "sha256": "3cea9623db2ce30039e9d8ad3e7e9f8b7bfb3150096d0aa041d061ffe3d3a4ff",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch008.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/BinaryDigits.lean": "0f0566ca8ad3e73231335e9b5ceff2f8a20853e0f08caab9ad8891697e03fc8e",
+        "SampLib/Distributions/Binomial.lean": "332a0b32e0d14943ce264f1c35d85558c615bea81eec88194e5c53e20112124d",
+        "SampLib/Distributions/BinomialBinary.lean": "0ed415e550f31670e057fd1f3700ab45a911a4b7fd703f5a5ef7410c1ce26bde",
+        "SampLib/Distributions/BinomialMeasure.lean": "35eba0a09d4cf117121ca3776843a39c78048b921e3182fccb44b05083c35373",
+        "SampLib/Distributions/BinomialThinning.lean": "ccd9bb7dacc5de34badde21688c5319c594e6f87c7da9665173b90b06943f704",
+        "SampLib/Distributions/Urn.lean": "ec5373077d35e99efc097e209ca8f9746bd72c9226bb6659d5076b782cd06fdd",
+        "SampLib/IntegerPower.lean": "5e738a4f8fcb4d9a2fb783392e96eee4791009f3b34ee1f9e813ec754a1ff0d8",
+        "SampLib/Samplers/Binomial.lean": "76e53294152ed9586f37315a5f27e7257faca3e9bec707ff404c6653d6a9e996",
+        "SampLib/Samplers/BinomialBinary.lean": "c2096b4455fda295a0a35f6c468a3170e565d64fed848d480b26829270ba3241",
+        "SampLib/Samplers/BinomialHalfBits.lean": "97ac81abdbfee3148ab6ad7c554071abf9dc0936db8e2bdb408f787908fea4cf",
+        "SampLib/Samplers/Cub.lean": "3cea9623db2ce30039e9d8ad3e7e9f8b7bfb3150096d0aa041d061ffe3d3a4ff",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/Mixture.lean": "881a062192a581259a5050b170b12d033ed0eedb47f01189639b5eb20d72c420",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Binomial.lean": "92e03310618dac7df9dcc34b3ea769b33776dbf09dcb7419990cb9e9af52c3a3",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Discrete/Compound.lean": "537fd769c04a9556b465705bfcf0e70d9d06ec0302bb5bea531b913a03ca87cc",
+        "code/Samplers/Discrete/Counts.lean": "719b6ceab7396c9567e3b460e7a1abe675a937cd0b06c2908c507ed08a46fa3e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      },
+      "review_notes": "The independent standard CUB law mixes one plus Binomial(m-1,1-\u03be) with the uniform categories1..m. Named selector and component adapters isolate representation equalities from the simple two-branch CTE composition. Independent tests establish the bias orientation: selector1/uncertainty0 gives m, selector1/uncertainty1 gives1; selector0 is uniform1..m independently of uncertainty. Infinite credits and arbitrary framed clients are checked. This is explicitly a derived named composition."
+    },
+    {
+      "sampler": "Occil.WeightedVariants.flatChoice",
+      "proof_module": "SampLib.Samplers.FlatChoice",
+      "public_spec": "SampLib.FlatChoice.flatChoice_distSpec",
+      "proof_kind": "core",
+      "sha256": "951a35be657b4ad22aed1f6c16b4be307f0b8cbfbd68d8ef1f7728266bee1134",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch008.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/Samplers/FlatChoice.lean": "951a35be657b4ad22aed1f6c16b4be307f0b8cbfbd68d8ef1f7728266bee1134",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/Syntax/ListAccess.lean": "1ff1681744767cb8c03cb1ccfc769d348046a3c7d2cd8e8ca636489577719cb1",
+        "SampLib/Syntax/ListValues.lean": "eb0b0faa8645aa926f0c1e50e03b48f9bcd0d30c7772db6f081d2b4f5a3ebdc6",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedValidation.lean": "6d06663d8a9c838913038370a3ffdccf145a2e7ebc835bdca6469a6f64ba8866",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/General/Core.lean": "589c1236ee0851f6c3e75c4edb40cd528b5ebdcb627d698d6f989a684eb08750",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Choice.lean": "47363f5ebde1c9a57c62295c3e506212bb2260af59e7a29fc9897c9ec0f83691",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb"
+      },
+      "review_notes": "The deterministic table replicates each label exactly its weight. A table lookup theorem identifies a uniform position with the existing categorical rank partition; its canonical normalized law is WeightedChoice.law. A short raw syntax helper inserts only a locally closed tail continuation, keeping binder capture bookkeeping outside the main proof. The program logic transparently validates, expands, sums, draws a uniform rank and looks up the table. Tests check [0,2,0] and [1,0,2] tables, the unique positive label, infinite credit at zero-weight labels and generic framing."
+    },
+    {
+      "sampler": "Occil.WeightedVariants.lemireUniform",
+      "proof_module": "SampLib.Samplers.LemireUniform",
+      "public_spec": "SampLib.LemireUniform.lemireUniform_distSpec",
+      "proof_kind": "core",
+      "sha256": "2519ea9ff74a47d4b00ce4002877dc4bcdb8a1f61dadc28d8f476a10874cbf3c",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch008.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/MultiplyHigh.lean": "4c8ee729f5430948ff2c4201e53dafb72cbd1e8df67493b211ead9ebd1159b3f",
+        "SampLib/Distributions/WordIntervals.lean": "b2cb0d0c72cdcb662ba9a7b3cbe73505705de648269c784f70220a5729b3f06c",
+        "SampLib/Samplers/LemireUniform.lean": "2519ea9ff74a47d4b00ce4002877dc4bcdb8a1f61dadc28d8f476a10874cbf3c",
+        "SampLib/Samplers/RandomBits.lean": "803dad79aafcb0914d543ab87e3cd3266f4446f2b3b897640c9a2b13701feb62",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedIntegerPower.lean": "4d98577633e04ebbf62d71c689bbc896d93cef55f88e7bb5b0e89fc9d1eee1f5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Reductions.lean": "3d27990e44c3e910f07537216b3ad55fb95280a25ccf1d3da59888c12f87d316",
+        "code/Samplers/Weighted/Uniform.lean": "435bb931a15e38eee06efcaa0667b92911932a3c0f182a568b6a19faab0a6a16"
+      },
+      "review_notes": "Multiply-high reduction accepts exactly those source words whose low product is at least the Euclidean remainder. The accepted fibre for each label is an explicit interval of length floor(width/n), so finite fibrewise summation proves the exact uniform law. The remaining short mass pays doubled retry credit. Tests compute the n5/width8 accepted set {1,3,4,6,7}, show its quotient image is all five labels, check the boundary low product at source7, the complete arbitrary-ENNReal kernel, zero-bit singleton and framed clients."
+    }
+  ],
+  "support": [
+    {
+      "module": "SampLib.Distributions.BinomialBinary",
+      "sha256": "0ed415e550f31670e057fd1f3700ab45a911a4b7fd703f5a5ef7410c1ce26bde"
+    },
+    {
+      "module": "SampLib.Distributions.MultiplyHigh",
+      "sha256": "4c8ee729f5430948ff2c4201e53dafb72cbd1e8df67493b211ead9ebd1159b3f"
+    },
+    {
+      "module": "SampLib.IntegerChoose",
+      "sha256": "c02ddb26b9ac1bf2de1bb94542131d6e2ffd7f083f149835e026b0a6353249b4"
+    },
+    {
+      "module": "SampLib.Syntax.ListAccess",
+      "sha256": "1ff1681744767cb8c03cb1ccfc769d348046a3c7d2cd8e8ca636489577719cb1"
+    },
+    {
+      "module": "SampLib.Syntax.ListValues",
+      "sha256": "eb0b0faa8645aa926f0c1e50e03b48f9bcd0d30c7772db6f081d2b4f5a3ebdc6"
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionDiscreteBatch008Callers.lean",
+  "caller_sha256": "d4cc47d2a3e6e354989e051bd82eaed7ec0d483b6cdfe964f9dc65a3708b73f9"
+}

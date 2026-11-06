@@ -1,0 +1,173 @@
+{
+  "reviewer": "/root/expand_review_discrete",
+  "accepted": [
+    {
+      "sampler": "Occil.DiscreteExtra.discreteLaplace",
+      "proof_module": "SampLib.Samplers.DiscreteLaplace",
+      "public_spec": "SampLib.DiscreteLaplace.discreteLaplace_distSpec",
+      "proof_kind": "core",
+      "sha256": "cfba7e6140bc8a0e11b646fe6e830e80961a927c7fa3f5aff65c908fe1dbc55d",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch014.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/CoinComplement.lean": "1b7b26efc1723bb575ea6f3d9e5effc8b92c8f89f2e01d686c34b1ea9a78de56",
+        "SampLib/Distributions/AcceptedProposal.lean": "50b48e4e04a8c984c230f5301ca090c7088abbb4f090084ec6d9dc497583a803",
+        "SampLib/Distributions/AlternatingFactorial.lean": "3bfe08dba6eedd1e4bd9a69317596a6f89e9db4523361527d63881eb85a3297f",
+        "SampLib/Distributions/DiscreteLaplace.lean": "7030d9a2dbe32b43f8cc5e4dcd1abe032e9958fe6a07e8247556053642bafe13",
+        "SampLib/Distributions/DiscreteLaplaceCredits.lean": "aaa4b8b73f2a1d404b55237b76dc338c396253d33088e73d6eccbd21a88c94e2",
+        "SampLib/Distributions/Geometric.lean": "f35eaf7977331250eb2152791b93d048be5f60d05e2c82a584a4d2b781624bd5",
+        "SampLib/Samplers/CoinProduct.lean": "6076fb895ff229084c3bb686c602174b8a0078d55e8a25e05eb23ccf5750148a",
+        "SampLib/Samplers/Complement.lean": "14fe9d358c7bfd2c6459bce36346471bda0b4310b22534819d393ad8f77f6ad1",
+        "SampLib/Samplers/DiscreteLaplace.lean": "cfba7e6140bc8a0e11b646fe6e830e80961a927c7fa3f5aff65c908fe1dbc55d",
+        "SampLib/Samplers/EvenParity.lean": "bbc8c559e0d1461bdcbbc39bb6a71cbfa9d558379040fcd507959c6d6ac00e90",
+        "SampLib/Samplers/ExpMinusRational.lean": "9c1ca55cc40734cad464c69f26b2eb9c053eb96f3353806f5d2910f869c43b26",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/Geometric.lean": "a5692d1af2f98bc791cb40d14c4ef0bb349873d411659fa6f2b70d552eb5ce78",
+        "SampLib/Samplers/GeometricFailures.lean": "03b527b3700fcb7ab28a4b7ee8434f38098a57e8b3526ff7b59d4024c6dbeedc",
+        "SampLib/Samplers/IterateCoin.lean": "f14b4ee475b3ea318aef1a1c2705d6a687818886abb00b533690629d3478bbfe",
+        "SampLib/Samplers/OneDivOnePlus.lean": "b8bda61742103fb88f85e411ef6ae0173e4ad059279c58cd0faa2fff3dea49dd",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/SymmetricGeometric.lean": "e41632a20e58190c2d2f9c217602b30816b4da79b345e949d18820add02d1a9c",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Discrete/Tails.lean": "c7fed9a1ea7bb34d66a79a0f031af05a5c451fa3f83c63ec68d6c9378b593ed7",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      },
+      "review_notes": "The independent standard two-sided geometric law has atom coefficient(s,t)*exp(-s/t)^natAbs(z). Its analytic residue/quotient reindexing, reflected atoms, normalization and nonunit rates were independently reviewed and tested in Batch012. New continuation mathematics moves the exponential remainder test before independent geometric whole/sign draws and supplies one accepted-proposal conservation inequality for both retry sites. Main CTE follows that source order and returns the signed integer quotient or retries. Independent actual callers frame arbitrary signed-output credits and resources at generic rates, and explicitly instantiate rates2/3 and3/2. A negative-zero test with nonzero whole part confirms rejection happens after division; the positive sign retains F(0)."
+    },
+    {
+      "sampler": "Occil.WeightedVariants.floatingMultiply",
+      "proof_module": "SampLib.Samplers.FloatingMultiply",
+      "public_spec": "SampLib.FloatingMultiply.floatingMultiply_distSpec",
+      "proof_kind": "core",
+      "sha256": "b6775a103c59a6c33dc6c4681787ea4a7d8c997bffd85032c7d336bb030ed86d",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch014.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/BitLength.lean": "a8aed177c3ca6dc83000c60570b7b38e284aec63560cc62dd6ff33a99c16a685",
+        "SampLib/Distributions/BinaryRounding.lean": "0d4f0f9cda41c5b3314618d3cf913f48efd321546abe7a1a2fc194b270490729",
+        "SampLib/Distributions/FiniteImage.lean": "328b7c1bb979e28c2b5e164f437f5dec0bae5ffa97c2ff0843b4c8e12ae254cf",
+        "SampLib/RoundBinary.lean": "f7eca5e37fed462f486817a0fe2bd758c0094e82c3b7140f2e0b679bf8768dab",
+        "SampLib/SamplerStep.lean": "a3e143551b2719b11170456de08e0c193059c00b6b8dafabe3c747c03eb52335",
+        "SampLib/Samplers/FloatingMultiply.lean": "b6775a103c59a6c33dc6c4681787ea4a7d8c997bffd85032c7d336bb030ed86d",
+        "SampLib/Samplers/RandomBits.lean": "803dad79aafcb0914d543ab87e3cd3266f4446f2b3b897640c9a2b13701feb62",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedIntegerPower.lean": "4d98577633e04ebbf62d71c689bbc896d93cef55f88e7bb5b0e89fc9d1eee1f5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Reductions.lean": "3d27990e44c3e910f07537216b3ad55fb95280a25ccf1d3da59888c12f87d316",
+        "code/Samplers/Weighted/Uniform.lean": "435bb931a15e38eee06efcaa0667b92911932a3c0f182a568b6a19faab0a6a16"
+      },
+      "review_notes": "The exact biased finite law counts source-word preimages under independently specified nearest/even binary rounding followed by modulus division. The mathematical rounding API gives quantum spacing, exact-fit and exact-divisible behavior, even midpoint ties and half-quantum error bounds with unbounded exponents. Main CTE composes deterministic exponentiation, a verified uniform binary word and deterministic rounding. Independent tests distinguish the precision3 map[0,0,1,2,2,3,4,4] from the precision6 unrounded map[0,0,1,1,2,3,3,4] for n5/width8, check masses1/4 and1/8 and infinite credit off the finite image, and verify midpoint20\u219216 versus28\u219232. Weak-language framed bit-length/rounding clients, zero-precision helper failure, zero-bit positive-precision singleton and arbitrary-resource main callers pass. No hardware IEEE or continuous-uniform claim is made."
+    },
+    {
+      "sampler": "Occil.fastDiceRoller",
+      "proof_module": "SampLib.Samplers.FastDiceRoller",
+      "public_spec": "SampLib.FastDiceRoller.fastDiceRoller_distSpec",
+      "proof_kind": "core",
+      "sha256": "63a857ab1a5c083342b54deba9fc3d32e6ef7c367b78b48c400365b6e316907b",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch014.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/BitRecycler.lean": "2a2d0ac5f23a634c9dedfb6e13c9dca85a7d4c862bb97a447ba3e0aecacfce80",
+        "SampLib/Samplers/FastDiceRoller.lean": "63a857ab1a5c083342b54deba9fc3d32e6ef7c367b78b48c400365b6e316907b",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      },
+      "review_notes": "The public target is the independently normalized UniformInt law. Pointwise finite-horizon credits describe retained states; the bulk interval identity already accepted with FYKY in Batch013 bounds the initial state by uniform output credit plus an exponentially vanishing cutoff tail. This lower orientation emits the first n ranks and recycles the upper residue. Main CTE follows one bit at a time, derives contradiction from cutoff credit1, and removes the horizon with an arbitrary positive error budget. Independent callers frame arbitrary ENNReal continuations and resources, exercise non-power-of-two bounds3 and5, check infinite off-support credit and use the singleton theorem without UniformInt. No individual retained state is assumed to have a uniform output law."
+    }
+  ],
+  "support": [
+    {
+      "module": "SampLib.Distributions.DiscreteLaplace",
+      "sha256": "7030d9a2dbe32b43f8cc5e4dcd1abe032e9958fe6a07e8247556053642bafe13"
+    },
+    {
+      "module": "SampLib.Distributions.DiscreteLaplaceCredits",
+      "sha256": "aaa4b8b73f2a1d404b55237b76dc338c396253d33088e73d6eccbd21a88c94e2"
+    },
+    {
+      "module": "SampLib.Distributions.BinaryRounding",
+      "sha256": "0d4f0f9cda41c5b3314618d3cf913f48efd321546abe7a1a2fc194b270490729"
+    },
+    {
+      "module": "SampLib.BitLength",
+      "sha256": "a8aed177c3ca6dc83000c60570b7b38e284aec63560cc62dd6ff33a99c16a685"
+    },
+    {
+      "module": "SampLib.RoundBinary",
+      "sha256": "f7eca5e37fed462f486817a0fe2bd758c0094e82c3b7140f2e0b679bf8768dab"
+    },
+    {
+      "module": "SampLib.Distributions.FiniteImage",
+      "sha256": "328b7c1bb979e28c2b5e164f437f5dec0bae5ffa97c2ff0843b4c8e12ae254cf"
+    },
+    {
+      "module": "SampLib.SamplerStep",
+      "sha256": "a3e143551b2719b11170456de08e0c193059c00b6b8dafabe3c747c03eb52335"
+    },
+    {
+      "module": "SampLib.Distributions.BitRecycler",
+      "sha256": "2a2d0ac5f23a634c9dedfb6e13c9dca85a7d4c862bb97a447ba3e0aecacfce80"
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionDiscreteBatch014Callers.lean",
+  "caller_sha256": "ca051e86e262addc4efe81592f65abf85ca811fc895a437ee6ecef8bcbacf186"
+}

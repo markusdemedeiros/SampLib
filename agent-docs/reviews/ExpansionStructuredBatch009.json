@@ -1,0 +1,321 @@
+{
+  "reviewer": "expand_review_structured",
+  "accepted": [
+    {
+      "sampler": "Occil.derangement",
+      "proof_module": "SampLib.Samplers.Derangement",
+      "public_spec": "SampLib.Derangement.derangement_distSpec",
+      "sha256": "6be6a343ce2eceae56770d8b2ddfdbdb5cfc7a8e027a776e5389cf0047bff0be",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/ArrayOwnership.lean": "1603c09df868fbb839480d86ac40daf91bb021fbc601ecdca430f96a19c0cdfa",
+        "SampLib/ArrayPermutation.lean": "a46dd25a5e61c47472b66d82dcc1b3844d39677bbb81416cb98b6323fabef8d4",
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/DistributionMap.lean": "27a046832a586e1e5e9ac2cce419386ee666cec02cb91f86cf5187aa2ed1a3f4",
+        "SampLib/Distributions/Derangements.lean": "9da9d00e92033c1c85dd1bf24c4a0cbe71894d6d0f7534448009889209138d81",
+        "SampLib/Distributions/Permutations.lean": "0a2c67df7cba9cca94a5cfa7192358e056c248ca1ed4d4e14ed829ebbadb907e",
+        "SampLib/Distributions/Sattolo.lean": "f35281c75a17449ee064140ef24dd62bcba9a2049f53a887118c307098474668",
+        "SampLib/IntegerRange.lean": "575ea06a19078e631a58a20378c17f04e7e262d25563578ea80560193f85707a",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/Samplers/Choice.lean": "b80822188b067db6777203c9e1e7bae41d78fe1da574267e6486e4da603e6ddc",
+        "SampLib/Samplers/Derangement.lean": "6be6a343ce2eceae56770d8b2ddfdbdb5cfc7a8e027a776e5389cf0047bff0be",
+        "SampLib/Samplers/Rejection.lean": "a6f667c40bc8b6375ea16ac7067ab08608e84ea94e041efce7d75deaf378a055",
+        "SampLib/Samplers/Shuffle.lean": "0f4514cd7f7c1bdcf6a650a2783f4deda691bb0624e08a2724e967390ac90517",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/ShuffleVector.lean": "443b154d640f3da8036619c6cd9915c0e8e68a88905ef8c1c173c1a56792e406",
+        "SampLib/Syntax/Arrays.lean": "30f7d6ded8e7ca238aae67274d439aa8d23aeba37d91b525d0c7183bc9a8898b",
+        "SampLib/Syntax/Rejection.lean": "a446e6afc57688a21d6a22f4035352b3dd7d1f530768a68766a2c373e8c98a52",
+        "SampLib/Syntax/Shuffle.lean": "e2b57a4e9e2ac6c1b3664e3bcf12ca22ba4522c0c1f71c4a52e49826a2588c6e",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.General.metropolisHastings",
+      "proof_module": "SampLib.Samplers.MetropolisHastings",
+      "public_spec": "SampLib.MetropolisHastings.metropolisHastings_distSpec",
+      "sha256": "a8cccf0cd6f0217f88aca489c24ef5cd1321155205870f25a4205ccad777cb09",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/CappedRationalCoin.lean": "abdf9684d7a9f6d396ae2d9fd2c24468b8cbdbbb8271872c8c26ff3aa6ea5dfe",
+        "SampLib/Distributions/FiniteKernels.lean": "4511fa9edecd796f31b37015f9ff4fd2c5a60dadf2375b8bb90086a11c3b96a7",
+        "SampLib/Distributions/Metropolis.lean": "857ecd283a9b1b49e50a72ae2ad7639140ebcbb3adf670e1657e5707556c1c6f",
+        "SampLib/Distributions/MetropolisRatio.lean": "e2c6fe5f799ae78223f53a68444247a48b0f50d7c289e454fd8468d7aab96fc8",
+        "SampLib/Distributions/MetropolisRational.lean": "866f654030045629529021d7169adf7adde64bd8759b2514c315916a5947c7dc",
+        "SampLib/ProofMode/BindFrom.lean": "c904ca958308f8d434bbaffa0128cbe5ab31d72ed884886946bcac98f973db54",
+        "SampLib/Samplers/MetropolisHastings.lean": "a8cccf0cd6f0217f88aca489c24ef5cd1321155205870f25a4205ccad777cb09",
+        "SampLib/Samplers/MetropolisKernel.lean": "52e9a759f1e50c7b9056ddc039d5934fcb5aaf67b9a3f976ea147ebba36431bd",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/General/Core.lean": "589c1236ee0851f6c3e75c4edb40cd528b5ebdcb627d698d6f989a684eb08750",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.General.metropolis",
+      "proof_module": "SampLib.Samplers.Metropolis",
+      "public_spec": "SampLib.SymmetricMetropolis.metropolis_distSpec",
+      "sha256": "76a8446a9f84be25d3dc1516ce3c0fd54abe86c7e98462b80b5c5884a15af6eb",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/CappedRationalCoin.lean": "abdf9684d7a9f6d396ae2d9fd2c24468b8cbdbbb8271872c8c26ff3aa6ea5dfe",
+        "SampLib/Distributions/FiniteKernels.lean": "4511fa9edecd796f31b37015f9ff4fd2c5a60dadf2375b8bb90086a11c3b96a7",
+        "SampLib/Distributions/Metropolis.lean": "857ecd283a9b1b49e50a72ae2ad7639140ebcbb3adf670e1657e5707556c1c6f",
+        "SampLib/Distributions/MetropolisRatio.lean": "e2c6fe5f799ae78223f53a68444247a48b0f50d7c289e454fd8468d7aab96fc8",
+        "SampLib/Distributions/SymmetricMetropolis.lean": "04698efbc7d9bcb38158b8ae41b0a043cee2651ab0e7818f11929c6f0a1b591b",
+        "SampLib/MetropolisTerms.lean": "47fa18740edc3d5062c154b9c3d79801c307d281ad2b7de4203582287894d6e1",
+        "SampLib/ProofMode/BindFrom.lean": "c904ca958308f8d434bbaffa0128cbe5ab31d72ed884886946bcac98f973db54",
+        "SampLib/Samplers/Metropolis.lean": "76a8446a9f84be25d3dc1516ce3c0fd54abe86c7e98462b80b5c5884a15af6eb",
+        "SampLib/Samplers/MetropolisKernel.lean": "52e9a759f1e50c7b9056ddc039d5934fcb5aaf67b9a3f976ea147ebba36431bd",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/General/Core.lean": "589c1236ee0851f6c3e75c4edb40cd528b5ebdcb627d698d6f989a684eb08750",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": [
+    {
+      "path": "SampLib/Distributions/Derangements.lean",
+      "sha256": "9da9d00e92033c1c85dd1bf24c4a0cbe71894d6d0f7534448009889209138d81",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/ShuffleVector.lean",
+      "sha256": "443b154d640f3da8036619c6cd9915c0e8e68a88905ef8c1c173c1a56792e406",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Syntax/Rejection.lean",
+      "sha256": "a446e6afc57688a21d6a22f4035352b3dd7d1f530768a68766a2c373e8c98a52",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Samplers/MetropolisKernel.lean",
+      "sha256": "52e9a759f1e50c7b9056ddc039d5934fcb5aaf67b9a3f976ea147ebba36431bd",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/Metropolis.lean",
+      "sha256": "857ecd283a9b1b49e50a72ae2ad7639140ebcbb3adf670e1657e5707556c1c6f",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/MetropolisRatio.lean",
+      "sha256": "e2c6fe5f799ae78223f53a68444247a48b0f50d7c289e454fd8468d7aab96fc8",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/MetropolisRational.lean",
+      "sha256": "866f654030045629529021d7169adf7adde64bd8759b2514c315916a5947c7dc",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/SymmetricMetropolis.lean",
+      "sha256": "04698efbc7d9bcb38158b8ae41b0a043cee2651ab0e7818f11929c6f0a1b591b",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/CappedRationalCoin.lean",
+      "sha256": "abdf9684d7a9f6d396ae2d9fd2c24468b8cbdbbb8271872c8c26ff3aa6ea5dfe",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/MetropolisTerms.lean",
+      "sha256": "47fa18740edc3d5062c154b9c3d79801c307d281ad2b7de4203582287894d6e1",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/OwnedDistSpec.lean",
+      "sha256": "01a886249d0dff347ae77fea3e715270ee9a1fb397fa12438469694609174799",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/ArrayVector.lean",
+      "sha256": "25c7997cc8b63433065e478591cce19a7acfd20c009322590769e158d37ca912",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/AliasMass.lean",
+      "sha256": "c1a2263075aea1104242491993e9a0e30329fe00c5325b5a52f94cce971ce02d",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/AliasTable.lean",
+      "sha256": "18963a0ba6a5e216c05ccd8ae8b247867e61608f954c26de34edc71e52021a60",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionStructuredBatch009Callers.lean",
+  "caller_sha256": "8b837cb1c1490ec379224fe82a49f964ec0ed78eeba94527cff5c96ab6e8ec80"
+}

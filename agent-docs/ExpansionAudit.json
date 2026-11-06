@@ -1,0 +1,29 @@
+{
+  "goal_status": "complete",
+  "baseline_sampler_count": 47,
+  "accepted_additional": 169,
+  "total_verified": 216,
+  "minimum_additional": 120,
+  "planning_target_additional": 150,
+  "candidates_tracked": 171,
+  "last_audit": {
+    "command": "python3 agent-scripts/audit_sampler_proofs.py --require-complete",
+    "exit_code": 0,
+    "compiled_spec_checks": 216,
+    "output": "agent-docs/reviews/ExpansionCheckpoint010Final.log",
+    "output_sha256": "bb36bb303a172c63f653cdeec3f6be596c5706b4177b5a60ee92f2ad714c0b1a",
+    "campaign_complete": true
+  },
+  "law_index": "LAWS.md",
+  "expansion_ledger": "agent-docs/ExpansionCampaign.json",
+  "accepted_by_kind": {
+    "derived": 59,
+    "core": 110
+  },
+  "excluded_candidates": 2,
+  "pending_candidates": 0,
+  "completion_counting_audit": {
+    "file": "agent-docs/reviews/ExpansionCompletionCountingAudit.md",
+    "sha256": "089bb87707ea5c077cff4853f38b6de9772831e6617dd853e8194ac4364bc6f5"
+  }
+}

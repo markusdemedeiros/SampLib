@@ -1,0 +1,72 @@
+[
+  {
+    "sampler": "Occil.FactoryExtra.expMinusScaled",
+    "implementation": "code/Samplers/Bernoulli/Exponential.lean",
+    "proof_module": "SampLib.Samplers.ExpMinusScaled",
+    "owner": "/root/expand_exp_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ExpMinusScaled.expMinusScaled_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch006.md",
+    "reviewed_sha256": "b5ab25fdac2e384759ffbc0d58970dcd2ab23b9fa5c6580d89e7681ec270f22c",
+    "reviewed_domain": "Every input bias p in [0,1], nonnegative natural numerator x, and positive natural denominator y.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch006.json",
+    "algorithm_kind": "core"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.tanhScaled",
+    "implementation": "code/Samplers/Bernoulli/Elementary.lean",
+    "proof_module": "SampLib.Samplers.TanhScaled",
+    "owner": "/root/expand_exp_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.TanhScaled.tanhScaled_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch006.md",
+    "reviewed_sha256": "9afbca862c593d8f8aaba67715915a02da42d782e48056c24a948ed6b38d09c5",
+    "reviewed_domain": "Every input bias p in [0,1], natural a including zero, and positive natural b; exact tanh((a/b)*p).",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch006.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.sigmoidScaled",
+    "implementation": "code/Samplers/Bernoulli/Elementary.lean",
+    "proof_module": "SampLib.Samplers.SigmoidScaled",
+    "owner": "/root/expand_exp_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.SigmoidScaled.sigmoidScaled_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch006.md",
+    "reviewed_sha256": "98e27b89ead9e0ec8bb12ffcbb6122c51e63cd058b464c6022051e0a54905967",
+    "reviewed_domain": "Every input bias p in [0,1], every signed integer numerator a, and positive natural denominator b; exact sigmoid((a/b)*p).",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch006.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.exponentialTwist",
+    "implementation": "code/Samplers/Bernoulli/Elementary.lean",
+    "proof_module": "SampLib.Samplers.ExponentialTwist",
+    "owner": "/root/expand_exp_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ExponentialTwist.exponentialTwist_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch006.md",
+    "reviewed_sha256": "235d2672c3542e7bccd8c432923a5da703e8102cab3be68a721b7be421844362",
+    "reviewed_domain": "Every input bias p in [0,1], every signed integer a, and positive integer b; odds multiplied by exp(a/b).",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch006.json",
+    "algorithm_kind": "core"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.twoCoin",
+    "implementation": "code/Samplers/Bernoulli/Powers.lean",
+    "proof_module": "SampLib.Samplers.TwoCoin",
+    "owner": "/root/expand_rational_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.TwoCoin.twoCoin_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch006.md",
+    "reviewed_sha256": "18a5258cb981590dd6d17268225d80231a69b42e29ef63727c6cce8fc9ae3814",
+    "reviewed_domain": "All nonnegative integer selector weights of positive sum, portkey numerator between zero and its positive denominator, and all input biases with strictly positive weighted accepted mass.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch006.json",
+    "algorithm_kind": "core"
+  }
+]

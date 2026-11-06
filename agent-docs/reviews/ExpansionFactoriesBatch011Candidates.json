@@ -1,0 +1,72 @@
+[
+  {
+    "sampler": "Occil.FactoryExtra.epsilonDivision",
+    "implementation": "code/Samplers/Bernoulli/Linear.lean",
+    "proof_module": "SampLib.Samplers.EpsilonDivision",
+    "owner": "/root/expand_permutation_math",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.EpsilonDivision.epsilonDivision_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch011.md",
+    "reviewed_sha256": "08eeccbe2344402f389c0b0e0f2f8c6b94a0c39bff7cf5350e09574302f860a9",
+    "reviewed_domain": "All unit-interval p, integers 0<=a<b, positive lower denominator and lower numerator<=denominator; positive a additionally requires certified lower> a/b and p>=lower. Separate zero and unit-lower theorems require no input callback contract; zero also requires no UniformInt and permits negative lower numerators.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch011.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.factorialSeriesFactory",
+    "implementation": "code/Samplers/Lazy.lean",
+    "proof_module": "SampLib.Samplers.FactorialSeriesFactory",
+    "owner": "/root/expand_poisson",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.FactorialSeriesFactory.factorialSeriesFactory_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch011.md",
+    "reviewed_sha256": "4318eeb63c71d71f583ca00eeddd7848f8d571b8168e02662664e98b435da06b",
+    "reviewed_domain": "All unit-interval input biases including0/1, each actual mode0/1/2 and arbitrary verified input callbacks; arbitrary masks and ENNReal credits.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch011.json",
+    "algorithm_kind": "core"
+  },
+  {
+    "sampler": "Occil.expMinusMartingale",
+    "implementation": "code/Samplers/Lazy.lean",
+    "proof_module": "SampLib.Samplers.ExpMinusMartingale",
+    "owner": "/root/expand_poisson",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ExpMinusMartingale.expMinusMartingale_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch011.md",
+    "reviewed_sha256": "0eb9640bc00e3d0aefc6025e008feda2f600f88bc70e8dfe1b4096ba5e6811ff",
+    "reviewed_domain": "Every unit-interval input bias, arbitrary verified callback and arbitrary ENNReal output credits, including both endpoints.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch011.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.cosineFactory",
+    "implementation": "code/Samplers/Lazy.lean",
+    "proof_module": "SampLib.Samplers.CosineFactory",
+    "owner": "/root/expand_poisson",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.CosineFactory.cosineFactory_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch011.md",
+    "reviewed_sha256": "f66ed2215b9e0093674f8d3347746fcea8502011bcce95d0af61c24c5edc851a",
+    "reviewed_domain": "Every unit-interval input bias, arbitrary verified callback and arbitrary ENNReal output credits, including both endpoints.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch011.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.sineFactory",
+    "implementation": "code/Samplers/Lazy.lean",
+    "proof_module": "SampLib.Samplers.SineFactory",
+    "owner": "/root/expand_poisson",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.SineFactory.sineFactory_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch011.md",
+    "reviewed_sha256": "9de1cb4b90737c097551bbd929e5b79b1a4ddd1bbfaaf7e17c16ccd1b21264a5",
+    "reviewed_domain": "Every unit-interval input bias includingzero/one, arbitrary verified callback and arbitrary ENNReal output credits.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch011.json",
+    "algorithm_kind": "derived"
+  }
+]

@@ -1,0 +1,132 @@
+{
+  "reviewer": "/root/expand_review_factories",
+  "accepted": [
+    {
+      "sampler": "Occil.FactoryExtra.oneDivTwoMinus",
+      "proof_module": "SampLib.Samplers.OneDivTwoMinus",
+      "public_spec": "SampLib.OneDivTwoMinus.oneDivTwoMinus_distSpec",
+      "sha256": "836af4d2489dd0cd4d673240b286c461a2de296ae553b27de298020dbc0b08bb",
+      "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch001.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/CoinComplement.lean": "1b7b26efc1723bb575ea6f3d9e5effc8b92c8f89f2e01d686c34b1ea9a78de56",
+        "SampLib/Samplers/Complement.lean": "14fe9d358c7bfd2c6459bce36346471bda0b4310b22534819d393ad8f77f6ad1",
+        "SampLib/Samplers/EvenParity.lean": "bbc8c559e0d1461bdcbbc39bb6a71cbfa9d558379040fcd507959c6d6ac00e90",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/OneDivOnePlus.lean": "b8bda61742103fb88f85e411ef6ae0173e4ad059279c58cd0faa2fff3dea49dd",
+        "SampLib/Samplers/OneDivTwoMinus.lean": "836af4d2489dd0cd4d673240b286c461a2de296ae553b27de298020dbc0b08bb",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Bernoulli/Combinators.lean": "80895ceb04f068285fd27098f4b194b4c582b5a69a5bb6bb8ead03fe6fc880e5",
+        "code/Samplers/Bernoulli/Linear.lean": "e0c0cd611bc5a01ab1a5cd68eab7b702a84b903c31d753c1c3e9107fe23c1217",
+        "code/Samplers/Bernoulli/Powers.lean": "61ccc9fc0236b9d192380a4808faab7519a04f93f4c15be44ee01c6603f8ffb0",
+        "code/Samplers/Bernoulli/Rational.lean": "5aaf0380dead5649b9aa31fd1e3e29b4015a0bf187321f2c1e7b2f4e27fd31ff",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.FactoryExtra.reciprocalLogistic",
+      "proof_module": "SampLib.Samplers.ReciprocalLogistic",
+      "public_spec": "SampLib.ReciprocalLogistic.reciprocalLogistic_distSpec",
+      "sha256": "3ae5c4a2c9c4fa3875299e427fc607371299e119816280685cf9cda7c57e8857",
+      "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch001.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Samplers/Complement.lean": "14fe9d358c7bfd2c6459bce36346471bda0b4310b22534819d393ad8f77f6ad1",
+        "SampLib/Samplers/LogisticFactory.lean": "65fb8fe358fbf5ce6f5214418b0f6eb4cb31018fdb7bc576a491a7d2a481a616",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/ReciprocalLogistic.lean": "3ae5c4a2c9c4fa3875299e427fc607371299e119816280685cf9cda7c57e8857",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Bernoulli/Combinators.lean": "80895ceb04f068285fd27098f4b194b4c582b5a69a5bb6bb8ead03fe6fc880e5",
+        "code/Samplers/Bernoulli/Linear.lean": "e0c0cd611bc5a01ab1a5cd68eab7b702a84b903c31d753c1c3e9107fe23c1217",
+        "code/Samplers/Bernoulli/Powers.lean": "61ccc9fc0236b9d192380a4808faab7519a04f93f4c15be44ee01c6603f8ffb0",
+        "code/Samplers/Bernoulli/Rational.lean": "5aaf0380dead5649b9aa31fd1e3e29b4015a0bf187321f2c1e7b2f4e27fd31ff",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.FactoryExtra.integralMixture",
+      "proof_module": "SampLib.Samplers.IntegralMixture",
+      "public_spec": "SampLib.IntegralMixture.integralMixture_distSpec",
+      "sha256": "2d01a1d68e555a94748108e4b44e10fa8aaf99269ea7146f7380d9a0d099a01d",
+      "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch001.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Samplers/IntegralMixture.lean": "2d01a1d68e555a94748108e4b44e10fa8aaf99269ea7146f7380d9a0d099a01d",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Arithmetic.lean": "c0b59cdb429f96402d03e2aab0465da58357950d13eba3fb49aa39ad0609f7b1",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Bernoulli/Series.lean": "9eef053872196e3d398a3739eb3b3c726ce6a4a0f3460dd19b2396471d591f12",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionFactoriesBatch001Callers.lean",
+  "caller_sha256": "dc180ac020c731e8d0c904bc14832cc70f61412cfaf4bbcc94d425932bc0b3d2",
+  "support": [
+    {
+      "module": "SampLib.CoinComplement",
+      "sha256": "1b7b26efc1723bb575ea6f3d9e5effc8b92c8f89f2e01d686c34b1ea9a78de56"
+    }
+  ]
+}

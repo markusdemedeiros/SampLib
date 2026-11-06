@@ -1,0 +1,1600 @@
+{
+  "validated_at_utc": "2026-11-06T01:07:27.509127+00:00",
+  "objective_new_minimum": 165,
+  "new_verified_samplers": 214,
+  "baseline_samplers": [
+    "Occil.realCoin",
+    "Occil.vonNeumann"
+  ],
+  "total_verified_samplers": 216,
+  "proof_author_teams": [
+    "/root",
+    "/root/expand_combinatorial",
+    "/root/expand_constants",
+    "/root/expand_continuous",
+    "/root/expand_discrete",
+    "/root/expand_exp_factories",
+    "/root/expand_general",
+    "/root/expand_markov",
+    "/root/expand_permutation_math",
+    "/root/expand_poisson",
+    "/root/expand_rational_factories",
+    "/root/expand_series_factories",
+    "/root/expand_uniform_weighted",
+    "/root/verify_next_factories",
+    "/root/verify_next_weighted_rejection",
+    "/root/verify_weighted_choice",
+    "expand_arrays",
+    "expand_combinatorial",
+    "expand_continuous",
+    "expand_exp_factories",
+    "expand_general",
+    "expand_markov",
+    "prove_coin_combinators",
+    "prove_collection_sampling",
+    "prove_continuous",
+    "prove_elementary_factories",
+    "prove_finite_trials",
+    "prove_general_factories",
+    "prove_infinite_counts",
+    "prove_ranges",
+    "prove_recursive_coins",
+    "prove_uniform",
+    "verify_next_exponential",
+    "verify_next_laplace_erlang",
+    "verify_next_subsets",
+    "verify_next_urns"
+  ],
+  "independent_primary_reviewers": [
+    "/root/expand_review_discrete",
+    "/root/expand_review_factories",
+    "/root/review_next_batch",
+    "/root/review_next_batch/review_finite_next",
+    "expand_review_structured",
+    "review_coins",
+    "review_discrete",
+    "review_next_batch/review_continuous_next",
+    "review_structured"
+  ],
+  "review_receipts": [
+    "agent-docs/reviews/CoinProofs.json",
+    "agent-docs/reviews/DiscreteProofs.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch001.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch002.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch003.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch004.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch005.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch006.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch007.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch008.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch009.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch010.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch011.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch012.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch013.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch014.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch015.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch001.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch002.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch003.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch004.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch005.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch006.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch007.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch008.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch009.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch010.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch011.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch012.json",
+    "agent-docs/reviews/ExpansionFactoriesBatch014.json",
+    "agent-docs/reviews/ExpansionStructuredBatch001.json",
+    "agent-docs/reviews/ExpansionStructuredBatch002.json",
+    "agent-docs/reviews/ExpansionStructuredBatch003.json",
+    "agent-docs/reviews/ExpansionStructuredBatch004.json",
+    "agent-docs/reviews/ExpansionStructuredBatch005.json",
+    "agent-docs/reviews/ExpansionStructuredBatch006.json",
+    "agent-docs/reviews/ExpansionStructuredBatch007.json",
+    "agent-docs/reviews/ExpansionStructuredBatch008.json",
+    "agent-docs/reviews/ExpansionStructuredBatch009.json",
+    "agent-docs/reviews/ExpansionStructuredBatch010.json",
+    "agent-docs/reviews/ExpansionStructuredBatch011.json",
+    "agent-docs/reviews/ExpansionStructuredBatch012.json",
+    "agent-docs/reviews/ExpansionStructuredBatch013.json",
+    "agent-docs/reviews/ExpansionStructuredBatch014.json",
+    "agent-docs/reviews/NextBatchContinuous.json",
+    "agent-docs/reviews/NextBatchFinite.json",
+    "agent-docs/reviews/NextBatchWeightedFactories.json",
+    "agent-docs/reviews/StructuredProofs.json"
+  ],
+  "suite_index": "SampLib/README.md",
+  "final_audit": {
+    "command": "python3 agent-scripts/audit_sampler_proofs.py --require-complete",
+    "exit_code": 0,
+    "compiled_spec_checks": 216,
+    "output": "agent-docs/reviews/ExpansionCheckpoint010Final.log",
+    "output_sha256": "bb36bb303a172c63f653cdeec3f6be596c5706b4177b5a60ee92f2ad714c0b1a",
+    "campaign_complete": true
+  },
+  "audit_sources": {
+    "agent-scripts/audit_sampler_proofs.py": "5bbfcfe5ad43308a05273edfd58d52252fcc0bb5556d7146ff4393ea9c329307",
+    "agent-scripts/proof_dependencies.py": "422cc12ed2d8d8ecd52ba7707d0316219f810d4369dae3610ba5a928c0674b6b",
+    "agent-scripts/parse_lean_imports.lean": "d3194368c5cec11a1242474b83d5a25110dfab1775cd30c2b03946dfd1cf138b",
+    "agent-scripts/expansion_state.py": "f7866bb64ffca76c0718d5e09df4aebd426a7712a5634d6915e58e8eb8d03ed9"
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "implementation_and_language_changes": false,
+  "samplers": [
+    {
+      "implementation": "Occil.complement",
+      "public_spec": "SampLib.Complement.complement_distSpec",
+      "review_receipt": "agent-docs/reviews/CoinProofs.json",
+      "source_sha256": "14fe9d358c7bfd2c6459bce36346471bda0b4310b22534819d393ad8f77f6ad1"
+    },
+    {
+      "implementation": "Occil.coinProduct",
+      "public_spec": "SampLib.CoinProduct.coinProduct_distSpec",
+      "review_receipt": "agent-docs/reviews/CoinProofs.json",
+      "source_sha256": "6076fb895ff229084c3bb686c602174b8a0078d55e8a25e05eb23ccf5750148a"
+    },
+    {
+      "implementation": "Occil.coinDisjunction",
+      "public_spec": "SampLib.CoinDisjunction.coinDisjunction_distSpec",
+      "review_receipt": "agent-docs/reviews/CoinProofs.json",
+      "source_sha256": "4f2c8995ebbaa218444dc8aa0d9874be70ad0c974dd754314622fc01e9ca86cf"
+    },
+    {
+      "implementation": "Occil.coinMean",
+      "public_spec": "SampLib.CoinMean.coinMean_distSpec",
+      "review_receipt": "agent-docs/reviews/CoinProofs.json",
+      "source_sha256": "b14b21db0060327b79d8faf02fc046f9a75166937fa54692474752cdc317ecd4"
+    },
+    {
+      "implementation": "Occil.coinConditional",
+      "public_spec": "SampLib.CoinConditional.coinConditional_distSpec",
+      "review_receipt": "agent-docs/reviews/CoinProofs.json",
+      "source_sha256": "8dfb54937be016a4105dc511c47a9dcede2258527b7fba6c166d56477e8b4b8a"
+    },
+    {
+      "implementation": "Occil.uniformInt",
+      "public_spec": "SampLib.UniformInt.uniformInt_distSpec",
+      "review_receipt": "agent-docs/reviews/DiscreteProofs.json",
+      "source_sha256": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c"
+    },
+    {
+      "implementation": "Occil.rndInt",
+      "public_spec": "SampLib.RndInt.rndInt_distSpec",
+      "review_receipt": "agent-docs/reviews/DiscreteProofs.json",
+      "source_sha256": "c109e78be39b055f9e2af6082253a79d32d9d63c3f06be59615f776b8fee0178"
+    },
+    {
+      "implementation": "Occil.rndIntRange",
+      "public_spec": "SampLib.RndIntRange.rndIntRange_distSpec",
+      "review_receipt": "agent-docs/reviews/DiscreteProofs.json",
+      "source_sha256": "ed36a99e9849300bee6a3fa35d10270ea6fe68f6d25fe1dc457465a24fa05c39"
+    },
+    {
+      "implementation": "Occil.rndIntExcRange",
+      "public_spec": "SampLib.RndIntExcRange.rndIntExcRange_distSpec",
+      "review_receipt": "agent-docs/reviews/DiscreteProofs.json",
+      "source_sha256": "3307969caa795835b6ccc1c68db37333a6902b52859104bf27871ac96c234e51"
+    },
+    {
+      "implementation": "Occil.fairCoin",
+      "public_spec": "SampLib.FairCoin.fairCoin_distSpec",
+      "review_receipt": "agent-docs/reviews/DiscreteProofs.json",
+      "source_sha256": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80"
+    },
+    {
+      "implementation": "Occil.rationalCoin",
+      "public_spec": "SampLib.RationalCoin.rationalCoin_distSpec",
+      "review_receipt": "agent-docs/reviews/DiscreteProofs.json",
+      "source_sha256": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed"
+    },
+    {
+      "implementation": "Occil.oneDivOnePlus",
+      "public_spec": "SampLib.OneDivOnePlus.oneDivOnePlus_distSpec",
+      "review_receipt": "agent-docs/reviews/CoinProofs.json",
+      "source_sha256": "b8bda61742103fb88f85e411ef6ae0173e4ad059279c58cd0faa2fff3dea49dd"
+    },
+    {
+      "implementation": "Occil.evenParity",
+      "public_spec": "SampLib.EvenParity.evenParity_distSpec",
+      "review_receipt": "agent-docs/reviews/CoinProofs.json",
+      "source_sha256": "bbc8c559e0d1461bdcbbc39bb6a71cbfa9d558379040fcd507959c6d6ac00e90"
+    },
+    {
+      "implementation": "Occil.bernoulliRace",
+      "public_spec": "SampLib.BernoulliRace.bernoulliRace_distSpec",
+      "review_receipt": "agent-docs/reviews/CoinProofs.json",
+      "source_sha256": "b0efbaf37a5bb2824ff3ea5ee427d0bd3f840a3fb9fbd6dca6f4a5098d21f454"
+    },
+    {
+      "implementation": "Occil.geometricFailures",
+      "public_spec": "SampLib.GeometricFailures.geometricFailures_distSpec",
+      "review_receipt": "agent-docs/reviews/CoinProofs.json",
+      "source_sha256": "03b527b3700fcb7ab28a4b7ee8434f38098a57e8b3526ff7b59d4024c6dbeedc"
+    },
+    {
+      "implementation": "Occil.binomial",
+      "public_spec": "SampLib.Binomial.binomial_distSpec",
+      "review_receipt": "agent-docs/reviews/DiscreteProofs.json",
+      "source_sha256": "76e53294152ed9586f37315a5f27e7257faca3e9bec707ff404c6653d6a9e996"
+    },
+    {
+      "implementation": "Occil.boundedGeometric",
+      "public_spec": "SampLib.BoundedGeometric.boundedGeometric_distSpec",
+      "review_receipt": "agent-docs/reviews/DiscreteProofs.json",
+      "source_sha256": "9d38721aa9012b9cd8b33d661ad269d27f3db932df02c266d7cffbced5496ab8"
+    },
+    {
+      "implementation": "Occil.iterateCoin",
+      "public_spec": "SampLib.IterateCoin.iterateCoin_distSpec",
+      "review_receipt": "agent-docs/reviews/DiscreteProofs.json",
+      "source_sha256": "f14b4ee475b3ea318aef1a1c2705d6a687818886abb00b533690629d3478bbfe"
+    },
+    {
+      "implementation": "Occil.randomWalk",
+      "public_spec": "SampLib.RandomWalk.randomWalk_distSpec",
+      "review_receipt": "agent-docs/reviews/DiscreteProofs.json",
+      "source_sha256": "b05909d65e4d4416a02ce57de895cd34742fd161b9c89671efd8dcf32f33d2a1"
+    },
+    {
+      "implementation": "Occil.geometric",
+      "public_spec": "SampLib.Geometric.geometric_distSpec",
+      "review_receipt": "agent-docs/reviews/DiscreteProofs.json",
+      "source_sha256": "a5692d1af2f98bc791cb40d14c4ef0bb349873d411659fa6f2b70d552eb5ce78"
+    },
+    {
+      "implementation": "Occil.negativeBinomial",
+      "public_spec": "SampLib.NegativeBinomial.negativeBinomial_distSpec",
+      "review_receipt": "agent-docs/reviews/DiscreteProofs.json",
+      "source_sha256": "7822adee15aa10c7ab49c8053746da73c0441bfbc07220dc787297370c2cdc84"
+    },
+    {
+      "implementation": "Occil.uniformMin",
+      "public_spec": "SampLib.UniformMin.uniformMin_distSpec",
+      "review_receipt": "agent-docs/reviews/StructuredProofs.json",
+      "source_sha256": "dca6c6478f1b2ba07761d7ff593e5d9fe196c0f560629489f92ea83abbab1bba"
+    },
+    {
+      "implementation": "Occil.uniformMax",
+      "public_spec": "SampLib.UniformMax.uniformMax_distSpec",
+      "review_receipt": "agent-docs/reviews/StructuredProofs.json",
+      "source_sha256": "48869b84a0d0afc034c14481aa37cde599d105eab02e1b4b7849025ed4602156"
+    },
+    {
+      "implementation": "Occil.uniformSum",
+      "public_spec": "SampLib.UniformSum.uniformSum_distSpec",
+      "review_receipt": "agent-docs/reviews/StructuredProofs.json",
+      "source_sha256": "732c633030effeff70be03cd9baa0e593426cba26583267a814da06708b19462"
+    },
+    {
+      "implementation": "Occil.mixture",
+      "public_spec": "SampLib.Mixture.mixture_distSpec",
+      "review_receipt": "agent-docs/reviews/StructuredProofs.json",
+      "source_sha256": "881a062192a581259a5050b170b12d033ed0eedb47f01189639b5eb20d72c420"
+    },
+    {
+      "implementation": "Occil.rejection",
+      "public_spec": "SampLib.Rejection.rejection_distSpec",
+      "review_receipt": "agent-docs/reviews/StructuredProofs.json",
+      "source_sha256": "a6f667c40bc8b6375ea16ac7067ab08608e84ea94e041efce7d75deaf378a055"
+    },
+    {
+      "implementation": "Occil.logisticFactory",
+      "public_spec": "SampLib.LogisticFactory.logisticFactory_distSpec",
+      "review_receipt": "agent-docs/reviews/StructuredProofs.json",
+      "source_sha256": "65fb8fe358fbf5ce6f5214418b0f6eb4cb31018fdb7bc576a491a7d2a481a616"
+    },
+    {
+      "implementation": "Occil.probabilityGeneratingFactory",
+      "public_spec": "SampLib.ProbabilityGeneratingFactory.probabilityGeneratingFactory_distSpec",
+      "review_receipt": "agent-docs/reviews/StructuredProofs.json",
+      "source_sha256": "5db3a3a5070f52cf6cb39fc52a4d58f57eac69aa9c1a99f4a2532baff7a4c66b"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.oneMinusOverOnePlus",
+      "public_spec": "SampLib.OneMinusOverOnePlus.oneMinusOverOnePlus_distSpec",
+      "review_receipt": "agent-docs/reviews/CoinProofs.json",
+      "source_sha256": "c4c734b9d4936b16ccc5bb241c59912c61246de0bc1202ecef4dfa785260183b"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.onePlusHalf",
+      "public_spec": "SampLib.OnePlusHalf.onePlusHalf_distSpec",
+      "review_receipt": "agent-docs/reviews/CoinProofs.json",
+      "source_sha256": "52133949e5c7b46a966d49c245480be5f7e3f0e5634ed08f247e7a970c6e2aee"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.complementHalf",
+      "public_spec": "SampLib.ComplementHalf.complementHalf_distSpec",
+      "review_receipt": "agent-docs/reviews/CoinProofs.json",
+      "source_sha256": "b6a1a75c18fe531594c251396dea9198d7cf93ba0061b147c6815f2fd638fe92"
+    },
+    {
+      "implementation": "Occil.choice",
+      "public_spec": "SampLib.Choice.choice_distSpec",
+      "review_receipt": "agent-docs/reviews/StructuredProofs.json",
+      "source_sha256": "b80822188b067db6777203c9e1e7bae41d78fe1da574267e6486e4da603e6ddc"
+    },
+    {
+      "implementation": "Occil.sampleWithReplacement",
+      "public_spec": "SampLib.SampleWithReplacement.sampleWithReplacement_distSpec",
+      "review_receipt": "agent-docs/reviews/StructuredProofs.json",
+      "source_sha256": "430fa99ae768d75d13501fd70c5302775962a3b21cfadea3a76a2821121069fd"
+    },
+    {
+      "implementation": "Occil.weightedChoice",
+      "public_spec": "SampLib.WeightedChoice.weightedChoice_distSpec",
+      "review_receipt": "agent-docs/reviews/NextBatchWeightedFactories.json",
+      "source_sha256": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2"
+    },
+    {
+      "implementation": "Occil.weightedRejection",
+      "public_spec": "SampLib.WeightedRejection.weightedRejection_distSpec",
+      "review_receipt": "agent-docs/reviews/NextBatchWeightedFactories.json",
+      "source_sha256": "9c8d0a10a70f75f9ece953045d03f14de76751290b0583a23f3fbefce524b915"
+    },
+    {
+      "implementation": "Occil.bernsteinFactory",
+      "public_spec": "SampLib.BernsteinFactory.bernsteinFactory_distSpec",
+      "review_receipt": "agent-docs/reviews/NextBatchWeightedFactories.json",
+      "source_sha256": "964f23561a3176ded195aa9b7c23ea4d1451e62753f6dad57c17bfae5131b6e6"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.pLogInverse",
+      "public_spec": "SampLib.PLogInverse.pLogInverse_distSpec",
+      "review_receipt": "agent-docs/reviews/NextBatchWeightedFactories.json",
+      "source_sha256": "efa14e4c414682db33ea37ddd89eb50dada53f6081d9dd9dc861a55a6a26b8ca"
+    },
+    {
+      "implementation": "Occil.dice",
+      "public_spec": "SampLib.Dice.dice_distSpec",
+      "review_receipt": "agent-docs/reviews/NextBatchFinite.json",
+      "source_sha256": "7bf709bfb710432fd7c10c189b440aed08720281f747edb8ce7b5e47a2e4cee2"
+    },
+    {
+      "implementation": "Occil.hypergeometric",
+      "public_spec": "SampLib.Hypergeometric.hypergeometric_distSpec",
+      "review_receipt": "agent-docs/reviews/NextBatchFinite.json",
+      "source_sha256": "22f6a190e8646bee92d8f68e1a974255049dbf479378d01ebe5e50316e9e436a"
+    },
+    {
+      "implementation": "Occil.polyaEggenberger",
+      "public_spec": "SampLib.PolyaEggenberger.polyaEggenberger_distSpec",
+      "review_receipt": "agent-docs/reviews/NextBatchFinite.json",
+      "source_sha256": "fc92d8cab94044e64e2995d3eb98337959f024fa7e2f3230858315751c6f7bec"
+    },
+    {
+      "implementation": "Occil.sampleWithoutReplacement",
+      "public_spec": "SampLib.SampleWithoutReplacement.sampleWithoutReplacement_distSpec",
+      "review_receipt": "agent-docs/reviews/NextBatchFinite.json",
+      "source_sha256": "8fc52ead9f3d8383445ced90a5c4bb20eb47e1fcf96e3909f3ea8515df37b07b"
+    },
+    {
+      "implementation": "Occil.sampleInOrder",
+      "public_spec": "SampLib.SampleInOrder.sampleInOrder_distSpec",
+      "review_receipt": "agent-docs/reviews/NextBatchFinite.json",
+      "source_sha256": "aad71a14bb97ff122e111ba8b350870e7be701b0f4ef3c7e50a181f8bb278c9c"
+    },
+    {
+      "implementation": "Occil.exponential",
+      "public_spec": "SampLib.Exponential.exponential_distSpec",
+      "review_receipt": "agent-docs/reviews/NextBatchContinuous.json",
+      "source_sha256": "f7c9837b6794ff313afdfc4e967425a94b74f7e1191719014a4b603966b1ba41"
+    },
+    {
+      "implementation": "Occil.laplace",
+      "public_spec": "SampLib.Laplace.laplace_distSpec",
+      "review_receipt": "agent-docs/reviews/NextBatchContinuous.json",
+      "source_sha256": "b86d6d8fe853a3eeffd97a6a5f59828e0246146d5fadebac843c7292c9ee5bb1"
+    },
+    {
+      "implementation": "Occil.erlang",
+      "public_spec": "SampLib.Erlang.erlang_distSpec",
+      "review_receipt": "agent-docs/reviews/NextBatchContinuous.json",
+      "source_sha256": "208515f4e886a4a5052c294f083562a5ef8143d3ecb39f81e7b92fb2343d8a16"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.oneDivTwoMinus",
+      "public_spec": "SampLib.OneDivTwoMinus.oneDivTwoMinus_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch001.json",
+      "source_sha256": "836af4d2489dd0cd4d673240b286c461a2de296ae553b27de298020dbc0b08bb"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.reciprocalLogistic",
+      "public_spec": "SampLib.ReciprocalLogistic.reciprocalLogistic_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch001.json",
+      "source_sha256": "3ae5c4a2c9c4fa3875299e427fc607371299e119816280685cf9cda7c57e8857"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.integralMixture",
+      "public_spec": "SampLib.IntegralMixture.integralMixture_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch001.json",
+      "source_sha256": "2d01a1d68e555a94748108e4b44e10fa8aaf99269ea7146f7380d9a0d099a01d"
+    },
+    {
+      "implementation": "Occil.General.generativeModel",
+      "public_spec": "SampLib.GenerativeModel.generativeModel_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch001.json",
+      "source_sha256": "cb42ff7d841e8a09d404efa7ff4eabb3d6acf98a0855616117ae90c723a27c10"
+    },
+    {
+      "implementation": "Occil.General.inverseQuantile",
+      "public_spec": "SampLib.InverseQuantile.inverseQuantile_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch001.json",
+      "source_sha256": "94482c760a6f73e6c1ee3a7518f20c5e89efbccfb1e50129089f1022bf2f98b3"
+    },
+    {
+      "implementation": "Occil.General.kernelDensity",
+      "public_spec": "SampLib.KernelDensity.kernelDensity_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch001.json",
+      "source_sha256": "2a2a1ae2971381e2d3c1e35e87289c5592963bfe798aad1721c7781875e0ddb5"
+    },
+    {
+      "implementation": "Occil.General.uniformBoxPoint",
+      "public_spec": "SampLib.UniformBoxPoint.uniformBoxPoint_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch001.json",
+      "source_sha256": "1bf413cb67405d45e36f429abcb22f1f3e15aea976c4496c2e80a5bce488ecca"
+    },
+    {
+      "implementation": "Occil.flipBits",
+      "public_spec": "SampLib.FlipBits.flipBits_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch001.json",
+      "source_sha256": "cc8466c02431dc08574a7b35840dff26feef0cf188389d3646abc760dd7a5432"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.betaBinomial",
+      "public_spec": "SampLib.BetaBinomial.betaBinomial_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch001.json",
+      "source_sha256": "7adba19877f3d7befb872af29cb1231c57e7a9eaf54cfbdf6aa9aaee1f9a6cd5"
+    },
+    {
+      "implementation": "Occil.Weighted.randomBits",
+      "public_spec": "SampLib.RandomBits.randomBits_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch001.json",
+      "source_sha256": "803dad79aafcb0914d543ab87e3cd3266f4446f2b3b897640c9a2b13701feb62"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.symmetricGeometric",
+      "public_spec": "SampLib.SymmetricGeometric.symmetricGeometric_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch001.json",
+      "source_sha256": "e41632a20e58190c2d2f9c217602b30816b4da79b345e949d18820add02d1a9c"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.positivePowerSeries",
+      "public_spec": "SampLib.PositivePowerSeries.positivePowerSeries_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch002.json",
+      "source_sha256": "d74b1edf3246645dedfe30981a35c00e836c974d0bc0095f9af07babb612a862"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.complementPowerSeries",
+      "public_spec": "SampLib.ComplementPowerSeries.complementPowerSeries_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch002.json",
+      "source_sha256": "0475f0036b3fa368bae64cc76c9f79fb644ffa0ea96ca76fffe8ff769cba844c"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.complementLogInverse",
+      "public_spec": "SampLib.ComplementLogInverse.complementLogInverse_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch002.json",
+      "source_sha256": "d93f89dfc2f97650d9c99842f14b508109bf5ea5da1217680643f54bf63143e2"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.convexCombination",
+      "public_spec": "SampLib.ConvexCombination.convexCombination_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch002.json",
+      "source_sha256": "da23cbeaabdc5dd287631189d172197fdb10b247a53b379335c33da3b431a14c"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.oddsProduct",
+      "public_spec": "SampLib.OddsProduct.oddsProduct_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch002.json",
+      "source_sha256": "aed9028b5993bb1a3d4c0f6bb28f3aa21b538fc1764fa5e5f4d6479cd0b709a4"
+    },
+    {
+      "implementation": "Occil.Constants.fromDigits",
+      "public_spec": "SampLib.FromDigits.fromDigits_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch002.json",
+      "source_sha256": "4fa8a1549f97d05a90deaa9373ebb5262ee6e53a937cf4717bb2cf7ba66e3fcc"
+    },
+    {
+      "implementation": "Occil.expMinusRational",
+      "public_spec": "SampLib.ExpMinusRational.expMinusRational_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch002.json",
+      "source_sha256": "9c1ca55cc40734cad464c69f26b2eb9c053eb96f3353806f5d2910f869c43b26"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.approximateFactory",
+      "public_spec": "SampLib.ApproximateFactory.approximateFactory_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch002.json",
+      "source_sha256": "191f529936ef9567d92e45b97082673eaf6b974cf1492b698f99911596af868f"
+    },
+    {
+      "implementation": "Occil.General.stoppedSum",
+      "public_spec": "SampLib.StoppedSum.stoppedSum_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch002.json",
+      "source_sha256": "8aaf5d5f4caa32f52931ce4fa9d23a56c863d2defdedf90f1801996a3f3115a2"
+    },
+    {
+      "implementation": "Occil.General.episodes",
+      "public_spec": "SampLib.Episodes.episodes_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch002.json",
+      "source_sha256": "198624fb20d5d4660552c972c1eafb63e5b608a8081efbccadeafa70809f270e"
+    },
+    {
+      "implementation": "Occil.General.kernelDensityVector",
+      "public_spec": "SampLib.KernelDensityVector.kernelDensityVector_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch002.json",
+      "source_sha256": "4528202cdf004ab69885d29a0e1f9cd057c4977fe2d2ec3dfd03b79de488f7d4"
+    },
+    {
+      "implementation": "Occil.General.stratified1D",
+      "public_spec": "SampLib.Stratified1D.stratified1D_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch002.json",
+      "source_sha256": "064901e7d741707e26e16e37e8395a8cfb5b07b2b7c8a21e6d48ab0bac3cdb4d"
+    },
+    {
+      "implementation": "Occil.General.randomString",
+      "public_spec": "SampLib.RandomString.randomString_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch002.json",
+      "source_sha256": "46da282f750a39d2201bd32ad3ebbb5c258f34370c231483216b8d0d22b64a1d"
+    },
+    {
+      "implementation": "Occil.General.randomDateTime",
+      "public_spec": "SampLib.RandomDateTime.randomDateTime_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch002.json",
+      "source_sha256": "ab432d6a09b2140f5c7fb8db0e710c7d3a59ca741398901092c62bc038dad24e"
+    },
+    {
+      "implementation": "Occil.expHalfCoin",
+      "public_spec": "SampLib.ExpHalfCoin.expHalfCoin_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch002.json",
+      "source_sha256": "869001e4dbfaf82c7a4b750d17ac37efc5635742002dac7721caecd1d9c21b9d"
+    },
+    {
+      "implementation": "Occil.gaussianInteger",
+      "public_spec": "SampLib.GaussianInteger.gaussianInteger_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch002.json",
+      "source_sha256": "925bfe8e1bbf9d4369077e17b1bce9fa12cf1a679113dab5ebad133977ee25d9"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.polylogarithm",
+      "public_spec": "SampLib.Polylogarithm.polylogarithm_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch003.json",
+      "source_sha256": "adb0bf87af89ce3b903b31e3767971e02088f10f10ce21a6f12b3d4624d00669"
+    },
+    {
+      "implementation": "Occil.Constants.algebraicRoot",
+      "public_spec": "SampLib.AlgebraicRoot.algebraicRoot_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch003.json",
+      "source_sha256": "f0f7f5172842c1e9a33fe7f9e286a9f8de0b94e6ac5b0f2acd7f8068f1ac99ca"
+    },
+    {
+      "implementation": "Occil.Constants.inverseGoldenRatio",
+      "public_spec": "SampLib.InverseGoldenRatio.inverseGoldenRatio_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch003.json",
+      "source_sha256": "1f3b0c7783b4b9dcb42d6bededf7b608a74e51fb729f720f4347a7b253a94226"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.sigmoidDerivative",
+      "public_spec": "SampLib.SigmoidDerivative.sigmoidDerivative_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch003.json",
+      "source_sha256": "f73682a7e10c733fceac3fd9ed4374934cf2dcbf0f5b18e9037a0310483121fc"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.sigmoidRational",
+      "public_spec": "SampLib.SigmoidRational.sigmoidRational_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch003.json",
+      "source_sha256": "dc2eef1a084f1e3b46483fad367208ca3ca9af0626770474a4525904d19b790b"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.logisticExp",
+      "public_spec": "SampLib.LogisticExp.logisticExp_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch003.json",
+      "source_sha256": "130842785933c4e063f803c813431454d7eb94e2750d77f5360cbc3780f06b5f"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.exponentialRatio",
+      "public_spec": "SampLib.ExponentialRatio.exponentialRatio_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch003.json",
+      "source_sha256": "d49c88add26885c87619f97fd0454b7fac63e01ed5ca814141bfd716f210ef98"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.tanhRational",
+      "public_spec": "SampLib.TanhRational.tanhRational_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch003.json",
+      "source_sha256": "ac01dabdebef47ce3369d6e36ec242365421a98582e2685ba57823317dcc9523"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.reciprocalAffine",
+      "public_spec": "SampLib.ReciprocalAffine.reciprocalAffine_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch004.json",
+      "source_sha256": "24cd1370f7c53a7ab7fcbf82a6ff072cfade4677e121b51f135f14ebf7f34428"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.reciprocalAffinePower",
+      "public_spec": "SampLib.ReciprocalAffinePower.reciprocalAffinePower_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch004.json",
+      "source_sha256": "10d5c9063b743b6e4e4aade710f512b086a43dddba3b993d804e97b314e12801"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.inverseQuadratic",
+      "public_spec": "SampLib.InverseQuadratic.inverseQuadratic_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch004.json",
+      "source_sha256": "fc98d7ba69139a9fdfbc7a419447dc0b03d224b5b6bd1005ec98e33b445b5afc"
+    },
+    {
+      "implementation": "Occil.Constants.sqrtTwoMinusOne",
+      "public_spec": "SampLib.SqrtTwoMinusOne.sqrtTwoMinusOne_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch004.json",
+      "source_sha256": "dfb57af5f411260521e425e80e345f559316c7690b2d7d4238188ff6a104a70e"
+    },
+    {
+      "implementation": "Occil.Constants.inverseSqrtTwo",
+      "public_spec": "SampLib.InverseSqrtTwo.inverseSqrtTwo_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch004.json",
+      "source_sha256": "9d047e6cb9c14d2030719262fa8efb4db144e7ed803d18810c122e371272cf9c"
+    },
+    {
+      "implementation": "Occil.Constants.goldenFamily",
+      "public_spec": "SampLib.GoldenFamily.goldenFamily_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch004.json",
+      "source_sha256": "2be70c1c078f1740373ad6d607ceb8aa4c304002f838e0936fbe6bbc812e6216"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.offsetRace",
+      "public_spec": "SampLib.OffsetRace.offsetRace_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch004.json",
+      "source_sha256": "61e729ba2100e7e5095be24946a0f6b504cc4f49e5773f3a847004987961c789"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.logOverAffine",
+      "public_spec": "SampLib.LogOverAffine.logOverAffine_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch004.json",
+      "source_sha256": "f61d45f51022be3a4f035bdc150752760b593b686a8ee0c104d2f13cf0d8f39a"
+    },
+    {
+      "implementation": "Occil.expMinusFactory",
+      "public_spec": "SampLib.ExpMinusFactory.expMinusFactory_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch005.json",
+      "source_sha256": "9a5bd78d1ab4ecea97f7df2a43d003a2d4f379dc429dbea48e8f90d5375874ab"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.expTimesComplement",
+      "public_spec": "SampLib.ExpTimesComplement.expTimesComplement_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch005.json",
+      "source_sha256": "9eb446cec88c694d607c793e0ebe3d8e99386dd638a4f9665700b8d84ea318a8"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.reciprocalExpAffine",
+      "public_spec": "SampLib.ReciprocalExpAffine.reciprocalExpAffine_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch005.json",
+      "source_sha256": "041d07ff18efd96b35946037be8fd533818fd33c029f091d40792e2567ec687c"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.expMinusScaled",
+      "public_spec": "SampLib.ExpMinusScaled.expMinusScaled_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch006.json",
+      "source_sha256": "b5ab25fdac2e384759ffbc0d58970dcd2ab23b9fa5c6580d89e7681ec270f22c"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.tanhScaled",
+      "public_spec": "SampLib.TanhScaled.tanhScaled_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch006.json",
+      "source_sha256": "9afbca862c593d8f8aaba67715915a02da42d782e48056c24a948ed6b38d09c5"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.sigmoidScaled",
+      "public_spec": "SampLib.SigmoidScaled.sigmoidScaled_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch006.json",
+      "source_sha256": "98e27b89ead9e0ec8bb12ffcbb6122c51e63cd058b464c6022051e0a54905967"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.exponentialTwist",
+      "public_spec": "SampLib.ExponentialTwist.exponentialTwist_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch006.json",
+      "source_sha256": "235d2672c3542e7bccd8c432923a5da703e8102cab3be68a721b7be421844362"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.twoCoin",
+      "public_spec": "SampLib.TwoCoin.twoCoin_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch006.json",
+      "source_sha256": "18a5258cb981590dd6d17268225d80231a69b42e29ef63727c6cce8fc9ae3814"
+    },
+    {
+      "implementation": "Occil.Weighted.uniformRational",
+      "public_spec": "SampLib.UniformFormats.uniformRational_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch002.json",
+      "source_sha256": "5d606df4aa59d17b72ea98196f259bee0cc2863212a1b906b0cdbd337720b54e"
+    },
+    {
+      "implementation": "Occil.Weighted.uniformFixed",
+      "public_spec": "SampLib.UniformFormats.uniformFixed_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch002.json",
+      "source_sha256": "5d606df4aa59d17b72ea98196f259bee0cc2863212a1b906b0cdbd337720b54e"
+    },
+    {
+      "implementation": "Occil.Weighted.uniformDyadic",
+      "public_spec": "SampLib.UniformFormats.uniformDyadic_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch002.json",
+      "source_sha256": "5d606df4aa59d17b72ea98196f259bee0cc2863212a1b906b0cdbd337720b54e"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.negativeHypergeometric",
+      "public_spec": "SampLib.NegativeHypergeometric.negativeHypergeometric_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch002.json",
+      "source_sha256": "137305e0d93b64e2dcd58389c9831dc4460401746fd7af94dd9ecb47cf277a13"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.himanshu",
+      "public_spec": "SampLib.Himanshu.himanshu_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch002.json",
+      "source_sha256": "34d0c9547d853253e5d2db18f5e88f68852a7280d498b2100a5a94fb99ddcebf"
+    },
+    {
+      "implementation": "Occil.Weighted.moduloReduction",
+      "public_spec": "SampLib.WordReductions.moduloReduction_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch003.json",
+      "source_sha256": "4e1627c09bc4e85a0c7a837be2c29d001e62434253ac10fdf3f2b0abb02fab6a"
+    },
+    {
+      "implementation": "Occil.Weighted.multiplyShift",
+      "public_spec": "SampLib.WordReductions.multiplyShift_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch003.json",
+      "source_sha256": "4e1627c09bc4e85a0c7a837be2c29d001e62434253ac10fdf3f2b0abb02fab6a"
+    },
+    {
+      "implementation": "Occil.WeightedVariants.sequentialCoins",
+      "public_spec": "SampLib.SequentialCoins.sequentialCoins_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch003.json",
+      "source_sha256": "fb7cccce8ce4162d8f839e3cef195414f2d2abed72f6f39e10d8cc63237d08b4"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.binomialHalfBits",
+      "public_spec": "SampLib.BinomialHalfBits.binomialHalfBits_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch003.json",
+      "source_sha256": "97ac81abdbfee3148ab6ad7c554071abf9dc0936db8e2bdb408f787908fea4cf"
+    },
+    {
+      "implementation": "Occil.poissonOne",
+      "public_spec": "SampLib.PoissonOne.poissonOne_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch003.json",
+      "source_sha256": "be9f7c42e774e57f5a2a2429b21679eaf2ea3b7fdb23c721b65b0176fc5b1f97"
+    },
+    {
+      "implementation": "Occil.poissonRational",
+      "public_spec": "SampLib.PoissonRational.poissonRational_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch004.json",
+      "source_sha256": "2eb51e39762c7a31e000c5eff5b9c209271d6d915ebf5ad036a3b6ffb1598a66"
+    },
+    {
+      "implementation": "Occil.Weighted.bitmaskRejection",
+      "public_spec": "SampLib.BitmaskRejection.bitmaskRejection_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch004.json",
+      "source_sha256": "e98aa456308db2f3b9143ef681144bd1e071590d61f438e7dc11adb889cf4ef4"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.compoundPoisson",
+      "public_spec": "SampLib.CompoundPoisson.compoundPoisson_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch005.json",
+      "source_sha256": "6b28cdaf07f34276bf5a5ce187e21b623a51111ea5ab1cf01a941d426af9243d"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.skellam",
+      "public_spec": "SampLib.Skellam.skellam_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch005.json",
+      "source_sha256": "f771c2542fc5c26f3b1aadf369ef43a33b1f49b2b3612d1a0e92a5f3b90ae9c8"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.neymanTypeA",
+      "public_spec": "SampLib.NeymanTypeA.neymanTypeA_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch005.json",
+      "source_sha256": "9ff44093c4c6e41368237eb8f17c9d2608fd7d1d8caa91d302034d60e8cd76eb"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.polyaAeppli",
+      "public_spec": "SampLib.PolyaAeppli.polyaAeppli_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch005.json",
+      "source_sha256": "b6427c85b7e18d3af788c8948805d57233e78ff4da5ebd07099488cfd944763a"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.zeroTruncatedPoisson",
+      "public_spec": "SampLib.ZeroTruncatedPoisson.zeroTruncatedPoisson_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch005.json",
+      "source_sha256": "bc94248df598d4001371d7fb9eaae8134b2e0a3ec53d25a7403e2af784484fbd"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.multivariatePoisson",
+      "public_spec": "SampLib.MultivariatePoisson.multivariatePoisson_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch006.json",
+      "source_sha256": "c3fc64a8636b7bbb6d0633166bc31a6cbeadc5d8b70d15307b5a44d1dbf6010f"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.logUniform",
+      "public_spec": "SampLib.LogUniform.logUniform_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch006.json",
+      "source_sha256": "b7ee2f5b1983912e261bab51e2e7bbbbf9af2c21b74e2d02fbf845bc4d5e2837"
+    },
+    {
+      "implementation": "Occil.gaussian",
+      "public_spec": "SampLib.Gaussian.gaussian_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch003.json",
+      "source_sha256": "d2560c0311bcf04cfd1d6584b3b1bc8c84f58fb19663a9739a43a832073c13cf"
+    },
+    {
+      "implementation": "Occil.orderStatistic",
+      "public_spec": "SampLib.OrderStatistic.orderStatistic_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch003.json",
+      "source_sha256": "acae4ac5f14438cc108b17d51d13a5d58cd346bea9ce2234a80298f908897575"
+    },
+    {
+      "implementation": "Occil.General.bootstrap",
+      "public_spec": "SampLib.Bootstrap.bootstrap_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch014.json",
+      "source_sha256": "956a30712df053fc85d584f3a33b583d16e5be5989e54520039da68777abf44d"
+    },
+    {
+      "implementation": "Occil.General.histogram",
+      "public_spec": "SampLib.Histogram.histogram_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch003.json",
+      "source_sha256": "6d558841f4bf0ebae7d8d346be9159078fca550f54c7e14279e365227cb56aaf"
+    },
+    {
+      "implementation": "Occil.shuffle",
+      "public_spec": "SampLib.Shuffle.shuffle_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch004.json",
+      "source_sha256": "0f4514cd7f7c1bdcf6a650a2783f4deda691bb0624e08a2724e967390ac90517"
+    },
+    {
+      "implementation": "Occil.positiveComposition",
+      "public_spec": "SampLib.PositiveComposition.positiveComposition_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch004.json",
+      "source_sha256": "5058435a1843ae05e0993aa1a6499941e83a296e03020d301c32d2614d22d016"
+    },
+    {
+      "implementation": "Occil.weakComposition",
+      "public_spec": "SampLib.WeakComposition.weakComposition_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch014.json",
+      "source_sha256": "a5180317a23214d8a172e2cced2adb271063a8b7405481d8401048f9664392f1"
+    },
+    {
+      "implementation": "Occil.General.latinHypercube1D",
+      "public_spec": "SampLib.LatinHypercube1D.latinHypercube1D_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch004.json",
+      "source_sha256": "54b652a2f69aef90683c77c8cb00c061feb370c6379f1ccf0116a41b10bda78d"
+    },
+    {
+      "implementation": "Occil.General.stratifiedBox",
+      "public_spec": "SampLib.StratifiedBox.stratifiedBox_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch004.json",
+      "source_sha256": "d0a8dfb44a2a314857333679cc58352f71e60c7949cd9cfb9ba8c8a1cebcb91b"
+    },
+    {
+      "implementation": "Occil.General.classifiedModel",
+      "public_spec": "SampLib.ClassifiedModel.classifiedModel_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch004.json",
+      "source_sha256": "e7a08d296095f9d345a663f764751113ad1297e567c695c3b3ac553a467e721f"
+    },
+    {
+      "implementation": "Occil.General.markovChain",
+      "public_spec": "SampLib.MarkovChain.markovChain_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch005.json",
+      "source_sha256": "325114027310e598ac3353f76dd5d3abd357f3c3e135e01b1ec9e2b197a74b89"
+    },
+    {
+      "implementation": "Occil.General.randomMap",
+      "public_spec": "SampLib.RandomMap.randomMap_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch005.json",
+      "source_sha256": "ad246faf6c0f3f6e0abedde83e0c60e525b434a18a90bcd62cb25fbebda62d5a"
+    },
+    {
+      "implementation": "Occil.General.randomWalkPath",
+      "public_spec": "SampLib.RandomWalkPath.randomWalkPath_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch005.json",
+      "source_sha256": "ba9d7ec6065201c56b3db93b40a538d2fcb014c0e5511592a84f0af6dd2c76e4"
+    },
+    {
+      "implementation": "Occil.sattolo",
+      "public_spec": "SampLib.Sattolo.sattolo_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch005.json",
+      "source_sha256": "c6c14ee66401d97d278cfcf989c0e2fa75e9510806ffa2db736cbc974fd2d9e0"
+    },
+    {
+      "implementation": "Occil.General.permutationSamples",
+      "public_spec": "SampLib.PermutationSamples.permutationSamples_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch014.json",
+      "source_sha256": "53464b5e71f22c0727df6396129c076d3c3dd59093ccaf6819be929c8bab960e"
+    },
+    {
+      "implementation": "Occil.General.stoppedMinimum",
+      "public_spec": "SampLib.StoppedMinimum.stoppedMinimum_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch006.json",
+      "source_sha256": "d5f0aa4a5705791bd6fd0554805175a678c8089ce901b1cece72460c6c4874ea"
+    },
+    {
+      "implementation": "Occil.General.stoppedMaximum",
+      "public_spec": "SampLib.StoppedMaximum.stoppedMaximum_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch006.json",
+      "source_sha256": "07c2d640a020966e62d1c500df0203b1ec8ceab60183ed355b17319c7e2dac61"
+    },
+    {
+      "implementation": "Occil.General.markovTrajectory",
+      "public_spec": "SampLib.MarkovTrajectory.markovTrajectory_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch006.json",
+      "source_sha256": "c6cf78318eb965b24bee06db9de9525bc574a29c9b85c00140190625242f34c3"
+    },
+    {
+      "implementation": "Occil.General.gibbsSweep",
+      "public_spec": "SampLib.GibbsSweep.gibbsSweep_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch006.json",
+      "source_sha256": "40bde9224d47fc40567ae2cf8d741184fb2249fa68d222b61887d83ce607feb3"
+    },
+    {
+      "implementation": "Occil.General.randomScanGibbs",
+      "public_spec": "SampLib.RandomScanGibbs.randomScanGibbs_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch006.json",
+      "source_sha256": "5d86ec27826d03cea4b152e40b9b5b56013bcb2c47273b55d2ccdbef382a4c17"
+    },
+    {
+      "implementation": "Occil.randomGraph",
+      "public_spec": "SampLib.RandomGraph.randomGraph_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch007.json",
+      "source_sha256": "11292da042163e305e7dc3674921f178a6659e475a88313fe8883053674912a5"
+    },
+    {
+      "implementation": "Occil.reservoir",
+      "public_spec": "SampLib.Reservoir.reservoir_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch007.json",
+      "source_sha256": "77cac185eaa5cc46d11b5fb0fb261d80fc98388dd7684d0c984628e307814643"
+    },
+    {
+      "implementation": "Occil.Weighted.weightedReservoirOne",
+      "public_spec": "SampLib.WeightedReservoirOne.weightedReservoirOne_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch007.json",
+      "source_sha256": "5601626f681bdede30b4d8c3a2e2cb76022d46cb5ecdc901cf616a0c5c2e428d"
+    },
+    {
+      "implementation": "Occil.WeightedVariants.divisionRejection",
+      "public_spec": "SampLib.DivisionRejection.divisionRejection_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch007.json",
+      "source_sha256": "2af2a3374cc3912680a884b57c13e151178fe2c24328810d3714fcb6eae6ab46"
+    },
+    {
+      "implementation": "Occil.WeightedVariants.debiasedModulo",
+      "public_spec": "SampLib.DebiasedModulo.debiasedModulo_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch007.json",
+      "source_sha256": "3e4157f707f0e7f6e069f737aa9adcd7e0eb88d97862c372b4e805617772d91e"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.expMinusPolynomial",
+      "public_spec": "SampLib.ExpMinusPolynomial.expMinusPolynomial_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch007.json",
+      "source_sha256": "8cba09c7d9df2a528b87da1177530f75d113c566dafe23cc9dc43c2694700401"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.binomialBinary",
+      "public_spec": "SampLib.BinomialBinary.binomialBinary_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch008.json",
+      "source_sha256": "c2096b4455fda295a0a35f6c468a3170e565d64fed848d480b26829270ba3241"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.cub",
+      "public_spec": "SampLib.Cub.cub_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch008.json",
+      "source_sha256": "3cea9623db2ce30039e9d8ad3e7e9f8b7bfb3150096d0aa041d061ffe3d3a4ff"
+    },
+    {
+      "implementation": "Occil.WeightedVariants.flatChoice",
+      "public_spec": "SampLib.FlatChoice.flatChoice_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch008.json",
+      "source_sha256": "951a35be657b4ad22aed1f6c16b4be307f0b8cbfbd68d8ef1f7728266bee1134"
+    },
+    {
+      "implementation": "Occil.WeightedVariants.lemireUniform",
+      "public_spec": "SampLib.LemireUniform.lemireUniform_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch008.json",
+      "source_sha256": "2519ea9ff74a47d4b00ce4002877dc4bcdb8a1f61dadc28d8f476a10874cbf3c"
+    },
+    {
+      "implementation": "Occil.General.permutationTest",
+      "public_spec": "SampLib.PermutationTest.permutationTest_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch008.json",
+      "source_sha256": "0aff291aaf7730f2e2e4c905c6af9c79ffe8fe1125b139951ea04cf5ceb25f21"
+    },
+    {
+      "implementation": "Occil.General.groupedPermutation",
+      "public_spec": "SampLib.GroupedPermutation.groupedPermutation_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch014.json",
+      "source_sha256": "6cc32439970ff242db046d927c763a63a575796294ecd6fb130982550d15364c"
+    },
+    {
+      "implementation": "Occil.General.pdfRejection",
+      "public_spec": "SampLib.PdfRejection.pdfRejection_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch008.json",
+      "source_sha256": "1c6f54b2a5b19d630dbe51bc304d938e9ddf3426be7ca786bf1df99a0263bff1"
+    },
+    {
+      "implementation": "Occil.General.latinHypercube",
+      "public_spec": "SampLib.LatinHypercube.latinHypercube_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch014.json",
+      "source_sha256": "001e20c468e643193ccfa67ca2b88bf9f287942822ac0ced86b436da8fc4e6d7"
+    },
+    {
+      "implementation": "Occil.General.inverseCDF",
+      "public_spec": "SampLib.InverseCDF.inverseCDF_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch008.json",
+      "source_sha256": "9107835711d0cd008ce22beb05f24cdf68cb4e18d9977ce46557c27f4a2365b1"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.gambler",
+      "public_spec": "SampLib.Gambler.gambler_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch008.json",
+      "source_sha256": "96051929ca36be00f5621dfe3c9f115cbb5b9dba62ddeeda82aeb81783166102"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.highPowerLogistic",
+      "public_spec": "SampLib.HighPowerLogistic.highPowerLogistic_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch008.json",
+      "source_sha256": "9fba2d8163cd1ca545a5817d9bbdbc2ccf4e8e99713e6cf6118968b989b17ec6"
+    },
+    {
+      "implementation": "Occil.Constants.generalizedContinuedFraction",
+      "public_spec": "SampLib.ContinuedFraction.generalizedContinuedFraction_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch008.json",
+      "source_sha256": "435da1dee8143eeee043d19206a18e9aa5070a6be3f5ebf23a6205a9bdd3738f"
+    },
+    {
+      "implementation": "Occil.Constants.continuedFraction",
+      "public_spec": "SampLib.SimpleContinuedFraction.continuedFraction_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch008.json",
+      "source_sha256": "caff3c69915b75a158f6f3f898d1fa95eaebbb17f6b488925045def42c3b7954"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.borel",
+      "public_spec": "SampLib.Borel.borel_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch009.json",
+      "source_sha256": "17f74a5ab0c282992a7af40216e79c041ebe5417906c8a58e0e2d93f4952ae4a"
+    },
+    {
+      "implementation": "Occil.WeightedVariants.oneillUniform",
+      "public_spec": "SampLib.OneillUniform.oneillUniform_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch009.json",
+      "source_sha256": "96438d9aeca9dc85777d138afcd513cc34b1125b4ed8d8e26c6033f76a3991a8"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.fisherHypergeometric",
+      "public_spec": "SampLib.FisherHypergeometric.fisherHypergeometric_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch009.json",
+      "source_sha256": "958e20723d8bb8893f5b1990b4bd4f12375ecd5e6b5216c1693eb25372753a97"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.linear",
+      "public_spec": "SampLib.LinearFactory.linear_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch009.json",
+      "source_sha256": "d78b257680aad04d2c86dfc2dff2637e43f0c58498854591c0f332ff03801fbd"
+    },
+    {
+      "implementation": "Occil.Constants.fromBounds",
+      "public_spec": "SampLib.FromBounds.fromBounds_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch009.json",
+      "source_sha256": "97156688eab76f1cc68b6133644379c70c2235af88fda37c8f68dad2c38c408c"
+    },
+    {
+      "implementation": "Occil.logOnePlusFactory",
+      "public_spec": "SampLib.LogOnePlusFactory.logOnePlusFactory_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch009.json",
+      "source_sha256": "13a45d6cd5658d4d81fa88f9fe9cf916d1e08a7df1708eb9240b23ad406ba711"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.complementLogOnePlus",
+      "public_spec": "SampLib.ComplementLogOnePlus.complementLogOnePlus_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch009.json",
+      "source_sha256": "0c3881cc35fbf4b91baf90ef9e0805b1e1b0c4802132e487797f07613987b6ad"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.logarithmicSeries",
+      "public_spec": "SampLib.LogarithmicSeries.logarithmicSeries_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch010.json",
+      "source_sha256": "cde06a1dd5ea7b2177574b821b682af14aa1db308d506b814c9e87b7c5628f79"
+    },
+    {
+      "implementation": "Occil.multinomial",
+      "public_spec": "SampLib.Multinomial.multinomial_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch010.json",
+      "source_sha256": "218fdbd92c2d4cde984f012821d8cc4d547c885d7f0d3e6b696d015c41808787"
+    },
+    {
+      "implementation": "Occil.weightedWithoutReplacement",
+      "public_spec": "SampLib.WeightedWithoutReplacement.weightedWithoutReplacement_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch010.json",
+      "source_sha256": "e28c30c97b1502a30cd4aae296d900be94bc58261047a1bc87e25454ecbfe7f1"
+    },
+    {
+      "implementation": "Occil.Weighted.cumulativeDraw",
+      "public_spec": "SampLib.CumulativeDraw.cumulativeDraw_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch010.json",
+      "source_sha256": "f241a767a4bf46eaa619a7a4968f97b957174f5ddd1c248f9464181b50a3c7c6"
+    },
+    {
+      "implementation": "Occil.Weighted.cumulativeChoice",
+      "public_spec": "SampLib.CumulativeChoice.cumulativeChoice_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch015.json",
+      "source_sha256": "2937a52a25c464a1ca82748aaa9c6093104d675b7a735efa24328b0766a544ac"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.linearPower",
+      "public_spec": "SampLib.LinearPower.linearPower_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch010.json",
+      "source_sha256": "a750afb64fab584805fb393de66c420a6f50c9ee0a31e34fb5ae5e7b969e23ab"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.addition",
+      "public_spec": "SampLib.Addition.addition_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch010.json",
+      "source_sha256": "9e4cce8eb3dccc2ef9a1427a8e0415e7732dad0eb36f4fb44589c4f575b89763"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.subtraction",
+      "public_spec": "SampLib.Subtraction.subtraction_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch010.json",
+      "source_sha256": "40b20f54cb53685cf42fc128ce118ecedf4db8776e5bfc4db7555f76e0c612e0"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.division",
+      "public_spec": "SampLib.Division.division_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch010.json",
+      "source_sha256": "8315b402a0db1f1aa8f7c70a4b2af6aa59fb0b37febd6c5785cab1993cab2208"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.affine",
+      "public_spec": "SampLib.AffineFactory.affine_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch010.json",
+      "source_sha256": "f1b6c2db9780d4f2d03239b56bf01c200f0de380172c934a488e1aaf81fa0b98"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.affineRatio",
+      "public_spec": "SampLib.AffineRatio.affineRatio_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch010.json",
+      "source_sha256": "ed5f4dbcdf14520af20452fdee73778bc97c0fea13575eee20038f9c91b3629b"
+    },
+    {
+      "implementation": "Occil.uniformFromModulus",
+      "public_spec": "SampLib.UniformFromModulus.uniformFromModulus_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch011.json",
+      "source_sha256": "c76650f505e2b92a3c80faa3bcfb7fa0582917fad1277a17b3a39e09f821d214"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.negativeMultinomial",
+      "public_spec": "SampLib.NegativeMultinomial.negativeMultinomial_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch011.json",
+      "source_sha256": "f1768bd9b2b6237a13614f611f988303273bab590029b8670fca792136be2915"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.walleniusHypergeometric",
+      "public_spec": "SampLib.WalleniusHypergeometric.walleniusHypergeometric_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch011.json",
+      "source_sha256": "128d4f9fca452622afd7bc8b251945ed8cc2dc5469e1ab28a9c28b19f6d3441f"
+    },
+    {
+      "implementation": "Occil.derangement",
+      "public_spec": "SampLib.Derangement.derangement_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch009.json",
+      "source_sha256": "6be6a343ce2eceae56770d8b2ddfdbdb5cfc7a8e027a776e5389cf0047bff0be"
+    },
+    {
+      "implementation": "Occil.General.metropolisHastings",
+      "public_spec": "SampLib.CountableMetropolisHastings.metropolisHastings_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch013.json",
+      "source_sha256": "4e53af8d7f867c61364a0b0d4c03aed17ddb5a2f62bcd4107602e999a45041c7"
+    },
+    {
+      "implementation": "Occil.General.metropolis",
+      "public_spec": "SampLib.CountableMetropolis.metropolis_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch013.json",
+      "source_sha256": "710ca1317bbd3617847846e130f307f0b5fe5c3a0e07f58db8b7cf01d028fc14"
+    },
+    {
+      "implementation": "Occil.General.discreteCDF",
+      "public_spec": "SampLib.DiscreteCDF.discreteCDF_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch010.json",
+      "source_sha256": "b1c8a458be2afe4d796e6790970bca315a3ae4dba85938b2693660ec7082a4df"
+    },
+    {
+      "implementation": "Occil.General.piecewiseConstant",
+      "public_spec": "SampLib.PiecewiseConstant.piecewiseConstant_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch010.json",
+      "source_sha256": "886bcb24450ee388b76dafc6627663bbff180c4b13bf28871a931c45773f97f4"
+    },
+    {
+      "implementation": "Occil.General.piecewiseLinear",
+      "public_spec": "SampLib.PiecewiseLinear.piecewiseLinear_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch010.json",
+      "source_sha256": "77329e3878396e8ca101a6c2757a9cccd98e74db08d2ce106f08d9618ded5b90"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.epsilonDivision",
+      "public_spec": "SampLib.EpsilonDivision.epsilonDivision_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch011.json",
+      "source_sha256": "08eeccbe2344402f389c0b0e0f2f8c6b94a0c39bff7cf5350e09574302f860a9"
+    },
+    {
+      "implementation": "Occil.factorialSeriesFactory",
+      "public_spec": "SampLib.FactorialSeriesFactory.factorialSeriesFactory_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch011.json",
+      "source_sha256": "4318eeb63c71d71f583ca00eeddd7848f8d571b8168e02662664e98b435da06b"
+    },
+    {
+      "implementation": "Occil.expMinusMartingale",
+      "public_spec": "SampLib.ExpMinusMartingale.expMinusMartingale_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch011.json",
+      "source_sha256": "0eb9640bc00e3d0aefc6025e008feda2f600f88bc70e8dfe1b4096ba5e6811ff"
+    },
+    {
+      "implementation": "Occil.cosineFactory",
+      "public_spec": "SampLib.CosineFactory.cosineFactory_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch011.json",
+      "source_sha256": "f66ed2215b9e0093674f8d3347746fcea8502011bcce95d0af61c24c5edc851a"
+    },
+    {
+      "implementation": "Occil.sineFactory",
+      "public_spec": "SampLib.SineFactory.sineFactory_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch011.json",
+      "source_sha256": "9de1cb4b90737c097551bbd929e5b79b1a4ddd1bbfaaf7e17c16ccd1b21264a5"
+    },
+    {
+      "implementation": "Occil.Weighted.rationalChoice",
+      "public_spec": "SampLib.RationalChoice.rationalChoice_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch015.json",
+      "source_sha256": "f00ed8bd4d4c6855cd638a2e9483abc0abcf7aa8bcea9ed03e8647a3ef187b03"
+    },
+    {
+      "implementation": "Occil.Weighted.uniformBinaryFloat",
+      "public_spec": "SampLib.UniformBinaryFloat.uniformBinaryFloat_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch012.json",
+      "source_sha256": "3c0aedda462e07b3cade01880c97642507a658e2b61f020ad1642455129c3696"
+    },
+    {
+      "implementation": "Occil.General.couplingFromPast",
+      "public_spec": "SampLib.CouplingFromPast.couplingFromPast_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch011.json",
+      "source_sha256": "eec44bd582231647a80c26d6906c39d32da7cec43f7d8a623728d9f9781607a0"
+    },
+    {
+      "implementation": "Occil.General.perfectFiniteChain",
+      "public_spec": "SampLib.PerfectFiniteChain.perfectFiniteChain_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch011.json",
+      "source_sha256": "f13495eb91efbd736c430ffb75b765ef9fab0769b6aaad43df0dd349031eb0ac"
+    },
+    {
+      "implementation": "Occil.General.sliceSampler",
+      "public_spec": "SampLib.SliceSampler.sliceSampler_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch011.json",
+      "source_sha256": "6cd79f2b06ba93bedb3e45400e7f2b7f81008895d0a42db13be0e7e646bd8b59"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.walleniusMultivariate",
+      "public_spec": "SampLib.WalleniusMultivariate.walleniusMultivariate_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch012.json",
+      "source_sha256": "4dbde6c433c43d1346c72d969173574f84cc811ccf57fcf914bdc773778d765c"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.multivariateHypergeometric",
+      "public_spec": "SampLib.MultivariateHypergeometric.multivariateHypergeometric_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch012.json",
+      "source_sha256": "0ad699aff59a92c31183940c5bec70f73177b818b5da4990b64acd6b502b8176"
+    },
+    {
+      "implementation": "Occil.WeightedVariants.voseSamples",
+      "public_spec": "SampLib.VoseSamples.voseSamples_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch012.json",
+      "source_sha256": "d2c59e6f15a65728c719d8dfd9303edaf7acaf99846f9e2c113bd7c74c016670"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.expMinusShifted",
+      "public_spec": "SampLib.ExpMinusShifted.expMinusShifted_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch012.json",
+      "source_sha256": "4a58c7953a2158338266e73795b579bbc0f8c4061846bc2dcaed3188bb688f25"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.tanhHalfShifted",
+      "public_spec": "SampLib.TanhHalfShifted.tanhHalfShifted_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch012.json",
+      "source_sha256": "e99dc2da9718a54629647cdb79d773ff3b0626d8c13826d3729816c94ff2ecb5"
+    },
+    {
+      "implementation": "Occil.FactoryExtra.expMinusShiftPower",
+      "public_spec": "SampLib.ExpMinusShiftPower.expMinusShiftPower_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch012.json",
+      "source_sha256": "4b26485154438a21799dc1ed7b48dc588046242a8f7742cede5d70d339539d28"
+    },
+    {
+      "implementation": "Occil.Constants.fromApproximateDigits",
+      "public_spec": "SampLib.FromApproximateDigits.fromApproximateDigits_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch012.json",
+      "source_sha256": "a407752f4a38057030a98d97a5c4bdad271dd51daaf5f3c2a4fadf459270e456"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.fisherMultivariate",
+      "public_spec": "SampLib.FisherMultivariate.fisherMultivariate_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch013.json",
+      "source_sha256": "132ffcee7fdca3a9c73103190ca2d4953eb99b553cc5a3a38b1f2838c0eece7b"
+    },
+    {
+      "implementation": "Occil.WeightedVariants.twoLevelChoice",
+      "public_spec": "SampLib.TwoLevelChoice.twoLevelChoice_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch013.json",
+      "source_sha256": "1ea1cd5dc891be211b307ce3670cfd2c25c726839a13823d05754d3bebce02d2"
+    },
+    {
+      "implementation": "Occil.Weighted.fyky",
+      "public_spec": "SampLib.FYKY.fyky_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch013.json",
+      "source_sha256": "a277b34bbb9b81d547ba3c5a9a975f119ea6288d62ca92cf3f9a2aaffb3869f4"
+    },
+    {
+      "implementation": "Occil.DiscreteExtra.discreteLaplace",
+      "public_spec": "SampLib.DiscreteLaplace.discreteLaplace_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch014.json",
+      "source_sha256": "cfba7e6140bc8a0e11b646fe6e830e80961a927c7fa3f5aff65c908fe1dbc55d"
+    },
+    {
+      "implementation": "Occil.WeightedVariants.floatingMultiply",
+      "public_spec": "SampLib.FloatingMultiply.floatingMultiply_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch014.json",
+      "source_sha256": "b6775a103c59a6c33dc6c4681787ea4a7d8c997bffd85032c7d336bb030ed86d"
+    },
+    {
+      "implementation": "Occil.fastDiceRoller",
+      "public_spec": "SampLib.FastDiceRoller.fastDiceRoller_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch014.json",
+      "source_sha256": "63a857ab1a5c083342b54deba9fc3d32e6ef7c367b78b48c400365b6e316907b"
+    },
+    {
+      "implementation": "Occil.WeightedVariants.fenwickDraw",
+      "public_spec": "SampLib.FenwickDraw.fenwickDraw_ownedDistSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch013.json",
+      "source_sha256": "53a2b46d0d4862d87b0f5a789e24089f54eaad30f4344acc0bba23501f8ba75c"
+    },
+    {
+      "implementation": "Occil.Constants.eScaled",
+      "public_spec": "SampLib.EScaled.eScaled_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch014.json",
+      "source_sha256": "d1c75b7fb5cd86c94ae1d7a15fef9e2aa813b3a3877f6fb8763143c09adb3fae"
+    },
+    {
+      "implementation": "Occil.Constants.eOverPi",
+      "public_spec": "SampLib.EulerPi.eOverPi_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch014.json",
+      "source_sha256": "a8b6512a2cdafa3cda5b44568fbcda820fa5038ca71560c8fde39669437f9b6d"
+    },
+    {
+      "implementation": "Occil.Constants.piAffine",
+      "public_spec": "SampLib.PiAffine.piAffine_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch014.json",
+      "source_sha256": "c1497eb78b768423b0a7452fb7283ba334a5f684f76fc8e5da3c2fbe6ad4909c"
+    },
+    {
+      "implementation": "Occil.Constants.reciprocalPiScaled",
+      "public_spec": "SampLib.ReciprocalPiScaled.reciprocalPiScaled_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch014.json",
+      "source_sha256": "443138301d6fe1c2c51c33b6df1ac5ff324f2020434b450c048ff1ceeb2da2f3"
+    },
+    {
+      "implementation": "Occil.Constants.inverseEPlusRational",
+      "public_spec": "SampLib.InverseEPlusRational.inverseEPlusRational_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch014.json",
+      "source_sha256": "c0280c95a1e361c0b2fcc56c7cd742228ad0d10c1586e23ac7910ffb22656fbe"
+    },
+    {
+      "implementation": "Occil.Constants.exponentialRationalProduct",
+      "public_spec": "SampLib.ExponentialRationalProduct.exponentialRationalProduct_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch014.json",
+      "source_sha256": "ae48794e76a214d1c18ff7133684a0a49ec7de4b86a71da5ed37b34d87a54fae"
+    },
+    {
+      "implementation": "Occil.Constants.fromPositiveSeries",
+      "public_spec": "SampLib.FromPositiveSeries.fromPositiveSeries_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch014.json",
+      "source_sha256": "c38c051028f77b0fd3ab6aac637349975217acf9a7e984ee8c5ed03eaa4d9c92"
+    },
+    {
+      "implementation": "Occil.Constants.threeZetaThreeOverFour",
+      "public_spec": "SampLib.ZetaThree.threeZetaThreeOverFour_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch014.json",
+      "source_sha256": "88fed07bacda9b5489827b3ab120ff49885a8da01c8e311c5839f59ab4400317"
+    },
+    {
+      "implementation": "Occil.aliasSamples",
+      "public_spec": "SampLib.AliasSamples.aliasSamples_distSpec",
+      "review_receipt": "agent-docs/reviews/ExpansionStructuredBatch014.json",
+      "source_sha256": "a56a0fb056272598612fb0576f434680c85b76ef44727620e517e072b93700b5"
+    }
+  ],
+  "limits": "The gate checks compiled signatures, axioms, snapshots and reproducible callers; independent source review establishes intended laws, domains and protocol quality. Ideal ProbLang proofs do not verify Float rounding.",
+  "latest_batch": {
+    "added_sampler_count": 169,
+    "baseline_sampler_count": 47,
+    "samplers": [
+      "Occil.FactoryExtra.oneDivTwoMinus",
+      "Occil.FactoryExtra.reciprocalLogistic",
+      "Occil.FactoryExtra.integralMixture",
+      "Occil.General.generativeModel",
+      "Occil.General.inverseQuantile",
+      "Occil.General.kernelDensity",
+      "Occil.General.uniformBoxPoint",
+      "Occil.flipBits",
+      "Occil.DiscreteExtra.betaBinomial",
+      "Occil.Weighted.randomBits",
+      "Occil.DiscreteExtra.symmetricGeometric",
+      "Occil.FactoryExtra.positivePowerSeries",
+      "Occil.FactoryExtra.complementPowerSeries",
+      "Occil.FactoryExtra.complementLogInverse",
+      "Occil.FactoryExtra.convexCombination",
+      "Occil.FactoryExtra.oddsProduct",
+      "Occil.Constants.fromDigits",
+      "Occil.expMinusRational",
+      "Occil.FactoryExtra.approximateFactory",
+      "Occil.General.stoppedSum",
+      "Occil.General.episodes",
+      "Occil.General.kernelDensityVector",
+      "Occil.General.stratified1D",
+      "Occil.General.randomString",
+      "Occil.General.randomDateTime",
+      "Occil.expHalfCoin",
+      "Occil.gaussianInteger",
+      "Occil.FactoryExtra.polylogarithm",
+      "Occil.Constants.algebraicRoot",
+      "Occil.Constants.inverseGoldenRatio",
+      "Occil.FactoryExtra.sigmoidDerivative",
+      "Occil.FactoryExtra.sigmoidRational",
+      "Occil.FactoryExtra.logisticExp",
+      "Occil.FactoryExtra.exponentialRatio",
+      "Occil.FactoryExtra.tanhRational",
+      "Occil.FactoryExtra.reciprocalAffine",
+      "Occil.FactoryExtra.reciprocalAffinePower",
+      "Occil.FactoryExtra.inverseQuadratic",
+      "Occil.Constants.sqrtTwoMinusOne",
+      "Occil.Constants.inverseSqrtTwo",
+      "Occil.Constants.goldenFamily",
+      "Occil.FactoryExtra.offsetRace",
+      "Occil.FactoryExtra.logOverAffine",
+      "Occil.expMinusFactory",
+      "Occil.FactoryExtra.expTimesComplement",
+      "Occil.FactoryExtra.reciprocalExpAffine",
+      "Occil.FactoryExtra.expMinusScaled",
+      "Occil.FactoryExtra.tanhScaled",
+      "Occil.FactoryExtra.sigmoidScaled",
+      "Occil.FactoryExtra.exponentialTwist",
+      "Occil.FactoryExtra.twoCoin",
+      "Occil.Weighted.uniformRational",
+      "Occil.Weighted.uniformFixed",
+      "Occil.Weighted.uniformDyadic",
+      "Occil.DiscreteExtra.negativeHypergeometric",
+      "Occil.DiscreteExtra.himanshu",
+      "Occil.Weighted.moduloReduction",
+      "Occil.Weighted.multiplyShift",
+      "Occil.WeightedVariants.sequentialCoins",
+      "Occil.DiscreteExtra.binomialHalfBits",
+      "Occil.poissonOne",
+      "Occil.poissonRational",
+      "Occil.Weighted.bitmaskRejection",
+      "Occil.DiscreteExtra.compoundPoisson",
+      "Occil.DiscreteExtra.skellam",
+      "Occil.DiscreteExtra.neymanTypeA",
+      "Occil.DiscreteExtra.polyaAeppli",
+      "Occil.DiscreteExtra.zeroTruncatedPoisson",
+      "Occil.DiscreteExtra.multivariatePoisson",
+      "Occil.DiscreteExtra.logUniform",
+      "Occil.gaussian",
+      "Occil.orderStatistic",
+      "Occil.General.bootstrap",
+      "Occil.General.histogram",
+      "Occil.shuffle",
+      "Occil.positiveComposition",
+      "Occil.weakComposition",
+      "Occil.General.latinHypercube1D",
+      "Occil.General.stratifiedBox",
+      "Occil.General.classifiedModel",
+      "Occil.General.markovChain",
+      "Occil.General.randomMap",
+      "Occil.General.randomWalkPath",
+      "Occil.sattolo",
+      "Occil.General.permutationSamples",
+      "Occil.General.stoppedMinimum",
+      "Occil.General.stoppedMaximum",
+      "Occil.General.markovTrajectory",
+      "Occil.General.gibbsSweep",
+      "Occil.General.randomScanGibbs",
+      "Occil.randomGraph",
+      "Occil.reservoir",
+      "Occil.Weighted.weightedReservoirOne",
+      "Occil.WeightedVariants.divisionRejection",
+      "Occil.WeightedVariants.debiasedModulo",
+      "Occil.FactoryExtra.expMinusPolynomial",
+      "Occil.DiscreteExtra.binomialBinary",
+      "Occil.DiscreteExtra.cub",
+      "Occil.WeightedVariants.flatChoice",
+      "Occil.WeightedVariants.lemireUniform",
+      "Occil.General.permutationTest",
+      "Occil.General.groupedPermutation",
+      "Occil.General.pdfRejection",
+      "Occil.General.latinHypercube",
+      "Occil.General.inverseCDF",
+      "Occil.FactoryExtra.gambler",
+      "Occil.FactoryExtra.highPowerLogistic",
+      "Occil.Constants.generalizedContinuedFraction",
+      "Occil.Constants.continuedFraction",
+      "Occil.DiscreteExtra.borel",
+      "Occil.WeightedVariants.oneillUniform",
+      "Occil.DiscreteExtra.fisherHypergeometric",
+      "Occil.FactoryExtra.linear",
+      "Occil.Constants.fromBounds",
+      "Occil.logOnePlusFactory",
+      "Occil.FactoryExtra.complementLogOnePlus",
+      "Occil.DiscreteExtra.logarithmicSeries",
+      "Occil.multinomial",
+      "Occil.weightedWithoutReplacement",
+      "Occil.Weighted.cumulativeDraw",
+      "Occil.Weighted.cumulativeChoice",
+      "Occil.FactoryExtra.linearPower",
+      "Occil.FactoryExtra.addition",
+      "Occil.FactoryExtra.subtraction",
+      "Occil.FactoryExtra.division",
+      "Occil.FactoryExtra.affine",
+      "Occil.FactoryExtra.affineRatio",
+      "Occil.uniformFromModulus",
+      "Occil.DiscreteExtra.negativeMultinomial",
+      "Occil.DiscreteExtra.walleniusHypergeometric",
+      "Occil.derangement",
+      "Occil.General.metropolisHastings",
+      "Occil.General.metropolis",
+      "Occil.General.discreteCDF",
+      "Occil.General.piecewiseConstant",
+      "Occil.General.piecewiseLinear",
+      "Occil.FactoryExtra.epsilonDivision",
+      "Occil.factorialSeriesFactory",
+      "Occil.expMinusMartingale",
+      "Occil.cosineFactory",
+      "Occil.sineFactory",
+      "Occil.Weighted.rationalChoice",
+      "Occil.Weighted.uniformBinaryFloat",
+      "Occil.General.couplingFromPast",
+      "Occil.General.perfectFiniteChain",
+      "Occil.General.sliceSampler",
+      "Occil.DiscreteExtra.walleniusMultivariate",
+      "Occil.DiscreteExtra.multivariateHypergeometric",
+      "Occil.WeightedVariants.voseSamples",
+      "Occil.FactoryExtra.expMinusShifted",
+      "Occil.FactoryExtra.tanhHalfShifted",
+      "Occil.FactoryExtra.expMinusShiftPower",
+      "Occil.Constants.fromApproximateDigits",
+      "Occil.DiscreteExtra.fisherMultivariate",
+      "Occil.WeightedVariants.twoLevelChoice",
+      "Occil.Weighted.fyky",
+      "Occil.DiscreteExtra.discreteLaplace",
+      "Occil.WeightedVariants.floatingMultiply",
+      "Occil.fastDiceRoller",
+      "Occil.WeightedVariants.fenwickDraw",
+      "Occil.Constants.eScaled",
+      "Occil.Constants.eOverPi",
+      "Occil.Constants.piAffine",
+      "Occil.Constants.reciprocalPiScaled",
+      "Occil.Constants.inverseEPlusRational",
+      "Occil.Constants.exponentialRationalProduct",
+      "Occil.Constants.fromPositiveSeries",
+      "Occil.Constants.threeZetaThreeOverFour",
+      "Occil.aliasSamples"
+    ],
+    "supporting_helpers_not_counted": true
+  },
+  "campaign_complete": true,
+  "expansion_additional_verified": 169,
+  "expansion_additional_minimum": 120,
+  "completion_counting_audit": {
+    "file": "agent-docs/reviews/ExpansionCompletionCountingAudit.md",
+    "sha256": "089bb87707ea5c077cff4853f38b6de9772831e6617dd853e8194ac4364bc6f5"
+  }
+}

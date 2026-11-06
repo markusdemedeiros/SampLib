@@ -1,0 +1,182 @@
+{
+  "reviewer": "/root/expand_review_discrete",
+  "accepted": [
+    {
+      "sampler": "Occil.DiscreteExtra.fisherMultivariate",
+      "proof_module": "SampLib.Samplers.FisherMultivariate",
+      "public_spec": "SampLib.FisherMultivariate.fisherMultivariate_distSpec",
+      "proof_kind": "core",
+      "sha256": "132ffcee7fdca3a9c73103190ca2d4953eb99b553cc5a3a38b1f2838c0eece7b",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch013.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/AcceptedProposal.lean": "50b48e4e04a8c984c230f5301ca090c7088abbb4f090084ec6d9dc497583a803",
+        "SampLib/Distributions/BinaryDigits.lean": "0f0566ca8ad3e73231335e9b5ceff2f8a20853e0f08caab9ad8891697e03fc8e",
+        "SampLib/Distributions/Binomial.lean": "332a0b32e0d14943ce264f1c35d85558c615bea81eec88194e5c53e20112124d",
+        "SampLib/Distributions/BinomialBinary.lean": "0ed415e550f31670e057fd1f3700ab45a911a4b7fd703f5a5ef7410c1ce26bde",
+        "SampLib/Distributions/BinomialMeasure.lean": "35eba0a09d4cf117121ca3776843a39c78048b921e3182fccb44b05083c35373",
+        "SampLib/Distributions/BinomialThinning.lean": "ccd9bb7dacc5de34badde21688c5319c594e6f87c7da9665173b90b06943f704",
+        "SampLib/Distributions/FisherMultivariate.lean": "eb9f6e601d9efe972847ac69b6ec2b2b61285cba371ceb28baeaffd2de08009a",
+        "SampLib/Distributions/Urn.lean": "ec5373077d35e99efc097e209ca8f9746bd72c9226bb6659d5076b782cd06fdd",
+        "SampLib/GeneralSyntax.lean": "3c097dd0e388f10ac683bd66d88fa3361e2d5631cebe3ab4782e70037123fdef",
+        "SampLib/IntegerPower.lean": "5e738a4f8fcb4d9a2fb783392e96eee4791009f3b34ee1f9e813ec754a1ff0d8",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/MarkovTerms.lean": "acc68951ea3e8a6fd8fca877f1d6cb3874a553761d5037888ef6d874611d0d2c",
+        "SampLib/NatCounters.lean": "041132bb64a0c8a53c2bdb929635f144b10cd1ae47ceeb2e1a6c3bfbdf65ab15",
+        "SampLib/NatUrnOps.lean": "e846b9bb2b12f9a4bff876b1773e59a4607a7e35f0bcca7a60f906d311a614bb",
+        "SampLib/ProofMode/BindFrom.lean": "c904ca958308f8d434bbaffa0128cbe5ab31d72ed884886946bcac98f973db54",
+        "SampLib/SamplerTerms.lean": "57b93ff11099ac98eb55a4b4a04eeb349e58454bb9bd96d040f9c4cbc24a98be",
+        "SampLib/Samplers/Binomial.lean": "76e53294152ed9586f37315a5f27e7257faca3e9bec707ff404c6653d6a9e996",
+        "SampLib/Samplers/BinomialBinary.lean": "c2096b4455fda295a0a35f6c468a3170e565d64fed848d480b26829270ba3241",
+        "SampLib/Samplers/BinomialHalfBits.lean": "97ac81abdbfee3148ab6ad7c554071abf9dc0936db8e2bdb408f787908fea4cf",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/FisherMultivariate.lean": "132ffcee7fdca3a9c73103190ca2d4953eb99b553cc5a3a38b1f2838c0eece7b",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/RndIntExcRange.lean": "3307969caa795835b6ccc1c68db37333a6902b52859104bf27871ac96c234e51",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Syntax/ListValues.lean": "eb0b0faa8645aa926f0c1e50e03b48f9bcd0d30c7772db6f081d2b4f5a3ebdc6",
+        "SampLib/Syntax/UniformRanges.lean": "eb9205978b13185ff38d2db03fb83f82f242ec1290a557ded19d7a2eea3e739e",
+        "SampLib/Syntax/Urns.lean": "ef1ed8eb8b8535242f54d9153c6f73cabab140c2934683da4ac85fc320f7229b",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedValidation.lean": "6d06663d8a9c838913038370a3ffdccf145a2e7ebc835bdca6469a6f64ba8866",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Binomial.lean": "92e03310618dac7df9dcc34b3ea769b33776dbf09dcb7419990cb9e9af52c3a3",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Discrete/Urns.lean": "ebe8e5baf688b9d392c8857d0561156f2d51804830255ad966e889916ff9d919",
+        "code/Samplers/General/Core.lean": "589c1236ee0851f6c3e75c4edb40cd528b5ebdcb627d698d6f989a684eb08750",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb"
+      },
+      "review_notes": "The canonical law conditions independent odds-matched binomials on the requested total; its standard product-coefficient PMF, positive normalizer, support and endpoint laws were independently reviewed and tested in Batch012. The proposal builder samples each binomial once. A single accepted-proposal expectation inequality funds amplified retries after checking the sum. Actual zero and full-population shortcuts return the corresponding deterministic count vectors. The small private constructor helpers insert verified constants after structural binders, avoiding unnecessary closure traversal; the public theorem still checks the unchanged actual source. New independent callers frame arbitrary resources and arbitrary ENNReal continuations through the whole program, and exercise empty/full shortcuts with exact literal count-vector encoders."
+    },
+    {
+      "sampler": "Occil.WeightedVariants.twoLevelChoice",
+      "proof_module": "SampLib.Samplers.TwoLevelChoice",
+      "public_spec": "SampLib.TwoLevelChoice.twoLevelChoice_distSpec",
+      "proof_kind": "core",
+      "sha256": "1ea1cd5dc891be211b307ce3670cfd2c25c726839a13823d05754d3bebce02d2",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch013.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/WeightedBlocks.lean": "5021b59e201a6284ec301f746e3e97fd5c54c2a3decb18a12da8d89fe80fa6c7",
+        "SampLib/Distributions/WeightedPositiveSupport.lean": "32ee7e4ff528200c349f10161fb94da8d4bf36e874803a11c4de68bf9de1c1ae",
+        "SampLib/Distributions/WeightedSums.lean": "9760cbf10638c77224a5d061ca2ad9aa6fd55a803e0abc1d0a1819b6ffeb461e",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/Samplers/TwoLevelChoice.lean": "1ea1cd5dc891be211b307ce3670cfd2c25c726839a13823d05754d3bebce02d2",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedValidation.lean": "6d06663d8a9c838913038370a3ffdccf145a2e7ebc835bdca6469a6f64ba8866",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Choice.lean": "47363f5ebde1c9a57c62295c3e506212bb2260af59e7a29fc9897c9ec0f83691",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb"
+      },
+      "review_notes": "Consecutive chunks partition the original categorical weighted sum. Selecting a block by its total and a label by its conditional weight cancels the block total; an all-zero block contributes zero even for infinite output credits. The single expectation identity identifies the result with the independently normalized canonical WeightedChoice law. Main CTE validates, groups and totals the data, draws a supported positive block, looks it up safely and performs the conditional categorical draw. Independent tests include a leading zero-total block, a short final block, size one and size larger than the list. Infinite credits at zero-weight labels reduce to the finite expected value8/5; generic callers retain arbitrary framed resources."
+    },
+    {
+      "sampler": "Occil.Weighted.fyky",
+      "proof_module": "SampLib.Samplers.FYKY",
+      "public_spec": "SampLib.FYKY.fyky_distSpec",
+      "proof_kind": "core",
+      "sha256": "a277b34bbb9b81d547ba3c5a9a975f119ea6288d62ca92cf3f9a2aaffb3869f4",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch013.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/BitRecycler.lean": "2a2d0ac5f23a634c9dedfb6e13c9dca85a7d4c862bb97a447ba3e0aecacfce80",
+        "SampLib/Samplers/FYKY.lean": "a277b34bbb9b81d547ba3c5a9a975f119ea6288d62ca92cf3f9a2aaffb3869f4",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Uniform.lean": "435bb931a15e38eee06efcaa0667b92911932a3c0f182a568b6a19faab0a6a16"
+      },
+      "review_notes": "The public target is the independently normalized UniformInt law. Individual retained states follow finite-horizon continuation credits, rather than an incorrect per-state uniform output claim. Appending fair bits enumerates the doubled interval; the upper accepted block emits every target once and the lower residue remains narrower than the target. The aggregate credit bound leaves exponentially vanishing cutoff mass, so an arbitrary positive error budget removes the horizon. Main CTE is finite-horizon symbolic execution, using cutoff credit1 to derive contradiction, plus one initial uniform-credit bound. Independent callers cover non-power-of-two targets3 and5, arbitrary ENNReal continuations and resources, and the singleton without UniformInt. Shared tests distinguish lower and upper orientation states with infinite credit and check exact cutoff tails."
+    }
+  ],
+  "support": [
+    {
+      "module": "SampLib.Distributions.FisherMultivariate",
+      "sha256": "eb9f6e601d9efe972847ac69b6ec2b2b61285cba371ceb28baeaffd2de08009a"
+    },
+    {
+      "module": "SampLib.NatUrnOps",
+      "sha256": "e846b9bb2b12f9a4bff876b1773e59a4607a7e35f0bcca7a60f906d311a614bb"
+    },
+    {
+      "module": "SampLib.Syntax.Urns",
+      "sha256": "ef1ed8eb8b8535242f54d9153c6f73cabab140c2934683da4ac85fc320f7229b"
+    },
+    {
+      "module": "SampLib.Distributions.WeightedBlocks",
+      "sha256": "5021b59e201a6284ec301f746e3e97fd5c54c2a3decb18a12da8d89fe80fa6c7"
+    },
+    {
+      "module": "SampLib.Distributions.BitRecycler",
+      "sha256": "2a2d0ac5f23a634c9dedfb6e13c9dca85a7d4c862bb97a447ba3e0aecacfce80"
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionDiscreteBatch013Callers.lean",
+  "caller_sha256": "6a855d63b7db477c0568cb0a4c5bafcc86479b3d0100d04cab305e2964082b11"
+}

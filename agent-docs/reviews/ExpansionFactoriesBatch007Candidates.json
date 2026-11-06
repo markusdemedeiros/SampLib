@@ -1,0 +1,16 @@
+[
+  {
+    "sampler": "Occil.FactoryExtra.expMinusPolynomial",
+    "implementation": "code/Samplers/Bernoulli/Exponential.lean",
+    "proof_module": "SampLib.Samplers.ExpMinusPolynomial",
+    "owner": "/root/expand_exp_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ExpMinusPolynomial.expMinusPolynomial_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch007.md",
+    "reviewed_sha256": "8cba09c7d9df2a528b87da1177530f75d113c566dafe23cc9dc43c2694700401",
+    "reviewed_domain": "Every input bias p in [0,1] and every finite list of nonnegative rational coefficients with positive denominators, including zero coefficients and the empty list.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch007.json",
+    "algorithm_kind": "core"
+  }
+]

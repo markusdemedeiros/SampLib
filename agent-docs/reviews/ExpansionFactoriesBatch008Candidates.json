@@ -1,0 +1,58 @@
+[
+  {
+    "sampler": "Occil.FactoryExtra.gambler",
+    "implementation": "code/Samplers/Bernoulli/Linear.lean",
+    "proof_module": "SampLib.Samplers.Gambler",
+    "owner": "/root/expand_rational_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.Gambler.gambler_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch008.md",
+    "reviewed_sha256": "96051929ca36be00f5621dfe3c9f115cbb5b9dba62ddeeda82aeb81783166102",
+    "reviewed_domain": "All input biases, natural heights, and positive integer a,b; separate base theorem covers every integer height<=1 with arbitrary rational parameters and callback, without a uniform-integer assumption.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch008.json",
+    "algorithm_kind": "core"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.highPowerLogistic",
+    "implementation": "code/Samplers/Bernoulli/Linear.lean",
+    "proof_module": "SampLib.Samplers.HighPowerLogistic",
+    "owner": "/root/expand_rational_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.HighPowerLogistic.highPowerLogistic_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch008.md",
+    "reviewed_sha256": "9fba2d8163cd1ca545a5817d9bbdbc2ccf4e8e99713e6cf6118968b989b17ec6",
+    "reviewed_domain": "All input biases, natural heights, positive integer a,b; separate base theorem covers every integer height<=0 and arbitrary parameters/callback without a uniform-integer assumption.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch008.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.Constants.generalizedContinuedFraction",
+    "implementation": "code/Samplers/Constants/Engines.lean",
+    "proof_module": "SampLib.Samplers.GeneralizedContinuedFraction",
+    "owner": "/root/expand_constants",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ContinuedFraction.generalizedContinuedFraction_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch008.md",
+    "reviewed_sha256": "435da1dee8143eeee043d19206a18e9aa5070a6be3f5ebf23a6205a9bdd3738f",
+    "reviewed_domain": "All positive integer numerators bounded by their denominators, every terminal-flag sequence and natural start, with a deterministic coefficient oracle required only at positions reachable before the first terminal flag.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch008.json",
+    "algorithm_kind": "core"
+  },
+  {
+    "sampler": "Occil.Constants.continuedFraction",
+    "implementation": "code/Samplers/Constants/Engines.lean",
+    "proof_module": "SampLib.Samplers.ContinuedFraction",
+    "owner": "/root/expand_constants",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.SimpleContinuedFraction.continuedFraction_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch008.md",
+    "reviewed_sha256": "caff3c69915b75a158f6f3f898d1fa95eaebbb17f6b488925045def42c3b7954",
+    "reviewed_domain": "Every positive simple denominator sequence with arbitrary terminal flags and a deterministic oracle only on reachable indices beginning at one.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch008.json",
+    "algorithm_kind": "derived"
+  }
+]

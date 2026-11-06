@@ -1,0 +1,503 @@
+{
+  "reviewer": "/root/expand_review_factories",
+  "accepted": [
+    {
+      "sampler": "Occil.Constants.eScaled",
+      "proof_module": "SampLib.Samplers.EScaled",
+      "public_spec": "SampLib.EScaled.eScaled_distSpec",
+      "sha256": "d1c75b7fb5cd86c94ae1d7a15fef9e2aa813b3a3877f6fb8763143c09adb3fae",
+      "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch014.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/AlternatingEnclosure.lean": "ba57fa1b254371cd5576283fc672d8c3411026105be70d85e5813bc84544c070",
+        "SampLib/Distributions/BoundsKernel.lean": "209b06e0717fc9d1ef770e2c057a67d87d018e73d92762729d1a9ff3bca1fda3",
+        "SampLib/Distributions/DyadicPosterior.lean": "47aee6086b85b501470624626940b55ef333d20e4bd9f21e3e698e66cad716e0",
+        "SampLib/Distributions/DyadicRefinement.lean": "b4339270ecc356a8b3fb2f8a4cd0d3f1dbf10ff6a9b4457bbd8918d32eff849c",
+        "SampLib/Distributions/EulerEnclosure.lean": "a2885bccf4c1f9dfdcf8eb53949569c84ea2d5a2e611739811ff1d7bb00478bb",
+        "SampLib/Distributions/RationalEnclosureScale.lean": "7917bedbdccff41deb3a408af5eb673481cc88d8bbe3f583b2fdfed43cedc702",
+        "SampLib/Distributions/RealEnclosure.lean": "c28e236ad54f6bf65c70339d91f6a18d393977bac360039d80cffb340892c7fb",
+        "SampLib/Samplers/EScaled.lean": "d1c75b7fb5cd86c94ae1d7a15fef9e2aa813b3a3877f6fb8763143c09adb3fae",
+        "SampLib/Samplers/EulerBounds.lean": "dba0c8435bf59d8c8acb541159041be6cc4687ce4b3479078c9985ddcd8094ce",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/FromBounds.lean": "97156688eab76f1cc68b6133644379c70c2235af88fda37c8f68dad2c38c408c",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Syntax/Exponential.lean": "39efcdde7248a98ab4d42b56a3ab6b5a7b6fa871c58df65739af241be5238f1f",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/UniformBag.lean": "623d3f68b364f412a4ab754244d618e8e180086cccf0cff391566d914bc640a4",
+        "SampLib/UniformBagBracket.lean": "b68ce24ee28e2ca9932807c5ac615cc5f0113579155404bf933d359c4a2e369a",
+        "SampLib/UniformBagComparison.lean": "0176e298a312daf987a825de79414eba19a40ee7fe32ea02b58d4702b04119eb",
+        "SampLib/UniformBagLess.lean": "90f4390bbbc3560958d7f466e0a2d523716a23b572e19f8fc63cd6e2ff3e4af7",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Constants/Exponential.lean": "5c93f0961eed560406601fd8f048cb01d8333506c66185a8c5231ae5e7b8f1b4",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.Constants.eOverPi",
+      "proof_module": "SampLib.Samplers.EOverPi",
+      "public_spec": "SampLib.EulerPi.eOverPi_distSpec",
+      "sha256": "a8b6512a2cdafa3cda5b44568fbcda820fa5038ca71560c8fde39669437f9b6d",
+      "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch014.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/AlternatingEnclosure.lean": "ba57fa1b254371cd5576283fc672d8c3411026105be70d85e5813bc84544c070",
+        "SampLib/Distributions/ArctanSeries.lean": "473654ec74a44a2109169e072d8408b2635e92900ac15e852044cc16f03c2f75",
+        "SampLib/Distributions/BoundsKernel.lean": "209b06e0717fc9d1ef770e2c057a67d87d018e73d92762729d1a9ff3bca1fda3",
+        "SampLib/Distributions/DyadicPosterior.lean": "47aee6086b85b501470624626940b55ef333d20e4bd9f21e3e698e66cad716e0",
+        "SampLib/Distributions/DyadicRefinement.lean": "b4339270ecc356a8b3fb2f8a4cd0d3f1dbf10ff6a9b4457bbd8918d32eff849c",
+        "SampLib/Distributions/EnclosureRatio.lean": "180ee6329b36c8075bb34176c02bd069c993aefa10d92b0086be5e17aa5132a7",
+        "SampLib/Distributions/EnclosureRatioLimits.lean": "36751170f05ebf417f7e0e321b9313db722da15af99c3bbddc438b1cb02fe12a",
+        "SampLib/Distributions/EulerEnclosure.lean": "a2885bccf4c1f9dfdcf8eb53949569c84ea2d5a2e611739811ff1d7bb00478bb",
+        "SampLib/Distributions/EulerPi.lean": "85ba54384df6484f6c8df2d66f8d9df58f042c14c89e71061936415211b0bbf9",
+        "SampLib/Distributions/PiBoundsDefs.lean": "0f3a16116d572428350301370a82848024b59fa9dab8520340d7eed8de18c9eb",
+        "SampLib/Distributions/PiBoundsState.lean": "719cb4679c2ab39a389da40daf1171f96600229b453beda04b4d680e8423de26",
+        "SampLib/Distributions/RealEnclosure.lean": "c28e236ad54f6bf65c70339d91f6a18d393977bac360039d80cffb340892c7fb",
+        "SampLib/Distributions/RealEnclosureTransforms.lean": "90deee6aa3703bae0c1519ff19cf935873074b6cff22d27bb09a85318b8a318a",
+        "SampLib/PiBounds.lean": "bed4ef3e59e4f57e6bace4b9f6cdf73f2dbdac76066792cb77a7a3cb23374ead",
+        "SampLib/ProofMode/BindFrom.lean": "c904ca958308f8d434bbaffa0128cbe5ab31d72ed884886946bcac98f973db54",
+        "SampLib/SamplerStep.lean": "a3e143551b2719b11170456de08e0c193059c00b6b8dafabe3c747c03eb52335",
+        "SampLib/Samplers/EOverPi.lean": "a8b6512a2cdafa3cda5b44568fbcda820fa5038ca71560c8fde39669437f9b6d",
+        "SampLib/Samplers/EulerBounds.lean": "dba0c8435bf59d8c8acb541159041be6cc4687ce4b3479078c9985ddcd8094ce",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/FromBounds.lean": "97156688eab76f1cc68b6133644379c70c2235af88fda37c8f68dad2c38c408c",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/UniformBag.lean": "623d3f68b364f412a4ab754244d618e8e180086cccf0cff391566d914bc640a4",
+        "SampLib/UniformBagBracket.lean": "b68ce24ee28e2ca9932807c5ac615cc5f0113579155404bf933d359c4a2e369a",
+        "SampLib/UniformBagComparison.lean": "0176e298a312daf987a825de79414eba19a40ee7fe32ea02b58d4702b04119eb",
+        "SampLib/UniformBagLess.lean": "90f4390bbbc3560958d7f466e0a2d523716a23b572e19f8fc63cd6e2ff3e4af7",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Constants/Exponential.lean": "5c93f0961eed560406601fd8f048cb01d8333506c66185a8c5231ae5e7b8f1b4",
+        "code/Samplers/Constants/Pi.lean": "4e5470114bc964873608647ad6cba63e4e46c33513d12bffe12f4f4bbd72ab09",
+        "code/Samplers/Constants/Special.lean": "e717f4e9947b8c040f5bd7bcc2c5c359e6512a6ad07709ab819a5b86f1a4e7da",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.Constants.piAffine",
+      "proof_module": "SampLib.Samplers.PiAffine",
+      "public_spec": "SampLib.PiAffine.piAffine_distSpec",
+      "sha256": "c1497eb78b768423b0a7452fb7283ba334a5f684f76fc8e5da3c2fbe6ad4909c",
+      "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch014.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/AlternatingEnclosure.lean": "ba57fa1b254371cd5576283fc672d8c3411026105be70d85e5813bc84544c070",
+        "SampLib/Distributions/ArctanSeries.lean": "473654ec74a44a2109169e072d8408b2635e92900ac15e852044cc16f03c2f75",
+        "SampLib/Distributions/BoundsKernel.lean": "209b06e0717fc9d1ef770e2c057a67d87d018e73d92762729d1a9ff3bca1fda3",
+        "SampLib/Distributions/DyadicPosterior.lean": "47aee6086b85b501470624626940b55ef333d20e4bd9f21e3e698e66cad716e0",
+        "SampLib/Distributions/DyadicRefinement.lean": "b4339270ecc356a8b3fb2f8a4cd0d3f1dbf10ff6a9b4457bbd8918d32eff849c",
+        "SampLib/Distributions/PiBoundsDefs.lean": "0f3a16116d572428350301370a82848024b59fa9dab8520340d7eed8de18c9eb",
+        "SampLib/Distributions/PiBoundsState.lean": "719cb4679c2ab39a389da40daf1171f96600229b453beda04b4d680e8423de26",
+        "SampLib/Distributions/PiProbability.lean": "8a6544240eb6b8803e90add24713d890451a5e2250d12acb3d8a3764231e78ff",
+        "SampLib/Distributions/RealEnclosure.lean": "c28e236ad54f6bf65c70339d91f6a18d393977bac360039d80cffb340892c7fb",
+        "SampLib/Distributions/RealEnclosureTransforms.lean": "90deee6aa3703bae0c1519ff19cf935873074b6cff22d27bb09a85318b8a318a",
+        "SampLib/PiBounds.lean": "bed4ef3e59e4f57e6bace4b9f6cdf73f2dbdac76066792cb77a7a3cb23374ead",
+        "SampLib/ProofMode/BindFrom.lean": "c904ca958308f8d434bbaffa0128cbe5ab31d72ed884886946bcac98f973db54",
+        "SampLib/SamplerStep.lean": "a3e143551b2719b11170456de08e0c193059c00b6b8dafabe3c747c03eb52335",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/FromBounds.lean": "97156688eab76f1cc68b6133644379c70c2235af88fda37c8f68dad2c38c408c",
+        "SampLib/Samplers/PiAffine.lean": "c1497eb78b768423b0a7452fb7283ba334a5f684f76fc8e5da3c2fbe6ad4909c",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/UniformBag.lean": "623d3f68b364f412a4ab754244d618e8e180086cccf0cff391566d914bc640a4",
+        "SampLib/UniformBagBracket.lean": "b68ce24ee28e2ca9932807c5ac615cc5f0113579155404bf933d359c4a2e369a",
+        "SampLib/UniformBagComparison.lean": "0176e298a312daf987a825de79414eba19a40ee7fe32ea02b58d4702b04119eb",
+        "SampLib/UniformBagLess.lean": "90f4390bbbc3560958d7f466e0a2d523716a23b572e19f8fc63cd6e2ff3e4af7",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Constants/Pi.lean": "4e5470114bc964873608647ad6cba63e4e46c33513d12bffe12f4f4bbd72ab09",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.Constants.reciprocalPiScaled",
+      "proof_module": "SampLib.Samplers.ReciprocalPiScaled",
+      "public_spec": "SampLib.ReciprocalPiScaled.reciprocalPiScaled_distSpec",
+      "sha256": "443138301d6fe1c2c51c33b6df1ac5ff324f2020434b450c048ff1ceeb2da2f3",
+      "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch014.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/AlternatingEnclosure.lean": "ba57fa1b254371cd5576283fc672d8c3411026105be70d85e5813bc84544c070",
+        "SampLib/Distributions/ArctanSeries.lean": "473654ec74a44a2109169e072d8408b2635e92900ac15e852044cc16f03c2f75",
+        "SampLib/Distributions/BoundsKernel.lean": "209b06e0717fc9d1ef770e2c057a67d87d018e73d92762729d1a9ff3bca1fda3",
+        "SampLib/Distributions/DyadicPosterior.lean": "47aee6086b85b501470624626940b55ef333d20e4bd9f21e3e698e66cad716e0",
+        "SampLib/Distributions/DyadicRefinement.lean": "b4339270ecc356a8b3fb2f8a4cd0d3f1dbf10ff6a9b4457bbd8918d32eff849c",
+        "SampLib/Distributions/EnclosureRatio.lean": "180ee6329b36c8075bb34176c02bd069c993aefa10d92b0086be5e17aa5132a7",
+        "SampLib/Distributions/EnclosureRatioLimits.lean": "36751170f05ebf417f7e0e321b9313db722da15af99c3bbddc438b1cb02fe12a",
+        "SampLib/Distributions/PiBoundsDefs.lean": "0f3a16116d572428350301370a82848024b59fa9dab8520340d7eed8de18c9eb",
+        "SampLib/Distributions/PiBoundsState.lean": "719cb4679c2ab39a389da40daf1171f96600229b453beda04b4d680e8423de26",
+        "SampLib/Distributions/RealEnclosure.lean": "c28e236ad54f6bf65c70339d91f6a18d393977bac360039d80cffb340892c7fb",
+        "SampLib/Distributions/RealEnclosureTransforms.lean": "90deee6aa3703bae0c1519ff19cf935873074b6cff22d27bb09a85318b8a318a",
+        "SampLib/Distributions/ReciprocalPiProbability.lean": "e235b1cef8493894770398be002af3f6b08d62b80d2f92edd12a1add7affff97",
+        "SampLib/PiBounds.lean": "bed4ef3e59e4f57e6bace4b9f6cdf73f2dbdac76066792cb77a7a3cb23374ead",
+        "SampLib/ProofMode/BindFrom.lean": "c904ca958308f8d434bbaffa0128cbe5ab31d72ed884886946bcac98f973db54",
+        "SampLib/SamplerStep.lean": "a3e143551b2719b11170456de08e0c193059c00b6b8dafabe3c747c03eb52335",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/FromBounds.lean": "97156688eab76f1cc68b6133644379c70c2235af88fda37c8f68dad2c38c408c",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/ReciprocalPiScaled.lean": "443138301d6fe1c2c51c33b6df1ac5ff324f2020434b450c048ff1ceeb2da2f3",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/UniformBag.lean": "623d3f68b364f412a4ab754244d618e8e180086cccf0cff391566d914bc640a4",
+        "SampLib/UniformBagBracket.lean": "b68ce24ee28e2ca9932807c5ac615cc5f0113579155404bf933d359c4a2e369a",
+        "SampLib/UniformBagComparison.lean": "0176e298a312daf987a825de79414eba19a40ee7fe32ea02b58d4702b04119eb",
+        "SampLib/UniformBagLess.lean": "90f4390bbbc3560958d7f466e0a2d523716a23b572e19f8fc63cd6e2ff3e4af7",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Constants/Pi.lean": "4e5470114bc964873608647ad6cba63e4e46c33513d12bffe12f4f4bbd72ab09",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.Constants.inverseEPlusRational",
+      "proof_module": "SampLib.Samplers.InverseEPlusRational",
+      "public_spec": "SampLib.InverseEPlusRational.inverseEPlusRational_distSpec",
+      "sha256": "c0280c95a1e361c0b2fcc56c7cd742228ad0d10c1586e23ac7910ffb22656fbe",
+      "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch014.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/AlternatingEnclosure.lean": "ba57fa1b254371cd5576283fc672d8c3411026105be70d85e5813bc84544c070",
+        "SampLib/Distributions/BoundsKernel.lean": "209b06e0717fc9d1ef770e2c057a67d87d018e73d92762729d1a9ff3bca1fda3",
+        "SampLib/Distributions/DyadicPosterior.lean": "47aee6086b85b501470624626940b55ef333d20e4bd9f21e3e698e66cad716e0",
+        "SampLib/Distributions/DyadicRefinement.lean": "b4339270ecc356a8b3fb2f8a4cd0d3f1dbf10ff6a9b4457bbd8918d32eff849c",
+        "SampLib/Distributions/EnclosureRatio.lean": "180ee6329b36c8075bb34176c02bd069c993aefa10d92b0086be5e17aa5132a7",
+        "SampLib/Distributions/EnclosureRatioLimits.lean": "36751170f05ebf417f7e0e321b9313db722da15af99c3bbddc438b1cb02fe12a",
+        "SampLib/Distributions/EulerEnclosure.lean": "a2885bccf4c1f9dfdcf8eb53949569c84ea2d5a2e611739811ff1d7bb00478bb",
+        "SampLib/Distributions/EulerReciprocal.lean": "6dd682ddd54ba9526d1dbba83fcc93ff3fbe5140aa36c25e7fb7124ecb930a02",
+        "SampLib/Distributions/RealEnclosure.lean": "c28e236ad54f6bf65c70339d91f6a18d393977bac360039d80cffb340892c7fb",
+        "SampLib/Distributions/RealEnclosureTransforms.lean": "90deee6aa3703bae0c1519ff19cf935873074b6cff22d27bb09a85318b8a318a",
+        "SampLib/Samplers/EulerBounds.lean": "dba0c8435bf59d8c8acb541159041be6cc4687ce4b3479078c9985ddcd8094ce",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/FromBounds.lean": "97156688eab76f1cc68b6133644379c70c2235af88fda37c8f68dad2c38c408c",
+        "SampLib/Samplers/InverseEPlusRational.lean": "c0280c95a1e361c0b2fcc56c7cd742228ad0d10c1586e23ac7910ffb22656fbe",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Syntax/Exponential.lean": "39efcdde7248a98ab4d42b56a3ab6b5a7b6fa871c58df65739af241be5238f1f",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/UniformBag.lean": "623d3f68b364f412a4ab754244d618e8e180086cccf0cff391566d914bc640a4",
+        "SampLib/UniformBagBracket.lean": "b68ce24ee28e2ca9932807c5ac615cc5f0113579155404bf933d359c4a2e369a",
+        "SampLib/UniformBagComparison.lean": "0176e298a312daf987a825de79414eba19a40ee7fe32ea02b58d4702b04119eb",
+        "SampLib/UniformBagLess.lean": "90f4390bbbc3560958d7f466e0a2d523716a23b572e19f8fc63cd6e2ff3e4af7",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Constants/Exponential.lean": "5c93f0961eed560406601fd8f048cb01d8333506c66185a8c5231ae5e7b8f1b4",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.Constants.exponentialRationalProduct",
+      "proof_module": "SampLib.Samplers.ExponentialRationalProduct",
+      "public_spec": "SampLib.ExponentialRationalProduct.exponentialRationalProduct_distSpec",
+      "sha256": "ae48794e76a214d1c18ff7133684a0a49ec7de4b86a71da5ed37b34d87a54fae",
+      "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch014.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/AlternatingEnclosure.lean": "ba57fa1b254371cd5576283fc672d8c3411026105be70d85e5813bc84544c070",
+        "SampLib/Distributions/BoundsKernel.lean": "209b06e0717fc9d1ef770e2c057a67d87d018e73d92762729d1a9ff3bca1fda3",
+        "SampLib/Distributions/DyadicPosterior.lean": "47aee6086b85b501470624626940b55ef333d20e4bd9f21e3e698e66cad716e0",
+        "SampLib/Distributions/DyadicRefinement.lean": "b4339270ecc356a8b3fb2f8a4cd0d3f1dbf10ff6a9b4457bbd8918d32eff849c",
+        "SampLib/Distributions/ExponentialBoundsKernel.lean": "8dd0fd4e0ce5dac3e899e11ffa92110125be6eeed09259195a48f098d036b886",
+        "SampLib/Distributions/ExponentialEnclosure.lean": "14dbc64c90b5b2d11c90bbec68cf4684cf186a37e2a8191cb96028a21d3b99c0",
+        "SampLib/Distributions/RationalEnclosureScale.lean": "7917bedbdccff41deb3a408af5eb673481cc88d8bbe3f583b2fdfed43cedc702",
+        "SampLib/Distributions/RealEnclosure.lean": "c28e236ad54f6bf65c70339d91f6a18d393977bac360039d80cffb340892c7fb",
+        "SampLib/Samplers/ExpMinusBounds.lean": "0210a8fc3e1cef2e3e1c33bda625f279f5ce7be5a284e91e1db083c10bf630cd",
+        "SampLib/Samplers/ExponentialRationalProduct.lean": "ae48794e76a214d1c18ff7133684a0a49ec7de4b86a71da5ed37b34d87a54fae",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/FromBounds.lean": "97156688eab76f1cc68b6133644379c70c2235af88fda37c8f68dad2c38c408c",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Syntax/Exponential.lean": "39efcdde7248a98ab4d42b56a3ab6b5a7b6fa871c58df65739af241be5238f1f",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/UniformBag.lean": "623d3f68b364f412a4ab754244d618e8e180086cccf0cff391566d914bc640a4",
+        "SampLib/UniformBagBracket.lean": "b68ce24ee28e2ca9932807c5ac615cc5f0113579155404bf933d359c4a2e369a",
+        "SampLib/UniformBagComparison.lean": "0176e298a312daf987a825de79414eba19a40ee7fe32ea02b58d4702b04119eb",
+        "SampLib/UniformBagLess.lean": "90f4390bbbc3560958d7f466e0a2d523716a23b572e19f8fc63cd6e2ff3e4af7",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Constants/Exponential.lean": "5c93f0961eed560406601fd8f048cb01d8333506c66185a8c5231ae5e7b8f1b4",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.Constants.fromPositiveSeries",
+      "proof_module": "SampLib.Samplers.FromPositiveSeries",
+      "public_spec": "SampLib.FromPositiveSeries.fromPositiveSeries_distSpec",
+      "sha256": "c38c051028f77b0fd3ab6aac637349975217acf9a7e984ee8c5ed03eaa4d9c92",
+      "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch014.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/BetaStep.lean": "0a1e17b99ace11607f7b1c4c21f95d1e5b3d213192d65c5a6fb2f78d676d5748",
+        "SampLib/Distributions/BoundsKernel.lean": "209b06e0717fc9d1ef770e2c057a67d87d018e73d92762729d1a9ff3bca1fda3",
+        "SampLib/Distributions/DyadicPosterior.lean": "47aee6086b85b501470624626940b55ef333d20e4bd9f21e3e698e66cad716e0",
+        "SampLib/Distributions/DyadicRefinement.lean": "b4339270ecc356a8b3fb2f8a4cd0d3f1dbf10ff6a9b4457bbd8918d32eff849c",
+        "SampLib/Distributions/PositiveSeries.lean": "18cb354a91af1c04c20e24770565cced9a7f25576975fa3e1b9d8c1682d4860c",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/FromPositiveSeries.lean": "c38c051028f77b0fd3ab6aac637349975217acf9a7e984ee8c5ed03eaa4d9c92",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Syntax/PositiveSeries.lean": "2a3174cd92788600de0b6bdb18e971f8308fd3bb3ecc05f6214478afc67aa3f3",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/UniformBag.lean": "623d3f68b364f412a4ab754244d618e8e180086cccf0cff391566d914bc640a4",
+        "SampLib/UniformBagBracket.lean": "b68ce24ee28e2ca9932807c5ac615cc5f0113579155404bf933d359c4a2e369a",
+        "SampLib/UniformBagChoice.lean": "ad1d3a2b20020186acda8dd82c5dc8d12b27ca866bd80e31b1e46c33298b8997",
+        "SampLib/UniformBagComparison.lean": "0176e298a312daf987a825de79414eba19a40ee7fe32ea02b58d4702b04119eb",
+        "SampLib/UniformBagLess.lean": "90f4390bbbc3560958d7f466e0a2d523716a23b572e19f8fc63cd6e2ff3e4af7",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.Constants.threeZetaThreeOverFour",
+      "proof_module": "SampLib.Samplers.ThreeZetaThreeOverFour",
+      "public_spec": "SampLib.ZetaThree.threeZetaThreeOverFour_distSpec",
+      "sha256": "88fed07bacda9b5489827b3ab120ff49885a8da01c8e311c5839f59ab4400317",
+      "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch014.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/BetaStep.lean": "0a1e17b99ace11607f7b1c4c21f95d1e5b3d213192d65c5a6fb2f78d676d5748",
+        "SampLib/Distributions/BoundsKernel.lean": "209b06e0717fc9d1ef770e2c057a67d87d018e73d92762729d1a9ff3bca1fda3",
+        "SampLib/Distributions/DyadicPosterior.lean": "47aee6086b85b501470624626940b55ef333d20e4bd9f21e3e698e66cad716e0",
+        "SampLib/Distributions/DyadicRefinement.lean": "b4339270ecc356a8b3fb2f8a4cd0d3f1dbf10ff6a9b4457bbd8918d32eff849c",
+        "SampLib/Distributions/PositiveSeries.lean": "18cb354a91af1c04c20e24770565cced9a7f25576975fa3e1b9d8c1682d4860c",
+        "SampLib/Distributions/ZetaThree.lean": "f636c633a35bb427157f535e825277f6d095ae540a626abbc45f260ab2f09ce9",
+        "SampLib/Distributions/ZetaThreeMathlib.lean": "f43375754210faa382f5fea63c5eb9dfabc514480bb2c0163b77c283db4f7d1c",
+        "SampLib/PositiveSeriesClosed.lean": "1fe7e1e0572fb2d3540f31d86115651208ef40d351bf2bb2833ae470d412d331",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/FromPositiveSeries.lean": "c38c051028f77b0fd3ab6aac637349975217acf9a7e984ee8c5ed03eaa4d9c92",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/ThreeZetaThreeOverFour.lean": "88fed07bacda9b5489827b3ab120ff49885a8da01c8e311c5839f59ab4400317",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Syntax/PositiveSeries.lean": "2a3174cd92788600de0b6bdb18e971f8308fd3bb3ecc05f6214478afc67aa3f3",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/UniformBag.lean": "623d3f68b364f412a4ab754244d618e8e180086cccf0cff391566d914bc640a4",
+        "SampLib/UniformBagBracket.lean": "b68ce24ee28e2ca9932807c5ac615cc5f0113579155404bf933d359c4a2e369a",
+        "SampLib/UniformBagChoice.lean": "ad1d3a2b20020186acda8dd82c5dc8d12b27ca866bd80e31b1e46c33298b8997",
+        "SampLib/UniformBagComparison.lean": "0176e298a312daf987a825de79414eba19a40ee7fe32ea02b58d4702b04119eb",
+        "SampLib/UniformBagLess.lean": "90f4390bbbc3560958d7f466e0a2d523716a23b572e19f8fc63cd6e2ff3e4af7",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Constants/Exponential.lean": "5c93f0961eed560406601fd8f048cb01d8333506c66185a8c5231ae5e7b8f1b4",
+        "code/Samplers/Constants/Pi.lean": "4e5470114bc964873608647ad6cba63e4e46c33513d12bffe12f4f4bbd72ab09",
+        "code/Samplers/Constants/Special.lean": "e717f4e9947b8c040f5bd7bcc2c5c359e6512a6ad07709ab819a5b86f1a4e7da",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionFactoriesBatch014Callers.lean",
+  "caller_sha256": "2a1b5b7a097c1db505b6abc01e5e742ac51b332b6cb8355317bee650a6b20eb3",
+  "support": [
+    {
+      "module": "SampLib.Syntax.ClosedExp",
+      "sha256": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30"
+    },
+    {
+      "module": "SampLib.Syntax.Exponential",
+      "sha256": "39efcdde7248a98ab4d42b56a3ab6b5a7b6fa871c58df65739af241be5238f1f"
+    },
+    {
+      "module": "SampLib.Distributions.RealEnclosure",
+      "sha256": "c28e236ad54f6bf65c70339d91f6a18d393977bac360039d80cffb340892c7fb"
+    },
+    {
+      "module": "SampLib.Distributions.EulerEnclosure",
+      "sha256": "a2885bccf4c1f9dfdcf8eb53949569c84ea2d5a2e611739811ff1d7bb00478bb"
+    },
+    {
+      "module": "SampLib.Samplers.EulerBounds",
+      "sha256": "dba0c8435bf59d8c8acb541159041be6cc4687ce4b3479078c9985ddcd8094ce"
+    },
+    {
+      "module": "SampLib.Distributions.RationalEnclosureScale",
+      "sha256": "7917bedbdccff41deb3a408af5eb673481cc88d8bbe3f583b2fdfed43cedc702"
+    },
+    {
+      "module": "SampLib.Distributions.ArctanSeries",
+      "sha256": "473654ec74a44a2109169e072d8408b2635e92900ac15e852044cc16f03c2f75"
+    },
+    {
+      "module": "SampLib.Distributions.PiBoundsState",
+      "sha256": "719cb4679c2ab39a389da40daf1171f96600229b453beda04b4d680e8423de26"
+    },
+    {
+      "module": "SampLib.Distributions.PiBoundsDefs",
+      "sha256": "0f3a16116d572428350301370a82848024b59fa9dab8520340d7eed8de18c9eb"
+    },
+    {
+      "module": "SampLib.PiBounds",
+      "sha256": "bed4ef3e59e4f57e6bace4b9f6cdf73f2dbdac76066792cb77a7a3cb23374ead"
+    },
+    {
+      "module": "SampLib.Distributions.RealEnclosureTransforms",
+      "sha256": "90deee6aa3703bae0c1519ff19cf935873074b6cff22d27bb09a85318b8a318a"
+    },
+    {
+      "module": "SampLib.Distributions.EnclosureRatio",
+      "sha256": "180ee6329b36c8075bb34176c02bd069c993aefa10d92b0086be5e17aa5132a7"
+    },
+    {
+      "module": "SampLib.Distributions.EnclosureRatioLimits",
+      "sha256": "36751170f05ebf417f7e0e321b9313db722da15af99c3bbddc438b1cb02fe12a"
+    },
+    {
+      "module": "SampLib.Distributions.PiProbability",
+      "sha256": "8a6544240eb6b8803e90add24713d890451a5e2250d12acb3d8a3764231e78ff"
+    },
+    {
+      "module": "SampLib.Distributions.ReciprocalPiProbability",
+      "sha256": "e235b1cef8493894770398be002af3f6b08d62b80d2f92edd12a1add7affff97"
+    },
+    {
+      "module": "SampLib.Distributions.EulerPi",
+      "sha256": "85ba54384df6484f6c8df2d66f8d9df58f042c14c89e71061936415211b0bbf9"
+    },
+    {
+      "module": "SampLib.Distributions.EulerReciprocal",
+      "sha256": "6dd682ddd54ba9526d1dbba83fcc93ff3fbe5140aa36c25e7fb7124ecb930a02"
+    },
+    {
+      "module": "SampLib.Distributions.ExponentialEnclosure",
+      "sha256": "14dbc64c90b5b2d11c90bbec68cf4684cf186a37e2a8191cb96028a21d3b99c0"
+    },
+    {
+      "module": "SampLib.Distributions.ExponentialBoundsKernel",
+      "sha256": "8dd0fd4e0ce5dac3e899e11ffa92110125be6eeed09259195a48f098d036b886"
+    },
+    {
+      "module": "SampLib.Samplers.ExpMinusBounds",
+      "sha256": "0210a8fc3e1cef2e3e1c33bda625f279f5ce7be5a284e91e1db083c10bf630cd"
+    },
+    {
+      "module": "SampLib.Distributions.PositiveSeries",
+      "sha256": "18cb354a91af1c04c20e24770565cced9a7f25576975fa3e1b9d8c1682d4860c"
+    },
+    {
+      "module": "SampLib.Syntax.PositiveSeries",
+      "sha256": "2a3174cd92788600de0b6bdb18e971f8308fd3bb3ecc05f6214478afc67aa3f3"
+    },
+    {
+      "module": "SampLib.BetaStep",
+      "sha256": "0a1e17b99ace11607f7b1c4c21f95d1e5b3d213192d65c5a6fb2f78d676d5748"
+    },
+    {
+      "module": "SampLib.UniformBagChoice",
+      "sha256": "ad1d3a2b20020186acda8dd82c5dc8d12b27ca866bd80e31b1e46c33298b8997"
+    },
+    {
+      "module": "SampLib.Distributions.ZetaThree",
+      "sha256": "f636c633a35bb427157f535e825277f6d095ae540a626abbc45f260ab2f09ce9"
+    },
+    {
+      "module": "SampLib.Distributions.ZetaThreeMathlib",
+      "sha256": "f43375754210faa382f5fea63c5eb9dfabc514480bb2c0163b77c283db4f7d1c"
+    },
+    {
+      "module": "SampLib.PositiveSeriesClosed",
+      "sha256": "1fe7e1e0572fb2d3540f31d86115651208ef40d351bf2bb2833ae470d412d331"
+    }
+  ]
+}

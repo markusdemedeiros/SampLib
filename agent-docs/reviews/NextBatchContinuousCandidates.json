@@ -1,0 +1,41 @@
+[
+  {
+    "sampler": "Occil.exponential",
+    "implementation": "code/Samplers/Continuous.lean",
+    "proof_module": "SampLib.Samplers.Exponential",
+    "owner": "verify_next_exponential",
+    "reviewer": "review_next_batch/review_continuous_next",
+    "status": "accepted",
+    "public_spec": "SampLib.Exponential.exponential_distSpec",
+    "review_evidence": "agent-docs/reviews/NextBatchContinuous.md",
+    "reviewed_sha256": "f7c9837b6794ff313afdfc4e967425a94b74f7e1191719014a4b603966b1ba41",
+    "reviewed_domain": "Unit-rate exponential on real outputs; no parameter restrictions.",
+    "review_receipt": "agent-docs/reviews/NextBatchContinuous.json"
+  },
+  {
+    "sampler": "Occil.laplace",
+    "implementation": "code/Samplers/Continuous.lean",
+    "proof_module": "SampLib.Samplers.Laplace",
+    "owner": "verify_next_laplace_erlang",
+    "reviewer": "review_next_batch/review_continuous_next",
+    "status": "accepted",
+    "public_spec": "SampLib.Laplace.laplace_distSpec",
+    "review_evidence": "agent-docs/reviews/NextBatchContinuous.md",
+    "reviewed_sha256": "b86d6d8fe853a3eeffd97a6a5f59828e0246146d5fadebac843c7292c9ee5bb1",
+    "reviewed_domain": "Standard Laplace via independent unit-exponential magnitude and fair sign.",
+    "review_receipt": "agent-docs/reviews/NextBatchContinuous.json"
+  },
+  {
+    "sampler": "Occil.erlang",
+    "implementation": "code/Samplers/Continuous.lean",
+    "proof_module": "SampLib.Samplers.Erlang",
+    "owner": "verify_next_laplace_erlang",
+    "reviewer": "review_next_batch/review_continuous_next",
+    "status": "accepted",
+    "public_spec": "SampLib.Erlang.erlang_distSpec",
+    "review_evidence": "agent-docs/reviews/NextBatchContinuous.md",
+    "reviewed_sha256": "208515f4e886a4a5052c294f083562a5ef8143d3ecb39f81e7b92fb2343d8a16",
+    "reviewed_domain": "Every positive natural shape; law(shape-1) is the sum of shape independent unit exponentials.",
+    "review_receipt": "agent-docs/reviews/NextBatchContinuous.json"
+  }
+]

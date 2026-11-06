@@ -1,0 +1,346 @@
+Build completed successfully (7334 jobs).
+SPEC_OK SampLib.Complement.complement_distSpec Occil.complement
+SampLib.Complement.complement_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval)
+  (coin : ProbLang.Val rT)
+  (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.complement {coin.fst} #()) (SampLib.Complement.law p) ProbLang.Val.bool
+'SampLib.Complement.complement_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CoinProduct.coinProduct_distSpec Occil.coinProduct
+SampLib.CoinProduct.coinProduct_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p q : ↑unitInterval)
+  (left right : ProbLang.Val rT)
+  (hleft : SampLib.IsDistSpec E pl({left.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool)
+  (hright : SampLib.IsDistSpec E pl({right.fst} #()) (SampLib.RealCoin.law q) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.coinProduct {left.fst} {right.fst} #()) (SampLib.CoinProduct.law p q) ProbLang.Val.bool
+'SampLib.CoinProduct.coinProduct_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CoinDisjunction.coinDisjunction_distSpec Occil.coinDisjunction
+SampLib.CoinDisjunction.coinDisjunction_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p q : ↑unitInterval)
+  (left right : ProbLang.Val rT)
+  (hleft : SampLib.IsDistSpec E pl({left.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool)
+  (hright : SampLib.IsDistSpec E pl({right.fst} #()) (SampLib.RealCoin.law q) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.coinDisjunction {left.fst} {right.fst} #()) (SampLib.CoinDisjunction.law p q)
+    ProbLang.Val.bool
+'SampLib.CoinDisjunction.coinDisjunction_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CoinMean.coinMean_distSpec Occil.coinMean
+SampLib.CoinMean.coinMean_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset)
+  (p q : ↑unitInterval) (left right : ProbLang.Val rT)
+  (hleft : SampLib.IsDistSpec E pl({left.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool)
+  (hright : SampLib.IsDistSpec E pl({right.fst} #()) (SampLib.RealCoin.law q) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.coinMean {left.fst} {right.fst} #()) (SampLib.CoinMean.law p q) ProbLang.Val.bool
+'SampLib.CoinMean.coinMean_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CoinConditional.coinConditional_distSpec Occil.coinConditional
+SampLib.CoinConditional.coinConditional_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p q r : ↑unitInterval)
+  (left right select : ProbLang.Val rT)
+  (hleft : SampLib.IsDistSpec E pl({left.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool)
+  (hright : SampLib.IsDistSpec E pl({right.fst} #()) (SampLib.RealCoin.law q) ProbLang.Val.bool)
+  (hselect : SampLib.IsDistSpec E pl({select.fst} #()) (SampLib.RealCoin.law r) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.coinConditional {left.fst} {right.fst} {select.fst} #())
+    (SampLib.CoinConditional.law p q r) ProbLang.Val.bool
+'SampLib.CoinConditional.coinConditional_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformInt.uniformInt_distSpec Occil.uniformInt
+SampLib.UniformInt.uniformInt_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (n : ℕ)
+  [NeZero n] : SampLib.IsDistSpec E pl(&Occil.uniformInt #↑n) (SampLib.UniformInt.law n) fun k => ProbLang.Val.int ↑k
+'SampLib.UniformInt.uniformInt_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RndInt.rndInt_distSpec Occil.rndInt
+SampLib.RndInt.rndInt_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT] [ProbLang.ProbLangDist rT]
+  [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (hi : ℕ) :
+  SampLib.IsDistSpec E pl(&Occil.rndInt #↑hi) (SampLib.RndInt.law hi) fun k => ProbLang.Val.int ↑k
+'SampLib.RndInt.rndInt_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RndIntRange.rndIntRange_distSpec Occil.rndIntRange
+SampLib.RndIntRange.rndIntRange_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (lo hi : ℤ)
+  (h : lo ≤ hi) : SampLib.IsDistSpec E pl(&Occil.rndIntRange #lo #hi) (SampLib.RndIntRange.law lo hi) ProbLang.Val.int
+'SampLib.RndIntRange.rndIntRange_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RndIntExcRange.rndIntExcRange_distSpec Occil.rndIntExcRange
+SampLib.RndIntExcRange.rndIntExcRange_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (lo hi : ℤ)
+  (h : lo < hi) :
+  SampLib.IsDistSpec E pl(&Occil.rndIntExcRange #lo #hi) (SampLib.RndIntExcRange.law lo hi h) ProbLang.Val.int
+'SampLib.RndIntExcRange.rndIntExcRange_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FairCoin.fairCoin_distSpec Occil.fairCoin
+SampLib.FairCoin.fairCoin_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) :
+  SampLib.IsDistSpec E pl(&Occil.fairCoin #()) (SampLib.RealCoin.law SampLib.VonNeumann.fairBias) ProbLang.Val.bool
+'SampLib.FairCoin.fairCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RationalCoin.rationalCoin_distSpec Occil.rationalCoin
+SampLib.RationalCoin.rationalCoin_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (a b : ℤ)
+  (ha : 0 ≤ a) (hb : 0 < b) (hab : a ≤ b) :
+  SampLib.IsDistSpec E pl(&Occil.rationalCoin #a #b) (SampLib.RealCoin.law (SampLib.RationalCoin.bias a b ha hb hab))
+    ProbLang.Val.bool
+'SampLib.RationalCoin.rationalCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.OneDivOnePlus.oneDivOnePlus_distSpec Occil.oneDivOnePlus
+SampLib.OneDivOnePlus.oneDivOnePlus_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval)
+  (coin : ProbLang.Val rT)
+  (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.oneDivOnePlus {coin.fst} #()) (SampLib.OneDivOnePlus.law p) ProbLang.Val.bool
+'SampLib.OneDivOnePlus.oneDivOnePlus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.EvenParity.evenParity_distSpec Occil.evenParity
+SampLib.EvenParity.evenParity_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval)
+  (coin : ProbLang.Val rT) (hp : ↑p < 1)
+  (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.evenParity {coin.fst} #()) (SampLib.EvenParity.law p) ProbLang.Val.bool
+'SampLib.EvenParity.evenParity_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.BernoulliRace.bernoulliRace_distSpec Occil.bernoulliRace
+SampLib.BernoulliRace.bernoulliRace_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset)
+  (p q : ↑unitInterval) (hsum : 0 < ↑p + ↑q) (left right : ProbLang.Val rT)
+  (hleft : SampLib.IsDistSpec E pl({left.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool)
+  (hright : SampLib.IsDistSpec E pl({right.fst} #()) (SampLib.RealCoin.law q) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.bernoulliRace {left.fst} {right.fst} #()) (SampLib.BernoulliRace.law p q)
+    ProbLang.Val.bool
+'SampLib.BernoulliRace.bernoulliRace_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.GeometricFailures.geometricFailures_distSpec Occil.geometricFailures
+SampLib.GeometricFailures.geometricFailures_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval) (hp : ↑p < 1)
+  (coin : ProbLang.Val rT) (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool)
+  (offset : ℤ) :
+  SampLib.IsDistSpec E pl(&Occil.geometricFailures {coin.fst} #offset) (SampLib.GeometricFailures.law p) fun n =>
+    ProbLang.Val.int (offset + ↑n)
+'SampLib.GeometricFailures.geometricFailures_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Binomial.binomial_distSpec Occil.binomial
+SampLib.Binomial.binomial_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval)
+  (coin : ProbLang.Val rT) (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool)
+  (n : ℕ) :
+  SampLib.IsDistSpec E pl(&Occil.binomial {coin.fst} #↑n) (SampLib.Binomial.law p n) fun k => ProbLang.Val.int ↑k
+'SampLib.Binomial.binomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.BoundedGeometric.boundedGeometric_distSpec Occil.boundedGeometric
+SampLib.BoundedGeometric.boundedGeometric_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval)
+  (coin : ProbLang.Val rT) (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool)
+  (n : ℕ) :
+  SampLib.IsDistSpec E pl(&Occil.boundedGeometric {coin.fst} #↑n) (SampLib.BoundedGeometric.law p n) fun k =>
+    ProbLang.Val.int ↑k
+'SampLib.BoundedGeometric.boundedGeometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.IterateCoin.iterateCoin_distSpec Occil.iterateCoin
+SampLib.IterateCoin.iterateCoin_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval)
+  (coin : ProbLang.Val rT) (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool)
+  (n : ℕ) : SampLib.IsDistSpec E pl(&Occil.iterateCoin {coin.fst} #↑n) (SampLib.IterateCoin.law p n) ProbLang.Val.bool
+'SampLib.IterateCoin.iterateCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RandomWalk.randomWalk_distSpec Occil.randomWalk
+SampLib.RandomWalk.randomWalk_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (n : ℕ) :
+  SampLib.IsDistSpec E pl(&Occil.randomWalk #↑n) (SampLib.RandomWalk.law n) ProbLang.Val.int
+'SampLib.RandomWalk.randomWalk_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Geometric.geometric_distSpec Occil.geometric
+SampLib.Geometric.geometric_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval) (hp : 0 < ↑p)
+  (coin : ProbLang.Val rT)
+  (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.geometric {coin.fst} #()) (SampLib.Geometric.law p) fun n => ProbLang.Val.int ↑n
+'SampLib.Geometric.geometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.NegativeBinomial.negativeBinomial_distSpec Occil.negativeBinomial
+SampLib.NegativeBinomial.negativeBinomial_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval)
+  (coin : ProbLang.Val rT) (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool)
+  (r : ℕ) (hp : r = 0 ∨ 0 < ↑p) :
+  SampLib.IsDistSpec E pl(&Occil.negativeBinomial {coin.fst} #↑r) (SampLib.NegativeBinomial.law p r) fun n =>
+    ProbLang.Val.int ↑n
+'SampLib.NegativeBinomial.negativeBinomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformMin.uniformMin_distSpec Occil.uniformMin
+SampLib.UniformMin.uniformMin_distSpec {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors}
+  [ProbLang.TotalEris.ErisGS ℝ hlc GF] [ProbLang.ProbLangDist ℝ] [ProbLang.ProbLangDist.IsUniformReal ℝ]
+  [ProbLang.ProbLangFFI ℝ] [ProbLang.ProbLangObs ℝ] (E : CoPset) :
+  SampLib.IsDistSpec E pl(&Occil.uniformMin #()) SampLib.UniformMin.law ProbLang.Val.real
+'SampLib.UniformMin.uniformMin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformMax.uniformMax_distSpec Occil.uniformMax
+SampLib.UniformMax.uniformMax_distSpec {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors}
+  [ProbLang.TotalEris.ErisGS ℝ hlc GF] [ProbLang.ProbLangDist ℝ] [ProbLang.ProbLangDist.IsUniformReal ℝ]
+  [ProbLang.ProbLangFFI ℝ] [ProbLang.ProbLangObs ℝ] (E : CoPset) :
+  SampLib.IsDistSpec E pl(&Occil.uniformMax #()) SampLib.UniformMax.law ProbLang.Val.real
+'SampLib.UniformMax.uniformMax_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformSum.uniformSum_distSpec Occil.uniformSum
+SampLib.UniformSum.uniformSum_distSpec {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors}
+  [ProbLang.TotalEris.ErisGS ℝ hlc GF] [ProbLang.ProbLangDist ℝ] [ProbLang.ProbLangDist.IsUniformReal ℝ]
+  [ProbLang.ProbLangFFI ℝ] [ProbLang.ProbLangObs ℝ] (E : CoPset) (n : ℕ) :
+  SampLib.IsDistSpec E pl(&Occil.uniformSum #↑n) (SampLib.UniformSum.law n) ProbLang.Val.real
+'SampLib.UniformSum.uniformSum_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Mixture.mixture_distSpec Occil.mixture
+SampLib.Mixture.mixture_distSpec.{u_1} {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] {α : Type u_1} [MeasurableSpace α]
+  {μ ν : MeasureTheory.Measure α} [MeasureTheory.IsProbabilityMeasure μ] [MeasureTheory.IsProbabilityMeasure ν]
+  (E : CoPset) (p : ↑unitInterval) (coin left right : ProbLang.Val rT) (encode : α → ProbLang.Val rT)
+  (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool)
+  (hleft : SampLib.IsDistSpec E pl({left.fst} #()) μ encode)
+  (hright : SampLib.IsDistSpec E pl({right.fst} #()) ν encode) :
+  SampLib.IsDistSpec E pl(&Occil.mixture {coin.fst} {left.fst} {right.fst} #()) (SampLib.Mixture.law p μ ν) encode
+'SampLib.Mixture.mixture_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Rejection.rejection_distSpec Occil.rejection
+SampLib.Rejection.rejection_distSpec.{u_1} {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] {α : Type u_1} [MeasurableSpace α] (E : CoPset)
+  (μ : MeasureTheory.Measure α) [MeasureTheory.IsProbabilityMeasure μ] (s : Set α) [DecidablePred fun x => x ∈ s]
+  (hs : MeasurableSet s) (hmass : μ s ≠ 0) (encode : α → ProbLang.Val rT) (proposal accept : ProbLang.Val rT)
+  (hproposal : SampLib.IsDistSpec E pl({proposal.fst} #()) μ encode)
+  (haccept :
+    ∀ (x : α),
+      ⊢
+        ProbLang.TotalEris.ErisWpGS.tglWp E pl({accept.fst} {(encode x).fst}) fun v =>
+          iprop(⌜v = ProbLang.Val.bool (decide (x ∈ s))⌝)) :
+  SampLib.IsDistSpec E pl(&Occil.rejection {proposal.fst} {accept.fst} #()) (SampLib.Rejection.law μ s hmass) encode
+'SampLib.Rejection.rejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.LogisticFactory.logisticFactory_distSpec Occil.logisticFactory
+SampLib.LogisticFactory.logisticFactory_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] [ProbLang.ProbLangDist.IsUniformInt rT]
+  (E : CoPset) (p : ↑unitInterval) (x y : ℤ) (hx : 0 < x) (hy : 0 < y) (coin : ProbLang.Val rT)
+  (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.logisticFactory {coin.fst} #x #y #())
+    (SampLib.RealCoin.law (SampLib.LogisticFactory.integerBias p x y hx hy)) ProbLang.Val.bool
+'SampLib.LogisticFactory.logisticFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ProbabilityGeneratingFactory.probabilityGeneratingFactory_distSpec Occil.probabilityGeneratingFactory
+SampLib.ProbabilityGeneratingFactory.probabilityGeneratingFactory_distSpec {rT : Type} [MeasurableSpace rT]
+  [ProbLang.LawfulProbLangℝ rT] [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset)
+  (ν : MeasureTheory.Measure ℕ) [MeasureTheory.IsProbabilityMeasure ν] (p : ↑unitInterval)
+  (coin count : ProbLang.Val rT)
+  (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool)
+  (hcount : SampLib.IsDistSpec E pl({count.fst} #()) ν fun n => ProbLang.Val.int ↑n) :
+  SampLib.IsDistSpec E pl(&Occil.probabilityGeneratingFactory {coin.fst} {count.fst} #())
+    (SampLib.ProbabilityGeneratingFactory.law ν p) ProbLang.Val.bool
+'SampLib.ProbabilityGeneratingFactory.probabilityGeneratingFactory_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.OneMinusOverOnePlus.oneMinusOverOnePlus_distSpec Occil.FactoryExtra.oneMinusOverOnePlus
+SampLib.OneMinusOverOnePlus.oneMinusOverOnePlus_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval)
+  (coin : ProbLang.Val rT)
+  (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.FactoryExtra.oneMinusOverOnePlus {coin.fst} #())
+    (SampLib.RealCoin.law (SampLib.OneMinusOverOnePlus.bias p)) ProbLang.Val.bool
+'SampLib.OneMinusOverOnePlus.oneMinusOverOnePlus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.OnePlusHalf.onePlusHalf_distSpec Occil.FactoryExtra.onePlusHalf
+SampLib.OnePlusHalf.onePlusHalf_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval)
+  (coin : ProbLang.Val rT)
+  (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.FactoryExtra.onePlusHalf {coin.fst} #())
+    (SampLib.RealCoin.law (SampLib.OnePlusHalf.bias p)) ProbLang.Val.bool
+'SampLib.OnePlusHalf.onePlusHalf_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ComplementHalf.complementHalf_distSpec Occil.FactoryExtra.complementHalf
+SampLib.ComplementHalf.complementHalf_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval)
+  (coin : ProbLang.Val rT)
+  (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.FactoryExtra.complementHalf {coin.fst} #())
+    (SampLib.RealCoin.law (SampLib.ComplementHalf.bias p)) ProbLang.Val.bool
+'SampLib.ComplementHalf.complementHalf_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Choice.choice_distSpec Occil.choice
+SampLib.Choice.choice_distSpec.{u_1} {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] {α : Type u_1} (E : CoPset)
+  (encode : α → ProbLang.Val rT) (xs : List α) [NeZero xs.length] :
+  SampLib.IsDistSpec E pl(&Occil.choice {(SampLib.listVal encode xs).fst}) (SampLib.Choice.law xs.length) fun i =>
+    encode (xs.get i)
+'SampLib.Choice.choice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.SampleWithReplacement.sampleWithReplacement_distSpec Occil.sampleWithReplacement
+SampLib.SampleWithReplacement.sampleWithReplacement_distSpec.{u_1} {rT : Type} [MeasurableSpace rT]
+  [ProbLang.LawfulProbLangℝ rT] [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT]
+  [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors}
+  [ProbLang.TotalEris.ErisGS rT hlc GF] {α : Type u_1} (E : CoPset) (encode : α → ProbLang.Val rT) (xs : List α)
+  [NeZero xs.length] (n : ℕ) :
+  SampLib.IsDistSpec E pl(&Occil.sampleWithReplacement {(SampLib.listVal encode xs).fst} #↑n)
+    (SampLib.SampleWithReplacement.law (SampLib.Choice.law xs.length) n) fun ys =>
+    SampLib.listVal (fun i => encode (xs.get i)) (List.ofFn ys)
+'SampLib.SampleWithReplacement.sampleWithReplacement_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.RealCoin.realCoin_distSpec Occil.realCoin
+SampLib.RealCoin.realCoin_distSpec {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS ℝ hlc GF]
+  [ProbLang.ProbLangDist ℝ] [ProbLang.ProbLangDist.IsUniformReal ℝ] [ProbLang.ProbLangFFI ℝ] [ProbLang.ProbLangObs ℝ]
+  (E : CoPset) (p : ↑unitInterval) :
+  SampLib.IsDistSpec E pl(&Occil.realCoin #↑p) (SampLib.RealCoin.law p) ProbLang.Val.bool
+'SampLib.RealCoin.realCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.VonNeumann.vonNeumann_distSpec Occil.vonNeumann
+SampLib.VonNeumann.vonNeumann_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset) (p : ↑unitInterval)
+  (coin : ProbLang.Val rT) (hp0 : 0 < ↑p) (hp1 : ↑p < 1)
+  (hcoin : SampLib.IsDistSpec E pl({coin.fst} #()) (SampLib.RealCoin.law p) ProbLang.Val.bool) :
+  SampLib.IsDistSpec E pl(&Occil.vonNeumann {coin.fst} #()) SampLib.VonNeumann.law ProbLang.Val.bool
+'SampLib.VonNeumann.vonNeumann_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Complement.complement_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CoinProduct.coinProduct_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CoinDisjunction.coinDisjunction_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CoinConditional.coinConditional_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EvenParity.evenParity_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CoinMean.coinMean_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OnePlusHalf.onePlusHalf_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ComplementHalf.complementHalf_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OneDivOnePlus.oneDivOnePlus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OneMinusOverOnePlus.oneMinusOverOnePlus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BernoulliRace.bernoulliRace_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GeometricFailures.geometricFailures_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProbabilityTheory.lintegral_geometricMeasure_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IterateCoin.twp_iterateCoin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IterateCoin.iterateCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IterateCoin.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformInt.uniformInt_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformInt.twp_uniformInt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformInt.lintegral_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FairCoin.twp_fairCoin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FairCoin.fairCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FairCoin.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BoundedGeometric.twp_boundedGeometric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BoundedGeometric.boundedGeometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BoundedGeometric.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Binomial.twp_binomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Binomial.binomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Binomial.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomWalk.twp_randomWalk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomWalk.randomWalk_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomWalk.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Geometric.twp_geometric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Geometric.geometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Geometric.lintegral_coinCredit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NegativeBinomial.twp_negativeBinomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NegativeBinomial.negativeBinomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NegativeBinomial.credit_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProbabilityTheory.lintegral_geometricMeasure_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndInt.twp_rndInt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndInt.rndInt_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndInt.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntRange.twp_rndIntRange' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntRange.rndIntRange_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntRange.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntExcRange.twp_rndIntExcRange' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntExcRange.rndIntExcRange_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntExcRange.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RationalCoin.twp_rationalCoin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RationalCoin.rationalCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RationalCoin.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+Audited 33 distinct new, independently reviewed samplers; 35 sampler specifications including both baselines.

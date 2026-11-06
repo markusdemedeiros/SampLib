@@ -1,0 +1,115 @@
+{
+  "reviewer": "/root/expand_review_discrete",
+  "accepted": [
+    {
+      "sampler": "Occil.poissonRational",
+      "proof_module": "SampLib.Samplers.PoissonRational",
+      "public_spec": "SampLib.PoissonRational.poissonRational_distSpec",
+      "proof_kind": "core",
+      "sha256": "2eb51e39762c7a31e000c5eff5b9c209271d6d915ebf5ad036a3b6ffb1598a66",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch004.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/Binomial.lean": "332a0b32e0d14943ce264f1c35d85558c615bea81eec88194e5c53e20112124d",
+        "SampLib/Distributions/BinomialMeasure.lean": "35eba0a09d4cf117121ca3776843a39c78048b921e3182fccb44b05083c35373",
+        "SampLib/Distributions/PoissonMeasure.lean": "e25cd2678db2066e41ab87bc5edcd464b08afac6458de8b8e29e6a55679dba80",
+        "SampLib/Distributions/PoissonThinning.lean": "46acd71a9d7ea898a1903a8c3a20b94e27c9cb3bdbe7706a14f0023e0a3e7223",
+        "SampLib/Distributions/PoissonTree.lean": "75fdf0831f7084696cf776bf1fb5c5aa38712bd78a9c9bb5ac0a2a9fb7690d8f",
+        "SampLib/Samplers/Binomial.lean": "76e53294152ed9586f37315a5f27e7257faca3e9bec707ff404c6653d6a9e996",
+        "SampLib/Samplers/PoissonOne.lean": "be9f7c42e774e57f5a2a2429b21679eaf2ea3b7fdb23c721b65b0176fc5b1f97",
+        "SampLib/Samplers/PoissonRational.lean": "2eb51e39762c7a31e000c5eff5b9c209271d6d915ebf5ad036a3b6ffb1598a66",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/RndInt.lean": "c109e78be39b055f9e2af6082253a79d32d9d63c3f06be59615f776b8fee0178",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      },
+      "review_notes": "Independent Poisson additivity handles unit-rate draws; independent binomial thinning handles the final fractional rate. The single expectation theorem identifies both cases with canonical Mathlib Poisson(x/y). The remaining-rate loop is straightforward strong induction. Tests explicitly establish real rate(1,2)=1/2, rate(6,2)=3 and zero rate, check thinning endpoints p=0 and p=1 plus the fractional case, infinite continuation values and arbitrary resource framing."
+    },
+    {
+      "sampler": "Occil.Weighted.bitmaskRejection",
+      "proof_module": "SampLib.Samplers.BitmaskRejection",
+      "public_spec": "SampLib.BitmaskRejection.bitmaskRejection_distSpec",
+      "proof_kind": "core",
+      "sha256": "e98aa456308db2f3b9143ef681144bd1e071590d61f438e7dc11adb889cf4ef4",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch004.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/NatLog.lean": "22fa3d412c43b71d8aa3bf07a5e331bdc965e10e5c1463007b782ecd3e9ad4d2",
+        "SampLib/Distributions/UniformRejection.lean": "1004d8fecd12a5c8c46027026700f0d60b1919cac6ba9e40254dffb353383da0",
+        "SampLib/PowerOfTwoCeiling.lean": "32bf9a0364af8c7436791407afb4214ac0545f07cac790613b30db4099fdf2cb",
+        "SampLib/Samplers/BitmaskRejection.lean": "e98aa456308db2f3b9143ef681144bd1e071590d61f438e7dc11adb889cf4ef4",
+        "SampLib/Samplers/RandomBits.lean": "803dad79aafcb0914d543ab87e3cd3266f4446f2b3b897640c9a2b13701feb62",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Uniform.lean": "435bb931a15e38eee06efcaa0667b92911932a3c0f182a568b6a19faab0a6a16"
+      },
+      "review_notes": "The enclosing width is the least power of two covering the target interval. A private binary-word loop reuses the reviewed RandomBits prefix expectation. Accepted words preserve exactly the canonical uniform target credit; at most half the enclosing words are rejected, funding retry amplification by two. The obvious CTE retry loop follows this inequality. Tests cover widths1/4/5, the exact no-rejection kernel at power-of-two width4, infinite off-support credit at width1 and arbitrary framed callers. The candidate helper remains private in the same file, keeping its elementary component proof next to its use."
+    }
+  ],
+  "support": [
+    {
+      "module": "SampLib.Distributions.PoissonThinning",
+      "sha256": "46acd71a9d7ea898a1903a8c3a20b94e27c9cb3bdbe7706a14f0023e0a3e7223"
+    },
+    {
+      "module": "SampLib.PowerOfTwoCeiling",
+      "sha256": "32bf9a0364af8c7436791407afb4214ac0545f07cac790613b30db4099fdf2cb"
+    },
+    {
+      "module": "SampLib.Distributions.UniformRejection",
+      "sha256": "1004d8fecd12a5c8c46027026700f0d60b1919cac6ba9e40254dffb353383da0"
+    },
+    {
+      "module": "SampLib.Distributions.BinomialThinning",
+      "sha256": "ccd9bb7dacc5de34badde21688c5319c594e6f87c7da9665173b90b06943f704"
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionDiscreteBatch004Callers.lean",
+  "caller_sha256": "caaa77078cd8448ee258978b6f84a5ca87117548c0061df8d63f09bb0b0888c9"
+}

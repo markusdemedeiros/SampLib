@@ -1,0 +1,137 @@
+{
+  "reviewer": "review_next_batch/review_continuous_next",
+  "accepted": [
+    {
+      "sampler": "Occil.exponential",
+      "proof_module": "SampLib.Samplers.Exponential",
+      "public_spec": "SampLib.Exponential.exponential_distSpec",
+      "sha256": "f7c9837b6794ff313afdfc4e967425a94b74f7e1191719014a4b603966b1ba41",
+      "review_evidence": "agent-docs/reviews/NextBatchContinuous.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/Exponential.lean": "e5cad1202a7281cc1ea87faec9ddd6381908ff5bc3c906e60c3333739e599cea",
+        "SampLib/Samplers/DecreasingTrial.lean": "a6f8030faad92ee68747011234287473a2c8f2c945a751b163c02decb19aa60f",
+        "SampLib/Samplers/Exponential.lean": "f7c9837b6794ff313afdfc4e967425a94b74f7e1191719014a4b603966b1ba41",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.laplace",
+      "proof_module": "SampLib.Samplers.Laplace",
+      "public_spec": "SampLib.Laplace.laplace_distSpec",
+      "sha256": "b86d6d8fe853a3eeffd97a6a5f59828e0246146d5fadebac843c7292c9ee5bb1",
+      "review_evidence": "agent-docs/reviews/NextBatchContinuous.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/Exponential.lean": "e5cad1202a7281cc1ea87faec9ddd6381908ff5bc3c906e60c3333739e599cea",
+        "SampLib/Samplers/DecreasingTrial.lean": "a6f8030faad92ee68747011234287473a2c8f2c945a751b163c02decb19aa60f",
+        "SampLib/Samplers/Exponential.lean": "f7c9837b6794ff313afdfc4e967425a94b74f7e1191719014a4b603966b1ba41",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/Laplace.lean": "b86d6d8fe853a3eeffd97a6a5f59828e0246146d5fadebac843c7292c9ee5bb1",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.erlang",
+      "proof_module": "SampLib.Samplers.Erlang",
+      "public_spec": "SampLib.Erlang.erlang_distSpec",
+      "sha256": "208515f4e886a4a5052c294f083562a5ef8143d3ecb39f81e7b92fb2343d8a16",
+      "review_evidence": "agent-docs/reviews/NextBatchContinuous.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/Exponential.lean": "e5cad1202a7281cc1ea87faec9ddd6381908ff5bc3c906e60c3333739e599cea",
+        "SampLib/Samplers/DecreasingTrial.lean": "a6f8030faad92ee68747011234287473a2c8f2c945a751b163c02decb19aa60f",
+        "SampLib/Samplers/Erlang.lean": "208515f4e886a4a5052c294f083562a5ef8143d3ecb39f81e7b92fb2343d8a16",
+        "SampLib/Samplers/Exponential.lean": "f7c9837b6794ff313afdfc4e967425a94b74f7e1191719014a4b603966b1ba41",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": [
+    {
+      "path": "SampLib/Samplers/DecreasingTrial.lean",
+      "sha256": "a6f8030faad92ee68747011234287473a2c8f2c945a751b163c02decb19aa60f",
+      "review_evidence": "agent-docs/reviews/NextBatchContinuous.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/Exponential.lean",
+      "sha256": "e5cad1202a7281cc1ea87faec9ddd6381908ff5bc3c906e60c3333739e599cea",
+      "review_evidence": "agent-docs/reviews/NextBatchContinuous.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/NextBatchContinuousCallers.lean",
+  "caller_sha256": "206b5a99f146bd57094ef56a2f5338e08835f77433ea570155b2a1e105b476b2"
+}

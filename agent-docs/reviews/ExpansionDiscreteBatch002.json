@@ -1,0 +1,202 @@
+{
+  "reviewer": "/root/expand_review_discrete",
+  "accepted": [
+    {
+      "sampler": "Occil.Weighted.uniformRational",
+      "proof_module": "SampLib.Samplers.UniformFormats",
+      "public_spec": "SampLib.UniformFormats.uniformRational_distSpec",
+      "proof_kind": "derived",
+      "sha256": "5d606df4aa59d17b72ea98196f259bee0cc2863212a1b906b0cdbd337720b54e",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch002.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Samplers/RandomBits.lean": "803dad79aafcb0914d543ab87e3cd3266f4446f2b3b897640c9a2b13701feb62",
+        "SampLib/Samplers/UniformFormats.lean": "5d606df4aa59d17b72ea98196f259bee0cc2863212a1b906b0cdbd337720b54e",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedIntegerPower.lean": "4d98577633e04ebbf62d71c689bbc896d93cef55f88e7bb5b0e89fc9d1eee1f5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Uniform.lean": "435bb931a15e38eee06efcaa0667b92911932a3c0f182a568b6a19faab0a6a16"
+      },
+      "review_notes": "A derived representation of the canonical uniform integer law: the random numerator is uniform and the positive denominator is retained exactly. No continuous-uniform claim is made. The CTE proof composes the existing uniform primitive and constructs the pair."
+    },
+    {
+      "sampler": "Occil.Weighted.uniformFixed",
+      "proof_module": "SampLib.Samplers.UniformFormats",
+      "public_spec": "SampLib.UniformFormats.uniformFixed_distSpec",
+      "proof_kind": "derived",
+      "sha256": "5d606df4aa59d17b72ea98196f259bee0cc2863212a1b906b0cdbd337720b54e",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch002.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Samplers/RandomBits.lean": "803dad79aafcb0914d543ab87e3cd3266f4446f2b3b897640c9a2b13701feb62",
+        "SampLib/Samplers/UniformFormats.lean": "5d606df4aa59d17b72ea98196f259bee0cc2863212a1b906b0cdbd337720b54e",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedIntegerPower.lean": "4d98577633e04ebbf62d71c689bbc896d93cef55f88e7bb5b0e89fc9d1eee1f5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Uniform.lean": "435bb931a15e38eee06efcaa0667b92911932a3c0f182a568b6a19faab0a6a16"
+      },
+      "review_notes": "A derived fixed-grid uniform specification. The target is exactly the existing normalized finite-uniform law; symbolic execution delegates the random draw directly to its verified specification."
+    },
+    {
+      "sampler": "Occil.Weighted.uniformDyadic",
+      "proof_module": "SampLib.Samplers.UniformFormats",
+      "public_spec": "SampLib.UniformFormats.uniformDyadic_distSpec",
+      "proof_kind": "derived",
+      "sha256": "5d606df4aa59d17b72ea98196f259bee0cc2863212a1b906b0cdbd337720b54e",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch002.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Samplers/RandomBits.lean": "803dad79aafcb0914d543ab87e3cd3266f4446f2b3b897640c9a2b13701feb62",
+        "SampLib/Samplers/UniformFormats.lean": "5d606df4aa59d17b72ea98196f259bee0cc2863212a1b906b0cdbd337720b54e",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedIntegerPower.lean": "4d98577633e04ebbf62d71c689bbc896d93cef55f88e7bb5b0e89fc9d1eee1f5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Uniform.lean": "435bb931a15e38eee06efcaa0667b92911932a3c0f182a568b6a19faab0a6a16"
+      },
+      "review_notes": "A derived dyadic-grid representation. The denominator is verified by repeated squaring and the numerator by RandomBits. The zero-bit case is denominator one and numerator zero. The loop mathematics is inherited, while pair construction is explicit symbolic execution."
+    },
+    {
+      "sampler": "Occil.DiscreteExtra.negativeHypergeometric",
+      "proof_module": "SampLib.Samplers.NegativeHypergeometric",
+      "public_spec": "SampLib.NegativeHypergeometric.negativeHypergeometric_distSpec",
+      "proof_kind": "core",
+      "sha256": "137305e0d93b64e2dcd58389c9831dc4460401746fd7af94dd9ecb47cf277a13",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch002.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/Urn.lean": "ec5373077d35e99efc097e209ca8f9746bd72c9226bb6659d5076b782cd06fdd",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/Samplers/Choice.lean": "b80822188b067db6777203c9e1e7bae41d78fe1da574267e6486e4da603e6ddc",
+        "SampLib/Samplers/Hypergeometric.lean": "22f6a190e8646bee92d8f68e1a974255049dbf479378d01ebe5e50316e9e436a",
+        "SampLib/Samplers/NegativeHypergeometric.lean": "137305e0d93b64e2dcd58389c9831dc4460401746fd7af94dd9ecb47cf277a13",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/SampleWithoutReplacement.lean": "8fc52ead9f3d8383445ced90a5c4bb20eb47e1fcf96e3909f3ea8515df37b07b",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Binomial.lean": "92e03310618dac7df9dcc34b3ea769b33776dbf09dcb7419990cb9e9af52c3a3",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Discrete/Urns.lean": "ebe8e5baf688b9d392c8857d0561156f2d51804830255ad966e889916ff9d919",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      },
+      "review_notes": "The independent target reads a uniformly permuted labelled urn until the requested marked draw, counting preceding unmarked entries. Partitioning the ordering by its first position gives the color recurrence. The CTE proof is finite two-counter induction; the new support continuation supplies positivity of the unmarked population on an actual failure. I suggested merging duplicate first-position expectation wrappers, and the author did so. Tests cover zero requests, no unmarked balls, a one-marked/one-unmarked population with expectation (F 0 + F 1)/2, arbitrary infinite credits, and framed caller resources. Requesting all marked balls does not consume any trailing unmarked balls."
+    },
+    {
+      "sampler": "Occil.DiscreteExtra.himanshu",
+      "proof_module": "SampLib.Samplers.Himanshu",
+      "public_spec": "SampLib.Himanshu.himanshu_distSpec",
+      "proof_kind": "derived",
+      "sha256": "34d0c9547d853253e5d2db18f5e88f68852a7280d498b2100a5a94fb99ddcebf",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch002.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/Geometric.lean": "f35eaf7977331250eb2152791b93d048be5f60d05e2c82a584a4d2b781624bd5",
+        "SampLib/Samplers/Geometric.lean": "a5692d1af2f98bc791cb40d14c4ef0bb349873d411659fa6f2b70d552eb5ce78",
+        "SampLib/Samplers/Himanshu.lean": "34d0c9547d853253e5d2db18f5e88f68852a7280d498b2100a5a94fb99ddcebf",
+        "SampLib/Samplers/IterateCoin.lean": "f14b4ee475b3ea318aef1a1c2705d6a687818886abb00b533690629d3478bbfe",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Discrete/Tails.lean": "c7fed9a1ea7bb34d66a79a0f031af05a5c451fa3f83c63ec68d6c9378b593ed7",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      },
+      "review_notes": "The callback builds one independent success block, whose verified Bernoulli bias is p^n; the existing geometric specification then gives the number of failed blocks. This is a derived composition and does not claim a rolling-window waiting-time law. The public proof needs no uniform-integer assumption. Tests cover block size one, the p=1 zero-failure endpoint, arbitrary infinite credits, and resource framing."
+    }
+  ],
+  "support": [
+    {
+      "module": "SampLib.WeightedIntegerPower",
+      "sha256": "4d98577633e04ebbf62d71c689bbc896d93cef55f88e7bb5b0e89fc9d1eee1f5"
+    },
+    {
+      "module": "SampLib.SupportedSpec",
+      "sha256": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2"
+    },
+    {
+      "module": "SampLib.Distributions.PoissonTree",
+      "sha256": "75fdf0831f7084696cf776bf1fb5c5aa38712bd78a9c9bb5ac0a2a9fb7690d8f"
+    },
+    {
+      "module": "SampLib.Distributions.PoissonMeasure",
+      "sha256": "e25cd2678db2066e41ab87bc5edcd464b08afac6458de8b8e29e6a55679dba80"
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionDiscreteBatch002Callers.lean",
+  "caller_sha256": "db7b0c99fcdfb0c8c002b4530d2942b82b097af9a4f31bcf619a75100067ad60"
+}

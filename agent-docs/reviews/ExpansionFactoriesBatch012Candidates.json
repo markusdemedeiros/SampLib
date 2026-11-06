@@ -1,0 +1,58 @@
+[
+  {
+    "sampler": "Occil.FactoryExtra.expMinusShifted",
+    "implementation": "code/Samplers/Bernoulli/Exponential.lean",
+    "proof_module": "SampLib.Samplers.ExpMinusShifted",
+    "owner": "/root/expand_series_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ExpMinusShifted.expMinusShifted_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch012.md",
+    "reviewed_sha256": "4a58c7953a2158338266e73795b579bbc0f8c4061846bc2dcaed3188bb688f25",
+    "reviewed_domain": "Every unit-interval input bias and all integer shifts a>=0,b>0, including zero shift and both input endpoints, with arbitrary verified callbacks.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch012.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.tanhHalfShifted",
+    "implementation": "code/Samplers/Bernoulli/Elementary.lean",
+    "proof_module": "SampLib.Samplers.TanhHalfShifted",
+    "owner": "/root/expand_series_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.TanhHalfShifted.tanhHalfShifted_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch012.md",
+    "reviewed_sha256": "e99dc2da9718a54629647cdb79d773ff3b0626d8c13826d3729816c94ff2ecb5",
+    "reviewed_domain": "Every unit-interval input bias and integer a>=0,b>0, including zero shift and both endpoints.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch012.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.expMinusShiftPower",
+    "implementation": "code/Samplers/Bernoulli/Exponential.lean",
+    "proof_module": "SampLib.Samplers.ExpMinusShiftPower",
+    "owner": "/root/expand_series_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ExpMinusShiftPower.expMinusShiftPower_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch012.md",
+    "reviewed_sha256": "4b26485154438a21799dc1ed7b48dc588046242a8f7742cede5d70d339539d28",
+    "reviewed_domain": "Every unit-interval input bias and all natural m,k including zero, with arbitrary verified callbacks and ENNReal output credits.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch012.json",
+    "algorithm_kind": "core"
+  },
+  {
+    "sampler": "Occil.Constants.fromApproximateDigits",
+    "implementation": "code/Samplers/Constants/Engines.lean",
+    "proof_module": "SampLib.Samplers.FromApproximateDigits",
+    "owner": "/root",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.FromApproximateDigits.fromApproximateDigits_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch012.md",
+    "reviewed_sha256": "a407752f4a38057030a98d97a5c4bdad271dd51daaf5f3c2a4fadf459270e456",
+    "reviewed_domain": "All natural bases>=2, unit-interval probabilities and integer approximations at source positions n+1 with absolute integer error<=1. The deterministic callback is required only on those positive source positions; arbitrary callback free variables are retained.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch012.json",
+    "algorithm_kind": "core"
+  }
+]

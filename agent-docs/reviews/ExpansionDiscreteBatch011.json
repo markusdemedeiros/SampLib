@@ -1,0 +1,192 @@
+{
+  "reviewer": "/root/expand_review_discrete",
+  "accepted": [
+    {
+      "sampler": "Occil.uniformFromModulus",
+      "proof_module": "SampLib.Samplers.UniformFromModulus",
+      "public_spec": "SampLib.UniformFromModulus.uniformFromModulus_distSpec",
+      "proof_kind": "core",
+      "sha256": "c76650f505e2b92a3c80faa3bcfb7fa0582917fad1277a17b3a39e09f821d214",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch011.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/ModulusReduction.lean": "c6b00a495353f614e188be0b47cacc8ec38b799422297672fe1d3d66a25b4ae9",
+        "SampLib/Distributions/UniformRectangles.lean": "93f83aa1581c59fad91a2bac9644d49e864ff3da102a5316ccb193898195dbed",
+        "SampLib/Distributions/UniformRejection.lean": "1004d8fecd12a5c8c46027026700f0d60b1919cac6ba9e40254dffb353383da0",
+        "SampLib/Distributions/UniformSupport.lean": "019f54ee4d8709463cce0ae4deea00b67af419d72d9d790a3d56e213ccadce8e",
+        "SampLib/Distributions/WordIntervals.lean": "b2cb0d0c72cdcb662ba9a7b3cbe73505705de648269c784f70220a5729b3f06c",
+        "SampLib/Samplers/UniformFromModulus.lean": "c76650f505e2b92a3c80faa3bcfb7fa0582917fad1277a17b3a39e09f821d214",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      },
+      "review_notes": "The canonical target is UniformInt.law n. Complete residue blocks conserve arbitrary output credit for small targets; independent high/low digits flatten to one uniform rectangle for large targets. Each retry retains at least half of its source range. The program proof separates the equal, smaller and larger target cases; strong induction supplies a relative closed low-digit specification, and both retry loops use one direct conservation bound and factor-two amplification. Independent tests check source5/target2 residue rejection, deliberately conservative source6/target2 cutoff, recursive widths2\u21927\u21924\u21922, source3/target8 rectangle, equal-modulus native draws, singleton infinite off-support credit and generic framing."
+    },
+    {
+      "sampler": "Occil.DiscreteExtra.negativeMultinomial",
+      "proof_module": "SampLib.Samplers.NegativeMultinomial",
+      "public_spec": "SampLib.NegativeMultinomial.negativeMultinomial_distSpec",
+      "proof_kind": "core",
+      "sha256": "f1768bd9b2b6237a13614f611f988303273bab590029b8670fca792136be2915",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch011.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/Binomial.lean": "332a0b32e0d14943ce264f1c35d85558c615bea81eec88194e5c53e20112124d",
+        "SampLib/Distributions/BinomialMeasure.lean": "35eba0a09d4cf117121ca3776843a39c78048b921e3182fccb44b05083c35373",
+        "SampLib/Distributions/BinomialThinning.lean": "ccd9bb7dacc5de34badde21688c5319c594e6f87c7da9665173b90b06943f704",
+        "SampLib/Distributions/Geometric.lean": "f35eaf7977331250eb2152791b93d048be5f60d05e2c82a584a4d2b781624bd5",
+        "SampLib/Distributions/Multinomial.lean": "9253a234cf5994afefa1827f42c9b88aa953b2b30ba98cf35f64a4a83210867f",
+        "SampLib/Distributions/MultinomialCoefficients.lean": "88f9807f4b18983a0bafbd25be7ad6be5716bef48c5bf2f1f947ffd98d7598f7",
+        "SampLib/Distributions/MultinomialTrials.lean": "2f076c8c9fe1f70d009d00277e74dea380cf1877d64d9d8fcc3a6382abf47f66",
+        "SampLib/Distributions/NegativeBinomialStep.lean": "b3f98d9da3153cc4abae38637db479c8a366aaf846919cbf6758008265027663",
+        "SampLib/Distributions/NegativeMultinomial.lean": "450813ff722a721db5d0976355b1cc3d071738d15d2a72aa1a564b577277a57a",
+        "SampLib/Distributions/Urn.lean": "ec5373077d35e99efc097e209ca8f9746bd72c9226bb6659d5076b782cd06fdd",
+        "SampLib/Distributions/WeightedSupport.lean": "1bd3e47e01cc5641f8d5e23eb0ad8257da928e251a6fc4efaedf0f3dc7944fef",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/NatCounters.lean": "041132bb64a0c8a53c2bdb929635f144b10cd1ae47ceeb2e1a6c3bfbdf65ab15",
+        "SampLib/Samplers/Binomial.lean": "76e53294152ed9586f37315a5f27e7257faca3e9bec707ff404c6653d6a9e996",
+        "SampLib/Samplers/Geometric.lean": "a5692d1af2f98bc791cb40d14c4ef0bb349873d411659fa6f2b70d552eb5ce78",
+        "SampLib/Samplers/NegativeBinomial.lean": "7822adee15aa10c7ab49c8053746da73c0441bfbc07220dc787297370c2cdc84",
+        "SampLib/Samplers/NegativeMultinomial.lean": "f1768bd9b2b6237a13614f611f988303273bab590029b8670fca792136be2915",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Binomial.lean": "92e03310618dac7df9dcc34b3ea769b33776dbf09dcb7419990cb9e9af52c3a3",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Discrete/Compound.lean": "537fd769c04a9556b465705bfcf0e70d9d06ec0302bb5bea531b913a03ca87cc",
+        "code/Samplers/Discrete/Counts.lean": "719b6ceab7396c9567e3b460e7a1abe675a937cd0b06c2908c507ed08a46fa3e",
+        "code/Samplers/Discrete/Urns.lean": "ebe8e5baf688b9d392c8857d0561156f2d51804830255ad966e889916ff9d919",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      },
+      "review_notes": "The independent canonical law draws the negative-binomial total failure count, then allocates it with the standard multinomial PMF. Joint atoms factor at the returned count sum. The first-trial recurrence and categorical allocation identity yield one exact credit conservation lemma, including a remaining-success potential and fixed amplification1+p. Main CTE performs a supported categorical draw, decrements the remaining target or calls the pure indexed counter increment, then invokes its accumulator-universal induction hypothesis. Independent tests check a nonuniform joint count mass1/8, all-zero and absent failure categories, zero targets, infinite off-support credit, normalization and generic list-encoded resource framing."
+    },
+    {
+      "sampler": "Occil.DiscreteExtra.walleniusHypergeometric",
+      "proof_module": "SampLib.Samplers.WalleniusHypergeometric",
+      "public_spec": "SampLib.WalleniusHypergeometric.walleniusHypergeometric_distSpec",
+      "proof_kind": "core",
+      "sha256": "128d4f9fca452622afd7bc8b251945ed8cc2dc5469e1ab28a9c28b19f6d3441f",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch011.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/Urn.lean": "ec5373077d35e99efc097e209ca8f9746bd72c9226bb6659d5076b782cd06fdd",
+        "SampLib/Distributions/Wallenius.lean": "e45dca17c92da6efb2c5f404006994c4a8c0d5d722970d915b2bd2faa97b1e11",
+        "SampLib/Distributions/WeightedPositiveSupport.lean": "32ee7e4ff528200c349f10161fb94da8d4bf36e874803a11c4de68bf9de1c1ae",
+        "SampLib/Distributions/WeightedSupport.lean": "1bd3e47e01cc5641f8d5e23eb0ad8257da928e251a6fc4efaedf0f3dc7944fef",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/ProofMode/BindFrom.lean": "c904ca958308f8d434bbaffa0128cbe5ab31d72ed884886946bcac98f973db54",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WalleniusHypergeometric.lean": "128d4f9fca452622afd7bc8b251945ed8cc2dc5469e1ab28a9c28b19f6d3441f",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Binomial.lean": "92e03310618dac7df9dcc34b3ea769b33776dbf09dcb7419990cb9e9af52c3a3",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Discrete/Urns.lean": "ebe8e5baf688b9d392c8857d0561156f2d51804830255ad966e889916ff9d919",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      },
+      "review_notes": "The independent normalized color-word law exposes its explicit prefix product: remaining color count times odds, divided by current total weighted population. The Wallenius count law is its count pushforward; full-request support prevents overdraw. The two-color expectation is derived by identifying the categorical draw with the corresponding rational coin. Main CTE is finite draw-count induction, a supported selected-color coin, then the appropriate smaller urn call and optional marked increment. Independent unequal-odds tests use ones2/zeros1/odds3:1/n2: two marked draws have probability9/14, distinguishing Fisher3/5, while ordered mixed words have probabilities3/14 and1/7. Tests also cover zero draws without UniformInt, both empty-color boundaries, overdraw-zero mass, arbitrary infinite expectations and generic framing."
+    }
+  ],
+  "support": [
+    {
+      "module": "SampLib.Distributions.ModulusReduction",
+      "sha256": "c6b00a495353f614e188be0b47cacc8ec38b799422297672fe1d3d66a25b4ae9"
+    },
+    {
+      "module": "SampLib.Distributions.UniformRectangles",
+      "sha256": "93f83aa1581c59fad91a2bac9644d49e864ff3da102a5316ccb193898195dbed"
+    },
+    {
+      "module": "SampLib.Distributions.UniformSupport",
+      "sha256": "019f54ee4d8709463cce0ae4deea00b67af419d72d9d790a3d56e213ccadce8e"
+    },
+    {
+      "module": "SampLib.Distributions.NegativeMultinomial",
+      "sha256": "450813ff722a721db5d0976355b1cc3d071738d15d2a72aa1a564b577277a57a"
+    },
+    {
+      "module": "SampLib.Distributions.MultinomialTrials",
+      "sha256": "2f076c8c9fe1f70d009d00277e74dea380cf1877d64d9d8fcc3a6382abf47f66"
+    },
+    {
+      "module": "SampLib.Distributions.NegativeBinomialStep",
+      "sha256": "b3f98d9da3153cc4abae38637db479c8a366aaf846919cbf6758008265027663"
+    },
+    {
+      "module": "SampLib.Distributions.WeightedSupport",
+      "sha256": "1bd3e47e01cc5641f8d5e23eb0ad8257da928e251a6fc4efaedf0f3dc7944fef"
+    },
+    {
+      "module": "SampLib.NatCounters",
+      "sha256": "041132bb64a0c8a53c2bdb929635f144b10cd1ae47ceeb2e1a6c3bfbdf65ab15"
+    },
+    {
+      "module": "SampLib.Distributions.Wallenius",
+      "sha256": "e45dca17c92da6efb2c5f404006994c4a8c0d5d722970d915b2bd2faa97b1e11"
+    },
+    {
+      "module": "SampLib.ProofMode.BindFrom",
+      "sha256": "c904ca958308f8d434bbaffa0128cbe5ab31d72ed884886946bcac98f973db54"
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionDiscreteBatch011Callers.lean",
+  "caller_sha256": "1deaeb49a25850819cbd185e8fca410427eac06a2d54be5f93d2c702cada46d0"
+}

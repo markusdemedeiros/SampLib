@@ -1,0 +1,54 @@
+[
+  {
+    "sampler": "Occil.weightedChoice",
+    "implementation": "code/Samplers/Discrete.lean",
+    "proof_module": "SampLib.Samplers.WeightedChoice",
+    "owner": "/root/verify_weighted_choice",
+    "reviewer": "/root/review_next_batch",
+    "status": "accepted",
+    "public_spec": "SampLib.WeightedChoice.weightedChoice_distSpec",
+    "review_evidence": "agent-docs/reviews/NextBatchWeightedFactories.md",
+    "reviewed_sha256": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+    "reviewed_domain": "All nonnegative integer weights with positive sum, represented by List \u2115; zero weights included. Output index mass weight/total.",
+    "review_receipt": "agent-docs/reviews/NextBatchWeightedFactories.json"
+  },
+  {
+    "sampler": "Occil.bernsteinFactory",
+    "implementation": "code/Samplers/Bernoulli/Combinators.lean",
+    "proof_module": "SampLib.Samplers.BernsteinFactory",
+    "owner": "/root/verify_next_factories",
+    "reviewer": "/root/review_next_batch",
+    "status": "accepted",
+    "public_spec": "SampLib.BernsteinFactory.bernsteinFactory_distSpec",
+    "review_evidence": "agent-docs/reviews/NextBatchWeightedFactories.md",
+    "reviewed_sha256": "964f23561a3176ded195aa9b7c23ea4d1451e62753f6dad57c17bfae5131b6e6",
+    "reviewed_domain": "All p\u2208[0,1] and nonempty lists of valid rational coefficients in [0,1]; includes degree zero and rational zero/one coefficients. Bias explicitly the Bernstein polynomial.",
+    "review_receipt": "agent-docs/reviews/NextBatchWeightedFactories.json"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.pLogInverse",
+    "implementation": "code/Samplers/Bernoulli/Elementary.lean",
+    "proof_module": "SampLib.Samplers.PLogInverse",
+    "owner": "/root/verify_next_factories",
+    "reviewer": "/root/review_next_batch",
+    "status": "accepted",
+    "public_spec": "SampLib.PLogInverse.pLogInverse_distSpec",
+    "review_evidence": "agent-docs/reviews/NextBatchWeightedFactories.md",
+    "reviewed_sha256": "efa14e4c414682db33ea37ddd89eb50dada53f6081d9dd9dc861a55a6a26b8ca",
+    "reviewed_domain": "All terminating biases 0<p\u22641; output Bernoulli(p log(1/p)), including deterministic false at p=1.",
+    "review_receipt": "agent-docs/reviews/NextBatchWeightedFactories.json"
+  },
+  {
+    "sampler": "Occil.weightedRejection",
+    "implementation": "code/Samplers/Weighted/Sequential.lean",
+    "proof_module": "SampLib.Samplers.WeightedRejection",
+    "owner": "/root/verify_next_weighted_rejection",
+    "reviewer": "/root/review_next_batch",
+    "status": "accepted",
+    "public_spec": "SampLib.WeightedRejection.weightedRejection_distSpec",
+    "review_evidence": "agent-docs/reviews/NextBatchWeightedFactories.md",
+    "reviewed_sha256": "9c8d0a10a70f75f9ece953045d03f14de76751290b0583a23f3fbefce524b915",
+    "reviewed_domain": "All nonnegative integer weights with positive total, and every positive integer envelope dominating all weights. Zero weights and the all-accept envelope boundary are included; exact categorical law independent of envelope.",
+    "review_receipt": "agent-docs/reviews/NextBatchWeightedFactories.json"
+  }
+]

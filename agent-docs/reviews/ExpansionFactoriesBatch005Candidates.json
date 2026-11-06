@@ -1,0 +1,44 @@
+[
+  {
+    "sampler": "Occil.expMinusFactory",
+    "implementation": "code/Samplers/Bernoulli/Basic.lean",
+    "proof_module": "SampLib.Samplers.ExpMinusFactory",
+    "owner": "/root/expand_continuous",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ExpMinusFactory.expMinusFactory_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch005.md",
+    "reviewed_sha256": "9a5bd78d1ab4ecea97f7df2a43d003a2d4f379dc429dbea48e8f90d5375874ab",
+    "reviewed_domain": "Every input bias p in [0,1], including both endpoints, in the real uniform model.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch005.json",
+    "algorithm_kind": "core"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.expTimesComplement",
+    "implementation": "code/Samplers/Bernoulli/Exponential.lean",
+    "proof_module": "SampLib.Samplers.ExpTimesComplement",
+    "owner": "/root/expand_continuous",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ExpTimesComplement.expTimesComplement_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch005.md",
+    "reviewed_sha256": "9eb446cec88c694d607c793e0ebe3d8e99386dd638a4f9665700b8d84ea318a8",
+    "reviewed_domain": "Every input bias p in [0,1], including both deterministic endpoints, in the real uniform model.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch005.json",
+    "algorithm_kind": "core"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.reciprocalExpAffine",
+    "implementation": "code/Samplers/Bernoulli/Rational.lean",
+    "proof_module": "SampLib.Samplers.ReciprocalExpAffine",
+    "owner": "/root/expand_exp_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ReciprocalExpAffine.reciprocalExpAffine_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch005.md",
+    "reviewed_sha256": "041d07ff18efd96b35946037be8fd533818fd33c029f091d40792e2567ec687c",
+    "reviewed_domain": "All natural a,b,x,y with b>0, b<=a, and y>0, including x=0; exact 1/(a/b+exp(-x/y)).",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch005.json",
+    "algorithm_kind": "derived"
+  }
+]

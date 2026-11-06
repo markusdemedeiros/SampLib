@@ -1,0 +1,58 @@
+[
+  {
+    "sampler": "Occil.FactoryExtra.linear",
+    "implementation": "code/Samplers/Bernoulli/Linear.lean",
+    "proof_module": "SampLib.Samplers.LinearFactory",
+    "owner": "/root/expand_rational_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.LinearFactory.linear_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch009.md",
+    "reviewed_sha256": "d78b257680aad04d2c86dfc2dff2637e43f0c58498854591c0f332ff03801fbd",
+    "reviewed_domain": "All unit-interval biases, integer a>=0,b>0; only the expanding branch requires 0<e<f and (a/b)*p<=1-e/f. Contracting coefficients admit arbitrary integer margins.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch009.json",
+    "algorithm_kind": "core"
+  },
+  {
+    "sampler": "Occil.Constants.fromBounds",
+    "implementation": "code/Samplers/Constants/Engines.lean",
+    "proof_module": "SampLib.Samplers.FromBounds",
+    "owner": "/root/expand_constants",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.FromBounds.fromBounds_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch009.md",
+    "reviewed_sha256": "97156688eab76f1cc68b6133644379c70c2235af88fda37c8f68dad2c38c408c",
+    "reviewed_domain": "Every unit-interval target, deterministic rational enclosures from index zero, and arbitrarily small widths; no monotonicity or convergence rate is assumed.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch009.json",
+    "algorithm_kind": "core"
+  },
+  {
+    "sampler": "Occil.logOnePlusFactory",
+    "implementation": "code/Samplers/Lazy.lean",
+    "proof_module": "SampLib.Samplers.LogOnePlusFactory",
+    "owner": "/root/expand_series_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.LogOnePlusFactory.logOnePlusFactory_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch009.md",
+    "reviewed_sha256": "13a45d6cd5658d4d81fa88f9fe9cf916d1e08a7df1708eb9240b23ad406ba711",
+    "reviewed_domain": "Every unit-interval input bias including zero and one, with an arbitrary verified callback and arbitrary ENNReal credits.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch009.json",
+    "algorithm_kind": "core"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.complementLogOnePlus",
+    "implementation": "code/Samplers/Bernoulli/Elementary.lean",
+    "proof_module": "SampLib.Samplers.ComplementLogOnePlus",
+    "owner": "/root/expand_series_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ComplementLogOnePlus.complementLogOnePlus_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch009.md",
+    "reviewed_sha256": "0c3881cc35fbf4b91baf90ef9e0805b1e1b0c4802132e487797f07613987b6ad",
+    "reviewed_domain": "Every unit-interval input bias and arbitrary verified callback, including both endpoints and arbitrary ENNReal credits.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch009.json",
+    "algorithm_kind": "derived"
+  }
+]

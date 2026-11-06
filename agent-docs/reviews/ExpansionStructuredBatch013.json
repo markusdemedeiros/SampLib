@@ -1,0 +1,377 @@
+{
+  "reviewer": "expand_review_structured",
+  "accepted": [
+    {
+      "sampler": "Occil.General.metropolisHastings",
+      "proof_module": "SampLib.Samplers.CountableMetropolisHastings",
+      "public_spec": "SampLib.CountableMetropolisHastings.metropolisHastings_distSpec",
+      "sha256": "4e53af8d7f867c61364a0b0d4c03aed17ddb5a2f62bcd4107602e999a45041c7",
+      "classification": "core",
+      "spec_kind": "plain",
+      "reviewed_domain": "Every countable encoded state space, normalized proposal measures whose singleton probabilities are represented by natural numerators and positive natural denominators, natural target weights and a positive-weight initial state, all natural transition counts. Unrestricted zero transitions require no callback contracts or random primitive.",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/CappedRationalCoin.lean": "abdf9684d7a9f6d396ae2d9fd2c24468b8cbdbbb8271872c8c26ff3aa6ea5dfe",
+        "SampLib/Distributions/CountableMetropolis.lean": "fb702046dd4344f46557b2f6d7ddfafe9a17e64745da37b6cdd9d4cb47e2379f",
+        "SampLib/Distributions/FiniteKernels.lean": "4511fa9edecd796f31b37015f9ff4fd2c5a60dadf2375b8bb90086a11c3b96a7",
+        "SampLib/Distributions/Metropolis.lean": "857ecd283a9b1b49e50a72ae2ad7639140ebcbb3adf670e1657e5707556c1c6f",
+        "SampLib/Distributions/MetropolisRatio.lean": "e2c6fe5f799ae78223f53a68444247a48b0f50d7c289e454fd8468d7aab96fc8",
+        "SampLib/ProofMode/BindFrom.lean": "c904ca958308f8d434bbaffa0128cbe5ab31d72ed884886946bcac98f973db54",
+        "SampLib/Samplers/CountableMetropolisHastings.lean": "4e53af8d7f867c61364a0b0d4c03aed17ddb5a2f62bcd4107602e999a45041c7",
+        "SampLib/Samplers/MetropolisKernel.lean": "52e9a759f1e50c7b9056ddc039d5934fcb5aaf67b9a3f976ea147ebba36431bd",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/General/Core.lean": "589c1236ee0851f6c3e75c4edb40cd528b5ebdcb627d698d6f989a684eb08750",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.General.metropolis",
+      "proof_module": "SampLib.Samplers.CountableMetropolis",
+      "public_spec": "SampLib.CountableMetropolis.metropolis_distSpec",
+      "sha256": "710ca1317bbd3617847846e130f307f0b5fe5c3a0e07f58db8b7cf01d028fc14",
+      "classification": "derived",
+      "spec_kind": "plain",
+      "reviewed_domain": "Every countable encoded state space, arbitrary normalized proposal measures, natural target weights and a positive-weight initial state, all natural transition counts. Symmetry is not required for the execution law; a stationary probability-target interpretation additionally needs symmetry and normalizability. Unrestricted zero transitions require no callback contracts or random primitive.",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/CappedRationalCoin.lean": "abdf9684d7a9f6d396ae2d9fd2c24468b8cbdbbb8271872c8c26ff3aa6ea5dfe",
+        "SampLib/Distributions/CountableMetropolis.lean": "fb702046dd4344f46557b2f6d7ddfafe9a17e64745da37b6cdd9d4cb47e2379f",
+        "SampLib/Distributions/FiniteKernels.lean": "4511fa9edecd796f31b37015f9ff4fd2c5a60dadf2375b8bb90086a11c3b96a7",
+        "SampLib/Distributions/Metropolis.lean": "857ecd283a9b1b49e50a72ae2ad7639140ebcbb3adf670e1657e5707556c1c6f",
+        "SampLib/Distributions/MetropolisRatio.lean": "e2c6fe5f799ae78223f53a68444247a48b0f50d7c289e454fd8468d7aab96fc8",
+        "SampLib/MetropolisTerms.lean": "47fa18740edc3d5062c154b9c3d79801c307d281ad2b7de4203582287894d6e1",
+        "SampLib/ProofMode/BindFrom.lean": "c904ca958308f8d434bbaffa0128cbe5ab31d72ed884886946bcac98f973db54",
+        "SampLib/Samplers/CountableMetropolis.lean": "710ca1317bbd3617847846e130f307f0b5fe5c3a0e07f58db8b7cf01d028fc14",
+        "SampLib/Samplers/MetropolisKernel.lean": "52e9a759f1e50c7b9056ddc039d5934fcb5aaf67b9a3f976ea147ebba36431bd",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/General/Core.lean": "589c1236ee0851f6c3e75c4edb40cd528b5ebdcb627d698d6f989a684eb08750",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.WeightedVariants.fenwickDraw",
+      "proof_module": "SampLib.Samplers.FenwickDraw",
+      "public_spec": "SampLib.FenwickDraw.fenwickDraw_ownedDistSpec",
+      "sha256": "53a2b46d0d4862d87b0f5a789e24089f54eaad30f4344acc0bba23501f8ba75c",
+      "classification": "core",
+      "spec_kind": "owned",
+      "reviewed_domain": "Every finite natural weight vector of positive total and every caller-owned exact Fenwick representation, including zero weights and non-power-of-two lengths. Supporting constructor accepts every positive-total natural list; supporting setter accepts every valid position and natural replacement, including a zero-total result. Bare ownership permits total zero, while drawing requires positive total.",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/ArrayOwnership.lean": "1603c09df868fbb839480d86ac40daf91bb021fbc601ecdca430f96a19c0cdfa",
+        "SampLib/ArrayVector.lean": "25c7997cc8b63433065e478591cce19a7acfd20c009322590769e158d37ca912",
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/Fenwick.lean": "5c685225a1b45454ef130e85b104c23e433bac0152b5ee6431f308b6046bf738",
+        "SampLib/Distributions/FenwickLowBit.lean": "0f115eaae2268c29a7c41f38226b6ca13a668725194010f57517db382e9b3b33",
+        "SampLib/Distributions/FenwickSearch.lean": "7d58c28a601ea5e56ecb9cd72e09f3155612d11d6336e21431254704910d647d",
+        "SampLib/Distributions/NatLog.lean": "22fa3d412c43b71d8aa3bf07a5e331bdc965e10e5c1463007b782ecd3e9ad4d2",
+        "SampLib/Distributions/Permutations.lean": "0a2c67df7cba9cca94a5cfa7192358e056c248ca1ed4d4e14ed829ebbadb907e",
+        "SampLib/FenwickCategory.lean": "1f6392aec38db8ec5795d667f4f519fe122b99cb382c187613127cffef19d3fc",
+        "SampLib/FenwickTable.lean": "fc1cf3f7b37dd64fadce1acfd0f22766562cc11325a55f09876f58efa4206bc8",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/OwnedDistSpec.lean": "01a886249d0dff347ae77fea3e715270ee9a1fb397fa12438469694609174799",
+        "SampLib/PowerOfTwoCeiling.lean": "32bf9a0364af8c7436791407afb4214ac0545f07cac790613b30db4099fdf2cb",
+        "SampLib/Samplers/Choice.lean": "b80822188b067db6777203c9e1e7bae41d78fe1da574267e6486e4da603e6ddc",
+        "SampLib/Samplers/FenwickDraw.lean": "53a2b46d0d4862d87b0f5a789e24089f54eaad30f4344acc0bba23501f8ba75c",
+        "SampLib/Samplers/SampleWithReplacement.lean": "430fa99ae768d75d13501fd70c5302775962a3b21cfadea3a76a2821121069fd",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Dynamic.lean": "3f1254bc3eb9bf6007c9fa54c51babffde1f8468d12be8a753ab80c77b0ecbf3"
+      }
+    }
+  ],
+  "support": [
+    {
+      "path": "SampLib/Distributions/CountableMetropolis.lean",
+      "sha256": "fb702046dd4344f46557b2f6d7ddfafe9a17e64745da37b6cdd9d4cb47e2379f",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/FenwickLowBit.lean",
+      "sha256": "0f115eaae2268c29a7c41f38226b6ca13a668725194010f57517db382e9b3b33",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/Fenwick.lean",
+      "sha256": "5c685225a1b45454ef130e85b104c23e433bac0152b5ee6431f308b6046bf738",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/FenwickSearch.lean",
+      "sha256": "7d58c28a601ea5e56ecb9cd72e09f3155612d11d6336e21431254704910d647d",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/FenwickCategory.lean",
+      "sha256": "1f6392aec38db8ec5795d667f4f519fe122b99cb382c187613127cffef19d3fc",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/LowBit.lean",
+      "sha256": "ba41dc789e1cdaa341005effccbf3f92cb2dbb2b17a1e177d91f7c8c7da5ec99",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/ArrayVectorLoc.lean",
+      "sha256": "31035196645b71fe190b4bc01779c3398a78ab0ba5a9fed14bfd947bc53a0d8a",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/FenwickTable.lean",
+      "sha256": "fc1cf3f7b37dd64fadce1acfd0f22766562cc11325a55f09876f58efa4206bc8",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/FenwickPropagation.lean",
+      "sha256": "dab433ff3b7dd69caef4f0eb13586fc9d3af27e169defb0f86eaad35d1570f78",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/FenwickPropagation.lean",
+      "sha256": "4eaf04526802a2e8f6598acd4091d4eba051bf292639d6dbc3748148467e07f5",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/FenwickSet.lean",
+      "sha256": "7b9b2aec4feeed9de4dfbf59ba047998e39ff5b8e38dff2f6f7b2de1b7057d20",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/NewFenwick.lean",
+      "sha256": "8e71e70ebcbbce3755ffcbaff1e1a12a7b12b3320bafee2971c4bc59c180e489",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Syntax/Fenwick.lean",
+      "sha256": "042eefc2b284438be137d61b5ff5f3b0aec33e512405c82d07c33a0e28961846",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/PowerOfTwoCeiling.lean",
+      "sha256": "32bf9a0364af8c7436791407afb4214ac0545f07cac790613b30db4099fdf2cb",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/PiBounds.lean",
+      "sha256": "bed4ef3e59e4f57e6bace4b9f6cdf73f2dbdac76066792cb77a7a3cb23374ead",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/PiBoundsDefs.lean",
+      "sha256": "0f3a16116d572428350301370a82848024b59fa9dab8520340d7eed8de18c9eb",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    },
+    {
+      "path": "SampLib/Distributions/RealEnclosure.lean",
+      "sha256": "c28e236ad54f6bf65c70339d91f6a18d393977bac360039d80cffb340892c7fb",
+      "review_evidence": "agent-docs/reviews/ExpansionStructured.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ]
+    }
+  ],
+  "correction": {
+    "previous_receipt": "agent-docs/reviews/ExpansionStructuredBatch009.json",
+    "samplers": [
+      "Occil.General.metropolisHastings",
+      "Occil.General.metropolis"
+    ],
+    "reason": "The old wrappers require Fintype, contrary to the earlier countable scope wording. NEW countable public theorems now supply the full claimed scope without changing frozen files. Metropolis is derived because its actual source is an MH specialization. These replace evidence for two existing techniques and add no sampler count."
+  },
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionStructuredBatch013Callers.lean",
+  "caller_sha256": "0ce2edb7c1c185b0b3aebb89e030be2c6e81abb93968149b30d568bdfed9cfa1"
+}

@@ -1,0 +1,172 @@
+{
+  "reviewer": "/root/expand_review_discrete",
+  "accepted": [
+    {
+      "sampler": "Occil.Weighted.cumulativeChoice",
+      "proof_module": "SampLib.Samplers.CumulativeChoice",
+      "public_spec": "SampLib.CumulativeChoice.cumulativeChoice_distSpec",
+      "proof_kind": "derived",
+      "sha256": "2937a52a25c464a1ca82748aaa9c6093104d675b7a735efa24328b0766a544ac",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch015.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/CategoricalCDF.lean": "cdabbeed240dbbe859bb6209f8064748c0d5c63724f709395dc579d6fbc1bba5",
+        "SampLib/Distributions/FiniteCDF.lean": "3f82e129e77837788cd13ef0b431cdf6b94ee9cc19440854e3464da6a4cb10f3",
+        "SampLib/GeneralSyntax.lean": "3c097dd0e388f10ac683bd66d88fa3361e2d5631cebe3ab4782e70037123fdef",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/MarkovTerms.lean": "acc68951ea3e8a6fd8fca877f1d6cb3874a553761d5037888ef6d874611d0d2c",
+        "SampLib/SamplerTerms.lean": "57b93ff11099ac98eb55a4b4a04eeb349e58454bb9bd96d040f9c4cbc24a98be",
+        "SampLib/Samplers/Choice.lean": "b80822188b067db6777203c9e1e7bae41d78fe1da574267e6486e4da603e6ddc",
+        "SampLib/Samplers/CumulativeChoice.lean": "2937a52a25c464a1ca82748aaa9c6093104d675b7a735efa24328b0766a544ac",
+        "SampLib/Samplers/CumulativeDraw.lean": "f241a767a4bf46eaa619a7a4968f97b957174f5ddd1c248f9464181b50a3c7c6",
+        "SampLib/Samplers/InverseQuantile.lean": "94482c760a6f73e6c1ee3a7518f20c5e89efbccfb1e50129089f1022bf2f98b3",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/RndIntExcRange.lean": "3307969caa795835b6ccc1c68db37333a6902b52859104bf27871ac96c234e51",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Syntax/UniformRanges.lean": "eb9205978b13185ff38d2db03fb83f82f242ec1290a557ded19d7a2eea3e739e",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedValidation.lean": "6d06663d8a9c838913038370a3ffdccf145a2e7ebc835bdca6469a6f64ba8866",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/General/Core.lean": "589c1236ee0851f6c3e75c4edb40cd528b5ebdcb627d698d6f989a684eb08750",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Tables.lean": "e2c9426d5e5403f51ee6ddde76d779b0024bbe53adc4b2a68caf3f476e338e72"
+      },
+      "review_notes": "Classification correction only: deterministic preprocessing followed by one already-counted categorical engine. Proof, implementation, domain, source closure and full prior boundary/frame checks are unchanged.",
+      "prior_review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch010.json",
+      "classification_correction": {
+        "from": "core",
+        "to": "derived"
+      }
+    },
+    {
+      "sampler": "Occil.Weighted.rationalChoice",
+      "proof_module": "SampLib.Samplers.RationalChoice",
+      "public_spec": "SampLib.RationalChoice.rationalChoice_distSpec",
+      "proof_kind": "derived",
+      "sha256": "f00ed8bd4d4c6855cd638a2e9483abc0abcf7aa8bcea9ed03e8647a3ef187b03",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch015.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/RationalChoice.lean": "24ab77d012f9e0d1e776fa1e9a0bfbfd4943c9156ed59958f1872cb8df0e6bcc",
+        "SampLib/Distributions/WeightedSums.lean": "9760cbf10638c77224a5d061ca2ad9aa6fd55a803e0abc1d0a1819b6ffeb461e",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/Samplers/RationalChoice.lean": "f00ed8bd4d4c6855cd638a2e9483abc0abcf7aa8bcea9ed03e8647a3ef187b03",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Tables.lean": "e2c9426d5e5403f51ee6ddde76d779b0024bbe53adc4b2a68caf3f476e338e72"
+      },
+      "review_notes": "Classification correction only: deterministic preprocessing followed by one already-counted categorical engine. Proof, implementation, domain, source closure and full prior boundary/frame checks are unchanged.",
+      "prior_review_receipt": "agent-docs/reviews/ExpansionDiscreteBatch012.json",
+      "classification_correction": {
+        "from": "core",
+        "to": "derived"
+      }
+    }
+  ],
+  "support": [
+    {
+      "module": "SampLib.Distributions.CategoricalCDF",
+      "sha256": "cdabbeed240dbbe859bb6209f8064748c0d5c63724f709395dc579d6fbc1bba5"
+    },
+    {
+      "module": "SampLib.Distributions.RationalChoice",
+      "sha256": "24ab77d012f9e0d1e776fa1e9a0bfbfd4943c9156ed59958f1872cb8df0e6bcc"
+    },
+    {
+      "module": "SampLib.Distributions.WeightedSums",
+      "sha256": "9760cbf10638c77224a5d061ca2ad9aa6fd55a803e0abc1d0a1819b6ffeb461e"
+    },
+    {
+      "module": "SampLib.Syntax.ClosedExp",
+      "sha256": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30"
+    },
+    {
+      "path": "agent-docs/reviews/ExpansionDiscreteBatch010.json",
+      "sha256": "5717fd8f0f9bc14454b9a24cbd45dec44971a20d990abba068637025c6f0dee1"
+    },
+    {
+      "path": "agent-docs/reviews/ExpansionDiscreteBatch010Callers.lean",
+      "sha256": "b84c25c07c4e88398b464552b279ac5045e823cbe4d2a1afb2171e8107edd349"
+    },
+    {
+      "path": "agent-docs/reviews/ExpansionDiscreteBatch012.json",
+      "sha256": "ae1c9ca57508c1a170228628efbaec199fff1df7f4ada29253db7be78d43a2da"
+    },
+    {
+      "path": "agent-docs/reviews/ExpansionDiscreteBatch012Callers.lean",
+      "sha256": "200ee4db7df32231349926a987d95fe1153b376ae3360961adddd7a0b4e67730"
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionDiscreteBatch015Callers.lean",
+  "caller_sha256": "07e4f6b964ffb7e6e6c3199a56d552c857f391dede6c8b5d2df9289f76605151",
+  "metadata_corrections": [
+    {
+      "sampler": "Occil.Weighted.cumulativeChoice",
+      "previous_receipt": "agent-docs/reviews/ExpansionDiscreteBatch010.json",
+      "previous_kind": "core",
+      "corrected_kind": "derived"
+    },
+    {
+      "sampler": "Occil.Weighted.rationalChoice",
+      "previous_receipt": "agent-docs/reviews/ExpansionDiscreteBatch012.json",
+      "previous_kind": "core",
+      "corrected_kind": "derived"
+    }
+  ],
+  "additional_sampler_count": 0
+}

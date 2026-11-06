@@ -1,0 +1,44 @@
+[
+  {
+    "sampler": "Occil.FactoryExtra.oneDivTwoMinus",
+    "implementation": "code/Samplers/Bernoulli/Rational.lean",
+    "proof_module": "SampLib.Samplers.OneDivTwoMinus",
+    "owner": "/root/expand_rational_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.OneDivTwoMinus.oneDivTwoMinus_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch001.md",
+    "reviewed_sha256": "836af4d2489dd0cd4d673240b286c461a2de296ae553b27de298020dbc0b08bb",
+    "reviewed_domain": "All input biases p in [0,1]; Bernoulli bias 1/(2-p), including both endpoints.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch001.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.reciprocalLogistic",
+    "implementation": "code/Samplers/Bernoulli/Rational.lean",
+    "proof_module": "SampLib.Samplers.ReciprocalLogistic",
+    "owner": "/root/expand_rational_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ReciprocalLogistic.reciprocalLogistic_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch001.md",
+    "reviewed_sha256": "3ae5c4a2c9c4fa3875299e427fc607371299e119816280685cf9cda7c57e8857",
+    "reviewed_domain": "Every p in [0,1], integer a>=0 and b>0; Bernoulli bias b/(b+a*p), including coefficient zero.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch001.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.FactoryExtra.integralMixture",
+    "implementation": "code/Samplers/Bernoulli/Series.lean",
+    "proof_module": "SampLib.Samplers.IntegralMixture",
+    "owner": "/root/expand_series_factories",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.IntegralMixture.integralMixture_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch001.md",
+    "reviewed_sha256": "2d01a1d68e555a94748108e4b44e10fa8aaf99269ea7146f7380d9a0d099a01d",
+    "reviewed_domain": "Any measurable parameter space, probability measure mu, measurable probability kernel kappa to Bool, and conditionally specified callbacks; target mu.bind kappa.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch001.json",
+    "algorithm_kind": "core"
+  }
+]

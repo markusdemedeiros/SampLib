@@ -1,0 +1,129 @@
+{
+  "reviewer": "/root/expand_review_discrete",
+  "accepted": [
+    {
+      "sampler": "Occil.Weighted.rationalChoice",
+      "proof_module": "SampLib.Samplers.RationalChoice",
+      "public_spec": "SampLib.RationalChoice.rationalChoice_distSpec",
+      "proof_kind": "core",
+      "sha256": "f00ed8bd4d4c6855cd638a2e9483abc0abcf7aa8bcea9ed03e8647a3ef187b03",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch012.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/RationalChoice.lean": "24ab77d012f9e0d1e776fa1e9a0bfbfd4943c9156ed59958f1872cb8df0e6bcc",
+        "SampLib/Distributions/WeightedSums.lean": "9760cbf10638c77224a5d061ca2ad9aa6fd55a803e0abc1d0a1819b6ffeb461e",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/Samplers/RationalChoice.lean": "f00ed8bd4d4c6855cd638a2e9483abc0abcf7aa8bcea9ed03e8647a3ef187b03",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Tables.lean": "e2c9426d5e5403f51ee6ddde76d779b0024bbe53adc4b2a68caf3f476e338e72"
+      },
+      "review_notes": "The independent categorical characterization is each input rational weight divided by its rational total. Exact common-denominator scaling preserves arbitrary ENNReal expectations, including infinite output credits. Main CTE validates denominators, computes their product, converts the rational weights exactly to integers, and delegates to verified categorical sampling. Independent tests give probabilities 3/5 and 2/5 for weights 1/2 and 1/3, permit unreduced 2/4, retain arbitrary singleton credit for 7/13, eliminate infinite credit at zero-weight slots, and preserve an unrelated framed resource."
+    },
+    {
+      "sampler": "Occil.Weighted.uniformBinaryFloat",
+      "proof_module": "SampLib.Samplers.UniformBinaryFloat",
+      "public_spec": "SampLib.UniformBinaryFloat.uniformBinaryFloat_distSpec",
+      "proof_kind": "core",
+      "sha256": "3c0aedda462e07b3cade01880c97642507a658e2b61f020ad1642455129c3696",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch012.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/UniformBinaryFloat.lean": "8b573967e00bb8e6a846565fbda0e2e95d03a6154b5a64a161224fbbd9fe38a9",
+        "SampLib/SamplerStep.lean": "a3e143551b2719b11170456de08e0c193059c00b6b8dafabe3c747c03eb52335",
+        "SampLib/Samplers/BoundedGeometric.lean": "9d38721aa9012b9cd8b33d661ad269d27f3db932df02c266d7cffbced5496ab8",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/RandomBits.lean": "803dad79aafcb0914d543ab87e3cd3266f4446f2b3b897640c9a2b13701feb62",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/UniformBinaryFloat.lean": "3c0aedda462e07b3cade01880c97642507a658e2b61f020ad1642455129c3696",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedIntegerPower.lean": "4d98577633e04ebbf62d71c689bbc896d93cef55f88e7bb5b0e89fc9d1eee1f5",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete/Bounded.lean": "b0e9d81da86d2e2d28d87b06d43965c6b346f82665d8f29605f3d99fb60d0f30",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Uniform.lean": "435bb931a15e38eee06efcaa0667b92911932a3c0f182a568b6a19faab0a6a16"
+      },
+      "review_notes": "The exact finite-format law decodes an independent capped fair-geometric leading-zero count and uniform mantissa into an integer significand/exponent pair, returning(0,0) at the cap. It makes no continuous-uniform or IEEE claim. Fubini and the capped-geometric split supply one expectation identity. The CTE proof inducts on the remaining zero cap, draws a fair bit, then either advances the prefix or draws the verified random-bit mantissa and deterministic binary power. Independent precision 2/cap 2 tests give zero-output mass 1/4, point(4,-3)mass 1/8 and point(7,-4)mass 1/16; cutoff(4,-5)has zero mass even with infinite credit. Zero precision/cap, normalized infinite expectation and generic pair-valued framing are checked."
+    }
+  ],
+  "support": [
+    {
+      "module": "SampLib.Distributions.RationalChoice",
+      "sha256": "24ab77d012f9e0d1e776fa1e9a0bfbfd4943c9156ed59958f1872cb8df0e6bcc"
+    },
+    {
+      "module": "SampLib.Distributions.WeightedSums",
+      "sha256": "9760cbf10638c77224a5d061ca2ad9aa6fd55a803e0abc1d0a1819b6ffeb461e"
+    },
+    {
+      "module": "SampLib.Distributions.DiscreteLaplace",
+      "sha256": "7030d9a2dbe32b43f8cc5e4dcd1abe032e9958fe6a07e8247556053642bafe13"
+    },
+    {
+      "module": "SampLib.Distributions.FisherMultivariate",
+      "sha256": "eb9f6e601d9efe972847ac69b6ec2b2b61285cba371ceb28baeaffd2de08009a"
+    },
+    {
+      "module": "SampLib.NatUrnOps",
+      "sha256": "e846b9bb2b12f9a4bff876b1773e59a4607a7e35f0bcca7a60f906d311a614bb"
+    },
+    {
+      "module": "SampLib.Distributions.UniformBinaryFloat",
+      "sha256": "8b573967e00bb8e6a846565fbda0e2e95d03a6154b5a64a161224fbbd9fe38a9"
+    },
+    {
+      "module": "SampLib.SamplerStep",
+      "sha256": "a3e143551b2719b11170456de08e0c193059c00b6b8dafabe3c747c03eb52335"
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionDiscreteBatch012Callers.lean",
+  "caller_sha256": "200ee4db7df32231349926a987d95fe1153b376ae3360961adddd7a0b4e67730"
+}

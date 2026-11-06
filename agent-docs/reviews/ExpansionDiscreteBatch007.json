@@ -1,0 +1,136 @@
+{
+  "reviewer": "/root/expand_review_discrete",
+  "accepted": [
+    {
+      "sampler": "Occil.Weighted.weightedReservoirOne",
+      "proof_module": "SampLib.Samplers.WeightedReservoirOne",
+      "public_spec": "SampLib.WeightedReservoirOne.weightedReservoirOne_distSpec",
+      "proof_kind": "core",
+      "sha256": "5601626f681bdede30b4d8c3a2e2cb76022d46cb5ecdc901cf616a0c5c2e428d",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch007.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/Urn.lean": "ec5373077d35e99efc097e209ca8f9746bd72c9226bb6659d5076b782cd06fdd",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/Samplers/WeightedReservoirOne.lean": "5601626f681bdede30b4d8c3a2e2cb76022d46cb5ecdc901cf616a0c5c2e428d",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedValidation.lean": "6d06663d8a9c838913038370a3ffdccf145a2e7ebc835bdca6469a6f64ba8866",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Reservoir.lean": "b1322886804851c05b4ccc79a0737ce77bf86a61dd76caa7b0047328ac6e398d"
+      },
+      "review_notes": "The canonical categorical law is mapped to integer labels. The previously selected integer represents one virtual item carrying the processed prefix weight. Conservation of the competing label weights is the central expectation identity. Initial prefix weight zero removes sentinel -1 even for infinite continuation credit. Reviewer feedback moved the rational-coin bias/cast conversion into a private specification helper; its final proof uses an explicit subtype equality followed by the exact existing coin specification. Tests check infinite sentinel credit contributes zero, [0,2,0] has expectation F1 for arbitrary ENNReal F, a leading-zero initial state and generic resource framing."
+    },
+    {
+      "sampler": "Occil.WeightedVariants.divisionRejection",
+      "proof_module": "SampLib.Samplers.DivisionRejection",
+      "public_spec": "SampLib.DivisionRejection.divisionRejection_distSpec",
+      "proof_kind": "core",
+      "sha256": "2af2a3374cc3912680a884b57c13e151178fe2c24328810d3714fcb6eae6ab46",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch007.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/UniformRejection.lean": "1004d8fecd12a5c8c46027026700f0d60b1919cac6ba9e40254dffb353383da0",
+        "SampLib/Distributions/WordIntervals.lean": "b2cb0d0c72cdcb662ba9a7b3cbe73505705de648269c784f70220a5729b3f06c",
+        "SampLib/Samplers/DivisionRejection.lean": "2af2a3374cc3912680a884b57c13e151178fe2c24328810d3714fcb6eae6ab46",
+        "SampLib/Samplers/RandomBits.lean": "803dad79aafcb0914d543ab87e3cd3266f4446f2b3b897640c9a2b13701feb62",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedIntegerPower.lean": "4d98577633e04ebbf62d71c689bbc896d93cef55f88e7bb5b0e89fc9d1eee1f5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Reductions.lean": "3d27990e44c3e910f07537216b3ad55fb95280a25ccf1d3da59888c12f87d316",
+        "code/Samplers/Weighted/Uniform.lean": "435bb931a15e38eee06efcaa0667b92911932a3c0f182a568b6a19faab0a6a16"
+      },
+      "review_notes": "The accepted source prefix consists of n equally sized quotient blocks; the incomplete upper interval is rejected. Grouping complete blocks proves the canonical UniformInt(n) target credit. The rejected interval occupies at most half the word range, funding the ordinary factor-two retry proof. Tests check n3/width4 rejection at word3, the full n5/width8 kernel with exactly three rejected upper words, arbitrary-ENNReal quotient-block expectations, the zero-bit singleton endpoint, infinite credits and generic frames."
+    },
+    {
+      "sampler": "Occil.WeightedVariants.debiasedModulo",
+      "proof_module": "SampLib.Samplers.DebiasedModulo",
+      "public_spec": "SampLib.DebiasedModulo.debiasedModulo_distSpec",
+      "proof_kind": "core",
+      "sha256": "3e4157f707f0e7f6e069f737aa9adcd7e0eb88d97862c372b4e805617772d91e",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch007.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/WordIntervals.lean": "b2cb0d0c72cdcb662ba9a7b3cbe73505705de648269c784f70220a5729b3f06c",
+        "SampLib/Distributions/WordRotation.lean": "18290d61ba8156f0e53be0e4c18ac523daab50b5359e3d2c1a812fc4205ec759",
+        "SampLib/Samplers/DebiasedModulo.lean": "3e4157f707f0e7f6e069f737aa9adcd7e0eb88d97862c372b4e805617772d91e",
+        "SampLib/Samplers/RandomBits.lean": "803dad79aafcb0914d543ab87e3cd3266f4446f2b3b897640c9a2b13701feb62",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedIntegerPower.lean": "4d98577633e04ebbf62d71c689bbc896d93cef55f88e7bb5b0e89fc9d1eee1f5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Reductions.lean": "3d27990e44c3e910f07537216b3ad55fb95280a25ccf1d3da59888c12f87d316",
+        "code/Samplers/Weighted/Uniform.lean": "435bb931a15e38eee06efcaa0667b92911932a3c0f182a568b6a19faab0a6a16"
+      },
+      "review_notes": "Discarding the incomplete low prefix t=width%n leaves complete residue cycles rotated by t. Finite rotation and block sums prove each label has equal accepted multiplicity; only finite positive normalization coefficients are cancelled. Rejection occupies at most half the source range, so the CTE proof uses the standard doubled-credit retry. Tests distinguish low-prefix rejection from division rejection: at n5/width8 words0,1,2 are rejected and original word5 returns residue0. The complete numerical kernel, n3/width4 word3 returning0, zero-bit singleton, arbitrary infinite credits and frames are checked."
+    }
+  ],
+  "support": [
+    {
+      "module": "SampLib.Distributions.WordIntervals",
+      "sha256": "b2cb0d0c72cdcb662ba9a7b3cbe73505705de648269c784f70220a5729b3f06c"
+    },
+    {
+      "module": "SampLib.Distributions.WordRotation",
+      "sha256": "18290d61ba8156f0e53be0e4c18ac523daab50b5359e3d2c1a812fc4205ec759"
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionDiscreteBatch007Callers.lean",
+  "caller_sha256": "5f7e250f532207b4bb82280afeeba745684faa23e87278565d808862dc12602c"
+}

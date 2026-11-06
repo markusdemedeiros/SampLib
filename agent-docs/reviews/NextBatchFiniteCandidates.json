@@ -1,0 +1,67 @@
+[
+  {
+    "sampler": "Occil.dice",
+    "implementation": "code/Samplers/Discrete.lean",
+    "proof_module": "SampLib.Samplers.Dice",
+    "owner": "verify_next_urns",
+    "reviewer": "/root/review_next_batch/review_finite_next",
+    "status": "accepted",
+    "public_spec": "SampLib.Dice.dice_distSpec",
+    "review_evidence": "agent-docs/reviews/NextBatchFinite.md",
+    "reviewed_sha256": "7bf709bfb710432fd7c10c189b440aed08720281f747edb8ce7b5e47a2e4cee2",
+    "reviewed_domain": "All natural counts n and positive sides; sum of n independent uniforms on 1..sides, including n=0 and sides=1.",
+    "review_receipt": "agent-docs/reviews/NextBatchFinite.json"
+  },
+  {
+    "sampler": "Occil.sampleWithoutReplacement",
+    "implementation": "code/Samplers/Combinatorial/Basic.lean",
+    "proof_module": "SampLib.Samplers.SampleWithoutReplacement",
+    "owner": "verify_next_subsets",
+    "reviewer": "/root/review_next_batch/review_finite_next",
+    "status": "accepted",
+    "public_spec": "SampLib.SampleWithoutReplacement.sampleWithoutReplacement_distSpec",
+    "review_evidence": "agent-docs/reviews/NextBatchFinite.md",
+    "reviewed_sha256": "8fc52ead9f3d8383445ced90a5c4bb20eb47e1fcf96e3909f3ea8515df37b07b",
+    "reviewed_domain": "All lists and natural k\u2264length, including empty zero draws; uniform ordered latent position selections, cardinality length.descFactorial k, decoded to entries.",
+    "review_receipt": "agent-docs/reviews/NextBatchFinite.json"
+  },
+  {
+    "sampler": "Occil.sampleInOrder",
+    "implementation": "code/Samplers/Combinatorial/Basic.lean",
+    "proof_module": "SampLib.Samplers.SampleInOrder",
+    "owner": "verify_next_subsets",
+    "reviewer": "/root/review_next_batch/review_finite_next",
+    "status": "accepted",
+    "public_spec": "SampLib.SampleInOrder.sampleInOrder_distSpec",
+    "review_evidence": "agent-docs/reviews/NextBatchFinite.md",
+    "reviewed_sha256": "aad71a14bb97ff122e111ba8b350870e7be701b0f4ef3c7e50a181f8bb278c9c",
+    "reviewed_domain": "All lists and natural k\u2264length, including empty zero draws and k=length; uniform position subsets returned in input order, preserving duplicate multiplicities.",
+    "review_receipt": "agent-docs/reviews/NextBatchFinite.json"
+  },
+  {
+    "sampler": "Occil.hypergeometric",
+    "implementation": "code/Samplers/Discrete.lean",
+    "proof_module": "SampLib.Samplers.Hypergeometric",
+    "owner": "verify_next_urns",
+    "reviewer": "/root/review_next_batch/review_finite_next",
+    "status": "accepted",
+    "public_spec": "SampLib.Hypergeometric.hypergeometric_distSpec",
+    "review_evidence": "agent-docs/reviews/NextBatchFinite.md",
+    "reviewed_sha256": "22f6a190e8646bee92d8f68e1a974255049dbf479378d01ebe5e50316e9e436a",
+    "reviewed_domain": "All natural n,ones,zeros with n\u2264ones+zeros; marked count in uniform labelled selections, including empty zero-draw urn and exhausted colors.",
+    "review_receipt": "agent-docs/reviews/NextBatchFinite.json"
+  },
+  {
+    "sampler": "Occil.polyaEggenberger",
+    "implementation": "code/Samplers/Discrete.lean",
+    "proof_module": "SampLib.Samplers.PolyaEggenberger",
+    "owner": "verify_next_urns",
+    "reviewer": "/root/review_next_batch/review_finite_next",
+    "status": "accepted",
+    "public_spec": "SampLib.PolyaEggenberger.polyaEggenberger_distSpec",
+    "review_evidence": "agent-docs/reviews/NextBatchFinite.md",
+    "reviewed_sha256": "fc92d8cab94044e64e2995d3eb98337959f024fa7e2f3230858315751c6f7bec",
+    "reviewed_domain": "Natural n,ones,zeros,reinforcement with n=0 or positive initial total; reinforced-urn count with exchangeable rising-product word masses, including absent colors and zero reinforcement.",
+    "review_receipt": "agent-docs/reviews/NextBatchFinite.json"
+  }
+]

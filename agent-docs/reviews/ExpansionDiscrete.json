@@ -1,0 +1,21 @@
+{
+  "reviewer": "/root/expand_review_discrete",
+  "batches": [
+    "agent-docs/reviews/ExpansionDiscreteBatch001.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch002.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch003.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch004.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch005.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch006.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch007.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch008.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch009.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch010.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch011.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch012.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch013.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch014.json",
+    "agent-docs/reviews/ExpansionDiscreteBatch015.json"
+  ],
+  "accepted_count": 48
+}

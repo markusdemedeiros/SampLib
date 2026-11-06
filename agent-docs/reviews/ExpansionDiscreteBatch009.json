@@ -1,0 +1,157 @@
+{
+  "reviewer": "/root/expand_review_discrete",
+  "accepted": [
+    {
+      "sampler": "Occil.DiscreteExtra.borel",
+      "proof_module": "SampLib.Samplers.Borel",
+      "public_spec": "SampLib.Borel.borel_distSpec",
+      "proof_kind": "core",
+      "sha256": "17f74a5ab0c282992a7af40216e79c041ebe5417906c8a58e0e2d93f4952ae4a",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch009.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/Binomial.lean": "332a0b32e0d14943ce264f1c35d85558c615bea81eec88194e5c53e20112124d",
+        "SampLib/Distributions/BinomialMeasure.lean": "35eba0a09d4cf117121ca3776843a39c78048b921e3182fccb44b05083c35373",
+        "SampLib/Distributions/GaltonWatson.lean": "2af0e4c196ff938319f566e05c6098db0955d8fc91ae7bbfeb012996546921c6",
+        "SampLib/Distributions/PoissonGenerating.lean": "d13ef5bb7a1485f3af57ae16555e696400d0d42232a9b75d31bc8aa63a9c9516",
+        "SampLib/Distributions/PoissonMeasure.lean": "e25cd2678db2066e41ab87bc5edcd464b08afac6458de8b8e29e6a55679dba80",
+        "SampLib/Distributions/PoissonThinning.lean": "46acd71a9d7ea898a1903a8c3a20b94e27c9cb3bdbe7706a14f0023e0a3e7223",
+        "SampLib/Distributions/PoissonTree.lean": "75fdf0831f7084696cf776bf1fb5c5aa38712bd78a9c9bb5ac0a2a9fb7690d8f",
+        "SampLib/Samplers/Binomial.lean": "76e53294152ed9586f37315a5f27e7257faca3e9bec707ff404c6653d6a9e996",
+        "SampLib/Samplers/Borel.lean": "17f74a5ab0c282992a7af40216e79c041ebe5417906c8a58e0e2d93f4952ae4a",
+        "SampLib/Samplers/PoissonOne.lean": "be9f7c42e774e57f5a2a2429b21679eaf2ea3b7fdb23c721b65b0176fc5b1f97",
+        "SampLib/Samplers/PoissonRational.lean": "2eb51e39762c7a31e000c5eff5b9c209271d6d915ebf5ad036a3b6ffb1598a66",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/RndInt.lean": "c109e78be39b055f9e2af6082253a79d32d9d63c3f06be59615f776b8fee0178",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Discrete/Counts.lean": "719b6ceab7396c9567e3b460e7a1abe675a937cd0b06c2908c507ed08a46fa3e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      },
+      "review_notes": "The independent target is total progeny of a Poisson Galton\u2013Watson tree, constructed from increasing finite-height tree measures. Finite-forest continuity uses diagonal cofinality; branching yields extinction mass q=exp(r(q-1)), and subcriticality forces q=1. This is not a queue-absorption recurrence definition. The CTE proof explores one root, uses the forest branching credit identity and Poisson offspring mean, and pays for termination with pending-population potential and amplification2-r. Independent tests check the first height-truncation mass exp(-r), zero-rate Dirac1, no zero progeny including infinite credit there, normalization, infinite expectation and generic framing. No explicit classical factorial-PMF identity is claimed."
+    },
+    {
+      "sampler": "Occil.WeightedVariants.oneillUniform",
+      "proof_module": "SampLib.Samplers.OneillUniform",
+      "public_spec": "SampLib.OneillUniform.oneillUniform_distSpec",
+      "proof_kind": "core",
+      "sha256": "96438d9aeca9dc85777d138afcd513cc34b1125b4ed8d8e26c6033f76a3991a8",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch009.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/MultiplyHigh.lean": "4c8ee729f5430948ff2c4201e53dafb72cbd1e8df67493b211ead9ebd1159b3f",
+        "SampLib/Distributions/WordIntervals.lean": "b2cb0d0c72cdcb662ba9a7b3cbe73505705de648269c784f70220a5729b3f06c",
+        "SampLib/Samplers/LemireUniform.lean": "2519ea9ff74a47d4b00ce4002877dc4bcdb8a1f61dadc28d8f476a10874cbf3c",
+        "SampLib/Samplers/OneillUniform.lean": "96438d9aeca9dc85777d138afcd513cc34b1125b4ed8d8e26c6033f76a3991a8",
+        "SampLib/Samplers/RandomBits.lean": "803dad79aafcb0914d543ab87e3cd3266f4446f2b3b897640c9a2b13701feb62",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedIntegerPower.lean": "4d98577633e04ebbf62d71c689bbc896d93cef55f88e7bb5b0e89fc9d1eee1f5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Reductions.lean": "3d27990e44c3e910f07537216b3ad55fb95280a25ccf1d3da59888c12f87d316",
+        "code/Samplers/Weighted/Uniform.lean": "435bb931a15e38eee06efcaa0667b92911932a3c0f182a568b6a19faab0a6a16"
+      },
+      "review_notes": "The canonical uniform target reuses Lemire equal-fibre expectation. A fresh-product rejection wrapper and current-product wrapper isolate the retry logic. The initial low-word>=n case skips threshold evaluation safely because the Euclidean remainder is<n. Otherwise a deterministic helper proves the one-subtraction, two-subtraction and modulo-fallback thresholds all equal width%n. Independent clients instantiate n5/width8, n3/width8 and n3/width16, plus n=width and zero-bit singleton, and frame arbitrary resources with arbitrary ENNReal credits."
+    },
+    {
+      "sampler": "Occil.DiscreteExtra.fisherHypergeometric",
+      "proof_module": "SampLib.Samplers.FisherHypergeometric",
+      "public_spec": "SampLib.FisherHypergeometric.fisherHypergeometric_distSpec",
+      "proof_kind": "core",
+      "sha256": "958e20723d8bb8893f5b1990b4bd4f12375ecd5e6b5216c1693eb25372753a97",
+      "review_evidence": "agent-docs/reviews/ExpansionDiscreteBatch009.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/FisherHypergeometric.lean": "919fdbc89008ef6990e3cfb7090c5e539f24d5cbe5b25920422b908affa91f31",
+        "SampLib/Distributions/FisherWeights.lean": "4b182c51fc8bf6c39a9d110e205c44e4e99209ff43e553b603abf5711bdc795f",
+        "SampLib/IntegerChoose.lean": "c02ddb26b9ac1bf2de1bb94542131d6e2ffd7f083f149835e026b0a6353249b4",
+        "SampLib/IntegerPower.lean": "5e738a4f8fcb4d9a2fb783392e96eee4791009f3b34ee1f9e813ec754a1ff0d8",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/Samplers/FisherHypergeometric.lean": "958e20723d8bb8893f5b1990b4bd4f12375ecd5e6b5216c1693eb25372753a97",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Binomial.lean": "92e03310618dac7df9dcc34b3ea769b33776dbf09dcb7419990cb9e9af52c3a3",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Discrete/Urns.lean": "ebe8e5baf688b9d392c8857d0561156f2d51804830255ad966e889916ff9d919",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      },
+      "review_notes": "The independent canonical Fisher PMF is proportional to choose(ones,k)*choose(zeros,n-k)*a^k*b^(n-k), zero outside0..n. A feasible k=min(n,ones) proves a positive normalizer. Deterministic program helpers execute four exact choose/power calls in their actual evaluation order and build the complete finite table; main CTE validates, builds and delegates to categorical sampling. Tests check arbitrary empty draws, both exhausted-color boundaries, complete population, and the odds2/1 example with ones2/zeros1/n1 giving marked probability4/5. Infinite credit at an impossible count and generic framed clients are checked."
+    }
+  ],
+  "support": [
+    {
+      "module": "SampLib.Distributions.GaltonWatson",
+      "sha256": "2af0e4c196ff938319f566e05c6098db0955d8fc91ae7bbfeb012996546921c6"
+    },
+    {
+      "module": "SampLib.Distributions.PoissonGenerating",
+      "sha256": "d13ef5bb7a1485f3af57ae16555e696400d0d42232a9b75d31bc8aa63a9c9516"
+    },
+    {
+      "module": "SampLib.Distributions.FisherWeights",
+      "sha256": "4b182c51fc8bf6c39a9d110e205c44e4e99209ff43e553b603abf5711bdc795f"
+    },
+    {
+      "module": "SampLib.Distributions.FisherHypergeometric",
+      "sha256": "919fdbc89008ef6990e3cfb7090c5e539f24d5cbe5b25920422b908affa91f31"
+    }
+  ],
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "10f8de97752546081d00abec7f540d17d0ef227c2413b306029df1482f2dd97d",
+      "lake-manifest.json": "b8557f1817b01a24bef18d504a64c201476e0c92be9213d318f1aa7281b9046d",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "54e780e43709d2f28386b83bffccdde498141b25",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExpansionDiscreteBatch009Callers.lean",
+  "caller_sha256": "a13fa7fe22b1d5892362b646ff6a9a3586b2e09cebda3ac22cc0f3a9d12b5141"
+}

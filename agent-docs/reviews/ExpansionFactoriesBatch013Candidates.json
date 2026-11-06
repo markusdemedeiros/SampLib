@@ -1,0 +1,58 @@
+[
+  {
+    "sampler": "Occil.Constants.eScaled",
+    "implementation": "code/Samplers/Constants/Exponential.lean",
+    "proof_module": "SampLib.Samplers.EScaled",
+    "owner": "/root/expand_continuous",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.EScaled.eScaled_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch013.md",
+    "reviewed_sha256": "d1c75b7fb5cd86c94ae1d7a15fef9e2aa813b3a3877f6fb8763143c09adb3fae",
+    "reviewed_domain": "All natural numerator u>=0 and denominator v>0 satisfying the exact probability condition exp(1)*u/v<=1. No v>=3u or early-enclosure upper<=1 restriction.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch013.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.Constants.eOverPi",
+    "implementation": "code/Samplers/Constants/Special.lean",
+    "proof_module": "SampLib.Samplers.EOverPi",
+    "owner": "/root/expand_constants",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.EulerPi.eOverPi_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch013.md",
+    "reviewed_sha256": "a8b6512a2cdafa3cda5b44568fbcda820fa5038ca71560c8fde39669437f9b6d",
+    "reviewed_domain": "The fixed canonical probability exp(1)/pi, arbitrary masks, ghost states, measurable Boolean credits including infinity, and arbitrary resource frames.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch013.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.Constants.piAffine",
+    "implementation": "code/Samplers/Constants/Pi.lean",
+    "proof_module": "SampLib.Samplers.PiAffine",
+    "owner": "/root/expand_general",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.PiAffine.piAffine_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch013.md",
+    "reviewed_sha256": "c1497eb78b768423b0a7452fb7283ba334a5f684f76fc8e5da3c2fbe6ad4909c",
+    "reviewed_domain": "Every signed integer offset, positive natural divisor, and exact0<=pi-offset<=divisor probability domain. Negative offsets remain admissible.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch013.json",
+    "algorithm_kind": "derived"
+  },
+  {
+    "sampler": "Occil.Constants.reciprocalPiScaled",
+    "implementation": "code/Samplers/Constants/Pi.lean",
+    "proof_module": "SampLib.Samplers.ReciprocalPiScaled",
+    "owner": "/root/expand_general",
+    "reviewer": "/root/expand_review_factories",
+    "status": "accepted",
+    "public_spec": "SampLib.ReciprocalPiScaled.reciprocalPiScaled_distSpec",
+    "review_evidence": "agent-docs/reviews/ExpansionFactoriesBatch013.md",
+    "reviewed_sha256": "443138301d6fe1c2c51c33b6df1ac5ff324f2020434b450c048ff1ceeb2da2f3",
+    "reviewed_domain": "Every natural numerator including zero, positive natural denominator, and exact numerator<=denominator*pi bound. Coarse interval endpoints may exceed1.",
+    "review_receipt": "agent-docs/reviews/ExpansionFactoriesBatch013.json",
+    "algorithm_kind": "derived"
+  }
+]
