@@ -1,7 +1,7 @@
-import SampLib.Samplers.InversePolya
-import SampLib.Samplers.BetaNegativeBinomial
-import SampLib.Samplers.WaringYule
-import SampLib.Samplers.YuleSimon
+import SampLib.Discrete.InversePolya
+import SampLib.Discrete.BetaNegativeBinomial
+import SampLib.Discrete.WaringYule
+import SampLib.Discrete.YuleSimon
 
 open ProbLang
 open scoped ENNReal

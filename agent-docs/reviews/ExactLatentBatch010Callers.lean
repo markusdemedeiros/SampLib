@@ -1,5 +1,5 @@
-import SampLib.Samplers.PSRNGammaFamilies
-import SampLib.Samplers.PSRNLindleyFamilies
+import SampLib.PSRN.PSRNGammaFamilies
+import SampLib.PSRN.PSRNLindleyFamilies
 
 open ProbLang
 open scoped ENNReal

@@ -1,4 +1,4 @@
-import SampLib.Samplers.PSRNSimplex
+import SampLib.PSRN.PSRNSimplex
 
 open ProbLang
 open scoped ENNReal

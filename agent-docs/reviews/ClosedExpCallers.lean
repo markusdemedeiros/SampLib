@@ -1,4 +1,4 @@
-import SampLib.Syntax.ClosedExp
+import SampLib.Core.Syntax.ClosedExp
 import Samplers.Uniform
 
 open ProbLang SampLib

@@ -18,6 +18,8 @@ import tempfile
 
 from audit_sampler_proofs import LEAN_HEADER, STANDARD_AXIOMS
 from proof_dependencies import ROOT, review_context, sha256, source_snapshot
+from relocation import (current_imports, current_module, module_path, relocate_context,
+                        relocate_file, relocate_snapshot)
 
 MANIFEST = ROOT / "agent-docs/ExactVerificationCampaign.json"
 SCOPE_COUNT = 137
@@ -102,9 +104,9 @@ elab "#audit_conditional_coin_spec " theoremName:ident " for " samplerName:ident
 elab "#audit_latent_vector_spec " theoremName:ident " for " samplerName:ident : command =>
   auditSpecification theoremName.getId samplerName.getId ``SampLib.LatentReal.IsLatentVectorSpec
 ''')
-    return EXACT_LEAN_HEADER.replace(
+    return current_imports(EXACT_LEAN_HEADER.replace(
         "import SampLib.UniformBagCoin", "\n".join(["import SampLib.UniformBagCoin", *imports]),
-    ) + "\n".join(commands)
+    )) + "\n".join(commands)
 
 
 class AuditError(ValueError):
@@ -151,7 +153,8 @@ def validate_scope(campaign: dict, context: dict) -> list[dict]:
     queue_names = re.findall(r"^\| `(Occil\.[^`]+)` \|", scope.read_text(), re.M)
     require(queue_names == names, "Frozen names differ from original queue")
     baseline = campaign["baseline"]
-    require(context == baseline["context"], "Review configuration/dependency context changed")
+    require(context == relocate_context(baseline["context"]),
+            "Review configuration/dependency context changed")
     require(context["packages"].get("clutch-lean") == CLUTCH_REVISION,
             "This campaign must use the new pinned clutch revision")
     historical = local_file(baseline["historical_campaign"])
@@ -190,15 +193,18 @@ def validate_receipt(row: dict, context: dict) -> str:
     module = row.get("proof_module")
     require(isinstance(module, str) and re.fullmatch(r"SampLib(?:\.\w+)+", module) is not None,
             f"Invalid proof module: {name}")
-    proof = local_file(module.replace(".", "/") + ".lean")
-    require(sha256(proof) == row.get("reviewed_sha256"), f"Reviewed proof changed: {name}")
+    proof = local_file(module_path(module))
+    recorded_proof = module.replace(".", "/") + ".lean"
+    require(sha256(proof) == relocate_file(recorded_proof, row.get("reviewed_sha256"))[1],
+            f"Reviewed proof changed: {name}")
     require(isinstance(row.get("public_spec"), str) and
             re.fullmatch(r"SampLib(?:\.\w+)+", row["public_spec"]) is not None,
             f"Missing or malformed public specification: {name}")
     receipt = read_json(local_file(row.get("review_receipt")))
     require(agent_identity(receipt.get("reviewer")) == agent_identity(row["reviewer"]),
             f"Receipt reviewer mismatch: {name}")
-    require(receipt.get("context") == context, f"Receipt uses a different dependency pin: {name}")
+    require(relocate_context(receipt.get("context")) == context,
+            f"Receipt uses a different dependency pin: {name}")
     matches = [entry for entry in receipt.get("accepted", []) if entry.get("sampler") == name]
     require(len(matches) == 1, f"No unique receipt acceptance: {name}")
     entry = matches[0]
@@ -216,27 +222,30 @@ def validate_receipt(row: dict, context: dict) -> str:
         required_checks.add("joint")
     require(required_checks <= set(entry.get("checks", [])),
             f"Incomplete reviewer checks: {name}")
-    require(entry.get("source_snapshot") == source_snapshot(module, row["implementation"]),
+    snapshot = relocate_snapshot(entry.get("source_snapshot"))
+    require(snapshot == source_snapshot(module, row["implementation"]),
             f"Transitive reviewed sources changed: {name}")
     evidence = local_file(row.get("review_evidence"))
     text = evidence.read_text()
     require(row["public_spec"] in text and row["reviewed_sha256"] in text,
             f"Review prose must identify exact theorem and source hash: {name}")
     caller_name = receipt.get("caller_evidence")
-    caller = local_file(caller_name)
+    caller_path, caller_sha = relocate_file(caller_name, receipt.get("caller_sha256"))
+    caller = local_file(caller_path)
     require(caller.suffix == ".lean" and caller_name.startswith("agent-docs/reviews/Exact"),
             f"Caller must be a reviewer-owned Exact campaign Lean artifact: {name}")
-    require(sha256(caller) == receipt.get("caller_sha256"), f"Reviewed caller changed: {name}")
+    require(sha256(caller) == caller_sha, f"Reviewed caller changed: {name}")
     for support in receipt.get("support", []):
         support_name = support.get("path") or support["module"].replace(".", "/") + ".lean"
-        require(sha256(local_file(support_name)) == support.get("sha256"),
+        support_path, support_sha = relocate_file(support_name, support.get("sha256"))
+        require(sha256(local_file(support_path)) == support_sha,
                 f"Reviewed support changed: {support_name}")
-    for path_name, expected in entry["source_snapshot"].items():
+    for path_name, expected in snapshot.items():
         if path_name.endswith(".lean") and not path_name.startswith("code/"):
             text = local_file(path_name).read_text()
             require(re.search(r"\b(?:sorry|admit|axiom)\b", strip_comments(text)) is None,
                     f"Placeholder or explicit axiom in project proof closure: {path_name}")
-    return caller_name
+    return caller_path
 
 
 def strip_comments(text: str) -> str:
@@ -304,7 +313,7 @@ def audit(manifest: Path, metadata_only: bool, require_complete: bool) -> None:
     run(["lake", "build"])
     imports = (ROOT / "SampLib.lean").read_text().splitlines()
     for row in accepted:
-        require(f"import {row['proof_module']}" in imports,
+        require(f"import {current_module(row['proof_module'])}" in imports,
                 f"Accepted proof missing from public root: {row['sampler']}")
     if accepted:
         commands = []

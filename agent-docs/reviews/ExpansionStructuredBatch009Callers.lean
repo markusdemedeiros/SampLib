@@ -1,8 +1,8 @@
-import SampLib.Samplers.Derangement
-import SampLib.Samplers.MetropolisHastings
-import SampLib.Samplers.Metropolis
-import SampLib.AliasTable
-import SampLib.ArrayVector
+import SampLib.Combinatorial.Derangement
+import SampLib.General.MetropolisHastings
+import SampLib.General.Metropolis
+import SampLib.Weighted.Support.AliasTable
+import SampLib.Core.ArrayVector
 
 open ProbLang
 open scoped ENNReal

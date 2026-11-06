@@ -1,4 +1,4 @@
-import SampLib.Samplers.PSRNGammaFamilies
+import SampLib.PSRN.PSRNGammaFamilies
 
 open ProbLang SampLib.LatentReal SampLib.PSRNGammaFamilies
 open Iris Iris.BI Iris.ProofMode ProbLang.TotalEris ProbLang.TotalEris.ErisWpGS

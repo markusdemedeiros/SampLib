@@ -1,4 +1,4 @@
-import SampLib.Samplers.OptimalChoice
+import SampLib.Weighted.OptimalChoice
 
 open ProbLang
 open scoped ENNReal

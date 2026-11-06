@@ -1,4 +1,4 @@
-import SampLib.LatentRepresentedMultiplication
+import SampLib.PSRN.Support.LatentRepresentedMultiplication
 
 open ProbLang
 open scoped ENNReal

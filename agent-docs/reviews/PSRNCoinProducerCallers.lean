@@ -1,4 +1,4 @@
-import SampLib.PSRNCoin
+import SampLib.PSRN.Support.PSRNCoin
 
 /-! Two fresh conditional coins preserve their joint latent continuation and a frame. -/
 

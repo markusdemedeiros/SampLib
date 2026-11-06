@@ -1,8 +1,8 @@
-import SampLib.Samplers.ExpMinusMartingale
-import SampLib.Samplers.CosineFactory
-import SampLib.Samplers.SineFactory
-import SampLib.Samplers.EpsilonDivision
-import SampLib.Distributions.FactorialSeriesMean
+import SampLib.Bernoulli.ExpMinusMartingale
+import SampLib.Bernoulli.CosineFactory
+import SampLib.Bernoulli.SineFactory
+import SampLib.Bernoulli.EpsilonDivision
+import SampLib.Bernoulli.Laws.FactorialSeriesMean
 import SampLib.Templates
 import Metrology.Iris.LocalBI
 open ProbLang

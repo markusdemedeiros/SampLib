@@ -1,5 +1,5 @@
-import SampLib.LatentCoordinateSum
-import SampLib.Distributions.PSRNDirichletTransport
+import SampLib.PSRN.Support.LatentCoordinateSum
+import SampLib.PSRN.Laws.PSRNDirichletTransport
 
 open ProbLang
 open scoped ENNReal

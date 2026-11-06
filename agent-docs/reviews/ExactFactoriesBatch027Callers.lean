@@ -1,8 +1,8 @@
 import SampLib
-import SampLib.OwnedDistSpec
+import SampLib.Core.OwnedDistSpec
 import Lean.Elab.Command
-import SampLib.Samplers.MinimumHalf
-import SampLib.Samplers.ThreePointPiecewise
+import SampLib.Bernoulli.MinimumHalf
+import SampLib.Bernoulli.ThreePointPiecewise
 
 open Lean Meta Elab Command
 

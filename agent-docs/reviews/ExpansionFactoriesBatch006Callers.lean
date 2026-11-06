@@ -1,9 +1,9 @@
-import SampLib.Samplers.TwoCoin
-import SampLib.Samplers.ExponentialTwist
-import SampLib.Samplers.ExpMinusScaled
-import SampLib.Samplers.TanhScaled
-import SampLib.Samplers.SigmoidScaled
-import SampLib.Samplers.ExpMinusRational
+import SampLib.Bernoulli.TwoCoin
+import SampLib.Bernoulli.ExponentialTwist
+import SampLib.Bernoulli.ExpMinusScaled
+import SampLib.Bernoulli.TanhScaled
+import SampLib.Bernoulli.SigmoidScaled
+import SampLib.Bernoulli.ExpMinusRational
 import SampLib.Templates
 import Metrology.Iris.LocalBI
 

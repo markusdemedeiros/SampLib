@@ -1,6 +1,6 @@
-import SampLib.LatentMultiplication
-import SampLib.LatentAddition
-import SampLib.LatentRationalTranslate
+import SampLib.PSRN.Support.LatentMultiplication
+import SampLib.PSRN.Support.LatentAddition
+import SampLib.PSRN.Support.LatentRationalTranslate
 
 open ProbLang SampLib.LatentReal
 open scoped ENNReal

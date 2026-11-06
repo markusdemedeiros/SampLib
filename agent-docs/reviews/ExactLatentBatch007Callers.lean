@@ -1,4 +1,4 @@
-import SampLib.LatentRepresentedExponentialWrappers
+import SampLib.PSRN.Support.LatentRepresentedExponentialWrappers
 
 open ProbLang
 open scoped ENNReal

@@ -17,7 +17,7 @@ The low-probability linear factory now uses the independently reviewed half-marg
 baseline hash are retained. `implementation_repair_reviews` records the exact
 replacement and independent review; it never accepts a sampler proof or renews a
 stale transitive snapshot. The repaired named sampler has a full-domain public
-[specification](../SampLib/Samplers/LinearLowProbability.lean) and
+[specification](../SampLib/Bernoulli/LinearLowProbability.lean) and
 [interpreter regressions](reviews/LowProbabilityRuntime001.json).
 
 The optimal-matrix encoder also has an independently reviewed probability-one
@@ -49,7 +49,7 @@ A receipt has this shape (all hashes are full SHA-256):
   "accepted": [
     {
       "sampler": "Occil.example",
-      "proof_module": "SampLib.Samplers.Example",
+      "proof_module": "SampLib.Bernoulli.Example",
       "public_spec": "SampLib.Example.example_distSpec",
       "spec_kind": "plain",
       "classification": "core",
@@ -152,3 +152,13 @@ all overlay evidence against the current worktree. Public generators can consume
 that result without weakening or rewriting any historical receipt.
 The ledger's `baseline_revalidation` selects the current immutable overlay;
 `python3 agent-scripts/exact_baseline.py --check` checks that selected record.
+
+## Moving modules
+
+Receipts pin each reviewed file by path, so a plain move would void them. Move modules
+with `agent-scripts/relocation.py --apply MOVES.json --output agent-docs/relocations/<NNN>.json`
+from a clean tree. It moves the files, rewrites import lines and the given Markdown links,
+and records every changed file's hashes before and after. The audits translate recorded
+modules, snapshots and contexts through these records, and
+`python3 agent-scripts/relocation.py --check` replays each record from its base commit, so
+a record cannot hide an edit to proof text. Records are immutable, like receipts.

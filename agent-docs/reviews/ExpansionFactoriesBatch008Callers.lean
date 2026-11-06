@@ -1,6 +1,6 @@
-import SampLib.Samplers.ContinuedFraction
-import SampLib.Samplers.Gambler
-import SampLib.Samplers.HighPowerLogistic
+import SampLib.Constants.ContinuedFraction
+import SampLib.Bernoulli.Gambler
+import SampLib.Bernoulli.HighPowerLogistic
 import SampLib.Templates
 import Metrology.Iris.LocalBI
 

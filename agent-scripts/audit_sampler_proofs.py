@@ -17,6 +17,8 @@ import tempfile
 
 from proof_dependencies import ROOT, review_context, sha256, source_snapshot
 from expansion_state import verify_expansion_state
+from relocation import (current_imports, current_module, current_path, module_path,
+                        relocate_context, relocate_file, relocate_snapshot)
 
 MANIFEST = ROOT / "agent-docs/VerificationCampaign.json"
 STANDARD_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
@@ -143,18 +145,20 @@ def verify_receipt(row: dict, context: dict) -> None:
     receipt = json.loads((ROOT / receipt_path).read_text())
     if receipt.get("reviewer") != row["reviewer"] or row["owner"] == row["reviewer"]:
         fail(f"Independent reviewer mismatch for {row['sampler']}")
-    if receipt.get("context") != context:
+    if relocate_context(receipt.get("context")) != context:
         fail(f"Review configuration/dependency context changed: {receipt_path}")
     caller = receipt.get("caller_evidence")
-    if not caller or not valid_review_caller(caller) or not (ROOT / caller).is_file():
+    if not caller or not valid_review_caller(caller):
         fail(f"Missing reviewer-owned caller artifact: {receipt_path}")
-    if sha256(ROOT / caller) != receipt.get("caller_sha256"):
+    caller_path, caller_sha = relocate_file(caller, receipt.get("caller_sha256"))
+    if not (ROOT / caller_path).is_file() or sha256(ROOT / caller_path) != caller_sha:
         fail(f"Reviewed caller/boundary checks changed: {caller}")
     for support in receipt.get("support", []):
         path = support.get("path")
         if path is None:
             path = support["module"].replace(".", "/") + ".lean"
-        if sha256(ROOT / path) != support["sha256"]:
+        path, expected = relocate_file(path, support["sha256"])
+        if sha256(ROOT / path) != expected:
             fail(f"Reviewed support source changed: {path}")
     matches = [entry for entry in receipt["accepted"] if entry["sampler"] == row["sampler"]]
     if len(matches) != 1:
@@ -171,10 +175,11 @@ def verify_receipt(row: dict, context: dict) -> None:
     if not REQUIRED_CHECKS <= set(entry.get("checks", [])):
         fail(f"Incomplete independent checks for {row['sampler']}")
     snapshot = source_snapshot(row["proof_module"], row["implementation"])
-    if entry.get("source_snapshot") != snapshot:
+    if relocate_snapshot(entry.get("source_snapshot")) != snapshot:
         fail(f"Transitive project source review is stale: {row['sampler']}")
-    proof = ROOT / (row["proof_module"].replace(".", "/") + ".lean")
-    if sha256(proof) != row["reviewed_sha256"]:
+    recorded = row["proof_module"].replace(".", "/") + ".lean"
+    if sha256(ROOT / module_path(row["proof_module"])) != relocate_file(
+            recorded, row["reviewed_sha256"])[1]:
         fail(f"Reviewed proof source changed: {row['sampler']}")
     evidence = ROOT / row["review_evidence"]
     if not evidence.is_file():
@@ -216,15 +221,16 @@ def main() -> None:
     audited = []
     for row in accepted:
         verify_receipt(row, context)
-        if f"import {row['proof_module']}" not in root_imports:
+        if f"import {current_module(row['proof_module'])}" not in root_imports:
             fail(f"Root import missing for {row['sampler']}")
         audited.append((row["sampler"], row["public_spec"]))
     baseline_records = {row["sampler"]: row for row in campaign.get("baseline_records", [])}
     for sampler, (module, spec, implementation) in BASELINE.items():
         row = baseline_records.get(sampler)
-        if not row or row.get("source_snapshot") != source_snapshot(module, implementation):
+        if not row or relocate_snapshot(row.get("source_snapshot")) != source_snapshot(
+                module, implementation):
             fail(f"Baseline source snapshot missing or stale: {sampler}")
-        if f"import {module}" not in root_imports:
+        if f"import {current_module(module)}" not in root_imports:
             fail(f"Baseline root import missing: {sampler}")
         audited.append((sampler, spec))
 
@@ -240,7 +246,7 @@ def main() -> None:
         commands += [f"{command} {spec} for {sampler}", f"#check {spec}", f"#print axioms {spec}"]
     with tempfile.TemporaryDirectory(prefix="samplib-proof-audit-") as directory:
         audit = Path(directory) / "Audit.lean"
-        audit.write_text(LEAN_HEADER + "\n".join(commands) + "\n")
+        audit.write_text(current_imports(LEAN_HEADER) + "\n".join(commands) + "\n")
         output = run_lean(audit)
     found = re.findall(r"^SPEC_OK (\S+) (\S+)$", output, re.M)
     expected = [(spec, sampler) for sampler, spec in audited]
@@ -260,7 +266,7 @@ def main() -> None:
             for row in accepted
         }
         for filename in dict.fromkeys([*CALLERS, *sorted(receipt_callers)]):
-            path = ROOT / filename
+            path = ROOT / current_path(filename)
             if not path.is_file():
                 fail(f"Missing reproducible independent caller checks: {filename}")
             run_lean(path)
@@ -270,7 +276,8 @@ def main() -> None:
     for row in accepted:
         verify_receipt(row, context)
     for sampler, (module, _, implementation) in BASELINE.items():
-        if baseline_records[sampler]["source_snapshot"] != source_snapshot(module, implementation):
+        if relocate_snapshot(baseline_records[sampler]["source_snapshot"]) != source_snapshot(
+                module, implementation):
             fail(f"Baseline changed during the audit: {sampler}")
     print(f"Audited {len(accepted)} distinct new, independently reviewed samplers; "
           f"{len(audited)} sampler specifications including both baselines.")

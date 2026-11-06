@@ -1,6 +1,6 @@
-import SampLib.Samplers.TanhHalf
-import SampLib.Samplers.ExpDivThree
-import SampLib.Samplers.BinaryExponentialRational
+import SampLib.Constants.TanhHalf
+import SampLib.Bernoulli.ExpDivThree
+import SampLib.Bernoulli.BinaryExponentialRational
 
 open ProbLang
 open scoped ENNReal

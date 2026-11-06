@@ -1,4 +1,4 @@
-import SampLib.Samplers.GeneralizedGeometric
+import SampLib.Discrete.GeneralizedGeometric
 
 open ProbLang
 open scoped ENNReal

@@ -1,4 +1,4 @@
-import SampLib.LatentDigitSource
+import SampLib.Latent.LatentDigitSource
 import SampLib.Syntax.PSRNDigitsFreeVariables
 
 open ProbLang SampLib.LatentDigits.Syntax

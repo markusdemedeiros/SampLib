@@ -10,6 +10,7 @@ from pathlib import Path
 from audit_exact_sampler_proofs import (MANIFEST, agent_identity, local_file, read_json,
                                         require, validate_receipt, validate_scope)
 from proof_dependencies import ROOT, review_context
+from relocation import current_module
 
 
 def integrate(receipt_paths: list[str]) -> list[str]:
@@ -46,8 +47,8 @@ def integrate(receipt_paths: list[str]) -> list[str]:
         indexed[name].update(row)
     MANIFEST.write_text(json.dumps(campaign, indent=2, ensure_ascii=False) + "\n")
     imports = (ROOT / "SampLib.lean").read_text().splitlines()
-    missing = sorted({row["proof_module"] for row in additions.values()
-                      if f"import {row['proof_module']}" not in imports})
+    missing = sorted({current_module(row["proof_module"]) for row in additions.values()
+                      if f"import {current_module(row['proof_module'])}" not in imports})
     print(f"Integrated {len(additions)} independently reviewed exact campaign entries.")
     for module in missing:
         print(f"Root import needed: import {module}")

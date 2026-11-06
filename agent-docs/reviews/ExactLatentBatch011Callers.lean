@@ -1,7 +1,7 @@
-import SampLib.Samplers.PSRNOddsUniform
-import SampLib.Samplers.PSRNRatioUniforms
-import SampLib.Samplers.PSRNPowerUniform
-import SampLib.Samplers.PSRNReciprocalPowerUniform
+import SampLib.PSRN.PSRNOddsUniform
+import SampLib.PSRN.PSRNRatioUniforms
+import SampLib.PSRN.PSRNPowerUniform
+import SampLib.PSRN.PSRNReciprocalPowerUniform
 
 open ProbLang
 open scoped ENNReal

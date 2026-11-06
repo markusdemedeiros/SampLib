@@ -5,6 +5,7 @@ from collections import Counter
 
 from audit_exact_sampler_proofs import MANIFEST, read_json, require, validate_receipt, validate_scope
 from proof_dependencies import ROOT, review_context
+from relocation import current_module, module_path
 
 
 def main() -> None:
@@ -18,7 +19,7 @@ def main() -> None:
 
     root_path = ROOT / 'SampLib.lean'
     imports = root_path.read_text()
-    for module in sorted({row['proof_module'] for row in accepted}):
+    for module in sorted({current_module(row['proof_module']) for row in accepted}):
         line = f'import {module}'
         if line not in imports.splitlines():
             imports += line + '\n'
@@ -35,7 +36,7 @@ def main() -> None:
         '| --- | --- | --- | --- | --- |',
     ]
     for row in accepted:
-        proof = row['proof_module'].replace('.', '/') + '.lean'
+        proof = module_path(row['proof_module'])
         proof_target = proof.removeprefix('SampLib/')
         domain = ' '.join(row['reviewed_domain'].split()).replace('|', '&#124;')
         lines.append(

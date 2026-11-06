@@ -1,7 +1,7 @@
 import SampLib
-import SampLib.OwnedDistSpec
+import SampLib.Core.OwnedDistSpec
 import Lean.Elab.Command
-import SampLib.Samplers.EulerMascheroni
+import SampLib.Constants.EulerMascheroni
 
 open Lean Meta Elab Command
 

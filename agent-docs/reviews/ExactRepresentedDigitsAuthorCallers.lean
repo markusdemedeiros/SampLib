@@ -1,5 +1,5 @@
-import SampLib.LatentRepresentedDigits
-import SampLib.LatentConstantDigits
+import SampLib.PSRN.Support.LatentRepresentedDigits
+import SampLib.Latent.LatentConstantDigits
 
 open ProbLang
 open scoped ENNReal

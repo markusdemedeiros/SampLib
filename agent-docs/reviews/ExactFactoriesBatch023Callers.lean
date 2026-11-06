@@ -1,8 +1,8 @@
 import SampLib
-import SampLib.OwnedDistSpec
+import SampLib.Core.OwnedDistSpec
 import Lean.Elab.Command
-import SampLib.Samplers.TrigonometricSeriesFactories
-import SampLib.Samplers.ArcsineFactories
+import SampLib.Bernoulli.TrigonometricSeriesFactories
+import SampLib.Bernoulli.ArcsineFactories
 
 open Lean Meta Elab Command
 

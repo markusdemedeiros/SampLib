@@ -7,6 +7,8 @@ import json
 from pathlib import Path
 import subprocess
 
+from relocation import current_module, current_path
+
 ROOT = Path(__file__).resolve().parents[1]
 HEADER_TOOL = ROOT / "agent-scripts/parse_lean_imports.lean"
 _HEADERS: dict[Path, tuple[str, list[str]]] = {}
@@ -50,11 +52,14 @@ def project_module(module: str) -> Path | None:
 
 
 def source_snapshot(module: str, implementation: str) -> dict[str, str]:
-    """Hash the implementation and the entire project-local import closure."""
-    entry = project_module(module)
+    """Hash the implementation and the entire project-local import closure.
+
+    Module and implementation names may be recorded ones; relocations translate them.
+    """
+    entry = project_module(current_module(module))
     if entry is None:
         raise ValueError(f"No source for {module}")
-    pending = [entry, ROOT / implementation]
+    pending = [entry, ROOT / current_path(implementation)]
     found: dict[str, str] = {}
     while pending:
         path = pending.pop()

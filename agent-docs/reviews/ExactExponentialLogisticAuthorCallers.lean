@@ -1,5 +1,5 @@
-import SampLib.PSRNExponentialLogistic
-import SampLib.CoinExpression
+import SampLib.PSRN.Support.PSRNExponentialLogistic
+import SampLib.Bernoulli.Support.CoinExpression
 
 open ProbLang
 open scoped ENNReal

@@ -1,5 +1,5 @@
-import SampLib.Samplers.CumulativeChoice
-import SampLib.Samplers.RationalChoice
+import SampLib.Weighted.CumulativeChoice
+import SampLib.Weighted.RationalChoice
 
 /-! Public clients for metadata-only derived-classification corrections. -/
 

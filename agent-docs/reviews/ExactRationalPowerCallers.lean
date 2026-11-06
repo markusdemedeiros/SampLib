@@ -1,4 +1,4 @@
-import SampLib.Samplers.RationalPower
+import SampLib.Common.RationalPower
 
 open ProbLang Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 open scoped ENNReal

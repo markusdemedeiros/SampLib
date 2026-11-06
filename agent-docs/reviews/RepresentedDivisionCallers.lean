@@ -1,4 +1,4 @@
-import SampLib.LatentRepresentedDivision
+import SampLib.PSRN.Support.LatentRepresentedDivision
 
 open ProbLang
 open scoped ENNReal

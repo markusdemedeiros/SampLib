@@ -1,4 +1,4 @@
-import SampLib.PSRNUnknownRateDecay
+import SampLib.PSRN.Support.PSRNUnknownRateDecay
 
 open ProbLang SampLib
 open scoped ENNReal

@@ -1,4 +1,4 @@
-import SampLib.Samplers.RecycledSamples
+import SampLib.Weighted.RecycledSamples
 
 open ProbLang
 open scoped ENNReal

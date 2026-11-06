@@ -1,8 +1,8 @@
 import SampLib
-import SampLib.OwnedDistSpec
+import SampLib.Core.OwnedDistSpec
 import Lean.Elab.Command
-import SampLib.Samplers.ExpSquareTimesComplement
-import SampLib.Samplers.ExpIntegral
+import SampLib.Bernoulli.ExpSquareTimesComplement
+import SampLib.Bernoulli.ExpIntegral
 
 open Lean Meta Elab Command
 

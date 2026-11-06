@@ -1,7 +1,7 @@
-import SampLib.Samplers.UniformBinaryFloat
-import SampLib.Samplers.WalleniusMultivariate
-import SampLib.Samplers.MultivariateHypergeometric
-import SampLib.Samplers.VoseSamples
+import SampLib.Weighted.UniformBinaryFloat
+import SampLib.Discrete.WalleniusMultivariate
+import SampLib.Discrete.MultivariateHypergeometric
+import SampLib.Weighted.VoseSamples
 
 open ProbLang
 open scoped ENNReal

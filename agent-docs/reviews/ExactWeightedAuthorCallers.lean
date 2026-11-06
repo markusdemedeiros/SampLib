@@ -1,5 +1,5 @@
-import SampLib.Samplers.InclusionSystematic
-import SampLib.AliasTable
+import SampLib.Weighted.InclusionSystematic
+import SampLib.Weighted.Support.AliasTable
 
 open ProbLang
 open scoped ENNReal

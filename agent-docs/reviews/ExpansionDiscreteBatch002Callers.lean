@@ -1,7 +1,7 @@
-import SampLib.Samplers.UniformFormats
-import SampLib.Samplers.NegativeHypergeometric
-import SampLib.Samplers.Himanshu
-import SampLib.Distributions.PoissonTree
+import SampLib.Weighted.UniformFormats
+import SampLib.Discrete.NegativeHypergeometric
+import SampLib.Discrete.Himanshu
+import SampLib.Common.Laws.PoissonTree
 import Metrology.Iris.LocalBI
 
 /-! Independent clients, boundary laws, and infinite continuation credits. -/

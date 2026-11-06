@@ -1,4 +1,4 @@
-import SampLib.Samplers.FractionalPower
+import SampLib.Bernoulli.FractionalPower
 
 open ProbLang
 open scoped ENNReal

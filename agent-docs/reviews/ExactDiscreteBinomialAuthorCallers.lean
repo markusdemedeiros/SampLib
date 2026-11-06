@@ -1,4 +1,4 @@
-import SampLib.Samplers.BinomialHalfRejection
+import SampLib.Discrete.BinomialHalfRejection
 
 open ProbLang
 open scoped ENNReal

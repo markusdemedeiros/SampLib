@@ -1,5 +1,5 @@
-import SampLib.Samplers.PSRNExpMinusCoin
-import SampLib.LatentRational
+import SampLib.PSRN.PSRNExpMinusCoin
+import SampLib.PSRN.Support.LatentRational
 
 open ProbLang
 open scoped ENNReal SampLib.LatentReal.ExpMinusCoin.Program

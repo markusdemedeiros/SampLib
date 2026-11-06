@@ -1,5 +1,5 @@
-import SampLib.LatentUniform
-import SampLib.Samplers.PSRNRejection
+import SampLib.Latent.LatentUniform
+import SampLib.PSRN.PSRNRejection
 
 open ProbLang
 open scoped ENNReal

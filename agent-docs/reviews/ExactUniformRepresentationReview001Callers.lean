@@ -1,4 +1,4 @@
-import SampLib.LatentUniformRepresentation
+import SampLib.PSRN.Support.LatentUniformRepresentation
 
 open ProbLang
 open scoped ENNReal

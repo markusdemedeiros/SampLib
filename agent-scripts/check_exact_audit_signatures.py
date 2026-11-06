@@ -5,6 +5,7 @@ import tempfile
 
 from audit_exact_sampler_proofs import lean_audit_header, require, run, validate_axioms
 from proof_dependencies import ROOT
+from relocation import current_imports
 
 
 with tempfile.TemporaryDirectory(prefix='samplib-exact-signatures-') as directory:
@@ -13,7 +14,8 @@ with tempfile.TemporaryDirectory(prefix='samplib-exact-signatures-') as director
                                 'conditional_coin'})
     header = header.replace('import SampLib\n',
                             'import SampLib\nimport SampLib.Samplers.PSRNInsideShape\nimport SampLib.PSRNCoin\n')
-    path.write_text(header + (ROOT/'agent-scripts/exact_audit_signature_cases.lean').read_text())
+    cases = (ROOT/'agent-scripts/exact_audit_signature_cases.lean').read_text()
+    path.write_text(current_imports(header) + cases)
     output = run(['lake', 'env', 'lean', str(path)])
     require(output.count('SPEC_OK ') == 2, 'Expected valid vector and conditional-coin specifications')
     validate_axioms(output, ['ExactAuditRegression.circularVector',

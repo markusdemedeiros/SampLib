@@ -1,7 +1,7 @@
-import SampLib.Samplers.DecreasingTrial
-import SampLib.Samplers.Exponential
-import SampLib.Samplers.Laplace
-import SampLib.Samplers.Erlang
+import SampLib.Common.DecreasingTrial
+import SampLib.Continuous.Exponential
+import SampLib.Continuous.Laplace
+import SampLib.Continuous.Erlang
 import Metrology.Iris.LocalBI
 
 /-! Independent continuous-sampler boundary, infinity, and resource checks. -/

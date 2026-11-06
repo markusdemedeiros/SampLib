@@ -1,6 +1,6 @@
 module
 
-public import SampLib.Distributions.SplittingPPSBounds
+public import SampLib.Weighted.Laws.SplittingPPSBounds
 
 @[expose] public section
 

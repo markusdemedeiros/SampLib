@@ -1,4 +1,4 @@
-import SampLib.Samplers.AlternatingPermutation
+import SampLib.Bernoulli.AlternatingPermutation
 
 open ProbLang
 open scoped ENNReal

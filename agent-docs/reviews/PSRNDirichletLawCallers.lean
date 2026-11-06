@@ -1,4 +1,4 @@
-import SampLib.Distributions.PSRNDirichletLaw
+import SampLib.PSRN.Laws.PSRNDirichletLaw
 
 open MeasureTheory SampLib.PSRNDirichletLaw
 open scoped ENNReal

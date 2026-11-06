@@ -1,4 +1,4 @@
-import SampLib.Distributions.ApproximateDigits
+import SampLib.Constants.Laws.ApproximateDigits
 
 open SampLib MeasureTheory FromApproximateDigits
 open scoped ENNReal

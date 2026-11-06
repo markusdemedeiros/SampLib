@@ -1,5 +1,5 @@
-import SampLib.Samplers.RationalPowerInteger
-import SampLib.Samplers.FractionalPower
+import SampLib.Bernoulli.RationalPowerInteger
+import SampLib.Bernoulli.FractionalPower
 
 open ProbLang Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 open scoped ENNReal

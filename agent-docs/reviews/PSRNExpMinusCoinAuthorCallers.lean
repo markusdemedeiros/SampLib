@@ -1,4 +1,4 @@
-import SampLib.Samplers.PSRNExpMinusCoin
+import SampLib.PSRN.PSRNExpMinusCoin
 
 open ProbLang
 open scoped ENNReal

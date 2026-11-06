@@ -1,4 +1,4 @@
-import SampLib.Samplers.LogRatioFactories
+import SampLib.Bernoulli.LogRatioFactories
 
 open ProbLang Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 open scoped ENNReal

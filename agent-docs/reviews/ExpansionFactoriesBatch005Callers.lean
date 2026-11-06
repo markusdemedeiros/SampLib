@@ -1,7 +1,7 @@
-import SampLib.Samplers.ExpMinusFactory
-import SampLib.Samplers.ExpTimesComplement
-import SampLib.Samplers.ReciprocalExpAffine
-import SampLib.WeightedAmplification
+import SampLib.Bernoulli.ExpMinusFactory
+import SampLib.Bernoulli.ExpTimesComplement
+import SampLib.Bernoulli.ReciprocalExpAffine
+import SampLib.Common.WeightedAmplification
 import SampLib.Templates
 import Metrology.Iris.LocalBI
 

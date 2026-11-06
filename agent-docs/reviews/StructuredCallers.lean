@@ -1,14 +1,14 @@
-import SampLib.Samplers.Mixture
+import SampLib.Continuous.Mixture
 import Metrology.Iris.LocalBI
-import SampLib.Samplers.UniformMin
-import SampLib.Samplers.UniformMax
-import SampLib.Samplers.UniformSum
-import SampLib.Samplers.Rejection
-import SampLib.Samplers.Choice
-import SampLib.Samplers.ProbabilityGeneratingFactory
-import SampLib.Samplers.LogisticFactory
-import SampLib.Samplers.RealCoin
-import SampLib.Samplers.SampleWithReplacement
+import SampLib.Continuous.UniformMin
+import SampLib.Continuous.UniformMax
+import SampLib.Continuous.UniformSum
+import SampLib.Continuous.Rejection
+import SampLib.Combinatorial.Choice
+import SampLib.Bernoulli.ProbabilityGeneratingFactory
+import SampLib.Bernoulli.LogisticFactory
+import SampLib.Uniform.RealCoin
+import SampLib.Combinatorial.SampleWithReplacement
 
 /-!
 # Independent structured-sampler caller checks

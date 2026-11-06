@@ -1,4 +1,4 @@
-import SampLib.IntegerSqrt
+import SampLib.Discrete.Support.IntegerSqrt
 
 open ProbLang
 open Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS

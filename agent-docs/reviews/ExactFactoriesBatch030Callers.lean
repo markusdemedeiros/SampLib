@@ -1,7 +1,7 @@
 import SampLib
-import SampLib.OwnedDistSpec
+import SampLib.Core.OwnedDistSpec
 import Lean.Elab.Command
-import SampLib.Samplers.RationalFunction
+import SampLib.Bernoulli.RationalFunction
 
 open Lean Meta Elab Command
 

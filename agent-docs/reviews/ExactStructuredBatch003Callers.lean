@@ -1,4 +1,4 @@
-import SampLib.Samplers.InclusionSystematic
+import SampLib.Weighted.InclusionSystematic
 
 open ProbLang
 open scoped ENNReal

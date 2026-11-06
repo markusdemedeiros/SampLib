@@ -1,4 +1,4 @@
-import SampLib.Distributions.LogarithmicSeries
+import SampLib.Discrete.Laws.LogarithmicSeries
 
 open MeasureTheory SampLib LogarithmicSeries
 open scoped ENNReal

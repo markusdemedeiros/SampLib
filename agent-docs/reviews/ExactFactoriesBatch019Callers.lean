@@ -1,7 +1,7 @@
 import SampLib
-import SampLib.OwnedDistSpec
+import SampLib.Core.OwnedDistSpec
 import Lean.Elab.Command
-import SampLib.Samplers.AlternatingPermutation
+import SampLib.Bernoulli.AlternatingPermutation
 
 open Lean Meta Elab Command
 

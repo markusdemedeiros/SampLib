@@ -170,8 +170,8 @@ copies consistent. Report what was proved, its assumptions, and the checks run.
 ## References
 
 - [Reusable specs](../SampLib/Templates.lean): `IsDistSpec` and its continuation rule.
-- [Threshold Bernoulli](../SampLib/Samplers/RealCoin.lean): a continuous credit split.
-- [Von Neumann extraction](../SampLib/Samplers/VonNeumann.lean): abstract calls,
+- [Threshold Bernoulli](../SampLib/Uniform/RealCoin.lean): a continuous credit split.
+- [Von Neumann extraction](../SampLib/Bernoulli/VonNeumann.lean): abstract calls,
   retry credit, and amplification induction.
 - Installed upstream examples under
   `.lake/packages/clutch-lean/Metrology/TotalEris/Examples/Samplers/`, particularly

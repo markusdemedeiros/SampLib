@@ -1,4 +1,4 @@
-import SampLib.EnvelopeConditionalAverage
+import SampLib.Bernoulli.Support.EnvelopeConditionalAverage
 
 open ProbLang
 

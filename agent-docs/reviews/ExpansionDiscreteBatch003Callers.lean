@@ -1,8 +1,8 @@
-import SampLib.Samplers.WordReductions
-import SampLib.Samplers.SequentialCoins
-import SampLib.Samplers.BinomialHalfBits
-import SampLib.Samplers.PoissonOne
-import SampLib.Distributions.AcceptedProposal
+import SampLib.Weighted.WordReductions
+import SampLib.Weighted.SequentialCoins
+import SampLib.Discrete.BinomialHalfBits
+import SampLib.Discrete.PoissonOne
+import SampLib.Common.Laws.AcceptedProposal
 import Metrology.Iris.LocalBI
 
 /-! Independent clients, finite-word laws, and canonical Poisson checks. -/

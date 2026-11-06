@@ -1,4 +1,4 @@
-import SampLib.BetaStep
+import SampLib.Core.BetaStep
 
 open ProbLang Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 

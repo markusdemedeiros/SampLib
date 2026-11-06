@@ -1,5 +1,5 @@
-import SampLib.Samplers.Reservoir
-import SampLib.Samplers.RandomGraph
+import SampLib.Combinatorial.Reservoir
+import SampLib.Combinatorial.RandomGraph
 
 open ProbLang
 open scoped ENNReal

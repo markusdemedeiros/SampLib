@@ -1,4 +1,4 @@
-import SampLib.Samplers.HanHoshi
+import SampLib.Weighted.HanHoshi
 
 open ProbLang Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 open scoped ENNReal

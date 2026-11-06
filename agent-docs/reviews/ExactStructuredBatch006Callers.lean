@@ -1,4 +1,4 @@
-import SampLib.Samplers.PSRNPowerCoin
+import SampLib.PSRN.PSRNPowerCoin
 
 open ProbLang
 open scoped ENNReal

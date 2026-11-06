@@ -1,4 +1,4 @@
-import SampLib.Samplers.PSRNInsideShape
+import SampLib.PSRN.PSRNInsideShape
 
 open ProbLang
 open scoped ENNReal

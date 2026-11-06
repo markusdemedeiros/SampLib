@@ -1,4 +1,4 @@
-import SampLib.Samplers.EContinuedFractionConstants
+import SampLib.Constants.EContinuedFractionConstants
 
 open ProbLang
 open scoped ENNReal

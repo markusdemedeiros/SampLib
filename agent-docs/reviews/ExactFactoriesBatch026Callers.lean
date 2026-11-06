@@ -1,8 +1,8 @@
 import SampLib
-import SampLib.OwnedDistSpec
+import SampLib.Core.OwnedDistSpec
 import Lean.Elab.Command
-import SampLib.Samplers.ErfRatio
-import SampLib.Samplers.LowerGammaIntegerRatio
+import SampLib.Constants.ErfRatio
+import SampLib.Constants.LowerGammaIntegerRatio
 
 open Lean Meta Elab Command
 

@@ -1,4 +1,4 @@
-import SampLib.Samplers.OptimalDraw
+import SampLib.Weighted.OptimalDraw
 
 open ProbLang
 open scoped ENNReal

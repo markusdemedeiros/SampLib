@@ -1,5 +1,5 @@
-import SampLib.Samplers.FastLoadedDiceRoller
-import SampLib.Distributions.WeightedPositiveSupport
+import SampLib.Weighted.FastLoadedDiceRoller
+import SampLib.Common.Laws.WeightedPositiveSupport
 
 open ProbLang Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS MeasureTheory
 open scoped ENNReal

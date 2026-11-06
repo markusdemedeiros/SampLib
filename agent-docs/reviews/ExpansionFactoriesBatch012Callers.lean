@@ -1,8 +1,8 @@
-import SampLib.Samplers.FromApproximateDigits
-import SampLib.Samplers.ExpMinusShifted
-import SampLib.Samplers.TanhHalfShifted
-import SampLib.Samplers.ExpMinusShiftPower
-import SampLib.Distributions.ApproximateDigits
+import SampLib.Constants.FromApproximateDigits
+import SampLib.Bernoulli.ExpMinusShifted
+import SampLib.Bernoulli.TanhHalfShifted
+import SampLib.Bernoulli.ExpMinusShiftPower
+import SampLib.Constants.Laws.ApproximateDigits
 import SampLib.Templates
 import Metrology.Iris.LocalBI
 open ProbLang

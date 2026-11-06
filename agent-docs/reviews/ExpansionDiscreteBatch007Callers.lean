@@ -1,6 +1,6 @@
-import SampLib.Samplers.WeightedReservoirOne
-import SampLib.Samplers.DivisionRejection
-import SampLib.Samplers.DebiasedModulo
+import SampLib.Weighted.WeightedReservoirOne
+import SampLib.Weighted.DivisionRejection
+import SampLib.Weighted.DebiasedModulo
 import Metrology.Iris.LocalBI
 
 /-! Independent weighted-reservoir and finite-word rejection clients. -/

@@ -1,5 +1,5 @@
-import SampLib.LatentPiAllocation
-import SampLib.LatentUniformRepresentation
+import SampLib.PSRN.Support.LatentPiAllocation
+import SampLib.PSRN.Support.LatentUniformRepresentation
 
 open ProbLang
 open scoped ENNReal

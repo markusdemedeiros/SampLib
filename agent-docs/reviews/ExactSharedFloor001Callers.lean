@@ -1,5 +1,5 @@
-import SampLib.PSRNFloor
-import SampLib.LatentRational
+import SampLib.PSRN.Support.PSRNFloor
+import SampLib.PSRN.Support.LatentRational
 
 open ProbLang
 open scoped ENNReal

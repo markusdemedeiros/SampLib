@@ -1,9 +1,9 @@
-import SampLib.Samplers.Shuffle
-import SampLib.Samplers.PositiveComposition
-import SampLib.Samplers.WeakComposition
-import SampLib.Samplers.LatinHypercube1D
-import SampLib.Samplers.StratifiedBox
-import SampLib.Samplers.ClassifiedModel
+import SampLib.Combinatorial.Shuffle
+import SampLib.Combinatorial.PositiveComposition
+import SampLib.Combinatorial.WeakComposition
+import SampLib.General.LatinHypercube1D
+import SampLib.General.StratifiedBox
+import SampLib.General.ClassifiedModel
 
 open ProbLang
 open scoped ENNReal

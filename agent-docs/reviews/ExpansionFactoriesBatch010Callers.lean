@@ -1,9 +1,9 @@
-import SampLib.Samplers.AffineRatio
-import SampLib.Samplers.LinearPower
-import SampLib.Samplers.Addition
-import SampLib.Samplers.Subtraction
-import SampLib.Samplers.Division
-import SampLib.Samplers.AffineFactory
+import SampLib.Bernoulli.AffineRatio
+import SampLib.Bernoulli.LinearPower
+import SampLib.Bernoulli.Addition
+import SampLib.Bernoulli.Subtraction
+import SampLib.Bernoulli.Division
+import SampLib.Bernoulli.AffineFactory
 import SampLib.Templates
 import Metrology.Iris.LocalBI
 

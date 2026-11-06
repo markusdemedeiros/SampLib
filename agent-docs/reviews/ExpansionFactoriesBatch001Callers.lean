@@ -1,9 +1,9 @@
 import SampLib.Templates
-import SampLib.Samplers.RealCoin
-import SampLib.Samplers.FairCoin
-import SampLib.Samplers.OneDivTwoMinus
-import SampLib.Samplers.ReciprocalLogistic
-import SampLib.Samplers.IntegralMixture
+import SampLib.Uniform.RealCoin
+import SampLib.Uniform.FairCoin
+import SampLib.Bernoulli.OneDivTwoMinus
+import SampLib.Bernoulli.ReciprocalLogistic
+import SampLib.Bernoulli.IntegralMixture
 import Metrology.Iris.LocalBI
 
 open ProbLang

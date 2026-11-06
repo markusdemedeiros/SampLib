@@ -1,4 +1,4 @@
-import SampLib.Samplers.EnvelopeFactory
+import SampLib.Bernoulli.EnvelopeFactory
 import Mathlib.Analysis.SpecificLimits.Basic
 
 open Finset Filter ProbLang

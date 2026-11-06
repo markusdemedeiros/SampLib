@@ -1,9 +1,9 @@
-import SampLib.Samplers.LogarithmicSeries
-import SampLib.Samplers.Multinomial
-import SampLib.Samplers.WeightedWithoutReplacement
-import SampLib.Samplers.CumulativeDraw
-import SampLib.Samplers.CumulativeChoice
-import SampLib.NatCounters
+import SampLib.Discrete.LogarithmicSeries
+import SampLib.Discrete.Multinomial
+import SampLib.Weighted.WeightedWithoutReplacement
+import SampLib.Weighted.CumulativeDraw
+import SampLib.Weighted.CumulativeChoice
+import SampLib.Discrete.Support.NatCounters
 import Metrology.Iris.LocalBI
 
 /-! Independent logarithmic, multinomial, ordered-selection and cumulative-table clients. -/

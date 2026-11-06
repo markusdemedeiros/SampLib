@@ -1,5 +1,5 @@
-import SampLib.LatentRepresentedProduct
-import SampLib.LatentRepresentedVectorSpec
+import SampLib.PSRN.Support.LatentRepresentedProduct
+import SampLib.PSRN.Support.LatentRepresentedVectorSpec
 
 open ProbLang
 open scoped ENNReal

@@ -1,4 +1,4 @@
-import SampLib.LatentNormalizationConstructor
+import SampLib.PSRN.Support.LatentNormalizationConstructor
 
 open ProbLang
 open scoped ENNReal

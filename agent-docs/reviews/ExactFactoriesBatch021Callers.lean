@@ -1,7 +1,7 @@
 import SampLib
-import SampLib.OwnedDistSpec
+import SampLib.Core.OwnedDistSpec
 import Lean.Elab.Command
-import SampLib.Samplers.AlternatingSeries
+import SampLib.Bernoulli.AlternatingSeries
 
 open Lean Meta Elab Command
 

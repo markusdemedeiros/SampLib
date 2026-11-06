@@ -1,8 +1,8 @@
-import SampLib.Samplers.RationalChoice
-import SampLib.Distributions.DiscreteLaplace
-import SampLib.Distributions.FisherMultivariate
-import SampLib.NatUrnOps
-import SampLib.Samplers.UniformBinaryFloat
+import SampLib.Weighted.RationalChoice
+import SampLib.Discrete.Laws.DiscreteLaplace
+import SampLib.Discrete.Laws.FisherMultivariate
+import SampLib.Discrete.Support.NatUrnOps
+import SampLib.Weighted.UniformBinaryFloat
 import Metrology.Iris.LocalBI
 
 open Set ProbLang

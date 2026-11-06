@@ -1,8 +1,8 @@
-import SampLib.Samplers.MarkovTrajectory
-import SampLib.Samplers.GibbsSweep
-import SampLib.Samplers.RandomScanGibbs
-import SampLib.Samplers.StoppedMinimum
-import SampLib.Samplers.StoppedMaximum
+import SampLib.General.MarkovTrajectory
+import SampLib.General.GibbsSweep
+import SampLib.General.RandomScanGibbs
+import SampLib.General.StoppedMinimum
+import SampLib.General.StoppedMaximum
 
 open ProbLang
 open scoped ENNReal

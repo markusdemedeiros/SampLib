@@ -1,4 +1,4 @@
-import SampLib.Samplers.InclusionSplitting
+import SampLib.Weighted.InclusionSplitting
 
 open ProbLang Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 open scoped ENNReal

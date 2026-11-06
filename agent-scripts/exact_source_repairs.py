@@ -4,6 +4,7 @@ import json
 import re
 
 from proof_dependencies import ROOT, sha256
+from relocation import relocate_context
 
 
 def local_file(name):
@@ -43,7 +44,8 @@ def validate_source_repairs(campaign, context):
     for name in campaign.get('implementation_repair_reviews', []):
         review = json.loads(local_file(name).read_text())
         require(review.get('kind') == 'implementation_repair_review', 'Unknown repair review kind')
-        require(review.get('context') == context, 'Repair review dependency context changed')
+        require(relocate_context(review.get('context')) == context,
+                'Repair review dependency context changed')
         require(identity(review.get('author')) != identity(review.get('reviewer')),
                 'Repair author cannot review own change')
         require({'source', 'domain', 'other_definitions'} <= set(review.get('checks', [])),

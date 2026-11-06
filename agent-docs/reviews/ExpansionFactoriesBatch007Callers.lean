@@ -1,9 +1,9 @@
-import SampLib.Samplers.ExpMinusPolynomial
-import SampLib.UniformBagLess
-import SampLib.UniformBagPrefix
-import SampLib.UniformBagComparison
-import SampLib.Distributions.DyadicRefinement
-import SampLib.UniformBag
+import SampLib.Bernoulli.ExpMinusPolynomial
+import SampLib.Latent.UniformBagLess
+import SampLib.Latent.UniformBagPrefix
+import SampLib.Latent.UniformBagComparison
+import SampLib.Common.Laws.DyadicRefinement
+import SampLib.Latent.UniformBag
 import SampLib.Templates
 import Metrology.Iris.LocalBI
 

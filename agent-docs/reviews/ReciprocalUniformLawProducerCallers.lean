@@ -1,6 +1,6 @@
 module
 
-public import SampLib.Distributions.ReciprocalUniform
+public import SampLib.PSRN.Laws.ReciprocalUniform
 
 @[expose] public section
 

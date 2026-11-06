@@ -1,5 +1,5 @@
-import SampLib.Samplers.PiConstants
-import SampLib.Samplers.CoinProduct
+import SampLib.Constants.PiConstants
+import SampLib.Bernoulli.CoinProduct
 
 open ProbLang
 open scoped ENNReal

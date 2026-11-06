@@ -1,8 +1,8 @@
-import SampLib.Samplers.CompoundPoisson
-import SampLib.Samplers.Skellam
-import SampLib.Samplers.NeymanTypeA
-import SampLib.Samplers.PolyaAeppli
-import SampLib.Samplers.ZeroTruncatedPoisson
+import SampLib.Discrete.CompoundPoisson
+import SampLib.Discrete.Skellam
+import SampLib.Discrete.NeymanTypeA
+import SampLib.Discrete.PolyaAeppli
+import SampLib.Discrete.ZeroTruncatedPoisson
 import Metrology.Iris.LocalBI
 
 /-! Independent signed-jump and conditional-count clients. -/

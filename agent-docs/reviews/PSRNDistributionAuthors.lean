@@ -1,4 +1,4 @@
-import SampLib.Samplers.PSRNRayleigh
+import SampLib.PSRN.PSRNRayleigh
 
 #print axioms SampLib.PSRNRayleigh.newRayleigh_representedDistSpec
 #print axioms SampLib.PSRNRayleigh.newRayleigh_latentDistSpec

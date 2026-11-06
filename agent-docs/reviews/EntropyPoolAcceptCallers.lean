@@ -1,4 +1,4 @@
-import SampLib.EntropyPool
+import SampLib.Weighted.Support.EntropyPool
 
 open ProbLang SampLib
 

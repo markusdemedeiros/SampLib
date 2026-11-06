@@ -1,7 +1,7 @@
-import SampLib.Samplers.PSRNSimplex
-import SampLib.Samplers.PSRNOddsUniform
-import SampLib.Samplers.PSRNRatioUniforms
-import SampLib.Samplers.PSRNReciprocalPowerUniform
+import SampLib.PSRN.PSRNSimplex
+import SampLib.PSRN.PSRNOddsUniform
+import SampLib.PSRN.PSRNRatioUniforms
+import SampLib.PSRN.PSRNReciprocalPowerUniform
 
 /-! Owner-side callers for the PSRN geometry team (not a review receipt). -/
 

@@ -472,6 +472,18 @@ python3 tests/statistical.py
 
 The interpreter suite checks output laws and seeded environment/substitution agreement; see the recorded test results above. Statistical tests are implementation evidence. The interpreter runs finite-precision Float operations.
 
+## Where things live
+
+| Path | Contents |
+| --- | --- |
+| [`code/Samplers`](code/README.md) | Occil's algorithms as `pl%` terms, one folder per family |
+| [`SampLib`](SampLib/README.md#layout) | CTE proofs, in matching family folders over shared `Core`, `Common` and `Latent` |
+| [`LAWS.md`](LAWS.md) | Every sampler's law, linked to its code and any accepted proof |
+| [`agent-docs`](agent-docs/README.md) | Proof standard, campaign ledgers, reviews and deferrals |
+| [`agent-scripts`](agent-scripts) | Audits, integration and index generators |
+| [`tests`](tests) | Interpreter fixtures and statistical checks |
+| [`attic`](attic/README.md) | Unbuilt modules, including leftovers for deferred samplers |
+
 ## Formal verification
 
 The active [exact verification campaign](agent-docs/ExactVerificationCampaign.md)

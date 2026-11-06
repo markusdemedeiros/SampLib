@@ -1,7 +1,7 @@
 import SampLib
-import SampLib.OwnedDistSpec
+import SampLib.Core.OwnedDistSpec
 import Lean.Elab.Command
-import SampLib.Samplers.Linear2014
+import SampLib.Bernoulli.Linear2014
 
 open Lean Meta Elab Command
 

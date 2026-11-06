@@ -1,4 +1,4 @@
-import SampLib.Distributions.EnclosureRatioLimits
+import SampLib.Bernoulli.Laws.EnclosureRatioLimits
 
 open Filter
 open scoped Topology

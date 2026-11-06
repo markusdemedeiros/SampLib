@@ -1,4 +1,4 @@
-import SampLib.Samplers.ThreePointPiecewise
+import SampLib.Bernoulli.ThreePointPiecewise
 
 open ProbLang
 open scoped ENNReal

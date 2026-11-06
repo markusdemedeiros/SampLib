@@ -44,19 +44,19 @@ Keep all credits in ENNReal, including infinity. The initial expectation identit
 must identify a normalized law; the termination indicator is auxiliary and must
 disappear from the public `IsDistSpec` theorem.
 
-The reusable interfaces are in [UniformBagLess](../SampLib/UniformBagLess.lean),
-[DyadicPosterior](../SampLib/Distributions/DyadicPosterior.lean), and
-[DyadicRefinement](../SampLib/Distributions/DyadicRefinement.lean).
+The reusable interfaces are in [UniformBagLess](../SampLib/Latent/UniformBagLess.lean),
+[DyadicPosterior](../SampLib/Common/Laws/DyadicPosterior.lean), and
+[DyadicRefinement](../SampLib/Common/Laws/DyadicRefinement.lean).
 
 ## Keeping syntax transport out of symbolic execution
 
 Prepare source equalities, openings and closedness certificates before the CTE
 argument. For large quotations, retain named bodies through beta reduction with
-the checked [BetaStep](../SampLib/BetaStep.lean) rule. Its premises are exactly a
+the checked [BetaStep](../SampLib/Core/BetaStep.lean) rule. Its premises are exactly a
 value argument and a locally closed lambda; it adds no language assumption.
-[PositiveSeries syntax](../SampLib/Syntax/PositiveSeries.lean) separates this
+[PositiveSeries syntax](../SampLib/Constants/Syntax/PositiveSeries.lean) separates this
 bookkeeping from the probability argument. Walker's
-[opened-source cache](../SampLib/Samplers/AliasSamples.lean) instead stores a
+[opened-source cache](../SampLib/Weighted/AliasSamples.lean) instead stores a
 kernel-checked normal form without repeating the quotation.
 
 Close templates before inserting arbitrary callback values. Local closedness

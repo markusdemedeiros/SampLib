@@ -1,4 +1,4 @@
-import SampLib.PSRNLess
+import SampLib.PSRN.Support.PSRNLess
 
 /-! Producer composition check: repeated comparisons retain one world and agree. -/
 

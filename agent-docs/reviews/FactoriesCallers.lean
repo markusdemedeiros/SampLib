@@ -1,6 +1,6 @@
-import SampLib.Samplers.EnvelopeFactory
-import SampLib.Samplers.FairCoin
-import SampLib.Distributions.BernoulliEndpoints
+import SampLib.Bernoulli.EnvelopeFactory
+import SampLib.Uniform.FairCoin
+import SampLib.Bernoulli.Laws.BernoulliEndpoints
 
 /-! Team `factories` caller: framed resources, fair-coin composition, endpoint laws. -/
 

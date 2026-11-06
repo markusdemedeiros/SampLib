@@ -1,5 +1,5 @@
-import SampLib.AliasTable
-import SampLib.Syntax.Aliases
+import SampLib.Weighted.Support.AliasTable
+import SampLib.Weighted.Syntax.Aliases
 
 open ProbLang
 open scoped ENNReal

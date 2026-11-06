@@ -1,6 +1,6 @@
-import SampLib.Samplers.EulerScaledConstants
-import SampLib.Samplers.InverseEPlus
-import SampLib.Samplers.EulerAffineConstants
+import SampLib.Constants.EulerScaledConstants
+import SampLib.Constants.InverseEPlus
+import SampLib.Constants.EulerAffineConstants
 
 open ProbLang
 open scoped ENNReal

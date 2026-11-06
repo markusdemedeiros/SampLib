@@ -1,5 +1,5 @@
-import SampLib.Samplers.TrigonometricSeriesFactories
-import SampLib.Samplers.ArcsineFactories
+import SampLib.Bernoulli.TrigonometricSeriesFactories
+import SampLib.Bernoulli.ArcsineFactories
 
 open ProbLang
 open scoped ENNReal

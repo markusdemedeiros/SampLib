@@ -1,12 +1,12 @@
 import SampLib.Templates
-import SampLib.SupportedSpec
-import SampLib.ListEncoding
-import SampLib.Samplers.GenerativeModel
-import SampLib.Samplers.InverseQuantile
-import SampLib.Samplers.RealCoin
-import SampLib.Samplers.KernelDensity
-import SampLib.Samplers.UniformBoxPoint
-import SampLib.Samplers.FlipBits
+import SampLib.Core.SupportedSpec
+import SampLib.Core.ListEncoding
+import SampLib.General.GenerativeModel
+import SampLib.General.InverseQuantile
+import SampLib.Uniform.RealCoin
+import SampLib.General.KernelDensity
+import SampLib.General.UniformBoxPoint
+import SampLib.Combinatorial.FlipBits
 
 open ProbLang
 open scoped ENNReal

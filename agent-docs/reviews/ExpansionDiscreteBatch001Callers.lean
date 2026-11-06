@@ -1,6 +1,6 @@
-import SampLib.Samplers.BetaBinomial
-import SampLib.Samplers.RandomBits
-import SampLib.Samplers.SymmetricGeometric
+import SampLib.Discrete.BetaBinomial
+import SampLib.Weighted.RandomBits
+import SampLib.Discrete.SymmetricGeometric
 import Metrology.Iris.LocalBI
 
 /-! Independent clients, boundary laws, and infinite continuation credits. -/

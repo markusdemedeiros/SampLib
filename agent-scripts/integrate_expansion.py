@@ -10,6 +10,7 @@ import re
 
 from audit_sampler_proofs import verify_receipt
 from proof_dependencies import ROOT, review_context
+from relocation import current_module, module_path
 
 
 def read(path: Path):
@@ -86,7 +87,7 @@ def main() -> None:
     root_path = ROOT / "SampLib.lean"
     imports = root_path.read_text()
     for row in accepted:
-        line = "import " + row["proof_module"]
+        line = "import " + current_module(row["proof_module"])
         if line not in imports.splitlines():
             imports += line + "\n"
     # Every receipt is validated before any authoritative artifact changes.
@@ -116,10 +117,11 @@ def main() -> None:
              "| Sampler | Kind | Law and domain | Proof |", "| --- | --- | --- | --- |"]
     for row in new_rows:
         module = row["proof_module"].split(".")[-1]
+        target = module_path(row["proof_module"]).removeprefix("SampLib/")
         domain = row["reviewed_domain"].replace("|", "\\|")
         kind = proof_kind(row)
         lines.append(f"| `{row['sampler']}` | {kind} | {domain} | "
-                     f"[{module}](Samplers/{module}.lean) |")
+                     f"[{module}]({target}) |")
     lines += ["", end, ""]
     block = "\n".join(lines) + "\n"
     if start in text:

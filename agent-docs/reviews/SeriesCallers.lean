@@ -1,6 +1,6 @@
-import SampLib.Samplers.Zeta
-import SampLib.Samplers.RecycledSamples
-import SampLib.Samplers.PolyaRational
+import SampLib.Discrete.Zeta
+import SampLib.Weighted.RecycledSamples
+import SampLib.Discrete.PolyaRational
 
 /-! Owner-side caller checks for the `series` team: framed resources, domain boundaries,
 infinite credits, and transitive axioms. -/

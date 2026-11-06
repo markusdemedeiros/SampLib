@@ -1,6 +1,6 @@
-import SampLib.Samplers.UniformFromModulus
-import SampLib.Samplers.NegativeMultinomial
-import SampLib.Samplers.WalleniusHypergeometric
+import SampLib.Uniform.UniformFromModulus
+import SampLib.Discrete.NegativeMultinomial
+import SampLib.Discrete.WalleniusHypergeometric
 import Metrology.Iris.LocalBI
 
 /-! Independent modulus-conversion and negative-multinomial clients. -/

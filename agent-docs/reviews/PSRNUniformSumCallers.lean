@@ -1,4 +1,4 @@
-import SampLib.Samplers.PSRNUniformSum
+import SampLib.PSRN.PSRNUniformSum
 
 open ProbLang SampLib.LatentReal SampLib.PSRNUniformSum
 open scoped ENNReal

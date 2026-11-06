@@ -1,6 +1,6 @@
-import SampLib.Samplers.MultivariatePoisson
-import SampLib.Samplers.LogUniform
-import SampLib.Syntax.ClosedExp
+import SampLib.Discrete.MultivariatePoisson
+import SampLib.Discrete.LogUniform
+import SampLib.Core.Syntax.ClosedExp
 import Metrology.Iris.LocalBI
 
 /-! Independent shared-count, logarithmic-bucket and syntax clients. -/

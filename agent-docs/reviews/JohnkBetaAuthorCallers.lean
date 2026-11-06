@@ -1,4 +1,4 @@
-import SampLib.Distributions.JohnkBeta
+import SampLib.PSRN.Laws.JohnkBeta
 
 open MeasureTheory ProbabilityTheory Set
 open scoped ENNReal

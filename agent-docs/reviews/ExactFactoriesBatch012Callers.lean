@@ -1,4 +1,4 @@
-import SampLib.Samplers.PowerSeriesHazards
+import SampLib.Bernoulli.PowerSeriesHazards
 
 open ProbLang
 open scoped ENNReal

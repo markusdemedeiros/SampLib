@@ -1,6 +1,6 @@
 module
 
-public import SampLib.Distributions.LatentReal.UniformVector
+public import SampLib.Latent.Laws.UniformVector
 
 @[expose] public section
 

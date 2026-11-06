@@ -1,4 +1,4 @@
-import SampLib.Distributions.ReverseBinomialFinite
+import SampLib.Bernoulli.Laws.ReverseBinomialFinite
 
 open MeasureTheory SampLib.ReverseBinomial
 open scoped ENNReal

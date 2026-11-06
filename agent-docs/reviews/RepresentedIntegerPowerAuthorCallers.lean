@@ -1,4 +1,4 @@
-import SampLib.LatentRepresentedIntegerPower
+import SampLib.PSRN.Support.LatentRepresentedIntegerPower
 
 open ProbLang
 open scoped ENNReal

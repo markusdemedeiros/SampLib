@@ -1,7 +1,7 @@
-import SampLib.Samplers.LogPiOverPi
-import SampLib.Samplers.ArctanRationalOverRatio
-import SampLib.Samplers.InverseSqrtPi
-import SampLib.Samplers.BinaryExponential
+import SampLib.Constants.LogPiOverPi
+import SampLib.Constants.ArctanRationalOverRatio
+import SampLib.Constants.InverseSqrtPi
+import SampLib.Bernoulli.BinaryExponential
 
 open ProbLang
 open scoped ENNReal

@@ -1,13 +1,13 @@
-import SampLib.Syntax.Fenwick
-import SampLib.Samplers.FenwickDraw
-import SampLib.NewFenwick
-import SampLib.FenwickSet
-import SampLib.Samplers.CountableMetropolisHastings
-import SampLib.Samplers.CountableMetropolis
-import SampLib.LowBit
-import SampLib.FenwickCategory
-import SampLib.Distributions.FenwickSearch
-import SampLib.PiBounds
+import SampLib.Weighted.Syntax.Fenwick
+import SampLib.Weighted.FenwickDraw
+import SampLib.Weighted.Support.NewFenwick
+import SampLib.Weighted.Support.FenwickSet
+import SampLib.General.CountableMetropolisHastings
+import SampLib.General.CountableMetropolis
+import SampLib.Weighted.Support.LowBit
+import SampLib.Weighted.Support.FenwickCategory
+import SampLib.Weighted.Laws.FenwickSearch
+import SampLib.Bernoulli.Support.PiBounds
 
 open ProbLang
 open scoped ENNReal

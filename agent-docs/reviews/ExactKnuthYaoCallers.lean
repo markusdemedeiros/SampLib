@@ -1,4 +1,4 @@
-import SampLib.Samplers.KnuthYao
+import SampLib.Weighted.KnuthYao
 
 open ProbLang Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 open scoped ENNReal

@@ -1,5 +1,5 @@
-import SampLib.Samplers.FastLoadedDiceRoller
-import SampLib.Samplers.SortedChoice
+import SampLib.Weighted.FastLoadedDiceRoller
+import SampLib.Weighted.SortedChoice
 
 open ProbLang
 open scoped ENNReal

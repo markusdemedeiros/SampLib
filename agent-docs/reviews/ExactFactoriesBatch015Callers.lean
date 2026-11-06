@@ -1,4 +1,4 @@
-import SampLib.Samplers.ContinuedLogarithm
+import SampLib.Constants.ContinuedLogarithm
 
 open ProbLang
 open scoped ENNReal

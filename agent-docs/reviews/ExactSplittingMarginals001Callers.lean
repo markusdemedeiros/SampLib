@@ -1,4 +1,4 @@
-import SampLib.Distributions.SplittingPPSMarginals
+import SampLib.Weighted.Laws.SplittingPPSMarginals
 
 open scoped ENNReal
 

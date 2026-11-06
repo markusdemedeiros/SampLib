@@ -1,5 +1,5 @@
-import SampLib.Samplers.MarkovChain
-import SampLib.Samplers.ShapeRejection
+import SampLib.General.MarkovChain
+import SampLib.General.ShapeRejection
 
 open ProbLang
 open scoped ENNReal

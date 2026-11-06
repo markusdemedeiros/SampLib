@@ -1,7 +1,7 @@
 import SampLib.LatentRootViews
-import SampLib.LatentRootLaw
-import SampLib.LatentRepresentedViews
-import SampLib.LatentUniformRepresentation
+import SampLib.PSRN.Support.LatentRootLaw
+import SampLib.PSRN.Support.LatentRepresentedViews
+import SampLib.PSRN.Support.LatentUniformRepresentation
 
 open ProbLang
 open scoped ENNReal

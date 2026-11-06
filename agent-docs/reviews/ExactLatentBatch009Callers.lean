@@ -1,4 +1,4 @@
-import SampLib.Samplers.PSRNRayleigh
+import SampLib.PSRN.PSRNRayleigh
 
 open ProbLang
 open scoped ENNReal

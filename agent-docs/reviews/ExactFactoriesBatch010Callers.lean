@@ -1,5 +1,5 @@
-import SampLib.Samplers.POverTangent
-import SampLib.Samplers.ArctanOverPi
+import SampLib.Bernoulli.POverTangent
+import SampLib.Bernoulli.ArctanOverPi
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds
 
 open ProbLang

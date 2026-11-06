@@ -1,4 +1,4 @@
-import SampLib.PSRNExponentialLogistic
+import SampLib.PSRN.Support.PSRNExponentialLogistic
 
 open ProbLang
 open scoped ENNReal

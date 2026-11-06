@@ -1,4 +1,4 @@
-import SampLib.Samplers.InclusionSplitting
+import SampLib.Weighted.InclusionSplitting
 
 open ProbLang
 open scoped ENNReal

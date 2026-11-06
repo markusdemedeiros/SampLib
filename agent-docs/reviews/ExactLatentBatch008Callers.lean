@@ -1,6 +1,6 @@
-import SampLib.Samplers.PSRNGammaInteger
-import SampLib.Samplers.PSRNGammaMixture
-import SampLib.Samplers.PSRNLindley
+import SampLib.PSRN.PSRNGammaInteger
+import SampLib.PSRN.PSRNGammaMixture
+import SampLib.PSRN.PSRNLindley
 
 open ProbLang
 open scoped ENNReal

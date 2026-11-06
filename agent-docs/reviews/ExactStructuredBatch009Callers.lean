@@ -1,4 +1,4 @@
-import SampLib.Samplers.SuccinctChoice
+import SampLib.Weighted.SuccinctChoice
 
 open ProbLang
 open scoped ENNReal

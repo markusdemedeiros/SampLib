@@ -1,10 +1,10 @@
-import SampLib.Samplers.AliasSamples
-import SampLib.Samplers.Bootstrap
-import SampLib.Samplers.PermutationSamples
-import SampLib.Samplers.LatinHypercube
-import SampLib.Samplers.GroupedPermutation
-import SampLib.Samplers.WeakComposition
-import SampLib.BetaStep
+import SampLib.Weighted.AliasSamples
+import SampLib.General.Bootstrap
+import SampLib.General.PermutationSamples
+import SampLib.General.LatinHypercube
+import SampLib.General.GroupedPermutation
+import SampLib.Combinatorial.WeakComposition
+import SampLib.Core.BetaStep
 
 open ProbLang
 open scoped ENNReal

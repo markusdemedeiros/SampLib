@@ -1,7 +1,7 @@
-import SampLib.Samplers.FastLoadedDiceRoller
-import SampLib.Samplers.SortedChoice
-import SampLib.Samplers.OptimalChoice
-import SampLib.Samplers.OptimalDraw
+import SampLib.Weighted.FastLoadedDiceRoller
+import SampLib.Weighted.SortedChoice
+import SampLib.Weighted.OptimalChoice
+import SampLib.Weighted.OptimalDraw
 
 open ProbLang
 open scoped ENNReal

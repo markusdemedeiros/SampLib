@@ -1,4 +1,4 @@
-import SampLib.Samplers.Linear2014
+import SampLib.Bernoulli.Linear2014
 
 open ProbLang
 open scoped ENNReal

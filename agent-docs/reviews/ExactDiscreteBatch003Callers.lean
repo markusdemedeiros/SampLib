@@ -1,4 +1,4 @@
-import SampLib.Samplers.GeneralizedSibuya
+import SampLib.Discrete.GeneralizedSibuya
 
 open ProbLang
 open scoped ENNReal

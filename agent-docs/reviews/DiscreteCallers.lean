@@ -1,17 +1,17 @@
-import SampLib.Samplers.IterateCoin
+import SampLib.Continuous.IterateCoin
 import Metrology.Iris.LocalBI
-import SampLib.Samplers.UniformInt
-import SampLib.Samplers.FairCoin
-import SampLib.Samplers.BoundedGeometric
-import SampLib.Samplers.Binomial
-import SampLib.Samplers.RandomWalk
-import SampLib.Samplers.Geometric
-import SampLib.Samplers.NegativeBinomial
-import SampLib.Samplers.RndInt
-import SampLib.Samplers.RndIntRange
-import SampLib.Samplers.RndIntExcRange
-import SampLib.Samplers.RationalCoin
-import SampLib.Samplers.VonNeumann
+import SampLib.Uniform.UniformInt
+import SampLib.Uniform.FairCoin
+import SampLib.Discrete.BoundedGeometric
+import SampLib.Discrete.Binomial
+import SampLib.Discrete.RandomWalk
+import SampLib.Discrete.Geometric
+import SampLib.Discrete.NegativeBinomial
+import SampLib.Uniform.RndInt
+import SampLib.Uniform.RndIntRange
+import SampLib.Uniform.RndIntExcRange
+import SampLib.Uniform.RationalCoin
+import SampLib.Bernoulli.VonNeumann
 
 /-!
 # Independent discrete-sampler caller checks

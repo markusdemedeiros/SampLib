@@ -1,12 +1,12 @@
 import SampLib.Templates
-import SampLib.ListEncoding
-import SampLib.DistributionMap
-import SampLib.Samplers.Gaussian
-import SampLib.Samplers.OrderStatistic
-import SampLib.Samplers.Bootstrap
-import SampLib.Samplers.Histogram
-import SampLib.Distributions.Permutations
-import SampLib.ArrayOwnership
+import SampLib.Core.ListEncoding
+import SampLib.Core.DistributionMap
+import SampLib.Continuous.Gaussian
+import SampLib.Continuous.OrderStatistic
+import SampLib.General.Bootstrap
+import SampLib.General.Histogram
+import SampLib.Core.Laws.Permutations
+import SampLib.Core.ArrayOwnership
 
 open ProbLang
 open scoped ENNReal

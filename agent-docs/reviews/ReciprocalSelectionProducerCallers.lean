@@ -1,6 +1,6 @@
 module
 
-public import SampLib.Distributions.LatentReal.ReciprocalSelection
+public import SampLib.PSRN.Laws.ReciprocalSelection
 
 @[expose] public section
 

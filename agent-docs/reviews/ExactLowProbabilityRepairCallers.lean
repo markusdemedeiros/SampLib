@@ -1,4 +1,4 @@
-import SampLib.Samplers.LowProbabilityRepair
+import SampLib.Bernoulli.LowProbabilityRepair
 
 open ProbLang
 open scoped ENNReal

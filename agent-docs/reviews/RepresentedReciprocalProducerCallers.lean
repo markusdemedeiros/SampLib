@@ -1,4 +1,4 @@
-import SampLib.LatentRepresentedReciprocal
+import SampLib.PSRN.Support.LatentRepresentedReciprocal
 
 /-! Repeated alias reads retain one owner and agree on the actual represented interval. -/
 

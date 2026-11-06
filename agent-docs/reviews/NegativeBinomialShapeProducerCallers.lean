@@ -1,4 +1,4 @@
-import SampLib.Distributions.NegativeBinomialShape
+import SampLib.Discrete.Laws.NegativeBinomialShape
 
 /-! Endpoint, integer-shape, source-ratio, and infinite-credit checks for the rejection law. -/
 

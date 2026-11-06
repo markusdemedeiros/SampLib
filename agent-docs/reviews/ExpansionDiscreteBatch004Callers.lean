@@ -1,6 +1,6 @@
-import SampLib.Samplers.PoissonRational
-import SampLib.Distributions.BinomialThinning
-import SampLib.Samplers.BitmaskRejection
+import SampLib.Discrete.PoissonRational
+import SampLib.Discrete.Laws.BinomialThinning
+import SampLib.Weighted.BitmaskRejection
 import Metrology.Iris.LocalBI
 
 /-! Independent rational-rate and bounded-rejection clients. -/

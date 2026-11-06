@@ -1,4 +1,4 @@
-import SampLib.CurriedStep
+import SampLib.Core.CurriedStep
 
 open ProbLang Iris Iris.BI TotalEris ErisWpGS
 

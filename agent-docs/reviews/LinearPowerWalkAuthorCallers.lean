@@ -1,4 +1,4 @@
-import SampLib.Samplers.LinearPowerWalk
+import SampLib.Bernoulli.LinearPowerWalk
 
 open ProbLang
 open scoped ENNReal

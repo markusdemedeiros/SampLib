@@ -1,4 +1,4 @@
-import SampLib.Samplers.POverTangent
+import SampLib.Bernoulli.POverTangent
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds
 
 open ProbLang

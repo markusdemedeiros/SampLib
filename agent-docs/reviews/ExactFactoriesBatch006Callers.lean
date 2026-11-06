@@ -1,5 +1,5 @@
-import SampLib.Samplers.ArctanFactory
-import SampLib.Samplers.ArctanOverPi
+import SampLib.Bernoulli.ArctanFactory
+import SampLib.Bernoulli.ArctanOverPi
 
 open ProbLang
 open scoped ENNReal

@@ -1,6 +1,6 @@
-import SampLib.Samplers.Borel
-import SampLib.Samplers.OneillUniform
-import SampLib.Samplers.FisherHypergeometric
+import SampLib.Discrete.Borel
+import SampLib.Weighted.OneillUniform
+import SampLib.Discrete.FisherHypergeometric
 import Metrology.Iris.LocalBI
 
 /-! Independent branching-process, lazy-threshold and Fisher clients. -/

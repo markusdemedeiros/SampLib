@@ -1,14 +1,14 @@
 import SampLib.Templates
-import SampLib.ListEncoding
-import SampLib.Samplers.StoppedSum
-import SampLib.Samplers.Episodes
-import SampLib.Samplers.KernelDensityVector
-import SampLib.Samplers.Stratified1D
-import SampLib.Samplers.RandomString
-import SampLib.Samplers.RandomDateTime
-import SampLib.Samplers.ExpHalfCoin
-import SampLib.Samplers.GaussianInteger
-import SampLib.Samplers.GaussianSelector
+import SampLib.Core.ListEncoding
+import SampLib.General.StoppedSum
+import SampLib.General.Episodes
+import SampLib.General.KernelDensityVector
+import SampLib.General.Stratified1D
+import SampLib.General.RandomString
+import SampLib.General.RandomDateTime
+import SampLib.Continuous.ExpHalfCoin
+import SampLib.Continuous.GaussianInteger
+import SampLib.Continuous.GaussianSelector
 
 open ProbLang
 open scoped ENNReal

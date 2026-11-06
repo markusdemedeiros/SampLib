@@ -1,4 +1,4 @@
-import SampLib.OptimalEncode
+import SampLib.Weighted.Support.OptimalEncode
 
 open ProbLang
 

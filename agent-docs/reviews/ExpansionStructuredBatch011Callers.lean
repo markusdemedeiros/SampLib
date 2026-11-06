@@ -1,5 +1,5 @@
-import SampLib.Samplers.PerfectFiniteChain
-import SampLib.Samplers.SliceSampler
+import SampLib.General.PerfectFiniteChain
+import SampLib.General.SliceSampler
 
 open ProbLang
 open scoped ENNReal

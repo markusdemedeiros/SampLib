@@ -1,4 +1,4 @@
-import SampLib.ExponentialCount
+import SampLib.PSRN.Support.ExponentialCount
 
 /-! Literal decay-counter clients retain a frame, offsets, and arbitrary infinite credits. -/
 

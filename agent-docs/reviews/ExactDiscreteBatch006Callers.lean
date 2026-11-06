@@ -1,5 +1,5 @@
-import SampLib.Samplers.Zeta
-import SampLib.Samplers.PolyaRational
+import SampLib.Discrete.Zeta
+import SampLib.Discrete.PolyaRational
 
 open ProbLang
 open scoped ENNReal

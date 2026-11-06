@@ -1,4 +1,4 @@
-import SampLib.Distributions.Binomial
+import SampLib.Common.Laws.Binomial
 
 open MeasureTheory
 open scoped ENNReal

@@ -1,4 +1,4 @@
-import SampLib.Distributions.ZetaProductIntegralLaw
+import SampLib.Constants.Laws.ZetaProductIntegralLaw
 
 open MeasureTheory
 open scoped ENNReal

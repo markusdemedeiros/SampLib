@@ -1,15 +1,15 @@
-import SampLib.Samplers.Complement
-import SampLib.Samplers.CoinProduct
-import SampLib.Samplers.CoinDisjunction
-import SampLib.Samplers.CoinConditional
-import SampLib.Samplers.EvenParity
-import SampLib.Samplers.CoinMean
-import SampLib.Samplers.OnePlusHalf
-import SampLib.Samplers.ComplementHalf
-import SampLib.Samplers.OneDivOnePlus
-import SampLib.Samplers.OneMinusOverOnePlus
-import SampLib.Samplers.BernoulliRace
-import SampLib.Samplers.GeometricFailures
+import SampLib.Bernoulli.Complement
+import SampLib.Bernoulli.CoinProduct
+import SampLib.Bernoulli.CoinDisjunction
+import SampLib.Bernoulli.CoinConditional
+import SampLib.Bernoulli.EvenParity
+import SampLib.Bernoulli.CoinMean
+import SampLib.Bernoulli.OnePlusHalf
+import SampLib.Bernoulli.ComplementHalf
+import SampLib.Bernoulli.OneDivOnePlus
+import SampLib.Bernoulli.OneMinusOverOnePlus
+import SampLib.Bernoulli.BernoulliRace
+import SampLib.Continuous.GeometricFailures
 import Metrology.Iris.LocalBI
 
 open Set ProbLang

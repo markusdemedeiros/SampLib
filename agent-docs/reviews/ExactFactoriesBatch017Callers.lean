@@ -1,8 +1,8 @@
 import SampLib
-import SampLib.OwnedDistSpec
+import SampLib.Core.OwnedDistSpec
 import Lean.Elab.Command
-import SampLib.Samplers.TwoCoinPower
-import SampLib.Samplers.RationalPower
+import SampLib.Bernoulli.TwoCoinPower
+import SampLib.Common.RationalPower
 
 open Lean Meta Elab Command
 

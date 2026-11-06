@@ -1,24 +1,24 @@
-import SampLib.LatentRealConstructors
-import SampLib.LatentMixture
-import SampLib.LatentProduct
-import SampLib.LatentCompositeMeasuredError
+import SampLib.PSRN.Support.LatentRealConstructors
+import SampLib.PSRN.Support.LatentMixture
+import SampLib.PSRN.Support.LatentProduct
+import SampLib.PSRN.Support.LatentCompositeMeasuredError
 import SampLib.LatentCoinConstants
-import SampLib.LatentCoinReciprocal
-import SampLib.LatentRational
-import SampLib.LatentUnaryViews
+import SampLib.Constants.Support.LatentCoinReciprocal
+import SampLib.PSRN.Support.LatentRational
+import SampLib.PSRN.Support.LatentUnaryViews
 import SampLib.LatentLikelihoodRejection
-import SampLib.PSRNFloor
+import SampLib.PSRN.Support.PSRNFloor
 import SampLib.LatentFloorAtomless
-import SampLib.LatentRationalSubtract
+import SampLib.PSRN.Support.LatentRationalSubtract
 import SampLib.LatentSign
 import SampLib.LatentRootViews
-import SampLib.LatentRootLaw
-import SampLib.LatentUniform
+import SampLib.PSRN.Support.LatentRootLaw
+import SampLib.Latent.LatentUniform
 import SampLib.Distributions.AcceptedProposalMap
 import SampLib.Distributions.PSRNHyperbolicSecant
-import SampLib.Distributions.PSRNRayleigh
+import SampLib.PSRN.Laws.PSRNRayleigh
 import SampLib.Distributions.PSRNFGM
-import SampLib.Distributions.PSRNDistributionMixtures
+import SampLib.PSRN.Laws.PSRNDistributionMixtures
 
 #print axioms SampLib.LatentReal.Root.representedDistSpec
 #print axioms SampLib.LatentReal.Root.representedOracleSpec

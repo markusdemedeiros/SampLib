@@ -1,4 +1,4 @@
-import SampLib.Samplers.PSRNReciprocalUniform
+import SampLib.PSRN.PSRNReciprocalUniform
 
 open ProbLang
 open scoped ENNReal

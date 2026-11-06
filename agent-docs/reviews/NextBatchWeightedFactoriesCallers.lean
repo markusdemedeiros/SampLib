@@ -1,9 +1,9 @@
 import SampLib.Templates
-import SampLib.Samplers.WeightedChoice
-import SampLib.Samplers.WeightedRejection
-import SampLib.Samplers.BernsteinFactory
-import SampLib.Samplers.PLogInverse
-import SampLib.Samplers.FairCoin
+import SampLib.Discrete.WeightedChoice
+import SampLib.Weighted.WeightedRejection
+import SampLib.Bernoulli.BernsteinFactory
+import SampLib.Bernoulli.PLogInverse
+import SampLib.Uniform.FairCoin
 import Metrology.Iris.LocalBI
 
 open Set ProbLang

@@ -1,6 +1,6 @@
 module
 
-public import SampLib.Distributions.JohnkBeta
+public import SampLib.PSRN.Laws.JohnkBeta
 
 @[expose] public section
 

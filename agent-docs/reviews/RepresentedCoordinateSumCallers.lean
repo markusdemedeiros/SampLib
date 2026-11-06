@@ -1,4 +1,4 @@
-import SampLib.LatentRepresentedCoordinateSum
+import SampLib.PSRN.Support.LatentRepresentedCoordinateSum
 
 open ProbLang
 open scoped ENNReal

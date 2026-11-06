@@ -1,4 +1,4 @@
-import SampLib.Samplers.Zipf
+import SampLib.Discrete.Zipf
 
 open ProbLang
 open scoped ENNReal

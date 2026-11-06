@@ -1,4 +1,4 @@
-import SampLib.LatentUniform
+import SampLib.Latent.LatentUniform
 
 open ProbLang
 open scoped ENNReal

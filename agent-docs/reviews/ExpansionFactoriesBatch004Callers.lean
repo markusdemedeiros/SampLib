@@ -1,11 +1,11 @@
-import SampLib.Samplers.ReciprocalAffine
-import SampLib.Samplers.ReciprocalAffinePower
-import SampLib.Samplers.InverseQuadratic
-import SampLib.Samplers.SqrtTwoMinusOne
-import SampLib.Samplers.InverseSqrtTwo
-import SampLib.Samplers.GoldenFamily
-import SampLib.Samplers.OffsetRace
-import SampLib.Samplers.LogOverAffine
+import SampLib.Bernoulli.ReciprocalAffine
+import SampLib.Bernoulli.ReciprocalAffinePower
+import SampLib.Bernoulli.InverseQuadratic
+import SampLib.Constants.SqrtTwoMinusOne
+import SampLib.Constants.InverseSqrtTwo
+import SampLib.Constants.GoldenFamily
+import SampLib.Bernoulli.OffsetRace
+import SampLib.Bernoulli.LogOverAffine
 import SampLib.Templates
 import Metrology.Iris.LocalBI
 

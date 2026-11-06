@@ -1,4 +1,4 @@
-import SampLib.EnvelopeRescaleStep
+import SampLib.Bernoulli.Support.EnvelopeRescaleStep
 
 open ProbLang
 

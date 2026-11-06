@@ -1,8 +1,8 @@
-import SampLib.Samplers.BinomialBinary
-import SampLib.Samplers.Cub
-import SampLib.Samplers.FlatChoice
-import SampLib.Samplers.LemireUniform
-import SampLib.IntegerChoose
+import SampLib.Discrete.BinomialBinary
+import SampLib.Discrete.Cub
+import SampLib.Weighted.FlatChoice
+import SampLib.Weighted.LemireUniform
+import SampLib.Discrete.Support.IntegerChoose
 import Metrology.Iris.LocalBI
 
 /-! Independent binary-binomial, ordinal, table and multiply-high clients. -/

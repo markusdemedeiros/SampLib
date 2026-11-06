@@ -1,6 +1,6 @@
-import SampLib.PSRNLess
-import SampLib.LatentUniform
-import SampLib.LatentUnaryViews
+import SampLib.PSRN.Support.PSRNLess
+import SampLib.Latent.LatentUniform
+import SampLib.PSRN.Support.LatentUnaryViews
 
 open ProbLang
 open scoped ENNReal

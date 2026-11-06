@@ -1,4 +1,4 @@
-import SampLib.Distributions.BetaExponentialProduct
+import SampLib.PSRN.Laws.BetaExponentialProduct
 
 open MeasureTheory ProbabilityTheory
 open scoped ENNReal

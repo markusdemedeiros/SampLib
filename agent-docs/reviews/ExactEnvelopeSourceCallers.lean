@@ -1,4 +1,4 @@
-import SampLib.Syntax.EnvelopeFactory
+import SampLib.Bernoulli.Syntax.EnvelopeFactory
 
 open ProbLang
 

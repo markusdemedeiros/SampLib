@@ -1,8 +1,8 @@
-import SampLib.Samplers.MarkovChain
-import SampLib.Samplers.RandomMap
-import SampLib.Samplers.RandomWalkPath
-import SampLib.Samplers.Sattolo
-import SampLib.Samplers.PermutationSamples
+import SampLib.General.MarkovChain
+import SampLib.General.RandomMap
+import SampLib.General.RandomWalkPath
+import SampLib.Combinatorial.Sattolo
+import SampLib.General.PermutationSamples
 
 open ProbLang
 open scoped ENNReal

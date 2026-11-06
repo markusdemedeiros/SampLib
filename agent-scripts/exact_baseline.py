@@ -17,6 +17,8 @@ from audit_sampler_proofs import BASELINE, CALLERS, LEAN_HEADER
 from audit_exact_sampler_proofs import (agent_identity, local_file, read_json, require, run,
                                         validate_axioms)
 from proof_dependencies import ROOT, review_context, sha256, source_snapshot
+from relocation import (current_imports, current_path, module_path, relocate_context,
+                        relocate_file, relocate_snapshot)
 
 CAMPAIGN = ROOT / "agent-docs/ExactVerificationCampaign.json"
 DEFAULT_OVERLAY = ROOT / "agent-docs/reviews/ExactBaselineRevalidation001.json"
@@ -45,7 +47,8 @@ def source_change_reviews(paths: list[str], context: dict) -> dict[str, dict]:
     for name in paths:
         path = local_file(name)
         review = read_json(path)
-        require(review.get("context") == context, f"Source-change review context differs: {name}")
+        require(relocate_context(review.get("context")) == context,
+                f"Source-change review context differs: {name}")
         require(bool(review.get("reviewer")) and bool(review.get("author")) and
                 agent_identity(review["reviewer"]) != agent_identity(review["author"]),
                 f"Non-independent source-change review: {name}")
@@ -83,7 +86,9 @@ def current_entries(rows: list[dict], context: dict, reviews: dict) -> tuple[lis
             require(len(candidates) == 1, f"Ambiguous historical receipt: {sampler}")
             entry = candidates[0]
             proof = row["proof_module"].replace(".", "/") + ".lean"
-            require(entry["sha256"] == row["reviewed_sha256"] == sha256(local_file(proof)),
+            current = sha256(local_file(module_path(row["proof_module"])))
+            require(entry["sha256"] == row["reviewed_sha256"] and
+                    relocate_file(proof, entry["sha256"])[1] == current,
                     f"Historical proof changed: {sampler}")
             require(receipt["reviewer"] == row["reviewer"] != row["owner"],
                     f"Historical independent review mismatch: {sampler}")
@@ -92,6 +97,7 @@ def current_entries(rows: list[dict], context: dict, reviews: dict) -> tuple[lis
             old_context = receipt["context"]
             for name, expected in old_context["files"].items():
                 if name not in {"lakefile.toml", "lake-manifest.json"}:
+                    name, expected = relocate_file(name, expected)
                     require(context["files"].get(name) == expected,
                             f"Policy/toolchain changed since historical review: {name}")
             for name, revision in old_context["packages"].items():
@@ -99,18 +105,19 @@ def current_entries(rows: list[dict], context: dict, reviews: dict) -> tuple[lis
                     require(context["packages"].get(name) == revision,
                             f"Additional dependency changed since historical review: {name}")
             caller = receipt["caller_evidence"]
-            require(sha256(local_file(caller)) == receipt["caller_sha256"],
+            caller_path, caller_sha = relocate_file(caller, receipt["caller_sha256"])
+            require(sha256(local_file(caller_path)) == caller_sha,
                     f"Historical independent caller changed: {caller}")
             callers.add(caller)
             original = entry["source_snapshot"]
             record["historical_receipt"] = row["review_receipt"]
             record["historical_receipt_sha256"] = sha256(receipt_path)
-        if snapshot != original:
+        if snapshot != relocate_snapshot(original):
             require(sampler in reviews, f"Project source drift needs explicit review: {sampler}")
             review = reviews[sampler]
             require(review["entry"].get("previous_source_snapshot") == original,
                     f"Source-change review does not identify original snapshot: {sampler}")
-            require(review["entry"].get("source_snapshot") == snapshot,
+            require(relocate_snapshot(review["entry"].get("source_snapshot")) == snapshot,
                     f"Source-change review current snapshot differs: {sampler}")
             record["source_change_review"] = review["review"]
             record["source_change_review_sha256"] = review["review_sha256"]
@@ -127,17 +134,23 @@ def validate_baseline_overlay(path: Path | None = None) -> dict[str, str]:
     overlay = read_json(path)
     exact, rows = historical_rows()
     context = review_context()
-    require(context == exact["baseline"]["context"], "Exact campaign baseline context changed")
+    require(context == relocate_context(exact["baseline"]["context"]),
+            "Exact campaign baseline context changed")
     require(overlay.get("schema_version") == 1 and overlay.get("kind") == "dependency_revalidation",
             "Unknown baseline revalidation schema")
-    require(overlay.get("context") == context, "Baseline revalidation context changed")
+    require(relocate_context(overlay.get("context")) == context,
+            "Baseline revalidation context changed")
     require(overlay.get("historical_campaign_sha256") ==
             exact["baseline"]["historical_campaign_sha256"],
             "Baseline revalidation identifies a different historical campaign")
     reviews = source_change_reviews(overlay.get("source_change_reviews", []), context)
     entries, callers = current_entries(rows, context, reviews)
-    require(overlay.get("entries") == entries, "Baseline revalidation sources or receipts changed")
-    require(overlay.get("callers") == {name: sha256(local_file(name)) for name in callers},
+    recorded = [{**entry, "source_snapshot": relocate_snapshot(entry["source_snapshot"])}
+                for entry in overlay.get("entries", [])]
+    require(recorded == entries, "Baseline revalidation sources or receipts changed")
+    current_callers = {current_path(name): sha256(local_file(current_path(name)))
+                       for name in callers}
+    require(relocate_snapshot(overlay.get("callers")) == current_callers,
             "Revalidated caller source changed")
     require({"build", "signatures", "axioms", "callers", "sources"} <=
             set(overlay.get("checks", [])),
@@ -150,7 +163,7 @@ def validate_baseline_overlay(path: Path | None = None) -> dict[str, str]:
             "Baseline log does not show all exact specification/program checks")
     validate_axioms(output, [row["public_spec"] for row in rows])
     require("BASELINE_REVALIDATION_OK 216" in output, "Missing completed baseline log marker")
-    return {row["sampler"]: row["proof_module"].replace(".", "/") + ".lean" for row in rows}
+    return {row["sampler"]: module_path(row["proof_module"]) for row in rows}
 
 
 def revalidate(output: Path, log: Path, review_paths: list[str]) -> None:
@@ -158,7 +171,8 @@ def revalidate(output: Path, log: Path, review_paths: list[str]) -> None:
     require(log.exists(), "Capture this command's stdout to the requested repository log")
     exact, rows = historical_rows()
     context = review_context()
-    require(context == exact["baseline"]["context"], "Exact campaign baseline context changed")
+    require(context == relocate_context(exact["baseline"]["context"]),
+            "Exact campaign baseline context changed")
     reviews = source_change_reviews(review_paths, context)
     entries, callers = current_entries(rows, context, reviews)
     run(["lake", "build"])
@@ -170,7 +184,7 @@ def revalidate(output: Path, log: Path, review_paths: list[str]) -> None:
                          f"#print axioms {row['public_spec']}"])
     with tempfile.TemporaryDirectory(prefix="samplib-baseline-revalidation-") as directory:
         path = Path(directory) / "Baseline.lean"
-        path.write_text(LEAN_HEADER + "\n".join(commands) + "\n")
+        path.write_text(current_imports(LEAN_HEADER) + "\n".join(commands) + "\n")
         checked = run(["lake", "env", "lean", str(path)])
     expected = [(row["public_spec"], row["sampler"]) for row in rows]
     require(re.findall(r"^SPEC_OK (\S+) (\S+)$", checked, re.M) == expected,
@@ -178,7 +192,7 @@ def revalidate(output: Path, log: Path, review_paths: list[str]) -> None:
     validate_axioms(checked, [row["public_spec"] for row in rows])
     for caller in callers:
         print(f"REVALIDATE_CALLER {caller}", flush=True)
-        run(["lake", "env", "lean", caller])
+        run(["lake", "env", "lean", current_path(caller)])
     require(review_context() == context, "Context changed during baseline revalidation")
     require(current_entries(rows, context, reviews) == (entries, callers),
             "Baseline sources changed during revalidation")
@@ -190,7 +204,7 @@ def revalidate(output: Path, log: Path, review_paths: list[str]) -> None:
                "context": context,
                "historical_campaign_sha256": exact["baseline"]["historical_campaign_sha256"],
                "source_change_reviews": review_paths, "entries": entries,
-               "callers": {name: sha256(local_file(name)) for name in callers},
+               "callers": {name: sha256(local_file(current_path(name))) for name in callers},
                "checks": ["build", "signatures", "axioms", "callers", "sources"],
                "log": str(log.relative_to(ROOT)), "log_sha256": sha256(log)}
     output.write_text(json.dumps(overlay, indent=2, ensure_ascii=False) + "\n")

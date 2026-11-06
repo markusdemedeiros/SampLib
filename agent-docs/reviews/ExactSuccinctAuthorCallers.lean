@@ -1,4 +1,4 @@
-import SampLib.Samplers.SuccinctChoice
+import SampLib.Weighted.SuccinctChoice
 
 open ProbLang Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 open scoped ENNReal

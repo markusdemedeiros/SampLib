@@ -1,4 +1,4 @@
-import SampLib.Samplers.SampleGeometricBag
+import SampLib.Bernoulli.SampleGeometricBag
 import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 import Metrology.TotalEris.Examples.Samplers.RealDecrTrial
 

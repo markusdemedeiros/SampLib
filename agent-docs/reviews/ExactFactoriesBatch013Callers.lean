@@ -1,4 +1,4 @@
-import SampLib.Samplers.ExpMinusExp
+import SampLib.Bernoulli.ExpMinusExp
 
 open ProbLang
 open scoped ENNReal

@@ -1,4 +1,4 @@
-import SampLib.MinimumComplementBinomial
+import SampLib.Bernoulli.Support.MinimumComplementBinomial
 
 open ProbLang
 open scoped ENNReal

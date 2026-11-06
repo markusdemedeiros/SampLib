@@ -1,4 +1,4 @@
-import SampLib.Distributions.DyadicGroups
+import SampLib.Weighted.Laws.DyadicGroups
 
 open Finset
 open scoped ENNReal

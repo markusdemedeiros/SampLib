@@ -1,4 +1,4 @@
-import SampLib.Samplers.PSRNPowerCoin
+import SampLib.PSRN.PSRNPowerCoin
 
 /-! Exact-source calls cover the zero exponent, fractional zero bias, and infinite credits. -/
 

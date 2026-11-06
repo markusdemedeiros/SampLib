@@ -1,6 +1,6 @@
-import SampLib.Samplers.DiscreteCDF
-import SampLib.Samplers.PiecewiseConstant
-import SampLib.Samplers.PiecewiseLinear
+import SampLib.General.DiscreteCDF
+import SampLib.General.PiecewiseConstant
+import SampLib.General.PiecewiseLinear
 
 open ProbLang
 open scoped ENNReal

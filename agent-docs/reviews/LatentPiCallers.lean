@@ -1,4 +1,4 @@
-import SampLib.LatentPiCoordinate
+import SampLib.PSRN.Support.LatentPiCoordinate
 
 open ProbLang
 open scoped ENNReal

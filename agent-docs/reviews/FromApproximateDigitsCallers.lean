@@ -1,4 +1,4 @@
-import SampLib.Samplers.FromApproximateDigits
+import SampLib.Constants.FromApproximateDigits
 
 open ProbLang SampLib FromApproximateDigits Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 open scoped ENNReal

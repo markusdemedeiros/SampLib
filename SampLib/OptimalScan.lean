@@ -1,5 +1,5 @@
-import SampLib.Syntax.Optimal
-import SampLib.DdgScan
+import SampLib.Weighted.Syntax.Optimal
+import SampLib.Weighted.Support.DdgScan
 
 /-! # The actual finite cyclic matrix's ordered column scan -/
 

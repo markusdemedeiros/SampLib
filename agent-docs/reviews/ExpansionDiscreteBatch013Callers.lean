@@ -1,7 +1,7 @@
-import SampLib.Samplers.FisherMultivariate
-import SampLib.Samplers.TwoLevelChoice
-import SampLib.Distributions.BitRecycler
-import SampLib.Samplers.FYKY
+import SampLib.Discrete.FisherMultivariate
+import SampLib.Weighted.TwoLevelChoice
+import SampLib.Common.Laws.BitRecycler
+import SampLib.Weighted.FYKY
 import Metrology.Iris.LocalBI
 
 /-! Independent signed rejection, conditioned urn and block-categorical clients. -/

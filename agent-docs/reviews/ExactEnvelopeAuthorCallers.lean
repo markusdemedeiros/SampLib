@@ -1,5 +1,5 @@
-import SampLib.Samplers.EnvelopeFactory
-import SampLib.Distributions.BernoulliEndpoints
+import SampLib.Bernoulli.EnvelopeFactory
+import SampLib.Bernoulli.Laws.BernoulliEndpoints
 
 open ProbLang
 open scoped ENNReal

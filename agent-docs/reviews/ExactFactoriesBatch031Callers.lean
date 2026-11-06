@@ -1,9 +1,9 @@
 import SampLib
-import SampLib.OwnedDistSpec
+import SampLib.Core.OwnedDistSpec
 import Lean.Elab.Command
-import SampLib.Samplers.EnvelopeFactory
-import SampLib.Samplers.FairCoin
-import SampLib.Distributions.BernoulliEndpoints
+import SampLib.Bernoulli.EnvelopeFactory
+import SampLib.Uniform.FairCoin
+import SampLib.Bernoulli.Laws.BernoulliEndpoints
 
 open Lean Meta Elab Command
 

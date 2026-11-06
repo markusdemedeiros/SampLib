@@ -1,20 +1,20 @@
-import SampLib.Samplers.PiAffine
-import SampLib.Samplers.ReciprocalPiScaled
-import SampLib.Samplers.EScaled
-import SampLib.Samplers.EOverPi
-import SampLib.Distributions.PiProbability
-import SampLib.Distributions.ReciprocalPiProbability
-import SampLib.Distributions.PiBoundsState
-import SampLib.PiBounds
-import SampLib.Samplers.EulerBounds
+import SampLib.Constants.PiAffine
+import SampLib.Constants.ReciprocalPiScaled
+import SampLib.Constants.EScaled
+import SampLib.Constants.EOverPi
+import SampLib.Bernoulli.Laws.PiProbability
+import SampLib.Bernoulli.Laws.ReciprocalPiProbability
+import SampLib.Bernoulli.Laws.PiBoundsState
+import SampLib.Bernoulli.Support.PiBounds
+import SampLib.Bernoulli.EulerBounds
 import SampLib.Templates
 import Metrology.Iris.LocalBI
-import SampLib.Samplers.ExponentialRationalProduct
-import SampLib.Samplers.FromPositiveSeries
-import SampLib.Samplers.ThreeZetaThreeOverFour
-import SampLib.Distributions.RationalEnclosureScale
-import SampLib.Samplers.InverseEPlusRational
-import SampLib.Distributions.ExponentialBoundsKernel
+import SampLib.Constants.ExponentialRationalProduct
+import SampLib.Constants.FromPositiveSeries
+import SampLib.Constants.ThreeZetaThreeOverFour
+import SampLib.Bernoulli.Laws.RationalEnclosureScale
+import SampLib.Constants.InverseEPlusRational
+import SampLib.Constants.Laws.ExponentialBoundsKernel
 
 -- Prior cohort: replay after the coordinated support-only formatting change.
 open ProbLang

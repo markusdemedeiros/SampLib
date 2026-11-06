@@ -1,4 +1,4 @@
-import SampLib.Distributions.FldrDyadic
+import SampLib.Weighted.Laws.FldrDyadic
 
 namespace FldrDyadicAuthorCallers
 

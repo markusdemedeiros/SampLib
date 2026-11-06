@@ -1,5 +1,5 @@
-import SampLib.Samplers.LogOnePlusRational
-import SampLib.Samplers.RationalIntegerPower
+import SampLib.Constants.LogOnePlusRational
+import SampLib.Constants.RationalIntegerPower
 
 open ProbLang
 open scoped ENNReal

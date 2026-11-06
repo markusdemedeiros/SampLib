@@ -1,15 +1,15 @@
-import SampLib.Samplers.Polylogarithm
-import SampLib.Samplers.AlgebraicRoot
-import SampLib.Samplers.InverseGoldenRatio
-import SampLib.Samplers.SigmoidRational
-import SampLib.Samplers.SigmoidDerivative
-import SampLib.Samplers.LogisticExp
-import SampLib.Samplers.ExponentialRatio
-import SampLib.Samplers.TanhRational
-import SampLib.Distributions.BernoulliMixture
+import SampLib.Bernoulli.Polylogarithm
+import SampLib.Constants.AlgebraicRoot
+import SampLib.Constants.InverseGoldenRatio
+import SampLib.Bernoulli.SigmoidRational
+import SampLib.Bernoulli.SigmoidDerivative
+import SampLib.Bernoulli.LogisticExp
+import SampLib.Bernoulli.ExponentialRatio
+import SampLib.Bernoulli.TanhRational
+import SampLib.Common.Laws.BernoulliMixture
 import SampLib.Templates
-import SampLib.Samplers.RealCoin
-import SampLib.Samplers.FairCoin
+import SampLib.Uniform.RealCoin
+import SampLib.Uniform.FairCoin
 import Metrology.Iris.LocalBI
 
 open ProbLang

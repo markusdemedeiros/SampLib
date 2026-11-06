@@ -1,6 +1,6 @@
-import SampLib.Samplers.DiscreteLaplace
-import SampLib.Samplers.FloatingMultiply
-import SampLib.Samplers.FastDiceRoller
+import SampLib.Discrete.DiscreteLaplace
+import SampLib.Weighted.FloatingMultiply
+import SampLib.Uniform.FastDiceRoller
 import Metrology.Iris.LocalBI
 
 /-! Independent discrete-Laplace, finite rounding and bit-recycling clients. -/

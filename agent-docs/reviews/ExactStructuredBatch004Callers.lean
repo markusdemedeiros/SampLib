@@ -1,7 +1,7 @@
-import SampLib.Samplers.RefinedCoin
-import SampLib.Samplers.RefinedCDFComparison
-import SampLib.Samplers.IncompleteInformation
-import SampLib.PSRNIntegerPower
+import SampLib.General.RefinedCoin
+import SampLib.General.RefinedCDFComparison
+import SampLib.General.IncompleteInformation
+import SampLib.Common.PSRNIntegerPower
 
 open ProbLang
 open scoped ENNReal

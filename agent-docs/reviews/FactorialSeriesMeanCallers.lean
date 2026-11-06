@@ -1,4 +1,4 @@
-import SampLib.Distributions.FactorialSeriesMean
+import SampLib.Bernoulli.Laws.FactorialSeriesMean
 
 open SampLib
 

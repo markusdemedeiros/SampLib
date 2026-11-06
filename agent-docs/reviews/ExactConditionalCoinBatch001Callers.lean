@@ -1,5 +1,5 @@
-import SampLib.PSRNCoin
-import SampLib.LatentRational
+import SampLib.PSRN.Support.PSRNCoin
+import SampLib.PSRN.Support.LatentRational
 import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 import Metrology.TotalEris.Examples.Samplers.RealDecrTrial
 

@@ -1,4 +1,4 @@
-import SampLib.LatentConstantDigits
+import SampLib.Latent.LatentConstantDigits
 
 open ProbLang
 open scoped ENNReal

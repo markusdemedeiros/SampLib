@@ -1,9 +1,9 @@
-import SampLib.DistributionMapSupported
-import SampLib.Samplers.InverseCDF
-import SampLib.Samplers.LatinHypercube
-import SampLib.Samplers.PermutationTest
-import SampLib.Samplers.GroupedPermutation
-import SampLib.Samplers.PdfRejection
+import SampLib.Core.DistributionMapSupported
+import SampLib.General.InverseCDF
+import SampLib.General.LatinHypercube
+import SampLib.General.PermutationTest
+import SampLib.General.GroupedPermutation
+import SampLib.General.PdfRejection
 
 open ProbLang
 open scoped ENNReal

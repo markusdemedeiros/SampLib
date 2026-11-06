@@ -1,4 +1,4 @@
-import SampLib.NatCounters
+import SampLib.Discrete.Support.NatCounters
 
 open ProbLang SampLib Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 

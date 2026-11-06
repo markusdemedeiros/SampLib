@@ -1,4 +1,4 @@
-import SampLib.Samplers.TwoCoinPower
+import SampLib.Bernoulli.TwoCoinPower
 
 open ProbLang Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 open scoped ENNReal

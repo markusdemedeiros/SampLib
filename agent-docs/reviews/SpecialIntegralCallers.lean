@@ -1,5 +1,5 @@
-import SampLib.Samplers.ErfRatio
-import SampLib.Samplers.LowerGammaIntegerRatio
+import SampLib.Constants.ErfRatio
+import SampLib.Constants.LowerGammaIntegerRatio
 
 open ProbLang
 open scoped ENNReal

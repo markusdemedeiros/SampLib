@@ -1,8 +1,8 @@
-import SampLib.PSRNDecayCoins
-import SampLib.Distributions.LatentReal.IntervalSchedules
-import SampLib.Distributions.LatentReal.UniformProduct
-import SampLib.Distributions.LatentReal.IntervalRoots
-import SampLib.Distributions.PSRNGammaMixtures
+import SampLib.PSRN.Support.PSRNDecayCoins
+import SampLib.PSRN.Laws.IntervalSchedules
+import SampLib.Latent.Laws.UniformProduct
+import SampLib.PSRN.Laws.IntervalRoots
+import SampLib.PSRN.Laws.PSRNGammaMixtures
 import SampLib.Distributions.PSRNBetaRejection
 import SampLib.Distributions.PSRNSphereLaw
 

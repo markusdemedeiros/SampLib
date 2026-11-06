@@ -1,4 +1,4 @@
-import SampLib.DistributionMapSupported
+import SampLib.Core.DistributionMapSupported
 
 open ProbLang SampLib Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 open scoped ENNReal

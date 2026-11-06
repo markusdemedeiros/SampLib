@@ -1,8 +1,8 @@
-import SampLib.Samplers.Dice
-import SampLib.Samplers.Hypergeometric
-import SampLib.Samplers.PolyaEggenberger
-import SampLib.Samplers.SampleWithoutReplacement
-import SampLib.Samplers.SampleInOrder
+import SampLib.Discrete.Dice
+import SampLib.Discrete.Hypergeometric
+import SampLib.Discrete.PolyaEggenberger
+import SampLib.Combinatorial.SampleWithoutReplacement
+import SampLib.Combinatorial.SampleInOrder
 import Metrology.Iris.LocalBI
 
 /-! Independent finite-sampler clients, endpoints, and infinite-credit checks. -/

@@ -1,4 +1,4 @@
-import SampLib.LatentCoinExponential
+import SampLib.PSRN.Support.LatentCoinExponential
 import SampLib.LatentCoinConstants
 
 open ProbLang
