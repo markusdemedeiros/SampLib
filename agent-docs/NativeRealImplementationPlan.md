@@ -1,31 +1,34 @@
 # Native-real implementation queue
 
 This plan dates from 6 November 2026 and targets `clutch-lean` commit `06a7b3e2`. It plans
-implementation and verification. The counts below are estimates; they are not new proofs
-or claims of completeness. The plan uses no FFI and adds no new fixed-point or grid
-approximation work.
+implementation and verification. The counts in the estimates section are estimates, not
+new proofs or claims of completeness. The plan uses no foreign function interface (FFI)
+and adds no new fixed-point or grid approximation work.
 
 For exact work, which excludes all grid and numerical work, use the
 [exact verification queue](ExactVerificationQueue.md) of **137 entries**. Round 2 closed on
 6 November 2026 with 120 entries accepted and 17 deferred; see the
-[deferred samplers](ExactCampaignDeferrals.md). The native-real port estimates below are
-separate, and that queue does not include them.
+[deferred samplers](ExactCampaignDeferrals.md). That queue does not include the native-real
+port estimates in this plan.
 
 ## Estimates
+
+The plan rests on these estimates:
 
 - **Bernoulli backlog from `LAWS.md`: 68 entries**, all with code: **33 ordinary
   factories, 3 lazy-coin samplers, and 32 constant coins**. `LAWS.md` now marks all 63
   exact entries verified. Only the five numerical constant coins lack a proof, and their
   native-real replacements belong in the port queue.
-- **Additional Bernoulli implementations:** Expect roughly **6–10 shared construction entry
+- **Additional Bernoulli implementations:** Expect roughly **6 to 10 shared construction entry
   points**, plus named specializations after an audit of each source. This number estimates
   the engine, not the size of the Bernoulli proof backlog. It does
   not establish that the sources are complete.
-- **Native-real ports:** Expect roughly **170–200 useful sampler entry points**, drawn from
-  the 224 numerical catalog entries listed below. These include native-real versions of
-  existing techniques, not 170–200 algorithms that were absent before. Exclude arithmetic
-  helpers, CLT approximations, duplicate wrappers, and constructions that still need exact
-  CDFs that are not available.
+- **Native-real ports:** Expect roughly **170 to 200 useful sampler entry points**, drawn
+  from the 224 numerical catalog entries in the candidate inventory. These include
+  native-real versions of existing techniques, not 170 to 200 algorithms that were absent
+  before. Exclude arithmetic helpers, central limit theorem (CLT) approximations,
+  duplicate wrappers, and constructions that still need exact cumulative distribution
+  functions (CDFs) that are not available.
 - Track these three queues separately: proofs of current terms, additional factory
   algorithms, and native-real ports. Do not add proof counts to implementation counts. The
   estimates concern scope. Give no estimate of elapsed time until representative
@@ -34,11 +37,11 @@ separate, and that queue does not include them.
 ## Bernoulli proof backlog (68)
 
 This table lists each entry of the backlog with its proof status in [LAWS.md](../LAWS.md),
-including the constant and lazy coins. Every row already has implementation code. A dash in
-the proof column of `LAWS.md` means that the index has no accepted stand-alone proof, not
-that the implementation is missing. New real primitives do not automatically prove the
-existing series, lazy-state, or permutation constructions. Verify their actual terms. Do not substitute a direct known-probability coin
-and call it the same proof.
+including the constant and lazy coins. Every row already has implementation code. A dash
+in the proof column of `LAWS.md` means that the index has no accepted stand-alone proof,
+not that the implementation is missing. New real primitives do not automatically prove the
+existing series, lazy-state, or permutation constructions. Verify their actual terms. Do
+not substitute a direct known-probability coin and call it the same proof.
 
 | Entry | Intended law | Code | Proof |
 | --- | --- | --- | --- |
@@ -113,6 +116,8 @@ and call it the same proof.
 
 ## Additional Bernoulli implementation priorities
 
+Implement the additional Bernoulli constructions in this order:
+
 | Priority | Construction | Proposed module | Work and dependencies |
 | --- | --- | --- | --- |
 | 1 | Real-coefficient reverse-time envelopes | `Bernoulli/RealEnvelopes.lean` | Port `envelopeFactoryDegrees` from rational pairs to reals. Keep one sampled uniform and the exact conditional hypergeometric averaging and rescaling. |
@@ -136,12 +141,14 @@ unknown `p`.
 
 ## Native-real port order
 
+Port the numerical samplers in this order:
+
 1. Shared support: real constants, a guarded open-unit uniform, absolute value, explicit
    conversions between integers and reals, and a real power with an explicit zero-base
    branch. Upstream, `pow(0,y)` expands to `exp(y*log(0))`, so it cannot silently stand for
    ordinary nonnegative real powers.
-2. The exponential inverse transform; Box–Muller, polar, and ratio-of-uniforms normals;
-   Marsaglia–Tsang gamma and small-shape reduction; beta; and real-rate Poisson. These
+2. The exponential inverse transform; Box-Muller, polar, and ratio-of-uniforms normals;
+   Marsaglia-Tsang gamma and small-shape reduction; beta; and real-rate Poisson. These
    unlock most later ports.
 3. Elementary inverse transforms and the families derived from gamma and normal, then
    mixtures and densities.
@@ -157,6 +164,8 @@ proof receipts. Factor out shared real operations, but do not mechanically repla
 integer division with real division.
 
 ## Acceptance and tests
+
+Follow these rules when you accept a new or ported term:
 
 - Record the source section, parameter domain, and output law for every term. In the
   index, distinguish a new technique, a native-real port, and a derived wrapper.

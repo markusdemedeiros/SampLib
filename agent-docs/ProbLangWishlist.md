@@ -26,6 +26,8 @@ paths are under `.lake/packages/clutch-lean/Metrology/ProbLang/`.
 
 ## Still missing
 
+The current pin still lacks these features:
+
 - Specify the runtime domain failures and nonfinite results of the `Float` operations, for
   example `log` and `sqrt` of negative inputs. The ℝ laws stay total and separate from
   runtime rounding.
@@ -33,12 +35,12 @@ paths are under `.lake/packages/clutch-lean/Metrology/ProbLang/`.
   diagnose unresolved parameters before expensive normalization.
 - Return the heap from the sample runner, which uses `eval` and drops the state, or run an
   observation callback before the runner discards the heap.
-- Add per-run fuel, explicit outcomes (returned, stuck, or exhausted), an injectable RNG,
-  replayable draws, and counters for bits, steps, and allocations. The interpreter now
-  raises an IO error on a stuck term and draws from `IO.rand`.
+- Add per-run fuel, explicit outcomes (returned, stuck, or exhausted), an injectable random
+  number generator (RNG), replayable draws, and counters for bits, steps, and allocations.
+  The interpreter now raises an IO error on a stuck term and draws from `IO.rand`.
 
-**Agent note:** The shipped operators unlock exact-real inverse transforms, Box–Muller and polar
-normals, gamma and beta, Cauchy, Weibull and Pareto, stable laws, copulas, and geometric
-transforms. PSRN, integer, and Bernoulli algorithms still need the latent-oracle,
-joint-credit, and entropy-pool proofs that this project owns. Keep that project work
-separate from this handoff.
+**Agent note:** The shipped operators unlock exact-real inverse transforms, Box-Muller and
+polar normals, gamma and beta, Cauchy, Weibull and Pareto, stable laws, copulas, and
+geometric transforms. Partially sampled random number (PSRN), integer, and Bernoulli
+algorithms still need the latent-oracle, joint-credit, and entropy-pool proofs that this
+project owns. Keep that project work separate from this handoff.

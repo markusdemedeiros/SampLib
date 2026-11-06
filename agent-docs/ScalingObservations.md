@@ -1,13 +1,16 @@
 # Scaling observations
 
 These notes come from the reorganization of the library on 6 November 2026. Use them to
-judge how CTE verification holds up at scale. All counts describe the tree on that date.
+judge how continuous TotalEris (CTE) verification holds up at scale. All counts describe
+the tree on that date.
 
 ## Size
 
+The following table compares the size of the source, the proofs, and the review record:
+
 | Artifact | Files | Lines |
 | --- | --- | --- |
-| Occil implementations (`code/`) | — | 8,186 |
+| Occil implementations (`code/`) | Not counted | 8,186 |
 | CTE proofs (`SampLib/`) | 970 modules | 121,647 |
 | Review artifacts (`agent-docs/reviews/`) | 603 | 112,516 |
 
@@ -24,11 +27,13 @@ these lines are mathematics and loop invariants, not public specs:
 | General | 83 | 49 | 21 | 13 |
 | Constants | 81 | 39 | 33 | 9 |
 | Combinatorial, Continuous, and Uniform | 49 | 36 | 10 | 3 |
-| Core, Common, and Latent (shared) | 106 | — | 45 | 9 |
+| Core, Common, and Latent (shared) | 106 | None | 45 | 9 |
 
 Lazy reals (PSRN) stand out: 113 helper modules support only 21 public specs.
 
 ## Findings
+
+The reorganization exposed these problems:
 
 1. **Reviews pin file paths.** Each receipt hashes the whole import closure of its proof,
    keyed by file path. This design makes reviews hard to fake. However, any move or

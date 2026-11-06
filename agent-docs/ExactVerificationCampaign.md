@@ -31,9 +31,9 @@ No earlier accepted proof closure contains the changed implementation file.
 
 Owners report a built proof module, the public spec, the complete input domain, and the
 expected classification (`core`, `derived`, or `support`). Reviewers independently inspect
-the mathematics and the straight-line CTE proof. They compile a caller that exercises
-arbitrary framed resources and the relevant boundaries, and they print the exact
-transitive axioms.
+the mathematics and the straight-line continuous TotalEris (CTE) proof. They compile a
+caller that exercises arbitrary framed resources and the relevant boundaries, and they
+print the exact transitive axioms.
 
 Reviewers give their artifacts immutable numbered names under `agent-docs/reviews/`. For
 example, `ExactFactoriesBatch001.json` comes with its Markdown evidence and its Lean

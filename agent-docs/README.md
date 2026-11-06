@@ -6,6 +6,8 @@ This directory holds the working documents of the verification campaigns. Start 
 
 ## Standards and guides
 
+These documents set the proof standard and explain recurring arguments:
+
 - [VerifyingSamplers.md](VerifyingSamplers.md): The proof-quality standard and workflow.
   Every review records the hash of this file as part of its dependency context.
 - [LatentObservationDomains.md](LatentObservationDomains.md): The termination domains of
@@ -14,6 +16,8 @@ This directory holds the working documents of the verification campaigns. Start 
   latent-uniform proofs share.
 
 ## Current exact campaign
+
+These documents define and track the current campaign:
 
 - [ExactVerificationCampaign.md](ExactVerificationCampaign.md): Spec kinds, review
   handoff, integration, audits, and module moves.
@@ -27,6 +31,8 @@ This directory holds the working documents of the verification campaigns. Start 
 
 ## Earlier campaigns
 
+These ledgers record the campaigns that produced the original suite:
+
 - [VerificationCampaign.json](VerificationCampaign.json): The ledger of the original
   216-sampler suite. Its hash is pinned, so this file never changes.
 - [ExpansionCampaign.json](ExpansionCampaign.json),
@@ -35,6 +41,8 @@ This directory holds the working documents of the verification campaigns. Start 
   expansion campaign.
 
 ## Reviews and moves
+
+These directories hold the review record and the module moves:
 
 - [reviews/](reviews): Immutable receipts (`.json`), review reports (`.md`), reviewer
   callers (`Callers.lean`), and audit logs. Files are named after their batch. For
@@ -46,10 +54,14 @@ This directory holds the working documents of the verification campaigns. Start 
 
 ## Observations
 
+This document collects findings about verification at scale:
+
 - [ScalingObservations.md](ScalingObservations.md): The size of the proofs and of the
   review record, and the problems that the 2026 reorganization exposed.
 
 ## Source data and plans
+
+These files hold source data and plans for future work:
 
 - [OccilSources.json](OccilSources.json) and [OccilInventory.json](OccilInventory.json):
   The Occil articles and the sampler inventory taken from them.

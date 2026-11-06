@@ -48,14 +48,14 @@ The reusable interfaces are in [UniformBagLess](../SampLib/Latent/UniformBagLess
 
 ## Keeping syntax transport out of symbolic execution
 
-Prepare source equalities, openings, and closedness certificates before the CTE argument.
-For large quotations, keep the named bodies through beta reduction with the checked
-[BetaStep](../SampLib/Core/BetaStep.lean) rule. Its premises are exactly a value argument
-and a locally closed lambda, so it adds no language assumption.
-[PositiveSeries syntax](../SampLib/Constants/Syntax/PositiveSeries.lean) keeps this
-bookkeeping apart from the probability argument. Walker's
-[opened-source cache](../SampLib/Weighted/AliasSamples.lean) instead stores a
-kernel-checked normal form without repeating the quotation.
+Prepare source equalities, openings, and closedness certificates before the continuous
+TotalEris (CTE) argument. For large quotations, keep the named bodies through beta
+reduction with the checked [BetaStep](../SampLib/Core/BetaStep.lean) rule. Its premises
+are exactly a value argument and a locally closed lambda, so it adds no language
+assumption. [PositiveSeries syntax](../SampLib/Constants/Syntax/PositiveSeries.lean) keeps
+this bookkeeping apart from the probability argument. Walker's [opened-source
+cache](../SampLib/Weighted/AliasSamples.lean) instead stores a kernel-checked normal form
+without repeating the quotation.
 
 Close templates before you insert arbitrary callback values. Local closedness does not
 imply an empty set of named free variables. Keep such values as leaves with their existing
