@@ -29,7 +29,7 @@ def main() -> None:
     lines = [
         start, '## Exact verification campaign', '',
         'The [current campaign](../agent-docs/ExactVerificationCampaign.md) has accepted '
-        f'**{len(accepted)} of 137 entries**. This table extends the historical suite above. '
+        f'**{len(accepted)} of 137 entries**. This table extends the historical suite in the earlier sections. '
         'The Kind column marks each entry as a core sampler, a derived wrapper, or a '
         'supporting interface.', '',
         '| Sampler | Kind | Domain | Proof | Review |',

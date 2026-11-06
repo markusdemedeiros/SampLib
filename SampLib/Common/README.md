@@ -6,12 +6,16 @@ For how the directories fit together, see the [library layout](../README.md#layo
 
 ## Verified samplers (2)
 
+Each of these samplers has an accepted proof in this directory:
+
 | Sampler | Law | Proof | Code |
 | --- | --- | --- | --- |
 | `Occil.DiscreteExtra.rationalPowerCoin` | $\mathrm{Bern}(p^{a/b})$ | [RationalPower](RationalPower.lean) | [Tails.lean](../../code/Samplers/Discrete/Tails.lean#L21) |
 | `Occil.FactoryExtra.rationalPower` | $\mathrm{Bern}\!\left(p^{a/b}\right)$ | [RationalPower](RationalPower.lean) | [Powers.lean](../../code/Samplers/Bernoulli/Powers.lean#L15) |
 
 ## Contents
+
+The directory holds these modules:
 
 - Top level: 9 modules
 - [`Laws/`](Laws): 32 modules with target laws, kernels, and expectation lemmas

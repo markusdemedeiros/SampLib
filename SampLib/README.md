@@ -1,12 +1,13 @@
 # Verified sampler suite
 
-216 sampler specifications: 214 new verifications and the two initial examples.
+The suite holds 216 sampler specifications: 214 new verifications and the two initial
+examples.
 Import `SampLib` to get the complete library. The runtime terms stay under `code/Samplers`.
 
-Each proof rests on one expectation-preservation argument and a simple CTE
+Each proof rests on one expectation-preservation argument and a simple continuous TotalEris (CTE)
 symbolic-execution proof. The public `*_distSpec` theorem uses
 [`IsDistSpec`](Templates.lean), which states a normalized mathematical law, a typed
-return value, and arbitrary measurable ENNReal continuation credits, including infinity.
+return value, and arbitrary measurable `ENNReal` continuation credits, including infinity.
 Samplers that take callbacks assume specs for those callbacks, and the proofs cover the
 concrete primitives directly. Stateful samplers use
 [`IsOwnedDistSpec`](Core/OwnedDistSpec.lean). This spec requires and preserves the
@@ -14,6 +15,8 @@ representation invariant of the sampler, and it gives the same normalized law an
 arbitrary continuation credits. The proofs omit adequacy corollaries.
 
 ## Layout
+
+The library has these top-level parts:
 
 | Path | Contents |
 | --- | --- |
@@ -25,7 +28,7 @@ arbitrary continuation credits. The proofs omit adequacy corollaries.
 
 The families are [`Uniform`](Uniform), [`Bernoulli`](Bernoulli), [`Constants`](Constants),
 [`Discrete`](Discrete), [`Continuous`](Continuous), [`Combinatorial`](Combinatorial),
-[`Weighted`](Weighted), [`General`](General), and [`PSRN`](PSRN). Each family directory
+[`Weighted`](Weighted), [`General`](General), and [`PSRN`](PSRN) (partially sampled random numbers). Each family directory
 has the same parts:
 
 - `*.lean`: The public specs. Start here for each sampler.
@@ -45,10 +48,12 @@ earlier reviews still apply.
 
 Unless a row states otherwise, coin biases range over the full unit interval. Finite
 count laws use the standard convolution definitions for independent trials, so their CTE
-proofs need no closed-form PMF. The minimum and maximum samplers also expose their
-order-statistic CDF or survival function.
+proofs need no closed-form probability mass function. The minimum and maximum samplers also expose their
+order-statistic distribution function or survival function.
 
 ## Uniform draws and primitive coins
+
+These samplers have accepted proofs:
 
 | Sampler | Law and domain | Proof |
 | --- | --- | --- |
@@ -62,6 +67,8 @@ order-statistic CDF or survival function.
 
 ## Coin composition
 
+These samplers have accepted proofs:
+
 | Sampler | Law and domain | Proof |
 | --- | --- | --- |
 | `Occil.complement` | Bias 1-p | [Complement](Bernoulli/Complement.lean) |
@@ -73,6 +80,8 @@ order-statistic CDF or survival function.
 | `Occil.FactoryExtra.complementHalf` | Bias (1-p)/2 | [ComplementHalf](Bernoulli/ComplementHalf.lean) |
 
 ## Finite trials and count distributions
+
+These samplers have accepted proofs:
 
 | Sampler | Law and domain | Proof |
 | --- | --- | --- |
@@ -89,6 +98,8 @@ order-statistic CDF or survival function.
 
 ## Recursive coin factories
 
+These samplers have accepted proofs:
+
 | Sampler | Law and domain | Proof |
 | --- | --- | --- |
 | `Occil.vonNeumann` | Fair output from a p-coin, 0<p<1 | [VonNeumann](Bernoulli/VonNeumann.lean) |
@@ -101,6 +112,8 @@ order-statistic CDF or survival function.
 | `Occil.FactoryExtra.pLogInverse` | Bias p·log(1/p), 0<p≤1 | [PLogInverse](Bernoulli/PLogInverse.lean) |
 
 ## Continuous laws and generic sampling schemes
+
+These samplers have accepted proofs:
 
 | Sampler | Law and domain | Proof |
 | --- | --- | --- |
@@ -121,6 +134,8 @@ constructions from independent variables, without expanding a Gamma density. The
 decreasing chain, which is definitionally identical.
 
 ## Weighted and collection sampling
+
+These samplers have accepted proofs:
 
 | Sampler | Law and domain | Proof |
 | --- | --- | --- |
@@ -353,7 +368,7 @@ use Float arithmetic, remain separate evidence about the implementations.
 <!-- exact:start -->
 ## Exact verification campaign
 
-The [current campaign](../agent-docs/ExactVerificationCampaign.md) has accepted **120 of 137 entries**. This table extends the historical suite above. The Kind column marks each entry as a core sampler, a derived wrapper, or a supporting interface.
+The [current campaign](../agent-docs/ExactVerificationCampaign.md) has accepted **120 of 137 entries**. This table extends the historical suite in the earlier sections. The Kind column marks each entry as a core sampler, a derived wrapper, or a supporting interface.
 
 | Sampler | Kind | Domain | Proof | Review |
 | --- | --- | --- | --- | --- |

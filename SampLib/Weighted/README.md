@@ -6,6 +6,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 
 ## Verified samplers (38)
 
+Each of these samplers has an accepted proof in this directory:
+
 | Sampler | Law | Proof | Code |
 | --- | --- | --- | --- |
 | `Occil.Weighted.bitmaskRejection` | $\mathrm{Unif}\{0,\ldots,n-1\}$ | [BitmaskRejection](BitmaskRejection.lean) | [Uniform.lean](../../code/Samplers/Weighted/Uniform.lean#L25) |
@@ -48,6 +50,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 | `Occil.weightedWithoutReplacement` | $\Pr(i_1,\ldots,i_k)=\prod_{j=1}^k\frac{w_{i_j}}{\sum_{i\notin\{i_1,\ldots,i_{j-1}\}}w_i}$ | [WeightedWithoutReplacement](WeightedWithoutReplacement.lean) | [Sequential.lean](../../code/Samplers/Weighted/Sequential.lean#L26) |
 
 ## Contents
+
+The directory holds these modules:
 
 - Top level: 35 modules
 - [`Laws/`](Laws): 60 modules with target laws, kernels, and expectation lemmas

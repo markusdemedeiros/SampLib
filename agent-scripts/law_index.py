@@ -158,18 +158,22 @@ def render(catalog: dict, sources: dict[str, dict], proofs: dict[str, str]) -> s
     pending = sum(e["law"] is None for e in entries.values() if e["role"] == "sampler")
     lines = [
         "# Sampler laws", "",
-        "[Implementations](code/README.md) · [Verified suite](SampLib/README.md)", "",
         f"This index lists {counts.get('sampler', 0)} sampler entries, with {len(proofs)} "
-        "accepted proofs. A **verified** link points to an accepted proof, and a **draft** "
-        "link points to a proof that no one has reviewed. A dash means that the sampler has no "
-        "proof. The code and the proofs state the domains and parameter conventions.", "",
-        r"$\mathrm{Geom}_0(p)$ counts failures. $\mathrm{Cat}(w)$ has masses "
+        "accepted proofs. In the proof column, a **verified** link points to an accepted "
+        "proof, a **draft** link points to a proof that no one has reviewed, and None means "
+        "that the sampler has no proof. The code and the proofs state the domains and "
+        "parameter conventions. For implementation details and source corrections, see the "
+        "[code README](code/README.md). For the layout of the proofs, see the "
+        "[suite README](SampLib/README.md).", "",
+        r"$\mathrm{Geom}_0(p)$ counts failures before the first success. "
+        r"$\mathrm{Cat}(w)$ has masses "
         r"$w_i/\sum_jw_j$. $\mathsf{Lazy}[D]$ denotes the intended latent law of a stateful real. "
         r"$\mathsf{Grid}_s[D]$ labels a numerical algorithm that targets $D$. It does "
         r"**not** claim that its output is an exact or exactly rounded draw from $D$.", "",
         "A formula without a proof describes the intended law and does not establish "
         "correctness. Removable singularities use the continuous extensions that the code "
         "specifies. “Uncharacterized” marks a missing law description, rather than a guess.", "",
+        "The entries follow, grouped by implementation module.", "",
     ]
     if pending:
         lines.extend([f"The laws of {pending} samplers remain uncharacterized.", ""])
@@ -184,7 +188,9 @@ def render(catalog: dict, sources: dict[str, dict], proofs: dict[str, str]) -> s
         for name, entry in sorted(selected, key=lambda x: (x[1]["group"], x[0])):
             if entry["group"] != group:
                 group = entry["group"]
-                lines.extend([("## " if role == "sampler" else "### ") + group, "",
+                lines.extend([("## " if role == "sampler" else "### ") +
+                              group.replace(" / ", ": "), "",
+                              "The following entries belong to this group:", "",
                               "| Sampler | Law | Method | Code | Proof |",
                               "| --- | --- | --- | --- | --- |"])
             source = sources[name]
@@ -193,7 +199,7 @@ def render(catalog: dict, sources: dict[str, dict], proofs: dict[str, str]) -> s
                 law = "Deterministic"
             elif role == "support" and not entry["law"]:
                 law = "Support operation"
-            proof = "—"
+            proof = "None"
             if name in proofs:
                 proof = f"[**verified**]({proofs[name]})"
             elif name in drafts:
@@ -253,10 +259,11 @@ def folder_readmes(catalog: dict, sources: dict[str, dict],
                       if base.relative_to(ROOT) in Path(path).parents)
         if rows:
             lines.extend(["", f"## Verified samplers ({len(rows)})", "",
+                          "Each of these samplers has an accepted proof in this directory:", "",
                           "| Sampler | Law | Proof | Code |", "| --- | --- | --- | --- |"])
             for name, path in rows:
                 law = catalog["entries"].get(name, {}).get("law")
-                law = "$" + law + "$" if law else "—"
+                law = "$" + law + "$" if law else "Uncharacterized"
                 source = sources[name]
                 code = f"[{Path(source['file']).name}](../../{source['file']}#L{source['line']})"
                 target = Path(path).relative_to(base.relative_to(ROOT))
@@ -267,7 +274,8 @@ def folder_readmes(catalog: dict, sources: dict[str, dict],
             count = len(list((base / role).glob("*.lean")))
             if count:
                 contents.append(f"- [`{role}/`]({role}): {count} modules with {meaning}")
-        lines.extend(["", "## Contents", "", *contents, "", "---", "",
+        lines.extend(["", "## Contents", "", "The directory holds these modules:", "",
+                      *contents, "", "---", "",
                       "`python3 agent-scripts/law_index.py` generates this file.", ""])
         result[base / "README.md"] = "\n".join(lines)
     return result

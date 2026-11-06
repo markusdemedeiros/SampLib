@@ -6,6 +6,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 
 ## Verified samplers (100)
 
+Each of these samplers has an accepted proof in this directory:
+
 | Sampler | Law | Proof | Code |
 | --- | --- | --- | --- |
 | `Occil.FactoryExtra.addition` | $\mathrm{Bern}\!\left(p+q\right)$ | [Addition](Addition.lean) | [Linear.lean](../../code/Samplers/Bernoulli/Linear.lean#L63) |
@@ -110,6 +112,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 | `Occil.vonNeumann` | $\mathrm{Bern}\!\left(\frac12\right)$ | [VonNeumann](VonNeumann.lean) | [Basic.lean](../../code/Samplers/Bernoulli/Basic.lean#L26) |
 
 ## Contents
+
+The directory holds these modules:
 
 - Top level: 97 modules
 - [`Laws/`](Laws): 80 modules with target laws, kernels, and expectation lemmas

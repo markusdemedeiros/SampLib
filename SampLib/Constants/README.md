@@ -6,6 +6,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 
 ## Verified samplers (45)
 
+Each of these samplers has an accepted proof in this directory:
+
 | Sampler | Law | Proof | Code |
 | --- | --- | --- | --- |
 | `Occil.Constants.algebraicRoot` | $\mathrm{Bern}\!\left(\alpha,\ f(\alpha)=0\right)$ | [AlgebraicRoot](AlgebraicRoot.lean) | [Engines.lean](../../code/Samplers/Constants/Engines.lean#L132) |
@@ -55,6 +57,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 | `Occil.Constants.zetaRelated` | $\mathrm{Bern}\!\left(\zeta(k)(1-2^{1-k})\right)$ | [ZetaRelated](ZetaRelated.lean) | [Special.lean](../../code/Samplers/Constants/Special.lean#L25) |
 
 ## Contents
+
+The directory holds these modules:
 
 - Top level: 39 modules
 - [`Laws/`](Laws): 33 modules with target laws, kernels, and expectation lemmas

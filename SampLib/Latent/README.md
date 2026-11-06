@@ -6,12 +6,16 @@ For how the directories fit together, see the [library layout](../README.md#layo
 
 ## Verified samplers (2)
 
+Each of these samplers has an accepted proof in this directory:
+
 | Sampler | Law | Proof | Code |
 | --- | --- | --- | --- |
 | `Occil.PSRN.newByDigits` | $\mathsf{Lazy}[\text{digit-oracle real}]$ | [LatentDigits](LatentDigits.lean) | [Uniform.lean](../../code/Samplers/PSRN/Uniform.lean#L52) |
 | `Occil.PSRN.newUniform` | $\mathsf{Lazy}[\mathrm{Unif}(0,1)]$ | [LatentUniform](LatentUniform.lean) | [Core.lean](../../code/Samplers/PSRN/Core.lean#L43) |
 
 ## Contents
+
+The directory holds these modules:
 
 - Top level: 25 modules
 - [`Laws/`](Laws): 10 modules with target laws, kernels, and expectation lemmas

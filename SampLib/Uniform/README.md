@@ -6,6 +6,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 
 ## Verified samplers (9)
 
+Each of these samplers has an accepted proof in this directory:
+
 | Sampler | Law | Proof | Code |
 | --- | --- | --- | --- |
 | `Occil.fairCoin` | $\mathrm{Bern}\!\left(\frac12\right)$ | [FairCoin](FairCoin.lean) | [Uniform.lean](../../code/Samplers/Uniform.lean#L57) |
@@ -19,6 +21,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 | `Occil.uniformInt` | $\mathrm{Unif}\{0,\ldots,n-1\}$ | [UniformInt](UniformInt.lean) | [Uniform.lean](../../code/Samplers/Uniform.lean#L12) |
 
 ## Contents
+
+The directory holds these modules:
 
 - Top level: 9 modules
 - [`Laws/`](Laws): 3 modules with target laws, kernels, and expectation lemmas

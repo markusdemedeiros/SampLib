@@ -6,6 +6,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 
 ## Verified samplers (27)
 
+Each of these samplers has an accepted proof in this directory:
+
 | Sampler | Law | Proof | Code |
 | --- | --- | --- | --- |
 | `Occil.PSRN.coin` | $\mathrm{Bern}(x)\ \text{conditional on cached }x$ | [PSRNCoin](Support/PSRNCoin.lean) | [Core.lean](../../code/Samplers/PSRN/Core.lean#L100) |
@@ -37,6 +39,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 | `Occil.PSRN.powerCoin` | $\mathrm{Bern}\!\left(p^{a/b}\right)$ | [PSRNPowerCoin](PSRNPowerCoin.lean) | [Uniform.lean](../../code/Samplers/PSRN/Uniform.lean#L39) |
 
 ## Contents
+
+The directory holds these modules:
 
 - Top level: 21 modules
 - [`Laws/`](Laws): 33 modules with target laws, kernels, and expectation lemmas

@@ -6,6 +6,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 
 ## Verified samplers (12)
 
+Each of these samplers has an accepted proof in this directory:
+
 | Sampler | Law | Proof | Code |
 | --- | --- | --- | --- |
 | `Occil.choice` | $\frac1n\sum_i\delta_{x_i}$ | [Choice](Choice.lean) | [Basic.lean](../../code/Samplers/Combinatorial/Basic.lean#L11) |
@@ -22,6 +24,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 | `Occil.weakComposition` | $\mathrm{Unif}\{x\in\mathbb N^n:\sum_i x_i=t\}$ | [WeakComposition](WeakComposition.lean) | [Basic.lean](../../code/Samplers/Combinatorial/Basic.lean#L95) |
 
 ## Contents
+
+The directory holds these modules:
 
 - Top level: 12 modules
 - [`Laws/`](Laws): 6 modules with target laws, kernels, and expectation lemmas

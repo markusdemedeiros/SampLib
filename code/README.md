@@ -1,10 +1,11 @@
 # Occil samplers as ProbLang terms
 
-Import `Samplers` to use these algorithms. Each algorithm is an object-language `pl%`
-term in the `Occil` namespace, generic over the representation of the reals. At `Float`,
-the terms run in the interpreter. At `ℝ`, they are the targets of the CTE proofs. No
-sampler calls a host implementation, the FFI, or an oracle for its target distribution.
-The only probabilistic primitives are uniform integer and uniform real draws.
+Import `Samplers` to use these algorithms. Each algorithm is an object-language `pl%` term
+in the `Occil` namespace, generic over the representation of the reals. At `Float`, the
+terms run in the interpreter. At `ℝ`, they are the targets of the continuous TotalEris
+(CTE) proofs. No sampler calls a host implementation, the foreign function interface
+(FFI), or an oracle for its target distribution. The only probabilistic primitives are
+uniform integer and uniform real draws.
 
 This set of implementations is broad, but it does not cover all of Occil's work.
 Statistical interpreter tests cover it. The
@@ -26,7 +27,7 @@ Import `Samplers` to get the complete library, or import one family module:
 | `Samplers.Numeric` | Integer fixed-point arithmetic and elementary functions |
 | `Samplers.Numerical.All` | Numerical scalar distributions, mixtures, and derived families |
 | `Samplers.Multivariate` | Vector laws, copulas, geometry, and phase-type distributions |
-| `Samplers.PSRN` | Lazy-real arithmetic, observations, and exact sampler constructions |
+| `Samplers.PSRN` | Partially sampled random numbers (PSRNs): lazy-real arithmetic, observations, and exact sampler constructions |
 | `Samplers.General` | General schemes, point selection, and finite data models |
 
 Large families split into smaller implementation files under these paths. The original
@@ -35,6 +36,8 @@ modules still re-export their contents for compatibility. The `Occil` namespaces
 function signatures did not change.
 
 ## Conventions
+
+The terms follow these conventions:
 
 - An integer argument is an object-language integer. The names `n` and `k` do not
   denote Lean indices.
@@ -45,7 +48,7 @@ function signatures did not change.
 - A list is `inl(unit)` when empty and `inr((head,tail))` otherwise. Pairs encode
   vectors of size two. Heap arrays appear only inside the shuffle and reservoir
   algorithms.
-- `fail` signals rejected input. The domains below are preconditions, even where a term
+- `fail` signals rejected input. The domains in the table of techniques are preconditions, even where a term
   does not check every assumption. For example, no term checks the probability of an
   abstract coin.
 - Geometric and negative-binomial counts are the failures before the required successes.
@@ -53,50 +56,53 @@ function signatures did not change.
 
 ## Implemented techniques and domains
 
-| Module / term | Domain and intended result |
+The following table gives the domain and intended result of each core routine, grouped by
+module:
+
+| Module and term | Domain and intended result |
 | --- | --- |
-| Uniform / `uniformInt` | n>0; uniform [0,n) |
-| `rndInt`, `rndIntRange`, `rndIntExcRange` | Nonempty inclusive/exclusive integer intervals |
+| Uniform: `uniformInt` | n>0; uniform [0,n) |
+| `rndInt`, `rndIntRange`, `rndIntExcRange` | Nonempty inclusive or exclusive integer intervals |
 | `fastDiceRoller` | n>0; fair-bit Fast Dice Roller, uniform [0,n) |
-| `uniformFromModulus` | modulus>=2,n>0; non-power-of-two rejection helper with recursive expansion |
-| `fairCoin`, `rationalCoin` | Fair Boolean; exact p=x/y for 0<=x<=y,y>0 |
-| `realCoin` | Ideal threshold Bernoulli(p), 0<=p<=1 |
-| Discrete / `binomial` | n>=0; sum of n independent p-coin successes |
-| `geometric`, `negativeBinomial` | p>0; failures before one or r>=0 successes |
-| `dice` | count>=0,sides>0; sum of fair dice with faces 1..sides |
-| `poissonOne`, `poissonRational` | Duchon–Duvignau Poisson(1), then additivity/thinning for Poisson(x/y), x>=0,y>0 |
+| `uniformFromModulus` | modulus≥2,n>0; non-power-of-two rejection helper with recursive expansion |
+| `fairCoin`, `rationalCoin` | Fair Boolean; exact p=x/y for 0≤x≤y,y>0 |
+| `realCoin` | Ideal threshold Bernoulli(p), 0≤p≤1 |
+| Discrete: `binomial` | n≥0; sum of n independent p-coin successes |
+| `geometric`, `negativeBinomial` | p>0; failures before one or r≥0 successes |
+| `dice` | count≥0,sides>0; sum of fair dice with faces 1..sides |
+| `poissonOne`, `poissonRational` | Duchon-Duvignau Poisson(1), then additivity and thinning for Poisson(x/y), x≥0,y>0 |
 | `weightedChoice` | Nonnegative integer weights with positive sum; category index |
-| `multinomial` | n>=0; sequential conditional binomials for nonnegative weights, positive sum |
-| `polyaEggenberger` | n>=0, initial counts nonnegative with positive sum, reinforcement>=0; successes in n draws |
-| `hypergeometric` | n<=ones+zeros; nonnegative counts; successes without replacement |
-| `randomWalk` | n>=0; sum of n independent symmetric unit steps |
-| Combinatorial / `choice`, `sampleWithReplacement` | Nonempty input for each requested draw; arbitrary list items |
-| `sampleWithoutReplacement` | 0<=k<=length; uniform ordered selection of distinct positions |
+| `multinomial` | n≥0; sequential conditional binomials for nonnegative weights, positive sum |
+| `polyaEggenberger` | n≥0, initial counts nonnegative with positive sum, reinforcement≥0; successes in n draws |
+| `hypergeometric` | n≤ones+zeros; nonnegative counts; successes without replacement |
+| `randomWalk` | n≥0; sum of n independent symmetric unit steps |
+| Combinatorial: `choice`, `sampleWithReplacement` | Nonempty input for each requested draw; arbitrary list items |
+| `sampleWithoutReplacement` | 0≤k≤length; uniform ordered selection of distinct positions |
 | `sampleInOrder` | Same domain; uniform k-subset in original input order |
-| `shuffle` | Fisher–Yates over a temporary heap array; uniform permutation of positions |
-| `reservoir` | 0<=k<=length; Algorithm R, uniform unordered subset; reservoir slot order is not promised uniform |
-| `positiveComposition` | n>0,total>=n; uniform positive integer n-tuples summing to total |
-| `weakComposition` | n>0,total>=0; uniform nonnegative compositions |
-| `randomGraph` | n>=0; each possible undirected edge independently has callback probability p |
-| Factories / `complement` | p -> 1-p |
+| `shuffle` | Fisher-Yates over a temporary heap array; uniform permutation of positions |
+| `reservoir` | 0≤k≤length; Algorithm R, uniform unordered subset; reservoir slot order is not promised uniform |
+| `positiveComposition` | n>0,total≥n; uniform positive integer n-tuples summing to total |
+| `weakComposition` | n>0,total≥0; uniform nonnegative compositions |
+| `randomGraph` | n≥0; each possible undirected edge independently has callback probability p |
+| Factories: `complement` | p -> 1-p |
 | `coinProduct`, `coinDisjunction` | (p,q) -> pq and p+q-pq |
 | `coinMean`, `coinConditional` | (p+q)/2 and rp+(1-r)q |
 | `vonNeumann` | 0<p<1; fair coin from an unknown biased coin |
 | `bernoulliRace` | p+q>0; p/(p+q) |
-| `oneDivOnePlus` | 0<=p<=1; 1/(1+p), uniformly bounded expected iteration count |
-| `evenParity` | 0<=p<1; 1/(1+p); diverges at p=1 |
-| `fractionalPower` | 0<a<=b; p^(a/b), Mendo's factory; p=0 can have infinite expected cost |
-| `expMinusRational` | x>=0,y>0; exp(-x/y), including integer-part factorization |
+| `oneDivOnePlus` | 0≤p≤1; 1/(1+p), uniformly bounded expected iteration count |
+| `evenParity` | 0≤p<1; 1/(1+p); diverges at p=1 |
+| `fractionalPower` | 0<a≤b; p^(a/b), Mendo's factory; p=0 can have infinite expected cost |
+| `expMinusRational` | x≥0,y>0; exp(-x/y), including integer-part factorization |
 | `expMinusFactory` | exp(-p) from an abstract p-coin, by decreasing uniform trials and thinning |
-| Continuous / `exponential` | Von Neumann unit-rate exponential, by decreasing-chain rejection |
+| Continuous: `exponential` | Von Neumann unit-rate exponential, by decreasing-chain rejection |
 | `laplace` | Laplace(0,1), independent exponential magnitude and sign |
 | `erlang` | Positive integer shape, unit rate; independent exponential sum |
-| `uniformSum` | n>=0; Irwin–Hall law, degenerate zero when n=0 |
-| `uniformMin`, `uniformMax` | Min/max of two independent uniforms; Beta(1,2), Beta(2,1) |
-| `orderStatistic` | 1<=k<=n; k-th order statistic, Beta(k,n+1-k) |
+| `uniformSum` | n≥0; Irwin-Hall law, degenerate zero when n=0 |
+| `uniformMin`, `uniformMax` | Minimum and maximum of two independent uniforms; Beta(1,2), Beta(2,1) |
+| `orderStatistic` | 1≤k≤n; k-th order statistic, Beta(k,n+1-k) |
 | `mixture` | Independent selector and abstract component samplers |
 | `gaussian` | Standard normal, Karney-style comparison-based rejection |
-| More / `boundedGeometric` | Truncated failure count; includes p=0 with a finite cap |
+| More: `boundedGeometric` | Truncated failure count; includes p=0 with a finite cap |
 | `rejection` | Abstract proposal and acceptance callbacks; positive acceptance probability |
 | `weightedRejection` | Uniform category proposals with a checked integer envelope |
 | `weightedWithoutReplacement` | Sequential probability-proportional-to-weight ordered indices |
@@ -107,7 +113,7 @@ function signatures did not change.
 | `logisticFactory` | cp/(1+cp), c a positive rational |
 | `probabilityGeneratingFactory` | E[p^N] from an abstract nonnegative integer sampler |
 | `bernsteinFactory` | Bernstein-polynomial factory with rational coefficients in [0,1] |
-| Lazy / `newUniformBag`, `uniformBagStep`, `uniformBagPrefix` | Memoized binary uniform; persistent finite prefix observations |
+| Lazy: `newUniformBag`, `uniformBagStep`, `uniformBagPrefix` | Memoized binary uniform; persistent finite prefix observations |
 | `uniformBagLess` | Exact comparison of a shared lazy uniform with an integer fraction |
 | `sampleGeometricBag` | Conditional Bernoulli(U), with the same latent U preserved across calls |
 | `factorialSeriesFactory`, `expMinusMartingale` | Exact integer-bound alternating-series exp(-p) construction |
@@ -133,7 +139,7 @@ separate test covers it, apart from independent coin products.
 
 ## Source correspondence and explicit adaptations
 
-Primary sources:
+The translation draws on these articles by Peter Occil:
 
 - [Randomization and Sampling Methods](https://peteroupc.github.io/randomfunc.html)
 - [More Random Sampling Methods](https://peteroupc.github.io/randomnotes.html)
@@ -143,7 +149,7 @@ Primary sources:
 The code translates the algorithms. It does not transcribe every line of pseudocode,
 and it deviates from the articles on purpose in these ways:
 
-1. Fisher–Yates uses the selected `j` in both swaps. The article prints `k` there.
+1. Fisher-Yates uses the selected `j` in both swaps. The article prints `k` there.
 2. Ordered subset sampling tests `u < needed`, not `u <= needed`, for u uniform in
    [0,remaining). The second test selects too often and can return too few items.
 3. Pólya urn draws use `ones/(ones+zeros)`. The printed `ZeroOrOne(ones,zeros)` does not
@@ -166,7 +172,7 @@ and it deviates from the articles on purpose in these ways:
 9. The Erlang, Laplace, minimum, maximum, sum, and mixture samplers compose the basic
    techniques. Separate test cases exercise each composed output law.
 10. All samplers use the ideal independence assumptions of ProbLang. The interpreter
-    substitutes a seeded PRNG and finite-precision IEEE operations.
+    substitutes a seeded pseudorandom number generator and finite-precision IEEE operations.
 11. `linearLowProbability` passes the margin `1/2` to its inner linear factory. Its stated
     bound `μ ≤ ρ < 1/2` ensures `μ/(2ρ) ≤ 1/2`. The previous margin, `1−ρ`, required the
     stronger bound `μ ≤ 2ρ²`. The
@@ -190,7 +196,7 @@ used. The live pseudocode on the website might change.
 ## Coverage and remaining work
 
 The [repository index](../README.md) lists Occil's sampling techniques and links to
-their implementations. The table above introduces the core routines. The family modules
+their implementations. The table of techniques and domains introduces the core routines. The family modules
 also contain the later numerical, multivariate, weighted, and PSRN additions. The
 [wishlist](../agent-docs/ProbLangWishlist.md) records what the language, the
 interpreter, and the proof library still need.

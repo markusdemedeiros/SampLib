@@ -11,9 +11,11 @@ python3 tests/statistical.py
 
 [Sampler laws](LAWS.md) · [Implementation details and source corrections](code/README.md) · [ProbLang wishlist](agent-docs/ProbLangWishlist.md) · [Test results](tests/latest-results.json) · [Source inventory](agent-docs/OccilInventory.json)
 
-The interpreter tests check the output laws, and check that seeded runs agree across environments and substitutions. The test results above record the outcome. These tests are evidence about the implementations, not proofs, and the interpreter uses finite-precision Float arithmetic.
+The interpreter tests check the output laws, and check that seeded runs agree across environments and substitutions. The linked test results record the outcome. These tests are evidence about the implementations, not proofs, and the interpreter uses finite-precision Float arithmetic.
 
 ## Where things live
+
+The repository has these parts:
 
 | Path | Contents |
 | --- | --- |
@@ -59,35 +61,35 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 
 ### Uniform integers and randomization
 
-- [RNDINT: inclusive integers](https://peteroupc.github.io/randomfunc.html#rndint-random-integers-in-0-n) — [code](code/Samplers/Uniform.lean)
-- [RNDINTRANGE: inclusive integer range](https://peteroupc.github.io/randomfunc.html#rndintrange-random-integers-in-n-m) — [code](code/Samplers/Uniform.lean)
-- [RNDINTEXC: exclusive integers](https://peteroupc.github.io/randomfunc.html#rndintexc-random-integers-in-0-n) — [code](code/Samplers/Uniform.lean)
-- [RNDINTEXCRANGE: exclusive integer range](https://peteroupc.github.io/randomfunc.html#rndintexcrange-random-integers-in-n-m) — [code](code/Samplers/Uniform.lean)
-- [Uniform random bits](https://peteroupc.github.io/randomfunc.html#uniform-random-bits) — [code](code/Samplers/Uniform.lean)
-- [Boolean / rational probability conditions](https://peteroupc.github.io/randomfunc.html#boolean-truefalse-conditions) — [code](code/Samplers/Uniform.lean)
-- [Choice / sampling with replacement](https://peteroupc.github.io/randomfunc.html#sampling-with-replacement-choosing-a-random-item-from-a-list) — [code](code/Samplers/Combinatorial/Basic.lean)
-- [Sampling without replacement](https://peteroupc.github.io/randomfunc.html#sampling-without-replacement-choosing-several-unique-items) — [code](code/Samplers/Combinatorial/Basic.lean)
-- [Ordered subset sampling](https://peteroupc.github.io/randomfunc.html#pseudocode-for-random-sampling) — [code](code/Samplers/Combinatorial/Basic.lean)
-- [Reservoir sampling](https://peteroupc.github.io/randomfunc.html#pseudocode-for-random-sampling) — [code](code/Samplers/Combinatorial/Basic.lean) (finite input list)
-- [Fisher–Yates shuffle](https://peteroupc.github.io/randomfunc.html#shuffling) — [code](code/Samplers/Combinatorial/Basic.lean)
+- [RNDINT: inclusive integers](https://peteroupc.github.io/randomfunc.html#rndint-random-integers-in-0-n): [code](code/Samplers/Uniform.lean)
+- [RNDINTRANGE: inclusive integer range](https://peteroupc.github.io/randomfunc.html#rndintrange-random-integers-in-n-m): [code](code/Samplers/Uniform.lean)
+- [RNDINTEXC: exclusive integers](https://peteroupc.github.io/randomfunc.html#rndintexc-random-integers-in-0-n): [code](code/Samplers/Uniform.lean)
+- [RNDINTEXCRANGE: exclusive integer range](https://peteroupc.github.io/randomfunc.html#rndintexcrange-random-integers-in-n-m): [code](code/Samplers/Uniform.lean)
+- [Uniform random bits](https://peteroupc.github.io/randomfunc.html#uniform-random-bits): [code](code/Samplers/Uniform.lean)
+- [Boolean / rational probability conditions](https://peteroupc.github.io/randomfunc.html#boolean-truefalse-conditions): [code](code/Samplers/Uniform.lean)
+- [Choice / sampling with replacement](https://peteroupc.github.io/randomfunc.html#sampling-with-replacement-choosing-a-random-item-from-a-list): [code](code/Samplers/Combinatorial/Basic.lean)
+- [Sampling without replacement](https://peteroupc.github.io/randomfunc.html#sampling-without-replacement-choosing-several-unique-items): [code](code/Samplers/Combinatorial/Basic.lean)
+- [Ordered subset sampling](https://peteroupc.github.io/randomfunc.html#pseudocode-for-random-sampling): [code](code/Samplers/Combinatorial/Basic.lean)
+- [Reservoir sampling](https://peteroupc.github.io/randomfunc.html#pseudocode-for-random-sampling): [code](code/Samplers/Combinatorial/Basic.lean) (finite input list)
+- [Fisher–Yates shuffle](https://peteroupc.github.io/randomfunc.html#shuffling): [code](code/Samplers/Combinatorial/Basic.lean)
 - [Random character strings](https://peteroupc.github.io/randomfunc.html#random-character-strings)
-- [Rejection sampling](https://peteroupc.github.io/randomfunc.html#rejection-sampling) — [code](code/Samplers/Continuous/Rejection.lean) (generic proposal/predicate)
-- [Random walks](https://peteroupc.github.io/randomfunc.html#random-walks) — [code](code/Samplers/Discrete.lean) (symmetric integer increments)
+- [Rejection sampling](https://peteroupc.github.io/randomfunc.html#rejection-sampling): [code](code/Samplers/Continuous/Rejection.lean) (generic proposal/predicate)
+- [Random walks](https://peteroupc.github.io/randomfunc.html#random-walks): [code](code/Samplers/Discrete.lean) (symmetric integer increments)
 - [Random dates and times](https://peteroupc.github.io/randomfunc.html#random-dates-and-times)
 - [Randomization in statistical testing](https://peteroupc.github.io/randomfunc.html#randomization-in-statistical-testing)
 - [Markov chains](https://peteroupc.github.io/randomfunc.html#markov-chains)
 - [Coupling from the past](https://peteroupc.github.io/randomfunc.html#markov-chains)
-- [Random graphs](https://peteroupc.github.io/randomfunc.html#random-graphs) — [code](code/Samplers/Combinatorial/Basic.lean) (independent-edge construction)
-- [Pólya–Eggenberger urn](https://peteroupc.github.io/randomfunc.html#plyandasheggenberger-distribution) — [code](code/Samplers/Discrete.lean) (nonnegative integer reinforcement)
-- [Positive integer compositions](https://peteroupc.github.io/randomfunc.html#random-integers-with-a-given-positive-sum) — [code](code/Samplers/Combinatorial/Basic.lean)
-- [Nonnegative integer compositions](https://peteroupc.github.io/randomfunc.html#random-integers-with-a-given-positive-sum) — [code](code/Samplers/Combinatorial/Basic.lean)
+- [Random graphs](https://peteroupc.github.io/randomfunc.html#random-graphs): [code](code/Samplers/Combinatorial/Basic.lean) (independent-edge construction)
+- [Pólya–Eggenberger urn](https://peteroupc.github.io/randomfunc.html#plyandasheggenberger-distribution): [code](code/Samplers/Discrete.lean) (nonnegative integer reinforcement)
+- [Positive integer compositions](https://peteroupc.github.io/randomfunc.html#random-integers-with-a-given-positive-sum): [code](code/Samplers/Combinatorial/Basic.lean)
+- [Nonnegative integer compositions](https://peteroupc.github.io/randomfunc.html#random-integers-with-a-given-positive-sum): [code](code/Samplers/Combinatorial/Basic.lean)
 - [Fixed-point uniform reals](https://peteroupc.github.io/randomfunc.html#for-fixed-point-number-formats)
 - [Rational-format uniform reals](https://peteroupc.github.io/randomfunc.html#for-rational-number-formats)
 - [Floating-point uniform reals](https://peteroupc.github.io/randomfunc.html#for-floating-point-number-formats)
 - [Inverse transform sampling](https://peteroupc.github.io/randomfunc.html#inverse-transform-sampling)
 - [PDF rejection sampling](https://peteroupc.github.io/randomfunc.html#rejection-sampling-with-a-pdf-like-function)
-- [Alternating-series sampling](https://peteroupc.github.io/randomfunc.html#alternating-series) — [code](code/Samplers/Lazy.lean) (factorial-series factories)
-- [Mixtures of distributions](https://peteroupc.github.io/randomfunc.html#mixtures-of-distributions) — [code](code/Samplers/Continuous.lean)
+- [Alternating-series sampling](https://peteroupc.github.io/randomfunc.html#alternating-series): [code](code/Samplers/Lazy.lean) (factorial-series factories)
+- [Mixtures of distributions](https://peteroupc.github.io/randomfunc.html#mixtures-of-distributions): [code](code/Samplers/Continuous.lean)
 - [Markov-chain Monte Carlo](https://peteroupc.github.io/randomfunc.html#markov-chain-monte-carlo)
 - [Piecewise-linear distribution](https://peteroupc.github.io/randomfunc.html#piecewise-linear-distribution)
 - [Random point in a simplex](https://peteroupc.github.io/randomfunc.html#random-points-inside-a-simplex)
@@ -97,10 +99,10 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 
 ### Uniform-integer algorithm comparison
 
-- [Integer rejection sampling](https://peteroupc.github.io/randomfunc.html#rndint-random-integers-in-0-n) — [code](code/Samplers/Uniform.lean) (non-power-of-two source helper)
+- [Integer rejection sampling](https://peteroupc.github.io/randomfunc.html#rndint-random-integers-in-0-n): [code](code/Samplers/Uniform.lean) (non-power-of-two source helper)
 - [Multiply-and-shift reduction (approximate)](https://peteroupc.github.io/randomfunc.html#rndint-random-integers-in-0-n)
 - [Modulo reduction (approximate)](https://peteroupc.github.io/randomfunc.html#rndint-random-integers-in-0-n)
-- [Fast Dice Roller](https://peteroupc.github.io/randomfunc.html#rndint-random-integers-in-0-n) — [code](code/Samplers/Uniform.lean)
+- [Fast Dice Roller](https://peteroupc.github.io/randomfunc.html#rndint-random-integers-in-0-n): [code](code/Samplers/Uniform.lean)
 - [FYKY](https://peteroupc.github.io/randomfunc.html#rndint-random-integers-in-0-n)
 - [Math Forum / Mennucci bit recycling](https://peteroupc.github.io/randomfunc.html#rndint-random-integers-in-0-n)
 - [FP Multiply](https://peteroupc.github.io/randomfunc.html#rndint-random-integers-in-0-n)
@@ -109,13 +111,13 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 
 ### Weighted-choice algorithm comparison
 
-- [Linear search](https://peteroupc.github.io/randomfunc.html#weighted-choice) — [code](code/Samplers/Discrete.lean) (integer weights)
+- [Linear search](https://peteroupc.github.io/randomfunc.html#weighted-choice): [code](code/Samplers/Discrete.lean) (integer weights)
 - [Linear search with cumulative weights](https://peteroupc.github.io/randomfunc.html#weighted-choice)
 - [Fast Loaded Dice Roller](https://peteroupc.github.io/randomfunc.html#weighted-choice)
 - [Saad et al. (2020b) samplers](https://peteroupc.github.io/randomfunc.html#weighted-choice)
-- [Rejection sampling](https://peteroupc.github.io/randomfunc.html#weighted-choice) — [code](code/Samplers/Weighted/Sequential.lean) (integer envelope)
+- [Rejection sampling](https://peteroupc.github.io/randomfunc.html#weighted-choice): [code](code/Samplers/Weighted/Sequential.lean) (integer envelope)
 - [Bringmann–Panagiotou sampler](https://peteroupc.github.io/randomfunc.html#weighted-choice)
-- [Walker alias method](https://peteroupc.github.io/randomfunc.html#weighted-choice) — [code](code/Samplers/Weighted/Sequential.lean) (integer thresholds)
+- [Walker alias method](https://peteroupc.github.io/randomfunc.html#weighted-choice): [code](code/Samplers/Weighted/Sequential.lean) (integer thresholds)
 - [Klundert alias variant](https://peteroupc.github.io/randomfunc.html#weighted-choice)
 - [Bringmann–Larsen succinct sampler](https://peteroupc.github.io/randomfunc.html#weighted-choice)
 - [Hübschle-Schneider–Sanders sampler](https://peteroupc.github.io/randomfunc.html#weighted-choice)
@@ -123,45 +125,45 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [Loaded Die from Unfair Coins](https://peteroupc.github.io/randomfunc.html#weighted-choice)
 - [Knuth–Yao](https://peteroupc.github.io/randomfunc.html#weighted-choice)
 - [Han–Hoshi](https://peteroupc.github.io/randomfunc.html#weighted-choice)
-- [Integer-envelope weighted rejection](https://peteroupc.github.io/randomfunc.html#weighted-choice) — [code](code/Samplers/Weighted/Sequential.lean)
-- [Weighted sampling without replacement](https://peteroupc.github.io/randomfunc.html#weighted-choice-without-replacement) — [code](code/Samplers/Weighted/Sequential.lean) (sequential PPS)
+- [Integer-envelope weighted rejection](https://peteroupc.github.io/randomfunc.html#weighted-choice): [code](code/Samplers/Weighted/Sequential.lean)
+- [Weighted sampling without replacement](https://peteroupc.github.io/randomfunc.html#weighted-choice-without-replacement): [code](code/Samplers/Weighted/Sequential.lean) (sequential PPS)
 
-### Distribution index — most commonly used
+### Distribution index: most commonly used
 
-- [Beta distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Continuous.lean) (integer shapes; order statistic)
-- [Binomial distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Discrete.lean) (direct trials)
+- [Beta distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Continuous.lean) (integer shapes; order statistic)
+- [Binomial distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Discrete.lean) (direct trials)
 - [Binormal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Cauchy (Lorentz) distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Chi-squared distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Dice](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Discrete.lean)
-- [Exponential distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Continuous.lean) (unit rate)
+- [Dice](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Discrete.lean)
+- [Exponential distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Continuous.lean) (unit rate)
 - [Extreme value distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Gamma distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Continuous.lean) (positive integer shape, unit rate)
-- [Gaussian distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Continuous.lean) (standard normal)
-- [Geometric distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Discrete.lean)
+- [Gamma distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Continuous.lean) (positive integer shape, unit rate)
+- [Gaussian distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Continuous.lean) (standard normal)
+- [Geometric distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Discrete.lean)
 - [Gumbel distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Inverse gamma distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Laplace (double exponential) distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Continuous.lean) (unit scale)
+- [Laplace (double exponential) distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Continuous.lean) (unit scale)
 - [Logarithmic distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Logarithmic normal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Multinormal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Multivariate normal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Normal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Continuous.lean) (standard normal)
-- [Poisson distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Discrete.lean) (rational mean)
+- [Normal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Continuous.lean) (standard normal)
+- [Poisson distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Discrete.lean) (rational mean)
 - [Pareto distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Rayleigh distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Standard normal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Continuous.lean)
+- [Standard normal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Continuous.lean)
 - [Student’s t-distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Triangular distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Weibull distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 
-### Distribution index — miscellaneous
+### Distribution index: miscellaneous
 
 - [Archimedean copulas](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Arcsine distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Bates distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Beckmann distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Beta binomial distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Discrete.lean) (integer shapes via reinforced urn)
+- [Beta binomial distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Discrete.lean) (integer shapes via reinforced urn)
 - [Beta negative binomial distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Beta-PERT distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Beta prime distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
@@ -174,7 +176,7 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [Dagum distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Dirichlet distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Double logarithmic distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Erlang distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Continuous.lean) (unit rate)
+- [Erlang distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Continuous.lean) (unit rate)
 - [Estoup distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Exponential power distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Fréchet distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
@@ -185,11 +187,11 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [Generalized Tukey lambda distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Half-normal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Hyperexponential distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Hypergeometric distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Discrete.lean)
+- [Hypergeometric distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Discrete.lean)
 - [Hypoexponential distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Inverse chi-squared distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Inverse Gaussian distribution (Wald distribution)](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [kth-order statistic](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Continuous.lean) (uniform order statistic)
+- [kth-order statistic](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Continuous.lean) (uniform order statistic)
 - [Kumaraswamy distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Landau distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Lévy distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
@@ -197,19 +199,19 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [Logarithmic series distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Logistic distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Log-multinormal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Max-of-uniform distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Continuous.lean) (positive integer n; order statistic)
+- [Max-of-uniform distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Continuous.lean) (positive integer n; order statistic)
 - [Maxwell distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Min-of-uniform distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Continuous.lean) (positive integer n; order statistic)
+- [Min-of-uniform distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Continuous.lean) (positive integer n; order statistic)
 - [Moyal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Multinomial distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Discrete.lean) (integer weights)
+- [Multinomial distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Discrete.lean) (integer weights)
 - [Multivariate Poisson distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Multivariate t-copula](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Multivariate t-distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Negative binomial distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Discrete.lean) (integer success count)
+- [Negative binomial distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Discrete.lean) (integer success count)
 - [Negative multinomial distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Noncentral beta distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Parabolic distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
-- [Pascal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions) — [code](code/Samplers/Discrete.lean) (integer shape; failure count)
+- [Pascal distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions): [code](code/Samplers/Discrete.lean) (integer shape; failure count)
 - [Pearson VI distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Piecewise constant distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Piecewise linear distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
@@ -238,16 +240,16 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [Zeta distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Zipf distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 
-### Distribution index — named subfamilies and alternatives
+### Distribution index: named subfamilies and alternatives
 
 - [Stacy distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 - [Amoroso distribution](https://peteroupc.github.io/randomfunc.html#index-of-nonuniform-distributions)
 
 ### More random sampling methods
 
-- [Normal (Gaussian) Distribution](https://peteroupc.github.io/randomnotes.html#normal-gaussian-distribution) — [code](code/Samplers/Continuous.lean) (Karney-style standard normal only)
-- [Gamma Distribution](https://peteroupc.github.io/randomnotes.html#gamma-distribution) — [code](code/Samplers/Continuous.lean) (integer shape, unit rate only)
-- [Beta Distribution](https://peteroupc.github.io/randomnotes.html#beta-distribution) — [code](code/Samplers/Continuous.lean) (integer shapes via order statistic only)
+- [Normal (Gaussian) Distribution](https://peteroupc.github.io/randomnotes.html#normal-gaussian-distribution): [code](code/Samplers/Continuous.lean) (Karney-style standard normal only)
+- [Gamma Distribution](https://peteroupc.github.io/randomnotes.html#gamma-distribution): [code](code/Samplers/Continuous.lean) (integer shape, unit rate only)
+- [Beta Distribution](https://peteroupc.github.io/randomnotes.html#beta-distribution): [code](code/Samplers/Continuous.lean) (integer shapes via order statistic only)
 - [Uniform Partition with a Positive Sum](https://peteroupc.github.io/randomnotes.html#uniform-partition-with-a-positive-sum)
 - [Noncentral Hypergeometric Distributions](https://peteroupc.github.io/randomnotes.html#noncentral-hypergeometric-distributions)
 - [von Mises Distribution](https://peteroupc.github.io/randomnotes.html#von-mises-distribution)
@@ -256,10 +258,10 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [Multivariate Normal (Multinormal) Distribution](https://peteroupc.github.io/randomnotes.html#multivariate-normal-multinormal-distribution)
 - [Gaussian and Other Copulas](https://peteroupc.github.io/randomnotes.html#gaussian-and-other-copulas)
 - [Multivariate Phase-Type Distributions](https://peteroupc.github.io/randomnotes.html#multivariate-phase-type-distributions)
-- [normal distribution](https://peteroupc.github.io/randomnotes.html#normal-gaussian-distribution) — [code](code/Samplers/Continuous.lean) (standard normal)
+- [normal distribution](https://peteroupc.github.io/randomnotes.html#normal-gaussian-distribution): [code](code/Samplers/Continuous.lean) (standard normal)
 - [NormalRatioOfUniforms](https://peteroupc.github.io/randomnotes.html#normal-gaussian-distribution)
 - [NormalPolar](https://peteroupc.github.io/randomnotes.html#normal-gaussian-distribution)
-- [“Irwin–Hall distribution”](https://peteroupc.github.io/randomnotes.html#normal-gaussian-distribution) — [code](code/Samplers/Continuous.lean) (integer number of uniforms)
+- [“Irwin–Hall distribution”](https://peteroupc.github.io/randomnotes.html#normal-gaussian-distribution): [code](code/Samplers/Continuous.lean) (integer number of uniforms)
 - [GammaDist](https://peteroupc.github.io/randomnotes.html#gamma-distribution)
 - [BetaDist](https://peteroupc.github.io/randomnotes.html#beta-distribution)
 - [Wallenius’s hypergeometric distribution](https://peteroupc.github.io/randomnotes.html#noncentral-hypergeometric-distributions)
@@ -298,14 +300,14 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [Normal-to-anything method](https://peteroupc.github.io/randomnotes.html#gaussian-and-other-copulas)
 - [Inhomogeneous multivariate phase-type distribution](https://peteroupc.github.io/randomnotes.html#multivariate-phase-type-distributions)
 
-### Bernoulli factories — Algorithms for General Functions of λ
+### Bernoulli factories: Algorithms for General Functions of λ
 
-- [Certain Polynomials](https://peteroupc.github.io/bernoulli.html#certain-polynomials) — [code](code/Samplers/Bernoulli/Combinators.lean) (rational Bernstein coefficients)
+- [Certain Polynomials](https://peteroupc.github.io/bernoulli.html#certain-polynomials): [code](code/Samplers/Bernoulli/Combinators.lean) (rational Bernstein coefficients)
 - [Certain Rational Functions](https://peteroupc.github.io/bernoulli.html#certain-rational-functions)
 - [Certain Power Series](https://peteroupc.github.io/bernoulli.html#certain-power-series)
 - [General Factory Functions](https://peteroupc.github.io/bernoulli.html#general-factory-functions)
 
-### Bernoulli factories — Algorithms for General Irrational Constants
+### Bernoulli factories: Algorithms for General Irrational Constants
 
 - [Digit Expansions](https://peteroupc.github.io/bernoulli.html#digit-expansions)
 - [Continued Fractions](https://peteroupc.github.io/bernoulli.html#continued-fractions)
@@ -313,18 +315,18 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [Certain Algebraic Numbers](https://peteroupc.github.io/bernoulli.html#certain-algebraic-numbers)
 - [Certain Converging Series](https://peteroupc.github.io/bernoulli.html#certain-converging-series)
 
-### Bernoulli factories — Other General Algorithms
+### Bernoulli factories: Other General Algorithms
 
 - [Convex Combinations](https://peteroupc.github.io/bernoulli.html#convex-combinations)
-- [Bernoulli Race and Generalizations](https://peteroupc.github.io/bernoulli.html#bernoulli-race-and-generalizations) — [code](code/Samplers/Bernoulli/Basic.lean) (two-coin race only)
+- [Bernoulli Race and Generalizations](https://peteroupc.github.io/bernoulli.html#bernoulli-race-and-generalizations): [code](code/Samplers/Bernoulli/Basic.lean) (two-coin race only)
 - [Flajolet’s Probability Simulation Schemes](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes)
 - [Integrals](https://peteroupc.github.io/bernoulli.html#integrals)
 
-### Bernoulli factories — Algorithms for Specific Functions of λ
+### Bernoulli factories: Algorithms for Specific Functions of λ
 
-- [ExpMinus (exp(−z))](https://peteroupc.github.io/bernoulli.html#expminus-expminusz) — [code](code/Samplers/Bernoulli/Basic.lean) (rational z)
+- [ExpMinus (exp(−z))](https://peteroupc.github.io/bernoulli.html#expminus-expminusz): [code](code/Samplers/Bernoulli/Basic.lean) (rational z)
 - [LogisticExp (1 − expit(z/2^(prec)))](https://peteroupc.github.io/bernoulli.html#logisticexp-1-minus-expitz2supprecsup)
-- [exp(−(λ * z))](https://peteroupc.github.io/bernoulli.html#expminuslambda--z) — [code](code/Samplers/Lazy.lean) (z=1)
+- [exp(−(λ * z))](https://peteroupc.github.io/bernoulli.html#expminuslambda--z): [code](code/Samplers/Lazy.lean) (z=1)
 - [exp(−exp(m + λ))](https://peteroupc.github.io/bernoulli.html#expminusexpm--lambda)
 - [exp(−(m + λ)^(k))](https://peteroupc.github.io/bernoulli.html#expminusm--lambdasupksup)
 - [exp(λ)*(1−λ)](https://peteroupc.github.io/bernoulli.html#explambda1minuslambda)
@@ -336,32 +338,32 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [2^(-m(k+λ))](https://peteroupc.github.io/bernoulli.html#mklambda-or-exp-klambdacdotln2m)
 - [2^(-(x/y)λ)](https://peteroupc.github.io/bernoulli.html#xycdotlambda-or-exp-lambdacdotln2xy)
 - [Two-Coin Algorithm (c * λ * β / (β * (c * λ + d * μ) − (β − 1) * (c + d)))](https://peteroupc.github.io/bernoulli.html#two-coin-algorithm-c--lambda--beta--beta--c--lambda--d--mu-minus-beta-minus-1--c--d)
-- [cλ/(cλ+d)](https://peteroupc.github.io/bernoulli.html#c--lambda--c--lambda--d-or-cd--lambda--1--cd--lambda) — [code](code/Samplers/Bernoulli/Combinators.lean) (positive rational c/d)
+- [cλ/(cλ+d)](https://peteroupc.github.io/bernoulli.html#c--lambda--c--lambda--d-or-cd--lambda--1--cd--lambda): [code](code/Samplers/Bernoulli/Combinators.lean) (positive rational c/d)
 - [(d + λ) / c](https://peteroupc.github.io/bernoulli.html#d--lambda--c)
 - [d / (c + λ)](https://peteroupc.github.io/bernoulli.html#d--c--lambda)
 - [(d + μ) / (c + λ)](https://peteroupc.github.io/bernoulli.html#d--mu--c--lambda)
 - [(d + μ) / ((d + μ) + (c + λ))](https://peteroupc.github.io/bernoulli.html#d--mu--d--mu--c--lambda)
 - [d^(k) / (c + λ)^(k), or (d / (c + λ))^(k)](https://peteroupc.github.io/bernoulli.html#dsupksup--c--lambdasupksup-or-d--c--lambdasupksup)
-- [1/(1+λ)](https://peteroupc.github.io/bernoulli.html#lambda) — [code](code/Samplers/Bernoulli/Basic.lean) (two variants)
+- [1/(1+λ)](https://peteroupc.github.io/bernoulli.html#lambda): [code](code/Samplers/Bernoulli/Basic.lean) (two variants)
 - [1/(2 − λ)](https://peteroupc.github.io/bernoulli.html#minus-lambda)
 - [1/(1+(m+λ)^(2))](https://peteroupc.github.io/bernoulli.html#mlambdasup2sup)
 - [1 / (1 + (x/y)*λ)](https://peteroupc.github.io/bernoulli.html#xylambda)
-- [$\lambda^{x/y}$](https://peteroupc.github.io/bernoulli.html#lambdaxy) — [code](code/Samplers/Bernoulli/Basic.lean) (0 < x/y <= 1 only)
-- [sqrt(λ)](https://peteroupc.github.io/bernoulli.html#sqrtlambda) — [code](code/Samplers/Bernoulli/Basic.lean)
-- [arctan(λ) /λ](https://peteroupc.github.io/bernoulli.html#arctanlambda-lambda) — [code](code/Samplers/Lazy.lean)
+- [$\lambda^{x/y}$](https://peteroupc.github.io/bernoulli.html#lambdaxy): [code](code/Samplers/Bernoulli/Basic.lean) (0 < x/y <= 1 only)
+- [sqrt(λ)](https://peteroupc.github.io/bernoulli.html#sqrtlambda): [code](code/Samplers/Bernoulli/Basic.lean)
+- [arctan(λ) /λ](https://peteroupc.github.io/bernoulli.html#arctanlambda-lambda): [code](code/Samplers/Lazy.lean)
 - [arctan(λ) /π](https://peteroupc.github.io/bernoulli.html#arctanlambda-pi)
-- [arctan(λ)](https://peteroupc.github.io/bernoulli.html#arctanlambda) — [code](code/Samplers/Lazy.lean)
-- [cos(λ)](https://peteroupc.github.io/bernoulli.html#coslambda) — [code](code/Samplers/Lazy.lean)
-- [sin(λ*sqrt(c)) / (λ*sqrt(c))](https://peteroupc.github.io/bernoulli.html#sinlambdasqrtc--lambdasqrtc) — [code](code/Samplers/Lazy.lean) (c=1 only)
-- [sin(λ)](https://peteroupc.github.io/bernoulli.html#sinlambda) — [code](code/Samplers/Lazy.lean)
-- [ln(1+λ)](https://peteroupc.github.io/bernoulli.html#ln1lambda) — [code](code/Samplers/Lazy.lean)
+- [arctan(λ)](https://peteroupc.github.io/bernoulli.html#arctanlambda): [code](code/Samplers/Lazy.lean)
+- [cos(λ)](https://peteroupc.github.io/bernoulli.html#coslambda): [code](code/Samplers/Lazy.lean)
+- [sin(λ*sqrt(c)) / (λ*sqrt(c))](https://peteroupc.github.io/bernoulli.html#sinlambdasqrtc--lambdasqrtc): [code](code/Samplers/Lazy.lean) (c=1 only)
+- [sin(λ)](https://peteroupc.github.io/bernoulli.html#sinlambda): [code](code/Samplers/Lazy.lean)
+- [ln(1+λ)](https://peteroupc.github.io/bernoulli.html#ln1lambda): [code](code/Samplers/Lazy.lean)
 - [ln(c+λ)/(c+λ)](https://peteroupc.github.io/bernoulli.html#lnclambdaclambda)
 - [arcsin(λ) + sqrt(1 − λ^(2)) − 1](https://peteroupc.github.io/bernoulli.html#arcsinlambda--sqrt1-minus-lambdasup2sup-minus-1)
 - [tanh(z)](https://peteroupc.github.io/bernoulli.html#tanhz)
 - [Expressions Involving Polylogarithms](https://peteroupc.github.io/bernoulli.html#expressions-involving-polylogarithms)
 - [min(λ, 1/2) and min(λ, 1−λ)](https://peteroupc.github.io/bernoulli.html#minlambda-12-and-minlambda-1minuslambda)
 
-### Bernoulli factories — Algorithms for Specific Functions of λ (Probability-Sensitive)
+### Bernoulli factories: Algorithms for Specific Functions of λ (Probability-Sensitive)
 
 - [λ + μ](https://peteroupc.github.io/bernoulli.html#lambda--mu)
 - [λ − μ](https://peteroupc.github.io/bernoulli.html#lambda-minus-mu)
@@ -376,15 +378,15 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [ln((c + d + λ)/c)](https://peteroupc.github.io/bernoulli.html#lnc--d--lambdac)
 - [arcsin(λ) / 2](https://peteroupc.github.io/bernoulli.html#arcsinlambda--2)
 
-### Bernoulli factories — Algorithms for Specific Constants
+### Bernoulli factories: Algorithms for Specific Constants
 
 - [1 / φ (1 divided by the golden ratio)](https://peteroupc.github.io/bernoulli.html#phi-1-divided-by-the-golden-ratio)
 - [sqrt(2) − 1](https://peteroupc.github.io/bernoulli.html#sqrt2-minus-1)
 - [1/sqrt(2)](https://peteroupc.github.io/bernoulli.html#sqrt2)
 - [tanh(1/2) or (exp(1) − 1) / (exp(1) + 1)](https://peteroupc.github.io/bernoulli.html#tanh12-or-exp1-minus-1--exp1--1)
-- [arctan(x/y) * y/x](https://peteroupc.github.io/bernoulli.html#arctanxy--yx) — [code](code/Samplers/Lazy.lean) (0 <= x/y <= 1)
+- [arctan(x/y) * y/x](https://peteroupc.github.io/bernoulli.html#arctanxy--yx): [code](code/Samplers/Lazy.lean) (0 <= x/y <= 1)
 - [π / 12](https://peteroupc.github.io/bernoulli.html#pi--12)
-- [π / 4](https://peteroupc.github.io/bernoulli.html#pi--4) — [code](code/Samplers/Lazy.lean) (arctan factory at p=1)
+- [π / 4](https://peteroupc.github.io/bernoulli.html#pi--4): [code](code/Samplers/Lazy.lean) (arctan factory at p=1)
 - [π/4 − 1/2 or (π − 2)/4](https://peteroupc.github.io/bernoulli.html#pi4-minus-12-or-pi-minus-24)
 - [(π − 3)/4](https://peteroupc.github.io/bernoulli.html#pi-minus-34)
 - [π − 3](https://peteroupc.github.io/bernoulli.html#pi-minus-3)
@@ -402,7 +404,7 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [ln(1+y/z)](https://peteroupc.github.io/bernoulli.html#ln1yz)
 - [ln(π)/π](https://peteroupc.github.io/bernoulli.html#lnpipi)
 
-### Bernoulli factories — other factory functions
+### Bernoulli factories: other factory functions
 
 - [1/sqrt(π)](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
 - [1/sqrt(h+λ)](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
@@ -414,14 +416,14 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [exp(−((1−λ)^(1) * c))](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
 - [exp(λ^(2)) − λ*exp(λ^(2))](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
 - [μλ/(1−μ+μλ)](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
-- [λ/(1+λ)](https://peteroupc.github.io/bernoulli.html#other-factory-functions) — [code](code/Samplers/Bernoulli/Combinators.lean) (unit logistic scale)
+- [λ/(1+λ)](https://peteroupc.github.io/bernoulli.html#other-factory-functions): [code](code/Samplers/Bernoulli/Combinators.lean) (unit logistic scale)
 - [c * λ / (c * λ + (d+μ)) = (c/(d+μ)) * λ / (1 + (c/(d+μ)) * λ))](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
 - [(d+μ) / (c * λ + (d+μ))](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
 - [exp(z)/(1+exp(z))^(2)](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
-- [ν * 1 + (1 − ν) * μ = ν + μ − (ν*μ)](https://peteroupc.github.io/bernoulli.html#other-factory-functions) — [code](code/Samplers/Bernoulli/Basic.lean) (disjunction)
-- [1 − ν](https://peteroupc.github.io/bernoulli.html#other-factory-functions) — [code](code/Samplers/Bernoulli/Basic.lean) (complement)
-- [ν * λ](https://peteroupc.github.io/bernoulli.html#other-factory-functions) — [code](code/Samplers/Bernoulli/Basic.lean) (product)
-- [(λ + μ)/2 = (1/2)*λ + (1/2)*μ](https://peteroupc.github.io/bernoulli.html#other-factory-functions) — [code](code/Samplers/Bernoulli/Basic.lean) (mean)
+- [ν * 1 + (1 − ν) * μ = ν + μ − (ν*μ)](https://peteroupc.github.io/bernoulli.html#other-factory-functions): [code](code/Samplers/Bernoulli/Basic.lean) (disjunction)
+- [1 − ν](https://peteroupc.github.io/bernoulli.html#other-factory-functions): [code](code/Samplers/Bernoulli/Basic.lean) (complement)
+- [ν * λ](https://peteroupc.github.io/bernoulli.html#other-factory-functions): [code](code/Samplers/Bernoulli/Basic.lean) (product)
+- [(λ + μ)/2 = (1/2)*λ + (1/2)*μ](https://peteroupc.github.io/bernoulli.html#other-factory-functions): [code](code/Samplers/Bernoulli/Basic.lean) (mean)
 - [(1+λ)/2 = (1/2) + (1/2)*λ](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
 - [(1−λ)/2](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
 - [1 − ln(1+λ)](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
@@ -436,7 +438,7 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [λ/(2−λ) = (λ/2)/(1−(λ/2))](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
 - [(1−λ)/(1+λ)](https://peteroupc.github.io/bernoulli.html#other-factory-functions)
 
-### Bernoulli factories — power-series and simulation-schema targets
+### Bernoulli factories: power-series and simulation-schema targets
 
 - [$f(\lambda)=1-f_0(1-\lambda)$](https://peteroupc.github.io/bernoulli.html#certain-power-series)
 - [$f(\lambda)=f_0(1-\lambda)$](https://peteroupc.github.io/bernoulli.html#certain-power-series)
@@ -458,7 +460,7 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [exp(λ)/6 minus D](https://peteroupc.github.io/bernoulli.html#certain-power-series)
 - [exp(λ/2)/2 minus D](https://peteroupc.github.io/bernoulli.html#certain-power-series)
 - [cosh(λ)/4 minus D](https://peteroupc.github.io/bernoulli.html#certain-power-series)
-- [exp(−λ)](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes) — [code](code/Samplers/Lazy.lean)
+- [exp(−λ)](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes): [code](code/Samplers/Lazy.lean)
 - [exp(λ − 1) = exp(−(1 − λ))](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes)
 - [(1−λ)*exp(λ)](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes)
 - [λ*exp(1−λ)](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes)
@@ -466,7 +468,7 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [(1−λ)/ln(1/λ)](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes)
 - [(1−λ)*ln(1/(1−λ))](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes)
 - [λ*ln(1/λ)](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes)
-- [cos(λ)](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes) — [code](code/Samplers/Lazy.lean)
+- [cos(λ)](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes): [code](code/Samplers/Lazy.lean)
 - [(1−λ)/cos(λ) = (1−λ)*sec(λ)](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes)
 - [λ/tan(λ)](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes)
 - [(1−λ)*tan(λ)](https://peteroupc.github.io/bernoulli.html#flajolets-probability-simulation-schemes)
@@ -478,26 +480,26 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [Piecewise linear: μ at 0; 1/2 at 1/2; and 1 at 1](https://peteroupc.github.io/bernoulli.html#minlambda-12-and-minlambda-1minuslambda)
 - [Piecewise linear: B at 0; B+(A/2) at 1/2; and B+(A/2) at 1](https://peteroupc.github.io/bernoulli.html#minlambda-12-and-minlambda-1minuslambda)
 
-### Bernoulli factories — elementary composition and extraction
+### Bernoulli factories: elementary composition and extraction
 
-- [Complement](https://peteroupc.github.io/bernoulli.html#algorithms) — [code](code/Samplers/Bernoulli/Basic.lean)
-- [Product / conjunction](https://peteroupc.github.io/bernoulli.html#algorithms) — [code](code/Samplers/Bernoulli/Basic.lean)
-- [Disjunction](https://peteroupc.github.io/bernoulli.html#algorithms) — [code](code/Samplers/Bernoulli/Basic.lean)
-- [Mean](https://peteroupc.github.io/bernoulli.html#algorithms) — [code](code/Samplers/Bernoulli/Basic.lean)
-- [Conditional mixture](https://peteroupc.github.io/bernoulli.html#algorithms) — [code](code/Samplers/Bernoulli/Basic.lean)
-- [Even-parity factory](https://peteroupc.github.io/bernoulli.html#algorithms) — [code](code/Samplers/Bernoulli/Basic.lean)
-- [Probability generating function](https://peteroupc.github.io/bernoulli.html#algorithms) — [code](code/Samplers/Bernoulli/Combinators.lean)
-- [von Neumann randomness extraction](https://peteroupc.github.io/bernoulli.html#algorithms) — [code](code/Samplers/Bernoulli/Basic.lean)
+- [Complement](https://peteroupc.github.io/bernoulli.html#algorithms): [code](code/Samplers/Bernoulli/Basic.lean)
+- [Product / conjunction](https://peteroupc.github.io/bernoulli.html#algorithms): [code](code/Samplers/Bernoulli/Basic.lean)
+- [Disjunction](https://peteroupc.github.io/bernoulli.html#algorithms): [code](code/Samplers/Bernoulli/Basic.lean)
+- [Mean](https://peteroupc.github.io/bernoulli.html#algorithms): [code](code/Samplers/Bernoulli/Basic.lean)
+- [Conditional mixture](https://peteroupc.github.io/bernoulli.html#algorithms): [code](code/Samplers/Bernoulli/Basic.lean)
+- [Even-parity factory](https://peteroupc.github.io/bernoulli.html#algorithms): [code](code/Samplers/Bernoulli/Basic.lean)
+- [Probability generating function](https://peteroupc.github.io/bernoulli.html#algorithms): [code](code/Samplers/Bernoulli/Combinators.lean)
+- [von Neumann randomness extraction](https://peteroupc.github.io/bernoulli.html#algorithms): [code](code/Samplers/Bernoulli/Basic.lean)
 
-### Partially sampled random numbers — building blocks
+### Partially sampled random numbers: building blocks
 
-- [Sampling Uniform PSRNs](https://peteroupc.github.io/exporand.html#sampling-uniform-psrns) — [code](code/Samplers/Lazy.lean) (binary prefix stream)
+- [Sampling Uniform PSRNs](https://peteroupc.github.io/exporand.html#sampling-uniform-psrns): [code](code/Samplers/Lazy.lean) (binary prefix stream)
 - [Sampling E-rands](https://peteroupc.github.io/exporand.html#sampling-e-rands)
 - [Addition and Subtraction](https://peteroupc.github.io/exporand.html#addition-and-subtraction)
 - [Multiplication](https://peteroupc.github.io/exporand.html#multiplication)
 - [Reciprocal and Division](https://peteroupc.github.io/exporand.html#reciprocal-and-division)
-- [Comparisons](https://peteroupc.github.io/exporand.html#comparisons) — [code](code/Samplers/Lazy.lean) (uniform bag vs rational only)
-- [SampleGeometricBag](https://peteroupc.github.io/exporand.html#samplegeometricbag) — [code](code/Samplers/Lazy.lean)
+- [Comparisons](https://peteroupc.github.io/exporand.html#comparisons): [code](code/Samplers/Lazy.lean) (uniform bag vs rational only)
+- [SampleGeometricBag](https://peteroupc.github.io/exporand.html#samplegeometricbag): [code](code/Samplers/Lazy.lean)
 - [FillGeometricBag](https://peteroupc.github.io/exporand.html#fillgeometricbag)
 - [kthsmallest](https://peteroupc.github.io/exporand.html#kthsmallest)
 - [Power-of-Uniform Subalgorithm](https://peteroupc.github.io/exporand.html#power-of-uniform-subalgorithm)
@@ -508,7 +510,7 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 - [Ratio of Uniforms](https://peteroupc.github.io/exporand.html#ratio-of-uniforms)
 - [Setting Digits by Digit Probabilities](https://peteroupc.github.io/exporand.html#setting-digits-by-digit-probabilities)
 
-### Partially sampled random numbers — sampler families
+### Partially sampled random numbers: sampler families
 
 - [Uniform Distribution Inside N-Dimensional Shapes](https://peteroupc.github.io/exporand.html#uniform-distribution-inside-n-dimensional-shapes)
 - [Building an Arbitrary-Precision Sampler](https://peteroupc.github.io/exporand.html#building-an-arbitrary-precision-sampler)
@@ -543,14 +545,14 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 ### Miscellaneous sampling methods
 
 - [On a Binomial Sampler](https://peteroupc.github.io/randmisc.html#on-a-binomial-sampler)
-- [Bounded Geometric Distribution](https://peteroupc.github.io/randmisc.html#bounded-geometric-distribution) — [code](code/Samplers/Discrete/Bounded.lean) (direct bounded trials only)
+- [Bounded Geometric Distribution](https://peteroupc.github.io/randmisc.html#bounded-geometric-distribution): [code](code/Samplers/Discrete/Bounded.lean) (direct bounded trials only)
 - [Symmetric Geometric Distribution](https://peteroupc.github.io/randmisc.html#symmetric-geometric-distribution)
 - [Weighted Choice with Weights Written as an Integer and Fraction](https://peteroupc.github.io/randmisc.html#weighted-choice-with-weights-written-as-an-integer-and-fraction)
 - [Distributions with nowhere increasing or nowhere decreasing weights](https://peteroupc.github.io/randmisc.html#distributions-with-nowhere-increasing-or-nowhere-decreasing-weights)
 - [Unimodal distributions of weights](https://peteroupc.github.io/randmisc.html#unimodal-distributions-of-weights)
 - [Weighted Choice with Log Probabilities](https://peteroupc.github.io/randmisc.html#weighted-choice-with-log-probabilities)
 - [Bernoulli Distribution for Cumulative Distribution Functions](https://peteroupc.github.io/randmisc.html#bernoulli-distribution-for-cumulative-distribution-functions)
-- [Bit Vectors with Random Bit Flips](https://peteroupc.github.io/randmisc.html#bit-vectors-with-random-bit-flips) — [code](code/Samplers/Combinatorial/Permutations.lean)
+- [Bit Vectors with Random Bit Flips](https://peteroupc.github.io/randmisc.html#bit-vectors-with-random-bit-flips): [code](code/Samplers/Combinatorial/Permutations.lean)
 - [Log-Uniform Distribution](https://peteroupc.github.io/randmisc.html#log-uniform-distribution)
 - [Sampling Unbounded Monotone Density Functions](https://peteroupc.github.io/randmisc.html#sampling-unbounded-monotone-density-functions)
 - [Random Variate Generation via Quantiles](https://peteroupc.github.io/randmisc.html#random-variate-generation-via-quantiles)
@@ -621,8 +623,8 @@ This index lists the sampler lists and the algorithm and distribution tables in 
 
 ### Additional Python permutation methods
 
-- [Sattolo single-cycle permutation](https://peteroupc.github.io/randomgen.py) — [code](code/Samplers/Combinatorial/Permutations.lean)
-- [Uniform derangement](https://peteroupc.github.io/randomgen.py) — [code](code/Samplers/Combinatorial/Permutations.lean) (full-shuffle rejection variant)
+- [Sattolo single-cycle permutation](https://peteroupc.github.io/randomgen.py): [code](code/Samplers/Combinatorial/Permutations.lean)
+- [Uniform derangement](https://peteroupc.github.io/randomgen.py): [code](code/Samplers/Combinatorial/Permutations.lean) (full-shuffle rejection variant)
 
 ### Supplemental general factory schemes
 

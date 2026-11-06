@@ -6,7 +6,7 @@
       "role": "deterministic",
       "group": "Bernoulli factories / Arithmetic",
       "law": null,
-      "method": "Integer binomial coefficient, with zero outside 0 <= k <= n",
+      "method": "Integer binomial coefficient, with zero outside 0 ≤ k ≤ n",
       "law_evidence": "uncharacterized"
     },
     "Occil.FactoryExtra.intPower": {
@@ -188,21 +188,21 @@
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
       "law": "\\mathrm{Bern}\\!\\left(\\tanh(a/b)\\right)",
-      "method": "tanh(a/b), a>=0,b>0, using exp(-2a/b)",
+      "method": "tanh(a/b), a≥0,b>0, using exp(-2a/b)",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.tanhScaled": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
       "law": "\\mathrm{Bern}\\!\\left(\\tanh(ap/b)\\right)",
-      "method": "tanh((a/b)*p), a>=0,b>0",
+      "method": "tanh((a/b)*p), a≥0,b>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.tanhHalfShifted": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
       "law": "\\mathrm{Bern}\\!\\left(\\tanh((m+p)/2)\\right)",
-      "method": "tanh((m+p)/2), m=a/b>=0",
+      "method": "tanh((m+p)/2), m=a/b≥0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.exponentialTwist": {
@@ -216,21 +216,21 @@
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
       "law": "\\mathrm{Bern}\\!\\left(\\frac{1+e^{z-w}}{1+e^z}\\right)",
-      "method": "(1+exp(z-w))/(1+exp(z)), z=a/b,w=x/y>=0",
+      "method": "(1+exp(z-w))/(1+exp(z)), z=a/b,w=x/y≥0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expIntegral": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
       "law": "\\mathrm{Bern}\\!\\left(\\frac{1-e^{-(m+p)}}{m+p}\\right)",
-      "method": "(1-exp(-(m+p)))/(m+p), with integer m>=0",
+      "method": "(1-exp(-(m+p)))/(m+p), with integer m≥0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.logOverAffine": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
       "law": "\\mathrm{Bern}\\!\\left(\\frac{\\log(c+p)}{c+p}\\right)",
-      "method": "ln(c+p)/(c+p), c=a/b>=1, via the one-cycle permutation schema",
+      "method": "ln(c+p)/(c+p), c=a/b≥1, by the one-cycle permutation schema",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.pLogInverse": {
@@ -265,7 +265,7 @@
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
       "law": "\\mathrm{Bern}\\!\\left(\\mathrm{Li}_r(p)(1/p-1)\\right)",
-      "method": "Li_r(p)*(1/p-1), integer r>=1, extended to one at p=0",
+      "method": "Li_r(p)*(1/p-1), integer r≥1, extended to one at p=0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.onePlusHalf": {
@@ -300,14 +300,14 @@
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
       "law": "\\mathrm{Bern}\\!\\left(e^{-cp}\\right)",
-      "method": "exp(-c*p), c=a/b>=0, by Poisson thinning",
+      "method": "exp(-c*p), c=a/b≥0, by Poisson thinning",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expMinusShifted": {
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
       "law": "\\mathrm{Bern}\\!\\left(e^{-(m+p)}\\right)",
-      "method": "exp(-m-p), where m=a/b>=0",
+      "method": "exp(-m-p), where m=a/b≥0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expTimesComplement": {
@@ -328,7 +328,7 @@
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
       "law": "\\mathrm{Bern}\\!\\left(e^{-(m+p)^k}\\right)",
-      "method": "exp(-(m+p)^k), integer m,k>=0, via its binomial polynomial expansion",
+      "method": "exp(-(m+p)^k), integer m,k≥0, by its binomial polynomial expansion",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expDivThree": {
@@ -342,7 +342,7 @@
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
       "law": "\\mathrm{Bern}\\!\\left(e^{-e^{m+p}}\\right)",
-      "method": "exp(-exp(m+p)), integer m>=0; Poisson thinning from the source recipe",
+      "method": "exp(-exp(m+p)), integer m≥0; Poisson thinning from the source recipe",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expSquareTimesComplement": {
@@ -356,14 +356,14 @@
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
       "law": "\\mathrm{Bern}\\!\\left(2^{-m(k+p)}\\right)",
-      "method": "2^(-m*(k+p)), integers m,k>=0",
+      "method": "2^(-m*(k+p)), integers m,k≥0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.binaryExponentialRational": {
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
       "law": "\\mathrm{Bern}\\!\\left(2^{-ap/b}\\right)",
-      "method": "2^(-(a/b)*p), a>=0,b>0",
+      "method": "2^(-(a/b)*p), a≥0,b>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.gambler": {
@@ -398,28 +398,28 @@
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
       "law": "\\mathrm{Bern}\\!\\left(p+q\\right)",
-      "method": "p+q, assuming p+q <= 1-e/f",
+      "method": "p+q, assuming p+q ≤ 1-e/f",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.subtraction": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
       "law": "\\mathrm{Bern}\\!\\left(p-q\\right)",
-      "method": "p-q, assuming p-q >= e/f>0",
+      "method": "p-q, assuming p-q ≥ e/f>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.division": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
       "law": "\\mathrm{Bern}\\!\\left(p/q\\right)",
-      "method": "q/p, assuming p-q >= e/f>0",
+      "method": "q/p, assuming p-q ≥ e/f>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.epsilonDivision": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
       "law": "\\mathrm{Bern}\\!\\left(p/q\\right)",
-      "method": "eps/p with a known lower bound p>=lower>eps",
+      "method": "eps/p with a known lower bound p≥lower>eps",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.linearLowProbability": {
@@ -454,7 +454,7 @@
       "role": "sampler",
       "group": "Bernoulli factories / Polynomials",
       "law": "\\mathrm{Bern}\\!\\left(f(p)/g(p)\\right)",
-      "method": "A(p)/(A(p)+B(p)) with polynomial numerator/complement denominator",
+      "method": "A(p)/(A(p)+B(p)) with a polynomial numerator and complement denominator",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.threePointPiecewise": {
@@ -468,7 +468,7 @@
       "role": "sampler",
       "group": "Bernoulli factories / Powers",
       "law": "\\mathrm{Bern}\\!\\left(p^{a/b}\\right)",
-      "method": "p^(a/b), a>=0,b>0, combining integer and fractional powers",
+      "method": "p^(a/b), a≥0,b>0, combining integer and fractional powers",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.twoCoinPower": {
@@ -489,7 +489,7 @@
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
       "law": "\\mathrm{Bern}\\!\\left(\\frac d{c+p}\\right)",
-      "method": "d/(c+p), with c=a/b, d=x/y, 0<=d<=c, c>0",
+      "method": "d/(c+p), with c=a/b, d=x/y, 0≤d≤c, c>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.affine": {
@@ -510,7 +510,7 @@
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
       "law": "\\mathrm{Bern}\\!\\left(\\frac1{1+cp}\\right)",
-      "method": "Reciprocal logistic: 1/(1+(a/b)*p), a>=0,b>0",
+      "method": "Reciprocal logistic: 1/(1+(a/b)*p), a≥0,b>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.oneDivTwoMinus": {
@@ -524,7 +524,7 @@
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
       "law": "\\mathrm{Bern}\\!\\left(\\frac1{1+(m+p)^2}\\right)",
-      "method": "1/(1+(m+p)^2), integer m>=0",
+      "method": "1/(1+(m+p)^2), integer m≥0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.reciprocalAffinePower": {
@@ -545,7 +545,7 @@
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
       "law": "\\mathrm{Bern}\\!\\left(\\frac1{c+e^{-z}}\\right)",
-      "method": "1/(c+exp(-z)), c=a/b>=1,z=x/y>=0",
+      "method": "1/(c+exp(-z)), c=a/b≥1,z=x/y≥0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.oddsProduct": {
@@ -622,7 +622,7 @@
       "role": "sampler",
       "group": "Bernoulli factories / Series",
       "law": "\\mathrm{Bern}\\!\\left(\\min(p,1-p)\\right)",
-      "method": "min(p,1-p), via Occil's Catalan-mixture Bernstein construction",
+      "method": "min(p,1-p), by Occil's Catalan-mixture Bernstein construction",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.minimumHalf": {
@@ -748,7 +748,7 @@
       "role": "sampler",
       "group": "Combinatorial sampling / Basic",
       "law": "\\mathrm{Unif}(S_n)",
-      "method": "Fisher–Yates in-place swaps",
+      "method": "Fisher-Yates in-place swaps",
       "law_evidence": "curated"
     },
     "Occil.reservoir": {
@@ -909,7 +909,7 @@
       "role": "deterministic",
       "group": "Constant coins / Exponential",
       "law": null,
-      "method": "e in (lower/denominator,upper/denominator), via its factorial series",
+      "method": "e in (lower/denominator,upper/denominator), by its factorial series",
       "law_evidence": "uncharacterized"
     },
     "Occil.Constants.eMinusTwo": {
@@ -944,14 +944,14 @@
       "role": "sampler",
       "group": "Constant coins / Exponential",
       "law": "\\mathrm{Bern}((e+c-2)^{-1})",
-      "method": "Exact 1/(e+c-2), for integer c>=1",
+      "method": "Exact 1/(e+c-2), for integer c≥1",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.inverseEPlusRational": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
       "law": "\\mathrm{Bern}((e+c-2)^{-1})",
-      "method": "Exact 1/(e+c-2) for rational c=numerator/denominator>=1",
+      "method": "Exact 1/(e+c-2) for rational c=numerator/denominator≥1",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.eContinuedFraction": {
@@ -986,14 +986,14 @@
       "role": "deterministic",
       "group": "Constant coins / Exponential",
       "law": null,
-      "method": "Exact alternating Taylor bounds for exp(-x/y), x>=0,y>0",
+      "method": "Exact alternating Taylor bounds for exp(-x/y), x≥0,y>0",
       "law_evidence": "uncharacterized"
     },
     "Occil.Constants.exponentialRationalProduct": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
       "law": "\\mathrm{Bern}(e^{-x/y}z/t)",
-      "method": "Exact exp(-x/y)*z/t, x,z>=0,y,t>0, on its valid probability domain",
+      "method": "Exact exp(-x/y)*z/t, x,z≥0,y,t>0, on its valid probability domain",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.eQuarter": {
@@ -1042,7 +1042,7 @@
       "role": "deterministic",
       "group": "Constant coins / Pi",
       "law": null,
-      "method": "Exact alternating-series enclosure of arctan(1/q), q>=2, after n>=1 terms",
+      "method": "Exact alternating-series enclosure of arctan(1/q), q≥2, after n≥1 terms",
       "law_evidence": "uncharacterized"
     },
     "Occil.Constants.piBounds": {
@@ -1147,7 +1147,7 @@
       "role": "sampler",
       "group": "Constant coins / Special",
       "law": "\\mathrm{Bern}\\!\\left(\\zeta(k)(1-2^{1-k})\\right)",
-      "method": "Exact ζ(k)*(1-2^(1-k)), k>=2, by the k-fold geometric-bag integral",
+      "method": "Exact ζ(k)*(1-2^(1-k)), k≥2, by the k-fold geometric-bag integral",
       "law_evidence": "curated"
     },
     "Occil.Constants.eulerMascheroni": {
@@ -1161,14 +1161,14 @@
       "role": "sampler",
       "group": "Constant coins / Special",
       "law": "\\mathrm{Bern}\\!\\left(\\log(1+x/y)\\right)",
-      "method": "Exact ln(1+x/y), 0<=x<=y",
+      "method": "Exact ln(1+x/y), 0≤x≤y",
       "law_evidence": "curated"
     },
     "Occil.Constants.rationalIntegerPower": {
       "role": "sampler",
       "group": "Constant coins / Special",
       "law": "\\mathrm{Bern}\\!\\left((a/b)^n\\right)",
-      "method": "Exact (a/b)^n for a rational base in [0,1] and integer n>=0",
+      "method": "Exact (a/b)^n for a rational base in [0,1] and integer n≥0",
       "law_evidence": "curated"
     },
     "Occil.Constants.eOverPi": {
@@ -1182,7 +1182,7 @@
       "role": "sampler",
       "group": "Constant coins / Special",
       "law": "\\mathrm{Bern}(\\mathrm{erf}(x)/\\mathrm{erf}(1))",
-      "method": "Exact erf(x)/erf(1), 0<=x<=1",
+      "method": "Exact erf(x)/erf(1), 0≤x≤1",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.lowerGammaIntegerRatio": {
@@ -1315,7 +1315,7 @@
       "role": "sampler",
       "group": "Continuous distributions",
       "law": "\\mathcal N(0,1)",
-      "method": "Karney integer/fractional decomposition",
+      "method": "Karney integer and fractional decomposition",
       "law_evidence": "curated"
     },
     "Occil.length": {
@@ -1378,7 +1378,7 @@
       "role": "sampler",
       "group": "Discrete distributions / Binomial",
       "law": "\\mathrm{Bin}(n,a/b)",
-      "method": "Farach-Colton–Tsai binary expansion of the rational success probability",
+      "method": "Farach-Colton-Tsai binary expansion of the rational success probability",
       "law_evidence": "curated"
     },
     "Occil.boundedGeometric": {
@@ -1399,7 +1399,7 @@
       "role": "deterministic",
       "group": "Discrete distributions / Combinatorics",
       "law": null,
-      "method": "Binomial coefficient, with zero outside 0 <= k <= n",
+      "method": "Binomial coefficient, with zero outside 0 ≤ k ≤ n",
       "law_evidence": "uncharacterized"
     },
     "Occil.DiscreteExtra.integerSqrt": {
@@ -1469,7 +1469,7 @@
       "role": "sampler",
       "group": "Discrete distributions / Compound",
       "law": "\\pi(1+\\mathrm{Bin}(m-1,1-p))+(1-\\pi)\\mathrm{Unif}\\{1,\\ldots,m\\}",
-      "method": "CUB/MUB: mixture of a shifted binomial and a discrete uniform on 1..m",
+      "method": "CUB and MUB: mixture of a shifted binomial and a discrete uniform on 1..m",
       "law_evidence": "curated against implementation"
     },
     "Occil.DiscreteExtra.polyaRational": {
@@ -1497,14 +1497,14 @@
       "role": "sampler",
       "group": "Discrete distributions / Counts",
       "law": "\\mathrm{BetaNegBin}(1,\\alpha,\\beta)",
-      "method": "Waring–Yule: one success in a beta-mixed geometric distribution",
+      "method": "Waring-Yule: one success in a beta-mixed geometric distribution",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.yuleSimon": {
       "role": "sampler",
       "group": "Discrete distributions / Counts",
       "law": "\\mathrm{YuleSimon}(\\rho)",
-      "method": "Yule–Simon(rho), supported on positive integers; rho is a positive rational",
+      "method": "Yule-Simon(rho), supported on positive integers; rho is a positive rational",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.borel": {
@@ -1546,14 +1546,14 @@
       "role": "sampler",
       "group": "Discrete distributions / Numerical",
       "law": "\\mathsf{Grid}_s[\\text{bell Touchard}]",
-      "method": "Bell–Touchard(a,b): sum Poisson(b*(exp(a)-1)) positive Poisson(a) clusters",
+      "method": "Bell-Touchard(a,b): sum Poisson(b*(exp(a)-1)) positive Poisson(a) clusters",
       "law_evidence": "numerical-family label"
     },
     "Occil.DiscreteExtra.bell": {
       "role": "sampler",
       "group": "Discrete distributions / Numerical",
       "law": "\\mathsf{Grid}_s[\\mathrm{bell}]",
-      "method": "The standard one-parameter Bell distribution: Bell–Touchard(a,1)",
+      "method": "The standard one-parameter Bell distribution: Bell-Touchard(a,1)",
       "law_evidence": "numerical-family label"
     },
     "Occil.DiscreteExtra.discretePareto": {
@@ -1588,7 +1588,7 @@
       "role": "sampler",
       "group": "Discrete distributions / Tails",
       "law": "\\text{uniform logarithmic bucket, then uniform integer}",
-      "method": "Abseil-style log-uniform integers in [0,maximum], integer base>=2",
+      "method": "Abseil-style log-uniform integers in [0,maximum], integer base≥2",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.zipf": {
@@ -1616,7 +1616,7 @@
       "role": "sampler",
       "group": "Discrete distributions / Tails",
       "law": "\\Pr(K=k)=\\frac{\\alpha}{\\nu+k}\\prod_{j<k}\\left(1-\\frac\\alpha{\\nu+j}\\right)",
-      "method": "Generalized Sibuya with alpha>0, nu>=0 and alpha<nu+1, all rational",
+      "method": "Generalized Sibuya with alpha>0, nu≥0 and alpha<nu+1, all rational",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.himanshu": {
@@ -1763,7 +1763,7 @@
       "role": "sampler",
       "group": "Discrete primitives",
       "law": "\\mathrm{Pois}(1)",
-      "method": "Duchon–Duvignau integer state machine",
+      "method": "Duchon-Duvignau integer state machine",
       "law_evidence": "curated"
     },
     "Occil.poissonRational": {
@@ -1805,7 +1805,7 @@
       "role": "sampler",
       "group": "General sampling / Core",
       "law": "\\mathrm{Unif}(\\text{alphabet})^{\\otimes n}",
-      "method": "Uniform character/item sequences; output is a list, not a host string",
+      "method": "Uniform character or item sequences; output is a list, not a host string",
       "law_evidence": "curated"
     },
     "Occil.General.randomDateTime": {
@@ -1924,7 +1924,7 @@
       "role": "sampler",
       "group": "General sampling / Core",
       "law": "\\pi,\\quad\\pi K=\\pi",
-      "method": "Propp–Wilson doubling of shared maps",
+      "method": "Propp-Wilson doubling of shared maps",
       "law_evidence": "curated"
     },
     "Occil.General.perfectFiniteChain": {
@@ -2484,14 +2484,14 @@
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
       "law": "\\mathsf{Grid}_s[\\text{poisson Hierarchy}]",
-      "method": "Bivariate T-Poisson hierarchy with Gaussian/exponential latent dependence",
+      "method": "Bivariate T-Poisson hierarchy with Gaussian or exponential latent dependence",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.poissonHierarchyND": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
       "law": "\\mathsf{Grid}_s[\\text{poisson Hierarchy N D}]",
-      "method": "N-dimensional copula/quantile Poisson hierarchy",
+      "method": "N-dimensional copula and quantile Poisson hierarchy",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.studentT": {
@@ -2568,7 +2568,7 @@
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
       "law": "\\mathsf{Grid}_s[\\text{gumbel Copula}]",
-      "method": "Gumbel-Hougaard copula, theta>=1, using a positive stable frailty",
+      "method": "Gumbel-Hougaard copula, theta≥1, using a positive stable frailty",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.exchangeableLabels": {
@@ -2582,7 +2582,7 @@
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
       "law": "\\mathsf{Grid}_s[\\text{exchangeable F G M Source}]",
-      "method": "Literal max/min recipe printed in exporand.html",
+      "method": "Literal maximum and minimum recipe printed in exporand.html",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.exchangeableFGMCopula": {
@@ -2631,7 +2631,7 @@
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
       "law": "\\mathsf{Grid}_s[\\text{ball E P D}]",
-      "method": "EPD/exponential construction of a uniform finite-p ball",
+      "method": "EPD and exponential construction of a uniform finite-p ball",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.shell": {
@@ -2715,7 +2715,7 @@
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
       "law": "\\mathsf{Grid}_s[\\text{latitude Longitude}]",
-      "method": "Latitude/longitude in radians; latitude is asin(U), U uniform on (-1,1)",
+      "method": "Latitude and longitude in radians; latitude is asin(U), U uniform on (-1,1)",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.simplex": {
@@ -2736,14 +2736,14 @@
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
       "law": "\\mathsf{Grid}_s[\\text{ellipsoid Surface}]",
-      "method": "Uniform ellipsoid surface via sphere proposals and the surface-area Jacobian",
+      "method": "Uniform ellipsoid surface by sphere proposals and the surface-area Jacobian",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.betaBall": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
       "law": "\\mathsf{Grid}_s[\\text{beta Ball}]",
-      "method": "Lacko–Harman radial family; shape=0 is concentrated on the p-sphere",
+      "method": "Lacko-Harman radial family; shape=0 is concentrated on the p-sphere",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.map": {
@@ -2890,7 +2890,7 @@
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Linear",
       "law": "\\mathsf{Grid}_s[\\text{mean Variance Mixture}]",
-      "method": "Normal mean/variance mixture, using one shared independent mixing variate",
+      "method": "Normal mean and variance mixture, using one shared independent mixing variate",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.append": {
@@ -3016,7 +3016,7 @@
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Stable",
       "law": "\\mathsf{Grid}_s[\\text{von Mises}]",
-      "method": "Best–Fisher von Mises rejection",
+      "method": "Best-Fisher von Mises rejection",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numeric.abs": {
@@ -3149,7 +3149,7 @@
       "role": "deterministic",
       "group": "Numerical arithmetic",
       "law": null,
-      "method": "Arctangent's power series, used only on arguments of magnitude <=1/2",
+      "method": "Arctangent's power series, used only on arguments of magnitude ≤1/2",
       "law_evidence": "uncharacterized"
     },
     "Occil.Numeric.atanRaw": {
@@ -3240,7 +3240,7 @@
       "role": "sampler",
       "group": "Numerical grid algorithms / Densities",
       "law": "\\mathsf{Grid}_s[\\text{piecewise Linear}]",
-      "method": "Area-weighted rectangle/triangle mixture",
+      "method": "Area-weighted mixture of rectangles and triangles",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.piecewiseConstant": {
@@ -3394,14 +3394,14 @@
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
       "law": "\\mathsf{Grid}_s[\\text{cdf Quantile Family}]",
-      "method": "Smithson–Shou CDF–quantile family",
+      "method": "Smithson-Shou CDF-quantile family",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.gamma": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Gamma",
       "law": "\\mathsf{Grid}_s[\\mathrm{gamma}]",
-      "method": "Marsaglia–Tsang rejection and shape augmentation",
+      "method": "Marsaglia-Tsang rejection and shape augmentation",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.beta": {
@@ -3415,7 +3415,7 @@
       "role": "sampler",
       "group": "Numerical grid algorithms / Gamma",
       "law": "\\mathsf{Grid}_s[\\text{gamma Small Shape}]",
-      "method": "Liu–Martin–Syring small-shape rejection",
+      "method": "Liu-Martin-Syring small-shape rejection",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.chiSquared": {
@@ -3429,7 +3429,7 @@
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
       "law": "\\mathsf{Grid}_s[\\text{noncentral Chi Squared}]",
-      "method": "Noncentral chi-square via a Poisson mixture; noncentrality is sum of mean squares",
+      "method": "Noncentral chi-square by a Poisson mixture; noncentrality is sum of mean squares",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.studentT": {
@@ -3583,7 +3583,7 @@
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
       "law": "\\mathsf{Grid}_s[\\mathrm{amoroso}]",
-      "method": "Location–scale generalized-gamma construction",
+      "method": "Location-scale generalized-gamma construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.pearsonVI": {
@@ -3765,7 +3765,7 @@
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
       "law": "\\mathsf{Grid}_s[\\mathcal N(\\mu,\\sigma^2)^{\\otimes2}]",
-      "method": "Box–Muller trigonometric transform",
+      "method": "Box-Muller trigonometric transform",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.normalPolar": {
@@ -3814,7 +3814,7 @@
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
       "law": "\\mathsf{Grid}_s[\\text{inverse Gaussian}]",
-      "method": "Michael–Schucany–Haas inverse Gaussian, mean and shape strictly positive",
+      "method": "Michael-Schucany-Haas inverse Gaussian, mean and shape strictly positive",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.halfNormal": {
@@ -3884,7 +3884,7 @@
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
       "law": "\\mathsf{Grid}_s[\\text{q Gaussian}]",
-      "method": "Generalized Box–Muller q-Gaussian pair, q<3",
+      "method": "Generalized Box-Muller q-Gaussian pair, q<3",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.generalizedSkewNormalConditional": {
@@ -3912,7 +3912,7 @@
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
       "law": "\\mathsf{Grid}_s[\\mathrm{epanechnikov}]",
-      "method": "Devroye–Györfi's three-uniform Epanechnikov construction on [-1,1]",
+      "method": "Devroye-Györfi's three-uniform Epanechnikov construction on [-1,1]",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.ratioUniforms": {
@@ -4059,7 +4059,7 @@
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
       "law": "\\mathsf{Grid}_s[\\mathrm{cosine}]",
-      "method": "Main-index cosine distribution on [-1/2,1/2], via asin(U)/pi",
+      "method": "Main-index cosine distribution on [-1/2,1/2], by asin(U)/pi",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.geometricZeroTruncatedPoisson": {
@@ -4094,7 +4094,7 @@
       "role": "sampler",
       "group": "Numerical grid algorithms / StoppedDistributions",
       "law": "\\mathsf{Grid}_s[\\text{bivariate Gamma Geometric}]",
-      "method": "Gamma/geometric episode: return (sum, number of summands)",
+      "method": "Gamma and geometric episode: return (sum, number of summands)",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.bivariateExponentialGeometric": {
@@ -4213,7 +4213,7 @@
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
       "law": "\\mathsf{Grid}_s[\\text{triangular Uniforms}]",
-      "method": "Stein–Keblis family (1-alpha)*min(U,V)+alpha*max(U,V), alpha in [0,1]",
+      "method": "Stein-Keblis family (1-alpha)*min(U,V)+alpha*max(U,V), alpha in [0,1]",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.tukeyLambda": {
@@ -4346,7 +4346,7 @@
       "role": "sampler",
       "group": "Lazy exact reals / BetaGamma",
       "law": "\\mathsf{Lazy}[\\mathrm{Beta}(a,b)]",
-      "method": "Beta PSRN by Occil's geometric-bag power rejection for a,b>=1",
+      "method": "Beta PSRN by Occil's geometric-bag power rejection for a,b≥1",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newGammaInteger": {
@@ -4451,7 +4451,7 @@
       "role": "sampler",
       "group": "Lazy exact reals / Core",
       "law": "\\mathsf{Lazy}[\\mu(\\cdot\\mid A)]",
-      "method": "General lazy proposal/acceptance engine; accepted state is preserved",
+      "method": "General lazy proposal and acceptance engine; accepted state is preserved",
       "law_evidence": "curated"
     },
     "Occil.PSRN.coin": {
@@ -4500,7 +4500,7 @@
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
       "law": "\\mathsf{Lazy}[\\mathrm{FGMCopula}(\\theta)]",
-      "method": "Farlie–Gumbel–Morgenstern copula by rejection under envelope two",
+      "method": "Farlie-Gumbel-Morgenstern copula by rejection under envelope two",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newHyperbolicSecant": {
@@ -4577,7 +4577,7 @@
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
       "law": "\\mathsf{Lazy}[\\mathrm{Rectellipse}]",
-      "method": "Uniform quarter/full rectellipse, integer radii and rational squareness in [0,1]",
+      "method": "Uniform quarter or full rectellipse, integer radii and rational squareness in [0,1]",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newExponentialFromDecay": {
@@ -4605,7 +4605,7 @@
       "role": "sampler",
       "group": "Lazy exact reals / Exponential",
       "law": "\\mathsf{Lazy}[\\mathrm{Exp}(p)]",
-      "method": "Exponential PSRN with unknown positive rate p<=1 supplied as a p-coin",
+      "method": "Exponential PSRN with unknown positive rate p≤1 supplied as a p-coin",
       "law_evidence": "curated"
     },
     "Occil.PSRN.expMinusCoin": {
@@ -4689,7 +4689,7 @@
       "role": "sampler",
       "group": "Lazy exact reals / Geometry",
       "law": "\\mathsf{Lazy}[\\mathrm{Unif}(\\Delta_d)]",
-      "method": "Uniform positive components summing to one, via independent exponentials",
+      "method": "Uniform positive components summing to one, by independent exponentials",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newOrderStatistic": {
@@ -4822,7 +4822,7 @@
       "role": "support",
       "group": "Integer and weighted sampling / Aliases",
       "law": null,
-      "method": "Vose alias preprocessing with explicit small/large stacks",
+      "method": "Vose alias preprocessing with explicit stacks of small and large entries",
       "law_evidence": "uncharacterized"
     },
     "Occil.WeightedVariants.voseDraw": {
@@ -5004,7 +5004,7 @@
       "role": "sampler",
       "group": "Integer and weighted sampling / Rejection",
       "law": "\\mathrm{Cat}(w)",
-      "method": "Bringmann–Larsen's packed 20/32-bit weights",
+      "method": "Bringmann-Larsen's packed 20-bit and 32-bit weights",
       "law_evidence": "curated"
     },
     "Occil.Weighted.weightedReservoirOne": {
@@ -5025,7 +5025,7 @@
       "role": "sampler",
       "group": "Integer and weighted sampling / Reservoir",
       "law": "\\lvert S\\rvert=k,\\quad\\Pr(i\\in S)=kw_i/\\sum_jw_j\\ \\text{(marginals)}",
-      "method": "Deville–Tillé splitting with prescribed inclusion marginals",
+      "method": "Deville-Tillé splitting with prescribed inclusion marginals",
       "law_evidence": "curated"
     },
     "Occil.Weighted.inclusionSystematic": {
@@ -5151,7 +5151,7 @@
       "role": "sampler",
       "group": "Integer and weighted sampling / Uniform",
       "law": "\\mathrm{Unif}\\{0,\\ldots,n-1\\}",
-      "method": "Exact quotient/remainder recycling",
+      "method": "Exact recycling of quotient and remainder",
       "law_evidence": "curated"
     },
     "Occil.Weighted.recycledSamples": {

@@ -472,9 +472,11 @@ python3 tests/statistical.py
 
 [Sampler laws](LAWS.md) · [Implementation details and source corrections](code/README.md) · [ProbLang wishlist](agent-docs/ProbLangWishlist.md) · [Test results](tests/latest-results.json) · [Source inventory](agent-docs/OccilInventory.json)
 
-The interpreter tests check the output laws, and check that seeded runs agree across environments and substitutions. The test results above record the outcome. These tests are evidence about the implementations, not proofs, and the interpreter uses finite-precision Float arithmetic.
+The interpreter tests check the output laws, and check that seeded runs agree across environments and substitutions. The linked test results record the outcome. These tests are evidence about the implementations, not proofs, and the interpreter uses finite-precision Float arithmetic.
 
 ## Where things live
+
+The repository has these parts:
 
 | Path | Contents |
 | --- | --- |
@@ -529,14 +531,14 @@ This index lists the sampler lists and the algorithm and distribution tables in 
                 assert anchor in {n.attrs.get('id') for n in docs[source].walk()}, (source,anchor)
     out=[header.rstrip()]
     for title,items in GROUPS:
-        out.extend(['','### '+title,''])
+        out.extend(['','### '+title.replace(' — ',': '),''])
         for label,url,impl,note in items:
             label=label.replace('[','\\[').replace(']','\\]')
             text=f'- [{label}]({url})'
             if impl:
                 path=implementation_path(label, impl, note)
                 if not (ROOT/path).exists():raise RuntimeError('missing code path '+path)
-                text+=f' — [code]({path})'
+                text+=f': [code]({path})'
                 if note:text+=' ('+note+')'
             out.append(text)
     (ROOT/'README.md').write_text('\n'.join(out)+'\n')

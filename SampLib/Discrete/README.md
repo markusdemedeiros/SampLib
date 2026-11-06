@@ -6,6 +6,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 
 ## Verified samplers (45)
 
+Each of these samplers has an accepted proof in this directory:
+
 | Sampler | Law | Proof | Code |
 | --- | --- | --- | --- |
 | `Occil.DiscreteExtra.betaBinomial` | $\mathrm{BetaBin}(n,\alpha,\beta)$ | [BetaBinomial](BetaBinomial.lean) | [Urns.lean](../../code/Samplers/Discrete/Urns.lean#L51) |
@@ -55,6 +57,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 | `Occil.weightedChoice` | $\mathrm{Cat}(w)$ | [WeightedChoice](WeightedChoice.lean) | [Discrete.lean](../../code/Samplers/Discrete.lean#L33) |
 
 ## Contents
+
+The directory holds these modules:
 
 - Top level: 46 modules
 - [`Laws/`](Laws): 43 modules with target laws, kernels, and expectation lemmas

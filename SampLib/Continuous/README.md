@@ -6,6 +6,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 
 ## Verified samplers (14)
 
+Each of these samplers has an accepted proof in this directory:
+
 | Sampler | Law | Proof | Code |
 | --- | --- | --- | --- |
 | `Occil.erlang` | $\mathrm{Gamma}(k,1)$ | [Erlang](Erlang.lean) | [Continuous.lean](../../code/Samplers/Continuous.lean#L33) |
@@ -24,6 +26,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 | `Occil.uniformSum` | $\sum_{i=1}^n U_i,\ U_i\sim\mathrm{Unif}(0,1)$ | [UniformSum](UniformSum.lean) | [Continuous.lean](../../code/Samplers/Continuous.lean#L37) |
 
 ## Contents
+
+The directory holds these modules:
 
 - Top level: 15 modules
 - [`Laws/`](Laws): 1 modules with target laws, kernels, and expectation lemmas

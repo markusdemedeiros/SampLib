@@ -6,6 +6,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 
 ## Verified samplers (42)
 
+Each of these samplers has an accepted proof in this directory:
+
 | Sampler | Law | Proof | Code |
 | --- | --- | --- | --- |
 | `Occil.General.bootstrap` | $\left(\widehat\mu^{\otimes n}\right)^{\otimes B}$ | [Bootstrap](Bootstrap.lean) | [DataModels.lean](../../code/Samplers/General/DataModels.lean#L16) |
@@ -52,6 +54,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 | `Occil.General.uniformBoxPoint` | $\mathrm{Unif}\{0,\ldots,s-1\}^{\otimes d}$ | [UniformBoxPoint](UniformBoxPoint.lean) | [Points.lean](../../code/Samplers/General/Points.lean#L226) |
 
 ## Contents
+
+The directory holds these modules:
 
 - Top level: 49 modules
 - [`Laws/`](Laws): 21 modules with target laws, kernels, and expectation lemmas
