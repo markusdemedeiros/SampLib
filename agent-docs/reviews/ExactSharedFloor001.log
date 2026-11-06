@@ -1,0 +1,11 @@
+lake build SampLib.PSRNFloor
+Build completed successfully (4152 jobs).
+
+lake env lean agent-docs/reviews/ExactSharedFloor001Callers.lean
+'SampLib.LatentReal.Floor.twp_floorScaled_view' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.Floor.twp_floorScaled' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.Floor.expectation_preservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewSharedFloor001.framed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.«agent-docs».reviews.ExactSharedFloor001Callers.0.ReviewSharedFloor001.negative_avoids' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,21 @@
+lake build SampLib.Samplers.RefinedCoin
+Build completed successfully (4165 jobs).
+
+lake build SampLib.Samplers.RefinedCDFComparison
+Build completed successfully (4165 jobs).
+
+lake build SampLib.Samplers.IncompleteInformation
+Build completed successfully (4168 jobs).
+
+lake env lean agent-docs/reviews/ExactStructuredBatch004Callers.lean
+'SampLib.RefinedCoin.refinedCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RefinedCDFComparison.refinedCDFComparison_coinSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IncompleteInformation.incompleteInformation_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.IncompleteInformation.cdf' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-structured004-signatures.lean
+SPEC_OK SampLib.RefinedCoin.refinedCoin_distSpec Occil.General.refinedCoin
+SPEC_OK SampLib.RefinedCDFComparison.refinedCDFComparison_coinSpec Occil.General.refinedCDFComparison
+SPEC_OK SampLib.IncompleteInformation.incompleteInformation_distSpec Occil.General.incompleteInformation

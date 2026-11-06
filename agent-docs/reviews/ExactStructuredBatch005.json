@@ -1,0 +1,93 @@
+{
+  "reviewer": "review_exact_b",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactStructuredBatch005Callers.lean",
+  "caller_sha256": "f0ba6e80ee5ace477867cd93d8cb1151b00dd6b8691334a7ff69993ad16a67ed",
+  "accepted": [
+    {
+      "sampler": "Occil.Weighted.inclusionSplitting",
+      "proof_module": "SampLib.Samplers.InclusionSplitting",
+      "public_spec": "SampLib.InclusionSplitting.inclusionSplitting_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "All positive-total natural weights, count\u2264population length, and count*weight\u2264total at each position. Includes zero weights, full samples and capacity equality. A separate zero-count theorem covers every natural-weight list, including empty/all-zero populations, without uniform-integer assumptions. The target is the exact ordered full joint splitting law, with fixed size, no duplicates and prescribed inclusion probabilities.",
+      "sha256": "3fcca04ecfbbae4bb28038827e9cf436b85f25ed1935589b41b6b168af70465f",
+      "review_evidence": "agent-docs/reviews/ExactStructuredBatch005.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/BetaStep.lean": "0a1e17b99ace11607f7b1c4c21f95d1e5b3d213192d65c5a6fb2f78d676d5748",
+        "SampLib/Distributions/SplittingPPS.lean": "34678e66108f96f93c09d2743a41a62aac0340e4b9f0111d71c9782b7caeaa1a",
+        "SampLib/Distributions/SplittingPPSBounds.lean": "556756109f9d05a00c4d95c61edcc24587000fac4a1d009d62efed6d2037b781",
+        "SampLib/Distributions/SplittingPPSCoin.lean": "5eb2e0f109c6cdf9af1bbf763cd97015aa0deeaecd03a3361cf20c4e77ca4582",
+        "SampLib/Distributions/SplittingPPSInput.lean": "ee56d428eb955e7d541a1440892c96cef3eca5b546dd14b7116968bffd42a474",
+        "SampLib/Distributions/SplittingPPSInputLaw.lean": "07a8a438f2c55c97e0b762dce0bf5bdb3cbaa1a1f2d9ea1fe56f1882c1fed899",
+        "SampLib/Distributions/SplittingPPSLaw.lean": "8accd06889c11fa7c8f8fb5ab1ff0dd38bfc922c0694d8baf0d05b87753c2017",
+        "SampLib/Distributions/SplittingPPSMarginals.lean": "9009c2dc1803d4bd706bc3d555d84214e7732823559de9bedf6fdf866fa01a44",
+        "SampLib/Distributions/SplittingPPSRecursion.lean": "b1cd7bff4c456c656a969060d48ca69c34f37c066f289df600840948aa13610a",
+        "SampLib/Distributions/SplittingPPSState.lean": "572f225b83faa91c8ab2baddd5bcfdff638c6d7f1beb5567212170ed6bb18243",
+        "SampLib/Distributions/Urn.lean": "ec5373077d35e99efc097e209ca8f9746bd72c9226bb6659d5076b782cd06fdd",
+        "SampLib/GeneralSyntax.lean": "3c097dd0e388f10ac683bd66d88fa3361e2d5631cebe3ab4782e70037123fdef",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/MarkovTerms.lean": "acc68951ea3e8a6fd8fca877f1d6cb3874a553761d5037888ef6d874611d0d2c",
+        "SampLib/SamplerTerms.lean": "57b93ff11099ac98eb55a4b4a04eeb349e58454bb9bd96d040f9c4cbc24a98be",
+        "SampLib/Samplers/InclusionSplitting.lean": "3fcca04ecfbbae4bb28038827e9cf436b85f25ed1935589b41b6b168af70465f",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/RndIntExcRange.lean": "3307969caa795835b6ccc1c68db37333a6902b52859104bf27871ac96c234e51",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/SplittingPPS.lean": "8aa5e295c96bd8f55dad58629537710b653b5266295f79311aec37709462d8a6",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Syntax/ListAccess.lean": "1ff1681744767cb8c03cb1ccfc769d348046a3c7d2cd8e8ca636489577719cb1",
+        "SampLib/Syntax/SplittingPPS.lean": "312d7288bf9d70c8a07c36aa69d97356952f856c5309d82abdccb3de26a04364",
+        "SampLib/Syntax/UniformRanges.lean": "eb9205978b13185ff38d2db03fb83f82f242ec1290a557ded19d7a2eea3e739e",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedValidation.lean": "6d06663d8a9c838913038370a3ffdccf145a2e7ebc835bdca6469a6f64ba8866",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/General/Core.lean": "589c1236ee0851f6c3e75c4edb40cd528b5ebdcb627d698d6f989a684eb08750",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Reservoir.lean": "b1322886804851c05b4ccc79a0737ce77bf86a61dd76caa7b0047328ac6e398d"
+      }
+    }
+  ],
+  "support": []
+}

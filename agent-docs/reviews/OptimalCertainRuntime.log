@@ -1,0 +1,15 @@
+optimalMatrix [2,0]: ProbLang.Exp.pair
+  (ProbLang.Exp.inr
+    (ProbLang.Exp.pair
+      (ProbLang.Exp.lit (ProbLang.BaseLit.int 4))
+      (ProbLang.Exp.inr
+        (ProbLang.Exp.pair
+          (ProbLang.Exp.lit (ProbLang.BaseLit.int 0))
+          (ProbLang.Exp.inl (ProbLang.Exp.lit (ProbLang.BaseLit.unit)))))))
+  (ProbLang.Exp.pair
+    (ProbLang.Exp.lit (ProbLang.BaseLit.int 2))
+    (ProbLang.Exp.pair (ProbLang.Exp.lit (ProbLang.BaseLit.int 1)) (ProbLang.Exp.lit (ProbLang.BaseLit.int (-1)))))
+optimalChoice [2,0], seed 0, 10000 Comp transitions: fuel exhausted
+optimalChoice [2,0], seed 1, 10000 Comp transitions: fuel exhausted
+optimalChoice [2,0], seed 99, 10000 Comp transitions: fuel exhausted
+control optimalChoice [1,1], 10000 Comp transitions: ProbLang.Exp.lit (ProbLang.BaseLit.int 1)

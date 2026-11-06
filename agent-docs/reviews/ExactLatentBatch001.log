@@ -1,0 +1,12 @@
+lake build SampLib.LatentUniform
+Build completed successfully (4154 jobs).
+
+lake env lean agent-docs/reviews/ExactLatentBatch001Callers.lean
+'SampLib.LatentUniform.newUniform_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentUniform.twp_observe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentUniform.model_initial_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactLatent001.reread' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactLatent001.construct_and_reread' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-latent001-signatures.lean
+SPEC_OK SampLib.LatentUniform.newUniform_latentDistSpec Occil.PSRN.newUniform

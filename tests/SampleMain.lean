@@ -89,6 +89,18 @@ private def cases : List (String × Exp Float) := [
   ("flip_bits", pl(&flipBits &(bools [true, false, true])
     (fun u, &rationalCoin #1 #3))),
   ("logistic", pl(&logisticFactory (fun u, &rationalCoin #2 #5) #3 #2 #())),
+  ("low_probability_boundary", pl(&FactoryExtra.linearLowProbability
+    (fun u, &rationalCoin #1 #8) #2 #1 #1 #4 #())),
+  ("low_probability_interior", pl(&FactoryExtra.linearLowProbability
+    (fun u, &rationalCoin #3 #16) #2 #1 #2 #5 #())),
+  ("low_probability_contracting", pl(&FactoryExtra.linearLowProbability
+    (fun u, &rationalCoin #1 #2) #1 #2 #1 #4 #())),
+  ("edge_low_probability_zero_bound", pl(&FactoryExtra.linearLowProbability
+    (fun u, #false) #2 #1 #0 #1 #())),
+  ("edge_low_probability_zero", pl(&FactoryExtra.linearLowProbability
+    (fun u, #false) #2 #1 #1 #4 #())),
+  ("invalid_low_probability_bound", pl(&FactoryExtra.linearLowProbability
+    (fun u, &rationalCoin #1 #8) #2 #1 #1 #2 #())),
   ("pgf", pl(&probabilityGeneratingFactory (fun u, &rationalCoin #2 #5)
     (fun u, &poissonRational #7 #3) #())),
   ("bernstein", pl(&bernsteinFactory (fun u, &rationalCoin #2 #5)

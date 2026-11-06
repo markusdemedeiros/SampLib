@@ -99,7 +99,7 @@ For a>b, assume (a/b)*p <= 1-e/f, with 0<e/f<1. -/
       let betaDen := n - #2 * m;
       if &Occil.logisticFactory coin (a * n) (b * betaDen) #() then
         if &Occil.rationalCoin betaDen n then #true else
-          &linear coin (a * n) (b * #2 * m) (n - m) n #()
+          &linear coin (a * n) (b * #2 * m) #1 #2 #()
       else #false
 
 /-- Huber 2019 joint linear-and-power factory, (c*p)^exponent.

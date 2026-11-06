@@ -1,0 +1,11 @@
+lake build SampLib.PSRNLess
+Build completed successfully (4156 jobs).
+
+lake env lean agent-docs/reviews/ExactSharedComparison001Callers.lean
+'SampLib.LatentReal.Less.twp_less' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.Less.less_eventSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.Less.expectation_preservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.«agent-docs».reviews.ExactSharedComparison001Callers.0.ReviewSharedComparison001.uniform_negate_distinct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ReviewSharedComparison001.framed' depends on axioms: [propext, Classical.choice, Quot.sound]

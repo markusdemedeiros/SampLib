@@ -1,0 +1,19 @@
+lake build SampLib.Samplers.PSRNRejection
+Build completed successfully (4151 jobs).
+
+lake env lean agent-docs/reviews/ExactLatentBatch002Callers.lean
+'_private.«agent-docs».reviews.ExactLatentBatch002Callers.0.ReviewExactLatent002.acceptHalf_spec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.«agent-docs».reviews.ExactLatentBatch002Callers.0.ReviewExactLatent002.half_rejection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.«agent-docs».reviews.ExactLatentBatch002Callers.0.ReviewExactLatent002.half_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ReviewExactLatent002.construct_read' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNRejection.newRejection_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentRejectionKernel.twp_newRejection' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-latent002-signatures.lean
+SPEC_OK SampLib.PSRNRejection.newRejection_latentDistSpec Occil.PSRN.newRejection

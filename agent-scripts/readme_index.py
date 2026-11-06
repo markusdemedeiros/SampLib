@@ -461,7 +461,7 @@ def main():
 
     header='''# SampLib
 
-Occil samplers as executable ProbLang `pl%` terms, intended for continuous TotalEris (CTE) proofs. Dependency: [logsem/clutch-lean](https://github.com/logsem/clutch-lean), commit `54e780e43709d2f28386b83bffccdde498141b25`, Lean 4.35.0.
+Occil samplers as executable ProbLang `pl%` terms, intended for continuous TotalEris (CTE) proofs. Dependency: [logsem/clutch-lean](https://github.com/logsem/clutch-lean), commit `06a7b3e2b26f3e58c01edb12e39bdf439ba5a982`, Lean 4.35.0.
 
 ```sh
 lake build
@@ -474,7 +474,11 @@ The interpreter suite checks output laws and seeded environment/substitution agr
 
 ## Formal verification
 
-The [verified sampler suite](SampLib/README.md) contains **216 samplers**, including
+The active [exact verification campaign](agent-docs/ExactVerificationCampaign.md)
+tracks the [remaining 137 entries](agent-docs/ExactVerificationQueue.md), with
+independent review and explicit domain findings.
+
+The completed [baseline suite](SampLib/README.md) contains **216 samplers**, including
 **169 additions to the original 47-sampler suite** added through independent author and reviewer passes. It covers
 uniform integers, Bernoulli factories, finite and geometric count laws, urns,
 exponential-family distributions, weighted sampling, mixtures, rejection, and
@@ -484,8 +488,9 @@ measurable continuation credits.
 The proofs follow the [verification protocol](agent-docs/VerifyingSamplers.md):
 one mathematical expectation-preservation argument and straightforward CTE
 symbolic execution. Review findings and reproducible caller checks are retained.
-Run `python3 agent-scripts/audit_sampler_proofs.py --check-callers` for the full
-build, pinned-review, signature, axiom, and caller audit. Adequacy corollaries are
+Run `python3 agent-scripts/lean_gate.py -- python3 agent-scripts/audit_exact_sampler_proofs.py`
+for the current campaign build, pinned-review, signature, axiom, and caller audit.
+Historical receipts retain their original dependency context. Adequacy corollaries are
 omitted; interpreter statistics do not verify Float rounding.
 
 ## Sampler index

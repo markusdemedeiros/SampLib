@@ -1,0 +1,9 @@
+lake build SampLib.Samplers.GeneralizedSibuya
+Build completed successfully (4722 jobs).
+
+lake env lean agent-docs/reviews/ExactDiscreteBatch003Callers.lean
+'SampLib.GeneralizedSibuya.generalizedSibuya_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GeneralizedSibuya.mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-discrete003-signatures.lean
+SPEC_OK SampLib.GeneralizedSibuya.generalizedSibuya_distSpec Occil.DiscreteExtra.generalizedSibuya

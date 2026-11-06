@@ -1,0 +1,11 @@
+lake build SampLib.PSRNExponentialLogistic
+Build completed successfully (4150 jobs).
+
+lake env lean agent-docs/reviews/ExactExponentialLogistic001Callers.lean
+'SampLib.ExponentialLogistic.Program.source_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialLogistic.twp_loop' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialLogistic.digit_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.«agent-docs».reviews.ExactExponentialLogistic001Callers.0.ReviewExponentialLogistic001.constant_spec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ReviewExponentialLogistic001.framed' depends on axioms: [propext, Classical.choice, Quot.sound]

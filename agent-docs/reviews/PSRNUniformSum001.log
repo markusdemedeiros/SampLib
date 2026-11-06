@@ -1,0 +1,5 @@
+✔ [4180/4180] Built SampLib.LatentUniformSumMeasuredError (3.6s)
+Build completed successfully (4180 jobs).
+'SampLib.PSRNUniformSum.model_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNUniformSum.oracleSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNUniformSum.newUniformSum_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]

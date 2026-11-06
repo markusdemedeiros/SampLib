@@ -1,0 +1,80 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactFactoriesBatch009Callers.lean",
+  "caller_sha256": "a74fd32fcb2d23f97e03964b65306d654541470f7d5e602e8882fffcbeb8cb25",
+  "accepted": [
+    {
+      "sampler": "Occil.FactoryExtra.linearLowProbability",
+      "proof_module": "SampLib.Samplers.LinearLowProbability",
+      "public_spec": "SampLib.LinearLowProbability.linearLowProbability_distSpec",
+      "spec_kind": "plain",
+      "classification": "derived",
+      "reviewed_domain": "All p : unitInterval and a,b,m,n : Int with 0 <= a, 0 < b, 0 <= m, 2*m < n and (a/b)*p <= m/n; includes contracting, zero-bound and expanding cases. Canonical half-margin repair registered separately.",
+      "sha256": "426da3737465edbde10ea09762600c30d3ef0e64b1a1de97eff5ae14d06361c3",
+      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch009.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/FiniteGeometricWalk.lean": "27be46a6e85e31a8412a82dc4753a8f4a0350a2890cca429715859793bc204f5",
+        "SampLib/Distributions/LinearFactory.lean": "fd4c4f51bb4f26b359c667438345e5d054732d993b3a9a531704e1c57fd5e8ac",
+        "SampLib/Distributions/LowProbabilityMargin.lean": "134946574719158be891a2a53cc86bc587c2c73fadd241bb2fb7fc496660b0b2",
+        "SampLib/Distributions/LowProbabilityRepair.lean": "2220fb26cbaf146f993f42d225b580df876ac74b2b2069d29efb094ac27483d7",
+        "SampLib/LinearFactorySyntax.lean": "55b8687aaa94da5f8c44757d6b21c5cf332ed614e290914c90a03bd60a6c5252",
+        "SampLib/SamplerStep.lean": "a3e143551b2719b11170456de08e0c193059c00b6b8dafabe3c747c03eb52335",
+        "SampLib/Samplers/CoinConditional.lean": "8dfb54937be016a4105dc511c47a9dcede2258527b7fba6c166d56477e8b4b8a",
+        "SampLib/Samplers/Gambler.lean": "96051929ca36be00f5621dfe3c9f115cbb5b9dba62ddeeda82aeb81783166102",
+        "SampLib/Samplers/HighPowerLogistic.lean": "9fba2d8163cd1ca545a5817d9bbdbc2ccf4e8e99713e6cf6118968b989b17ec6",
+        "SampLib/Samplers/LinearFactory.lean": "d78b257680aad04d2c86dfc2dff2637e43f0c58498854591c0f332ff03801fbd",
+        "SampLib/Samplers/LinearLowProbability.lean": "426da3737465edbde10ea09762600c30d3ef0e64b1a1de97eff5ae14d06361c3",
+        "SampLib/Samplers/LogisticFactory.lean": "65fb8fe358fbf5ce6f5214418b0f6eb4cb31018fdb7bc576a491a7d2a481a616",
+        "SampLib/Samplers/LowProbabilityRepair.lean": "e72323442d33873dc5dcbfe2b1b007a4910e2f03f16b2e95389dab62683e416f",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Syntax/LowProbabilityRepair.lean": "8e85663e440f83e35e0c688be2228065fc8b6028d7467b62cd3f95026c1545d1",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Bernoulli/Combinators.lean": "80895ceb04f068285fd27098f4b194b4c582b5a69a5bb6bb8ead03fe6fc880e5",
+        "code/Samplers/Bernoulli/Linear.lean": "9c9490a35bbb29cc233101e66d6a3c27bb0fb018ab15ce204950e1fdc13027cf",
+        "code/Samplers/Bernoulli/Powers.lean": "61ccc9fc0236b9d192380a4808faab7519a04f93f4c15be44ee01c6603f8ffb0",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": []
+}

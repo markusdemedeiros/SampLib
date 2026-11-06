@@ -1,0 +1,7 @@
+PROFILE certain-interior-zeros: optimalChoice, seed=0, transitions=17025
+PROFILE certain-interior-zeros: optimalChoice, seed=1, transitions=13369
+PROFILE certain-interior-zeros: optimalChoice, seed=99, transitions=15159
+PROFILE certain-interior-zeros: optimalDraw, seed=0, transitions=7839
+PROFILE certain-interior-zeros: optimalDraw, seed=1, transitions=4183
+PROFILE certain-interior-zeros: optimalDraw, seed=99, transitions=5973
+PASS certain-interior-zeros: rows=[0, 0, 7, 0, 0], k=3, l=1, reject=-1, support=[2]

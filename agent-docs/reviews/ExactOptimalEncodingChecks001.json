@@ -1,0 +1,22 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "original_source_sha256": "cc627b9b7e17370238377d0e2d9f0455ab3c465dc20d0b12b67d8e5e63f16d01",
+  "proposed_source_sha256": "a9b71b1c8b8bfa72602ac4693c83ff2eb0dccb5a98fab661d37c7c534aa44571",
+  "totals": {
+    "first": 1,
+    "last": 512
+  },
+  "row_numerators_checked": 146151,
+  "checks": [
+    "generated index l<k",
+    "denominator>=total",
+    "row width E<2^k",
+    "exact cyclic decode equals m",
+    "all nonendpoint rows unchanged",
+    "zero rows unchanged",
+    "l=0 endpoint unchanged",
+    "old positive-l endpoint overflows"
+  ],
+  "result": "passed",
+  "limitation": "Bounded exact-integer checks supplement the general quotient/remainder argument; they are not a sampler proof."
+}

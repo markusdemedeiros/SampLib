@@ -1,0 +1,92 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactFactoriesBatch028Callers.lean",
+  "caller_sha256": "2f38ae6dc7b5aaa036e15815ba93ebe1f9251e6625a2713641bf08732ed18703",
+  "accepted": [
+    {
+      "sampler": "Occil.FactoryExtra.linear2014",
+      "proof_module": "SampLib.Samplers.Linear2014",
+      "public_spec": "SampLib.Linear2014.linear2014_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "Every p : unitInterval; a,b,e,f : Int with0<=a,0<b and, only on expanding b<a,0<e<f and(a/b)*p<=1-e/f; arbitrary input callbacks. Both source margin-clamp branches, zero bias/coefficient, contracting and identity cases covered.",
+      "sha256": "965f34a0ad1ba6d7ca84d81db01b415265b22aa2f7c37384f2b6cd9466953e55",
+      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch028.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/BetaStep.lean": "0a1e17b99ace11607f7b1c4c21f95d1e5b3d213192d65c5a6fb2f78d676d5748",
+        "SampLib/CurriedStep.lean": "dba39cab6b87d9f854d3fc1c15e32254dc9c9bc4ac83704d1bd219bb5275e009",
+        "SampLib/Distributions/BernoulliMixture.lean": "eb240f6aaeffb54aa94440b18dfa4ed9e47f1239145649c7be816d19e54837ec",
+        "SampLib/Distributions/FiniteGeometricWalk.lean": "27be46a6e85e31a8412a82dc4753a8f4a0350a2890cca429715859793bc204f5",
+        "SampLib/Distributions/Geometric.lean": "f35eaf7977331250eb2152791b93d048be5f60d05e2c82a584a4d2b781624bd5",
+        "SampLib/Distributions/Linear2014Credit.lean": "973bab110dc48eab7ea8732957eb500a1552b57f1e22d2491528a52131434494",
+        "SampLib/Distributions/Linear2014Escape.lean": "6a8a0f17dc11de32955a9220ad153e8e4ba56e782c49a6564729f4abc56bb7be",
+        "SampLib/Distributions/Linear2014Jump.lean": "5374e4b854d533aed0c326bc446dd35588577a6e55f50ded914bb709260f3a20",
+        "SampLib/Distributions/Linear2014Parameters.lean": "eba5c38c6c038c4cf26beae585cce2e90e19f6571f98627b038ddd9b49aa95ba",
+        "SampLib/Distributions/Linear2014Step.lean": "0c0f3261d68a00a2850049ece32d023f31c5979f2552518e727868b332ea50ec",
+        "SampLib/Distributions/LinearFactory.lean": "fd4c4f51bb4f26b359c667438345e5d054732d993b3a9a531704e1c57fd5e8ac",
+        "SampLib/FactorySyntax.lean": "b76db426b90cae15e5a635a9b9d380e5b1bb6945ef85e914542fcf563841859a",
+        "SampLib/Linear2014Loop.lean": "ef95b09842bbd3f43c7d177b97bd90f45e41dc9a552647f1da4bff454e351a4e",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/SamplerStep.lean": "a3e143551b2719b11170456de08e0c193059c00b6b8dafabe3c747c03eb52335",
+        "SampLib/Samplers/CoinConditional.lean": "8dfb54937be016a4105dc511c47a9dcede2258527b7fba6c166d56477e8b4b8a",
+        "SampLib/Samplers/Gambler.lean": "96051929ca36be00f5621dfe3c9f115cbb5b9dba62ddeeda82aeb81783166102",
+        "SampLib/Samplers/Geometric.lean": "a5692d1af2f98bc791cb40d14c4ef0bb349873d411659fa6f2b70d552eb5ce78",
+        "SampLib/Samplers/HighPowerLogistic.lean": "9fba2d8163cd1ca545a5817d9bbdbc2ccf4e8e99713e6cf6118968b989b17ec6",
+        "SampLib/Samplers/IterateCoin.lean": "f14b4ee475b3ea318aef1a1c2705d6a687818886abb00b533690629d3478bbfe",
+        "SampLib/Samplers/Linear2014.lean": "965f34a0ad1ba6d7ca84d81db01b415265b22aa2f7c37384f2b6cd9466953e55",
+        "SampLib/Samplers/LogisticFactory.lean": "65fb8fe358fbf5ce6f5214418b0f6eb4cb31018fdb7bc576a491a7d2a481a616",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RationalPowerInteger.lean": "ae13af811ccf4196156939ec089e80bb197bf5c6cdca7a9afa6a2bbb594f6d93",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Syntax/Linear2014.lean": "c53a9e9fd4344745ba8a8891850f7e941d57c56e28f59a7be310f49d64ba1a8c",
+        "SampLib/Syntax/LinearPowerWalk.lean": "36a22e39c0f911323633efd291de046b57918aa6e8c7a5d05f6beb5ec45e7fc2",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Bernoulli/Combinators.lean": "80895ceb04f068285fd27098f4b194b4c582b5a69a5bb6bb8ead03fe6fc880e5",
+        "code/Samplers/Bernoulli/Linear.lean": "9c9490a35bbb29cc233101e66d6a3c27bb0fb018ab15ce204950e1fdc13027cf",
+        "code/Samplers/Bernoulli/Powers.lean": "61ccc9fc0236b9d192380a4808faab7519a04f93f4c15be44ee01c6603f8ffb0",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": []
+}

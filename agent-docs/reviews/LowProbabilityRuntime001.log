@@ -1,0 +1,7 @@
+PASS low_probability_boundary (0.74s)
+PASS low_probability_interior (1.15s)
+PASS low_probability_contracting (0.25s)
+PASS edge_low_probability_zero_bound (0.20s)
+PASS edge_low_probability_zero (0.20s)
+PASS invalid_low_probability_bound (0.13s)
+6/6 cases passed; 24200 samples; report: agent-docs/reviews/LowProbabilityRuntime001.json

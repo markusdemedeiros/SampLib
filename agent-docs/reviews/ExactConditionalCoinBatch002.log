@@ -1,0 +1,13 @@
+lake build SampLib.Samplers.PSRNExpMinusCoin
+Build completed successfully (4280 jobs).
+
+lake env lean agent-docs/reviews/ExactConditionalCoinBatch002Callers.lean
+'SampLib.LatentReal.ExpMinusCoin.expMinusCoin_programSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.ExpMinusCoin.expMinusCoin_coinSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.ExpMinusCoin.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.Floor.twp_floorScaled_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactConditionalCoin002.repeated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactConditionalCoin002.actual_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-conditionalcoin002-signatures.lean
+SPEC_OK SampLib.LatentReal.ExpMinusCoin.expMinusCoin_programSpec Occil.PSRN.expMinusCoin

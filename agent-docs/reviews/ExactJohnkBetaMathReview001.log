@@ -1,0 +1,13 @@
+Final source differs from the initial reviewed source only by deleting the unused private measurable_gamma helper and a duplicate blank line; reconstructing those original bytes reproduces SHA256 8cbef3d99fbb2196357593b5e9f0c725bc17752909a91023a4ae26bb3987f46a.
+
+Independent final target build
+Build completed successfully (2932 jobs).
+
+Independent final caller and public axioms
+'SampLib.JohnkBeta.density_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.JohnkBeta.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.JohnkBeta.accepted_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.JohnkBeta.normalized_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.JohnkBeta.IndependentMathReview001.acceptance_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

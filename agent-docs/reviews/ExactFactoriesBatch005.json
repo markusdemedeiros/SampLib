@@ -1,0 +1,68 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactFactoriesBatch005Callers.lean",
+  "caller_sha256": "1ff577690a09b70f76d871ef68076f204c126cf7d0ebbaf39c5dbcca408a7f57",
+  "accepted": [
+    {
+      "sampler": "Occil.sampleGeometricBag",
+      "proof_module": "SampLib.Samplers.SampleGeometricBag",
+      "public_spec": "SampLib.SampleGeometricBag.sampleGeometricBag_coinSpec",
+      "spec_kind": "latent_coin",
+      "classification": "support",
+      "reviewed_domain": "Any owned bag root l and cached prefix p; conditional Bernoulli(U) with arbitrary measurable joint output/latent credit G:Bool->Real->ENNReal. The same root and refined cache remain owned across calls.",
+      "sha256": "804eea01e0c02095bbc7dc1a5b7ae354c0d43f83cd580cf47b60ec7e7eafa1c5",
+      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch005.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/DyadicPosterior.lean": "47aee6086b85b501470624626940b55ef333d20e4bd9f21e3e698e66cad716e0",
+        "SampLib/Distributions/DyadicRefinement.lean": "b4339270ecc356a8b3fb2f8a4cd0d3f1dbf10ff6a9b4457bbd8918d32eff849c",
+        "SampLib/Distributions/LatentBernoulli.lean": "a91921d52524e40ce99e9b922a102a60856e510fb06a71ffa157b155f1fad9af",
+        "SampLib/Samplers/CoinConditional.lean": "8dfb54937be016a4105dc511c47a9dcede2258527b7fba6c166d56477e8b4b8a",
+        "SampLib/Samplers/CoinMean.lean": "b14b21db0060327b79d8faf02fc046f9a75166937fa54692474752cdc317ecd4",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/SampleGeometricBag.lean": "804eea01e0c02095bbc7dc1a5b7ae354c0d43f83cd580cf47b60ec7e7eafa1c5",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/UniformBag.lean": "623d3f68b364f412a4ab754244d618e8e180086cccf0cff391566d914bc640a4",
+        "SampLib/UniformBagCoin.lean": "93e85caf681d310fa7bebbbe5d3ea8ac41add424019429132ece6630e6841238",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": []
+}

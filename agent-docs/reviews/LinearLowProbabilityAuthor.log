@@ -1,0 +1,9 @@
+'SampLib.LowProbabilityMargin.counterexample_inner_not_admissible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.LowProbabilityMargin.repaired_inner_admissible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LowProbabilityRepair.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LowProbabilityRepair.twp_lowProbabilityRepair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LowProbabilityRepair.lowProbabilityRepair_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LinearLowProbability.source_eq' does not depend on any axioms
+'SampLib.LinearLowProbability.linearLowProbability_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]

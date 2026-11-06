@@ -1,0 +1,25 @@
+lake build SampLib.Samplers.InversePolya
+Build completed successfully (4715 jobs).
+
+lake build SampLib.Samplers.BetaNegativeBinomial
+Build completed successfully (4719 jobs).
+
+lake build SampLib.Samplers.WaringYule
+Build completed successfully (4721 jobs).
+
+lake build SampLib.Samplers.YuleSimon
+Build completed successfully (4721 jobs).
+
+lake env lean agent-docs/reviews/ExactDiscreteBatch002Callers.lean
+'SampLib.InversePolya.inversePolya_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BetaNegativeBinomial.betaNegativeBinomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WaringYule.waringYule_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.YuleSimon.yuleSimon_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UrnWaiting.absorbs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.InverseUrn.mass_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-discrete002-signatures.lean
+SPEC_OK SampLib.InversePolya.inversePolya_distSpec Occil.DiscreteExtra.inversePolya
+SPEC_OK SampLib.BetaNegativeBinomial.betaNegativeBinomial_distSpec Occil.DiscreteExtra.betaNegativeBinomial
+SPEC_OK SampLib.WaringYule.waringYule_distSpec Occil.DiscreteExtra.waringYule
+SPEC_OK SampLib.YuleSimon.yuleSimon_distSpec Occil.DiscreteExtra.yuleSimon

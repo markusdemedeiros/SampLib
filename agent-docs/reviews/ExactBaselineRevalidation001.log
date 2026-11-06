@@ -1,0 +1,1217 @@
+✔ [8485/8486] Built SampLib (4.3s)
+Build completed successfully (8486 jobs).
+SPEC_OK SampLib.Complement.complement_distSpec Occil.complement
+'SampLib.Complement.complement_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CoinProduct.coinProduct_distSpec Occil.coinProduct
+'SampLib.CoinProduct.coinProduct_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CoinDisjunction.coinDisjunction_distSpec Occil.coinDisjunction
+'SampLib.CoinDisjunction.coinDisjunction_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CoinMean.coinMean_distSpec Occil.coinMean
+'SampLib.CoinMean.coinMean_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CoinConditional.coinConditional_distSpec Occil.coinConditional
+'SampLib.CoinConditional.coinConditional_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformInt.uniformInt_distSpec Occil.uniformInt
+'SampLib.UniformInt.uniformInt_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RndInt.rndInt_distSpec Occil.rndInt
+'SampLib.RndInt.rndInt_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RndIntRange.rndIntRange_distSpec Occil.rndIntRange
+'SampLib.RndIntRange.rndIntRange_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RndIntExcRange.rndIntExcRange_distSpec Occil.rndIntExcRange
+'SampLib.RndIntExcRange.rndIntExcRange_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FairCoin.fairCoin_distSpec Occil.fairCoin
+'SampLib.FairCoin.fairCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RationalCoin.rationalCoin_distSpec Occil.rationalCoin
+'SampLib.RationalCoin.rationalCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.OneDivOnePlus.oneDivOnePlus_distSpec Occil.oneDivOnePlus
+'SampLib.OneDivOnePlus.oneDivOnePlus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.EvenParity.evenParity_distSpec Occil.evenParity
+'SampLib.EvenParity.evenParity_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.BernoulliRace.bernoulliRace_distSpec Occil.bernoulliRace
+'SampLib.BernoulliRace.bernoulliRace_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.GeometricFailures.geometricFailures_distSpec Occil.geometricFailures
+'SampLib.GeometricFailures.geometricFailures_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Binomial.binomial_distSpec Occil.binomial
+'SampLib.Binomial.binomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.BoundedGeometric.boundedGeometric_distSpec Occil.boundedGeometric
+'SampLib.BoundedGeometric.boundedGeometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.IterateCoin.iterateCoin_distSpec Occil.iterateCoin
+'SampLib.IterateCoin.iterateCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RandomWalk.randomWalk_distSpec Occil.randomWalk
+'SampLib.RandomWalk.randomWalk_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Geometric.geometric_distSpec Occil.geometric
+'SampLib.Geometric.geometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.NegativeBinomial.negativeBinomial_distSpec Occil.negativeBinomial
+'SampLib.NegativeBinomial.negativeBinomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformMin.uniformMin_distSpec Occil.uniformMin
+'SampLib.UniformMin.uniformMin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformMax.uniformMax_distSpec Occil.uniformMax
+'SampLib.UniformMax.uniformMax_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformSum.uniformSum_distSpec Occil.uniformSum
+'SampLib.UniformSum.uniformSum_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Mixture.mixture_distSpec Occil.mixture
+'SampLib.Mixture.mixture_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Rejection.rejection_distSpec Occil.rejection
+'SampLib.Rejection.rejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.LogisticFactory.logisticFactory_distSpec Occil.logisticFactory
+'SampLib.LogisticFactory.logisticFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ProbabilityGeneratingFactory.probabilityGeneratingFactory_distSpec Occil.probabilityGeneratingFactory
+'SampLib.ProbabilityGeneratingFactory.probabilityGeneratingFactory_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.OneMinusOverOnePlus.oneMinusOverOnePlus_distSpec Occil.FactoryExtra.oneMinusOverOnePlus
+'SampLib.OneMinusOverOnePlus.oneMinusOverOnePlus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.OnePlusHalf.onePlusHalf_distSpec Occil.FactoryExtra.onePlusHalf
+'SampLib.OnePlusHalf.onePlusHalf_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ComplementHalf.complementHalf_distSpec Occil.FactoryExtra.complementHalf
+'SampLib.ComplementHalf.complementHalf_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Choice.choice_distSpec Occil.choice
+'SampLib.Choice.choice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.SampleWithReplacement.sampleWithReplacement_distSpec Occil.sampleWithReplacement
+'SampLib.SampleWithReplacement.sampleWithReplacement_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.WeightedChoice.weightedChoice_distSpec Occil.weightedChoice
+'SampLib.WeightedChoice.weightedChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.WeightedRejection.weightedRejection_distSpec Occil.weightedRejection
+'SampLib.WeightedRejection.weightedRejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.BernsteinFactory.bernsteinFactory_distSpec Occil.bernsteinFactory
+'SampLib.BernsteinFactory.bernsteinFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PLogInverse.pLogInverse_distSpec Occil.FactoryExtra.pLogInverse
+'SampLib.PLogInverse.pLogInverse_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Dice.dice_distSpec Occil.dice
+'SampLib.Dice.dice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Hypergeometric.hypergeometric_distSpec Occil.hypergeometric
+'SampLib.Hypergeometric.hypergeometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PolyaEggenberger.polyaEggenberger_distSpec Occil.polyaEggenberger
+'SampLib.PolyaEggenberger.polyaEggenberger_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.SampleWithoutReplacement.sampleWithoutReplacement_distSpec Occil.sampleWithoutReplacement
+'SampLib.SampleWithoutReplacement.sampleWithoutReplacement_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.SampleInOrder.sampleInOrder_distSpec Occil.sampleInOrder
+'SampLib.SampleInOrder.sampleInOrder_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Exponential.exponential_distSpec Occil.exponential
+'SampLib.Exponential.exponential_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Laplace.laplace_distSpec Occil.laplace
+'SampLib.Laplace.laplace_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Erlang.erlang_distSpec Occil.erlang
+'SampLib.Erlang.erlang_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.OneDivTwoMinus.oneDivTwoMinus_distSpec Occil.FactoryExtra.oneDivTwoMinus
+'SampLib.OneDivTwoMinus.oneDivTwoMinus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ReciprocalLogistic.reciprocalLogistic_distSpec Occil.FactoryExtra.reciprocalLogistic
+'SampLib.ReciprocalLogistic.reciprocalLogistic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.IntegralMixture.integralMixture_distSpec Occil.FactoryExtra.integralMixture
+'SampLib.IntegralMixture.integralMixture_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.GenerativeModel.generativeModel_distSpec Occil.General.generativeModel
+'SampLib.GenerativeModel.generativeModel_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.InverseQuantile.inverseQuantile_distSpec Occil.General.inverseQuantile
+'SampLib.InverseQuantile.inverseQuantile_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.KernelDensity.kernelDensity_distSpec Occil.General.kernelDensity
+'SampLib.KernelDensity.kernelDensity_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformBoxPoint.uniformBoxPoint_distSpec Occil.General.uniformBoxPoint
+'SampLib.UniformBoxPoint.uniformBoxPoint_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FlipBits.flipBits_distSpec Occil.flipBits
+'SampLib.FlipBits.flipBits_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.BetaBinomial.betaBinomial_distSpec Occil.DiscreteExtra.betaBinomial
+'SampLib.BetaBinomial.betaBinomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RandomBits.randomBits_distSpec Occil.Weighted.randomBits
+'SampLib.RandomBits.randomBits_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.SymmetricGeometric.symmetricGeometric_distSpec Occil.DiscreteExtra.symmetricGeometric
+'SampLib.SymmetricGeometric.symmetricGeometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PositivePowerSeries.positivePowerSeries_distSpec Occil.FactoryExtra.positivePowerSeries
+'SampLib.PositivePowerSeries.positivePowerSeries_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ComplementPowerSeries.complementPowerSeries_distSpec Occil.FactoryExtra.complementPowerSeries
+'SampLib.ComplementPowerSeries.complementPowerSeries_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.ComplementLogInverse.complementLogInverse_distSpec Occil.FactoryExtra.complementLogInverse
+'SampLib.ComplementLogInverse.complementLogInverse_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ConvexCombination.convexCombination_distSpec Occil.FactoryExtra.convexCombination
+'SampLib.ConvexCombination.convexCombination_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.OddsProduct.oddsProduct_distSpec Occil.FactoryExtra.oddsProduct
+'SampLib.OddsProduct.oddsProduct_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FromDigits.fromDigits_distSpec Occil.Constants.fromDigits
+'SampLib.FromDigits.fromDigits_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ExpMinusRational.expMinusRational_distSpec Occil.expMinusRational
+'SampLib.ExpMinusRational.expMinusRational_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ApproximateFactory.approximateFactory_distSpec Occil.FactoryExtra.approximateFactory
+'SampLib.ApproximateFactory.approximateFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.StoppedSum.stoppedSum_distSpec Occil.General.stoppedSum
+'SampLib.StoppedSum.stoppedSum_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Episodes.episodes_distSpec Occil.General.episodes
+'SampLib.Episodes.episodes_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.KernelDensityVector.kernelDensityVector_distSpec Occil.General.kernelDensityVector
+'SampLib.KernelDensityVector.kernelDensityVector_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Stratified1D.stratified1D_distSpec Occil.General.stratified1D
+'SampLib.Stratified1D.stratified1D_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RandomString.randomString_distSpec Occil.General.randomString
+'SampLib.RandomString.randomString_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RandomDateTime.randomDateTime_distSpec Occil.General.randomDateTime
+'SampLib.RandomDateTime.randomDateTime_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ExpHalfCoin.expHalfCoin_distSpec Occil.expHalfCoin
+'SampLib.ExpHalfCoin.expHalfCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.GaussianInteger.gaussianInteger_distSpec Occil.gaussianInteger
+'SampLib.GaussianInteger.gaussianInteger_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Polylogarithm.polylogarithm_distSpec Occil.FactoryExtra.polylogarithm
+'SampLib.Polylogarithm.polylogarithm_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.AlgebraicRoot.algebraicRoot_distSpec Occil.Constants.algebraicRoot
+'SampLib.AlgebraicRoot.algebraicRoot_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.InverseGoldenRatio.inverseGoldenRatio_distSpec Occil.Constants.inverseGoldenRatio
+'SampLib.InverseGoldenRatio.inverseGoldenRatio_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.SigmoidDerivative.sigmoidDerivative_distSpec Occil.FactoryExtra.sigmoidDerivative
+'SampLib.SigmoidDerivative.sigmoidDerivative_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.SigmoidRational.sigmoidRational_distSpec Occil.FactoryExtra.sigmoidRational
+'SampLib.SigmoidRational.sigmoidRational_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.LogisticExp.logisticExp_distSpec Occil.FactoryExtra.logisticExp
+'SampLib.LogisticExp.logisticExp_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ExponentialRatio.exponentialRatio_distSpec Occil.FactoryExtra.exponentialRatio
+'SampLib.ExponentialRatio.exponentialRatio_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.TanhRational.tanhRational_distSpec Occil.FactoryExtra.tanhRational
+'SampLib.TanhRational.tanhRational_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ReciprocalAffine.reciprocalAffine_distSpec Occil.FactoryExtra.reciprocalAffine
+'SampLib.ReciprocalAffine.reciprocalAffine_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ReciprocalAffinePower.reciprocalAffinePower_distSpec Occil.FactoryExtra.reciprocalAffinePower
+'SampLib.ReciprocalAffinePower.reciprocalAffinePower_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.InverseQuadratic.inverseQuadratic_distSpec Occil.FactoryExtra.inverseQuadratic
+'SampLib.InverseQuadratic.inverseQuadratic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.SqrtTwoMinusOne.sqrtTwoMinusOne_distSpec Occil.Constants.sqrtTwoMinusOne
+'SampLib.SqrtTwoMinusOne.sqrtTwoMinusOne_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.InverseSqrtTwo.inverseSqrtTwo_distSpec Occil.Constants.inverseSqrtTwo
+'SampLib.InverseSqrtTwo.inverseSqrtTwo_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.GoldenFamily.goldenFamily_distSpec Occil.Constants.goldenFamily
+'SampLib.GoldenFamily.goldenFamily_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.OffsetRace.offsetRace_distSpec Occil.FactoryExtra.offsetRace
+'SampLib.OffsetRace.offsetRace_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.LogOverAffine.logOverAffine_distSpec Occil.FactoryExtra.logOverAffine
+'SampLib.LogOverAffine.logOverAffine_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ExpMinusFactory.expMinusFactory_distSpec Occil.expMinusFactory
+'SampLib.ExpMinusFactory.expMinusFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ExpTimesComplement.expTimesComplement_distSpec Occil.FactoryExtra.expTimesComplement
+'SampLib.ExpTimesComplement.expTimesComplement_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ReciprocalExpAffine.reciprocalExpAffine_distSpec Occil.FactoryExtra.reciprocalExpAffine
+'SampLib.ReciprocalExpAffine.reciprocalExpAffine_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ExpMinusScaled.expMinusScaled_distSpec Occil.FactoryExtra.expMinusScaled
+'SampLib.ExpMinusScaled.expMinusScaled_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.TanhScaled.tanhScaled_distSpec Occil.FactoryExtra.tanhScaled
+'SampLib.TanhScaled.tanhScaled_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.SigmoidScaled.sigmoidScaled_distSpec Occil.FactoryExtra.sigmoidScaled
+'SampLib.SigmoidScaled.sigmoidScaled_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ExponentialTwist.exponentialTwist_distSpec Occil.FactoryExtra.exponentialTwist
+'SampLib.ExponentialTwist.exponentialTwist_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.TwoCoin.twoCoin_distSpec Occil.FactoryExtra.twoCoin
+'SampLib.TwoCoin.twoCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformFormats.uniformRational_distSpec Occil.Weighted.uniformRational
+'SampLib.UniformFormats.uniformRational_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformFormats.uniformFixed_distSpec Occil.Weighted.uniformFixed
+'SampLib.UniformFormats.uniformFixed_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformFormats.uniformDyadic_distSpec Occil.Weighted.uniformDyadic
+'SampLib.UniformFormats.uniformDyadic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.NegativeHypergeometric.negativeHypergeometric_distSpec Occil.DiscreteExtra.negativeHypergeometric
+'SampLib.NegativeHypergeometric.negativeHypergeometric_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.Himanshu.himanshu_distSpec Occil.DiscreteExtra.himanshu
+'SampLib.Himanshu.himanshu_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.WordReductions.moduloReduction_distSpec Occil.Weighted.moduloReduction
+'SampLib.WordReductions.moduloReduction_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.WordReductions.multiplyShift_distSpec Occil.Weighted.multiplyShift
+'SampLib.WordReductions.multiplyShift_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.SequentialCoins.sequentialCoins_distSpec Occil.WeightedVariants.sequentialCoins
+'SampLib.SequentialCoins.sequentialCoins_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.BinomialHalfBits.binomialHalfBits_distSpec Occil.DiscreteExtra.binomialHalfBits
+'SampLib.BinomialHalfBits.binomialHalfBits_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PoissonOne.poissonOne_distSpec Occil.poissonOne
+'SampLib.PoissonOne.poissonOne_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PoissonRational.poissonRational_distSpec Occil.poissonRational
+'SampLib.PoissonRational.poissonRational_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.BitmaskRejection.bitmaskRejection_distSpec Occil.Weighted.bitmaskRejection
+'SampLib.BitmaskRejection.bitmaskRejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CompoundPoisson.compoundPoisson_distSpec Occil.DiscreteExtra.compoundPoisson
+'SampLib.CompoundPoisson.compoundPoisson_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Skellam.skellam_distSpec Occil.DiscreteExtra.skellam
+'SampLib.Skellam.skellam_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.NeymanTypeA.neymanTypeA_distSpec Occil.DiscreteExtra.neymanTypeA
+'SampLib.NeymanTypeA.neymanTypeA_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PolyaAeppli.polyaAeppli_distSpec Occil.DiscreteExtra.polyaAeppli
+'SampLib.PolyaAeppli.polyaAeppli_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ZeroTruncatedPoisson.zeroTruncatedPoisson_distSpec Occil.DiscreteExtra.zeroTruncatedPoisson
+'SampLib.ZeroTruncatedPoisson.zeroTruncatedPoisson_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.MultivariatePoisson.multivariatePoisson_distSpec Occil.DiscreteExtra.multivariatePoisson
+'SampLib.MultivariatePoisson.multivariatePoisson_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.LogUniform.logUniform_distSpec Occil.DiscreteExtra.logUniform
+'SampLib.LogUniform.logUniform_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Gaussian.gaussian_distSpec Occil.gaussian
+'SampLib.Gaussian.gaussian_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.OrderStatistic.orderStatistic_distSpec Occil.orderStatistic
+'SampLib.OrderStatistic.orderStatistic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Bootstrap.bootstrap_distSpec Occil.General.bootstrap
+'SampLib.Bootstrap.bootstrap_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Histogram.histogram_distSpec Occil.General.histogram
+'SampLib.Histogram.histogram_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Shuffle.shuffle_distSpec Occil.shuffle
+'SampLib.Shuffle.shuffle_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PositiveComposition.positiveComposition_distSpec Occil.positiveComposition
+'SampLib.PositiveComposition.positiveComposition_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.WeakComposition.weakComposition_distSpec Occil.weakComposition
+'SampLib.WeakComposition.weakComposition_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.LatinHypercube1D.latinHypercube1D_distSpec Occil.General.latinHypercube1D
+'SampLib.LatinHypercube1D.latinHypercube1D_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.StratifiedBox.stratifiedBox_distSpec Occil.General.stratifiedBox
+'SampLib.StratifiedBox.stratifiedBox_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ClassifiedModel.classifiedModel_distSpec Occil.General.classifiedModel
+'SampLib.ClassifiedModel.classifiedModel_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.MarkovChain.markovChain_distSpec Occil.General.markovChain
+'SampLib.MarkovChain.markovChain_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RandomMap.randomMap_distSpec Occil.General.randomMap
+'SampLib.RandomMap.randomMap_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RandomWalkPath.randomWalkPath_distSpec Occil.General.randomWalkPath
+'SampLib.RandomWalkPath.randomWalkPath_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Sattolo.sattolo_distSpec Occil.sattolo
+'SampLib.Sattolo.sattolo_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PermutationSamples.permutationSamples_distSpec Occil.General.permutationSamples
+'SampLib.PermutationSamples.permutationSamples_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.StoppedMinimum.stoppedMinimum_distSpec Occil.General.stoppedMinimum
+'SampLib.StoppedMinimum.stoppedMinimum_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.StoppedMaximum.stoppedMaximum_distSpec Occil.General.stoppedMaximum
+'SampLib.StoppedMaximum.stoppedMaximum_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.MarkovTrajectory.markovTrajectory_distSpec Occil.General.markovTrajectory
+'SampLib.MarkovTrajectory.markovTrajectory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.GibbsSweep.gibbsSweep_distSpec Occil.General.gibbsSweep
+'SampLib.GibbsSweep.gibbsSweep_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RandomScanGibbs.randomScanGibbs_distSpec Occil.General.randomScanGibbs
+'SampLib.RandomScanGibbs.randomScanGibbs_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RandomGraph.randomGraph_distSpec Occil.randomGraph
+'SampLib.RandomGraph.randomGraph_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Reservoir.reservoir_distSpec Occil.reservoir
+'SampLib.Reservoir.reservoir_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.WeightedReservoirOne.weightedReservoirOne_distSpec Occil.Weighted.weightedReservoirOne
+'SampLib.WeightedReservoirOne.weightedReservoirOne_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.DivisionRejection.divisionRejection_distSpec Occil.WeightedVariants.divisionRejection
+'SampLib.DivisionRejection.divisionRejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.DebiasedModulo.debiasedModulo_distSpec Occil.WeightedVariants.debiasedModulo
+'SampLib.DebiasedModulo.debiasedModulo_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ExpMinusPolynomial.expMinusPolynomial_distSpec Occil.FactoryExtra.expMinusPolynomial
+'SampLib.ExpMinusPolynomial.expMinusPolynomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.BinomialBinary.binomialBinary_distSpec Occil.DiscreteExtra.binomialBinary
+'SampLib.BinomialBinary.binomialBinary_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Cub.cub_distSpec Occil.DiscreteExtra.cub
+'SampLib.Cub.cub_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FlatChoice.flatChoice_distSpec Occil.WeightedVariants.flatChoice
+'SampLib.FlatChoice.flatChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.LemireUniform.lemireUniform_distSpec Occil.WeightedVariants.lemireUniform
+'SampLib.LemireUniform.lemireUniform_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PermutationTest.permutationTest_distSpec Occil.General.permutationTest
+'SampLib.PermutationTest.permutationTest_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.GroupedPermutation.groupedPermutation_distSpec Occil.General.groupedPermutation
+'SampLib.GroupedPermutation.groupedPermutation_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PdfRejection.pdfRejection_distSpec Occil.General.pdfRejection
+'SampLib.PdfRejection.pdfRejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.LatinHypercube.latinHypercube_distSpec Occil.General.latinHypercube
+'SampLib.LatinHypercube.latinHypercube_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.InverseCDF.inverseCDF_distSpec Occil.General.inverseCDF
+'SampLib.InverseCDF.inverseCDF_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Gambler.gambler_distSpec Occil.FactoryExtra.gambler
+'SampLib.Gambler.gambler_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.HighPowerLogistic.highPowerLogistic_distSpec Occil.FactoryExtra.highPowerLogistic
+'SampLib.HighPowerLogistic.highPowerLogistic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ContinuedFraction.generalizedContinuedFraction_distSpec Occil.Constants.generalizedContinuedFraction
+'SampLib.ContinuedFraction.generalizedContinuedFraction_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.SimpleContinuedFraction.continuedFraction_distSpec Occil.Constants.continuedFraction
+'SampLib.SimpleContinuedFraction.continuedFraction_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Borel.borel_distSpec Occil.DiscreteExtra.borel
+'SampLib.Borel.borel_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.OneillUniform.oneillUniform_distSpec Occil.WeightedVariants.oneillUniform
+'SampLib.OneillUniform.oneillUniform_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FisherHypergeometric.fisherHypergeometric_distSpec Occil.DiscreteExtra.fisherHypergeometric
+'SampLib.FisherHypergeometric.fisherHypergeometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.LinearFactory.linear_distSpec Occil.FactoryExtra.linear
+'SampLib.LinearFactory.linear_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FromBounds.fromBounds_distSpec Occil.Constants.fromBounds
+'SampLib.FromBounds.fromBounds_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.LogOnePlusFactory.logOnePlusFactory_distSpec Occil.logOnePlusFactory
+'SampLib.LogOnePlusFactory.logOnePlusFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ComplementLogOnePlus.complementLogOnePlus_distSpec Occil.FactoryExtra.complementLogOnePlus
+'SampLib.ComplementLogOnePlus.complementLogOnePlus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.LogarithmicSeries.logarithmicSeries_distSpec Occil.DiscreteExtra.logarithmicSeries
+'SampLib.LogarithmicSeries.logarithmicSeries_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Multinomial.multinomial_distSpec Occil.multinomial
+'SampLib.Multinomial.multinomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.WeightedWithoutReplacement.weightedWithoutReplacement_distSpec Occil.weightedWithoutReplacement
+'SampLib.WeightedWithoutReplacement.weightedWithoutReplacement_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.CumulativeDraw.cumulativeDraw_distSpec Occil.Weighted.cumulativeDraw
+'SampLib.CumulativeDraw.cumulativeDraw_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CumulativeChoice.cumulativeChoice_distSpec Occil.Weighted.cumulativeChoice
+'SampLib.CumulativeChoice.cumulativeChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.LinearPower.linearPower_distSpec Occil.FactoryExtra.linearPower
+'SampLib.LinearPower.linearPower_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Addition.addition_distSpec Occil.FactoryExtra.addition
+'SampLib.Addition.addition_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Subtraction.subtraction_distSpec Occil.FactoryExtra.subtraction
+'SampLib.Subtraction.subtraction_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.Division.division_distSpec Occil.FactoryExtra.division
+'SampLib.Division.division_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.AffineFactory.affine_distSpec Occil.FactoryExtra.affine
+'SampLib.AffineFactory.affine_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.AffineRatio.affineRatio_distSpec Occil.FactoryExtra.affineRatio
+'SampLib.AffineRatio.affineRatio_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformFromModulus.uniformFromModulus_distSpec Occil.uniformFromModulus
+'SampLib.UniformFromModulus.uniformFromModulus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.NegativeMultinomial.negativeMultinomial_distSpec Occil.DiscreteExtra.negativeMultinomial
+'SampLib.NegativeMultinomial.negativeMultinomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.WalleniusHypergeometric.walleniusHypergeometric_distSpec Occil.DiscreteExtra.walleniusHypergeometric
+'SampLib.WalleniusHypergeometric.walleniusHypergeometric_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.Derangement.derangement_distSpec Occil.derangement
+'SampLib.Derangement.derangement_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CountableMetropolisHastings.metropolisHastings_distSpec Occil.General.metropolisHastings
+'SampLib.CountableMetropolisHastings.metropolisHastings_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.CountableMetropolis.metropolis_distSpec Occil.General.metropolis
+'SampLib.CountableMetropolis.metropolis_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.DiscreteCDF.discreteCDF_distSpec Occil.General.discreteCDF
+'SampLib.DiscreteCDF.discreteCDF_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PiecewiseConstant.piecewiseConstant_distSpec Occil.General.piecewiseConstant
+'SampLib.PiecewiseConstant.piecewiseConstant_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PiecewiseLinear.piecewiseLinear_distSpec Occil.General.piecewiseLinear
+'SampLib.PiecewiseLinear.piecewiseLinear_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.EpsilonDivision.epsilonDivision_distSpec Occil.FactoryExtra.epsilonDivision
+'SampLib.EpsilonDivision.epsilonDivision_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FactorialSeriesFactory.factorialSeriesFactory_distSpec Occil.factorialSeriesFactory
+'SampLib.FactorialSeriesFactory.factorialSeriesFactory_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.ExpMinusMartingale.expMinusMartingale_distSpec Occil.expMinusMartingale
+'SampLib.ExpMinusMartingale.expMinusMartingale_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CosineFactory.cosineFactory_distSpec Occil.cosineFactory
+'SampLib.CosineFactory.cosineFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.SineFactory.sineFactory_distSpec Occil.sineFactory
+'SampLib.SineFactory.sineFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RationalChoice.rationalChoice_distSpec Occil.Weighted.rationalChoice
+'SampLib.RationalChoice.rationalChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.UniformBinaryFloat.uniformBinaryFloat_distSpec Occil.Weighted.uniformBinaryFloat
+'SampLib.UniformBinaryFloat.uniformBinaryFloat_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.CouplingFromPast.couplingFromPast_distSpec Occil.General.couplingFromPast
+'SampLib.CouplingFromPast.couplingFromPast_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PerfectFiniteChain.perfectFiniteChain_distSpec Occil.General.perfectFiniteChain
+'SampLib.PerfectFiniteChain.perfectFiniteChain_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.SliceSampler.sliceSampler_distSpec Occil.General.sliceSampler
+'SampLib.SliceSampler.sliceSampler_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.WalleniusMultivariate.walleniusMultivariate_distSpec Occil.DiscreteExtra.walleniusMultivariate
+'SampLib.WalleniusMultivariate.walleniusMultivariate_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.MultivariateHypergeometric.multivariateHypergeometric_distSpec Occil.DiscreteExtra.multivariateHypergeometric
+'SampLib.MultivariateHypergeometric.multivariateHypergeometric_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.VoseSamples.voseSamples_distSpec Occil.WeightedVariants.voseSamples
+'SampLib.VoseSamples.voseSamples_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ExpMinusShifted.expMinusShifted_distSpec Occil.FactoryExtra.expMinusShifted
+'SampLib.ExpMinusShifted.expMinusShifted_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.TanhHalfShifted.tanhHalfShifted_distSpec Occil.FactoryExtra.tanhHalfShifted
+'SampLib.TanhHalfShifted.tanhHalfShifted_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ExpMinusShiftPower.expMinusShiftPower_distSpec Occil.FactoryExtra.expMinusShiftPower
+'SampLib.ExpMinusShiftPower.expMinusShiftPower_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FromApproximateDigits.fromApproximateDigits_distSpec Occil.Constants.fromApproximateDigits
+'SampLib.FromApproximateDigits.fromApproximateDigits_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.FisherMultivariate.fisherMultivariate_distSpec Occil.DiscreteExtra.fisherMultivariate
+'SampLib.FisherMultivariate.fisherMultivariate_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.TwoLevelChoice.twoLevelChoice_distSpec Occil.WeightedVariants.twoLevelChoice
+'SampLib.TwoLevelChoice.twoLevelChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FYKY.fyky_distSpec Occil.Weighted.fyky
+'SampLib.FYKY.fyky_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.DiscreteLaplace.discreteLaplace_distSpec Occil.DiscreteExtra.discreteLaplace
+'SampLib.DiscreteLaplace.discreteLaplace_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FloatingMultiply.floatingMultiply_distSpec Occil.WeightedVariants.floatingMultiply
+'SampLib.FloatingMultiply.floatingMultiply_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FastDiceRoller.fastDiceRoller_distSpec Occil.fastDiceRoller
+'SampLib.FastDiceRoller.fastDiceRoller_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.FenwickDraw.fenwickDraw_ownedDistSpec Occil.WeightedVariants.fenwickDraw
+'SampLib.FenwickDraw.fenwickDraw_ownedDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.EScaled.eScaled_distSpec Occil.Constants.eScaled
+'SampLib.EScaled.eScaled_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.EulerPi.eOverPi_distSpec Occil.Constants.eOverPi
+'SampLib.EulerPi.eOverPi_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.PiAffine.piAffine_distSpec Occil.Constants.piAffine
+'SampLib.PiAffine.piAffine_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ReciprocalPiScaled.reciprocalPiScaled_distSpec Occil.Constants.reciprocalPiScaled
+'SampLib.ReciprocalPiScaled.reciprocalPiScaled_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.InverseEPlusRational.inverseEPlusRational_distSpec Occil.Constants.inverseEPlusRational
+'SampLib.InverseEPlusRational.inverseEPlusRational_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ExponentialRationalProduct.exponentialRationalProduct_distSpec Occil.Constants.exponentialRationalProduct
+'SampLib.ExponentialRationalProduct.exponentialRationalProduct_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SPEC_OK SampLib.FromPositiveSeries.fromPositiveSeries_distSpec Occil.Constants.fromPositiveSeries
+'SampLib.FromPositiveSeries.fromPositiveSeries_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ZetaThree.threeZetaThreeOverFour_distSpec Occil.Constants.threeZetaThreeOverFour
+'SampLib.ZetaThree.threeZetaThreeOverFour_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.AliasSamples.aliasSamples_distSpec Occil.aliasSamples
+'SampLib.AliasSamples.aliasSamples_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.RealCoin.realCoin_distSpec Occil.realCoin
+'SampLib.RealCoin.realCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.VonNeumann.vonNeumann_distSpec Occil.vonNeumann
+'SampLib.VonNeumann.vonNeumann_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/CoinCallers.lean
+'SampLib.Complement.complement_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CoinProduct.coinProduct_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CoinDisjunction.coinDisjunction_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CoinConditional.coinConditional_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EvenParity.evenParity_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CoinMean.coinMean_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OnePlusHalf.onePlusHalf_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ComplementHalf.complementHalf_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OneDivOnePlus.oneDivOnePlus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OneMinusOverOnePlus.oneMinusOverOnePlus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BernoulliRace.bernoulliRace_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GeometricFailures.geometricFailures_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProbabilityTheory.lintegral_geometricMeasure_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/DiscreteCallers.lean
+'SampLib.IterateCoin.twp_iterateCoin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IterateCoin.iterateCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IterateCoin.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformInt.uniformInt_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformInt.twp_uniformInt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformInt.lintegral_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FairCoin.twp_fairCoin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FairCoin.fairCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FairCoin.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BoundedGeometric.twp_boundedGeometric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BoundedGeometric.boundedGeometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BoundedGeometric.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Binomial.twp_binomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Binomial.binomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Binomial.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomWalk.twp_randomWalk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomWalk.randomWalk_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomWalk.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Geometric.twp_geometric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Geometric.geometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Geometric.lintegral_coinCredit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NegativeBinomial.twp_negativeBinomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NegativeBinomial.negativeBinomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NegativeBinomial.credit_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProbabilityTheory.lintegral_geometricMeasure_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndInt.twp_rndInt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndInt.rndInt_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndInt.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntRange.twp_rndIntRange' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntRange.rndIntRange_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntRange.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntExcRange.twp_rndIntExcRange' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntExcRange.rndIntExcRange_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntExcRange.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RationalCoin.twp_rationalCoin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RationalCoin.rationalCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RationalCoin.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch001Callers.lean
+'SampLib.BetaBinomial.betaBinomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomBits.randomBits_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomBits.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SymmetricGeometric.symmetricGeometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SymmetricGeometric.nonneg_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SymmetricGeometric.neg_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CoinComplement.distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch002Callers.lean
+'SampLib.UniformFormats.uniformRational_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformFormats.uniformFixed_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformFormats.uniformDyadic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeightedIntegerPower.twp_integerPower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NegativeHypergeometric.negativeHypergeometric_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.NegativeHypergeometric.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IsDistSpec.wp_supported' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Himanshu.himanshu_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PoissonTree.law_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PoissonTree.credit_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PoissonTree.initial_credit' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch003Callers.lean
+'SampLib.WordReductions.moduloReduction_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WordReductions.multiplyShift_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteImage.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SequentialCoins.sequentialCoins_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SequentialCoins.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BinomialHalfBits.binomialHalfBits_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BinomialHalfBits.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PoissonOne.poissonOne_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PoissonOne.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AcceptedProposal.expectation_preservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch004Callers.lean
+'SampLib.Binomial.thinning' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Binomial.filling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Binomial.reflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Binomial.mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PoissonRational.poissonRational_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PoissonRational.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Distributions.poissonMeasure_bind_binomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Distributions.lintegral_poisson_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BitmaskRejection.bitmaskRejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BitmaskRejection.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformRejection.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PowerOfTwoCeiling.twp_powerOfTwoCeiling' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch005Callers.lean
+'SampLib.CompoundPoisson.compoundPoisson_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CompoundPoisson.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CompoundPoisson.sum_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Skellam.skellam_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Skellam.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NeymanTypeA.neymanTypeA_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PolyaAeppli.polyaAeppli_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ZeroTruncatedPoisson.zeroTruncatedPoisson_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ZeroTruncatedPoisson.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch006Callers.lean
+'SampLib.MultivariatePoisson.multivariatePoisson_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.MultivariatePoisson.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.MultivariatePoisson.component_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LogUniform.logUniform_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LogUniform.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ClosedExp.openRec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ClosedExp.closeRec' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch007Callers.lean
+'SampLib.DebiasedModulo.debiasedModulo_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DebiasedModulo.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WordRotation.sum_cycles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeightedReservoirOne.weightedReservoirOne_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeightedReservoirOne.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeightedReservoirOne.initial_credit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DivisionRejection.divisionRejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DivisionRejection.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WordIntervals.quotient_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WordIntervals.remainder_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch008Callers.lean
+'SampLib.BinomialBinary.binomialBinary_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BinomialBinary.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BinomialBinary.expectation_preservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BinomialBinary.remaining_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Cub.cub_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Cub.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FlatChoice.flatChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FlatChoice.lookup' depends on axioms: [propext, Quot.sound]
+'SampLib.twp_integerChoose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LemireUniform.lemireUniform_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LemireUniform.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.MultiplyHigh.fibre' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.MultiplyHigh.sum_accepted' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch009Callers.lean
+'SampLib.Borel.borel_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Borel.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GaltonWatson.branching' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GaltonWatson.law_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GaltonWatson.credit_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GaltonWatson.poisson_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Distributions.lintegral_poisson_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OneillUniform.oneillUniform_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FisherHypergeometric.fisherHypergeometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FisherHypergeometric.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FisherHypergeometric.total_pos' depends on axioms: [propext, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch010Callers.lean
+'SampLib.LogarithmicSeries.logarithmicSeries_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LogarithmicSeries.expectation_preservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LogarithmicSeries.mass_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LogarithmicSeries.law_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Multinomial.multinomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Multinomial.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Multinomial.tsum_pmf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Multinomial.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeightedWithoutReplacement.weightedWithoutReplacement_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.WeightedSelections.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeightedSelections.support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CumulativeDraw.cumulativeDraw_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CumulativeDraw.twp_search' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteCDF.cdf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CumulativeChoice.cumulativeChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CategoricalCDF.quantile_category' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CategoricalCDF.law_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CategoricalCDF.scan_eq_cumulative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NatCounters.twp_zeroCounters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NatCounters.twp_incrementCounter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NatCounters.twp_decrementCounter' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch011Callers.lean
+'SampLib.UniformFromModulus.uniformFromModulus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ModulusReduction.small_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ModulusReduction.large_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformRectangles.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NegativeMultinomial.negativeMultinomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NegativeMultinomial.conservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NegativeMultinomial.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Multinomial.trial_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WalleniusHypergeometric.walleniusHypergeometric_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.WalleniusHypergeometric.walleniusHypergeometric_zero_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.Wallenius.wordLaw_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Wallenius.likelihood_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Wallenius.twoColor_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch012Callers.lean
+'SampLib.DiscreteLaplace.weighted_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DiscreteLaplace.accepted_map_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DiscreteLaplace.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FisherMultivariate.proposal_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FisherMultivariate.mass_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FisherMultivariate.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FisherMultivariate.law_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RationalChoice.rationalChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RationalChoice.scale_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RationalChoice.lintegral_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RationalChoice.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NatUrnOps.twp_validUrn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NatUrnOps.twp_urnWeights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBinaryFloat.uniformBinaryFloat_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBinaryFloat.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBinaryFloat.lawFrom_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch013Callers.lean
+'SampLib.BitRecycler.kernel_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BitRecycler.sum_credit_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BitRecycler.initial_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BitRecycler.exists_horizon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FisherMultivariate.fisherMultivariate_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.TwoLevelChoice.twoLevelChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeightedBlocks.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeightedBlocks.conditional_blocks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FYKY.fyky_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FYKY.fyky_one_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch014Callers.lean
+'SampLib.BinaryRounding.error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BinaryRounding.tie_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FloatingMultiply.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DiscreteLaplace.expectation_preservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DiscreteLaplace.discreteLaplace_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FloatingMultiply.floatingMultiply_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BitLength.twp_bitLength' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RoundBinary.twp_roundBinary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RoundBinary.zero_precision_fails' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FastDiceRoller.fastDiceRoller_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FastDiceRoller.fastDiceRoller_one_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionDiscreteBatch015Callers.lean
+'SampLib.CumulativeChoice.cumulativeChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RationalChoice.rationalChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch001Callers.lean
+'SampLib.OneDivTwoMinus.oneDivTwoMinus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OneDivTwoMinus.twp_oneDivTwoMinus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OneDivTwoMinus.bias_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalLogistic.reciprocalLogistic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalLogistic.twp_reciprocalLogistic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalLogistic.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IntegralMixture.integralMixture_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IntegralMixture.twp_integralMixture' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IntegralMixture.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch002Callers.lean
+'SampLib.OneDivTwoMinus.oneDivTwoMinus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OneDivTwoMinus.twp_oneDivTwoMinus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OneDivTwoMinus.bias_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalLogistic.reciprocalLogistic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalLogistic.twp_reciprocalLogistic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalLogistic.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IntegralMixture.integralMixture_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IntegralMixture.twp_integralMixture' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IntegralMixture.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PositivePowerSeries.positivePowerSeries_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PositivePowerSeries.success_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ComplementLogInverse.complementLogInverse_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ComplementLogInverse.bias_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ConvexCombination.convexCombination_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ConvexCombination.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ConvexCombination.success_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OddsProduct.oddsProduct_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OddsProduct.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BernoulliRetry.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CoinComplement.distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ComplementPowerSeries.complementPowerSeries_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.ComplementPowerSeries.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ComplementPowerSeries.success_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromDigits.fromDigits_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromDigits.twp_fromDigits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromDigits.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.ofDigits_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpMinusRational.expMinusRational_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpMinusRational.twp_expMinusRational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AlternatingFactorial.credit_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ApproximateFactory.approximateFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ApproximateFactory.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ApproximateFactory.success_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch003Callers.lean
+'SampLib.Polylogarithm.polylogarithm_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Polylogarithm.success_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FactoryIntegerPower.twp_intPower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AlgebraicRoot.algebraicRoot_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AlgebraicRoot.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CoinMean.credit_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.InverseGoldenRatio.inverseGoldenRatio_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.InverseGoldenRatio.polynomial_sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IntegerSign.twp_integerSign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SigmoidRational.sigmoidRational_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SigmoidDerivative.sigmoidDerivative_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SigmoidDerivative.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LogisticExp.logisticExp_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialRatio.exponentialRatio_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialRatio.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.TanhRational.tanhRational_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.TanhRational.coe_bias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BernoulliMixture.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch004Callers.lean
+'SampLib.ReciprocalAffine.reciprocalAffine_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalAffinePower.reciprocalAffinePower_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.InverseQuadratic.inverseQuadratic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SqrtTwoMinusOne.sqrtTwoMinusOne_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.InverseSqrtTwo.inverseSqrtTwo_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GoldenFamily.goldenFamily_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OffsetRace.offsetRace_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LogOverAffine.logOverAffine_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalAffine.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalAffinePower.reciprocalAffinePower_zero_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.InverseQuadratic.reciprocal_bias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GoldenFamily.polynomial_sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GoldenFamily.bias_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OffsetRace.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OffsetRace.bias_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LogOverAffine.bias_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch005Callers.lean
+'SampLib.ExpMinusFactory.expMinusFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpMinusFactory.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpTimesComplement.expTimesComplement_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpTimesComplement.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialFactory.flip_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialFactory.growth_step_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialFactory.amplified_continuation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalExpAffine.reciprocalExpAffine_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalExpAffine.coe_bias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErrorCredit.Induction.weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch006Callers.lean
+'SampLib.TwoCoin.twoCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.TwoCoin.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.TwoCoin.bias_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialTwist.exponentialTwist_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialTwist.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialTwist.coe_bias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Distributions.lintegral_poisson_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpMinusScaled.expMinusScaled_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpMinusScaled.law_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpMinusScaled.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.TanhScaled.tanhScaled_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.TanhScaled.coe_bias' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SigmoidScaled.sigmoidScaled_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch007Callers.lean
+'SampLib.UniformBag.twp_uniformBagLess' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBag.twp_uniformBagPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DyadicPosterior.law_refines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBag.comparison_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBag.exit_resolves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpMinusPolynomial.expMinusPolynomial_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpMinusPolynomial.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBag.twp_newUniformBag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBag.twp_freshStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBag.twp_uniformBagStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DyadicPosterior.law_eq_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DyadicPosterior.credit_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DyadicPosterior.resolves_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch008Callers.lean
+'SampLib.ContinuedFraction.generalizedContinuedFraction_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.ContinuedFraction.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ContinuedFraction.unique_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ContinuedFraction.recursive_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SimpleContinuedFraction.continuedFraction_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SimpleContinuedFraction.twp_continuedFraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Gambler.gambler_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Gambler.gambler_base_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.HighPowerLogistic.highPowerLogistic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.HighPowerLogistic.highPowerLogistic_base_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteGeometricWalk.credit_harmonic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteGeometricWalk.work_drift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteGeometricWalk.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteGeometricWalk.initialSlack_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch009Callers.lean
+'SampLib.LogOnePlusFactory.logOnePlusFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LogOnePlusFactory.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LogOnePlusFactory.integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ComplementLogOnePlus.complementLogOnePlus_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ComplementLogOnePlus.twp_complementLogOnePlus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LinearFactory.linear_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LinearFactory.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LinearFactory.inner_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LinearFactory.Parameters.expected_calls_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IsDistSpec.wp_supported' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromBounds.fromBounds_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBag.twp_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BagProduct.twp_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BagReciprocal.oneDivOnePlus_coinSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BagReciprocal.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SampleGeometricBag.sampleGeometricBag_coinSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SampleGeometricBag.twp_sampleGeometricBag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBag.IsCoinSpec.wp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentBernoulli.half_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentBernoulli.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromBounds.output_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromBounds.initial_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromBounds.unresolved_credit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromBounds.exists_horizon' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch010Callers.lean
+'SampLib.AffineRatio.affineRatio_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AffineRatio.direct_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AffineRankCoin.distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LinearPower.linearPower_zero_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LinearPower.linearPower_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Addition.addition_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Subtraction.subtraction_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Subtraction.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Division.division_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AffineFactory.affine_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch011Callers.lean
+'SampLib.FactorialSeriesFactory.factorialSeriesFactory_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.FactorialSeriesFactory.twp_factorialSeriesFactory' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpMinusMartingale.expMinusMartingale_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CosineFactory.cosineFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SineFactory.sineFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SineFactory.bias_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FactorialSeries.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FactorialSeries.initial_continuation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FactorialSeries.exists_horizon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FactorialSeries.unresolved_credit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GeometricThreshold.credit_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GeometricThreshold.mixture_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EpsilonDivision.epsilonDivision_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EpsilonDivision.epsilonDivision_zero_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EpsilonDivision.epsilonDivision_fullLower_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EpsilonDivision.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FactorialSeries.mean_eq_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FactorialSeries.value_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch012Callers.lean
+'SampLib.FromApproximateDigits.fromApproximateDigits_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.FromApproximateDigits.twp_fromApproximateDigits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromApproximateDigits.Model.exists_horizon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpMinusShifted.expMinusShifted_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpMinusShifted.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.TanhHalfShifted.tanhHalfShifted_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.TanhHalfShifted.bias_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpMinusShiftPower.expMinusShiftPower_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ShiftPowerCore.twp_loop' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ShiftPowerCore.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FactoryChoose.twp_choose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BinomialShiftPower.value_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BinomialShiftPower.product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RadixPosterior.credit_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RadixPosterior.law_eq_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromApproximateDigits.Model.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromApproximateDigits.Model.unresolved_credit' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionFactoriesBatch014Callers.lean
+'SampLib.PiAffine.piAffine_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalPiScaled.reciprocalPiScaled_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PiProbability.affine_tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReciprocalPiProbability.tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RealEnclosure.left_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RealEnclosure.right_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EScaled.eScaled_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RealEnclosure.Tight.scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EulerPi.eOverPi_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EulerPi.tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RealEnclosure.quotient_width_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RealEnclosure.quotient_tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RealEnclosure.Interval.quotient_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RealEnclosure.Interval.quotient_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ArctanSeries.hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ArctanSeries.machin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PiBounds.numerator_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PiBounds.interval_tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EulerEnclosure.twp_eBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EulerEnclosure.lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EulerEnclosure.upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EulerEnclosure.tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ClosedExp.closeRec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialRationalProduct.exponentialRationalProduct_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.ExponentialEnclosure.twp_expMinusBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromPositiveSeries.fromPositiveSeries_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromPositiveSeries.twp_fromPositiveSeries' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FromPositiveSeries.Program.source_eq' does not depend on any axioms
+'SampLib.twp_beta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBag.twp_choice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ZetaThree.threeZetaThreeOverFour_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ZetaThree.bias_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ZetaThree.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.InverseEPlusRational.inverseEPlusRational_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EulerReciprocal.tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EulerReciprocal.triple_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EulerReciprocal.center_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialEnclosure.remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialEnclosure.bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialEnclosure.tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExponentialEnclosure.numerator_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch001Callers.lean
+'SampLib.GenerativeModel.generativeModel_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GenerativeModel.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.InverseQuantile.inverseQuantile_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.InverseQuantile.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.KernelDensity.kernelDensity_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.KernelDensity.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IsDistSpec.wp_supported' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBoxPoint.uniformBoxPoint_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBoxPoint.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ListProduct.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FlipBits.flipBits_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FlipBits.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch002Callers.lean
+'SampLib.StoppedSum.stoppedSum_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.StoppedSum.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Episodes.episodes_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Episodes.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.KernelDensityVector.kernelDensityVector_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ListMapSampling.map_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Stratified1D.stratified1D_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomString.randomString_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomString.randomString_zero_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomDateTime.randomDateTime_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpHalfCoin.expHalfCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ExpHalfCoin.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GaussianInteger.gaussianInteger_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GaussianInteger.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GaussianSelector.twp_gaussianSelector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GaussianSelector.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch003Callers.lean
+'SampLib.IsDistSpec.map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Bootstrap.bootstrap_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Bootstrap.bootstrap_empty_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Histogram.histogram_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Histogram.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Permutations.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Permutations.ofFn_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Array.twp_readArray' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Array.twp_load_ofFn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Array.twp_store_ofFn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Gaussian.gaussian_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Gaussian.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OrderStatistic.orderStatistic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OrderStatistic.sorted_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.OrderStatistic.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch004Callers.lean
+'SampLib.Shuffle.shuffle_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PositiveComposition.positiveComposition_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeakComposition.weakComposition_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatinHypercube1D.latinHypercube1D_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.StratifiedBox.stratifiedBox_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ClassifiedModel.classifiedModel_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ArrayPermutation.owns_after_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ArrayPermutation.owns_after_shuffle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Compositions.law_eq_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Compositions.weakLaw_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.StratifiedBox.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ClassifiedModel.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch005Callers.lean
+'SampLib.MarkovChain.markovChain_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.MarkovChain.markovChain_zero_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomMap.randomMap_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomWalkPath.randomWalkPath_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Sattolo.sattolo_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PermutationSamples.permutationSamples_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteKernels.invariant_of_detailed_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SattoloLaw.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SattoloLaw.card_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch006Callers.lean
+'SampLib.StoppedMinimum.stoppedMinimum_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.StoppedMaximum.stoppedMaximum_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.StoppedExtrema.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.StoppedExtrema.tail_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.MarkovTrajectory.markovTrajectory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.MarkovTrajectory.markovTrajectory_zero_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GibbsSweep.gibbsSweep_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomScanGibbs.randomScanGibbs_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomScanGibbs.invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomScanGibbs.randomScanGibbs_zero_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch007Callers.lean
+'SampLib.RandomGraph.randomGraph_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomGraph.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomGraph.edges_ordered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomGraph.law_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomGraph.law_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Reservoir.reservoir_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReservoirLaw.incoming_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReservoirLaw.finish_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ReservoirLaw.law_singleton_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch008Callers.lean
+'SampLib.PermutationTest.permutationTest_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PermutationTest.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GroupedPermutation.groupedPermutation_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ListPartition.twp_splitAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BooleanEvent.map_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PdfRejection.pdfRejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IntegerThreshold.threshold_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RndIntExcRange.ae_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AcceptedProposal.expectation_preservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatinHypercube.latinHypercube_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatinHypercube.columns_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SampleWithReplacement.all_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ListProduct.length_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.InverseCDF.inverseCDF_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteCDF.cdf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IsDistSpec.map_supported' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch009Callers.lean
+'SampLib.Derangement.derangement_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DerangementLaw.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Shuffle.shuffleVector_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.MetropolisHastings.metropolisHastings_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.MetropolisHastings.metropolisHastings_zero_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SymmetricMetropolis.metropolis_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SymmetricMetropolis.metropolis_zero_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Metropolis.accepted_flux' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.MetropolisHastings.invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SymmetricMetropolis.invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IsOwnedDistSpec.wp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.repeatSample_ownedDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Array.twp_store_vector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AliasTable.voseDraw_ownedDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AliasMass.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch010Callers.lean
+'SampLib.DiscreteCDF.discreteCDF_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DiscreteCDF.twp_search' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PiecewiseConstant.piecewiseConstant_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PiecewiseLinear.piecewiseLinear_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LinearBin.twp_draw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LinearGridMass.twice_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LinearBin.mass_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch011Callers.lean
+'SampLib.CouplingFromPast.couplingFromPast_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PerfectFiniteChain.perfectFiniteChain_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CouplingFromPast.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CouplingFromPast.Block.amplified_drift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErrorCredit.Induction.weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RandomMapSupport.typedRandomMap_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SliceSampler.sliceSampler_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SliceSampler.sliceSampler_start_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SliceSampler.sliceSampler_zero_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SliceStep.sliceStep_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SliceLaw.weighted_flux' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SliceLaw.iterate_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch012Callers.lean
+'SampLib.UniformBinaryFloat.uniformBinaryFloat_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformBinaryFloat.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WalleniusMultivariate.walleniusMultivariate_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.MultivariateHypergeometric.multivariateHypergeometric_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.NatUrnOps.twp_validUrn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NatUrnOps.twp_urnWeights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.VoseSamples.voseSamples_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.VoseTable.twp_voseTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.VoseBalance.finishedTable_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch013Callers.lean
+'SampLib.FenwickDraw.fenwickDraw_ownedDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.NewFenwick.twp_newFenwick' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FenwickSet.twp_fenwickSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FenwickPropagation.twp_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FenwickPropagation.twp_replace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Array.twp_store_vector_loc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.«agent-docs».reviews.ExpansionStructuredBatch013Callers.0.ReviewCountableExtensions.mh_stays' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.«agent-docs».reviews.ExpansionStructuredBatch013Callers.0.ReviewCountableExtensions.metro_advances' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.CountableMetropolisHastings.metropolisHastings_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.CountableMetropolis.metropolis_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CountableMetropolisHastings.proposal_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.CountableMetropolisHastings.metropolisHastings_zero_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.CountableMetropolis.metropolis_zero_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LowBit.twp_lowBit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FenwickMath.cell_update_int' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FenwickMath.exists_selects' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FenwickMath.selects_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FenwickMath.SearchInvariant.advance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FenwickMath.SearchInvariant.stay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FenwickCategory.category_selects' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PiBounds.twp_arctanReciprocalBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PiBounds.twp_piBounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PiBounds.piRaw_den_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/ExpansionStructuredBatch014Callers.lean
+'SampLib.Bootstrap.bootstrap_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Bootstrap.bootstrap_empty_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PermutationSamples.permutationSamples_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatinHypercube.latinHypercube_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GroupedPermutation.groupedPermutation_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeakComposition.weakComposition_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AliasSamples.aliasSamples_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WalkerSetup.twp_setup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WalkerFind.twp_find' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WalkerBalance.twp_prepare' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WalkerDraw.draw_ownedDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WalkerAlias.State.pending_transfer_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WalkerAlias.State.valid_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WalkerAlias.State.terminal_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.twp_beta' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/NextBatchBinomialMathCallers.lean
+'SampLib.Binomial.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Binomial.law_eq_binomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Binomial.lintegral_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/NextBatchContinuousCallers.lean
+'SampLib.Distributions.Exponential.lintegral_expMeasure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DecreasingTrial.twp_decreasingTrial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Exponential.exponential_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Laplace.laplace_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Erlang.erlang_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/NextBatchFiniteCallers.lean
+'SampLib.Dice.twp_dice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Dice.dice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Dice.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SampleWithoutReplacement.twp_sampleWithoutReplacement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.SampleWithoutReplacement.sampleWithoutReplacement_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.SampleWithoutReplacement.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SampleWithoutReplacement.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SampleInOrder.sampleInOrder_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SampleInOrder.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Hypergeometric.twp_hypergeometric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Hypergeometric.hypergeometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Hypergeometric.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Hypergeometric.expectation_coin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PolyaEggenberger.twp_polyaEggenberger' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PolyaEggenberger.polyaEggenberger_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PolyaEggenberger.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PolyaEggenberger.word_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Urn.pmf_true' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Urn.pmf_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/NextBatchWeightedFactoriesCallers.lean
+'SampLib.WeightedChoice.weightedChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeightedChoice.rank_partition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeightedChoice.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BernsteinFactory.bernsteinFactory_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BernsteinFactory.success_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PLogInverse.pLogInverse_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PLogInverse.success_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeightedRejection.weightedRejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.WeightedRejection.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+REVALIDATE_CALLER agent-docs/reviews/StructuredCallers.lean
+BASELINE_REVALIDATION_OK 216

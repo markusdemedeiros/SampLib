@@ -1,0 +1,7 @@
+'SampLib.MarkovChain.markovStep_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ShapeRejection.shapeRejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Rejection.expectation_preservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactStructured001.full_shape' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+SPEC_OK SampLib.MarkovChain.markovStep_distSpec Occil.General.markovStep
+SPEC_OK SampLib.ShapeRejection.shapeRejection_distSpec Occil.General.shapeRejection

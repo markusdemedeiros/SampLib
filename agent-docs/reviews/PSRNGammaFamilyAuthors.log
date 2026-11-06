@@ -1,0 +1,40 @@
+@newGarima_latentDistSpec : ∀ {rT : Type} [inst : MeasurableSpace rT] [inst_1 : LawfulProbLangℝ rT]
+  [inst_2 : ProbLangDist rT] [ProbLangDist.IsUniformInt rT] [inst_4 : ProbLangFFI rT] [inst_5 : ProbLangObs rT]
+  {hlc : HasLC} {GF : BundledGFunctors} [inst_6 : ErisGS rT hlc GF] (E : CoPset) (n d : ℤ) (hn : 0 < n) (hd : 0 < d),
+  IsLatentDistSpec E pl(&Occil.PSRN.newGarima #n #d #()) (garimaModel n d hn hd) MixtureModel.State.initial
+    (SampLib.PSRNGammaMixture.owns 1 2 n d)
+@newIGarima_latentDistSpec : ∀ {rT : Type} [inst : MeasurableSpace rT] [inst_1 : LawfulProbLangℝ rT]
+  [inst_2 : ProbLangDist rT] [ProbLangDist.IsUniformInt rT] [inst_4 : ProbLangFFI rT] [inst_5 : ProbLangObs rT]
+  {hlc : HasLC} {GF : BundledGFunctors} [inst_6 : ErisGS rT hlc GF] (E : CoPset) (n d : ℤ) (hn : 0 < n) (hd : 0 < d),
+  IsLatentDistSpec E pl(&Occil.PSRN.newIGarima #n #d #()) (igarimaModel n d hn hd) MixtureModel.State.initial
+    (SampLib.PSRNGammaMixture.owns 1 2 n d)
+@newXgamma_latentDistSpec : ∀ {rT : Type} [inst : MeasurableSpace rT] [inst_1 : LawfulProbLangℝ rT]
+  [inst_2 : ProbLangDist rT] [ProbLangDist.IsUniformInt rT] [inst_4 : ProbLangFFI rT] [inst_5 : ProbLangObs rT]
+  {hlc : HasLC} {GF : BundledGFunctors} [inst_6 : ErisGS rT hlc GF] (E : CoPset) (n d : ℤ) (hn : 0 < n) (hd : 0 < d),
+  IsLatentDistSpec E pl(&Occil.PSRN.newXgamma #n #d #()) (xgammaModel n d hn hd) MixtureModel.State.initial
+    (SampLib.PSRNGammaMixture.owns 1 3 n d)
+@newWeightedExponentialGamma_latentDistSpec : ∀ {rT : Type} [inst : MeasurableSpace rT] [inst_1 : LawfulProbLangℝ rT]
+  [inst_2 : ProbLangDist rT] [ProbLangDist.IsUniformInt rT] [inst_4 : ProbLangFFI rT] [inst_5 : ProbLangObs rT]
+  {hlc : HasLC} {GF : BundledGFunctors} [inst_6 : ErisGS rT hlc GF] (E : CoPset) (n d : ℤ) (hn : 0 < n) (hd : 0 < d),
+  IsLatentDistSpec E pl(&Occil.PSRN.newWeightedExponentialGamma #n #d #()) (weightedExponentialGammaModel n d hn hd)
+    MixtureModel.State.initial (SampLib.PSRNGammaMixture.owns 2 3 n d)
+@newMirra_latentDistSpec : ∀ {rT : Type} [inst : MeasurableSpace rT] [inst_1 : LawfulProbLangℝ rT]
+  [inst_2 : ProbLangDist rT] [ProbLangDist.IsUniformInt rT] [inst_4 : ProbLangFFI rT] [inst_5 : ProbLangObs rT]
+  {hlc : HasLC} {GF : BundledGFunctors} [inst_6 : ErisGS rT hlc GF] (E : CoPset) (n d an ad : ℤ) (hn : 0 < n)
+  (hd : 0 < d) (han : 0 < an) (had : 0 < ad),
+  IsLatentDistSpec E pl(&Occil.PSRN.newMirra #n #d #an #ad #()) (mirraModel n d an ad hn hd han had)
+    MixtureModel.State.initial (SampLib.PSRNGammaMixture.owns 1 3 n d)
+'SampLib.PSRNGammaFamilies.newGarima_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNGammaFamilies.newIGarima_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNGammaFamilies.newXgamma_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNGammaFamilies.newWeightedExponentialGamma_latentDistSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.PSRNGammaFamilies.newMirra_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNGammaFamilies.garima_model_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNGammaFamilies.igarima_model_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNGammaFamilies.xgamma_model_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNGammaFamilies.weightedExponentialGamma_model_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.PSRNGammaFamilies.mirra_model_law' depends on axioms: [propext, Classical.choice, Quot.sound]

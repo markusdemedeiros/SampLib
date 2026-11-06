@@ -1,0 +1,12 @@
+lake build SampLib.Samplers.PSRNRayleigh
+Build completed successfully (4417 jobs).
+
+lake env lean agent-docs/reviews/ExactLatentBatch009Callers.lean
+'SampLib.PSRNRayleigh.newRayleigh_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNRayleigh.newRayleigh_representedDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNRayleigh.model_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNRayleigh.cdf_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactLatent009.construct_and_reread' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-latent009-signatures.lean
+SPEC_OK SampLib.PSRNRayleigh.newRayleigh_latentDistSpec Occil.PSRN.newRayleigh

@@ -1,0 +1,23 @@
+lake build SampLib.Samplers.PSRNGammaInteger
+Build completed successfully (4396 jobs).
+
+lake build SampLib.Samplers.PSRNGammaMixture
+Build completed successfully (4401 jobs).
+
+lake build SampLib.Samplers.PSRNLindley
+Build completed successfully (4402 jobs).
+
+lake env lean agent-docs/reviews/ExactLatentBatch008Callers.lean
+'SampLib.PSRNGammaInteger.newGammaInteger_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNGammaInteger.model_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNGammaMixture.newGammaMixture_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNGammaMixture.model_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNLindley.newLindley_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNLindley.model_law_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.GammaSuccessor.density_successor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactLatent008.construct_and_reread' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-latent008-signatures.lean
+SPEC_OK SampLib.PSRNGammaInteger.newGammaInteger_latentDistSpec Occil.PSRN.newGammaInteger
+SPEC_OK SampLib.PSRNGammaMixture.newGammaMixture_latentDistSpec Occil.PSRN.newGammaMixture
+SPEC_OK SampLib.PSRNLindley.newLindley_latentDistSpec Occil.PSRN.newLindley

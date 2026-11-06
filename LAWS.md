@@ -2,7 +2,7 @@
 
 [Implementations](code/README.md) · [Verified suite](SampLib/README.md)
 
-588 sampler entries; 216 accepted proofs. **Verified** links identify accepted proofs; **draft** links are unreviewed. A dash means unverified. Domains and parameter conventions are in the code/proof.
+588 sampler entries; 336 accepted proofs. **Verified** links identify accepted proofs; **draft** links are unreviewed. A dash means unverified. Domains and parameter conventions are in the code/proof.
 
 $\mathrm{Geom}_0(p)$ counts failures. $\mathrm{Cat}(w)$ has masses $w_i/\sum_jw_j$. $\mathsf{Lazy}[D]$ denotes the intended latent law of a stateful real. $\mathsf{Grid}_s[D]$ labels a numerical algorithm targeting $D$; it does **not** claim its output is an exact or exactly rounded draw from $D$.
 
@@ -21,7 +21,7 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | `Occil.evenParity` | $\mathrm{Bern}\!\left(\frac1{1+p}\right)$ | Parity of a geometric run | [Basic.lean](code/Samplers/Bernoulli/Basic.lean#L44) | [**verified**](SampLib/Samplers/EvenParity.lean) |
 | `Occil.expMinusFactory` | $\mathrm{Bern}\!\left(e^{-p}\right)$ | Thinned decreasing-uniform chain | [Basic.lean](code/Samplers/Bernoulli/Basic.lean#L74) | [**verified**](SampLib/Samplers/ExpMinusFactory.lean) |
 | `Occil.expMinusRational` | $\mathrm{Bern}\!\left(e^{-x/y}\right)$ | Alternating factorial-trial parity | [Basic.lean](code/Samplers/Bernoulli/Basic.lean#L60) | [**verified**](SampLib/Samplers/ExpMinusRational.lean) |
-| `Occil.fractionalPower` | $\mathrm{Bern}\!\left(p^{a/b}\right)$ | Mendo reciprocal-hazard trials | [Basic.lean](code/Samplers/Bernoulli/Basic.lean#L51) | — |
+| `Occil.fractionalPower` | $\mathrm{Bern}\!\left(p^{a/b}\right)$ | Mendo reciprocal-hazard trials | [Basic.lean](code/Samplers/Bernoulli/Basic.lean#L51) | [**verified**](SampLib/Samplers/FractionalPower.lean) |
 | `Occil.oneDivOnePlus` | $\mathrm{Bern}\!\left(\frac1{1+p}\right)$ | Two-outcome retry coin | [Basic.lean](code/Samplers/Bernoulli/Basic.lean#L39) | [**verified**](SampLib/Samplers/OneDivOnePlus.lean) |
 | `Occil.vonNeumann` | $\mathrm{Bern}\!\left(\frac12\right)$ | Retry equal pairs of coin flips | [Basic.lean](code/Samplers/Bernoulli/Basic.lean#L26) | [**verified**](SampLib/Samplers/VonNeumann.lean) |
 ## Bernoulli factories / Combinators
@@ -38,8 +38,8 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | `Occil.FactoryExtra.complementHalf` | $\mathrm{Bern}\!\left(\frac{1-p}{2}\right)$ | (1-p)/2 | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L124) | [**verified**](SampLib/Samplers/ComplementHalf.lean) |
 | `Occil.FactoryExtra.complementLogInverse` | $\mathrm{Bern}\!\left((1-p)\log(1/(1-p))\right)$ | (1-p)*ln(1/(1-p)); requires p<1 | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L97) | [**verified**](SampLib/Samplers/ComplementLogInverse.lean) |
 | `Occil.FactoryExtra.complementLogOnePlus` | $\mathrm{Bern}(1-\log(1+p))$ | 1-ln(1+p) | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L128) | [**verified**](SampLib/Samplers/ComplementLogOnePlus.lean) |
-| `Occil.FactoryExtra.complementOverLogInverse` | $\mathrm{Bern}\!\left(\frac{1-p}{\log(1/p)}\right)$ | (1-p)/ln(1/p), extended to one at p=1; p>0 | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L107) | — |
-| `Occil.FactoryExtra.expIntegral` | $\mathrm{Bern}\!\left(\frac{1-e^{-(m+p)}}{m+p}\right)$ | (1-exp(-(m+p)))/(m+p), with integer m>=0 | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L71) | — |
+| `Occil.FactoryExtra.complementOverLogInverse` | $\mathrm{Bern}\!\left(\frac{1-p}{\log(1/p)}\right)$ | (1-p)/ln(1/p), extended to one at p=1; p>0 | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L107) | [**verified**](SampLib/Samplers/LogRatioFactories.lean) |
+| `Occil.FactoryExtra.expIntegral` | $\mathrm{Bern}\!\left(\frac{1-e^{-(m+p)}}{m+p}\right)$ | (1-exp(-(m+p)))/(m+p), with integer m>=0 | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L71) | [**verified**](SampLib/Samplers/ExpIntegral.lean) |
 | `Occil.FactoryExtra.exponentialRatio` | $\mathrm{Bern}\!\left(\frac{1+e^{z-w}}{1+e^z}\right)$ | (1+exp(z-w))/(1+exp(z)), z=a/b,w=x/y>=0 | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L66) | [**verified**](SampLib/Samplers/ExponentialRatio.lean) |
 | `Occil.FactoryExtra.exponentialTwist` | $\mathrm{Bern}\!\left(\frac{pe^z}{pe^z+1-p}\right)$ | Exponential shift p*exp(z)/(p*exp(z)+1-p), z=a/b | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L58) | [**verified**](SampLib/Samplers/ExponentialTwist.lean) |
 | `Occil.FactoryExtra.logOverAffine` | $\mathrm{Bern}\!\left(\frac{\log(c+p)}{c+p}\right)$ | ln(c+p)/(c+p), c=a/b>=1, via the one-cycle permutation schema | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L83) | [**verified**](SampLib/Samplers/LogOverAffine.lean) |
@@ -47,7 +47,7 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | `Occil.FactoryExtra.oneMinusOverOnePlus` | $\mathrm{Bern}\!\left(\frac{1-p}{1+p}\right)$ | (1-p)/(1+p), a uniformly-fast two-coin construction | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L16) | [**verified**](SampLib/Samplers/OneMinusOverOnePlus.lean) |
 | `Occil.FactoryExtra.onePlusHalf` | $\mathrm{Bern}\!\left(\frac{1+p}{2}\right)$ | (1+p)/2 | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L120) | [**verified**](SampLib/Samplers/OnePlusHalf.lean) |
 | `Occil.FactoryExtra.pLogInverse` | $\mathrm{Bern}\!\left(p\log(1/p)\right)$ | Geometric count and reciprocal acceptance | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L91) | [**verified**](SampLib/Samplers/PLogInverse.lean) |
-| `Occil.FactoryExtra.pOverLogInverseComplement` | $\mathrm{Bern}\!\left(\frac p{\log(1/(1-p))}\right)$ | p/ln(1/(1-p)), extended to one at p=0; p<1 | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L101) | — |
+| `Occil.FactoryExtra.pOverLogInverseComplement` | $\mathrm{Bern}\!\left(\frac p{\log(1/(1-p))}\right)$ | p/ln(1/(1-p)), extended to one at p=0; p<1 | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L101) | [**verified**](SampLib/Samplers/LogRatioFactories.lean) |
 | `Occil.FactoryExtra.polylogarithm` | $\mathrm{Bern}\!\left(\mathrm{Li}_r(p)(1/p-1)\right)$ | Li_r(p)*(1/p-1), integer r>=1, extended to one at p=0 | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L113) | [**verified**](SampLib/Samplers/Polylogarithm.lean) |
 | `Occil.FactoryExtra.sigmoidDerivative` | $\mathrm{Bern}\!\left(\sigma(z)(1-\sigma(z))\right)$ | expit(z)*(1-expit(z)), z=a/b | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L132) | [**verified**](SampLib/Samplers/SigmoidDerivative.lean) |
 | `Occil.FactoryExtra.sigmoidRational` | $\mathrm{Bern}\!\left(\frac1{1+e^{-a/b}}\right)$ | expit(z), where z=a/b may have either sign | [Elementary.lean](code/Samplers/Bernoulli/Elementary.lean#L23) | [**verified**](SampLib/Samplers/SigmoidRational.lean) |
@@ -59,15 +59,15 @@ Unverified formulas describe intended laws, not established correctness. Removab
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.FactoryExtra.binaryExponential` | $\mathrm{Bern}\!\left(2^{-m(k+p)}\right)$ | 2^(-m*(k+p)), integers m,k>=0 | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L88) | — |
-| `Occil.FactoryExtra.binaryExponentialRational` | $\mathrm{Bern}\!\left(2^{-ap/b}\right)$ | 2^(-(a/b)*p), a>=0,b>0 | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L98) | — |
-| `Occil.FactoryExtra.expDivThree` | $\mathrm{Bern}\!\left(e^p/3\right)$ | exp(p)/3, from Poisson generating functions and the known e/3 coin | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L65) | — |
-| `Occil.FactoryExtra.expMinusExp` | $\mathrm{Bern}\!\left(e^{-e^{m+p}}\right)$ | exp(-exp(m+p)), integer m>=0; Poisson thinning from the source recipe | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L72) | — |
+| `Occil.FactoryExtra.binaryExponential` | $\mathrm{Bern}\!\left(2^{-m(k+p)}\right)$ | 2^(-m*(k+p)), integers m,k>=0 | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L88) | [**verified**](SampLib/Samplers/BinaryExponential.lean) |
+| `Occil.FactoryExtra.binaryExponentialRational` | $\mathrm{Bern}\!\left(2^{-ap/b}\right)$ | 2^(-(a/b)*p), a>=0,b>0 | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L98) | [**verified**](SampLib/Samplers/BinaryExponentialRational.lean) |
+| `Occil.FactoryExtra.expDivThree` | $\mathrm{Bern}\!\left(e^p/3\right)$ | exp(p)/3, from Poisson generating functions and the known e/3 coin | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L65) | [**verified**](SampLib/Samplers/ExpDivThree.lean) |
+| `Occil.FactoryExtra.expMinusExp` | $\mathrm{Bern}\!\left(e^{-e^{m+p}}\right)$ | exp(-exp(m+p)), integer m>=0; Poisson thinning from the source recipe | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L72) | [**verified**](SampLib/Samplers/ExpMinusExp.lean) |
 | `Occil.FactoryExtra.expMinusPolynomial` | $\mathrm{Bern}\!\left(e^{-\sum_i a_ip^i}\right)$ | exp(-sum_i a_i*p^i), nonnegative rational coefficient pairs a_i | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L39) | [**verified**](SampLib/Samplers/ExpMinusPolynomial.lean) |
 | `Occil.FactoryExtra.expMinusScaled` | $\mathrm{Bern}\!\left(e^{-cp}\right)$ | exp(-c*p), c=a/b>=0, by Poisson thinning | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L17) | [**verified**](SampLib/Samplers/ExpMinusScaled.lean) |
 | `Occil.FactoryExtra.expMinusShiftPower` | $\mathrm{Bern}\!\left(e^{-(m+p)^k}\right)$ | exp(-(m+p)^k), integer m,k>=0, via its binomial polynomial expansion | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L52) | [**verified**](SampLib/Samplers/ExpMinusShiftPower.lean) |
 | `Occil.FactoryExtra.expMinusShifted` | $\mathrm{Bern}\!\left(e^{-(m+p)}\right)$ | exp(-m-p), where m=a/b>=0 | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L23) | [**verified**](SampLib/Samplers/ExpMinusShifted.lean) |
-| `Occil.FactoryExtra.expSquareTimesComplement` | $\mathrm{Bern}\!\left(e^{p^2}(1-p)\right)$ | exp(p^2)*(1-p), the factorial-pair alternating-series construction | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L82) | — |
+| `Occil.FactoryExtra.expSquareTimesComplement` | $\mathrm{Bern}\!\left(e^{p^2}(1-p)\right)$ | exp(p^2)*(1-p), the factorial-pair alternating-series construction | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L82) | [**verified**](SampLib/Samplers/ExpSquareTimesComplement.lean) |
 | `Occil.FactoryExtra.expTimesComplement` | $\mathrm{Bern}\!\left(e^p(1-p)\right)$ | exp(p)*(1-p), the sorted-uniform von Neumann schema | [Exponential.lean](code/Samplers/Bernoulli/Exponential.lean#L28) | [**verified**](SampLib/Samplers/ExpTimesComplement.lean) |
 ## Bernoulli factories / Linear
 
@@ -79,25 +79,25 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | `Occil.FactoryExtra.gambler` | $\mathrm{Bern}\!\left(\frac{\sum_{j=1}^{h-1}(cp)^j}{\sum_{j=0}^{h-1}(cp)^j}\right)$ | Finite gambler’s-ruin hitting probability | [Linear.lean](code/Samplers/Bernoulli/Linear.lean#L16) | [**verified**](SampLib/Samplers/Gambler.lean) |
 | `Occil.FactoryExtra.highPowerLogistic` | $\mathrm{Bern}\!\left(\frac{(cp)^m}{\sum_{j=0}^m(cp)^j}\right)$ | High-power logistic walk, c^m*p^m/(1+cp+...+(cp)^m) | [Linear.lean](code/Samplers/Bernoulli/Linear.lean#L25) | [**verified**](SampLib/Samplers/HighPowerLogistic.lean) |
 | `Occil.FactoryExtra.linear` | $\mathrm{Bern}\!\left(cp\right)$ | Exact expanding linear factory, (a/b)*p (Huber 2016) | [Linear.lean](code/Samplers/Bernoulli/Linear.lean#L35) | [**verified**](SampLib/Samplers/LinearFactory.lean) |
-| `Occil.FactoryExtra.linear2014` | $\mathrm{Bern}\!\left(cp\right)$ | Huber 2014 expanding linear factory | [Linear.lean](code/Samplers/Bernoulli/Linear.lean#L129) | — |
-| `Occil.FactoryExtra.linearLowProbability` | $\mathrm{Bern}\!\left(cp\right)$ | Low-probability linear factory; [known margin defect](agent-docs/reviews/ExpansionDomainFindings.md#low-probability-linear-wrapper) | [Linear.lean](code/Samplers/Bernoulli/Linear.lean#L93) | — |
+| `Occil.FactoryExtra.linear2014` | $\mathrm{Bern}\!\left(cp\right)$ | Huber 2014 expanding linear factory | [Linear.lean](code/Samplers/Bernoulli/Linear.lean#L129) | [**verified**](SampLib/Samplers/Linear2014.lean) |
+| `Occil.FactoryExtra.linearLowProbability` | $\mathrm{Bern}\!\left(cp\right)$ | Low-probability linear factory; [known margin defect](agent-docs/reviews/ExpansionDomainFindings.md#low-probability-linear-wrapper) | [Linear.lean](code/Samplers/Bernoulli/Linear.lean#L93) | [**verified**](SampLib/Samplers/LinearLowProbability.lean) |
 | `Occil.FactoryExtra.linearPower` | $\mathrm{Bern}\!\left((cp)^m\right)$ | (c*p)^n, with the same margin condition as linear | [Linear.lean](code/Samplers/Bernoulli/Linear.lean#L57) | [**verified**](SampLib/Samplers/LinearPower.lean) |
-| `Occil.FactoryExtra.linearPowerWalk` | $\mathrm{Bern}\!\left((cp)^m\right)$ | Huber 2019 joint linear-and-power factory, (c*p)^exponent | [Linear.lean](code/Samplers/Bernoulli/Linear.lean#L108) | — |
+| `Occil.FactoryExtra.linearPowerWalk` | $\mathrm{Bern}\!\left((cp)^m\right)$ | Huber 2019 joint linear-and-power factory, (c*p)^exponent | [Linear.lean](code/Samplers/Bernoulli/Linear.lean#L108) | [**verified**](SampLib/Samplers/LinearPowerWalk.lean) |
 | `Occil.FactoryExtra.subtraction` | $\mathrm{Bern}\!\left(p-q\right)$ | p-q, assuming p-q >= e/f>0 | [Linear.lean](code/Samplers/Bernoulli/Linear.lean#L68) | [**verified**](SampLib/Samplers/Subtraction.lean) |
 ## Bernoulli factories / Polynomials
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.FactoryExtra.polynomial` | $\mathrm{Bern}\!\left(f(p)\right)$ | Polynomial evaluation through automatic Bernstein degree elevation | [Polynomials.lean](code/Samplers/Bernoulli/Polynomials.lean#L19) | — |
-| `Occil.FactoryExtra.rationalFunction` | $\mathrm{Bern}\!\left(f(p)/g(p)\right)$ | A(p)/(A(p)+B(p)) with polynomial numerator/complement denominator | [Polynomials.lean](code/Samplers/Bernoulli/Polynomials.lean#L48) | — |
-| `Occil.FactoryExtra.threePointPiecewise` | $\mathrm{Bern}(f(p)),\ f\text{ piecewise affine}$ | Three-point piecewise-affine coin construction | [Polynomials.lean](code/Samplers/Bernoulli/Polynomials.lean#L57) | — |
+| `Occil.FactoryExtra.polynomial` | $\mathrm{Bern}\!\left(f(p)\right)$ | Polynomial evaluation through automatic Bernstein degree elevation | [Polynomials.lean](code/Samplers/Bernoulli/Polynomials.lean#L19) | [**verified**](SampLib/Samplers/PolynomialFactory.lean) |
+| `Occil.FactoryExtra.rationalFunction` | $\mathrm{Bern}\!\left(f(p)/g(p)\right)$ | A(p)/(A(p)+B(p)) with polynomial numerator/complement denominator | [Polynomials.lean](code/Samplers/Bernoulli/Polynomials.lean#L48) | [**verified**](SampLib/Samplers/RationalFunction.lean) |
+| `Occil.FactoryExtra.threePointPiecewise` | $\mathrm{Bern}(f(p)),\ f\text{ piecewise affine}$ | Three-point piecewise-affine coin construction | [Polynomials.lean](code/Samplers/Bernoulli/Polynomials.lean#L57) | [**verified**](SampLib/Samplers/ThreePointPiecewise.lean) |
 ## Bernoulli factories / Powers
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.FactoryExtra.rationalPower` | $\mathrm{Bern}\!\left(p^{a/b}\right)$ | p^(a/b), a>=0,b>0, combining integer and fractional powers | [Powers.lean](code/Samplers/Bernoulli/Powers.lean#L15) | — |
+| `Occil.FactoryExtra.rationalPower` | $\mathrm{Bern}\!\left(p^{a/b}\right)$ | p^(a/b), a>=0,b>0, combining integer and fractional powers | [Powers.lean](code/Samplers/Bernoulli/Powers.lean#L15) | [**verified**](SampLib/Samplers/RationalPower.lean) |
 | `Occil.FactoryExtra.twoCoin` | $\mathrm{Bern}\!\left(\frac{\beta xp}{\beta(xp+yq)+(1-\beta)(x+y)}\right)$ | Portkey two-coin race | [Powers.lean](code/Samplers/Bernoulli/Powers.lean#L35) | [**verified**](SampLib/Samplers/TwoCoin.lean) |
-| `Occil.FactoryExtra.twoCoinPower` | $\mathrm{Bern}\!\left(p^q\right)$ | p^q with two unknown-probability input coins (Mendo's two-coin variant) | [Powers.lean](code/Samplers/Bernoulli/Powers.lean#L24) | — |
+| `Occil.FactoryExtra.twoCoinPower` | $\mathrm{Bern}\!\left(p^q\right)$ | p^q with two unknown-probability input coins (Mendo's two-coin variant) | [Powers.lean](code/Samplers/Bernoulli/Powers.lean#L24) | [**verified**](SampLib/Samplers/TwoCoinPower.lean) |
 ## Bernoulli factories / Rational
 
 | Sampler | Law | Method | Code | Proof |
@@ -116,31 +116,31 @@ Unverified formulas describe intended laws, not established correctness. Removab
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.FactoryExtra.alternatingSeries` | $\mathrm{Bern}\!\left(\sum_{n\ge0}(-1)^nc_np^n\right)$ | An arbitrary rational-coefficient alternating power series | [Series.lean](code/Samplers/Bernoulli/Series.lean#L20) | — |
+| `Occil.FactoryExtra.alternatingSeries` | $\mathrm{Bern}\!\left(\sum_{n\ge0}(-1)^nc_np^n\right)$ | An arbitrary rational-coefficient alternating power series | [Series.lean](code/Samplers/Bernoulli/Series.lean#L20) | [**verified**](SampLib/Samplers/AlternatingSeries.lean) |
 | `Occil.FactoryExtra.approximateFactory` | $\mathrm{Bern}\!\left(\mathbb E[\mathrm{clip}(f_s(\lfloor sK/N\rfloor),0,s)/s]\right)$ | A numerical plug-in factory | [Series.lean](code/Samplers/Bernoulli/Series.lean#L125) | [**verified**](SampLib/Samplers/ApproximateFactory.lean) |
 | `Occil.FactoryExtra.complementPowerSeries` | $\mathrm{Bern}\!\left(1-\frac{\sum_i c_i(1-p)^{i+1}}{\sum_i c_i}\right)$ | Mendo power-series factory: 1-sum_i c_i*(1-p)^(i+1), normalized integer c_i | [Series.lean](code/Samplers/Bernoulli/Series.lean#L42) | [**verified**](SampLib/Samplers/ComplementPowerSeries.lean) |
 | `Occil.FactoryExtra.convexCombination` | $\mathrm{Bern}\!\left(\frac{\sum_iw_ip_i}{\sum_iw_i}\right)$ | A finite mixture of coin callbacks, with nonnegative integer weights | [Series.lean](code/Samplers/Bernoulli/Series.lean#L59) | [**verified**](SampLib/Samplers/ConvexCombination.lean) |
-| `Occil.FactoryExtra.envelopeFactory` | $\mathrm{Bern}\!\left(f(p)\right)$ | Consecutive-degree specialization of the general envelope algorithm | [Series.lean](code/Samplers/Bernoulli/Series.lean#L118) | — |
-| `Occil.FactoryExtra.envelopeFactoryDegrees` | $\mathrm{Bern}\!\left(f(p)\right)$ | General reverse-time Bernstein-envelope factory with caller-selected degrees | [Series.lean](code/Samplers/Bernoulli/Series.lean#L79) | — |
+| `Occil.FactoryExtra.envelopeFactory` | $\mathrm{Bern}\!\left(f(p)\right)$ | Consecutive-degree specialization of the general envelope algorithm | [Series.lean](code/Samplers/Bernoulli/Series.lean#L118) | [**verified**](SampLib/Samplers/EnvelopeFactory.lean) |
+| `Occil.FactoryExtra.envelopeFactoryDegrees` | $\mathrm{Bern}\!\left(f(p)\right)$ | General reverse-time Bernstein-envelope factory with caller-selected degrees | [Series.lean](code/Samplers/Bernoulli/Series.lean#L79) | [**verified**](SampLib/Samplers/EnvelopeFactory.lean) |
 | `Occil.FactoryExtra.integralMixture` | $\mathrm{Bern}\!\left(\int f(x)\,\mu(dx)\right)$ | Compose callback and auxiliary coin trials | [Series.lean](code/Samplers/Bernoulli/Series.lean#L67) | [**verified**](SampLib/Samplers/IntegralMixture.lean) |
-| `Occil.FactoryExtra.minimumComplement` | $\mathrm{Bern}\!\left(\min(p,1-p)\right)$ | min(p,1-p), via Occil's Catalan-mixture Bernstein construction | [Series.lean](code/Samplers/Bernoulli/Series.lean#L135) | — |
-| `Occil.FactoryExtra.minimumHalf` | $\mathrm{Bern}(\min(p,1/2))$ | Compose callback and auxiliary coin trials | [Series.lean](code/Samplers/Bernoulli/Series.lean#L150) | — |
+| `Occil.FactoryExtra.minimumComplement` | $\mathrm{Bern}\!\left(\min(p,1-p)\right)$ | min(p,1-p), via Occil's Catalan-mixture Bernstein construction | [Series.lean](code/Samplers/Bernoulli/Series.lean#L135) | [**verified**](SampLib/Samplers/MinimumComplement.lean) |
+| `Occil.FactoryExtra.minimumHalf` | $\mathrm{Bern}(\min(p,1/2))$ | Compose callback and auxiliary coin trials | [Series.lean](code/Samplers/Bernoulli/Series.lean#L150) | [**verified**](SampLib/Samplers/MinimumHalf.lean) |
 | `Occil.FactoryExtra.positivePowerSeries` | $\mathrm{Bern}\!\left(\frac{\sum_i c_ip^i}{\sum_i c_i}\right)$ | Finite nonnegative power series, normalized by the integer coefficient sum | [Series.lean](code/Samplers/Bernoulli/Series.lean#L36) | [**verified**](SampLib/Samplers/PositivePowerSeries.lean) |
-| `Occil.FactoryExtra.powerSeriesHazards` | $\mathrm{Bern}\!\left(1-\sum_{n\ge0}c_n(1-p)^{n+1}\right)$ | Compose callback and auxiliary coin trials | [Series.lean](code/Samplers/Bernoulli/Series.lean#L50) | — |
+| `Occil.FactoryExtra.powerSeriesHazards` | $\mathrm{Bern}\!\left(1-\sum_{n\ge0}c_n(1-p)^{n+1}\right)$ | Compose callback and auxiliary coin trials | [Series.lean](code/Samplers/Bernoulli/Series.lean#L50) | [**verified**](SampLib/Samplers/PowerSeriesHazards.lean) |
 ## Bernoulli factories / Trigonometric
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.FactoryExtra.alternatingPermutation` | $\mathrm{Bern}\!\left(\begin{cases}(1-p)/\cos p&r=0\\(1-p)\tan p&r=1\end{cases}\right)$ | Geometric count and alternating permutation test | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L47) | — |
-| `Occil.FactoryExtra.arcsineHalf` | $\mathrm{Bern}\!\left(\frac12\arcsin p\right)$ | arcsin(p)/2, by cancelling the square-root component | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L81) | — |
-| `Occil.FactoryExtra.arcsinePlusSqrtMinusOne` | $\mathrm{Bern}\!\left(\arcsin p+\sqrt{1-p^2}-1\right)$ | arcsin(p)+sqrt(1-p^2)-1 | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L69) | — |
-| `Occil.FactoryExtra.arctanOverPi` | $\mathrm{Bern}\!\left(\arctan(p)/\pi\right)$ | arctan(p)/pi, with the exact known inverse-pi coin | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L32) | — |
-| `Occil.FactoryExtra.complementOverCosine` | $\mathrm{Bern}\!\left(\frac{1-p}{\cos p}\right)$ | Compose callback and auxiliary coin trials | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L61) | — |
-| `Occil.FactoryExtra.complementTimesTangent` | $\mathrm{Bern}\!\left((1-p)\tan p\right)$ | Compose callback and auxiliary coin trials | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L64) | — |
-| `Occil.FactoryExtra.cosineSqrt` | $\mathrm{Bern}\!\left(\cos\sqrt p\right)$ | cos(sqrt(p)), an alternating power-series factory | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L26) | — |
-| `Occil.FactoryExtra.pOverTangent` | $\mathrm{Bern}\!\left(\frac p{\tan p}\right)$ | p/tan(p), with an explicit valid lower bound e/f on sin(p)-p*cos(p) | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L88) | — |
-| `Occil.FactoryExtra.sincScaled` | $\mathrm{Bern}\!\left(\frac{\sin(p\sqrt c)}{p\sqrt c}\right)$ | sin(p*sqrt(c))/(p*sqrt(c)), c=a/b in (0,6], extended to one at p=0 | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L17) | — |
-| `Occil.FactoryExtra.sincSqrtScaled` | $\mathrm{Bern}\!\left(\frac{\sin\sqrt{cp}}{\sqrt{cp}}\right)$ | sin(sqrt(c*p))/sqrt(c*p), c=a/b in (0,6] | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L37) | — |
+| `Occil.FactoryExtra.alternatingPermutation` | $\mathrm{Bern}\!\left(\begin{cases}(1-p)/\cos p&r=0\\(1-p)\tan p&r=1\end{cases}\right)$ | Geometric count and alternating permutation test | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L47) | [**verified**](SampLib/Samplers/AlternatingPermutation.lean) |
+| `Occil.FactoryExtra.arcsineHalf` | $\mathrm{Bern}\!\left(\frac12\arcsin p\right)$ | arcsin(p)/2, by cancelling the square-root component | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L81) | [**verified**](SampLib/Samplers/ArcsineFactories.lean) |
+| `Occil.FactoryExtra.arcsinePlusSqrtMinusOne` | $\mathrm{Bern}\!\left(\arcsin p+\sqrt{1-p^2}-1\right)$ | arcsin(p)+sqrt(1-p^2)-1 | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L69) | [**verified**](SampLib/Samplers/ArcsineFactories.lean) |
+| `Occil.FactoryExtra.arctanOverPi` | $\mathrm{Bern}\!\left(\arctan(p)/\pi\right)$ | arctan(p)/pi, with the exact known inverse-pi coin | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L32) | [**verified**](SampLib/Samplers/ArctanOverPi.lean) |
+| `Occil.FactoryExtra.complementOverCosine` | $\mathrm{Bern}\!\left(\frac{1-p}{\cos p}\right)$ | Compose callback and auxiliary coin trials | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L61) | [**verified**](SampLib/Samplers/AlternatingPermutation.lean) |
+| `Occil.FactoryExtra.complementTimesTangent` | $\mathrm{Bern}\!\left((1-p)\tan p\right)$ | Compose callback and auxiliary coin trials | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L64) | [**verified**](SampLib/Samplers/AlternatingPermutation.lean) |
+| `Occil.FactoryExtra.cosineSqrt` | $\mathrm{Bern}\!\left(\cos\sqrt p\right)$ | cos(sqrt(p)), an alternating power-series factory | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L26) | [**verified**](SampLib/Samplers/TrigonometricSeriesFactories.lean) |
+| `Occil.FactoryExtra.pOverTangent` | $\mathrm{Bern}\!\left(\frac p{\tan p}\right)$ | p/tan(p), with an explicit valid lower bound e/f on sin(p)-p*cos(p) | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L88) | [**verified**](SampLib/Samplers/POverTangent.lean) |
+| `Occil.FactoryExtra.sincScaled` | $\mathrm{Bern}\!\left(\frac{\sin(p\sqrt c)}{p\sqrt c}\right)$ | sin(p*sqrt(c))/(p*sqrt(c)), c=a/b in (0,6], extended to one at p=0 | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L17) | [**verified**](SampLib/Samplers/TrigonometricSeriesFactories.lean) |
+| `Occil.FactoryExtra.sincSqrtScaled` | $\mathrm{Bern}\!\left(\frac{\sin\sqrt{cp}}{\sqrt{cp}}\right)$ | sin(sqrt(c*p))/sqrt(c*p), c=a/b in (0,6] | [Trigonometric.lean](code/Samplers/Bernoulli/Trigonometric.lean#L37) | [**verified**](SampLib/Samplers/TrigonometricSeriesFactories.lean) |
 ## Combinatorial sampling / Basic
 
 | Sampler | Law | Method | Code | Proof |
@@ -175,29 +175,29 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | --- | --- | --- | --- | --- |
 | `Occil.Constants.algebraicRoot` | $\mathrm{Bern}\!\left(\alpha,\ f(\alpha)=0\right)$ | Random binary search using exact signs | [Engines.lean](code/Samplers/Constants/Engines.lean#L132) | [**verified**](SampLib/Samplers/AlgebraicRoot.lean) |
 | `Occil.Constants.continuedFraction` | $\mathrm{Bern}\!\left(\cfrac1{a_1+\cfrac1{a_2+\cdots}}\right)$ | Positive simple continued fractions | [Engines.lean](code/Samplers/Constants/Engines.lean#L112) | [**verified**](SampLib/Samplers/ContinuedFraction.lean) |
-| `Occil.Constants.continuedLogarithm` | $\mathrm{Bern}\!\left(\cfrac{2^{-c_1}}{1+\cfrac{2^{-c_2}}{1+\cdots}}\right)$ | Continued logarithm: (1/2^c₁)/(1+(1/2^c₂)/(1+...)) | [Engines.lean](code/Samplers/Constants/Engines.lean#L118) | — |
+| `Occil.Constants.continuedLogarithm` | $\mathrm{Bern}\!\left(\cfrac{2^{-c_1}}{1+\cfrac{2^{-c_2}}{1+\cdots}}\right)$ | Continued logarithm: (1/2^c₁)/(1+(1/2^c₂)/(1+...)) | [Engines.lean](code/Samplers/Constants/Engines.lean#L118) | [**verified**](SampLib/Samplers/ContinuedLogarithm.lean) |
 | `Occil.Constants.fromApproximateDigits` | $\mathrm{Bern}\!\left(p\right)$ | Refine approximate digits against random prefix | [Engines.lean](code/Samplers/Constants/Engines.lean#L30) | [**verified**](SampLib/Samplers/FromApproximateDigits.lean) |
 | `Occil.Constants.fromBounds` | $\mathrm{Bern}\!\left(p\right)$ | Refine bounds against one cached uniform | [Engines.lean](code/Samplers/Constants/Engines.lean#L44) | [**verified**](SampLib/Samplers/FromBounds.lean) |
 | `Occil.Constants.fromDigits` | $\mathrm{Bern}\!\left(\sum_{k\ge1}d_kb^{-k}\right)$ | Compare exact probability digits | [Engines.lean](code/Samplers/Constants/Engines.lean#L18) | [**verified**](SampLib/Samplers/FromDigits.lean) |
 | `Occil.Constants.fromPositiveSeries` | $\mathrm{Bern}\!\left(\sum_{n\ge0}a_n/b_n\right)$ | Accumulate series with certified tail bounds | [Engines.lean](code/Samplers/Constants/Engines.lean#L59) | [**verified**](SampLib/Samplers/FromPositiveSeries.lean) |
 | `Occil.Constants.generalizedContinuedFraction` | $\mathrm{Bern}\!\left(\cfrac{b_1}{a_1+\cfrac{b_2}{a_2+\cdots}}\right)$ | Positive generalized continued fraction b₁/(a₁+b₂/(a₂+...)) | [Engines.lean](code/Samplers/Constants/Engines.lean#L84) | [**verified**](SampLib/Samplers/GeneralizedContinuedFraction.lean) |
-| `Occil.Constants.rationalContinuedFraction` | $\mathrm{Bern}\!\left(\cfrac{b_1/d_1}{a_1/d_1+\cfrac{b_2/d_2}{a_2/d_2+\cdots}}\right)$ | Positive rational generalized continued fractions | [Engines.lean](code/Samplers/Constants/Engines.lean#L98) | — |
+| `Occil.Constants.rationalContinuedFraction` | $\mathrm{Bern}\!\left(\cfrac{b_1/d_1}{a_1/d_1+\cfrac{b_2/d_2}{a_2/d_2+\cdots}}\right)$ | Positive rational generalized continued fractions | [Engines.lean](code/Samplers/Constants/Engines.lean#L98) | [**verified**](SampLib/Samplers/FiniteRationalContinuedFraction.lean) |
 ## Constant coins / Exponential
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.Constants.eContinuedFraction` | $\mathrm{Bern}(p_j),\ p_j\text{ a continued-fraction tail}$ | The article's continued-fraction expansion of 1/(e+c-2) | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L76) | — |
-| `Occil.Constants.eDivThree` | $\mathrm{Bern}\!\left(e/3\right)$ | Exact rational-bound or series coin | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L44) | — |
-| `Occil.Constants.eMinusTwo` | $\mathrm{Bern}\!\left(e-2\right)$ | Exact rational-bound or series coin | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L27) | — |
-| `Occil.Constants.eMinusTwoContinuedFraction` | $\mathrm{Bern}\!\left(e-2\right)$ | Exact rational-bound or series coin | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L89) | — |
-| `Occil.Constants.eQuarter` | $\mathrm{Bern}(e/4)$ | Exact rational-bound or series coin | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L131) | — |
+| `Occil.Constants.eContinuedFraction` | $\mathrm{Bern}(p_j),\ p_j\text{ a continued-fraction tail}$ | The article's continued-fraction expansion of 1/(e+c-2) | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L76) | [**verified**](SampLib/Samplers/EContinuedFraction.lean) |
+| `Occil.Constants.eDivThree` | $\mathrm{Bern}\!\left(e/3\right)$ | Exact rational-bound or series coin | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L44) | [**verified**](SampLib/Samplers/EulerScaledConstants.lean) |
+| `Occil.Constants.eMinusTwo` | $\mathrm{Bern}\!\left(e-2\right)$ | Exact rational-bound or series coin | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L27) | [**verified**](SampLib/Samplers/EulerAffineConstants.lean) |
+| `Occil.Constants.eMinusTwoContinuedFraction` | $\mathrm{Bern}\!\left(e-2\right)$ | Exact rational-bound or series coin | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L89) | [**verified**](SampLib/Samplers/EContinuedFractionConstants.lean) |
+| `Occil.Constants.eQuarter` | $\mathrm{Bern}(e/4)$ | Exact rational-bound or series coin | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L131) | [**verified**](SampLib/Samplers/EulerScaledConstants.lean) |
 | `Occil.Constants.eScaled` | $\mathrm{Bern}(en/d)$ | Exact Bernoulli(e*numerator/denominator), provided the result lies in [0,1] | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L34) | [**verified**](SampLib/Samplers/EScaled.lean) |
 | `Occil.Constants.exponentialRationalProduct` | $\mathrm{Bern}(e^{-x/y}z/t)$ | Exact exp(-x/y)*z/t, x,z>=0,y,t>0, on its valid probability domain | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L121) | [**verified**](SampLib/Samplers/ExponentialRationalProduct.lean) |
-| `Occil.Constants.inverseEPlus` | $\mathrm{Bern}((e+c-2)^{-1})$ | Exact 1/(e+c-2), for integer c>=1 | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L53) | — |
-| `Occil.Constants.inverseEPlusContinuedFraction` | $\mathrm{Bern}((e+c-2)^{-1})$ | Exact rational-bound or series coin | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L86) | — |
+| `Occil.Constants.inverseEPlus` | $\mathrm{Bern}((e+c-2)^{-1})$ | Exact 1/(e+c-2), for integer c>=1 | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L53) | [**verified**](SampLib/Samplers/InverseEPlus.lean) |
+| `Occil.Constants.inverseEPlusContinuedFraction` | $\mathrm{Bern}((e+c-2)^{-1})$ | Exact rational-bound or series coin | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L86) | [**verified**](SampLib/Samplers/EContinuedFractionConstants.lean) |
 | `Occil.Constants.inverseEPlusRational` | $\mathrm{Bern}((e+c-2)^{-1})$ | Exact 1/(e+c-2) for rational c=numerator/denominator>=1 | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L64) | [**verified**](SampLib/Samplers/InverseEPlusRational.lean) |
-| `Occil.Constants.tanhHalf` | $\mathrm{Bern}\!\left(\tanh(1/2)\right)$ | Exact tanh(1/2)=(e-1)/(e+1) | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L93) | — |
-| `Occil.Constants.threeMinusE` | $\mathrm{Bern}\!\left(3-e\right)$ | Exact rational-bound or series coin | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L46) | — |
+| `Occil.Constants.tanhHalf` | $\mathrm{Bern}\!\left(\tanh(1/2)\right)$ | Exact tanh(1/2)=(e-1)/(e+1) | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L93) | [**verified**](SampLib/Samplers/TanhHalf.lean) |
+| `Occil.Constants.threeMinusE` | $\mathrm{Bern}\!\left(3-e\right)$ | Exact rational-bound or series coin | [Exponential.lean](code/Samplers/Constants/Exponential.lean#L46) | [**verified**](SampLib/Samplers/EulerAffineConstants.lean) |
 ## Constant coins / Numerical
 
 | Sampler | Law | Method | Code | Proof |
@@ -211,30 +211,30 @@ Unverified formulas describe intended laws, not established correctness. Removab
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.Constants.arctanRationalOverRatio` | $\mathrm{Bern}(\arctan(x/y)/(x/y))$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L94) | — |
-| `Occil.Constants.fourOverThreePi` | $\mathrm{Bern}\!\left(4/(3\pi)\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L82) | — |
-| `Occil.Constants.inversePi` | $\mathrm{Bern}\!\left(1/\pi\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L80) | — |
-| `Occil.Constants.inverseSqrtPi` | $\mathrm{Bern}\!\left(1/\sqrt\pi\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L91) | — |
-| `Occil.Constants.logPiOverPi` | $\mathrm{Bern}\!\left(\log\pi/\pi\right)$ | Exact ln(pi)/pi by the geometric reciprocal-pi construction | [Pi.lean](code/Samplers/Constants/Pi.lean#L85) | — |
+| `Occil.Constants.arctanRationalOverRatio` | $\mathrm{Bern}(\arctan(x/y)/(x/y))$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L94) | [**verified**](SampLib/Samplers/ArctanRationalOverRatio.lean) |
+| `Occil.Constants.fourOverThreePi` | $\mathrm{Bern}\!\left(4/(3\pi)\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L82) | [**verified**](SampLib/Samplers/PiConstants.lean) |
+| `Occil.Constants.inversePi` | $\mathrm{Bern}\!\left(1/\pi\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L80) | [**verified**](SampLib/Samplers/PiConstants.lean) |
+| `Occil.Constants.inverseSqrtPi` | $\mathrm{Bern}\!\left(1/\sqrt\pi\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L91) | [**verified**](SampLib/Samplers/InverseSqrtPi.lean) |
+| `Occil.Constants.logPiOverPi` | $\mathrm{Bern}\!\left(\log\pi/\pi\right)$ | Exact ln(pi)/pi by the geometric reciprocal-pi construction | [Pi.lean](code/Samplers/Constants/Pi.lean#L85) | [**verified**](SampLib/Samplers/LogPiOverPi.lean) |
 | `Occil.Constants.piAffine` | $\mathrm{Bern}((\pi-a)/b)$ | Bernoulli((pi-offset)/divisor); parameters must put the result in [0,1] | [Pi.lean](code/Samplers/Constants/Pi.lean#L49) | [**verified**](SampLib/Samplers/PiAffine.lean) |
-| `Occil.Constants.piMinusThree` | $\mathrm{Bern}\!\left(\pi-3\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L66) | — |
-| `Occil.Constants.piMinusThreeOverFour` | $\mathrm{Bern}\!\left((\pi-3)/4\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L64) | — |
-| `Occil.Constants.piQuarter` | $\mathrm{Bern}\!\left(\pi/4\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L58) | — |
-| `Occil.Constants.piQuarterMinusHalf` | $\mathrm{Bern}\!\left(\pi/4-1/2\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L62) | — |
-| `Occil.Constants.piTwelfth` | $\mathrm{Bern}\!\left(\pi/12\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L60) | — |
+| `Occil.Constants.piMinusThree` | $\mathrm{Bern}\!\left(\pi-3\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L66) | [**verified**](SampLib/Samplers/PiConstants.lean) |
+| `Occil.Constants.piMinusThreeOverFour` | $\mathrm{Bern}\!\left((\pi-3)/4\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L64) | [**verified**](SampLib/Samplers/PiConstants.lean) |
+| `Occil.Constants.piQuarter` | $\mathrm{Bern}\!\left(\pi/4\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L58) | [**verified**](SampLib/Samplers/PiConstants.lean) |
+| `Occil.Constants.piQuarterMinusHalf` | $\mathrm{Bern}\!\left(\pi/4-1/2\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L62) | [**verified**](SampLib/Samplers/PiConstants.lean) |
+| `Occil.Constants.piTwelfth` | $\mathrm{Bern}\!\left(\pi/12\right)$ | Exact rational-bound or series coin | [Pi.lean](code/Samplers/Constants/Pi.lean#L60) | [**verified**](SampLib/Samplers/PiConstants.lean) |
 | `Occil.Constants.reciprocalPiScaled` | $\mathrm{Bern}\!\left(a/(b\pi)\right)$ | Bernoulli(numerator/(denominator*pi)), on its valid probability domain | [Pi.lean](code/Samplers/Constants/Pi.lean#L69) | [**verified**](SampLib/Samplers/ReciprocalPiScaled.lean) |
 ## Constant coins / Special
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
 | `Occil.Constants.eOverPi` | $\mathrm{Bern}\!\left(e/\pi\right)$ | Exact e/pi from independently calculated rational interval bounds | [Special.lean](code/Samplers/Constants/Special.lean#L61) | [**verified**](SampLib/Samplers/EOverPi.lean) |
-| `Occil.Constants.erfRatio` | $\mathrm{Bern}(\mathrm{erf}(x)/\mathrm{erf}(1))$ | Exact erf(x)/erf(1), 0<=x<=1 | [Special.lean](code/Samplers/Constants/Special.lean#L76) | — |
-| `Occil.Constants.eulerMascheroni` | $\mathrm{Bern}\!\left(\gamma\right)$ | Exact rational-bound or series coin | [Special.lean](code/Samplers/Constants/Special.lean#L39) | — |
-| `Occil.Constants.logOnePlusRational` | $\mathrm{Bern}\!\left(\log(1+x/y)\right)$ | Exact ln(1+x/y), 0<=x<=y | [Special.lean](code/Samplers/Constants/Special.lean#L49) | — |
-| `Occil.Constants.lowerGammaIntegerRatio` | $\mathrm{Bern}(\gamma(m,x)/\gamma(m,1))$ | Exact gamma(m,x)/gamma(m,1) for integer m>0, x in [0,1] | [Special.lean](code/Samplers/Constants/Special.lean#L88) | — |
-| `Occil.Constants.rationalIntegerPower` | $\mathrm{Bern}\!\left((a/b)^n\right)$ | Exact (a/b)^n for a rational base in [0,1] and integer n>=0 | [Special.lean](code/Samplers/Constants/Special.lean#L53) | — |
+| `Occil.Constants.erfRatio` | $\mathrm{Bern}(\mathrm{erf}(x)/\mathrm{erf}(1))$ | Exact erf(x)/erf(1), 0<=x<=1 | [Special.lean](code/Samplers/Constants/Special.lean#L76) | [**verified**](SampLib/Samplers/ErfRatio.lean) |
+| `Occil.Constants.eulerMascheroni` | $\mathrm{Bern}\!\left(\gamma\right)$ | Exact rational-bound or series coin | [Special.lean](code/Samplers/Constants/Special.lean#L39) | [**verified**](SampLib/Samplers/EulerMascheroni.lean) |
+| `Occil.Constants.logOnePlusRational` | $\mathrm{Bern}\!\left(\log(1+x/y)\right)$ | Exact ln(1+x/y), 0<=x<=y | [Special.lean](code/Samplers/Constants/Special.lean#L49) | [**verified**](SampLib/Samplers/LogOnePlusRational.lean) |
+| `Occil.Constants.lowerGammaIntegerRatio` | $\mathrm{Bern}(\gamma(m,x)/\gamma(m,1))$ | Exact gamma(m,x)/gamma(m,1) for integer m>0, x in [0,1] | [Special.lean](code/Samplers/Constants/Special.lean#L88) | [**verified**](SampLib/Samplers/LowerGammaIntegerRatio.lean) |
+| `Occil.Constants.rationalIntegerPower` | $\mathrm{Bern}\!\left((a/b)^n\right)$ | Exact (a/b)^n for a rational base in [0,1] and integer n>=0 | [Special.lean](code/Samplers/Constants/Special.lean#L53) | [**verified**](SampLib/Samplers/RationalIntegerPower.lean) |
 | `Occil.Constants.threeZetaThreeOverFour` | $\mathrm{Bern}\!\left(3\zeta(3)/4\right)$ | Exact 3*zeta(3)/4 | [Special.lean](code/Samplers/Constants/Special.lean#L18) | [**verified**](SampLib/Samplers/ThreeZetaThreeOverFour.lean) |
-| `Occil.Constants.zetaRelated` | $\mathrm{Bern}\!\left(\zeta(k)(1-2^{1-k})\right)$ | Exact ζ(k)*(1-2^(1-k)), k>=2, by the k-fold geometric-bag integral | [Special.lean](code/Samplers/Constants/Special.lean#L25) | — |
+| `Occil.Constants.zetaRelated` | $\mathrm{Bern}\!\left(\zeta(k)(1-2^{1-k})\right)$ | Exact ζ(k)*(1-2^(1-k)), k>=2, by the k-fold geometric-bag integral | [Special.lean](code/Samplers/Constants/Special.lean#L25) | [**verified**](SampLib/Samplers/ZetaRelated.lean) |
 ## Continuous distributions
 
 | Sampler | Law | Method | Code | Proof |
@@ -258,7 +258,7 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | --- | --- | --- | --- | --- |
 | `Occil.DiscreteExtra.binomialBinary` | $\mathrm{Bin}(n,a/b)$ | Farach-Colton–Tsai binary expansion of the rational success probability | [Binomial.lean](code/Samplers/Discrete/Binomial.lean#L49) | [**verified**](SampLib/Samplers/BinomialBinary.lean) |
 | `Occil.DiscreteExtra.binomialHalfBits` | $\mathrm{Bin}(n,1/2)$ | One uniform integer supplies n fair bits; count its set bits | [Binomial.lean](code/Samplers/Discrete/Binomial.lean#L19) | [**verified**](SampLib/Samplers/BinomialHalfBits.lean) |
-| `Occil.DiscreteExtra.binomialHalfRejection` | $\mathrm{Bin}(n,1/2)$ | Bringmann's exact envelope-rejection algorithm for Binomial(n,1/2) | [Binomial.lean](code/Samplers/Discrete/Binomial.lean#L29) | — |
+| `Occil.DiscreteExtra.binomialHalfRejection` | $\mathrm{Bin}(n,1/2)$ | Bringmann's exact envelope-rejection algorithm for Binomial(n,1/2) | [Binomial.lean](code/Samplers/Discrete/Binomial.lean#L29) | [**verified**](SampLib/Samplers/BinomialHalfRejection.lean) |
 ## Discrete distributions / Bounded
 
 | Sampler | Law | Method | Code | Proof |
@@ -279,13 +279,13 @@ Unverified formulas describe intended laws, not established correctness. Removab
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.DiscreteExtra.betaNegativeBinomial` | $\mathrm{BetaNegBin}(r,\alpha,\beta)$ | Beta-negative-binomial mixture with positive rational beta shapes | [Counts.lean](code/Samplers/Discrete/Counts.lean#L48) | — |
+| `Occil.DiscreteExtra.betaNegativeBinomial` | $\mathrm{BetaNegBin}(r,\alpha,\beta)$ | Beta-negative-binomial mixture with positive rational beta shapes | [Counts.lean](code/Samplers/Discrete/Counts.lean#L48) | [**verified**](SampLib/Samplers/BetaNegativeBinomial.lean) |
 | `Occil.DiscreteExtra.borel` | $\mathrm{Borel}(\lambda)$ | Borel(lambda): total progeny of a Poisson branching process | [Counts.lean](code/Samplers/Discrete/Counts.lean#L68) | [**verified**](SampLib/Samplers/Borel.lean) |
-| `Occil.DiscreteExtra.inversePolya` | $\mathrm{InversePolya}(r,a,b,c)$ | Failures before a prescribed number of successes in a reinforced urn | [Counts.lean](code/Samplers/Discrete/Counts.lean#L39) | — |
+| `Occil.DiscreteExtra.inversePolya` | $\mathrm{InversePolya}(r,a,b,c)$ | Failures before a prescribed number of successes in a reinforced urn | [Counts.lean](code/Samplers/Discrete/Counts.lean#L39) | [**verified**](SampLib/Samplers/InversePolya.lean) |
 | `Occil.DiscreteExtra.logarithmicSeries` | $\Pr(N=k)=-\frac{p^k}{k\log(1-p)}$ | Logarithmic-series(p), 0 < p < 1, by geometric proposals and 1/n rejection | [Counts.lean](code/Samplers/Discrete/Counts.lean#L78) | [**verified**](SampLib/Samplers/LogarithmicSeries.lean) |
-| `Occil.DiscreteExtra.polyaRational` | $\mathrm{NegBin}(r,p)$ | Exact integer-valued construction | [Counts.lean](code/Samplers/Discrete/Counts.lean#L21) | — |
-| `Occil.DiscreteExtra.waringYule` | $\mathrm{BetaNegBin}(1,\alpha,\beta)$ | Waring–Yule: one success in a beta-mixed geometric distribution | [Counts.lean](code/Samplers/Discrete/Counts.lean#L57) | — |
-| `Occil.DiscreteExtra.yuleSimon` | $\mathrm{YuleSimon}(\rho)$ | Yule–Simon(rho), supported on positive integers; rho is a positive rational | [Counts.lean](code/Samplers/Discrete/Counts.lean#L62) | — |
+| `Occil.DiscreteExtra.polyaRational` | $\mathrm{NegBin}(r,p)$ | Exact integer-valued construction | [Counts.lean](code/Samplers/Discrete/Counts.lean#L21) | [**verified**](SampLib/Samplers/PolyaRational.lean) |
+| `Occil.DiscreteExtra.waringYule` | $\mathrm{BetaNegBin}(1,\alpha,\beta)$ | Waring–Yule: one success in a beta-mixed geometric distribution | [Counts.lean](code/Samplers/Discrete/Counts.lean#L57) | [**verified**](SampLib/Samplers/WaringYule.lean) |
+| `Occil.DiscreteExtra.yuleSimon` | $\mathrm{YuleSimon}(\rho)$ | Yule–Simon(rho), supported on positive integers; rho is a positive rational | [Counts.lean](code/Samplers/Discrete/Counts.lean#L62) | [**verified**](SampLib/Samplers/YuleSimon.lean) |
 | `Occil.DiscreteExtra.zeroTruncatedPoisson` | $\mathrm{Pois}(\lambda)\mid N>0$ | Poisson conditioned to be strictly positive | [Counts.lean](code/Samplers/Discrete/Counts.lean#L88) | [**verified**](SampLib/Samplers/ZeroTruncatedPoisson.lean) |
 ## Discrete distributions / Numerical
 
@@ -301,14 +301,14 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
 | `Occil.DiscreteExtra.discreteLaplace` | $\Pr(K=k)\propto e^{-\epsilon\lvert k\rvert}$ | Canonne et al | [Tails.lean](code/Samplers/Discrete/Tails.lean#L38) | [**verified**](SampLib/Samplers/DiscreteLaplace.lean) |
-| `Occil.DiscreteExtra.generalizedGeometric` | $\Pr(K=k)=(1-\rho_k)\prod_{j<k}\rho_j$ | Generalized geometric: rho(k) returns a continuation coin at positive k | [Tails.lean](code/Samplers/Discrete/Tails.lean#L96) | — |
-| `Occil.DiscreteExtra.generalizedSibuya` | $\Pr(K=k)=\frac{\alpha}{\nu+k}\prod_{j<k}\left(1-\frac\alpha{\nu+j}\right)$ | Generalized Sibuya with alpha>0, nu>=0 and alpha<nu+1, all rational | [Tails.lean](code/Samplers/Discrete/Tails.lean#L102) | — |
+| `Occil.DiscreteExtra.generalizedGeometric` | $\Pr(K=k)=(1-\rho_k)\prod_{j<k}\rho_j$ | Generalized geometric: rho(k) returns a continuation coin at positive k | [Tails.lean](code/Samplers/Discrete/Tails.lean#L96) | [**verified**](SampLib/Samplers/GeneralizedGeometric.lean) |
+| `Occil.DiscreteExtra.generalizedSibuya` | $\Pr(K=k)=\frac{\alpha}{\nu+k}\prod_{j<k}\left(1-\frac\alpha{\nu+j}\right)$ | Generalized Sibuya with alpha>0, nu>=0 and alpha<nu+1, all rational | [Tails.lean](code/Samplers/Discrete/Tails.lean#L102) | [**verified**](SampLib/Samplers/GeneralizedSibuya.lean) |
 | `Occil.DiscreteExtra.himanshu` | $\mathrm{Geom}_0(p^m)$ | Himanshu: failures before n consecutive coin successes in independent blocks | [Tails.lean](code/Samplers/Discrete/Tails.lean#L115) | [**verified**](SampLib/Samplers/Himanshu.lean) |
 | `Occil.DiscreteExtra.logUniform` | $\text{uniform logarithmic bucket, then uniform integer}$ | Abseil-style log-uniform integers in [0,maximum], integer base>=2 | [Tails.lean](code/Samplers/Discrete/Tails.lean#L53) | [**verified**](SampLib/Samplers/LogUniform.lean) |
-| `Occil.DiscreteExtra.rationalPowerCoin` | $\mathrm{Bern}(p^{a/b})$ | Extend the power factory to any nonnegative rational exponent | [Tails.lean](code/Samplers/Discrete/Tails.lean#L21) | — |
+| `Occil.DiscreteExtra.rationalPowerCoin` | $\mathrm{Bern}(p^{a/b})$ | Extend the power factory to any nonnegative rational exponent | [Tails.lean](code/Samplers/Discrete/Tails.lean#L21) | [**verified**](SampLib/Samplers/RationalPower.lean) |
 | `Occil.DiscreteExtra.symmetricGeometric` | $\Pr(K=k)\propto(1-p)^{\lvert k\rvert}$ | Symmetric geometric with tails proportional to (1-p)^&#124;k&#124; | [Tails.lean](code/Samplers/Discrete/Tails.lean#L32) | [**verified**](SampLib/Samplers/SymmetricGeometric.lean) |
-| `Occil.DiscreteExtra.zeta` | $\Pr(K=k)=k^{-s}/\zeta(s)$ | Zeta(alpha), alpha>1 rational | [Tails.lean](code/Samplers/Discrete/Tails.lean#L80) | — |
-| `Occil.DiscreteExtra.zipf` | $\Pr(K=k)\propto k^{-s},\ 1\le k\le n$ | Zipf on 1..bound, with any nonnegative rational exponent | [Tails.lean](code/Samplers/Discrete/Tails.lean#L68) | — |
+| `Occil.DiscreteExtra.zeta` | $\Pr(K=k)=k^{-s}/\zeta(s)$ | Zeta(alpha), alpha>1 rational | [Tails.lean](code/Samplers/Discrete/Tails.lean#L80) | [**verified**](SampLib/Samplers/Zeta.lean) |
+| `Occil.DiscreteExtra.zipf` | $\Pr(K=k)\propto k^{-s},\ 1\le k\le n$ | Zipf on 1..bound, with any nonnegative rational exponent | [Tails.lean](code/Samplers/Discrete/Tails.lean#L68) | [**verified**](SampLib/Samplers/Zipf.lean) |
 ## Discrete distributions / Urns
 
 | Sampler | Law | Method | Code | Proof |
@@ -343,11 +343,11 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | `Occil.General.discreteCDF` | $\Pr(K=i)=(C_i-C_{i-1})/C_{n-1}$ | Binary-search cumulative integer masses | [Core.lean](code/Samplers/General/Core.lean#L56) | [**verified**](SampLib/Samplers/DiscreteCDF.lean) |
 | `Occil.General.episodes` | $(\sum_{i=1}^{N}X_i,N)$ | Return stopped sum with sampled count | [Core.lean](code/Samplers/General/Core.lean#L392) | [**verified**](SampLib/Samplers/Episodes.lean) |
 | `Occil.General.gibbsSweep` | $(K_1\cdots K_d)(x,\cdot)$ | Sequential conditional coordinate updates | [Core.lean](code/Samplers/General/Core.lean#L279) | [**verified**](SampLib/Samplers/GibbsSweep.lean) |
-| `Occil.General.incompleteInformation` | $\mathrm{Cat}(p)$ | Finite inverse-CDF sampling when only improving probability bounds are known | [Core.lean](code/Samplers/General/Core.lean#L188) | — |
+| `Occil.General.incompleteInformation` | $\mathrm{Cat}(p)$ | Finite inverse-CDF sampling when only improving probability bounds are known | [Core.lean](code/Samplers/General/Core.lean#L188) | [**verified**](SampLib/Samplers/IncompleteInformation.lean) |
 | `Occil.General.inverseCDF` | $\Pr(X\le x)=C(x)/s$ | Binary-search a sampled CDF rank | [Core.lean](code/Samplers/General/Core.lean#L72) | [**verified**](SampLib/Samplers/InverseCDF.lean) |
 | `Occil.General.inverseQuantile` | $Q_*\mathrm{Unif}\{1,\ldots,s-1\}$ | Transform a uniform grid rank | [Core.lean](code/Samplers/General/Core.lean#L49) | [**verified**](SampLib/Samplers/InverseQuantile.lean) |
 | `Occil.General.markovChain` | $K^n(x,\cdot)$ | Iterate row-normalized transition kernel | [Core.lean](code/Samplers/General/Core.lean#L207) | [**verified**](SampLib/Samplers/MarkovChain.lean) |
-| `Occil.General.markovStep` | $K(x,\cdot)$ | A transition matrix is a list of nonnegative integer weight rows | [Core.lean](code/Samplers/General/Core.lean#L203) | [draft](SampLib/Samplers/MarkovChain.lean) |
+| `Occil.General.markovStep` | $K(x,\cdot)$ | A transition matrix is a list of nonnegative integer weight rows | [Core.lean](code/Samplers/General/Core.lean#L203) | [**verified**](SampLib/Samplers/MarkovChain.lean) |
 | `Occil.General.markovTrajectory` | $\prod_{t=1}^n K(x_{t-1},dx_t)$ | Record each transition destination | [Core.lean](code/Samplers/General/Core.lean#L213) | [**verified**](SampLib/Samplers/MarkovTrajectory.lean) |
 | `Occil.General.metropolis` | $K_{\mathrm{Metropolis}}^n(x,\cdot)$ | Symmetric-proposal acceptance step | [Core.lean](code/Samplers/General/Core.lean#L273) | [**verified**](SampLib/Samplers/CountableMetropolis.lean) |
 | `Occil.General.metropolisHastings` | $K_{\mathrm{MH}}^n(x,\cdot)$ | Proposal followed by Hastings acceptance | [Core.lean](code/Samplers/General/Core.lean#L258) | [**verified**](SampLib/Samplers/CountableMetropolisHastings.lean) |
@@ -361,9 +361,9 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | `Occil.General.randomScanGibbs` | $\left(d^{-1}\sum_i K_i\right)^n(x,\cdot)$ | Uniformly select conditional coordinate updates | [Core.lean](code/Samplers/General/Core.lean#L287) | [**verified**](SampLib/Samplers/RandomScanGibbs.lean) |
 | `Occil.General.randomString` | $\mathrm{Unif}(\text{alphabet})^{\otimes n}$ | Uniform character/item sequences; output is a list, not a host string | [Core.lean](code/Samplers/General/Core.lean#L38) | [**verified**](SampLib/Samplers/RandomString.lean) |
 | `Occil.General.randomWalkPath` | $(x,x+X_1,\ldots,x+\sum_{i=1}^n X_i)$ | Accumulate and record independent increments | [Core.lean](code/Samplers/General/Core.lean#L357) | [**verified**](SampLib/Samplers/RandomWalkPath.lean) |
-| `Occil.General.refinedCDFComparison` | $\mathrm{Bern}(F(x))$ | Compare a shared U with a cumulative-probability oracle | [Core.lean](code/Samplers/General/Core.lean#L173) | — |
-| `Occil.General.refinedCoin` | $\mathrm{Bern}(p)$ | A bounds callback returns numerators (lower,upper) at denominator 2^level | [Core.lean](code/Samplers/General/Core.lean#L157) | — |
-| `Occil.General.shapeRejection` | $\mu(\cdot\mid A)$ | Rejection in any bounded shape | [Core.lean](code/Samplers/General/Core.lean#L97) | — |
+| `Occil.General.refinedCDFComparison` | $\mathrm{Bern}(\mathbf{1}_{\{U<F(x)\}})\mid U$ | Cached-uniform threshold; a fresh bag has marginal Bern(F(x)) | [Core.lean](code/Samplers/General/Core.lean#L173) | [**verified**](SampLib/Samplers/RefinedCDFComparison.lean) |
+| `Occil.General.refinedCoin` | $\mathrm{Bern}(p)$ | A bounds callback returns numerators (lower,upper) at denominator 2^level | [Core.lean](code/Samplers/General/Core.lean#L157) | [**verified**](SampLib/Samplers/RefinedCoin.lean) |
+| `Occil.General.shapeRejection` | $\mu(\cdot\mid A)$ | Rejection in any bounded shape | [Core.lean](code/Samplers/General/Core.lean#L97) | [**verified**](SampLib/Samplers/ShapeRejection.lean) |
 | `Occil.General.sliceSampler` | $K_{\mathrm{slice}}^n(x,\cdot)$ | Iterate bounded slice transitions | [Core.lean](code/Samplers/General/Core.lean#L303) | [**verified**](SampLib/Samplers/SliceSampler.lean) |
 | `Occil.General.sliceSamplerStepOut` | $K_{\mathrm{stepout}}^n(x,\cdot)$ | Iterate stepping-out slice transitions | [Core.lean](code/Samplers/General/Core.lean#L336) | — |
 | `Occil.General.sliceStepOut` | $K_{\mathrm{stepout}}(x,\cdot)$ | Step out, then shrink slice bracket | [Core.lean](code/Samplers/General/Core.lean#L312) | — |
@@ -404,7 +404,7 @@ Unverified formulas describe intended laws, not established correctness. Removab
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.WeightedVariants.voseDraw` | $\mathrm{Cat}(w)$ | Integer-weight sampling construction (valid table required) | [Aliases.lean](code/Samplers/Weighted/Aliases.lean#L57) | — |
+| `Occil.WeightedVariants.voseDraw` | $\mathrm{Cat}(w)$ | Integer-weight sampling construction (valid table required) | [Aliases.lean](code/Samplers/Weighted/Aliases.lean#L57) | [**verified**](SampLib/AliasTable.lean) |
 | `Occil.WeightedVariants.voseSamples` | $\mathrm{Cat}(w)^{\otimes k}$ | Integer-weight sampling construction | [Aliases.lean](code/Samplers/Weighted/Aliases.lean#L68) | [**verified**](SampLib/Samplers/VoseSamples.lean) |
 ## Integer and weighted sampling / Choice
 
@@ -422,8 +422,8 @@ Unverified formulas describe intended laws, not established correctness. Removab
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.WeightedVariants.optimalChoice` | $\mathrm{Cat}(w)$ | Integer-weight sampling construction | [Optimal.lean](code/Samplers/Weighted/Optimal.lean#L72) | — |
-| `Occil.WeightedVariants.optimalDraw` | $\mathrm{Cat}(w)$ | Traverse a finite cyclic probability matrix directly, as nextFromMatrix (valid table required) | [Optimal.lean](code/Samplers/Weighted/Optimal.lean#L52) | — |
+| `Occil.WeightedVariants.optimalChoice` | $\mathrm{Cat}(w)$ | Integer-weight sampling construction | [Optimal.lean](code/Samplers/Weighted/Optimal.lean#L73) | [**verified**](SampLib/Samplers/OptimalChoice.lean) |
+| `Occil.WeightedVariants.optimalDraw` | $\mathrm{Cat}(w)$ | Traverse a finite cyclic probability matrix directly, as nextFromMatrix (valid table required) | [Optimal.lean](code/Samplers/Weighted/Optimal.lean#L53) | [**verified**](SampLib/Samplers/OptimalDraw.lean) |
 ## Integer and weighted sampling / Reductions
 
 | Sampler | Law | Method | Code | Proof |
@@ -439,14 +439,14 @@ Unverified formulas describe intended laws, not established correctness. Removab
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.WeightedVariants.sortedChoice` | $\mathrm{Cat}(w)$ | Integer-weight sampling construction | [Rejection.lean](code/Samplers/Weighted/Rejection.lean#L17) | — |
-| `Occil.WeightedVariants.succinctChoice` | $\mathrm{Cat}(w)$ | Bringmann–Larsen's packed 20/32-bit weights | [Rejection.lean](code/Samplers/Weighted/Rejection.lean#L53) | — |
+| `Occil.WeightedVariants.sortedChoice` | $\mathrm{Cat}(w)$ | Integer-weight sampling construction | [Rejection.lean](code/Samplers/Weighted/Rejection.lean#L17) | [**verified**](SampLib/Samplers/SortedChoice.lean) |
+| `Occil.WeightedVariants.succinctChoice` | $\mathrm{Cat}(w)$ | Bringmann–Larsen's packed 20/32-bit weights | [Rejection.lean](code/Samplers/Weighted/Rejection.lean#L53) | [**verified**](SampLib/Samplers/SuccinctChoice.lean) |
 ## Integer and weighted sampling / Reservoir
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.Weighted.inclusionSplitting` | $\lvert S\rvert=k,\quad\Pr(i\in S)=kw_i/\sum_jw_j\ \text{(marginals)}$ | Deville–Tillé splitting with prescribed inclusion marginals | [Reservoir.lean](code/Samplers/Weighted/Reservoir.lean#L44) | — |
-| `Occil.Weighted.inclusionSystematic` | $\lvert S\rvert=k,\quad\Pr(i\in S)=kw_i/\sum_jw_j\ \text{(marginals)}$ | Shifted lattice with prescribed inclusion marginals | [Reservoir.lean](code/Samplers/Weighted/Reservoir.lean#L86) | — |
+| `Occil.Weighted.inclusionSplitting` | $\lvert S\rvert=k,\quad\Pr(i\in S)=kw_i/\sum_jw_j\ \text{(marginals)}$ | Deville–Tillé splitting with prescribed inclusion marginals | [Reservoir.lean](code/Samplers/Weighted/Reservoir.lean#L44) | [**verified**](SampLib/Samplers/InclusionSplitting.lean) |
+| `Occil.Weighted.inclusionSystematic` | $\lvert S\rvert=k,\quad\Pr(i\in S)=kw_i/\sum_jw_j\ \text{(marginals)}$ | Shifted lattice with prescribed inclusion marginals | [Reservoir.lean](code/Samplers/Weighted/Reservoir.lean#L86) | [**verified**](SampLib/Samplers/InclusionSystematic.lean) |
 | `Occil.Weighted.weightedReservoirOne` | $\mathrm{Cat}(w)$ | Running-weight replacement decisions | [Reservoir.lean](code/Samplers/Weighted/Reservoir.lean#L17) | [**verified**](SampLib/Samplers/WeightedReservoirOne.lean) |
 ## Integer and weighted sampling / Sequential
 
@@ -466,9 +466,9 @@ Unverified formulas describe intended laws, not established correctness. Removab
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.Weighted.fastLoadedDiceRoller` | $\mathrm{Cat}(w)$ | Finite dyadic matrix with rejection | [Trees.lean](code/Samplers/Weighted/Trees.lean#L47) | — |
-| `Occil.Weighted.hanHoshi` | $\mathrm{Cat}(w)$ | Refine a binary probability interval | [Trees.lean](code/Samplers/Weighted/Trees.lean#L73) | — |
-| `Occil.Weighted.knuthYao` | $\mathrm{Cat}(w)$ | Binary probability-matrix leaf walk | [Trees.lean](code/Samplers/Weighted/Trees.lean#L28) | — |
+| `Occil.Weighted.fastLoadedDiceRoller` | $\mathrm{Cat}(w)$ | Finite dyadic matrix with rejection | [Trees.lean](code/Samplers/Weighted/Trees.lean#L47) | [**verified**](SampLib/Samplers/FastLoadedDiceRoller.lean) |
+| `Occil.Weighted.hanHoshi` | $\mathrm{Cat}(w)$ | Refine a binary probability interval | [Trees.lean](code/Samplers/Weighted/Trees.lean#L73) | [**verified**](SampLib/Samplers/HanHoshi.lean) |
+| `Occil.Weighted.knuthYao` | $\mathrm{Cat}(w)$ | Binary probability-matrix leaf walk | [Trees.lean](code/Samplers/Weighted/Trees.lean#L28) | [**verified**](SampLib/Samplers/KnuthYao.lean) |
 ## Integer and weighted sampling / Uniform
 
 | Sampler | Law | Method | Code | Proof |
@@ -476,8 +476,8 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | `Occil.Weighted.bitmaskRejection` | $\mathrm{Unif}\{0,\ldots,n-1\}$ | Reject out-of-range binary candidates | [Uniform.lean](code/Samplers/Weighted/Uniform.lean#L25) | [**verified**](SampLib/Samplers/BitmaskRejection.lean) |
 | `Occil.Weighted.fyky` | $\mathrm{Unif}\{0,\ldots,n-1\}$ | Upper-interval bit recycling | [Uniform.lean](code/Samplers/Weighted/Uniform.lean#L37) | [**verified**](SampLib/Samplers/FYKY.lean) |
 | `Occil.Weighted.randomBits` | $\mathrm{Unif}\{0,\ldots,2^k-1\}$ | Concatenate independent fair bits | [Uniform.lean](code/Samplers/Weighted/Uniform.lean#L16) | [**verified**](SampLib/Samplers/RandomBits.lean) |
-| `Occil.Weighted.recycledSamples` | $\mathrm{Unif}\{0,\ldots,n-1\}^{\otimes k}$ | Repeated uniform draws using one persistent bit-recycling pool | [Uniform.lean](code/Samplers/Weighted/Uniform.lean#L71) | — |
-| `Occil.Weighted.recycledUniform` | $\mathrm{Unif}\{0,\ldots,n-1\}$ | Exact quotient/remainder recycling | [Uniform.lean](code/Samplers/Weighted/Uniform.lean#L53) | — |
+| `Occil.Weighted.recycledSamples` | $\mathrm{Unif}\{0,\ldots,n-1\}^{\otimes k}$ | Repeated uniform draws using one persistent bit-recycling pool | [Uniform.lean](code/Samplers/Weighted/Uniform.lean#L71) | [**verified**](SampLib/Samplers/RecycledSamples.lean) |
+| `Occil.Weighted.recycledUniform` | $\mathrm{Unif}\{0,\ldots,n-1\}$ | Exact quotient/remainder recycling | [Uniform.lean](code/Samplers/Weighted/Uniform.lean#L53) | [**verified**](SampLib/Samplers/RecycledUniform.lean) |
 | `Occil.Weighted.uniformBinaryFloat` | $\text{binary grid uniform approximation}$ | Truncate a leading-zero geometric exponent | [Uniform.lean](code/Samplers/Weighted/Uniform.lean#L95) | [**verified**](SampLib/Samplers/UniformBinaryFloat.lean) |
 | `Occil.Weighted.uniformDyadic` | $(K,2^b),\ K\sim\mathrm{Unif}\{0,\ldots,2^b-1\}$ | Exact dyadic grid sample: the denominator is 2^bits | [Uniform.lean](code/Samplers/Weighted/Uniform.lean#L83) | [**verified**](SampLib/Samplers/UniformFormats.lean) |
 | `Occil.Weighted.uniformFixed` | $\mathrm{Unif}\{0,\ldots,s-1\}$ | Fixed-point output uses an explicit integer scale, not an opaque real type | [Uniform.lean](code/Samplers/Weighted/Uniform.lean#L88) | [**verified**](SampLib/Samplers/UniformFormats.lean) |
@@ -486,13 +486,13 @@ Unverified formulas describe intended laws, not established correctness. Removab
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.arctanFactory` | $\mathrm{Bern}\!\left(\arctan(p)\right)$ | Outer coin and latent-uniform arctangent mixture | [Lazy.lean](code/Samplers/Lazy.lean#L111) | — |
-| `Occil.arctanOverPFactory` | $\mathrm{Bern}\!\left(\arctan(p)/p\right)$ | arctan(p)/p, continuously extended to 1 at p=0 | [Lazy.lean](code/Samplers/Lazy.lean#L103) | — |
+| `Occil.arctanFactory` | $\mathrm{Bern}\!\left(\arctan(p)\right)$ | Outer coin and latent-uniform arctangent mixture | [Lazy.lean](code/Samplers/Lazy.lean#L111) | [**verified**](SampLib/Samplers/ArctanFactory.lean) |
+| `Occil.arctanOverPFactory` | $\mathrm{Bern}\!\left(\arctan(p)/p\right)$ | arctan(p)/p, continuously extended to 1 at p=0 | [Lazy.lean](code/Samplers/Lazy.lean#L103) | [**verified**](SampLib/Samplers/ArctanOverPFactory.lean) |
 | `Occil.cosineFactory` | $\mathrm{Bern}\!\left(\cos(p)\right)$ | Cached-uniform cosine-series bounds | [Lazy.lean](code/Samplers/Lazy.lean#L86) | [**verified**](SampLib/Samplers/CosineFactory.lean) |
 | `Occil.expMinusMartingale` | $\mathrm{Bern}\!\left(e^{-p}\right)$ | Cached-uniform factorial-series bounds | [Lazy.lean](code/Samplers/Lazy.lean#L83) | [**verified**](SampLib/Samplers/ExpMinusMartingale.lean) |
 | `Occil.factorialSeriesFactory` | $\mathrm{Bern}(e^{-p}),\ \mathrm{Bern}(\cos p),\ \mathrm{Bern}(\sin(p)/p)$ | Alternating factorial-series factory | [Lazy.lean](code/Samplers/Lazy.lean#L62) | [**verified**](SampLib/Samplers/FactorialSeriesFactory.lean) |
 | `Occil.logOnePlusFactory` | $\mathrm{Bern}\!\left(\log(1+p)\right)$ | ln(1+p) | [Lazy.lean](code/Samplers/Lazy.lean#L94) | [**verified**](SampLib/Samplers/LogOnePlusFactory.lean) |
-| `Occil.sampleGeometricBag` | $\mathrm{Bern}(U)\ \text{with shared latent }U$ | Draw Bernoulli(U) from a shared uniform bag: choose a geometrically located digit | [Lazy.lean](code/Samplers/Lazy.lean#L53) | — |
+| `Occil.sampleGeometricBag` | $\mathrm{Bern}(U)\ \text{with shared latent }U$ | Draw Bernoulli(U) from a shared uniform bag: choose a geometrically located digit | [Lazy.lean](code/Samplers/Lazy.lean#L53) | [**verified**](SampLib/Samplers/SampleGeometricBag.lean) |
 | `Occil.sineFactory` | $\mathrm{Bern}\!\left(\sin(p)\right)$ | Outer coin and sine-series bounds | [Lazy.lean](code/Samplers/Lazy.lean#L89) | [**verified**](SampLib/Samplers/SineFactory.lean) |
 ## Lazy exact reals / BetaGamma
 
@@ -500,17 +500,17 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | --- | --- | --- | --- | --- |
 | `Occil.PSRN.newBeta` | $\mathsf{Lazy}[\mathrm{Beta}(a,b)]$ | Beta PSRN by Occil's geometric-bag power rejection for a,b>=1 | [BetaGamma.lean](code/Samplers/PSRN/BetaGamma.lean#L20) | — |
 | `Occil.PSRN.newGamma` | $\mathsf{Lazy}[\mathrm{Gamma}(a,b)]$ | Gamma with arbitrary positive rational shape and rate | [BetaGamma.lean](code/Samplers/PSRN/BetaGamma.lean#L80) | — |
-| `Occil.PSRN.newGammaInteger` | $\mathsf{Lazy}[\mathrm{Gamma}(k,\lambda)]$ | Construct a cached lazy real | [BetaGamma.lean](code/Samplers/PSRN/BetaGamma.lean#L60) | — |
-| `Occil.PSRN.newGammaMixture` | $\mathsf{Lazy}[\text{Gamma mixture}]$ | Lindley-like mixture of integer-shape gamma PSRNs at a shared rational rate | [BetaGamma.lean](code/Samplers/PSRN/BetaGamma.lean#L67) | — |
-| `Occil.PSRN.newLindley` | $\mathsf{Lazy}[\mathrm{Lindley}]$ | Construct a cached lazy real | [BetaGamma.lean](code/Samplers/PSRN/BetaGamma.lean#L73) | — |
+| `Occil.PSRN.newGammaInteger` | $\mathsf{Lazy}[\mathrm{Gamma}(k,\lambda)]$ | Construct a cached lazy real | [BetaGamma.lean](code/Samplers/PSRN/BetaGamma.lean#L60) | [**verified**](SampLib/Samplers/PSRNGammaInteger.lean) |
+| `Occil.PSRN.newGammaMixture` | $\mathsf{Lazy}[\text{Gamma mixture}]$ | Lindley-like mixture of integer-shape gamma PSRNs at a shared rational rate | [BetaGamma.lean](code/Samplers/PSRN/BetaGamma.lean#L67) | [**verified**](SampLib/Samplers/PSRNGammaMixture.lean) |
+| `Occil.PSRN.newLindley` | $\mathsf{Lazy}[\mathrm{Lindley}]$ | Construct a cached lazy real | [BetaGamma.lean](code/Samplers/PSRN/BetaGamma.lean#L73) | [**verified**](SampLib/Samplers/PSRNLindley.lean) |
 ## Lazy exact reals / Core
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.PSRN.coin` | $\mathrm{Bern}(x)\ \text{conditional on cached }x$ | Compare a fresh uniform with cached real | [Core.lean](code/Samplers/PSRN/Core.lean#L100) | — |
-| `Occil.PSRN.newInsideShape` | $\mathsf{Lazy}[\mathrm{Unif}(A)]$ | Generic exact rejection inside a cube, for predicates on a list of lazy coordinates | [Core.lean](code/Samplers/PSRN/Core.lean#L105) | — |
-| `Occil.PSRN.newRejection` | $\mathsf{Lazy}[\mu(\cdot\mid A)]$ | General lazy proposal/acceptance engine; accepted state is preserved | [Core.lean](code/Samplers/PSRN/Core.lean#L93) | — |
-| `Occil.PSRN.newUniform` | $\mathsf{Lazy}[\mathrm{Unif}(0,1)]$ | Construct a cached lazy real | [Core.lean](code/Samplers/PSRN/Core.lean#L43) | — |
+| `Occil.PSRN.coin` | $\mathrm{Bern}(x)\ \text{conditional on cached }x$ | Compare a fresh uniform with cached real | [Core.lean](code/Samplers/PSRN/Core.lean#L100) | [**verified**](SampLib/PSRNCoin.lean) |
+| `Occil.PSRN.newInsideShape` | $\mathsf{Lazy}[\mathrm{Unif}(A)]$ | Generic exact rejection inside a cube, for predicates on a list of lazy coordinates | [Core.lean](code/Samplers/PSRN/Core.lean#L105) | [**verified**](SampLib/Samplers/PSRNInsideShape.lean) |
+| `Occil.PSRN.newRejection` | $\mathsf{Lazy}[\mu(\cdot\mid A)]$ | General lazy proposal/acceptance engine; accepted state is preserved | [Core.lean](code/Samplers/PSRN/Core.lean#L93) | [**verified**](SampLib/Samplers/PSRNRejection.lean) |
+| `Occil.PSRN.newUniform` | $\mathsf{Lazy}[\mathrm{Unif}(0,1)]$ | Construct a cached lazy real | [Core.lean](code/Samplers/PSRN/Core.lean#L43) | [**verified**](SampLib/LatentUniform.lean) |
 ## Lazy exact reals / Distributions
 
 | Sampler | Law | Method | Code | Proof |
@@ -520,26 +520,26 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | `Occil.PSRN.newContinuousBernoulli` | $\mathsf{Lazy}[\text{Continuous Bernoulli}]$ | Continuous Bernoulli(lambda) for rational lambda in (0,1) | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L35) | — |
 | `Occil.PSRN.newEpanechnikov` | $\mathsf{Lazy}[\mathrm{Epanechnikov}]$ | Epanechnikov kernel on [-1,1]: twice the median of three uniforms minus one | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L48) | — |
 | `Occil.PSRN.newFGMCopula` | $\mathsf{Lazy}[\mathrm{FGMCopula}(\theta)]$ | Farlie–Gumbel–Morgenstern copula by rejection under envelope two | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L55) | — |
-| `Occil.PSRN.newGarima` | $\mathsf{Lazy}[\mathrm{Garima}]$ | Named Lindley-family specializations from the PSRN article's mixture table | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L125) | — |
+| `Occil.PSRN.newGarima` | $\mathsf{Lazy}[\mathrm{Garima}]$ | Named Lindley-family specializations from the PSRN article's mixture table | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L125) | [**verified**](SampLib/Samplers/PSRNGammaFamilies.lean) |
 | `Occil.PSRN.newHyperbolicSecant` | $\mathsf{Lazy}[\text{Hyperbolic Secant}]$ | Hyperbolic-secant law in its natural scale, density sech(x)/pi | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L71) | — |
-| `Occil.PSRN.newIGarima` | $\mathsf{Lazy}[\text{I Garima}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L128) | — |
-| `Occil.PSRN.newMirra` | $\mathsf{Lazy}[\mathrm{Mirra}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L137) | — |
-| `Occil.PSRN.newRayleigh` | $\mathsf{Lazy}[\mathrm{Rayleigh}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L18) | — |
+| `Occil.PSRN.newIGarima` | $\mathsf{Lazy}[\text{I Garima}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L128) | [**verified**](SampLib/Samplers/PSRNGammaFamilies.lean) |
+| `Occil.PSRN.newMirra` | $\mathsf{Lazy}[\mathrm{Mirra}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L137) | [**verified**](SampLib/Samplers/PSRNGammaFamilies.lean) |
+| `Occil.PSRN.newRayleigh` | $\mathsf{Lazy}[\mathrm{Rayleigh}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L18) | [**verified**](SampLib/Samplers/PSRNRayleigh.lean) |
 | `Occil.PSRN.newRectellipse` | $\mathsf{Lazy}[\mathrm{Rectellipse}]$ | Uniform quarter/full rectellipse, integer radii and rational squareness in [0,1] | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L153) | — |
-| `Occil.PSRN.newSushila` | $\mathsf{Lazy}[\mathrm{Sushila}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L142) | — |
+| `Occil.PSRN.newSushila` | $\mathsf{Lazy}[\mathrm{Sushila}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L142) | [**verified**](SampLib/Samplers/PSRNLindleyFamilies.lean) |
 | `Occil.PSRN.newTulap` | $\mathsf{Lazy}[\mathrm{Tulap}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L103) | — |
-| `Occil.PSRN.newWeightedExponentialGamma` | $\mathsf{Lazy}[\text{Weighted Exponential Gamma}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L131) | — |
-| `Occil.PSRN.newXLindley` | $\mathsf{Lazy}[\text{X Lindley}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L147) | — |
-| `Occil.PSRN.newXgamma` | $\mathsf{Lazy}[\mathrm{Xgamma}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L134) | — |
+| `Occil.PSRN.newWeightedExponentialGamma` | $\mathsf{Lazy}[\text{Weighted Exponential Gamma}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L131) | [**verified**](SampLib/Samplers/PSRNGammaFamilies.lean) |
+| `Occil.PSRN.newXLindley` | $\mathsf{Lazy}[\text{X Lindley}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L147) | [**verified**](SampLib/Samplers/PSRNLindleyFamilies.lean) |
+| `Occil.PSRN.newXgamma` | $\mathsf{Lazy}[\mathrm{Xgamma}]$ | Construct a cached lazy real | [Distributions.lean](code/Samplers/PSRN/Distributions.lean#L134) | [**verified**](SampLib/Samplers/PSRNGammaFamilies.lean) |
 ## Lazy exact reals / Exponential
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.PSRN.expMinusCoin` | $\mathrm{Bern}\!\left(e^{-x}\right)$ | Conditional exp(-x) trial for a nonnegative lazy real x | [Exponential.lean](code/Samplers/PSRN/Exponential.lean#L53) | — |
-| `Occil.PSRN.newExponential` | $\mathsf{Lazy}[\mathrm{Exp}(\lambda)]$ | Exponential PSRN at an arbitrary positive rational rate | [Exponential.lean](code/Samplers/PSRN/Exponential.lean#L32) | — |
-| `Occil.PSRN.newExponentialFromDecay` | $\mathsf{Lazy}[\mathrm{Exp}(\lambda)]$ | An e-rand from exact exp(-rate/d) coins | [Exponential.lean](code/Samplers/PSRN/Exponential.lean#L19) | — |
-| `Occil.PSRN.newExponentialLogRate` | $\mathsf{Lazy}[\mathrm{Exp}(\log(x/y))]$ | Exponential PSRN with rate ln(x/y), x>y>0 | [Exponential.lean](code/Samplers/PSRN/Exponential.lean#L39) | — |
-| `Occil.PSRN.newExponentialUnknownRate` | $\mathsf{Lazy}[\mathrm{Exp}(p)]$ | Exponential PSRN with unknown positive rate p<=1 supplied as a p-coin | [Exponential.lean](code/Samplers/PSRN/Exponential.lean#L46) | — |
+| `Occil.PSRN.expMinusCoin` | $\mathrm{Bern}\!\left(e^{-x}\right)$ | Conditional exp(-x) trial for a nonnegative lazy real x | [Exponential.lean](code/Samplers/PSRN/Exponential.lean#L53) | [**verified**](SampLib/Samplers/PSRNExpMinusCoin.lean) |
+| `Occil.PSRN.newExponential` | $\mathsf{Lazy}[\mathrm{Exp}(\lambda)]$ | Exponential PSRN at an arbitrary positive rational rate | [Exponential.lean](code/Samplers/PSRN/Exponential.lean#L32) | [**verified**](SampLib/Samplers/PSRNExponentialRational.lean) |
+| `Occil.PSRN.newExponentialFromDecay` | $\mathsf{Lazy}[\mathrm{Exp}(\lambda)]$ | An e-rand from exact exp(-rate/d) coins | [Exponential.lean](code/Samplers/PSRN/Exponential.lean#L19) | [**verified**](SampLib/PSRNExponential.lean) |
+| `Occil.PSRN.newExponentialLogRate` | $\mathsf{Lazy}[\mathrm{Exp}(\log(x/y))]$ | Exponential PSRN with rate ln(x/y), x>y>0 | [Exponential.lean](code/Samplers/PSRN/Exponential.lean#L39) | [**verified**](SampLib/Samplers/PSRNExponentialLogRate.lean) |
+| `Occil.PSRN.newExponentialUnknownRate` | $\mathsf{Lazy}[\mathrm{Exp}(p)]$ | Exponential PSRN with unknown positive rate p<=1 supplied as a p-coin | [Exponential.lean](code/Samplers/PSRN/Exponential.lean#L46) | [**verified**](SampLib/Samplers/PSRNExponentialUnknownRate.lean) |
 ## Lazy exact reals / Gaussian
 
 | Sampler | Law | Method | Code | Proof |
@@ -553,21 +553,21 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | `Occil.PSRN.newBall` | $\mathsf{Lazy}[\mathrm{Unif}(B^d)]$ | Uniform volume measure on a unit ball | [Geometry.lean](code/Samplers/PSRN/Geometry.lean#L45) | — |
 | `Occil.PSRN.newDirichlet` | $\mathsf{Lazy}[\mathrm{Dirichlet}(\alpha)]$ | Construct a cached lazy real | [Geometry.lean](code/Samplers/PSRN/Geometry.lean#L68) | — |
 | `Occil.PSRN.newShell` | $\mathsf{Lazy}[\mathrm{Unif}(\text{spherical shell})]$ | Uniform shell with positive rational outer radius and nonnegative inner radius | [Geometry.lean](code/Samplers/PSRN/Geometry.lean#L54) | — |
-| `Occil.PSRN.newSimplex` | $\mathsf{Lazy}[\mathrm{Unif}(\Delta_d)]$ | Uniform positive components summing to one, via independent exponentials | [Geometry.lean](code/Samplers/PSRN/Geometry.lean#L91) | — |
+| `Occil.PSRN.newSimplex` | $\mathsf{Lazy}[\mathrm{Unif}(\Delta_d)]$ | Uniform positive components summing to one, via independent exponentials | [Geometry.lean](code/Samplers/PSRN/Geometry.lean#L91) | [**verified**](SampLib/Samplers/PSRNSimplex.lean) |
 | `Occil.PSRN.newSphere` | $\mathsf{Lazy}[\mathrm{Unif}(S^{d-1})]$ | Uniform surface measure on the unit sphere in the requested dimension | [Geometry.lean](code/Samplers/PSRN/Geometry.lean#L34) | — |
 ## Lazy exact reals / Uniform
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.PSRN.newByDigits` | $\mathsf{Lazy}[\text{digit-oracle real}]$ | A generic memoized digit sampler | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L52) | — |
-| `Occil.PSRN.newOddsUniform` | $\mathsf{Lazy}[U/(1-U)]$ | Construct a cached lazy real | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L87) | — |
+| `Occil.PSRN.newByDigits` | $\mathsf{Lazy}[\text{digit-oracle real}]$ | A generic memoized digit sampler | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L52) | [**verified**](SampLib/LatentDigits.lean) |
+| `Occil.PSRN.newOddsUniform` | $\mathsf{Lazy}[U/(1-U)]$ | Construct a cached lazy real | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L87) | [**verified**](SampLib/Samplers/PSRNOddsUniform.lean) |
 | `Occil.PSRN.newOrderStatistic` | $\mathsf{Lazy}[\mathrm{Beta}(k,n+1-k)]$ | Select k-th of n independent lazy uniforms without filling unsampled tails | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L19) | — |
-| `Occil.PSRN.newPowerUniform` | $\mathsf{Lazy}[U^{a/b}]$ | Uniform raised to a rational power; negative powers have unbounded tails | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L32) | — |
-| `Occil.PSRN.newRatioUniforms` | $\mathsf{Lazy}[U/V]$ | Construct a cached lazy real | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L77) | — |
-| `Occil.PSRN.newReciprocalPowerUniform` | $\mathsf{Lazy}[U^{-a/b}]$ | Construct a cached lazy real | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L83) | — |
-| `Occil.PSRN.newReciprocalUniform` | $\mathsf{Lazy}[1/U]$ | Construct a cached lazy real | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L80) | — |
-| `Occil.PSRN.newUniformSum` | $\mathsf{Lazy}[\sum_{i=1}^nU_i]$ | Construct a cached lazy real | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L72) | — |
-| `Occil.PSRN.powerCoin` | $\mathrm{Bern}\!\left(p^{a/b}\right)$ | Raise an abstract coin's probability to a nonnegative rational power | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L39) | — |
+| `Occil.PSRN.newPowerUniform` | $\mathsf{Lazy}[U^{a/b}]$ | Uniform raised to a rational power; negative powers have unbounded tails | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L32) | [**verified**](SampLib/Samplers/PSRNPowerUniform.lean) |
+| `Occil.PSRN.newRatioUniforms` | $\mathsf{Lazy}[U/V]$ | Construct a cached lazy real | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L77) | [**verified**](SampLib/Samplers/PSRNRatioUniforms.lean) |
+| `Occil.PSRN.newReciprocalPowerUniform` | $\mathsf{Lazy}[U^{-a/b}]$ | Construct a cached lazy real | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L83) | [**verified**](SampLib/Samplers/PSRNReciprocalPowerUniform.lean) |
+| `Occil.PSRN.newReciprocalUniform` | $\mathsf{Lazy}[1/U]$ | Construct a cached lazy real | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L80) | [**verified**](SampLib/Samplers/PSRNReciprocalUniform.lean) |
+| `Occil.PSRN.newUniformSum` | $\mathsf{Lazy}[\sum_{i=1}^nU_i]$ | Construct a cached lazy real | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L72) | [**verified**](SampLib/Samplers/PSRNUniformSum.lean) |
+| `Occil.PSRN.powerCoin` | $\mathrm{Bern}\!\left(p^{a/b}\right)$ | Raise an abstract coin's probability to a nonnegative rational power | [Uniform.lean](code/Samplers/PSRN/Uniform.lean#L39) | [**verified**](SampLib/Samplers/PSRNPowerCoin.lean) |
 ## Numerical arithmetic
 
 | Sampler | Law | Method | Code | Proof |

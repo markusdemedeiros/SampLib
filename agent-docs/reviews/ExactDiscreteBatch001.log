@@ -1,0 +1,16 @@
+lake build SampLib.Samplers.GeneralizedGeometric
+Build completed successfully (4147 jobs).
+
+lake env lean agent-docs/reviews/ExactDiscreteBatch001Callers.lean
+'SampLib.GeneralizedGeometric.generalizedGeometric_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AbsorbingChain.twp_of_survival' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AbsorbingChain.stopLaw_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.«agent-docs».reviews.ExactDiscreteBatch001Callers.0.ReviewExactDiscrete001.stopCoin_spec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.«agent-docs».reviews.ExactDiscreteBatch001Callers.0.ReviewExactDiscrete001.stop_absorbs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+lake env lean /tmp/review-exact-discrete001-signatures.lean
+SPEC_OK SampLib.GeneralizedGeometric.generalizedGeometric_distSpec Occil.DiscreteExtra.generalizedGeometric

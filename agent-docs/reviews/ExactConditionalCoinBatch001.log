@@ -1,0 +1,15 @@
+lake build SampLib.PSRNCoin
+Build completed successfully (4179 jobs).
+
+lake env lean agent-docs/reviews/ExactConditionalCoinBatch001Callers.lean
+'SampLib.LatentReal.Coin.coin_programSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.Coin.coin_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.UniformThreshold.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.UniformThreshold.ae_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactConditionalCoin001.repeated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.«agent-docs».reviews.ExactConditionalCoinBatch001Callers.0.ReviewExactConditionalCoin001.both_true_moment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+lake env lean /tmp/review-exact-conditionalcoin001-signatures.lean
+SPEC_OK SampLib.LatentReal.Coin.coin_programSpec Occil.PSRN.coin

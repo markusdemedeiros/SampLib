@@ -1,0 +1,65 @@
+{
+  "reviewer": "review_exact_b",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactDiscreteBatch001Callers.lean",
+  "caller_sha256": "2dfe28ae4c150167d2ce9251158f532816760411cd6ea55bd2d59436689e40c1",
+  "accepted": [
+    {
+      "sampler": "Occil.DiscreteExtra.generalizedGeometric",
+      "proof_module": "SampLib.Samplers.GeneralizedGeometric",
+      "public_spec": "SampLib.GeneralizedGeometric.generalizedGeometric_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "Any indexed fresh continuation-coin family, queried only at positive source indices, whose survival product from the first index tends to zero. No geometric rate, finite mean, or uniform-integer primitive assumption is required. The output is the positive first stopping index.",
+      "sha256": "d54ba2f9b3123cd1b7494092cd323f899507c49e245cf3ebd09a69f2e6c9b4d7",
+      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch001.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/AbsorbingChain.lean": "af0bea40c38584232e3f4e6db818955735204088402793abb9ac965a25b312f1",
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/AbsorbingChain.lean": "d5b5c04b0eb5af36196b460f4b3c13ade7db28787555e364f5986d4071181e93",
+        "SampLib/Samplers/GeneralizedGeometric.lean": "d54ba2f9b3123cd1b7494092cd323f899507c49e245cf3ebd09a69f2e6c9b4d7",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Discrete/Tails.lean": "c7fed9a1ea7bb34d66a79a0f031af05a5c451fa3f83c63ec68d6c9378b593ed7",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": []
+}

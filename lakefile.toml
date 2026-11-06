@@ -5,7 +5,7 @@ defaultTargets = ["SampLib", "Samplers", "sampler-samples", "wide-samples"]
 [[require]]
 name = "clutch-lean"
 git = "https://github.com/logsem/clutch-lean.git"
-rev = "54e780e43709d2f28386b83bffccdde498141b25"
+rev = "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982"
 
 [[lean_lib]]
 name = "SampLib"

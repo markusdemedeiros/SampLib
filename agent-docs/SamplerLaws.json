@@ -726,7 +726,7 @@
     "Occil.sampleInOrder": {
       "role": "sampler",
       "group": "Combinatorial sampling / Basic",
-      "law": "\\mathrm{Unif}\\{I\\subseteq[n]:\\#I=k\\}",
+      "law": "\\mathrm{Unif}\\{I\\subseteq[n]:\\lvert I\\rvert=k\\}",
       "method": "Sequential subset inclusion decisions",
       "law_evidence": "curated"
     },
@@ -754,7 +754,7 @@
     "Occil.reservoir": {
       "role": "sampler",
       "group": "Combinatorial sampling / Basic",
-      "law": "\\mathrm{Unif}\\{I\\subseteq[n]:\\#I=k\\}\\ \\text{(unordered)}",
+      "law": "\\mathrm{Unif}\\{I\\subseteq[n]:\\lvert I\\rvert=k\\}\\ \\text{(unordered)}",
       "method": "Reservoir Algorithm R slot replacement",
       "law_evidence": "curated"
     },
@@ -1874,8 +1874,8 @@
     "Occil.General.refinedCDFComparison": {
       "role": "sampler",
       "group": "General sampling / Core",
-      "law": "\\mathrm{Bern}(F(x))",
-      "method": "Compare a shared U with a cumulative-probability oracle",
+      "law": "\\mathrm{Bern}(\\mathbf{1}_{\\{U<F(x)\\}})\\mid U",
+      "method": "Cached-uniform threshold; a fresh bag has marginal Bern(F(x))",
       "law_evidence": "curated"
     },
     "Occil.General.incompleteInformation": {
@@ -1993,7 +1993,7 @@
     "Occil.General.permutationTest": {
       "role": "sampler",
       "group": "General sampling / Core",
-      "law": "\\frac{1+\\#\\{i:T(\\Pi_i x)\\ge T(x)\\}}{B+1}",
+      "law": "\\frac{1+\\lvert\\{i:T(\\Pi_i x)\\ge T(x)\\}\\rvert}{B+1}",
       "method": "A Monte Carlo permutation-test p-value as an exact (numerator,denominator) pair",
       "law_evidence": "curated"
     },
@@ -5024,14 +5024,14 @@
     "Occil.Weighted.inclusionSplitting": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Reservoir",
-      "law": "\\#S=k,\\quad\\Pr(i\\in S)=kw_i/\\sum_jw_j\\ \\text{(marginals)}",
+      "law": "\\lvert S\\rvert=k,\\quad\\Pr(i\\in S)=kw_i/\\sum_jw_j\\ \\text{(marginals)}",
       "method": "Deville–Tillé splitting with prescribed inclusion marginals",
       "law_evidence": "curated"
     },
     "Occil.Weighted.inclusionSystematic": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Reservoir",
-      "law": "\\#S=k,\\quad\\Pr(i\\in S)=kw_i/\\sum_jw_j\\ \\text{(marginals)}",
+      "law": "\\lvert S\\rvert=k,\\quad\\Pr(i\\in S)=kw_i/\\sum_jw_j\\ \\text{(marginals)}",
       "method": "Shifted lattice with prescribed inclusion marginals",
       "law_evidence": "curated"
     },

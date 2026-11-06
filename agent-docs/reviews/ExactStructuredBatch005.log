@@ -1,0 +1,13 @@
+lake build SampLib.Samplers.InclusionSplitting
+Build completed successfully (4177 jobs).
+
+lake env lean agent-docs/reviews/ExactStructuredBatch005Callers.lean
+'SampLib.InclusionSplitting.inclusionSplitting_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.InclusionSplitting.inclusionSplitting_zero_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SplittingPPS.input_inclusion_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SplittingPPS.input_inclusion_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SplittingPPS.input_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SplittingPPS.input_nodup' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-structured005-signatures.lean
+SPEC_OK SampLib.InclusionSplitting.inclusionSplitting_distSpec Occil.Weighted.inclusionSplitting

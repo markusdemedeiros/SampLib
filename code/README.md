@@ -157,6 +157,23 @@ line. The following deviations are deliberate:
    basic techniques. Their separate test cases exercise the composed output laws.
 10. All samplers use the ideal independence assumptions of ProbLang. The executable
     interpreter substitutes a seeded PRNG and finite-precision IEEE operations.
+11. `linearLowProbability` supplies margin `1/2` to its inner linear factory.
+    Its advertised bound `μ ≤ ρ < 1/2` ensures `μ/(2ρ) ≤ 1/2`; the previous margin
+    `1−ρ` required the stronger bound `μ ≤ 2ρ²`. The
+    [repair review](../agent-docs/reviews/ExactLowProbabilitySourceRepair001.md)
+    records the exact one-line change and full-domain CTE argument. The
+    [runtime regression](../agent-docs/reviews/LowProbabilityRuntime001.json)
+    covers expanding, contracting, zero and invalid inputs on both interpreters.
+
+12. `optimalMatrix` encodes a probability-one row using all `k` bits set to one,
+    representing the cyclic expansion `0.111… = 1`. The previous encoding could
+    overflow the scanned width and make certain distributions such as `[2, 0]`
+    loop forever. The [independent repair review](../agent-docs/reviews/ExactOptimalSourceRepair001.md)
+    records the exact change and the row-mass argument. The
+    [interpreter regression](../agent-docs/reviews/OptimalRepairRuntime002.json)
+    passes 88 exact matrix checks and 528 actual draw/wrapper runs, covering all
+    certain positions in lists up to length five and nondegenerate controls.
+    Other row encodings and the traversal algorithm are preserved.
 
 The source fingerprint file in `agent-docs/OccilSources.json` identifies the documents
 consulted; no claim is made that the website's live pseudocode will stay unchanged.

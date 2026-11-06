@@ -1,0 +1,86 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactFactoriesBatch021Callers.lean",
+  "caller_sha256": "04925f2d0d2d437a3970872f74870f936a40b3503fb0029753c0afff4eb0edce",
+  "accepted": [
+    {
+      "sampler": "Occil.FactoryExtra.alternatingSeries",
+      "proof_module": "SampLib.Samplers.AlternatingSeries",
+      "public_spec": "SampLib.AlternatingSeries.alternatingSeries_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "Every rational nonnegative antitone coefficient sequence with initial value<=1 and tending to0; all p : unitInterval including1; arbitrary exact positive-denominator rational callback representations and abstract input-coin callbacks. Full sequential alternating-series law, including conditional convergence.",
+      "sha256": "86a9e513361e75b56e8e31f98c1bc5b6d3b229dfcd09bae2dd1751b733ed67ba",
+      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch021.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/BetaStep.lean": "0a1e17b99ace11607f7b1c4c21f95d1e5b3d213192d65c5a6fb2f78d676d5748",
+        "SampLib/Distributions/AlternatingEnclosure.lean": "ba57fa1b254371cd5576283fc672d8c3411026105be70d85e5813bc84544c070",
+        "SampLib/Distributions/AlternatingSeries.lean": "1ddd2f1282ca7d894dfb97dcec1e1d2c511af94dbd03726784e0d73731b59dad",
+        "SampLib/Distributions/AlternatingSeriesState.lean": "4deefeaff0f34ec17c4d0ae5b776144d6ed79b5e3bf2b75a8e91bf8cb7fc0980",
+        "SampLib/Distributions/BoundsKernel.lean": "209b06e0717fc9d1ef770e2c057a67d87d018e73d92762729d1a9ff3bca1fda3",
+        "SampLib/Distributions/DyadicPosterior.lean": "47aee6086b85b501470624626940b55ef333d20e4bd9f21e3e698e66cad716e0",
+        "SampLib/Distributions/DyadicRefinement.lean": "b4339270ecc356a8b3fb2f8a4cd0d3f1dbf10ff6a9b4457bbd8918d32eff849c",
+        "SampLib/Distributions/FactorialSeries.lean": "39c63dcd21c81490fff718ce77d793ac95f2d7ef1ce708b4c93bbcb71bbe32f3",
+        "SampLib/Distributions/FactorialSeriesKernel.lean": "a8cc93eaabec644eae7ae84a085dc4a7db55163dd34f62fc0d419baf06c19370",
+        "SampLib/Distributions/FactorialSeriesState.lean": "8aad0b0f11bf7f98f2af0bfc45fca7ea112fea244fd3098d974b016be95d3f71",
+        "SampLib/Distributions/Geometric.lean": "f35eaf7977331250eb2152791b93d048be5f60d05e2c82a584a4d2b781624bd5",
+        "SampLib/Distributions/GeometricThreshold.lean": "3d4b9963459edddc1488dfa037acff890bb7aa9890e397452a9d3f56d6fc1acd",
+        "SampLib/FactoryFractions.lean": "038173322833a186cbf023a8f2b878ae81aa6f150ef6e9e3048799ec8b1f1e11",
+        "SampLib/Samplers/AlternatingSeries.lean": "86a9e513361e75b56e8e31f98c1bc5b6d3b229dfcd09bae2dd1751b733ed67ba",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Syntax/AlternatingSeries.lean": "5e7ac57c0c71bc740d924a6282f819047c42869ea4f31ce472abc2a2d55df15c",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/UniformBag.lean": "623d3f68b364f412a4ab754244d618e8e180086cccf0cff391566d914bc640a4",
+        "SampLib/UniformBagBracket.lean": "b68ce24ee28e2ca9932807c5ac615cc5f0113579155404bf933d359c4a2e369a",
+        "SampLib/UniformBagChoice.lean": "ad1d3a2b20020186acda8dd82c5dc8d12b27ca866bd80e31b1e46c33298b8997",
+        "SampLib/UniformBagComparison.lean": "0176e298a312daf987a825de79414eba19a40ee7fe32ea02b58d4702b04119eb",
+        "SampLib/UniformBagLess.lean": "90f4390bbbc3560958d7f466e0a2d523716a23b572e19f8fc63cd6e2ff3e4af7",
+        "code/Samplers/Bernoulli/Arithmetic.lean": "c0b59cdb429f96402d03e2aab0465da58357950d13eba3fb49aa39ad0609f7b1",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Bernoulli/Series.lean": "9eef053872196e3d398a3739eb3b3c726ce6a4a0f3460dd19b2396471d591f12",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": []
+}

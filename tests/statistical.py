@@ -127,6 +127,8 @@ def check(name, xs):
         'cosine_one': math.cos(1), 'sine_one': math.sin(1), 'log_one': math.log(2),
         'arctan_one': math.pi/4, 'exp_martingale_one': math.exp(-1),
         'edge_exp_factory1': math.exp(-1),
+        'low_probability_boundary': 1/4, 'low_probability_interior': 3/8,
+        'low_probability_contracting': 1/4,
     }
     if name in coins:
         require(all(type(x) is bool for x in xs), 'non-Boolean coin output')
@@ -270,6 +272,7 @@ def check(name, xs):
         'edge_reservoir0': [], 'edge_sample0': [], 'edge_in_order_all': [0,1,2],
         'edge_composition': [1,1,1], 'edge_weak0': [0,0,0], 'edge_power1': True,
         'edge_exp0': True, 'edge_exp_factory0': True, 'edge_uniform_sum0': 0.0,
+        'edge_low_probability_zero_bound': False, 'edge_low_probability_zero': False,
     }
     require(name in deterministic, f'missing statistical oracle: {name}')
     require(all(x == deterministic[name] and type(x) is type(deterministic[name]) for x in xs),
@@ -297,10 +300,11 @@ def main():
         t = time.monotonic()
         try:
             if name.startswith('invalid_'):
-                p = subprocess.run([str(EXE), name, '1', str(seed), 'env'],
-                                   capture_output=True, text=True, timeout=20)
-                require(p.returncode != 0 and 'stuck: fail' in p.stderr,
-                        f'{name}: expected explicit interpreter failure, got {p.stderr!r}')
+                for engine in ['env', 'subst']:
+                    p = subprocess.run([str(EXE), name, '1', str(seed), engine],
+                                       capture_output=True, text=True, timeout=20)
+                    require(p.returncode != 0 and 'stuck: fail' in p.stderr,
+                            f'{name}/{engine}: expected explicit failure, got {p.stderr!r}')
                 details = {'expected_failure': True, 'samples': 0}
             else:
                 n = min(args.count, 100) if name.startswith('edge_') and name not in (
@@ -322,8 +326,10 @@ def main():
             failures.append(name)
             results.append({'case': name, 'seed': seed, 'passed': False, 'error': str(e)})
             print(f'FAIL {name}: {e}', flush=True)
+    packages = json.loads((ROOT/'lake-manifest.json').read_text())['packages']
+    revision = next(p['rev'] for p in packages if p['name'].strip('«»') == 'clutch-lean')
     report = {'base_seed': args.seed, 'requested_count': args.count,
-              'clutch_revision': '54e780e43709d2f28386b83bffccdde498141b25',
+              'clutch_revision': revision,
               'per_bound_alpha': 1e-9, 'seconds': time.monotonic()-start,
               'total_samples': sum(r.get('samples',0) for r in results),
               'passed': len(results)-len(failures), 'failed': len(failures), 'results': results}

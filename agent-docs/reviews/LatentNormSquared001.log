@@ -1,0 +1,3 @@
+'SampLib.LatentReal.NormSquared.twp_normSquared' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.NormSquared.oracleSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.NormSquared.law_eq' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,13 @@
+lake build SampLib.Samplers.InclusionSystematic
+Build completed successfully (4161 jobs).
+
+lake env lean agent-docs/reviews/ExactStructuredBatch003Callers.lean
+'SampLib.InclusionSystematic.inclusionSystematic_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.InclusionSystematic.inclusionSystematic_zero_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.SystematicPPS.sample_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SystematicPPS.inclusion_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-structured003-signatures.lean
+SPEC_OK SampLib.InclusionSystematic.inclusionSystematic_distSpec Occil.Weighted.inclusionSystematic

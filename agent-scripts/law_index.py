@@ -44,7 +44,7 @@ def implementations() -> dict[str, dict]:
     return result
 
 
-def accepted_proofs() -> dict[str, str]:
+def historical_accepted_proofs() -> dict[str, str]:
     campaign = json.loads((ROOT / "agent-docs/VerificationCampaign.json").read_text())
     result = {
         "Occil.realCoin": "SampLib/Samplers/RealCoin.lean",
@@ -83,6 +83,29 @@ def accepted_proofs() -> dict[str, str]:
     return result
 
 
+def accepted_proofs() -> dict[str, str]:
+    campaign_path = ROOT / "agent-docs/ExactVerificationCampaign.json"
+    if not campaign_path.exists():
+        return historical_accepted_proofs()
+
+    from audit_exact_sampler_proofs import validate_receipt, validate_scope
+    from exact_baseline import validate_baseline_overlay
+    from proof_dependencies import review_context
+
+    result = validate_baseline_overlay()
+    context = review_context()
+    campaign = json.loads(campaign_path.read_text())
+    for row in validate_scope(campaign, context):
+        if row["status"] != "accepted":
+            continue
+        validate_receipt(row, context)
+        name = row["sampler"]
+        if name in result:
+            raise ValueError(f"Duplicate accepted sampler across campaigns: {name}")
+        result[name] = row["proof_module"].replace(".", "/") + ".lean"
+    return result
+
+
 def draft_proofs(names: set[str], accepted: dict[str, str]) -> dict[str, str]:
     result = {}
     by_short = {}
@@ -105,6 +128,8 @@ def table_cell(text: str) -> str:
 def validate_math(name: str, law: str) -> None:
     if re.search(r"\\operatorname\b", law):
         raise ValueError(f"Unsupported macro in law index; use \\mathrm or \\text: {name}")
+    if "#" in law:
+        raise ValueError(f"Use \\lvert and \\rvert for cardinality in the law index: {name}")
     if "|" in law:
         raise ValueError(f"Raw table pipe in law; use \\mid or \\lvert: {name}")
     if "$" in law:

@@ -1,0 +1,12 @@
+lake build SampLib.Samplers.PSRNUniformSum
+Build completed successfully (4166 jobs).
+
+lake env lean agent-docs/reviews/ExactLatentBatch003Callers.lean
+'SampLib.PSRNUniformSum.newUniformSum_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNUniformSum.oracleSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNUniformSum.model_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactLatent003.reread' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactLatent003.construct_and_reread' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-latent003-signatures.lean
+SPEC_OK SampLib.PSRNUniformSum.newUniformSum_latentDistSpec Occil.PSRN.newUniformSum

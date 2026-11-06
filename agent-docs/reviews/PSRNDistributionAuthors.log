@@ -1,0 +1,3 @@
+'SampLib.PSRNRayleigh.newRayleigh_representedDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNRayleigh.newRayleigh_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNRayleigh.model_law' depends on axioms: [propext, Classical.choice, Quot.sound]

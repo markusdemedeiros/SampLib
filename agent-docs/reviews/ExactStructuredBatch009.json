@@ -1,0 +1,93 @@
+{
+  "reviewer": "review_exact_b",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactStructuredBatch009Callers.lean",
+  "caller_sha256": "ff4a91fb1d64866acccd5e2bf8cf39f6243acc8eaee8803bac3784c38e48afa5",
+  "accepted": [
+    {
+      "sampler": "Occil.WeightedVariants.succinctChoice",
+      "proof_module": "SampLib.Samplers.SuccinctChoice",
+      "public_spec": "SampLib.SuccinctChoice.succinctChoice_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "Every finite natural-weight list with positive total and either density 2^19*length<=sum, or all weights strictly below2^32. Dense lists may contain arbitrarily large weights. Sparse packed lists satisfy precisely the source32-bit field guard. The full canonical weighted-choice law on original integer position labels supports arbitrary ENNReal continuation credit, including infinity.",
+      "sha256": "23444b16c6706bfd41367b76451974859873952977af24c64460f9ad11030cdb",
+      "review_evidence": "agent-docs/reviews/ExactStructuredBatch009.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/BetaStep.lean": "0a1e17b99ace11607f7b1c4c21f95d1e5b3d213192d65c5a6fb2f78d676d5748",
+        "SampLib/CurriedStep.lean": "dba39cab6b87d9f854d3fc1c15e32254dc9c9bc4ac83704d1bd219bb5275e009",
+        "SampLib/Distributions/EnvelopeRejection.lean": "953f75367c4969b9919373c2d97e5d42f2497d1e399e40603a17388168ac5aa3",
+        "SampLib/Distributions/PackedBits.lean": "894249ad68e84c01b8003ea4143b00a2176cb7bd2f9c8a2d9e62159e7be4da28",
+        "SampLib/Distributions/PackedWeights.lean": "0b0072c7bea0f5a475be2d250bcd12221834cb3e1ad533d74d90d2760925b3c0",
+        "SampLib/Distributions/WeightMaximum.lean": "fc397bfadf7ca925e2d1c34448398cc6ffe9364ae1abeb498af178173c27478e",
+        "SampLib/GeneralSyntax.lean": "3c097dd0e388f10ac683bd66d88fa3361e2d5631cebe3ab4782e70037123fdef",
+        "SampLib/KnownIntegerComparison.lean": "924a0d5c459ebaec937a8a92cac32bcf67c5baf87a79447b069b5e14d026956e",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/MarkovTerms.lean": "acc68951ea3e8a6fd8fca877f1d6cb3874a553761d5037888ef6d874611d0d2c",
+        "SampLib/SamplerTerms.lean": "57b93ff11099ac98eb55a4b4a04eeb349e58454bb9bd96d040f9c4cbc24a98be",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/RndIntExcRange.lean": "3307969caa795835b6ccc1c68db37333a6902b52859104bf27871ac96c234e51",
+        "SampLib/Samplers/SuccinctChoice.lean": "23444b16c6706bfd41367b76451974859873952977af24c64460f9ad11030cdb",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/Samplers/WeightedRejection.lean": "9c8d0a10a70f75f9ece953045d03f14de76751290b0583a23f3fbefce524b915",
+        "SampLib/SuccinctChoice.lean": "b1e76f67f016e20808e98160e9eb75535565788043fad8d2071387bf8e7cc3cb",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Syntax/ListAccess.lean": "1ff1681744767cb8c03cb1ccfc769d348046a3c7d2cd8e8ca636489577719cb1",
+        "SampLib/Syntax/SuccinctChoice.lean": "3ccb1da152e59898ad687744501d9ac7a076956e42f129f98d5878f7a94da37f",
+        "SampLib/Syntax/UniformRanges.lean": "eb9205978b13185ff38d2db03fb83f82f242ec1290a557ded19d7a2eea3e739e",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedIntegerPower.lean": "4d98577633e04ebbf62d71c689bbc896d93cef55f88e7bb5b0e89fc9d1eee1f5",
+        "SampLib/WeightedValidation.lean": "6d06663d8a9c838913038370a3ffdccf145a2e7ebc835bdca6469a6f64ba8866",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Combinatorial.lean": "a3293872f9602fb5c4db5897d38bd99fe194df1b502e16d88bbd63c202bd5aea",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Combinatorial/Permutations.lean": "816305072256844d2e00b4f9cb514839bd4067748bbadbe6d3b6c75704344305",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/General/Core.lean": "589c1236ee0851f6c3e75c4edb40cd528b5ebdcb627d698d6f989a684eb08750",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Rejection.lean": "afce09e6ec2a057df95a89fb02a648cb00fd12643353771a7573c9c29a4a8212",
+        "code/Samplers/Weighted/Sequential.lean": "15b8a24a77a2c0bd2fdb118e171202aa940f74efa16e7ee67d7ab5eef24c3de9",
+        "code/Samplers/Weighted/Trees.lean": "2810813307430cc3ed2b332847eb0cdbbdeca8fa2cf57d679f7ffdf35f9f87f4"
+      }
+    }
+  ],
+  "support": []
+}

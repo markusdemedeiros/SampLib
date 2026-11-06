@@ -1,0 +1,91 @@
+{
+  "reviewer": "review_exact_b",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactDiscreteBatch004Callers.lean",
+  "caller_sha256": "9148e20dceb6a8a659d0a0d8f37d68c356d42da003550161974a373369dc8cb4",
+  "accepted": [
+    {
+      "sampler": "Occil.DiscreteExtra.binomialHalfRejection",
+      "proof_module": "SampLib.Samplers.BinomialHalfRejection",
+      "public_spec": "SampLib.BinomialHalfRejection.binomialHalfRejection_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "Every natural number of trials, including zero, small sizes, odd sizes and even sizes. The target is the canonical fair binomial law. UniformInt is the only random primitive assumption; arbitrary ENNReal continuation credit, including infinity, is supported.",
+      "sha256": "3e04b91a288a1272e26694046c138450db1f300db57b51a056c48ca31837ab0e",
+      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch004.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/BinomialHalfBranchesSyntax.lean": "7f27a18d12feb3a78a34f71eaa6a12884dcaab5af25e0dd31479fdca6259dcc1",
+        "SampLib/BinomialHalfOpening.lean": "423347d279924574d88f39ab0a0e3ffc8c159f65bb8137dcbd6c5882ad179616",
+        "SampLib/BinomialHalfRejectionCore.lean": "e5ca5083a8ca93aa1a237dfe6299c37163615bc275064c72c72380fffc5398b9",
+        "SampLib/BinomialHalfRejectionSyntax.lean": "69993e874188cd43d1dd2f691a32d5b8d26fcfbf315ae137acff4f4b31a91969",
+        "SampLib/Distributions/BinaryDigits.lean": "0f0566ca8ad3e73231335e9b5ceff2f8a20853e0f08caab9ad8891697e03fc8e",
+        "SampLib/Distributions/Binomial.lean": "332a0b32e0d14943ce264f1c35d85558c615bea81eec88194e5c53e20112124d",
+        "SampLib/Distributions/BinomialHalfAcceptance.lean": "8e309fe35164c8569989e77dd0f6d2d8f2335dd2530b5266bfcbf33920d4aa93",
+        "SampLib/Distributions/BinomialHalfBranches.lean": "de38d6d6882362541762b09f1d48c98dbcc45b2b093c08bf70f6b91af5b4abb0",
+        "SampLib/Distributions/BinomialHalfEnvelope.lean": "f92760c4f2c086614f283515af52230adf54bd93341bc6614738ebdf741dc05b",
+        "SampLib/Distributions/BinomialHalfEnvelopeCentral.lean": "00a868d0102bf50d4d0a502d8957aca1537e19134ca51cb75188750273f8e4c0",
+        "SampLib/Distributions/BinomialHalfEnvelopeDecay.lean": "209f875438c4d1f0976844aa11097a2692730b0243270b017460b9e62e516c94",
+        "SampLib/Distributions/BinomialHalfKernel.lean": "33f67bdb2bf6455351a50ec368f86eaba592387ca8164e4a4c004990be21bbfc",
+        "SampLib/Distributions/BinomialHalfMoment.lean": "7f60baae8784fea4fe3b93c85ef5ae2d7eac84499bf130cd5ed78e049838666d",
+        "SampLib/Distributions/BinomialHalfProposal.lean": "e1167c9b4344137a6aa472339f876c1df4702af0b6b5189804162b169a557085",
+        "SampLib/Distributions/BinomialMeasure.lean": "35eba0a09d4cf117121ca3776843a39c78048b921e3182fccb44b05083c35373",
+        "SampLib/Distributions/Geometric.lean": "f35eaf7977331250eb2152791b93d048be5f60d05e2c82a584a4d2b781624bd5",
+        "SampLib/Distributions/HazardProduct.lean": "9a021d0a02923a09ee05032e651b38de74bd1697dcd9a1e072d96ad947b10d35",
+        "SampLib/Distributions/IntegerSqrt.lean": "a8e3be71cf8867f08e17f5b47d8353092dd98b27c2cf89046b8b9bd442539544",
+        "SampLib/IntegerChoose.lean": "c02ddb26b9ac1bf2de1bb94542131d6e2ffd7f083f149835e026b0a6353249b4",
+        "SampLib/IntegerPower.lean": "5e738a4f8fcb4d9a2fb783392e96eee4791009f3b34ee1f9e813ec754a1ff0d8",
+        "SampLib/IntegerSqrt.lean": "32b3c7a9cd24714230c0a8138888ac9fe62691af3c110798da451efe4adbb212",
+        "SampLib/Samplers/Binomial.lean": "76e53294152ed9586f37315a5f27e7257faca3e9bec707ff404c6653d6a9e996",
+        "SampLib/Samplers/BinomialHalfBits.lean": "97ac81abdbfee3148ab6ad7c554071abf9dc0936db8e2bdb408f787908fea4cf",
+        "SampLib/Samplers/BinomialHalfRejection.lean": "3e04b91a288a1272e26694046c138450db1f300db57b51a056c48ca31837ab0e",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/Geometric.lean": "a5692d1af2f98bc791cb40d14c4ef0bb349873d411659fa6f2b70d552eb5ce78",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/UniformFin.lean": "6f8540c5bd20173d96036007f76115b5f53812b159927587557a93b21c3f5fdd",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Binomial.lean": "92e03310618dac7df9dcc34b3ea769b33776dbf09dcb7419990cb9e9af52c3a3",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": []
+}

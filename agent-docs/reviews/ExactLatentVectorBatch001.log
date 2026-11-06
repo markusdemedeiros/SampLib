@@ -1,0 +1,20 @@
+lake build SampLib.Samplers.PSRNInsideShape
+Build completed successfully (4175 jobs).
+
+lake env lean agent-docs/reviews/ExactLatentVectorBatch001Callers.lean
+'_private.«agent-docs».reviews.ExactLatentVectorBatch001Callers.0.ReviewExactLatentVector001.acceptHalf_spec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.«agent-docs».reviews.ExactLatentVectorBatch001Callers.0.ReviewExactLatentVector001.half_sampler' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.«agent-docs».reviews.ExactLatentVectorBatch001Callers.0.ReviewExactLatentVector001.half_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ReviewExactLatentVector001.three_views' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactLatentVector001.construct_framed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNInsideShape.newInsideShape_vectorSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.UniformVector.uniformVector_latentSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-latentvector001-signatures.lean
+SPEC_OK SampLib.PSRNInsideShape.newInsideShape_vectorSpec Occil.PSRN.newInsideShape

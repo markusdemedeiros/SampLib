@@ -1,0 +1,91 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactStructuredBatch012Callers.lean",
+  "caller_sha256": "0bcefab10c9537d3a5ea330786e62f0469f3c921cea693578d747a4b13fc9d69",
+  "accepted": [
+    {
+      "sampler": "Occil.WeightedVariants.optimalDraw",
+      "proof_module": "SampLib.Samplers.OptimalDraw",
+      "public_spec": "SampLib.OptimalTable.optimalDraw_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "Every valid cyclic probability table given as the source tuple (matrix,(k,(l,rejected))): arbitrary natural rows rows : Fin n -> N (bits above 2^k ignored, as the scan reads only the low k bits), any l<k, any integer rejection label (outside [0,n) means no rejection), cyclic row numerators summing to 2^k-2^l (total mass one), and positive accepted mass (rejected row mass below one, any rejection probability below one). The law is the canonical weighted-choice law on row labels of the accepted numerators, for arbitrary ENNReal continuation credit including infinity.",
+      "sha256": "3b912400a413ea83274ca1d5fc162f1980cf13dc2c07ca6c6c5da248a5f042de",
+      "review_evidence": "agent-docs/reviews/ExactStructuredBatch012.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/AbsorbingChain.lean": "af0bea40c38584232e3f4e6db818955735204088402793abb9ac965a25b312f1",
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/BitLength.lean": "a8aed177c3ca6dc83000c60570b7b38e284aec63560cc62dd6ff33a99c16a685",
+        "SampLib/Ddg.lean": "7f67a9595aaa63c8c735644a4acd74b5a6c23de4319b9533163bcea91ffc1c93",
+        "SampLib/DdgContext.lean": "7a601bbfe635819b0ae9f72430f04b333c7be96497989154c6c86129ed78f5cd",
+        "SampLib/DdgScan.lean": "bb7067e484308f1e97c728f5f16e557224a1169eafafb4159477aafa2c53947f",
+        "SampLib/Distributions/BinaryRounding.lean": "0d4f0f9cda41c5b3314618d3cf913f48efd321546abe7a1a2fc194b270490729",
+        "SampLib/Distributions/BinaryTail.lean": "3aca9d89ea00a3668e56ce6e67d53e1bd0ad7c94c0965448cf90a218849244f3",
+        "SampLib/Distributions/DdgCredits.lean": "fcb80c7bd7767fe8ecc804ea76d0621e3ff94afc23f978372ebbee986a673d2e",
+        "SampLib/Distributions/KnuthYaoColumns.lean": "0eb34b935e3756568e89ca7a770a85e91fccb1da22345f9087a6487145197e9a",
+        "SampLib/Distributions/KnuthYaoCredits.lean": "4c17abadfe4f04a6fda7d42a9d91d9f76ec4d05ca7152ea508e8d47e8adc7ab5",
+        "SampLib/Distributions/OptimalCredits.lean": "28c6083c093a779fe64d557c636672fe366053de96e297afc25146ddece8a0c1",
+        "SampLib/Distributions/OptimalCyclic.lean": "d8a8c66f9f953d6403d6ab9f16989d08b7a63b7f17861c139385dce8e231730c",
+        "SampLib/Distributions/OptimalEncoding.lean": "ccb03cc22b4f262a57873e60fe0a77b331c82790e3e147d6bbf9334e5f6f2b9b",
+        "SampLib/Distributions/OptimalMatrixData.lean": "08d58ddef5b61cdc4b87066c2294c038f342f38d2d0e257948e76f13d338dafe",
+        "SampLib/Distributions/OptimalParameters.lean": "45aafae99c61ee28824279dc53b32128d1f56aa63c819b34c3538138abaa6492",
+        "SampLib/Distributions/OptimalRejection.lean": "6e5a62cf66ecd0ec424cfce28bf0725a0368c1d53dd5c5f10788a41f1dcd5d6e",
+        "SampLib/Distributions/OptimalTableLaw.lean": "d88c3447e1b74061f16784dcb9bf4fc2f6328b4370a82a56e4fef7e1cd349ae8",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/OptimalDraw.lean": "51d716cfa0c1a2af211b80ba7eb14fef49ca65c2bb6be995e54d998161fdd78f",
+        "SampLib/OptimalScan.lean": "687e9aec01ab9148d9deb99886cd79d1230b53aadb1ff527e488b11962f6db11",
+        "SampLib/OptimalWalk.lean": "ad94493eaed8967868f8cde571c83ebe5c0ec5cafde68ac85653a70c6b32d4e6",
+        "SampLib/Samplers/OptimalDraw.lean": "3b912400a413ea83274ca1d5fc162f1980cf13dc2c07ca6c6c5da248a5f042de",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Syntax/ListValues.lean": "eb0b0faa8645aa926f0c1e50e03b48f9bcd0d30c7772db6f081d2b4f5a3ebdc6",
+        "SampLib/Syntax/Optimal.lean": "234dfdabd27603d7349e3113a609f5a3bc738080ee8f7eab9340c47d647e686a",
+        "SampLib/Syntax/OptimalSource.lean": "4f9fb7b4c9ae4235e34ce0aaf21c484d2c882d2665b866832ec5bf03edf8d088",
+        "SampLib/Syntax/OptimalTable.lean": "171c1034821f9de1b39310c7c63960a6ed166f16172456cb6abc0d4a553cc355",
+        "SampLib/Syntax/OptimalWalk.lean": "d351965992666aa07c93484720d5bd26c8f7bdf1c4eeae099bb8022f0c4e4673",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/WeightedIntegerPower.lean": "4d98577633e04ebbf62d71c689bbc896d93cef55f88e7bb5b0e89fc9d1eee1f5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Optimal.lean": "a9b71b1c8b8bfa72602ac4693c83ff2eb0dccb5a98fab661d37c7c534aa44571",
+        "code/Samplers/Weighted/Trees.lean": "2810813307430cc3ed2b332847eb0cdbbdeca8fa2cf57d679f7ffdf35f9f87f4"
+      }
+    }
+  ],
+  "support": []
+}

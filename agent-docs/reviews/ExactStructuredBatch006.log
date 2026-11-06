@@ -1,0 +1,11 @@
+lake build SampLib.Samplers.PSRNPowerCoin
+Build completed successfully (4265 jobs).
+
+lake env lean agent-docs/reviews/ExactStructuredBatch006Callers.lean
+'SampLib.PSRNPowerCoin.powerCoin_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNPowerCoin.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RationalPower.power_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactStructured006.frame' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-structured006-signatures.lean
+SPEC_OK SampLib.PSRNPowerCoin.powerCoin_distSpec Occil.PSRN.powerCoin

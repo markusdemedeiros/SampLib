@@ -1,0 +1,15 @@
+lake build SampLib.Samplers.BinomialHalfRejection
+Build completed successfully (4742 jobs).
+
+lake env lean agent-docs/reviews/ExactDiscreteBatch004Callers.lean
+'SampLib.BinomialHalfRejection.binomialHalfRejection_distSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.BinomialHalfProposal.accepted_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BinomialHalfProposal.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.BinomialHalfEnvelope.acceptance_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.IntegerSqrt.twp_integerSqrt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactDiscrete004.framed' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-discrete004-signatures.lean
+SPEC_OK SampLib.BinomialHalfRejection.binomialHalfRejection_distSpec Occil.DiscreteExtra.binomialHalfRejection

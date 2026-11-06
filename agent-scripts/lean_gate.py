@@ -19,7 +19,7 @@ def main() -> int:
         raise SystemExit("usage: lean_gate.py -- COMMAND [ARG ...]")
     directory = Path(tempfile.gettempdir()) / "samplib-lean-slots"
     directory.mkdir(exist_ok=True)
-    slots = [(directory / str(i)).open("a") for i in range(3)]
+    slots = [(directory / str(i)).open("a") for i in range(4)]
     admission = (directory / "admission").open("a")
     acquired = None
     try:

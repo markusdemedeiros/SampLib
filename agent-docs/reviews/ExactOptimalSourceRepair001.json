@@ -1,0 +1,54 @@
+{
+  "kind": "implementation_repair_review",
+  "author": "/root",
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "checks": [
+    "source",
+    "domain",
+    "other_definitions"
+  ],
+  "review_evidence": "agent-docs/reviews/ExactOptimalSourceRepair001.md",
+  "review_evidence_sha256": "5ad6c217f1e1572b39bc2012479f524f213c53ac1fde06acda237172fe274047",
+  "changes": [
+    {
+      "path": "code/Samplers/Weighted/Optimal.lean",
+      "before_source": "agent-docs/reviews/ExactOptimalOriginalSource.txt",
+      "before_sha256": "cc627b9b7e17370238377d0e2d9f0455ab3c465dc20d0b12b67d8e5e63f16d01",
+      "after_sha256": "a9b71b1c8b8bfa72602ac4693c83ff2eb0dccb5a98fab661d37c7c534aa44571",
+      "replacements": [
+        {
+          "before": "          let encoded := (if l = k then m else if l = #0 then m else",
+          "after": "          let encoded := (if m = denominator then ceiling - #1 else\n            if l = k then m else if l = #0 then m else"
+        }
+      ],
+      "samplers": [
+        "Occil.WeightedVariants.optimalChoice",
+        "Occil.WeightedVariants.optimalDraw"
+      ]
+    }
+  ]
+}

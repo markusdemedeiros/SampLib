@@ -1,0 +1,14 @@
+lake build SampLib.LatentConstantDigits
+Build completed successfully (4180 jobs).
+
+lake env lean agent-docs/reviews/ExactLatentBatch004Callers.lean
+'SampLib.LatentDigits.newByDigits_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentDigits.twp_read' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentDigits.twp_observe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentDigits.constant_digitSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentDigits.constant_initial_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactLatent004.construct_and_reread' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactLatent004.cache_reread' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-latent004-signatures.lean
+SPEC_OK SampLib.LatentDigits.newByDigits_latentDistSpec Occil.PSRN.newByDigits

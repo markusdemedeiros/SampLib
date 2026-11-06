@@ -1,0 +1,68 @@
+{
+  "base_seed": 20261106,
+  "requested_count": 8000,
+  "clutch_revision": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+  "per_bound_alpha": 1e-09,
+  "seconds": 2.6701146196573973,
+  "total_samples": 24200,
+  "passed": 6,
+  "failed": 0,
+  "results": [
+    {
+      "case": "low_probability_boundary",
+      "seed": 20261106,
+      "passed": true,
+      "seconds": 0.7417293498292565,
+      "samples": 8000,
+      "chi2_diagnostic": 0.384,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "low_probability_interior",
+      "seed": 20365835,
+      "passed": true,
+      "seconds": 1.1506210532970726,
+      "samples": 8000,
+      "chi2_diagnostic": 0.013333333333333332,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "low_probability_contracting",
+      "seed": 20470564,
+      "passed": true,
+      "seconds": 0.2481503840535879,
+      "samples": 8000,
+      "chi2_diagnostic": 0.006,
+      "categories": 2,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_low_probability_zero_bound",
+      "seed": 20575293,
+      "passed": true,
+      "seconds": 0.1993551878258586,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "edge_low_probability_zero",
+      "seed": 20680022,
+      "passed": true,
+      "seconds": 0.19854666711762547,
+      "samples": 100,
+      "deterministic": true,
+      "differential_samples": 12
+    },
+    {
+      "case": "invalid_low_probability_bound",
+      "seed": 20784751,
+      "passed": true,
+      "seconds": 0.13088025711476803,
+      "expected_failure": true,
+      "samples": 0
+    }
+  ]
+}

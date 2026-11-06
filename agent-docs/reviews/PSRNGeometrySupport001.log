@@ -1,0 +1,14 @@
+'SampLib.PSRNDecayCoins.distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.RationalInterval.contains_multiply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.RationalInterval.contains_reciprocal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.RationalInterval.Approximates.unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.RationalInterval.Approximates.reciprocal_refine' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.PSRNGammaMixtures.lindley_law_eq_withDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNBetaRejection.acceptance_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentUniformProduct.expectation_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentUniformProduct.law_refines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.exists_doubling_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNSphereLaw.rotation_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNSphereLaw.ae_norm_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]

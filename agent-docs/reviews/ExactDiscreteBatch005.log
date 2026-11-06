@@ -1,0 +1,11 @@
+lake build SampLib.Samplers.Zipf
+Build completed successfully (4270 jobs).
+
+lake env lean agent-docs/reviews/ExactDiscreteBatch005Callers.lean
+'SampLib.Zipf.zipf_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Zipf.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Zipf.law_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactDiscrete005.framed' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-discrete005-signatures.lean
+SPEC_OK SampLib.Zipf.zipf_distSpec Occil.DiscreteExtra.zipf

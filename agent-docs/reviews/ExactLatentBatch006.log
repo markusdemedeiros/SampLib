@@ -1,0 +1,18 @@
+lake build SampLib.PSRNExponential
+Build completed successfully (4309 jobs).
+
+lake env lean agent-docs/reviews/ExactLatentBatch006Callers.lean
+'SampLib.PSRNExponential.newExponentialFromDecay_latentDistSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.PSRNExponential.newExponentialFromDecay_representedDistSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.PSRNExponential.representedOracleSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentExponential.initial_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentExponential.representation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNExponential.rational_isDecaySpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactLatent006.construct_and_reread' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-latent006-signatures.lean
+SPEC_OK SampLib.PSRNExponential.newExponentialFromDecay_latentDistSpec Occil.PSRN.newExponentialFromDecay

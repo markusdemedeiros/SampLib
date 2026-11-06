@@ -1,0 +1,5 @@
+'SampLib.LatentUniform.interval_observed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentUniform.representedOracleSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentUniform.newUniform_representedDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentUniform.dyadicInterval_approximates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'UniformRepresentationReview001.aliases' depends on axioms: [propext, Classical.choice, Quot.sound]

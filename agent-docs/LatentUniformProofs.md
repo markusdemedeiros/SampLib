@@ -75,3 +75,13 @@ result type erases the language parameter. Likewise, instantiate a pure-step
 rule's endpoints before discharging its sidecondition. An unresolved
 metavariable can cause misleading timeouts or recursion-depth errors even when
 the intended closedness calculation is small.
+
+## Measure-theory scopes in Iris proofs
+
+Close broad `open MeasureTheory` scopes before the program-logic section. That
+namespace activates measure convolution notation `∗` at precedence 80, which
+collides with Iris separation at precedence 35. The resulting errors can claim
+that the raw pure/separation elaborators are unimplemented, even inside `iprop`.
+Use selective openings such as `open MeasureTheory (Measure IsProbabilityMeasure
+lintegral_map)` in the Iris section. Changing existential binders or importing
+`LocalBI` again does not resolve this notation collision.

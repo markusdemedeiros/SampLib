@@ -1,0 +1,14 @@
+lake build SampLib.Samplers.HanHoshi
+Build completed successfully (4203 jobs).
+
+lake env lean agent-docs/reviews/ExactStructuredBatch007Callers.lean
+'SampLib.HanHoshi.hanHoshi_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.HanHoshi.bit_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.HanHoshi.unresolved_credit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.RealCategoricalCDF.law_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteBoundaryBands.expectation_preservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.FiniteBoundaryBands.exists_horizon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactStructured007.framed' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-structured007-signatures.lean
+SPEC_OK SampLib.HanHoshi.hanHoshi_distSpec Occil.Weighted.hanHoshi

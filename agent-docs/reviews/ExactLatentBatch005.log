@@ -1,0 +1,23 @@
+lake build SampLib.Samplers.PSRNReciprocalUniform
+Build completed successfully (4254 jobs).
+
+lake env lean agent-docs/reviews/ExactLatentBatch005Callers.lean
+'SampLib.PSRNReciprocalUniform.newReciprocalUniform_latentDistSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.PSRNReciprocalUniform.newReciprocalUniform_representedDistSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.PSRNReciprocalUniform.initial_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.RepresentedReciprocal.twp_observe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.RepresentedReciprocal.expectation_preservation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.LatentReal.RepresentedReciprocal.tail_mass_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.ReciprocalUniform.law_eq_pareto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactLatent005.construct_and_reread' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-latent005-signatures.lean
+SPEC_OK SampLib.PSRNReciprocalUniform.newReciprocalUniform_latentDistSpec Occil.PSRN.newReciprocalUniform

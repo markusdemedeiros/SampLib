@@ -1,0 +1,14 @@
+lake build SampLib.LatentRootViews
+Build completed successfully (4180 jobs).
+
+lake build SampLib.LatentRootLaw
+Build completed successfully (4237 jobs).
+
+lake env lean agent-docs/reviews/ExactSharedRoot001Callers.lean
+'SampLib.LatentReal.Root.twp_observe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.Root.twp_bisect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.Root.twp_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.Root.represented_viewSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.Model.rayleigh_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.Model.rayleigh_admissible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactSharedRoot001.root_and_source' depends on axioms: [propext, Classical.choice, Quot.sound]

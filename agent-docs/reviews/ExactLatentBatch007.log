@@ -1,0 +1,24 @@
+lake build SampLib.LatentRepresentedExponentialWrappers
+Build completed successfully (4391 jobs).
+
+lake env lean agent-docs/reviews/ExactLatentBatch007Callers.lean
+'SampLib.PSRNExponential.newExponential_latentDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNExponential.newExponentialLogRate_latentDistSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.PSRNExponential.newExponentialUnknownRate_latentDistSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.PSRNExponential.newExponential_representedDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PSRNExponential.newExponentialLogRate_representedDistSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SampLib.PSRNExponential.newExponentialUnknownRate_representedDistSpec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ReviewExactLatent007.construct_and_reread' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-latent007-signatures.lean
+SPEC_OK SampLib.PSRNExponential.newExponential_latentDistSpec Occil.PSRN.newExponential
+SPEC_OK SampLib.PSRNExponential.newExponentialLogRate_latentDistSpec Occil.PSRN.newExponentialLogRate
+SPEC_OK SampLib.PSRNExponential.newExponentialUnknownRate_latentDistSpec Occil.PSRN.newExponentialUnknownRate

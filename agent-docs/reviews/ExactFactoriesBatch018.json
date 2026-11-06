@@ -1,0 +1,84 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactFactoriesBatch018Callers.lean",
+  "caller_sha256": "e46041da9d2190b9e94953bd2eaf8c468625018f240039b64a98b82f6b9ef522",
+  "accepted": [
+    {
+      "sampler": "Occil.Constants.eulerMascheroni",
+      "proof_module": "SampLib.Samplers.EulerMascheroni",
+      "public_spec": "SampLib.EulerMascheroni.eulerMascheroni_distSpec",
+      "spec_kind": "plain",
+      "classification": "derived",
+      "reviewed_domain": "Fixed Euler-Mascheroni constant probability; exact natural bit-count getter and positive rational series, no external analytic identity assumption.",
+      "sha256": "c669c3ee1c7cd8225ba393e5bec43611883f6fe6e2d855c64c07b5aaf8263e9d",
+      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch018.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/BetaStep.lean": "0a1e17b99ace11607f7b1c4c21f95d1e5b3d213192d65c5a6fb2f78d676d5748",
+        "SampLib/Distributions/BinaryRounding.lean": "0d4f0f9cda41c5b3314618d3cf913f48efd321546abe7a1a2fc194b270490729",
+        "SampLib/Distributions/BoundsKernel.lean": "209b06e0717fc9d1ef770e2c057a67d87d018e73d92762729d1a9ff3bca1fda3",
+        "SampLib/Distributions/DyadicPosterior.lean": "47aee6086b85b501470624626940b55ef333d20e4bd9f21e3e698e66cad716e0",
+        "SampLib/Distributions/DyadicRefinement.lean": "b4339270ecc356a8b3fb2f8a4cd0d3f1dbf10ff6a9b4457bbd8918d32eff849c",
+        "SampLib/Distributions/EulerMascheroniSeries.lean": "49199e30de88b337150941581971d328b0c891d271a7b5e0b64b06d35b39cba4",
+        "SampLib/Distributions/EulerSondow.lean": "a37f0dfdf49ec9667013c63ce23ceb59da7b7a3fdf1f19ce8bcf6e44cb766bfe",
+        "SampLib/Distributions/PositiveSeries.lean": "18cb354a91af1c04c20e24770565cced9a7f25576975fa3e1b9d8c1682d4860c",
+        "SampLib/PositiveSeriesClosed.lean": "1fe7e1e0572fb2d3540f31d86115651208ef40d351bf2bb2833ae470d412d331",
+        "SampLib/Samplers/EulerMascheroni.lean": "c669c3ee1c7cd8225ba393e5bec43611883f6fe6e2d855c64c07b5aaf8263e9d",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/FromPositiveSeries.lean": "c38c051028f77b0fd3ab6aac637349975217acf9a7e984ee8c5ed03eaa4d9c92",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Syntax/PositiveSeries.lean": "2a3174cd92788600de0b6bdb18e971f8308fd3bb3ecc05f6214478afc67aa3f3",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/UniformBag.lean": "623d3f68b364f412a4ab754244d618e8e180086cccf0cff391566d914bc640a4",
+        "SampLib/UniformBagBracket.lean": "b68ce24ee28e2ca9932807c5ac615cc5f0113579155404bf933d359c4a2e369a",
+        "SampLib/UniformBagChoice.lean": "ad1d3a2b20020186acda8dd82c5dc8d12b27ca866bd80e31b1e46c33298b8997",
+        "SampLib/UniformBagComparison.lean": "0176e298a312daf987a825de79414eba19a40ee7fe32ea02b58d4702b04119eb",
+        "SampLib/UniformBagLess.lean": "90f4390bbbc3560958d7f466e0a2d523716a23b572e19f8fc63cd6e2ff3e4af7",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Constants/Exponential.lean": "5c93f0961eed560406601fd8f048cb01d8333506c66185a8c5231ae5e7b8f1b4",
+        "code/Samplers/Constants/Pi.lean": "4e5470114bc964873608647ad6cba63e4e46c33513d12bffe12f4f4bbd72ab09",
+        "code/Samplers/Constants/Special.lean": "e717f4e9947b8c040f5bd7bcc2c5c359e6512a6ad07709ab819a5b86f1a4e7da",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": []
+}

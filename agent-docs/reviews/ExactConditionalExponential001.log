@@ -1,0 +1,11 @@
+lake build SampLib.LatentCoinExponential
+Build completed successfully (4220 jobs).
+
+lake env lean agent-docs/reviews/ExactConditionalExponential001Callers.lean
+'SampLib.LatentReal.CoinExponential.exponential_programSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.CoinExponential.exponential_coinSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.LatentReal.CoinExponential.expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewConditionalExponential001.framed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.«agent-docs».reviews.ExactConditionalExponential001Callers.0.ReviewConditionalExponential001.constant_spec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

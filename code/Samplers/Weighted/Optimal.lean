@@ -40,7 +40,8 @@ when the requested weight sum is not 2^k-2^l. Returns (matrix,(k,(l,rejectIndex)
         | inr(p) =>
           let m := (fst(p));
           let period := &Weighted.integerPower #2 (k - l);
-          let encoded := (if l = k then m else if l = #0 then m else
+          let encoded := (if m = denominator then ceiling - #1 else
+            if l = k then m else if l = #0 then m else
             (m / (period - #1)) * period + m % (period - #1));
           inr((encoded, convert (snd(p)))));
       let rejectionIndex := (if rejected = #0 then #(-1) else &Occil.length weights);

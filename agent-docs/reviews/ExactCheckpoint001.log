@@ -1,0 +1,30 @@
+Exact campaign: 2 accepted, 135 in_progress
+Build completed successfully (8486 jobs).
+SPEC_OK SampLib.MarkovChain.markovStep_distSpec Occil.General.markovStep
+SampLib.MarkovChain.markovStep_distSpec {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangDist.IsUniformInt rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT]
+  {hlc : Iris.HasLC} {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] (E : CoPset)
+  (rows : List SampLib.MarkovChain.Row) (i : ℕ) (hi : i < rows.length) :
+  SampLib.IsDistSpec E pl(&Occil.General.markovStep {(SampLib.listVal SampLib.MarkovChain.encodeRow rows).fst} #↑i)
+    (SampLib.MarkovChain.kernel rows i) fun j => ProbLang.Val.int ↑j
+'SampLib.MarkovChain.markovStep_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+SPEC_OK SampLib.ShapeRejection.shapeRejection_distSpec Occil.General.shapeRejection
+SampLib.ShapeRejection.shapeRejection_distSpec.{u_1} {rT : Type} [MeasurableSpace rT] [ProbLang.LawfulProbLangℝ rT]
+  [ProbLang.ProbLangDist rT] [ProbLang.ProbLangFFI rT] [ProbLang.ProbLangObs rT] {hlc : Iris.HasLC}
+  {GF : Iris.BundledGFunctors} [ProbLang.TotalEris.ErisGS rT hlc GF] {α : Type u_1} [MeasurableSpace α] (E : CoPset)
+  (μ : MeasureTheory.Measure α) [MeasureTheory.IsProbabilityMeasure μ] (s : Set α) [DecidablePred fun x => x ∈ s]
+  (hs : MeasurableSet s) (hmass : μ s ≠ 0) (encode : α → ProbLang.Val rT) (proposal member : ProbLang.Val rT)
+  (hproposal : SampLib.IsDistSpec E pl({proposal.fst} #()) μ encode)
+  (hmember :
+    ∀ (x : α),
+      ⊢
+        ProbLang.TotalEris.ErisWpGS.tglWp E pl({member.fst} {(encode x).fst}) fun v =>
+          iprop(⌜v = ProbLang.Val.bool (decide (x ∈ s))⌝)) :
+  SampLib.IsDistSpec E pl(&Occil.General.shapeRejection {proposal.fst} {member.fst} #())
+    (SampLib.Rejection.law μ s hmass) encode
+'SampLib.ShapeRejection.shapeRejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.MarkovChain.markovStep_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.ShapeRejection.shapeRejection_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Rejection.expectation_preservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactStructured001.full_shape' depends on axioms: [propext, Classical.choice, Quot.sound]
+Audited 2/137 independently reviewed exact sampler specifications.

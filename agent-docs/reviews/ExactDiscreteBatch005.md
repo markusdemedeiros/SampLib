@@ -1,0 +1,13 @@
+# Independent exact sampler review: ExactDiscreteBatch005
+
+Reviewer: `/root/review_exact_b`. Accepted core theorem `SampLib.Zipf.zipf_distSpec`, SHA-256 `03808b22a3b2909e8871e20fb4758e66e7e65befd68d25316f86266426bb41c4`.
+
+Domain: Every positive finite bound n and nonnegative rational exponent a/b, with natural a and positive natural b. The target law is on Fin n and the actual output integer is k+1. Arbitrary ENNReal credit, including infinity, is supported. No externally assumed sampler callbacks are needed.
+
+A uniform positive-integer proposal k+1 is accepted by the actual rational-power factory applied to the concrete rational reciprocal coin1/(k+1). Its acceptance is exactly (k+1)^(-a/b). Every weight is positive and at most one, so the finite normalizer is nonzero and the accepted proposal law has canonical singleton mass equal to this power divided by the finite power sum. The reciprocal coin and rational-power callback are proved compositionally from existing rules, rather than given as concrete correctness premises.
+
+The single expectation argument is the accepted-proposal identity. Success retains F(k); failure returns the target expectation and a larger positive termination credit. The standard error-credit induction therefore verifies the actual rejection loop. The finite normalizer establishes the retry argument even for a large exponent or rare acceptance, without a uniform acceptance lower bound or a finite-moment assumption on F. ENNReal arithmetic retains infinity throughout. The source validates positive bound and denominator and nonnegative numerator, samples the actual uniform proposal, constructs the actual reciprocal callback, calls the signed rational-power factory and either returns k+1 or retries. Named opening/alignment and local source simplification certificates keep the program proof straight-line.
+
+The independent caller retains arbitrary F and an unrelated Iris resource, and instantiates the actual source at zero exponent, singleton support, and a nonintegral exponent. Infinite-credit clients cover both endpoint domains. Independent law calculations check uniform exponent0, singleton certainty for exponent9/2, and the full negative-rational-power singleton formula at arbitrary n,a,b,k. All four printed sampler, expectation, canonical mass and independent-client axiom checks use only propext, Classical.choice and Quot.sound.
+
+Independent targeted build, caller and exact-head/noncircular-premise audit pass warning-free; ExactDiscreteBatch005.log retains commands and output. The immutable receipt binds the exact local source/support closure, caller and dependency context.

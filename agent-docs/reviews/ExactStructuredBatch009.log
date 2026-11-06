@@ -1,0 +1,13 @@
+lake build SampLib.Samplers.SuccinctChoice
+Build completed successfully (4175 jobs).
+
+lake env lean agent-docs/reviews/ExactStructuredBatch009Callers.lean
+'SampLib.SuccinctChoice.succinctChoice_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SuccinctChoice.twp_succinctChoice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.SuccinctChoice.twp_pack' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.PackedWeights.decode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.EnvelopeRejection.coin_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactStructured009.framed' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-structured009-signatures.lean
+SPEC_OK SampLib.SuccinctChoice.succinctChoice_distSpec Occil.WeightedVariants.succinctChoice

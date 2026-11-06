@@ -1,0 +1,15 @@
+lake build SampLib.AliasTable
+Build completed successfully (4151 jobs).
+
+lake env lean agent-docs/reviews/ExactStructuredBatch002Callers.lean
+'SampLib.AliasTable.voseDraw_ownedDistSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.AliasMass.expectation_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.«agent-docs».reviews.ExactStructuredBatch002Callers.0.ReviewExactStructured002.draw_spec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.«agent-docs».reviews.ExactStructuredBatch002Callers.0.ReviewExactStructured002.sparse_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+lake env lean /tmp/review-exact-structured002-signatures.lean
+SPEC_OK SampLib.AliasTable.voseDraw_ownedDistSpec Occil.WeightedVariants.voseDraw

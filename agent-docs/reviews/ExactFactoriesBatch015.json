@@ -1,0 +1,68 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactFactoriesBatch015Callers.lean",
+  "caller_sha256": "e903979a4810c3f2d10688f3a3bcdc0f8fa28f6d554346e9225d9986b805efcf",
+  "accepted": [
+    {
+      "sampler": "Occil.Constants.continuedLogarithm",
+      "proof_module": "SampLib.Samplers.ContinuedLogarithm",
+      "public_spec": "SampLib.ContinuedLogarithm.continuedLogarithm_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "Arbitrary nonnegative integer exponent streams, finite final flags or infinite streams, any natural start, with a deterministic coefficient callback specified only at reachable positions. No bounded-exponent, uniform contraction or finite expected-time assumption.",
+      "sha256": "78e96b458be615d58656eb53df4bbd5ccb25039a55557878f34c85f3a20726a7",
+      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch015.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/CriticalCoinRecursion.lean": "ffa80012823a26df632a7ac7bb448d6ed67ff4d2d01e0fe621de46a54ec2cb3a",
+        "SampLib/Distributions/CriticalBranching.lean": "42d7ee1eb7f3d1f7cb9a2c8fa56117264668d851464276fa99b386cb0480a2f0",
+        "SampLib/Distributions/CriticalCoin.lean": "343f481d9f80ff41493cba9a3a818ac03e81579072d516da5b2ed0d018d7e150",
+        "SampLib/Distributions/CriticalCoinKernel.lean": "53485ee3f4194ff856117d289eb6c897c9276de4202e24553fb5b6526f87dab8",
+        "SampLib/Distributions/RealContinuedFraction.lean": "2bb9a406d6e111818a649afdc04c1e3f33fd82b7af76de6abe1f2b69e046a412",
+        "SampLib/Samplers/ContinuedLogarithm.lean": "78e96b458be615d58656eb53df4bbd5ccb25039a55557878f34c85f3a20726a7",
+        "SampLib/Samplers/FairCoin.lean": "24698d03ab4359a0afc0d974d2d1b6a332dea02a71f8e947ef36c9f9e3436f80",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/VonNeumann.lean": "679236943c3fba0e2a738049ef348d730fd6204b7338d3236c179d1bf26da2c0",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": []
+}

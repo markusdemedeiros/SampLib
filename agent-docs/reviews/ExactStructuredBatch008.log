@@ -1,0 +1,14 @@
+lake build SampLib.Samplers.KnuthYao
+Build completed successfully (4158 jobs).
+
+lake env lean agent-docs/reviews/ExactStructuredBatch008Callers.lean
+'SampLib.KnuthYao.knuthYao_distSpec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.KnuthYao.twp_loop' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.Ddg.twp_of_columns' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.DdgCredits.aggregate_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.KnuthYaoColumns.alive_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SampLib.KnuthYaoColumns.row_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReviewExactStructured008.framed' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+lake env lean /tmp/review-exact-structured008-signatures.lean
+SPEC_OK SampLib.KnuthYao.knuthYao_distSpec Occil.Weighted.knuthYao

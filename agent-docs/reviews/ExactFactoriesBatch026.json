@@ -1,0 +1,123 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactFactoriesBatch026Callers.lean",
+  "caller_sha256": "baf8c038f988d18e1518b49c896783e0fabb3bea77077ecb1ca9e73be308fb99",
+  "accepted": [
+    {
+      "sampler": "Occil.Constants.erfRatio",
+      "proof_module": "SampLib.Samplers.ErfRatio",
+      "public_spec": "SampLib.ErfRatio.erfRatio_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "Every unitInterval threshold x; exact-real uniforms; Bernoulli erf(x)/erf(1).",
+      "sha256": "a82b823337089efeee2232f40b27df860b68797403ebe1cb8fd15915e70b0a6f",
+      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch026.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/AcceptedProposal.lean": "50b48e4e04a8c984c230f5301ca090c7088abbb4f090084ec6d9dc497583a803",
+        "SampLib/Distributions/BernoulliMixture.lean": "eb240f6aaeffb54aa94440b18dfa4ed9e47f1239145649c7be816d19e54837ec",
+        "SampLib/Distributions/BooleanEvent.lean": "eb278cdcdaf612333dfd25459cada0e1d328d3c0cec90e2c889b1e9d19bb52c1",
+        "SampLib/Distributions/ErrorFunctionKernel.lean": "2b95dd632ac26abc28b24f6c386d123072a3bb0eb49c171a74c0fe60ccf7e09b",
+        "SampLib/Distributions/ExponentialFactory.lean": "ac232c4f204604ead9c3a1c7a22ba55e4ccd97ba7cd36e8c3a3a9228f21bdcf0",
+        "SampLib/Distributions/MaximumUniform.lean": "d1029cbfc31bfac91a3fe45be68b725909e81a940047cb1f7bc0c91d73bf2848",
+        "SampLib/Distributions/SquaredDecreasing.lean": "bf2bd3e2ddfeb54b7f9e1a4dc9ac525db378e3060fe47e42c71d8b9137af5380",
+        "SampLib/Distributions/ThresholdRejection.lean": "c8bbf061e0d4ef01cbcd1145857a9cf22816378c3407347778690467531ec514",
+        "SampLib/Samplers/ErfRatio.lean": "a82b823337089efeee2232f40b27df860b68797403ebe1cb8fd15915e70b0a6f",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/UniformMax.lean": "48869b84a0d0afc034c14481aa37cde599d105eab02e1b4b7849025ed4602156",
+        "SampLib/SquaredDecreasingChain.lean": "c0f2558496da3651f290a10264d36fab037b3639ae48b0a1dbd6947600239ba7",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Constants/Exponential.lean": "5c93f0961eed560406601fd8f048cb01d8333506c66185a8c5231ae5e7b8f1b4",
+        "code/Samplers/Constants/Pi.lean": "4e5470114bc964873608647ad6cba63e4e46c33513d12bffe12f4f4bbd72ab09",
+        "code/Samplers/Constants/Special.lean": "e717f4e9947b8c040f5bd7bcc2c5c359e6512a6ad07709ab819a5b86f1a4e7da",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    },
+    {
+      "sampler": "Occil.Constants.lowerGammaIntegerRatio",
+      "proof_module": "SampLib.Samplers.LowerGammaIntegerRatio",
+      "public_spec": "SampLib.LowerGammaIntegerRatio.lowerGammaIntegerRatio_distSpec",
+      "spec_kind": "plain",
+      "classification": "derived",
+      "reviewed_domain": "Every positive natural shape m and unitInterval threshold x; exact-real uniforms; normalized lower incomplete-gamma gamma(m,x)/gamma(m,1).",
+      "sha256": "a913c3da261cb37db7b3fbb8b5941c29a138acee79d21392dfc48d76714a66c6",
+      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch026.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/AcceptedProposal.lean": "50b48e4e04a8c984c230f5301ca090c7088abbb4f090084ec6d9dc497583a803",
+        "SampLib/Distributions/BernoulliMixture.lean": "eb240f6aaeffb54aa94440b18dfa4ed9e47f1239145649c7be816d19e54837ec",
+        "SampLib/Distributions/BooleanEvent.lean": "eb278cdcdaf612333dfd25459cada0e1d328d3c0cec90e2c889b1e9d19bb52c1",
+        "SampLib/Distributions/ExponentialFactory.lean": "ac232c4f204604ead9c3a1c7a22ba55e4ccd97ba7cd36e8c3a3a9228f21bdcf0",
+        "SampLib/Distributions/IntegerGammaKernel.lean": "6d134f1cd72065575570181242b6ffdac86ae82e5b67712c0f3b10dcec7390d3",
+        "SampLib/Distributions/MaximumUniform.lean": "d1029cbfc31bfac91a3fe45be68b725909e81a940047cb1f7bc0c91d73bf2848",
+        "SampLib/Distributions/Sorting.lean": "092627411ced2328d23545de951db1295ae7685434f54fa0c873ab8cbe2e02cb",
+        "SampLib/Distributions/ThresholdRejection.lean": "c8bbf061e0d4ef01cbcd1145857a9cf22816378c3407347778690467531ec514",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/OrderStatisticMaximum.lean": "4e937cc05264b1e1a3b41f0b3ab84af9dfdb35afd094a86349ea34752129ece7",
+        "SampLib/Samplers/DecreasingTrial.lean": "a6f8030faad92ee68747011234287473a2c8f2c945a751b163c02decb19aa60f",
+        "SampLib/Samplers/LowerGammaIntegerRatio.lean": "a913c3da261cb37db7b3fbb8b5941c29a138acee79d21392dfc48d76714a66c6",
+        "SampLib/Samplers/OrderStatistic.lean": "acae4ac5f14438cc108b17d51d13a5d58cd346bea9ce2234a80298f908897575",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/SupportedSpec.lean": "560f5a523858a1b9a7df558927f70707c00ee9b302fb0091007726fe476adda2",
+        "SampLib/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Constants/Exponential.lean": "5c93f0961eed560406601fd8f048cb01d8333506c66185a8c5231ae5e7b8f1b4",
+        "code/Samplers/Constants/Pi.lean": "4e5470114bc964873608647ad6cba63e4e46c33513d12bffe12f4f4bbd72ab09",
+        "code/Samplers/Constants/Special.lean": "e717f4e9947b8c040f5bd7bcc2c5c359e6512a6ad07709ab819a5b86f1a4e7da",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": []
+}

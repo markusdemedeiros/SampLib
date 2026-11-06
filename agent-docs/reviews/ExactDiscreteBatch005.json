@@ -1,0 +1,82 @@
+{
+  "reviewer": "review_exact_b",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "24209b719a711648926cfc9ac01e0cddc70736c66f7ee0d8b2dfe4598b033d80"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactDiscreteBatch005Callers.lean",
+  "caller_sha256": "80d0f8bfcb25bf55b79c4654bcd9ec4e2da93072687377580f1fadcdd3162103",
+  "accepted": [
+    {
+      "sampler": "Occil.DiscreteExtra.zipf",
+      "proof_module": "SampLib.Samplers.Zipf",
+      "public_spec": "SampLib.Zipf.zipf_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "Every positive finite bound n and nonnegative rational exponent a/b, with natural a and positive natural b. The target law is on Fin n and the actual output integer is k+1. Arbitrary ENNReal credit, including infinity, is supported. No externally assumed sampler callbacks are needed.",
+      "sha256": "03808b22a3b2909e8871e20fb4758e66e7e65befd68d25316f86266426bb41c4",
+      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch005.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/AbsorbingChain.lean": "af0bea40c38584232e3f4e6db818955735204088402793abb9ac965a25b312f1",
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Distributions/AcceptedProposal.lean": "50b48e4e04a8c984c230f5301ca090c7088abbb4f090084ec6d9dc497583a803",
+        "SampLib/Distributions/FractionalPower.lean": "460cba06d7bbdb41ed90c51a6801eaf53897a53124bd8ef4db12003aa0f22c58",
+        "SampLib/Distributions/RationalPower.lean": "51f3378f67ec72c05f5e808f4b72e6732aa9c2cbd2cf18c1d81c081f044a93dd",
+        "SampLib/Distributions/Zipf.lean": "9a223dd51bf7581b9528378be1a2d4b06dac0e38d7bcdf8179611fa02850d75b",
+        "SampLib/FactorySyntax.lean": "b76db426b90cae15e5a635a9b9d380e5b1bb6945ef85e914542fcf563841859a",
+        "SampLib/FractionalPowerCore.lean": "0d2a556f834cb04cf0bfba26a610b9948c771f61b2fdbe2b990183c7ae3fe555",
+        "SampLib/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/RationalPowerCoinSyntax.lean": "a0658f8c1fc4671bff678d1b42bf80c07498698d2718ec4a117f8203e1cf5322",
+        "SampLib/Samplers/CoinProduct.lean": "6076fb895ff229084c3bb686c602174b8a0078d55e8a25e05eb23ccf5750148a",
+        "SampLib/Samplers/FractionalPower.lean": "8699e04682cdd56f74ab695feb19402c6c4eec5a52b10779c0c5ed3272c7ef97",
+        "SampLib/Samplers/IterateCoin.lean": "f14b4ee475b3ea318aef1a1c2705d6a687818886abb00b533690629d3478bbfe",
+        "SampLib/Samplers/RationalCoin.lean": "d6ab18675de6d3f1fcd7cbd0036bfa174b0032f9d251c6ea4bfe780b02722eed",
+        "SampLib/Samplers/RationalPower.lean": "6952c1001f194403d6e8e0eb80021456a31e2970531e521eaf55812d7c0c0c33",
+        "SampLib/Samplers/RealCoin.lean": "127ffa81e715a08f72f99709e87c418976d9618071bc97a09a93b9e00a000502",
+        "SampLib/Samplers/UniformFin.lean": "6f8540c5bd20173d96036007f76115b5f53812b159927587557a93b21c3f5fdd",
+        "SampLib/Samplers/UniformInt.lean": "a54369681f648188ac924ba76c6bfc84a7458dedb66328d431b307f77f4a978c",
+        "SampLib/Samplers/WeightedChoice.lean": "20483c16fdb6b45d60c13a5d6e9273a6c62257c1ea386c0a53f801ffc166e3f2",
+        "SampLib/Samplers/Zipf.lean": "03808b22a3b2909e8871e20fb4758e66e7e65befd68d25316f86266426bb41c4",
+        "SampLib/Syntax/FractionalPower.lean": "d05cb260fd596a385452172652123acf61a01fdc709394e586d45f3abb71de32",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Bernoulli/Powers.lean": "61ccc9fc0236b9d192380a4808faab7519a04f93f4c15be44ee01c6603f8ffb0",
+        "code/Samplers/Continuous.lean": "94b17fd265be0958ace756c42483835111c4c9bb995e6a1c0f7aea46d06ede7a",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Discrete/Combinatorics.lean": "33099e706b23937dc278ff217556366c3fcac5c534f9cf1a2a287d26c362fe00",
+        "code/Samplers/Discrete/Tails.lean": "c7fed9a1ea7bb34d66a79a0f031af05a5c451fa3f83c63ec68d6c9378b593ed7",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ],
+  "support": []
+}
