@@ -1,139 +1,246 @@
-# ProbLang extensions for the Occil sampler corpus
+# ProbLang extensions for the remaining Occil samplers
 
-Audit target: `logsem/clutch-lean` main, commit
-`54e780e43709d2f28386b83bffccdde498141b25` (Lean 4.35.0).
-This is a wishlist, not a proposal to modify or publish the private/public repositories now.
+Audited on 2026-11-06 against the installed `logsem/clutch-lean` dependency,
+commit `54e780e43709d2f28386b83bffccdde498141b25`, using Lean 4.35.0.
+The installed package is `.lake/packages/clutch-lean`; the leftover
+`.lake/packages/metrology` checkout is stale.
 
-## Decision
+## Requested upstream batch
 
-Proceed with the substantial existing-language subset first. Integer arithmetic, recursive
-functions, products/sums, mutable heaps/arrays, uniform integers/reals, real addition,
-negation, comparisons, rational constants, integer-to-real conversion, and fractional
-parts already support many samplers. In particular, real multiplication and transcendental
-operations are NOT required for von Neumann exponential sampling or Karney-style Gaussian
-sampling. Generic terms can run at `Float` and later be specified at `ℝ`.
+Add real multiplication/division, real-to-integer floor, and an executable
+registered interface for deterministic mathematical functions. Include the
+semantic, typing, CTE and interpreter support in the same update. These enable
+ideal-real versions of the large numerical branch and simplify their proofs.
 
-Real arithmetic is nevertheless a broad limitation, affecting ordinary scale/location
-families, geometric sampling, and standard normal/gamma/beta algorithms, not just exotic
-samplers. Collect these extensions into one upstream pass when expanding that coverage.
+The current corpus already implements those numerical methods with integer
+fixed-point arithmetic. Its PSRN algorithms also already execute using integer
+interval oracles. New primitives do not change the laws of those existing terms.
 
-Update: `Samplers.Lazy` now implements memoized binary uniform streams, exact
-rational comparisons, geometric-bag sampling, and factorial-series Bernoulli
-factories for exponential, sine and cosine probabilities. Logarithm/arctangent
-coin factories use integral mixtures. These do not need numerical transcendental
-primitives. General PSRN arithmetic and real-valued transcendental transforms
-remain separate work. `Samplers.More` adds integer alias preprocessing and
-Bernstein-polynomial factories; these also require no upstream changes.
+The catalogue has 588 sampler entries and 216 accepted standalone sampler specs.
+The other 372 entries split as follows:
 
-## Priority 1: real arithmetic and numerical observations
+| Remaining catalogue entries | Count | Main work |
+| --- | ---: | --- |
+| Exact factories, constants, discrete, general and weighted methods | 99 | Mathematical and CTE library proofs |
+| Lazy exact reals and coins | 49 | Owned latent-real representations and refinement proofs |
+| Numerical/grid algorithms | 224 | Numerical specifications, or separate ideal-real implementations |
 
-| Feature | Algorithms unlocked | Semantics and verification requirements |
+These are catalogue gaps: some entries, including `sampleGeometricBag` and
+`voseDraw`, already have supporting proofs inside larger verified techniques.
+The implemented-entry list is in [LAWS.md](../LAWS.md). These counts do not
+establish exhaustive coverage of every algorithm in Occil's articles.
+
+## Bernoulli factory coverage
+
+The catalogue contains 93 ordinary factory terms (60 accepted specifications)
+and eight lazy-coin terms (five accepted standalone specifications). Constant
+coins have a separate category. The remaining ordinary 33 include the known
+incorrect `linearLowProbability` wrapper, so this is not a list of 33 valid
+targets awaiting routine proofs.
+
+Source coverage also needs work beyond this implemented-term catalogue:
+
+- Occil's Dice Enterprise construction builds a polynomial ladder and uses
+  monotone coupling from the past to sample multiple polynomial-ratio outcomes.
+  Our `rationalFunction` uses a two-polynomial Bernoulli race; the general CFTP
+  engine does not itself supply the missing polynomial-to-ladder construction.
+- The general envelope engine currently takes valid coefficient bounds through
+  callbacks. Automatic construction of those envelopes from function regularity
+  data is separate implementation and proof work.
+- The supplemental efficient multiple-output construction uses randomness
+  extraction and recycling. Repeating an existing factory supplies multiple
+  samples but does not implement that efficiency-oriented algorithm.
+
+See [the rational-function constructions](https://peteroupc.github.io/bernoulli.html#certain-rational-functions)
+and [multiple-output factories](https://peteroupc.github.io/bernsupp.html#multiple-output-bernoulli-factory).
+These concrete gaps primarily need integer/coin algorithms and mathematical
+proofs. Native real transcendental functions are not prerequisites for them.
+
+## Priority 1: real arithmetic and observations
+
+| Request | Concrete interface change | Coverage |
 | --- | --- | --- |
-| Real multiplication | Affine scaling, triangular transforms, geometric rejection, multivariate transforms | `ProbLangℝ` operation, lawful real instance, measurable semantics, typing and CTE pure-step rules, Float interpreter |
-| Real subtraction | Most numerical pseudocode | Can be surface sugar for addition and negation; a new AST operation is unnecessary |
-| Real division/reciprocal | Arbitrary-rate exponential, gamma/beta ratios, Cauchy, normalized vectors | Choose total field convention versus stuck on zero explicitly; prove guarded-domain specifications |
-| Real powers with integer exponent | Polynomial densities, rejection envelopes, moments | Can be a verified library term once multiplication exists; negative powers require nonzero guards |
-| Real-to-integer floor/ceiling | Integer/fraction decompositions, inversion, rounded outputs, bounded geometric methods | Integer-valued results, measurability at discontinuities, exact-real laws, explicit nonfinite Float behavior; `frac` alone does not return the integer part |
-| Endpoint-safe uniform interface | Logarithmic transforms and rejection methods | Current IO draws include 0 and exclude 1, whereas the mathematical real instance is concentrated on `(0,1)`; provide an open-interval runtime draw or a verified redraw wrapper |
+| Real multiplication | Add `ProbLangℝ.realMul`, its measurability law, and real cases for existing `BinOp.mult` | Affine scales, polynomial rejection, covariance transforms, geometric constructions |
+| Real division | Add `ProbLangℝ.realDiv`, its measurability law, and real cases for existing `BinOp.div` | Gamma/beta ratios, Cauchy, normalization, arbitrary-rate transforms |
+| Real subtraction | Handle real operands for existing `BinOp.minus`, using addition and negation | Ordinary location/scale formulas; no separate real-subtraction field needed |
+| Floor returning an integer | `realFloor : T → Int` through unary syntax or a typed registry entry; measurability and the ℝ floor equation | Integer/fraction decompositions, discrete transforms and rounded observations |
 
-## Priority 2: elementary mathematics
+The existing real interface supplies addition, negation, comparisons, integer
+and rational conversion, and fractional part. The existing integer `*` and `/`
+operators do **not** accept real operands. Mixed integer/real operations should
+continue to use explicit coercions. `realFrac` cannot return the integer part.
 
-| Feature | Algorithms unlocked | Notes |
+Use Mathlib's total real division convention for the ℝ backend, with the usual
+nonzero hypotheses in sampler proofs. Specify Float division-by-zero and
+nonfinite outcomes separately. Ceiling, absolute value, min/max, integer powers
+and standard rounding modes can be library terms after these operations exist.
+
+Evidence: [real interface](https://github.com/logsem/clutch-lean/blob/54e780e43709d2f28386b83bffccdde498141b25/Metrology/ProbLang/Syntax/Syntax.lean#L127),
+[binary evaluation](https://github.com/logsem/clutch-lean/blob/54e780e43709d2f28386b83bffccdde498141b25/Metrology/ProbLang/Syntax/Syntax.lean#L1225),
+[real typing](https://github.com/logsem/clutch-lean/blob/54e780e43709d2f28386b83bffccdde498141b25/Metrology/ProbLang/Syntax/Types.lean#L137).
+
+## Priority 1: deterministic elementary mathematics
+
+Provide a registry with these initial entries:
+
+| Entry | Ideal domain | Representative algorithms |
 | --- | --- | --- |
-| Natural log and `log1p` | Inverse exponential, polar/ratio-of-uniforms normal, gamma, stable, Weibull/Pareto/logistic transforms | `log1p` needs an accuracy contract beyond ideal-real equivalence; specify domains |
-| Square root | Normal polar/Box–Muller, geometric normalization, gamma methods | Specify nonnegative input; can also be a validated approximation library |
-| Exponential and `expm1` | Lognormal, rejection densities, stable numerical transforms | Separate ideal values from Float overflow/underflow and accuracy |
-| Sine/cosine, tangent | Box–Muller, stable and von Mises samplers, Cauchy, sphere coordinates | Prefer common argument reduction/backend; tangent needs pole guards |
-| Arctangent, inverse cosine/sine | Inverse-CDF and directional samplers | Domain/range contracts |
-| Real power | Weibull, gamma/beta methods, stable and exponential-power distributions | Positive-base version first; exponent-zero and zero-base conventions |
-| Pi and other named computable constants | Angles, Cauchy, normal and stable transforms | `realOfRat` already supplies rational constants; do not pretend a rounded literal is exact pi |
+| `log` | Positive argument | Inverse exponential, polar normal, gamma, stable and logistic transforms |
+| `sqrt` | Nonnegative argument | Polar/Box–Muller normal, gamma methods, geometry |
+| `exp` | All real arguments | Lognormal, densities and rejection envelopes |
+| `sin`, `cos`, `atan` | All real arguments | Box–Muller, Cauchy, stable and directional methods |
+| `pi` | Nullary constant | Angular and directional constructions |
+| Positive-base real power | Positive base, real exponent | Weibull, beta/gamma transformations, stable families |
 
-Derived hyperbolic functions and inverse functions can be library definitions after these
-operations. Constant approximation may instead use constructive reals or certified intervals.
-No need to add a primitive for every distribution transformation.
+Real power can initially be a library definition using `exp (y * log x)`.
+Specify the zero-base cases explicitly: `0^0 = 1`, positive powers of zero are
+zero, and negative powers of zero are outside the guarded domain. Tangent,
+inverse sine/cosine and hyperbolic functions can be derived or registered later.
+The ℝ meaning of `pi` must be `Real.pi`; its Float implementation is an
+approximation, rather than an exact rational literal.
 
-## Priority 3: extensibility, avoiding repeated syntax changes
+### Reuse the existing FFI syntax and semantics
 
-A registered deterministic numerical-function interface could cover elementary functions,
-`erf`/normal CDF and quantiles, log-gamma, incomplete gamma/beta, and user CDF/PDF/quantile
-functions. Require each registration to supply argument/result shapes, measurable ideal
-meaning, domains, CTE rules, and a runtime implementation. Many inverse-transform examples
-are best stated parametrically over a verified quantile callback.
+`ffi` and `ProbLangFFI.ofCode` already support registered code handles and a
+measurable partial map on an argument and heap. A deterministic numeric entry
+can return `FFIOutcome.ret` while preserving the heap.
 
-Existing `ffi`, `ProbLangFFI.ofCode`, named `sample`/`test`, and `ProbLangDist` already provide
-semantic extension points. Audit/reuse them before adding AST constructors. The current IO
-environment interpreter rejects FFI calls, tests, and non-uniform named distributions;
-semantic extensibility alone does not make these programs executable. Do not implement a
-sampler by registering the target distribution itself: that would bypass its algorithm.
+The execution paths currently reject FFI:
 
-## Priority 4: exact/lazy numbers (mostly library and proof infrastructure)
+- `EnvStep.StepOps` has no FFI operation; `resumeK` hardcodes a stuck result.
+- The substitution reference evaluator also hardcodes FFI failure.
+- Both `BigStepIO` execution modes need the executable handler.
 
-- Rational arithmetic: normalized integer pairs, exact comparisons, safe division and
-  conversion. Existing arbitrary-precision integers suffice for a library implementation.
-- PSRN representation: base, sign, integer part, optional cached digits, including non-prefix
-  digit access. Preserve already sampled digits and shared identity across comparisons.
-- Uniform/exponential conditional-tail invariants and a coupling to the represented real.
-- Comparison refinement, arithmetic interval refinement, dyadic ambiguity/null-event lemmas,
-  and almost-sure termination of each requested observation. Equality of shared values
-  needs explicit handling; comparisons need not terminate for arbitrary equal constructive reals.
-- Precision/rounding requests with absolute or relative error and an explicit rounding rule.
-  A finite machine return is not the same object as an ideal continuous output.
-- Geometric bags, order statistics, lazy transformations, and constructive transcendental
-  arithmetic. These unlock the PSRN beta/exponential families and their many derivatives.
+Updating only an IO wrapper would leave the machines inconsistent. A registration
+should supply argument/result shapes, its measurable ideal function, a valid
+domain, an exact ℝ interpretation, a deterministic unchanged-heap step equation,
+an executable backend and a reusable pure-step/CTE rule. Invalid domains must
+have a stated failure or totalization policy. Keep registration IDs stable.
 
-Pairs/sums, recursion and heap allocation already support list/vector/tree encodings and
-memoization. Matrix algorithms, sorting, heaps, alias tables, reservoir state, and automatic
-discrete-code generation primarily need libraries, not language primitives. Array support
-already exists; convenience syntax and reusable separation-logic lemmas would help.
+Use this interface for elementary and special functions while retaining the
+sampler's random choices and control flow in ProbLang. Registering a completed
+target distribution would bypass the algorithm we want to verify.
 
-## Priority 5: interpreter and experiment support
+Evidence: [FFI registration](https://github.com/logsem/clutch-lean/blob/54e780e43709d2f28386b83bffccdde498141b25/Metrology/ProbLang/FFI.lean#L119),
+[machine operations](https://github.com/logsem/clutch-lean/blob/54e780e43709d2f28386b83bffccdde498141b25/Metrology/ProbLang/EnvStep.lean#L80),
+[environment rejection](https://github.com/logsem/clutch-lean/blob/54e780e43709d2f28386b83bffccdde498141b25/Metrology/ProbLang/EnvStep.lean#L322),
+[reference rejection](https://github.com/logsem/clutch-lean/blob/54e780e43709d2f28386b83bffccdde498141b25/Metrology/ProbLang/BigStep.lean#L162).
 
-- Configurable per-run fuel/step budget; distinguish budget exhaustion, stuck programs,
-  nonfinite numerical output, and ordinary return. A process timeout is only a fallback.
-- Injectable seeded random source and a replayable random-draw trace; IO.setRandSeed already
-  permits seeded experiments. Count integer draws, bits, uniform draws, steps and heap use.
-- Runtime handlers for registered FFI/named distributions and observations, with differential
-  tests against the substitution evaluator and the semantic specification.
-- Exact float serialization (IEEE bits), structured result values, and streaming batches.
-- Retain finite-precision qualifications: IEEE Float is explicitly not a lawful real model;
-  statistical agreement is implementation evidence, not an exact-real soundness theorem.
-- Independence/joint-law tests for multiple outputs and shared cached variates; support,
-  endpoints, parameter boundaries, tails, and invalid-input tests as well as mean/variance.
+## Priority 2: accuracy-oriented and special-function entries
 
-## Proof support to request with any extension
+`log1p`, `expm1`, `sincos`, `atan2`, `hypot` and power-of-two scaling are useful
+backend operations for accuracy and range handling. Their stable Float contracts
+are additional to their mathematical identities. `realScaleB : T → Int → T`
+would help here, although its ideal meaning is derivable from real arithmetic.
 
-Every numeric extension needs the real interface and lawful real instance, measurable
-small-step semantics, pure-step reductions and CTE rules, typing, evaluation-context and
-readback support, and executable interpreter behavior. Audit any affected contextual
-refinement and erasure lemmas. Partial domains and IEEE exceptions must be intentional.
+The same registry can later supply normal CDF/quantiles, log-gamma, incomplete
+gamma/beta and inverse functions. Generic quantile callbacks already express
+many sampler interfaces; each concrete implementation still needs its proof.
+There is no need for an AST constructor for every special function.
 
-Reusable CTE rules for rejection/restart, mixture/composition, finite loops, probabilistic
-recursion and adaptive digit revelation should accompany the sampler library. Prove full
-output measures and almost-sure termination; expected cost needs additional arguments.
-MCMC stationarity and convergence do not imply exact finite-time sampling; coupling from
-the past needs its own coalescence and termination hypotheses.
+Keep IEEE bit operations, `frexp`, adjacent-float operations and directed rounding
+in a separately specified floating-point interface. Integer bitwise and/or/xor
+would accelerate packed-weight algorithms; existing integer arithmetic and
+shifts already suffice to implement them. Current negative shift counts become
+zero through `Int.toNat`; retain or deliberately revise that documented behavior.
 
-## Frontend ergonomics (not blockers)
+## Numerical laws need a separate specification decision
 
-The current surface grammar gives `&&`/`||` higher precedence than comparisons,
-so compound guards must write `(x < y) || (z < w)` explicitly. Conditional and
-recursive expressions used as local `let` right-hand sides also need parentheses
-to delimit their bodies before the separating semicolon. Consider conventional
-precedences and clearer parser errors in a future frontend pass; the current
-samplers already use the required parentheses. These changes need no semantic
-extensions, but should preserve existing parsed terms or be introduced deliberately.
+[Numeric.lean](../code/Samplers/Numeric.lean) already implements multiplication,
+division, roots, logs, exponentials and trigonometry inside the object language.
+It uses unbounded integer fixed-point arithmetic, 24 guard bits, constants fixed
+to 36 decimal places and an approximate normal CDF. These are executable algorithms, not
+certified interval primitives. Increasing the grid scale does not remove every
+analytic approximation error.
 
-## Corpus references
+For the 224 numerical entries, choose the appropriate target per algorithm:
 
-- https://peteroupc.github.io/randomfunc.html
-- https://peteroupc.github.io/randomnotes.html
-- https://peteroupc.github.io/bernoulli.html
-- https://peteroupc.github.io/bernsupp.html
-- https://peteroupc.github.io/exporand.html
-- https://peteroupc.github.io/randmisc.html
-- https://peteroupc.github.io/bernapprox.html
+- The exact law of the existing integer/grid program.
+- An error bound or rounding coupling to an intended continuous law.
+- A separate ideal-real version using the new primitives, with its exact law.
 
-Scope covers the sampler corpus, including alternatives and supporting numerical methods.
-It does not include implementing PRNGs, a general-purpose special-functions library, or
-settling the site's open research questions. Further source defects should be recorded
-explicitly rather than silently incorporated into a purported literal translation.
+CDF or Wasserstein bounds and rounding couplings are useful comparisons. A
+finite-grid law and an atomless continuous law have total-variation distance
+one, so a small raw total-variation claim would be inappropriate. Fixed-order
+CLT normal approximations also retain approximation error at arbitrarily fine
+grid resolution. Preserve the existing numerical terms when adding ideal ones.
+
+`Float` is explicitly a lawless execution backend. Exact-real soundness and
+Float error analysis are separate claims; statistical agreement checks execution.
+
+## Project proof-library work: PSRNs and weighted methods
+
+The remaining lazy 49 comprise 46 PSRN sampler entries and three lazy-coin
+entries. PSRN already has 71 definitions including support: cached uniforms,
+arithmetic, roots, rational powers, exponentials, Gaussian, beta/gamma, geometry
+and transformed distributions. See [PSRN](../code/Samplers/PSRN.lean) and its
+[arithmetic](../code/Samplers/PSRN/Arithmetic.lean).
+
+The high-leverage proof interface is an owned latent-real oracle contract:
+
+- Preserve cache ownership, the same latent value and its posterior credits
+  when a caller requests a tighter rational interval.
+- Support arbitrary ENNReal continuations and joint latent laws. Aliased
+  operands such as `multiply x x` share randomness and exclusive resources.
+- Compose interval arithmetic and refinement until separation, with explicit
+  almost-sure boundary/nonzero hypotheses for comparisons and division.
+- Specify returned oracles observationally, carrying their genuine heap state.
+
+Generalize [UniformBag.IsCoinSpec](../SampLib/UniformBagCoin.lean) and reuse
+[IsOwnedDistSpec](../SampLib/OwnedDistSpec.lean). Constructor, read, transform and
+observation rules belong in the project logic library. A total comparison of
+arbitrary constructive reals is not an implementable general primitive: current
+`PSRN.less` can diverge on a shared nondegenerate oracle compared with itself.
+
+Knuth–Yao, FLDR, Han–Hoshi, cyclic optimal matrices, inclusion samplers and packed
+choices likewise need discrete probability/entropy proofs and heap invariants.
+Persistent entropy recycling needs a posterior invariant for its retained pool;
+a known pool state does not give an unconditional uniform next-output law.
+[BitRecycler](../SampLib/Distributions/BitRecycler.lean) provides initial support.
+Existing lists, arrays, heaps, recursion, integers and bits suffice for this work.
+
+Known source-law defects also need domain review or algorithm repairs, rather
+than new primitives: see [domain findings](reviews/ExpansionDomainFindings.md).
+
+## Interpreter and proof-frontend improvements
+
+| Request | Purpose |
+| --- | --- |
+| Per-run fuel and structured completion/stuck/budget/nonfinite results | Diagnose slow refinement and invalid numerical inputs |
+| Injectable RNG, replayable draws and bit/step/allocation counters | Reproducible tests, entropy and runtime studies; global `IO.setRandSeed` already exists |
+| Retained-state execution or observation callbacks | Observe returned PSRN closures before their heap is discarded; observing inside the object program already works |
+| Handlers for existing non-uniform named samples and tests | Complete the existing interpreter extension points; keep numerical functions deterministic |
+| Preserve named lambda/fix bodies in pure-step automation | Avoid expensive whole-source normalization and repeated local-closedness checks |
+| Explicit diagnostics for unresolved expression/type parameters | Prevent misleading closedness recursion/heartbeat failures |
+
+IEEE Float hex serialization and streaming batches already exist in
+[Interp/Sample.lean](https://github.com/logsem/clutch-lean/blob/54e780e43709d2f28386b83bffccdde498141b25/Metrology/ProbLang/Interp/Sample.lean).
+They are not missing features. Current runtime uniforms include zero and exclude
+one. An open-interval redraw wrapper can protect logs and reciprocals while
+retaining the explicit finite-grid runtime interpretation.
+
+[BetaStep](../SampLib/BetaStep.lean) and checked source-opening caches already
+solve our large-lambda proof issue. Upstream automation could absorb this
+idiom; it requires no semantic extension. See the
+[proof-transport notes](LatentUniformProofs.md#keeping-syntax-transport-out-of-symbolic-execution).
+
+The current parser requires parenthesized comparison operands in compound
+`&&`/`||` guards and parentheses around conditional/recursive `let` RHSs.
+Conventional precedences and clearer diagnostics are optional ergonomic work;
+preserve existing parsed programs. Automatic type checking is also partial,
+including some real syntax; extend it alongside semantic typing where practical.
+
+## Definition of done for the upstream update
+
+Ship the real data interface and ℝ instance; measurable evaluation; typing;
+concrete ℝ reduction equations; generic pure-step/CTE support; both interpreter
+paths; executable handlers; and domain/endpoint/differential tests. Exercise
+zero denominators, negative floor inputs, log/sqrt domains, nonfinite Float
+results and the uniform endpoint convention. Check closure/context/readback
+lemmas affected by new syntax and preserve existing integer programs.
+
+After updating this project's dependency, rebuild the existing 216-spec suite
+and replay its callers. Review receipts pin dependency/context hashes, so issue
+new immutable migration evidence for the new context while retaining the old
+receipts and frozen baseline audit. A successful build alone does not refresh
+those records. Keep Float approximation claims explicit when adding ideal terms.

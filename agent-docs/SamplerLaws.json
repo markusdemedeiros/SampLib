@@ -54,651 +54,651 @@
     "Occil.complement": {
       "role": "sampler",
       "group": "Bernoulli factories / Basic",
-      "law": "\\operatorname{Bern}\\!\\left(1-p\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(1-p\\right)",
       "method": "Compose callback and auxiliary coin trials",
       "law_evidence": "curated"
     },
     "Occil.coinProduct": {
       "role": "sampler",
       "group": "Bernoulli factories / Basic",
-      "law": "\\operatorname{Bern}\\!\\left(pq\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(pq\\right)",
       "method": "Compose callback and auxiliary coin trials",
       "law_evidence": "curated"
     },
     "Occil.coinDisjunction": {
       "role": "sampler",
       "group": "Bernoulli factories / Basic",
-      "law": "\\operatorname{Bern}\\!\\left(p+q-pq\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p+q-pq\\right)",
       "method": "Compose callback and auxiliary coin trials",
       "law_evidence": "curated"
     },
     "Occil.coinMean": {
       "role": "sampler",
       "group": "Bernoulli factories / Basic",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{p+q}{2}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{p+q}{2}\\right)",
       "method": "Compose callback and auxiliary coin trials",
       "law_evidence": "curated"
     },
     "Occil.coinConditional": {
       "role": "sampler",
       "group": "Bernoulli factories / Basic",
-      "law": "\\operatorname{Bern}\\!\\left(rp+(1-r)q\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(rp+(1-r)q\\right)",
       "method": "Compose callback and auxiliary coin trials",
       "law_evidence": "curated"
     },
     "Occil.vonNeumann": {
       "role": "sampler",
       "group": "Bernoulli factories / Basic",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac12\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac12\\right)",
       "method": "Retry equal pairs of coin flips",
       "law_evidence": "curated"
     },
     "Occil.bernoulliRace": {
       "role": "sampler",
       "group": "Bernoulli factories / Basic",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{p}{p+q}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{p}{p+q}\\right)",
       "method": "Race two alternating coin trials",
       "law_evidence": "curated"
     },
     "Occil.oneDivOnePlus": {
       "role": "sampler",
       "group": "Bernoulli factories / Basic",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac1{1+p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac1{1+p}\\right)",
       "method": "Two-outcome retry coin",
       "law_evidence": "curated"
     },
     "Occil.evenParity": {
       "role": "sampler",
       "group": "Bernoulli factories / Basic",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac1{1+p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac1{1+p}\\right)",
       "method": "Parity of a geometric run",
       "law_evidence": "curated"
     },
     "Occil.fractionalPower": {
       "role": "sampler",
       "group": "Bernoulli factories / Basic",
-      "law": "\\operatorname{Bern}\\!\\left(p^{a/b}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p^{a/b}\\right)",
       "method": "Mendo reciprocal-hazard trials",
       "law_evidence": "curated"
     },
     "Occil.expMinusRational": {
       "role": "sampler",
       "group": "Bernoulli factories / Basic",
-      "law": "\\operatorname{Bern}\\!\\left(e^{-x/y}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^{-x/y}\\right)",
       "method": "Alternating factorial-trial parity",
       "law_evidence": "curated"
     },
     "Occil.expMinusFactory": {
       "role": "sampler",
       "group": "Bernoulli factories / Basic",
-      "law": "\\operatorname{Bern}\\!\\left(e^{-p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^{-p}\\right)",
       "method": "Thinned decreasing-uniform chain",
       "law_evidence": "curated"
     },
     "Occil.logisticFactory": {
       "role": "sampler",
       "group": "Bernoulli factories / Combinators",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{xp}{y+xp}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{xp}{y+xp}\\right)",
       "method": "Weighted rational selector and retry",
       "law_evidence": "curated"
     },
     "Occil.probabilityGeneratingFactory": {
       "role": "sampler",
       "group": "Bernoulli factories / Combinators",
-      "law": "\\operatorname{Bern}\\!\\left(\\mathbb E[p^N]\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\mathbb E[p^N]\\right)",
       "method": "Random count followed by all-success trials",
       "law_evidence": "curated"
     },
     "Occil.bernsteinFactory": {
       "role": "sampler",
       "group": "Bernoulli factories / Combinators",
-      "law": "\\operatorname{Bern}\\!\\left(\\sum_{k=0}^n c_k\\binom nk p^k(1-p)^{n-k}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\sum_{k=0}^n c_k\\binom nk p^k(1-p)^{n-k}\\right)",
       "method": "Binomial count selects rational coefficient",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.oneMinusOverOnePlus": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{1-p}{1+p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{1-p}{1+p}\\right)",
       "method": "(1-p)/(1+p), a uniformly-fast two-coin construction",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.sigmoidRational": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac1{1+e^{-a/b}}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac1{1+e^{-a/b}}\\right)",
       "method": "expit(z), where z=a/b may have either sign",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.sigmoidScaled": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac1{1+e^{-ap/b}}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac1{1+e^{-ap/b}}\\right)",
       "method": "expit((a/b)*p), with arbitrary signed rational a/b",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.logisticExp": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac1{1+e^{z/2^k}}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac1{1+e^{z/2^k}}\\right)",
       "method": "LogisticExp(z,precision)=1-expit(z/2^precision)",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.tanhRational": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\tanh(a/b)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\tanh(a/b)\\right)",
       "method": "tanh(a/b), a>=0,b>0, using exp(-2a/b)",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.tanhScaled": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\tanh(ap/b)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\tanh(ap/b)\\right)",
       "method": "tanh((a/b)*p), a>=0,b>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.tanhHalfShifted": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\tanh((m+p)/2)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\tanh((m+p)/2)\\right)",
       "method": "tanh((m+p)/2), m=a/b>=0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.exponentialTwist": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{pe^z}{pe^z+1-p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{pe^z}{pe^z+1-p}\\right)",
       "method": "Exponential shift p*exp(z)/(p*exp(z)+1-p), z=a/b",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.exponentialRatio": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{1+e^{z-w}}{1+e^z}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{1+e^{z-w}}{1+e^z}\\right)",
       "method": "(1+exp(z-w))/(1+exp(z)), z=a/b,w=x/y>=0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expIntegral": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{1-e^{-(m+p)}}{m+p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{1-e^{-(m+p)}}{m+p}\\right)",
       "method": "(1-exp(-(m+p)))/(m+p), with integer m>=0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.logOverAffine": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{\\log(c+p)}{c+p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{\\log(c+p)}{c+p}\\right)",
       "method": "ln(c+p)/(c+p), c=a/b>=1, via the one-cycle permutation schema",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.pLogInverse": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(p\\log(1/p)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p\\log(1/p)\\right)",
       "method": "Geometric count and reciprocal acceptance",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.complementLogInverse": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left((1-p)\\log(1/(1-p))\\right)",
+      "law": "\\mathrm{Bern}\\!\\left((1-p)\\log(1/(1-p))\\right)",
       "method": "(1-p)*ln(1/(1-p)); requires p<1",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.pOverLogInverseComplement": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac p{\\log(1/(1-p))}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac p{\\log(1/(1-p))}\\right)",
       "method": "p/ln(1/(1-p)), extended to one at p=0; p<1",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.complementOverLogInverse": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{1-p}{\\log(1/p)}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{1-p}{\\log(1/p)}\\right)",
       "method": "(1-p)/ln(1/p), extended to one at p=1; p>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.polylogarithm": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\operatorname{Li}_r(p)(1/p-1)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\mathrm{Li}_r(p)(1/p-1)\\right)",
       "method": "Li_r(p)*(1/p-1), integer r>=1, extended to one at p=0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.onePlusHalf": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{1+p}{2}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{1+p}{2}\\right)",
       "method": "(1+p)/2",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.complementHalf": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{1-p}{2}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{1-p}{2}\\right)",
       "method": "(1-p)/2",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.complementLogOnePlus": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}(1-\\log(1+p))",
+      "law": "\\mathrm{Bern}(1-\\log(1+p))",
       "method": "1-ln(1+p)",
       "law_evidence": "curated against implementation"
     },
     "Occil.FactoryExtra.sigmoidDerivative": {
       "role": "sampler",
       "group": "Bernoulli factories / Elementary",
-      "law": "\\operatorname{Bern}\\!\\left(\\sigma(z)(1-\\sigma(z))\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\sigma(z)(1-\\sigma(z))\\right)",
       "method": "expit(z)*(1-expit(z)), z=a/b",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expMinusScaled": {
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(e^{-cp}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^{-cp}\\right)",
       "method": "exp(-c*p), c=a/b>=0, by Poisson thinning",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expMinusShifted": {
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(e^{-(m+p)}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^{-(m+p)}\\right)",
       "method": "exp(-m-p), where m=a/b>=0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expTimesComplement": {
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(e^p(1-p)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^p(1-p)\\right)",
       "method": "exp(p)*(1-p), the sorted-uniform von Neumann schema",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expMinusPolynomial": {
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(e^{-\\sum_i a_ip^i}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^{-\\sum_i a_ip^i}\\right)",
       "method": "exp(-sum_i a_i*p^i), nonnegative rational coefficient pairs a_i",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expMinusShiftPower": {
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(e^{-(m+p)^k}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^{-(m+p)^k}\\right)",
       "method": "exp(-(m+p)^k), integer m,k>=0, via its binomial polynomial expansion",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expDivThree": {
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(e^p/3\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^p/3\\right)",
       "method": "exp(p)/3, from Poisson generating functions and the known e/3 coin",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expMinusExp": {
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(e^{-e^{m+p}}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^{-e^{m+p}}\\right)",
       "method": "exp(-exp(m+p)), integer m>=0; Poisson thinning from the source recipe",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.expSquareTimesComplement": {
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(e^{p^2}(1-p)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^{p^2}(1-p)\\right)",
       "method": "exp(p^2)*(1-p), the factorial-pair alternating-series construction",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.binaryExponential": {
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(2^{-m(k+p)}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(2^{-m(k+p)}\\right)",
       "method": "2^(-m*(k+p)), integers m,k>=0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.binaryExponentialRational": {
       "role": "sampler",
       "group": "Bernoulli factories / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(2^{-ap/b}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(2^{-ap/b}\\right)",
       "method": "2^(-(a/b)*p), a>=0,b>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.gambler": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{\\sum_{j=1}^{h-1}(cp)^j}{\\sum_{j=0}^{h-1}(cp)^j}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{\\sum_{j=1}^{h-1}(cp)^j}{\\sum_{j=0}^{h-1}(cp)^j}\\right)",
       "method": "Finite gambler’s-ruin hitting probability",
       "law_evidence": "curated against implementation"
     },
     "Occil.FactoryExtra.highPowerLogistic": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{(cp)^m}{\\sum_{j=0}^m(cp)^j}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{(cp)^m}{\\sum_{j=0}^m(cp)^j}\\right)",
       "method": "High-power logistic walk, c^m*p^m/(1+cp+...+(cp)^m)",
       "law_evidence": "curated against implementation"
     },
     "Occil.FactoryExtra.linear": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
-      "law": "\\operatorname{Bern}\\!\\left(cp\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(cp\\right)",
       "method": "Exact expanding linear factory, (a/b)*p (Huber 2016)",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.linearPower": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
-      "law": "\\operatorname{Bern}\\!\\left((cp)^m\\right)",
+      "law": "\\mathrm{Bern}\\!\\left((cp)^m\\right)",
       "method": "(c*p)^n, with the same margin condition as linear",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.addition": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
-      "law": "\\operatorname{Bern}\\!\\left(p+q\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p+q\\right)",
       "method": "p+q, assuming p+q <= 1-e/f",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.subtraction": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
-      "law": "\\operatorname{Bern}\\!\\left(p-q\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p-q\\right)",
       "method": "p-q, assuming p-q >= e/f>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.division": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
-      "law": "\\operatorname{Bern}\\!\\left(p/q\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p/q\\right)",
       "method": "q/p, assuming p-q >= e/f>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.epsilonDivision": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
-      "law": "\\operatorname{Bern}\\!\\left(p/q\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p/q\\right)",
       "method": "eps/p with a known lower bound p>=lower>eps",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.linearLowProbability": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
-      "law": "\\operatorname{Bern}\\!\\left(cp\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(cp\\right)",
       "method": "Low-probability linear factory; [known margin defect](agent-docs/reviews/ExpansionDomainFindings.md#low-probability-linear-wrapper)",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.linearPowerWalk": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
-      "law": "\\operatorname{Bern}\\!\\left((cp)^m\\right)",
+      "law": "\\mathrm{Bern}\\!\\left((cp)^m\\right)",
       "method": "Huber 2019 joint linear-and-power factory, (c*p)^exponent",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.linear2014": {
       "role": "sampler",
       "group": "Bernoulli factories / Linear",
-      "law": "\\operatorname{Bern}\\!\\left(cp\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(cp\\right)",
       "method": "Huber 2014 expanding linear factory",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.polynomial": {
       "role": "sampler",
       "group": "Bernoulli factories / Polynomials",
-      "law": "\\operatorname{Bern}\\!\\left(f(p)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(f(p)\\right)",
       "method": "Polynomial evaluation through automatic Bernstein degree elevation",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.rationalFunction": {
       "role": "sampler",
       "group": "Bernoulli factories / Polynomials",
-      "law": "\\operatorname{Bern}\\!\\left(f(p)/g(p)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(f(p)/g(p)\\right)",
       "method": "A(p)/(A(p)+B(p)) with polynomial numerator/complement denominator",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.threePointPiecewise": {
       "role": "sampler",
       "group": "Bernoulli factories / Polynomials",
-      "law": "\\operatorname{Bern}(f(p)),\\ f\\text{ piecewise affine}",
+      "law": "\\mathrm{Bern}(f(p)),\\ f\\text{ piecewise affine}",
       "method": "Three-point piecewise-affine coin construction",
       "law_evidence": "curated against implementation"
     },
     "Occil.FactoryExtra.rationalPower": {
       "role": "sampler",
       "group": "Bernoulli factories / Powers",
-      "law": "\\operatorname{Bern}\\!\\left(p^{a/b}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p^{a/b}\\right)",
       "method": "p^(a/b), a>=0,b>0, combining integer and fractional powers",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.twoCoinPower": {
       "role": "sampler",
       "group": "Bernoulli factories / Powers",
-      "law": "\\operatorname{Bern}\\!\\left(p^q\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p^q\\right)",
       "method": "p^q with two unknown-probability input coins (Mendo's two-coin variant)",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.twoCoin": {
       "role": "sampler",
       "group": "Bernoulli factories / Powers",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{\\beta xp}{\\beta(xp+yq)+(1-\\beta)(x+y)}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{\\beta xp}{\\beta(xp+yq)+(1-\\beta)(x+y)}\\right)",
       "method": "Portkey two-coin race",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.reciprocalAffine": {
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac d{c+p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac d{c+p}\\right)",
       "method": "d/(c+p), with c=a/b, d=x/y, 0<=d<=c, c>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.affine": {
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{d+p}{c}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{d+p}{c}\\right)",
       "method": "(d+p)/c with rational d,c and an explicit margin when expansion is needed",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.affineRatio": {
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{d+q}{c+p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{d+q}{c+p}\\right)",
       "method": "(d+q)/(c+p)",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.reciprocalLogistic": {
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac1{1+cp}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac1{1+cp}\\right)",
       "method": "Reciprocal logistic: 1/(1+(a/b)*p), a>=0,b>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.oneDivTwoMinus": {
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac1{2-p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac1{2-p}\\right)",
       "method": "Compose callback and auxiliary coin trials",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.inverseQuadratic": {
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac1{1+(m+p)^2}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac1{1+(m+p)^2}\\right)",
       "method": "1/(1+(m+p)^2), integer m>=0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.reciprocalAffinePower": {
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
-      "law": "\\operatorname{Bern}\\!\\left(\\left(\\frac d{c+p}\\right)^k\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\left(\\frac d{c+p}\\right)^k\\right)",
       "method": "(d/(c+p))^k, with c=a/b,d=x/y",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.offsetRace": {
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{d+q}{c+p+d+q}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{d+q}{c+p+d+q}\\right)",
       "method": "(d+q)/(c+p+d+q), with nonnegative rational offsets c=a/b,d=x/y",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.reciprocalExpAffine": {
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac1{c+e^{-z}}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac1{c+e^{-z}}\\right)",
       "method": "1/(c+exp(-z)), c=a/b>=1,z=x/y>=0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.oddsProduct": {
       "role": "sampler",
       "group": "Bernoulli factories / Rational",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{\\mu p}{1-\\mu+\\mu p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{\\mu p}{1-\\mu+\\mu p}\\right)",
       "method": "mu*p/(1-mu+mu*p), requiring mu<1 or p>0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.alternatingSeries": {
       "role": "sampler",
       "group": "Bernoulli factories / Series",
-      "law": "\\operatorname{Bern}\\!\\left(\\sum_{n\\ge0}(-1)^nc_np^n\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\sum_{n\\ge0}(-1)^nc_np^n\\right)",
       "method": "An arbitrary rational-coefficient alternating power series",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.positivePowerSeries": {
       "role": "sampler",
       "group": "Bernoulli factories / Series",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{\\sum_i c_ip^i}{\\sum_i c_i}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{\\sum_i c_ip^i}{\\sum_i c_i}\\right)",
       "method": "Finite nonnegative power series, normalized by the integer coefficient sum",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.complementPowerSeries": {
       "role": "sampler",
       "group": "Bernoulli factories / Series",
-      "law": "\\operatorname{Bern}\\!\\left(1-\\frac{\\sum_i c_i(1-p)^{i+1}}{\\sum_i c_i}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(1-\\frac{\\sum_i c_i(1-p)^{i+1}}{\\sum_i c_i}\\right)",
       "method": "Mendo power-series factory: 1-sum_i c_i*(1-p)^(i+1), normalized integer c_i",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.powerSeriesHazards": {
       "role": "sampler",
       "group": "Bernoulli factories / Series",
-      "law": "\\operatorname{Bern}\\!\\left(1-\\sum_{n\\ge0}c_n(1-p)^{n+1}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(1-\\sum_{n\\ge0}c_n(1-p)^{n+1}\\right)",
       "method": "Compose callback and auxiliary coin trials",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.convexCombination": {
       "role": "sampler",
       "group": "Bernoulli factories / Series",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{\\sum_iw_ip_i}{\\sum_iw_i}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{\\sum_iw_ip_i}{\\sum_iw_i}\\right)",
       "method": "A finite mixture of coin callbacks, with nonnegative integer weights",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.integralMixture": {
       "role": "sampler",
       "group": "Bernoulli factories / Series",
-      "law": "\\operatorname{Bern}\\!\\left(\\int f(x)\\,\\mu(dx)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\int f(x)\\,\\mu(dx)\\right)",
       "method": "Compose callback and auxiliary coin trials",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.envelopeFactoryDegrees": {
       "role": "sampler",
       "group": "Bernoulli factories / Series",
-      "law": "\\operatorname{Bern}\\!\\left(f(p)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(f(p)\\right)",
       "method": "General reverse-time Bernstein-envelope factory with caller-selected degrees",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.envelopeFactory": {
       "role": "sampler",
       "group": "Bernoulli factories / Series",
-      "law": "\\operatorname{Bern}\\!\\left(f(p)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(f(p)\\right)",
       "method": "Consecutive-degree specialization of the general envelope algorithm",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.approximateFactory": {
       "role": "sampler",
       "group": "Bernoulli factories / Series",
-      "law": "\\operatorname{Bern}\\!\\left(\\mathbb E[\\operatorname{clip}(f_s(\\lfloor sK/N\\rfloor),0,s)/s]\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\mathbb E[\\mathrm{clip}(f_s(\\lfloor sK/N\\rfloor),0,s)/s]\\right)",
       "method": "A numerical plug-in factory",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.minimumComplement": {
       "role": "sampler",
       "group": "Bernoulli factories / Series",
-      "law": "\\operatorname{Bern}\\!\\left(\\min(p,1-p)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\min(p,1-p)\\right)",
       "method": "min(p,1-p), via Occil's Catalan-mixture Bernstein construction",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.minimumHalf": {
       "role": "sampler",
       "group": "Bernoulli factories / Series",
-      "law": "\\operatorname{Bern}(\\min(p,1/2))",
+      "law": "\\mathrm{Bern}(\\min(p,1/2))",
       "method": "Compose callback and auxiliary coin trials",
       "law_evidence": "curated against implementation"
     },
     "Occil.FactoryExtra.sincScaled": {
       "role": "sampler",
       "group": "Bernoulli factories / Trigonometric",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{\\sin(p\\sqrt c)}{p\\sqrt c}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{\\sin(p\\sqrt c)}{p\\sqrt c}\\right)",
       "method": "sin(p*sqrt(c))/(p*sqrt(c)), c=a/b in (0,6], extended to one at p=0",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.cosineSqrt": {
       "role": "sampler",
       "group": "Bernoulli factories / Trigonometric",
-      "law": "\\operatorname{Bern}\\!\\left(\\cos\\sqrt p\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\cos\\sqrt p\\right)",
       "method": "cos(sqrt(p)), an alternating power-series factory",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.arctanOverPi": {
       "role": "sampler",
       "group": "Bernoulli factories / Trigonometric",
-      "law": "\\operatorname{Bern}\\!\\left(\\arctan(p)/\\pi\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\arctan(p)/\\pi\\right)",
       "method": "arctan(p)/pi, with the exact known inverse-pi coin",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.sincSqrtScaled": {
       "role": "sampler",
       "group": "Bernoulli factories / Trigonometric",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{\\sin\\sqrt{cp}}{\\sqrt{cp}}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{\\sin\\sqrt{cp}}{\\sqrt{cp}}\\right)",
       "method": "sin(sqrt(c*p))/sqrt(c*p), c=a/b in (0,6]",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.alternatingPermutation": {
       "role": "sampler",
       "group": "Bernoulli factories / Trigonometric",
-      "law": "\\operatorname{Bern}\\!\\left(\\begin{cases}(1-p)/\\cos p&r=0\\\\(1-p)\\tan p&r=1\\end{cases}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\begin{cases}(1-p)/\\cos p&r=0\\\\(1-p)\\tan p&r=1\\end{cases}\\right)",
       "method": "Geometric count and alternating permutation test",
       "law_evidence": "curated against implementation"
     },
     "Occil.FactoryExtra.complementOverCosine": {
       "role": "sampler",
       "group": "Bernoulli factories / Trigonometric",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac{1-p}{\\cos p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac{1-p}{\\cos p}\\right)",
       "method": "Compose callback and auxiliary coin trials",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.complementTimesTangent": {
       "role": "sampler",
       "group": "Bernoulli factories / Trigonometric",
-      "law": "\\operatorname{Bern}\\!\\left((1-p)\\tan p\\right)",
+      "law": "\\mathrm{Bern}\\!\\left((1-p)\\tan p\\right)",
       "method": "Compose callback and auxiliary coin trials",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.arcsinePlusSqrtMinusOne": {
       "role": "sampler",
       "group": "Bernoulli factories / Trigonometric",
-      "law": "\\operatorname{Bern}\\!\\left(\\arcsin p+\\sqrt{1-p^2}-1\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\arcsin p+\\sqrt{1-p^2}-1\\right)",
       "method": "arcsin(p)+sqrt(1-p^2)-1",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.arcsineHalf": {
       "role": "sampler",
       "group": "Bernoulli factories / Trigonometric",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac12\\arcsin p\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac12\\arcsin p\\right)",
       "method": "arcsin(p)/2, by cancelling the square-root component",
       "law_evidence": "curated"
     },
     "Occil.FactoryExtra.pOverTangent": {
       "role": "sampler",
       "group": "Bernoulli factories / Trigonometric",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac p{\\tan p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac p{\\tan p}\\right)",
       "method": "p/tan(p), with an explicit valid lower bound e/f on sin(p)-p*cos(p)",
       "law_evidence": "curated"
     },
@@ -719,14 +719,14 @@
     "Occil.sampleWithoutReplacement": {
       "role": "sampler",
       "group": "Combinatorial sampling / Basic",
-      "law": "\\operatorname{Unif}(\\text{ordered distinct positions})",
+      "law": "\\mathrm{Unif}(\\text{ordered distinct positions})",
       "method": "Draw and remove a uniform position",
       "law_evidence": "curated"
     },
     "Occil.sampleInOrder": {
       "role": "sampler",
       "group": "Combinatorial sampling / Basic",
-      "law": "\\operatorname{Unif}\\{I\\subseteq[n]:\\#I=k\\}",
+      "law": "\\mathrm{Unif}\\{I\\subseteq[n]:\\#I=k\\}",
       "method": "Sequential subset inclusion decisions",
       "law_evidence": "curated"
     },
@@ -747,14 +747,14 @@
     "Occil.shuffle": {
       "role": "sampler",
       "group": "Combinatorial sampling / Basic",
-      "law": "\\operatorname{Unif}(S_n)",
+      "law": "\\mathrm{Unif}(S_n)",
       "method": "Fisher–Yates in-place swaps",
       "law_evidence": "curated"
     },
     "Occil.reservoir": {
       "role": "sampler",
       "group": "Combinatorial sampling / Basic",
-      "law": "\\operatorname{Unif}\\{I\\subseteq[n]:\\#I=k\\}\\ \\text{(unordered)}",
+      "law": "\\mathrm{Unif}\\{I\\subseteq[n]:\\#I=k\\}\\ \\text{(unordered)}",
       "method": "Reservoir Algorithm R slot replacement",
       "law_evidence": "curated"
     },
@@ -768,14 +768,14 @@
     "Occil.positiveComposition": {
       "role": "sampler",
       "group": "Combinatorial sampling / Basic",
-      "law": "\\operatorname{Unif}\\{x\\in\\mathbb N_{>0}^n:\\sum_i x_i=t\\}",
+      "law": "\\mathrm{Unif}\\{x\\in\\mathbb N_{>0}^n:\\sum_i x_i=t\\}",
       "method": "Differences of uniformly chosen cut points",
       "law_evidence": "curated"
     },
     "Occil.weakComposition": {
       "role": "sampler",
       "group": "Combinatorial sampling / Basic",
-      "law": "\\operatorname{Unif}\\{x\\in\\mathbb N^n:\\sum_i x_i=t\\}",
+      "law": "\\mathrm{Unif}\\{x\\in\\mathbb N^n:\\sum_i x_i=t\\}",
       "method": "Shift a positive composition",
       "law_evidence": "curated"
     },
@@ -789,21 +789,21 @@
     "Occil.sattolo": {
       "role": "sampler",
       "group": "Combinatorial sampling / Permutations",
-      "law": "\\operatorname{Unif}(\\text{single }n\\text{-cycles})",
+      "law": "\\mathrm{Unif}(\\text{single }n\\text{-cycles})",
       "method": "Sattolo restricted in-place swaps",
       "law_evidence": "curated"
     },
     "Occil.derangement": {
       "role": "sampler",
       "group": "Combinatorial sampling / Permutations",
-      "law": "\\operatorname{Unif}\\{\\pi\\in S_n:\\forall i,\\pi(i)\\ne i\\}",
+      "law": "\\mathrm{Unif}\\{\\pi\\in S_n:\\forall i,\\pi(i)\\ne i\\}",
       "method": "Reject permutations having fixed points",
       "law_evidence": "curated"
     },
     "Occil.flipBits": {
       "role": "sampler",
       "group": "Combinatorial sampling / Permutations",
-      "law": "(b_i\\mathbin{\\oplus}\\operatorname{Bern}_i(p))_i",
+      "law": "(b_i\\mathbin{\\oplus}\\mathrm{Bern}_i(p))_i",
       "method": "Independent input-bit flips",
       "law_evidence": "curated"
     },
@@ -817,91 +817,91 @@
     "Occil.Constants.inverseGoldenRatio": {
       "role": "sampler",
       "group": "Constant coins / Algebraic",
-      "law": "\\operatorname{Bern}\\!\\left((\\sqrt5-1)/2\\right)",
+      "law": "\\mathrm{Bern}\\!\\left((\\sqrt5-1)/2\\right)",
       "method": "Exact inverse golden ratio, root of 1-x-x²",
       "law_evidence": "curated"
     },
     "Occil.Constants.sqrtTwoMinusOne": {
       "role": "sampler",
       "group": "Constant coins / Algebraic",
-      "law": "\\operatorname{Bern}\\!\\left(\\sqrt2-1\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\sqrt2-1\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.inverseSqrtTwo": {
       "role": "sampler",
       "group": "Constant coins / Algebraic",
-      "law": "\\operatorname{Bern}\\!\\left(1/\\sqrt2\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(1/\\sqrt2\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.goldenFamily": {
       "role": "sampler",
       "group": "Constant coins / Algebraic",
-      "law": "\\operatorname{Bern}\\!\\left(\\left(\\frac{m+\\sqrt{m^2+4\\ell}}2\\right)^{-k}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\left(\\frac{m+\\sqrt{m^2+4\\ell}}2\\right)^{-k}\\right)",
       "method": "Exact G(m,ell)^(-k), G=(m+sqrt(m²+4ell))/2>1",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.fromDigits": {
       "role": "sampler",
       "group": "Constant coins / Engines",
-      "law": "\\operatorname{Bern}\\!\\left(\\sum_{k\\ge1}d_kb^{-k}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\sum_{k\\ge1}d_kb^{-k}\\right)",
       "method": "Compare exact probability digits",
       "law_evidence": "curated"
     },
     "Occil.Constants.fromApproximateDigits": {
       "role": "sampler",
       "group": "Constant coins / Engines",
-      "law": "\\operatorname{Bern}\\!\\left(p\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p\\right)",
       "method": "Refine approximate digits against random prefix",
       "law_evidence": "curated"
     },
     "Occil.Constants.fromBounds": {
       "role": "sampler",
       "group": "Constant coins / Engines",
-      "law": "\\operatorname{Bern}\\!\\left(p\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p\\right)",
       "method": "Refine bounds against one cached uniform",
       "law_evidence": "curated"
     },
     "Occil.Constants.fromPositiveSeries": {
       "role": "sampler",
       "group": "Constant coins / Engines",
-      "law": "\\operatorname{Bern}\\!\\left(\\sum_{n\\ge0}a_n/b_n\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\sum_{n\\ge0}a_n/b_n\\right)",
       "method": "Accumulate series with certified tail bounds",
       "law_evidence": "curated"
     },
     "Occil.Constants.generalizedContinuedFraction": {
       "role": "sampler",
       "group": "Constant coins / Engines",
-      "law": "\\operatorname{Bern}\\!\\left(\\cfrac{b_1}{a_1+\\cfrac{b_2}{a_2+\\cdots}}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\cfrac{b_1}{a_1+\\cfrac{b_2}{a_2+\\cdots}}\\right)",
       "method": "Positive generalized continued fraction b₁/(a₁+b₂/(a₂+...))",
       "law_evidence": "curated"
     },
     "Occil.Constants.rationalContinuedFraction": {
       "role": "sampler",
       "group": "Constant coins / Engines",
-      "law": "\\operatorname{Bern}\\!\\left(\\cfrac{b_1/d_1}{a_1/d_1+\\cfrac{b_2/d_2}{a_2/d_2+\\cdots}}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\cfrac{b_1/d_1}{a_1/d_1+\\cfrac{b_2/d_2}{a_2/d_2+\\cdots}}\\right)",
       "method": "Positive rational generalized continued fractions",
       "law_evidence": "curated"
     },
     "Occil.Constants.continuedFraction": {
       "role": "sampler",
       "group": "Constant coins / Engines",
-      "law": "\\operatorname{Bern}\\!\\left(\\cfrac1{a_1+\\cfrac1{a_2+\\cdots}}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\cfrac1{a_1+\\cfrac1{a_2+\\cdots}}\\right)",
       "method": "Positive simple continued fractions",
       "law_evidence": "curated"
     },
     "Occil.Constants.continuedLogarithm": {
       "role": "sampler",
       "group": "Constant coins / Engines",
-      "law": "\\operatorname{Bern}\\!\\left(\\cfrac{2^{-c_1}}{1+\\cfrac{2^{-c_2}}{1+\\cdots}}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\cfrac{2^{-c_1}}{1+\\cfrac{2^{-c_2}}{1+\\cdots}}\\right)",
       "method": "Continued logarithm: (1/2^c₁)/(1+(1/2^c₂)/(1+...))",
       "law_evidence": "curated"
     },
     "Occil.Constants.algebraicRoot": {
       "role": "sampler",
       "group": "Constant coins / Engines",
-      "law": "\\operatorname{Bern}\\!\\left(\\alpha,\\ f(\\alpha)=0\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\alpha,\\ f(\\alpha)=0\\right)",
       "method": "Random binary search using exact signs",
       "law_evidence": "curated"
     },
@@ -915,70 +915,70 @@
     "Occil.Constants.eMinusTwo": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(e-2\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e-2\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.eScaled": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
-      "law": "\\operatorname{Bern}(en/d)",
+      "law": "\\mathrm{Bern}(en/d)",
       "method": "Exact Bernoulli(e*numerator/denominator), provided the result lies in [0,1]",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.eDivThree": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(e/3\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e/3\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.threeMinusE": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(3-e\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(3-e\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.inverseEPlus": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
-      "law": "\\operatorname{Bern}((e+c-2)^{-1})",
+      "law": "\\mathrm{Bern}((e+c-2)^{-1})",
       "method": "Exact 1/(e+c-2), for integer c>=1",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.inverseEPlusRational": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
-      "law": "\\operatorname{Bern}((e+c-2)^{-1})",
+      "law": "\\mathrm{Bern}((e+c-2)^{-1})",
       "method": "Exact 1/(e+c-2) for rational c=numerator/denominator>=1",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.eContinuedFraction": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
-      "law": "\\operatorname{Bern}(p_j),\\ p_j\\text{ a continued-fraction tail}",
+      "law": "\\mathrm{Bern}(p_j),\\ p_j\\text{ a continued-fraction tail}",
       "method": "The article's continued-fraction expansion of 1/(e+c-2)",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.inverseEPlusContinuedFraction": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
-      "law": "\\operatorname{Bern}((e+c-2)^{-1})",
+      "law": "\\mathrm{Bern}((e+c-2)^{-1})",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.eMinusTwoContinuedFraction": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(e-2\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e-2\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.tanhHalf": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(\\tanh(1/2)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\tanh(1/2)\\right)",
       "method": "Exact tanh(1/2)=(e-1)/(e+1)",
       "law_evidence": "curated"
     },
@@ -992,49 +992,49 @@
     "Occil.Constants.exponentialRationalProduct": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
-      "law": "\\operatorname{Bern}(e^{-x/y}z/t)",
+      "law": "\\mathrm{Bern}(e^{-x/y}z/t)",
       "method": "Exact exp(-x/y)*z/t, x,z>=0,y,t>0, on its valid probability domain",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.eQuarter": {
       "role": "sampler",
       "group": "Constant coins / Exponential",
-      "law": "\\operatorname{Bern}(e/4)",
+      "law": "\\mathrm{Bern}(e/4)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.numericalRationalPower": {
       "role": "sampler",
       "group": "Constant coins / Numerical",
-      "law": "\\mathsf{Grid}_s[\\operatorname{numerical Rational Power}]",
+      "law": "\\mathsf{Grid}_s[\\text{numerical Rational Power}]",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "numerical-family label"
     },
     "Occil.Constants.numericalLowerGammaRatio": {
       "role": "sampler",
       "group": "Constant coins / Numerical",
-      "law": "\\mathsf{Grid}_s[\\operatorname{numerical Lower Gamma Ratio}]",
+      "law": "\\mathsf{Grid}_s[\\text{numerical Lower Gamma Ratio}]",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "numerical-family label"
     },
     "Occil.Constants.numericalEulerReciprocal": {
       "role": "sampler",
       "group": "Constant coins / Numerical",
-      "law": "\\mathsf{Grid}_s[\\operatorname{numerical Euler Reciprocal}]",
+      "law": "\\mathsf{Grid}_s[\\text{numerical Euler Reciprocal}]",
       "method": "Finite-grid version of the fractional reciprocal identity for Euler's constant",
       "law_evidence": "numerical-family label"
     },
     "Occil.Constants.numericalExpRationalProduct": {
       "role": "sampler",
       "group": "Constant coins / Numerical",
-      "law": "\\mathsf{Grid}_s[\\operatorname{numerical Exp Rational Product}]",
+      "law": "\\mathsf{Grid}_s[\\text{numerical Exp Rational Product}]",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "numerical-family label"
     },
     "Occil.Constants.numericalLogPiOverPi": {
       "role": "sampler",
       "group": "Constant coins / Numerical",
-      "law": "\\mathsf{Grid}_s[\\operatorname{numerical Log Pi Over Pi}]",
+      "law": "\\mathsf{Grid}_s[\\text{numerical Log Pi Over Pi}]",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "numerical-family label"
     },
@@ -1055,140 +1055,140 @@
     "Occil.Constants.piAffine": {
       "role": "sampler",
       "group": "Constant coins / Pi",
-      "law": "\\operatorname{Bern}((\\pi-a)/b)",
+      "law": "\\mathrm{Bern}((\\pi-a)/b)",
       "method": "Bernoulli((pi-offset)/divisor); parameters must put the result in [0,1]",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.piQuarter": {
       "role": "sampler",
       "group": "Constant coins / Pi",
-      "law": "\\operatorname{Bern}\\!\\left(\\pi/4\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\pi/4\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.piTwelfth": {
       "role": "sampler",
       "group": "Constant coins / Pi",
-      "law": "\\operatorname{Bern}\\!\\left(\\pi/12\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\pi/12\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.piQuarterMinusHalf": {
       "role": "sampler",
       "group": "Constant coins / Pi",
-      "law": "\\operatorname{Bern}\\!\\left(\\pi/4-1/2\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\pi/4-1/2\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.piMinusThreeOverFour": {
       "role": "sampler",
       "group": "Constant coins / Pi",
-      "law": "\\operatorname{Bern}\\!\\left((\\pi-3)/4\\right)",
+      "law": "\\mathrm{Bern}\\!\\left((\\pi-3)/4\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.piMinusThree": {
       "role": "sampler",
       "group": "Constant coins / Pi",
-      "law": "\\operatorname{Bern}\\!\\left(\\pi-3\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\pi-3\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.reciprocalPiScaled": {
       "role": "sampler",
       "group": "Constant coins / Pi",
-      "law": "\\operatorname{Bern}\\!\\left(a/(b\\pi)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(a/(b\\pi)\\right)",
       "method": "Bernoulli(numerator/(denominator*pi)), on its valid probability domain",
       "law_evidence": "curated"
     },
     "Occil.Constants.inversePi": {
       "role": "sampler",
       "group": "Constant coins / Pi",
-      "law": "\\operatorname{Bern}\\!\\left(1/\\pi\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(1/\\pi\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.fourOverThreePi": {
       "role": "sampler",
       "group": "Constant coins / Pi",
-      "law": "\\operatorname{Bern}\\!\\left(4/(3\\pi)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(4/(3\\pi)\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.logPiOverPi": {
       "role": "sampler",
       "group": "Constant coins / Pi",
-      "law": "\\operatorname{Bern}\\!\\left(\\log\\pi/\\pi\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\log\\pi/\\pi\\right)",
       "method": "Exact ln(pi)/pi by the geometric reciprocal-pi construction",
       "law_evidence": "curated"
     },
     "Occil.Constants.inverseSqrtPi": {
       "role": "sampler",
       "group": "Constant coins / Pi",
-      "law": "\\operatorname{Bern}\\!\\left(1/\\sqrt\\pi\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(1/\\sqrt\\pi\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.arctanRationalOverRatio": {
       "role": "sampler",
       "group": "Constant coins / Pi",
-      "law": "\\operatorname{Bern}(\\arctan(x/y)/(x/y))",
+      "law": "\\mathrm{Bern}(\\arctan(x/y)/(x/y))",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.threeZetaThreeOverFour": {
       "role": "sampler",
       "group": "Constant coins / Special",
-      "law": "\\operatorname{Bern}\\!\\left(3\\zeta(3)/4\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(3\\zeta(3)/4\\right)",
       "method": "Exact 3*zeta(3)/4",
       "law_evidence": "curated"
     },
     "Occil.Constants.zetaRelated": {
       "role": "sampler",
       "group": "Constant coins / Special",
-      "law": "\\operatorname{Bern}\\!\\left(\\zeta(k)(1-2^{1-k})\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\zeta(k)(1-2^{1-k})\\right)",
       "method": "Exact ζ(k)*(1-2^(1-k)), k>=2, by the k-fold geometric-bag integral",
       "law_evidence": "curated"
     },
     "Occil.Constants.eulerMascheroni": {
       "role": "sampler",
       "group": "Constant coins / Special",
-      "law": "\\operatorname{Bern}\\!\\left(\\gamma\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\gamma\\right)",
       "method": "Exact rational-bound or series coin",
       "law_evidence": "curated"
     },
     "Occil.Constants.logOnePlusRational": {
       "role": "sampler",
       "group": "Constant coins / Special",
-      "law": "\\operatorname{Bern}\\!\\left(\\log(1+x/y)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\log(1+x/y)\\right)",
       "method": "Exact ln(1+x/y), 0<=x<=y",
       "law_evidence": "curated"
     },
     "Occil.Constants.rationalIntegerPower": {
       "role": "sampler",
       "group": "Constant coins / Special",
-      "law": "\\operatorname{Bern}\\!\\left((a/b)^n\\right)",
+      "law": "\\mathrm{Bern}\\!\\left((a/b)^n\\right)",
       "method": "Exact (a/b)^n for a rational base in [0,1] and integer n>=0",
       "law_evidence": "curated"
     },
     "Occil.Constants.eOverPi": {
       "role": "sampler",
       "group": "Constant coins / Special",
-      "law": "\\operatorname{Bern}\\!\\left(e/\\pi\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e/\\pi\\right)",
       "method": "Exact e/pi from independently calculated rational interval bounds",
       "law_evidence": "curated"
     },
     "Occil.Constants.erfRatio": {
       "role": "sampler",
       "group": "Constant coins / Special",
-      "law": "\\operatorname{Bern}(\\operatorname{erf}(x)/\\operatorname{erf}(1))",
+      "law": "\\mathrm{Bern}(\\mathrm{erf}(x)/\\mathrm{erf}(1))",
       "method": "Exact erf(x)/erf(1), 0<=x<=1",
       "law_evidence": "curated against implementation"
     },
     "Occil.Constants.lowerGammaIntegerRatio": {
       "role": "sampler",
       "group": "Constant coins / Special",
-      "law": "\\operatorname{Bern}(\\gamma(m,x)/\\gamma(m,1))",
+      "law": "\\mathrm{Bern}(\\gamma(m,x)/\\gamma(m,1))",
       "method": "Exact gamma(m,x)/gamma(m,1) for integer m>0, x in [0,1]",
       "law_evidence": "curated against implementation"
     },
@@ -1209,42 +1209,42 @@
     "Occil.exponential": {
       "role": "sampler",
       "group": "Continuous distributions",
-      "law": "\\operatorname{Exp}(1)",
+      "law": "\\mathrm{Exp}(1)",
       "method": "Von Neumann decreasing-chain parity",
       "law_evidence": "curated"
     },
     "Occil.laplace": {
       "role": "sampler",
       "group": "Continuous distributions",
-      "law": "\\operatorname{Laplace}(0,1)",
+      "law": "\\mathrm{Laplace}(0,1)",
       "method": "Exponential magnitude and fair sign",
       "law_evidence": "curated"
     },
     "Occil.erlang": {
       "role": "sampler",
       "group": "Continuous distributions",
-      "law": "\\operatorname{Gamma}(k,1)",
+      "law": "\\mathrm{Gamma}(k,1)",
       "method": "Sum independent unit exponentials",
       "law_evidence": "curated"
     },
     "Occil.uniformSum": {
       "role": "sampler",
       "group": "Continuous distributions",
-      "law": "\\sum_{i=1}^n U_i,\\ U_i\\sim\\operatorname{Unif}(0,1)",
+      "law": "\\sum_{i=1}^n U_i,\\ U_i\\sim\\mathrm{Unif}(0,1)",
       "method": "Sum independent continuous uniforms",
       "law_evidence": "curated"
     },
     "Occil.uniformMin": {
       "role": "sampler",
       "group": "Continuous distributions",
-      "law": "\\operatorname{Beta}(1,2)",
+      "law": "\\mathrm{Beta}(1,2)",
       "method": "Minimum of two uniform draws",
       "law_evidence": "curated"
     },
     "Occil.uniformMax": {
       "role": "sampler",
       "group": "Continuous distributions",
-      "law": "\\operatorname{Beta}(2,1)",
+      "law": "\\mathrm{Beta}(2,1)",
       "method": "Maximum of two uniform draws",
       "law_evidence": "curated"
     },
@@ -1265,21 +1265,21 @@
     "Occil.expHalfCoin": {
       "role": "sampler",
       "group": "Continuous distributions",
-      "law": "\\operatorname{Bern}\\!\\left(e^{-1/2}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^{-1/2}\\right)",
       "method": "Decreasing-chain parity below one half",
       "law_evidence": "curated"
     },
     "Occil.iterateCoin": {
       "role": "sampler",
       "group": "Continuous distributions",
-      "law": "\\operatorname{Bern}\\!\\left(p^n\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p^n\\right)",
       "method": "Require all independent trials to succeed",
       "law_evidence": "curated"
     },
     "Occil.geometricFailures": {
       "role": "sampler",
       "group": "Continuous distributions",
-      "law": "z+\\operatorname{Geom}_0(1-p)",
+      "law": "z+\\mathrm{Geom}_0(1-p)",
       "method": "Count consecutive successes before failure",
       "law_evidence": "curated"
     },
@@ -1363,28 +1363,28 @@
     "Occil.DiscreteExtra.binomialHalfBits": {
       "role": "sampler",
       "group": "Discrete distributions / Binomial",
-      "law": "\\operatorname{Bin}(n,1/2)",
+      "law": "\\mathrm{Bin}(n,1/2)",
       "method": "One uniform integer supplies n fair bits; count its set bits",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.binomialHalfRejection": {
       "role": "sampler",
       "group": "Discrete distributions / Binomial",
-      "law": "\\operatorname{Bin}(n,1/2)",
+      "law": "\\mathrm{Bin}(n,1/2)",
       "method": "Bringmann's exact envelope-rejection algorithm for Binomial(n,1/2)",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.binomialBinary": {
       "role": "sampler",
       "group": "Discrete distributions / Binomial",
-      "law": "\\operatorname{Bin}(n,a/b)",
+      "law": "\\mathrm{Bin}(n,a/b)",
       "method": "Farach-Colton–Tsai binary expansion of the rational success probability",
       "law_evidence": "curated"
     },
     "Occil.boundedGeometric": {
       "role": "sampler",
       "group": "Discrete distributions / Bounded",
-      "law": "\\min(\\operatorname{Geom}_0(p),n)",
+      "law": "\\min(\\mathrm{Geom}_0(p),n)",
       "method": "Bounded failures before success (the direct trial variant)",
       "law_evidence": "curated"
     },
@@ -1426,28 +1426,28 @@
     "Occil.DiscreteExtra.compoundPoisson": {
       "role": "sampler",
       "group": "Discrete distributions / Compound",
-      "law": "\\sum_{i=1}^{N}X_i,\\ N\\sim\\operatorname{Pois}(\\lambda)",
+      "law": "\\sum_{i=1}^{N}X_i,\\ N\\sim\\mathrm{Pois}(\\lambda)",
       "method": "Sum a Poisson number of independent integer-valued jumps",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.skellam": {
       "role": "sampler",
       "group": "Discrete distributions / Compound",
-      "law": "\\operatorname{Pois}(\\lambda_1)-\\operatorname{Pois}(\\lambda_2)",
+      "law": "\\mathrm{Pois}(\\lambda_1)-\\mathrm{Pois}(\\lambda_2)",
       "method": "Difference of two independent Poisson random variables",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.polyaAeppli": {
       "role": "sampler",
       "group": "Discrete distributions / Compound",
-      "law": "\\operatorname{PolyaAeppli}(\\lambda,p)",
+      "law": "\\mathrm{PolyaAeppli}(\\lambda,p)",
       "method": "Compound Poisson with geometric jumps on 1,2,",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.neymanTypeA": {
       "role": "sampler",
       "group": "Discrete distributions / Compound",
-      "law": "\\operatorname{NeymanA}(\\lambda,\\mu)",
+      "law": "\\mathrm{NeymanA}(\\lambda,\\mu)",
       "method": "Neyman type A: Poisson(delta) independent Poisson(tau) clusters",
       "law_evidence": "curated"
     },
@@ -1461,56 +1461,56 @@
     "Occil.DiscreteExtra.negativeMultinomial": {
       "role": "sampler",
       "group": "Discrete distributions / Compound",
-      "law": "\\operatorname{NegMultinomial}(r,w)",
+      "law": "\\mathrm{NegMultinomial}(r,w)",
       "method": "Counts of each failure category before r successes",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.cub": {
       "role": "sampler",
       "group": "Discrete distributions / Compound",
-      "law": "\\pi(1+\\operatorname{Bin}(m-1,1-p))+(1-\\pi)\\operatorname{Unif}\\{1,\\ldots,m\\}",
+      "law": "\\pi(1+\\mathrm{Bin}(m-1,1-p))+(1-\\pi)\\mathrm{Unif}\\{1,\\ldots,m\\}",
       "method": "CUB/MUB: mixture of a shifted binomial and a discrete uniform on 1..m",
       "law_evidence": "curated against implementation"
     },
     "Occil.DiscreteExtra.polyaRational": {
       "role": "sampler",
       "group": "Discrete distributions / Counts",
-      "law": "\\operatorname{NegBin}(r,p)",
+      "law": "\\mathrm{NegBin}(r,p)",
       "method": "Exact integer-valued construction",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.inversePolya": {
       "role": "sampler",
       "group": "Discrete distributions / Counts",
-      "law": "\\operatorname{InversePolya}(r,a,b,c)",
+      "law": "\\mathrm{InversePolya}(r,a,b,c)",
       "method": "Failures before a prescribed number of successes in a reinforced urn",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.betaNegativeBinomial": {
       "role": "sampler",
       "group": "Discrete distributions / Counts",
-      "law": "\\operatorname{BetaNegBin}(r,\\alpha,\\beta)",
+      "law": "\\mathrm{BetaNegBin}(r,\\alpha,\\beta)",
       "method": "Beta-negative-binomial mixture with positive rational beta shapes",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.waringYule": {
       "role": "sampler",
       "group": "Discrete distributions / Counts",
-      "law": "\\operatorname{BetaNegBin}(1,\\alpha,\\beta)",
+      "law": "\\mathrm{BetaNegBin}(1,\\alpha,\\beta)",
       "method": "Waring–Yule: one success in a beta-mixed geometric distribution",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.yuleSimon": {
       "role": "sampler",
       "group": "Discrete distributions / Counts",
-      "law": "\\operatorname{YuleSimon}(\\rho)",
+      "law": "\\mathrm{YuleSimon}(\\rho)",
       "method": "Yule–Simon(rho), supported on positive integers; rho is a positive rational",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.borel": {
       "role": "sampler",
       "group": "Discrete distributions / Counts",
-      "law": "\\operatorname{Borel}(\\lambda)",
+      "law": "\\mathrm{Borel}(\\lambda)",
       "method": "Borel(lambda): total progeny of a Poisson branching process",
       "law_evidence": "curated"
     },
@@ -1524,49 +1524,49 @@
     "Occil.DiscreteExtra.zeroTruncatedPoisson": {
       "role": "sampler",
       "group": "Discrete distributions / Counts",
-      "law": "\\operatorname{Pois}(\\lambda)\\mid N>0",
+      "law": "\\mathrm{Pois}(\\lambda)\\mid N>0",
       "method": "Poisson conditioned to be strictly positive",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.negativeBinomialNumerical": {
       "role": "sampler",
       "group": "Discrete distributions / Numerical",
-      "law": "\\mathsf{Grid}_s[\\operatorname{negative Binomial Numerical}]",
+      "law": "\\mathsf{Grid}_s[\\text{negative Binomial Numerical}]",
       "method": "Exact integer-valued construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.DiscreteExtra.betaNegativeBinomialNumerical": {
       "role": "sampler",
       "group": "Discrete distributions / Numerical",
-      "law": "\\mathsf{Grid}_s[\\operatorname{beta Negative Binomial Numerical}]",
+      "law": "\\mathsf{Grid}_s[\\text{beta Negative Binomial Numerical}]",
       "method": "Beta-negative-binomial with arbitrary numerical beta shapes and an integer success count",
       "law_evidence": "numerical-family label"
     },
     "Occil.DiscreteExtra.bellTouchard": {
       "role": "sampler",
       "group": "Discrete distributions / Numerical",
-      "law": "\\mathsf{Grid}_s[\\operatorname{bell Touchard}]",
+      "law": "\\mathsf{Grid}_s[\\text{bell Touchard}]",
       "method": "Bell–Touchard(a,b): sum Poisson(b*(exp(a)-1)) positive Poisson(a) clusters",
       "law_evidence": "numerical-family label"
     },
     "Occil.DiscreteExtra.bell": {
       "role": "sampler",
       "group": "Discrete distributions / Numerical",
-      "law": "\\mathsf{Grid}_s[\\operatorname{bell}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{bell}]",
       "method": "The standard one-parameter Bell distribution: Bell–Touchard(a,1)",
       "law_evidence": "numerical-family label"
     },
     "Occil.DiscreteExtra.discretePareto": {
       "role": "sampler",
       "group": "Discrete distributions / Numerical",
-      "law": "\\mathsf{Grid}_s[\\operatorname{discrete Pareto}]",
+      "law": "\\mathsf{Grid}_s[\\text{discrete Pareto}]",
       "method": "Discrete Pareto(delta,p), supported on 1,2,..., by the gamma mixture in randmisc.html",
       "law_evidence": "numerical-family label"
     },
     "Occil.DiscreteExtra.rationalPowerCoin": {
       "role": "sampler",
       "group": "Discrete distributions / Tails",
-      "law": "\\operatorname{Bern}(p^{a/b})",
+      "law": "\\mathrm{Bern}(p^{a/b})",
       "method": "Extend the power factory to any nonnegative rational exponent",
       "law_evidence": "curated"
     },
@@ -1622,14 +1622,14 @@
     "Occil.DiscreteExtra.himanshu": {
       "role": "sampler",
       "group": "Discrete distributions / Tails",
-      "law": "\\operatorname{Geom}_0(p^m)",
+      "law": "\\mathrm{Geom}_0(p^m)",
       "method": "Himanshu: failures before n consecutive coin successes in independent blocks",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.walleniusHypergeometric": {
       "role": "sampler",
       "group": "Discrete distributions / Urns",
-      "law": "\\operatorname{WalleniusHypergeom}(a,b,n,\\omega)",
+      "law": "\\mathrm{WalleniusHypergeom}(a,b,n,\\omega)",
       "method": "Wallenius noncentral hypergeometric, by weighted sampling without replacement",
       "law_evidence": "curated"
     },
@@ -1643,14 +1643,14 @@
     "Occil.DiscreteExtra.negativeHypergeometric": {
       "role": "sampler",
       "group": "Discrete distributions / Urns",
-      "law": "\\operatorname{NegHypergeom}(a,b,r)",
+      "law": "\\mathrm{NegHypergeom}(a,b,r)",
       "method": "Negative hypergeometric: failures before r successes without replacement",
       "law_evidence": "curated"
     },
     "Occil.DiscreteExtra.betaBinomial": {
       "role": "sampler",
       "group": "Discrete distributions / Urns",
-      "law": "\\operatorname{BetaBin}(n,\\alpha,\\beta)",
+      "law": "\\mathrm{BetaBin}(n,\\alpha,\\beta)",
       "method": "Beta-binomial with positive rational beta shapes, using a reinforced urn",
       "law_evidence": "curated"
     },
@@ -1678,7 +1678,7 @@
     "Occil.DiscreteExtra.walleniusMultivariate": {
       "role": "sampler",
       "group": "Discrete distributions / Urns",
-      "law": "\\operatorname{WalleniusMultivariate}(n,c,w)",
+      "law": "\\mathrm{WalleniusMultivariate}(n,c,w)",
       "method": "Multicolor Wallenius urn with positive integer odds, returned as color counts",
       "law_evidence": "curated"
     },
@@ -1699,77 +1699,77 @@
     "Occil.binomial": {
       "role": "sampler",
       "group": "Discrete primitives",
-      "law": "\\operatorname{Bin}(n,p)",
+      "law": "\\mathrm{Bin}(n,p)",
       "method": "Count independent successful trials",
       "law_evidence": "curated"
     },
     "Occil.geometric": {
       "role": "sampler",
       "group": "Discrete primitives",
-      "law": "\\operatorname{Geom}_0(p)",
+      "law": "\\mathrm{Geom}_0(p)",
       "method": "Count failures before success",
       "law_evidence": "curated"
     },
     "Occil.negativeBinomial": {
       "role": "sampler",
       "group": "Discrete primitives",
-      "law": "\\sum_{i=1}^r\\operatorname{Geom}_{0,i}(p)",
+      "law": "\\sum_{i=1}^r\\mathrm{Geom}_{0,i}(p)",
       "method": "Sum independent geometric counts",
       "law_evidence": "curated"
     },
     "Occil.dice": {
       "role": "sampler",
       "group": "Discrete primitives",
-      "law": "\\sum_{i=1}^n\\operatorname{Unif}_i\\{1,\\ldots,s\\}",
+      "law": "\\sum_{i=1}^n\\mathrm{Unif}_i\\{1,\\ldots,s\\}",
       "method": "Sum independent uniform dice",
       "law_evidence": "curated"
     },
     "Occil.weightedChoice": {
       "role": "sampler",
       "group": "Discrete primitives",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Cumulative integer weight intervals",
       "law_evidence": "curated"
     },
     "Occil.multinomial": {
       "role": "sampler",
       "group": "Discrete primitives",
-      "law": "\\operatorname{Multinomial}(n,w/\\sum_iw_i)",
+      "law": "\\mathrm{Multinomial}(n,w/\\sum_iw_i)",
       "method": "Sequential conditional binomial counts",
       "law_evidence": "curated"
     },
     "Occil.polyaEggenberger": {
       "role": "sampler",
       "group": "Discrete primitives",
-      "law": "\\operatorname{PolyaUrn}(n,a,b,c)",
+      "law": "\\mathrm{PolyaUrn}(n,a,b,c)",
       "method": "Reinforce selected urn color",
       "law_evidence": "curated"
     },
     "Occil.hypergeometric": {
       "role": "sampler",
       "group": "Discrete primitives",
-      "law": "\\operatorname{Hypergeom}(a+b,a,n)",
+      "law": "\\mathrm{Hypergeom}(a+b,a,n)",
       "method": "Deplete selected urn color",
       "law_evidence": "curated"
     },
     "Occil.randomWalk": {
       "role": "sampler",
       "group": "Discrete primitives",
-      "law": "\\sum_{i=1}^n\\operatorname{Unif}_i\\{-1,1\\}",
+      "law": "\\sum_{i=1}^n\\mathrm{Unif}_i\\{-1,1\\}",
       "method": "Sum independent fair signs",
       "law_evidence": "curated"
     },
     "Occil.poissonOne": {
       "role": "sampler",
       "group": "Discrete primitives",
-      "law": "\\operatorname{Pois}(1)",
+      "law": "\\mathrm{Pois}(1)",
       "method": "Duchon–Duvignau integer state machine",
       "law_evidence": "curated"
     },
     "Occil.poissonRational": {
       "role": "sampler",
       "group": "Discrete primitives",
-      "law": "\\operatorname{Pois}(x/y)",
+      "law": "\\mathrm{Pois}(x/y)",
       "method": "Poisson additivity and binomial thinning",
       "law_evidence": "curated"
     },
@@ -1804,21 +1804,21 @@
     "Occil.General.randomString": {
       "role": "sampler",
       "group": "General sampling / Core",
-      "law": "\\operatorname{Unif}(\\text{alphabet})^{\\otimes n}",
+      "law": "\\mathrm{Unif}(\\text{alphabet})^{\\otimes n}",
       "method": "Uniform character/item sequences; output is a list, not a host string",
       "law_evidence": "curated"
     },
     "Occil.General.randomDateTime": {
       "role": "sampler",
       "group": "General sampling / Core",
-      "law": "\\operatorname{Unif}\\{\\ell,\\ldots,h\\}",
+      "law": "\\mathrm{Unif}\\{\\ell,\\ldots,h\\}",
       "method": "Uniform integral timestamp in an inclusive application-specified epoch range",
       "law_evidence": "curated"
     },
     "Occil.General.inverseQuantile": {
       "role": "sampler",
       "group": "General sampling / Core",
-      "law": "Q_*\\operatorname{Unif}\\{1,\\ldots,s-1\\}",
+      "law": "Q_*\\mathrm{Unif}\\{1,\\ldots,s-1\\}",
       "method": "Transform a uniform grid rank",
       "law_evidence": "curated"
     },
@@ -1867,21 +1867,21 @@
     "Occil.General.refinedCoin": {
       "role": "sampler",
       "group": "General sampling / Core",
-      "law": "\\operatorname{Bern}(p)",
+      "law": "\\mathrm{Bern}(p)",
       "method": "A bounds callback returns numerators (lower,upper) at denominator 2^level",
       "law_evidence": "curated"
     },
     "Occil.General.refinedCDFComparison": {
       "role": "sampler",
       "group": "General sampling / Core",
-      "law": "\\operatorname{Bern}(F(x))",
+      "law": "\\mathrm{Bern}(F(x))",
       "method": "Compare a shared U with a cumulative-probability oracle",
       "law_evidence": "curated"
     },
     "Occil.General.incompleteInformation": {
       "role": "sampler",
       "group": "General sampling / Core",
-      "law": "\\operatorname{Cat}(p)",
+      "law": "\\mathrm{Cat}(p)",
       "method": "Finite inverse-CDF sampling when only improving probability bounds are known",
       "law_evidence": "curated"
     },
@@ -2042,7 +2042,7 @@
     "Occil.General.permutationSamples": {
       "role": "sampler",
       "group": "General sampling / DataModels",
-      "law": "\\operatorname{Unif}(S_n)^{\\otimes B}",
+      "law": "\\mathrm{Unif}(S_n)^{\\otimes B}",
       "method": "Repeat independent uniform shuffles",
       "law_evidence": "curated"
     },
@@ -2056,7 +2056,7 @@
     "Occil.General.groupedPermutation": {
       "role": "sampler",
       "group": "General sampling / DataModels",
-      "law": "\\operatorname{Unif}(\\text{fixed-size position partitions})",
+      "law": "\\mathrm{Unif}(\\text{fixed-size position partitions})",
       "method": "Shuffle and split at fixed sizes",
       "law_evidence": "curated"
     },
@@ -2105,7 +2105,7 @@
     "Occil.General.linearRegression": {
       "role": "sampler",
       "group": "General sampling / DataModels",
-      "law": "\\mathsf{Grid}_s[\\mathcal N(\\beta_0+\\beta^\\top x,\\operatorname{MSE})]",
+      "law": "\\mathsf{Grid}_s[\\mathcal N(\\beta_0+\\beta^\\top x,\\mathrm{MSE})]",
       "method": "Linear predictor plus Gaussian residual",
       "law_evidence": "curated against implementation"
     },
@@ -2252,7 +2252,7 @@
     "Occil.General.stratified1D": {
       "role": "sampler",
       "group": "General sampling / Points",
-      "law": "\\bigotimes_i\\operatorname{Unif}\\{\\lfloor is/n\\rfloor,\\ldots,\\lfloor(i+1)s/n\\rfloor-1\\}",
+      "law": "\\bigotimes_i\\mathrm{Unif}\\{\\lfloor is/n\\rfloor,\\ldots,\\lfloor(i+1)s/n\\rfloor-1\\}",
       "method": "One uniform integer per stratum",
       "law_evidence": "curated"
     },
@@ -2273,7 +2273,7 @@
     "Occil.General.stratifiedCell": {
       "role": "sampler",
       "group": "General sampling / Points",
-      "law": "\\operatorname{Unif}(\\text{integer-grid cell})",
+      "law": "\\mathrm{Unif}(\\text{integer-grid cell})",
       "method": "One jittered point from the cell whose base-bins digits give its coordinate indices",
       "law_evidence": "curated"
     },
@@ -2308,7 +2308,7 @@
     "Occil.General.uniformBoxPoint": {
       "role": "sampler",
       "group": "General sampling / Points",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,s-1\\}^{\\otimes d}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,s-1\\}^{\\otimes d}",
       "method": "Independent uniform integer coordinates",
       "law_evidence": "curated"
     },
@@ -2378,84 +2378,84 @@
     "Occil.sampleGeometricBag": {
       "role": "sampler",
       "group": "Lazy coin factories",
-      "law": "\\operatorname{Bern}(U)\\ \\text{with shared latent }U",
+      "law": "\\mathrm{Bern}(U)\\ \\text{with shared latent }U",
       "method": "Draw Bernoulli(U) from a shared uniform bag: choose a geometrically located digit",
       "law_evidence": "curated"
     },
     "Occil.factorialSeriesFactory": {
       "role": "sampler",
       "group": "Lazy coin factories",
-      "law": "\\operatorname{Bern}(e^{-p}),\\ \\operatorname{Bern}(\\cos p),\\ \\operatorname{Bern}(\\sin(p)/p)",
+      "law": "\\mathrm{Bern}(e^{-p}),\\ \\mathrm{Bern}(\\cos p),\\ \\mathrm{Bern}(\\sin(p)/p)",
       "method": "Alternating factorial-series factory",
       "law_evidence": "curated against implementation"
     },
     "Occil.expMinusMartingale": {
       "role": "sampler",
       "group": "Lazy coin factories",
-      "law": "\\operatorname{Bern}\\!\\left(e^{-p}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^{-p}\\right)",
       "method": "Cached-uniform factorial-series bounds",
       "law_evidence": "curated"
     },
     "Occil.cosineFactory": {
       "role": "sampler",
       "group": "Lazy coin factories",
-      "law": "\\operatorname{Bern}\\!\\left(\\cos(p)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\cos(p)\\right)",
       "method": "Cached-uniform cosine-series bounds",
       "law_evidence": "curated"
     },
     "Occil.sineFactory": {
       "role": "sampler",
       "group": "Lazy coin factories",
-      "law": "\\operatorname{Bern}\\!\\left(\\sin(p)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\sin(p)\\right)",
       "method": "Outer coin and sine-series bounds",
       "law_evidence": "curated"
     },
     "Occil.logOnePlusFactory": {
       "role": "sampler",
       "group": "Lazy coin factories",
-      "law": "\\operatorname{Bern}\\!\\left(\\log(1+p)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\log(1+p)\\right)",
       "method": "ln(1+p)",
       "law_evidence": "curated"
     },
     "Occil.arctanOverPFactory": {
       "role": "sampler",
       "group": "Lazy coin factories",
-      "law": "\\operatorname{Bern}\\!\\left(\\arctan(p)/p\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\arctan(p)/p\\right)",
       "method": "arctan(p)/p, continuously extended to 1 at p=0",
       "law_evidence": "curated"
     },
     "Occil.arctanFactory": {
       "role": "sampler",
       "group": "Lazy coin factories",
-      "law": "\\operatorname{Bern}\\!\\left(\\arctan(p)\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\arctan(p)\\right)",
       "method": "Outer coin and latent-uniform arctangent mixture",
       "law_evidence": "curated"
     },
     "Occil.Multivariate.gaussianCopula": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{gaussian Copula}]",
+      "law": "\\mathsf{Grid}_s[\\text{gaussian Copula}]",
       "method": "Gaussian copula from any positive-definite covariance matrix",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.productCopula": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\operatorname{Unif}\\{1,\\ldots,s-1\\}^{\\otimes d}",
+      "law": "\\mathrm{Unif}\\{1,\\ldots,s-1\\}^{\\otimes d}",
       "method": "Independent interior grid uniforms",
       "law_evidence": "explicit finite-grid law"
     },
     "Occil.Multivariate.upperBoundCopula": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "(U,\\ldots,U),\\ U\\sim\\operatorname{Unif}\\{1,\\ldots,s-1\\}",
+      "law": "(U,\\ldots,U),\\ U\\sim\\mathrm{Unif}\\{1,\\ldots,s-1\\}",
       "method": "Repeat one shared grid uniform",
       "law_evidence": "explicit finite-grid law"
     },
     "Occil.Multivariate.lowerBoundCopula": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "(U,s-U),\\ U\\sim\\operatorname{Unif}\\{1,\\ldots,s-1\\}",
+      "law": "(U,s-U),\\ U\\sim\\mathrm{Unif}\\{1,\\ldots,s-1\\}",
       "method": "Pair a grid uniform with its complement",
       "law_evidence": "explicit finite-grid law"
     },
@@ -2469,35 +2469,35 @@
     "Occil.Multivariate.normalToAnything": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{normal To Anything}]",
+      "law": "\\mathsf{Grid}_s[\\text{normal To Anything}]",
       "method": "Gaussian-copula dependence followed by arbitrary quantile callbacks",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.correlatedExponential": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{correlated Exponential}]",
+      "law": "\\mathsf{Grid}_s[\\text{correlated Exponential}]",
       "method": "Gaussian copula and exponential quantiles",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.poissonHierarchy": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{poisson Hierarchy}]",
+      "law": "\\mathsf{Grid}_s[\\text{poisson Hierarchy}]",
       "method": "Bivariate T-Poisson hierarchy with Gaussian/exponential latent dependence",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.poissonHierarchyND": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{poisson Hierarchy N D}]",
+      "law": "\\mathsf{Grid}_s[\\text{poisson Hierarchy N D}]",
       "method": "N-dimensional copula/quantile Poisson hierarchy",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.studentT": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{student T}]",
+      "law": "\\mathsf{Grid}_s[\\text{student T}]",
       "method": "Shared chi-square scales a Gaussian vector",
       "law_evidence": "numerical-family label"
     },
@@ -2511,91 +2511,91 @@
     "Occil.Multivariate.studentTCopula": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{student T Copula}]",
+      "law": "\\mathsf{Grid}_s[\\text{student T Copula}]",
       "method": "Student vector followed by marginal CDFs",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.archimedeanCopula": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{archimedean Copula}]",
+      "law": "\\mathsf{Grid}_s[\\text{archimedean Copula}]",
       "method": "Marshall-Olkin frailty construction for a completely monotone Archimedean Laplace generator",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.claytonCopula": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{clayton Copula}]",
+      "law": "\\mathsf{Grid}_s[\\text{clayton Copula}]",
       "method": "Gamma frailty and Archimedean generator",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.elliptical": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{elliptical}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{elliptical}]",
       "method": "Elliptical family with an independent radius callback and covariance shape",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.beckmann": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{beckmann}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{beckmann}]",
       "method": "Norm of a correlated Gaussian pair",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.rice": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{rice}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{rice}]",
       "method": "Equal-variance Beckmann specialization",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.riceNorton": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{rice Norton}]",
+      "law": "\\mathsf{Grid}_s[\\text{rice Norton}]",
       "method": "Norm of three shifted normal draws",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.complexNormal": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{complex Normal}]",
+      "law": "\\mathsf{Grid}_s[\\text{complex Normal}]",
       "method": "Independent normal real and imaginary components",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.gumbelCopula": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{gumbel Copula}]",
+      "law": "\\mathsf{Grid}_s[\\text{gumbel Copula}]",
       "method": "Gumbel-Hougaard copula, theta>=1, using a positive stable frailty",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.exchangeableLabels": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{exchangeable Labels}]",
+      "law": "\\mathsf{Grid}_s[\\text{exchangeable Labels}]",
       "method": "Exchangeable binary labels with the prescribed count weights",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.exchangeableFGMSource": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{exchangeable F G M Source}]",
+      "law": "\\mathsf{Grid}_s[\\text{exchangeable F G M Source}]",
       "method": "Literal max/min recipe printed in exporand.html",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.exchangeableFGMCopula": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Copulas",
-      "law": "\\mathsf{Grid}_s[\\operatorname{exchangeable F G M Copula}]",
+      "law": "\\mathsf{Grid}_s[\\text{exchangeable F G M Copula}]",
       "method": "FGM latent-bit construction: sqrt(V)*W^I",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.uniformRange": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{uniform Range}]",
+      "law": "\\mathsf{Grid}_s[\\text{uniform Range}]",
       "method": "Affine rescaling of a grid uniform",
       "law_evidence": "numerical-family label"
     },
@@ -2609,77 +2609,77 @@
     "Occil.Multivariate.exponentialPower": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{exponential Power}]",
+      "law": "\\mathsf{Grid}_s[\\text{exponential Power}]",
       "method": "Generalized normal coordinate used by the source's p-sphere construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.sphere": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{sphere}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{sphere}]",
       "method": "Source normalized-EPD construction; p=0 selects its infinity-norm case",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.ball": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{ball}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{ball}]",
       "method": "Sphere direction and independent uniform-power radius",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.ballEPD": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{ball E P D}]",
+      "law": "\\mathsf{Grid}_s[\\text{ball E P D}]",
       "method": "EPD/exponential construction of a uniform finite-p ball",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.shell": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{shell}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{shell}]",
       "method": "Interpolate radial volume between sphere bounds",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.box": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{box}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{box}]",
       "method": "Independent coordinatewise grid intervals",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.hypercube": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{hypercube}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{hypercube}]",
       "method": "Repeat independent equal-range grid draws",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.cone": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{cone}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{cone}]",
       "method": "Three-dimensional cone whose tip is at z=0 and base at z=height",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.cylinder": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{cylinder}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{cylinder}]",
       "method": "Disk point and independent axial coordinate",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.circle": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{circle}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{circle}]",
       "method": "Sine and cosine of a uniform angle",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.cylinderSurface": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{cylinder Surface}]",
+      "law": "\\mathsf{Grid}_s[\\text{cylinder Surface}]",
       "method": "Lateral surface of a cylinder, excluding its two end caps",
       "law_evidence": "numerical-family label"
     },
@@ -2693,56 +2693,56 @@
     "Occil.Multivariate.halfSphere": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{half Sphere}]",
+      "law": "\\mathsf{Grid}_s[\\text{half Sphere}]",
       "method": "Reflect one sphere coordinate positive",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.halfBall": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{half Ball}]",
+      "law": "\\mathsf{Grid}_s[\\text{half Ball}]",
       "method": "Reflect one ball coordinate positive",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.halfShell": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{half Shell}]",
+      "law": "\\mathsf{Grid}_s[\\text{half Shell}]",
       "method": "Reflect one shell coordinate positive",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.latitudeLongitude": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{latitude Longitude}]",
+      "law": "\\mathsf{Grid}_s[\\text{latitude Longitude}]",
       "method": "Latitude/longitude in radians; latitude is asin(U), U uniform on (-1,1)",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.simplex": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{simplex}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{simplex}]",
       "method": "Uniform barycentric point in the simplex spanned by the supplied vertices",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.triangle": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{triangle}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{triangle}]",
       "method": "Fast triangle construction using max(U,V), as in the source article",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.ellipsoidSurface": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{ellipsoid Surface}]",
+      "law": "\\mathsf{Grid}_s[\\text{ellipsoid Surface}]",
       "method": "Uniform ellipsoid surface via sphere proposals and the surface-area Jacobian",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.betaBall": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Geometry",
-      "law": "\\mathsf{Grid}_s[\\operatorname{beta Ball}]",
+      "law": "\\mathsf{Grid}_s[\\text{beta Ball}]",
       "method": "Lacko–Harman radial family; shape=0 is concentrated on the p-sphere",
       "law_evidence": "numerical-family label"
     },
@@ -2826,7 +2826,7 @@
     "Occil.Multivariate.standardNormals": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Linear",
-      "law": "\\mathsf{Grid}_s[\\operatorname{standard Normals}]",
+      "law": "\\mathsf{Grid}_s[\\text{standard Normals}]",
       "method": "Repeat independent scalar normal draws",
       "law_evidence": "numerical-family label"
     },
@@ -2840,14 +2840,14 @@
     "Occil.Multivariate.normal": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Linear",
-      "law": "\\mathsf{Grid}_s[\\operatorname{normal}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{normal}]",
       "method": "Cholesky transform of independent normal coordinates",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.binormal": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Linear",
-      "law": "\\mathsf{Grid}_s[\\operatorname{binormal}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{binormal}]",
       "method": "Bivariate normal with supplied means, standard deviations and correlation",
       "law_evidence": "numerical-family label"
     },
@@ -2861,35 +2861,35 @@
     "Occil.Multivariate.dirichlet": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Linear",
-      "law": "\\mathsf{Grid}_s[\\operatorname{dirichlet}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{dirichlet}]",
       "method": "Gamma-normalization Dirichlet sampler; shape parameters are fixed-point",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.uniformPartition": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Linear",
-      "law": "\\mathsf{Grid}_s[\\operatorname{uniform Partition}]",
+      "law": "\\mathsf{Grid}_s[\\text{uniform Partition}]",
       "method": "Dirichlet proportions with final-coordinate residual",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.logNormal": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Linear",
-      "law": "\\mathsf{Grid}_s[\\operatorname{log Normal}]",
+      "law": "\\mathsf{Grid}_s[\\text{log Normal}]",
       "method": "Exponentiate correlated normal coordinates",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.meanMixture": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Linear",
-      "law": "\\mathsf{Grid}_s[\\operatorname{mean Mixture}]",
+      "law": "\\mathsf{Grid}_s[\\text{mean Mixture}]",
       "method": "Normal mean mixture with an independent nonnegative mixing sampler",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.meanVarianceMixture": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Linear",
-      "law": "\\mathsf{Grid}_s[\\operatorname{mean Variance Mixture}]",
+      "law": "\\mathsf{Grid}_s[\\text{mean Variance Mixture}]",
       "method": "Normal mean/variance mixture, using one shared independent mixing variate",
       "law_evidence": "numerical-family label"
     },
@@ -2910,28 +2910,28 @@
     "Occil.Multivariate.initialPhase": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / PhaseType",
-      "law": "\\operatorname{Cat}(\\alpha_1,\\ldots,\\alpha_n,s-\\sum_i\\alpha_i)",
+      "law": "\\mathrm{Cat}(\\alpha_1,\\ldots,\\alpha_n,s-\\sum_i\\alpha_i)",
       "method": "Initial subprobability vector, with the residual assigned to immediate absorption",
       "law_evidence": "curated against implementation"
     },
     "Occil.Multivariate.phaseType": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / PhaseType",
-      "law": "\\mathsf{Grid}_s[\\operatorname{phase Type}]",
+      "law": "\\mathsf{Grid}_s[\\text{phase Type}]",
       "method": "Accumulate holding times until absorption",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.inhomogeneousPhaseType": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / PhaseType",
-      "law": "\\mathsf{Grid}_s[\\operatorname{inhomogeneous Phase Type}]",
+      "law": "\\mathsf{Grid}_s[\\text{inhomogeneous Phase Type}]",
       "method": "Transform a phase-type absorption time",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.multivariatePhaseType": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / PhaseType",
-      "law": "\\mathsf{Grid}_s[\\operatorname{multivariate Phase Type}]",
+      "law": "\\mathsf{Grid}_s[\\text{multivariate Phase Type}]",
       "method": "Accumulate phase-specific vector rewards",
       "law_evidence": "numerical-family label"
     },
@@ -2945,77 +2945,77 @@
     "Occil.Multivariate.phaseTypeRandomRewards": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / PhaseType",
-      "law": "\\mathsf{Grid}_s[\\operatorname{phase Type Random Rewards}]",
+      "law": "\\mathsf{Grid}_s[\\text{phase Type Random Rewards}]",
       "method": "Route holding times to sampled reward coordinates",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.inhomogeneousMultivariatePhaseType": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / PhaseType",
-      "law": "\\mathsf{Grid}_s[\\operatorname{inhomogeneous Multivariate Phase Type}]",
+      "law": "\\mathsf{Grid}_s[\\text{inhomogeneous Multivariate Phase Type}]",
       "method": "Transform multivariate phase-type coordinates",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.multivariateLinnik": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / PhaseType",
-      "law": "\\mathsf{Grid}_s[\\operatorname{multivariate Linnik}]",
+      "law": "\\mathsf{Grid}_s[\\text{multivariate Linnik}]",
       "method": "Normal variance mixture with geometric-stable mixing",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.multivariateLinnikSource": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / PhaseType",
-      "law": "\\mathsf{Grid}_s[\\operatorname{multivariate Linnik Source}]",
+      "law": "\\mathsf{Grid}_s[\\text{multivariate Linnik Source}]",
       "method": "Scale normal vector by geometric-stable mixer",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.multivariateExponentialPower": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / PhaseType",
-      "law": "\\mathsf{Grid}_s[\\operatorname{multivariate Exponential Power}]",
+      "law": "\\mathsf{Grid}_s[\\text{multivariate Exponential Power}]",
       "method": "Independent radius and normalized Gaussian direction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.stable": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Stable",
-      "law": "\\mathsf{Grid}_s[\\operatorname{stable}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{stable}]",
       "method": "Standard alpha-stable S1 variate",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.geometricStable": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Stable",
-      "law": "\\mathsf{Grid}_s[\\operatorname{geometric Stable}]",
+      "law": "\\mathsf{Grid}_s[\\text{geometric Stable}]",
       "method": "Strictly geometric-stable sampler",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.linnik": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Stable",
-      "law": "\\mathsf{Grid}_s[\\operatorname{linnik}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{linnik}]",
       "method": "Symmetric geometric-stable specialization",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.mittagLeffler": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Stable",
-      "law": "\\mathsf{Grid}_s[\\operatorname{mittag Leffler}]",
+      "law": "\\mathsf{Grid}_s[\\text{mittag Leffler}]",
       "method": "Positive geometric-stable specialization",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.generalGeometricStable": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Stable",
-      "law": "\\mathsf{Grid}_s[\\operatorname{general Geometric Stable}]",
+      "law": "\\mathsf{Grid}_s[\\text{general Geometric Stable}]",
       "method": "General geometric-stable law defined by exponential mixing in the S1 parameterization",
       "law_evidence": "numerical-family label"
     },
     "Occil.Multivariate.vonMises": {
       "role": "sampler",
       "group": "Numerical multivariate algorithms / Stable",
-      "law": "\\mathsf{Grid}_s[\\operatorname{von Mises}]",
+      "law": "\\mathsf{Grid}_s[\\text{von Mises}]",
       "method": "Best–Fisher von Mises rejection",
       "law_evidence": "numerical-family label"
     },
@@ -3190,14 +3190,14 @@
     "Occil.Numeric.uniform": {
       "role": "sampler",
       "group": "Numerical arithmetic",
-      "law": "\\operatorname{Unif}\\{1,\\ldots,s-1\\}",
+      "law": "\\mathrm{Unif}\\{1,\\ldots,s-1\\}",
       "method": "Interior grid uniform: integers 1,...,scale-1",
       "law_evidence": "curated"
     },
     "Occil.Numeric.coin": {
       "role": "sampler",
       "group": "Numerical arithmetic",
-      "law": "\\operatorname{Bern}(a/s)",
+      "law": "\\mathrm{Bern}(a/s)",
       "method": "Rational coin at the supplied grid probability",
       "law_evidence": "curated"
     },
@@ -3211,553 +3211,553 @@
     "Occil.Numerical.uniformRange": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Core",
-      "law": "\\mathsf{Grid}_s[\\operatorname{uniform Range}]",
+      "law": "\\mathsf{Grid}_s[\\text{uniform Range}]",
       "method": "Numerical uniform on [lo,hi); a narrow interval can quantize to its lower endpoint",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.exponential": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Core",
-      "law": "\\mathsf{Grid}_s[\\operatorname{exponential}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{exponential}]",
       "method": "Inverse transform using a grid logarithm",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.hypoexponential": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Densities",
-      "law": "\\mathsf{Grid}_s[\\operatorname{hypoexponential}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{hypoexponential}]",
       "method": "Hypoexponential: sum of independent exponentials with the supplied positive rates",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.hyperexponential": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Densities",
-      "law": "\\mathsf{Grid}_s[\\operatorname{hyperexponential}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{hyperexponential}]",
       "method": "Hyperexponential: integer mixture weights and fixed-point component rates",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.piecewiseLinear": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Densities",
-      "law": "\\mathsf{Grid}_s[\\operatorname{piecewise Linear}]",
+      "law": "\\mathsf{Grid}_s[\\text{piecewise Linear}]",
       "method": "Area-weighted rectangle/triangle mixture",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.piecewiseConstant": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Densities",
-      "law": "\\mathsf{Grid}_s[\\operatorname{piecewise Constant}]",
+      "law": "\\mathsf{Grid}_s[\\text{piecewise Constant}]",
       "method": "Area-weighted bin and scaled uniform",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.sinePower": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Densities",
-      "law": "\\mathsf{Grid}_s[\\operatorname{sine Power}]",
+      "law": "\\mathsf{Grid}_s[\\text{sine Power}]",
       "method": "Sine-power density on [0,pi], using the beta-envelope rejection in the index",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.xG": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{x G}]",
+      "law": "\\mathsf{Grid}_s[\\text{x G}]",
       "method": "Apply quantile to a component sample",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.expG": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{exp G}]",
+      "law": "\\mathsf{Grid}_s[\\text{exp G}]",
       "method": "Exponential probability transform and quantile",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.alphaPowerTransformed": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{alpha Power Transformed}]",
+      "law": "\\mathsf{Grid}_s[\\text{alpha Power Transformed}]",
       "method": "Logarithmic parameter transform of Exp-G",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.exponentiatedG": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{exponentiated G}]",
+      "law": "\\mathsf{Grid}_s[\\text{exponentiated G}]",
       "method": "Power-transform a uniform before quantile",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.transmutedG": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{transmuted G}]",
+      "law": "\\mathsf{Grid}_s[\\text{transmuted G}]",
       "method": "Mixture of uniform and extreme ranks",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.cubicRankTransmuted": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{cubic Rank Transmuted}]",
+      "law": "\\mathsf{Grid}_s[\\text{cubic Rank Transmuted}]",
       "method": "Weighted ranks of three uniforms",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.biweightG": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{biweight G}]",
+      "law": "\\mathsf{Grid}_s[\\text{biweight G}]",
       "method": "Biweight rejection before quantile transformation",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.transformedTransformer": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{transformed Transformer}]",
+      "law": "\\mathsf{Grid}_s[\\text{transformed Transformer}]",
       "method": "Compose sample, inverse transform, and quantile",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.tRY": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{t R Y}]",
+      "law": "\\mathsf{Grid}_s[\\text{t R Y}]",
       "method": "Component CDF followed by target quantile",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.oddXG": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{odd X G}]",
+      "law": "\\mathsf{Grid}_s[\\text{odd X G}]",
       "method": "Odds compression before quantile transformation",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.oddLogLogisticG": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{odd Log Logistic G}]",
+      "law": "\\mathsf{Grid}_s[\\text{odd Log Logistic G}]",
       "method": "Powered odds before quantile transformation",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.rayleighG": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{rayleigh G}]",
+      "law": "\\mathsf{Grid}_s[\\text{rayleigh G}]",
       "method": "Exponentiated negative Rayleigh before quantile",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.rayleighRayleigh": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{rayleigh Rayleigh}]",
+      "law": "\\mathsf{Grid}_s[\\text{rayleigh Rayleigh}]",
       "method": "Rayleigh-G with a Rayleigh quantile",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.generalizedGammaG": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{generalized Gamma G}]",
+      "law": "\\mathsf{Grid}_s[\\text{generalized Gamma G}]",
       "method": "Exponentiated generalized-gamma before quantile",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.inverseDistribution": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{inverse Distribution}]",
+      "law": "\\mathsf{Grid}_s[\\text{inverse Distribution}]",
       "method": "Reciprocate a supplied sample",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.weightedDistribution": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{weighted Distribution}]",
+      "law": "\\mathsf{Grid}_s[\\text{weighted Distribution}]",
       "method": "Rejection weighting; weight x must be a probability in [0,scale]",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.inflatedDistribution": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{inflated Distribution}]",
+      "law": "\\mathsf{Grid}_s[\\text{inflated Distribution}]",
       "method": "Choose atom or supplied distribution",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.zeroOneInflated": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{zero One Inflated}]",
+      "law": "\\mathsf{Grid}_s[\\text{zero One Inflated}]",
       "method": "Choose endpoint atom or supplied distribution",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.unitDistribution": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{unit Distribution}]",
+      "law": "\\mathsf{Grid}_s[\\text{unit Distribution}]",
       "method": "Exponentiate negative supplied sample",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.cdfQuantileFamily": {
       "role": "sampler",
       "group": "Numerical grid algorithms / DistributionFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{cdf Quantile Family}]",
+      "law": "\\mathsf{Grid}_s[\\text{cdf Quantile Family}]",
       "method": "Smithson–Shou CDF–quantile family",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.gamma": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Gamma",
-      "law": "\\mathsf{Grid}_s[\\operatorname{gamma}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{gamma}]",
       "method": "Marsaglia–Tsang rejection and shape augmentation",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.beta": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Gamma",
-      "law": "\\mathsf{Grid}_s[\\operatorname{beta}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{beta}]",
       "method": "Ratio of two numerical gamma draws",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.gammaSmallShape": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Gamma",
-      "law": "\\mathsf{Grid}_s[\\operatorname{gamma Small Shape}]",
+      "law": "\\mathsf{Grid}_s[\\text{gamma Small Shape}]",
       "method": "Liu–Martin–Syring small-shape rejection",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.chiSquared": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{chi Squared}]",
+      "law": "\\mathsf{Grid}_s[\\text{chi Squared}]",
       "method": "Scale a half-shape gamma draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.noncentralChiSquared": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{noncentral Chi Squared}]",
+      "law": "\\mathsf{Grid}_s[\\text{noncentral Chi Squared}]",
       "method": "Noncentral chi-square via a Poisson mixture; noncentrality is sum of mean squares",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.studentT": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{student T}]",
+      "law": "\\mathsf{Grid}_s[\\text{student T}]",
       "method": "Normal divided by chi-square scale",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.fisherF": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{fisher F}]",
+      "law": "\\mathsf{Grid}_s[\\text{fisher F}]",
       "method": "Ratio of normalized chi-square draws",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.inverseGamma": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{inverse Gamma}]",
+      "law": "\\mathsf{Grid}_s[\\text{inverse Gamma}]",
       "method": "Reciprocate and scale a gamma draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.kumaraswamy": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{kumaraswamy}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{kumaraswamy}]",
       "method": "Power-transform a unit-shape beta draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.betaPrime": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{beta Prime}]",
+      "law": "\\mathsf{Grid}_s[\\text{beta Prime}]",
       "method": "Power-transform a ratio of gamma draws",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.betaPERT": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{beta P E R T}]",
+      "law": "\\mathsf{Grid}_s[\\text{beta P E R T}]",
       "method": "Rescale a mode-parameterized beta draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.noncentralBeta": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{noncentral Beta}]",
+      "law": "\\mathsf{Grid}_s[\\text{noncentral Beta}]",
       "method": "Poisson mixture of beta shapes",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.chi": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{chi}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{chi}]",
       "method": "Square root of chi-square draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.inverseChiSquared": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{inverse Chi Squared}]",
+      "law": "\\mathsf{Grid}_s[\\text{inverse Chi Squared}]",
       "method": "Reciprocate a normalized chi-square draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.levy": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{levy}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{levy}]",
       "method": "Reciprocate a half-shape gamma draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.maxwell": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{maxwell}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{maxwell}]",
       "method": "Square root of a gamma draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.wignerSemicircle": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{wigner Semicircle}]",
+      "law": "\\mathsf{Grid}_s[\\text{wigner Semicircle}]",
       "method": "Affine transform of a beta draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.parabolic": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{parabolic}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{parabolic}]",
       "method": "Symmetric Beta(2,2) construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.arcsine": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{arcsine}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{arcsine}]",
       "method": "Symmetric half-shape beta construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.generalizedNormal": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{generalized Normal}]",
+      "law": "\\mathsf{Grid}_s[\\text{generalized Normal}]",
       "method": "Generalized normal / exponential-power density proportional to exp(-|x|^shape)",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.generalizedGamma": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{generalized Gamma}]",
+      "law": "\\mathsf{Grid}_s[\\text{generalized Gamma}]",
       "method": "Power and rescale a gamma draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.generalizedInverseGamma": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{generalized Inverse Gamma}]",
+      "law": "\\mathsf{Grid}_s[\\text{generalized Inverse Gamma}]",
       "method": "Reciprocate a generalized-gamma draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.powerDistribution": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{power Distribution}]",
+      "law": "\\mathsf{Grid}_s[\\text{power Distribution}]",
       "method": "Main-index power distribution: Beta(shape,1)/domain; domain is an inverse scale",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.twinT": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{twin T}]",
+      "law": "\\mathsf{Grid}_s[\\text{twin T}]",
       "method": "Twin-t rejection",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.powerFunction": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{power Function}]",
+      "law": "\\mathsf{Grid}_s[\\text{power Function}]",
       "method": "Rescale a unit-second-shape beta draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.stacy": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{stacy}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{stacy}]",
       "method": "Gamma-mixture names appearing in the main distribution index",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.amoroso": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{amoroso}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{amoroso}]",
       "method": "Location–scale generalized-gamma construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.pearsonVI": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{pearson V I}]",
+      "law": "\\mathsf{Grid}_s[\\text{pearson V I}]",
       "method": "Unit-power beta-prime construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.singhMaddala": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{singh Maddala}]",
+      "law": "\\mathsf{Grid}_s[\\text{singh Maddala}]",
       "method": "Unit-numerator-shape beta-prime construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.dagum": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{dagum}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{dagum}]",
       "method": "Unit-denominator-shape beta-prime construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.logLogistic": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{log Logistic}]",
+      "law": "\\mathsf{Grid}_s[\\text{log Logistic}]",
       "method": "Unit-shape beta-prime construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.minUniform": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{min Uniform}]",
+      "law": "\\mathsf{Grid}_s[\\text{min Uniform}]",
       "method": "Unit-first-shape beta construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.maxUniform": {
       "role": "sampler",
       "group": "Numerical grid algorithms / GammaFamilies",
-      "law": "\\mathsf{Grid}_s[\\operatorname{max Uniform}]",
+      "law": "\\mathsf{Grid}_s[\\text{max Uniform}]",
       "method": "Unit-second-shape beta construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.erlangMixture": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{erlang Mixture}]",
+      "law": "\\mathsf{Grid}_s[\\text{erlang Mixture}]",
       "method": "Numerical Erlang mixture",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.lindley": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{lindley}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{lindley}]",
       "method": "Mixture of gamma shapes one and two",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.garima": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{garima}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{garima}]",
       "method": "Garima-weighted gamma shape mixture",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.iGarima": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{i Garima}]",
+      "law": "\\mathsf{Grid}_s[\\text{i Garima}]",
       "method": "Modified Garima gamma shape mixture",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.weightedExponentialGamma": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{weighted Exponential Gamma}]",
+      "law": "\\mathsf{Grid}_s[\\text{weighted Exponential Gamma}]",
       "method": "Mixture of gamma shapes two and three",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.xgamma": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{xgamma}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{xgamma}]",
       "method": "Mixture of gamma shapes one and three",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.mirra": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{mirra}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{mirra}]",
       "method": "Parameter-weighted gamma shape mixture",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.sushila": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{sushila}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{sushila}]",
       "method": "Rescale a Lindley mixture draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.xLindley": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{x Lindley}]",
+      "law": "\\mathsf{Grid}_s[\\text{x Lindley}]",
       "method": "Mixture of exponential and Lindley draws",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.gammaExponential": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{gamma Exponential}]",
+      "law": "\\mathsf{Grid}_s[\\text{gamma Exponential}]",
       "method": "Ratio of independent powered gamma draws",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.extendedXgamma": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{extended Xgamma}]",
+      "law": "\\mathsf{Grid}_s[\\text{extended Xgamma}]",
       "method": "Randomly increment the gamma shape",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.skewSymmetric": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{skew Symmetric}]",
+      "law": "\\mathsf{Grid}_s[\\text{skew Symmetric}]",
       "method": "Generic skew-symmetric construction; both callbacks return numerical values",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.logarithmicSkewNormal": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{logarithmic Skew Normal}]",
+      "law": "\\mathsf{Grid}_s[\\text{logarithmic Skew Normal}]",
       "method": "Exponentiate a shifted skew-normal draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.twoPiece": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{two Piece}]",
+      "law": "\\mathsf{Grid}_s[\\text{two Piece}]",
       "method": "Two-piece family, from an arbitrary symmetric numerical sampler",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.asymmetricGeneralizedGaussian": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{asymmetric Generalized Gaussian}]",
+      "law": "\\mathsf{Grid}_s[\\text{asymmetric Generalized Gaussian}]",
       "method": "Two-piece generalized-normal construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.offsetSymmetricGaussian": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{offset Symmetric Gaussian}]",
+      "law": "\\mathsf{Grid}_s[\\text{offset Symmetric Gaussian}]",
       "method": "Truncated shifted normal magnitude and sign",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.tiltedBeta": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{tilted Beta}]",
+      "law": "\\mathsf{Grid}_s[\\text{tilted Beta}]",
       "method": "Mixture of beta and tilted-uniform rejection",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.tiltedBetaBinomial": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{tilted Beta Binomial}]",
+      "law": "\\mathsf{Grid}_s[\\text{tilted Beta Binomial}]",
       "method": "n is an ordinary integer count, the other parameters are fixed point",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.suzuki": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Mixtures",
-      "law": "\\mathsf{Grid}_s[\\operatorname{suzuki}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{suzuki}]",
       "method": "Suzuki mixture: a Rayleigh variate whose scale is independently lognormal",
       "law_evidence": "numerical-family label"
     },
@@ -3778,182 +3778,182 @@
     "Occil.Numerical.normal": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{normal}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{normal}]",
       "method": "First coordinate of polar construction",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.normalRatioOfUniforms": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{normal}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{normal}]",
       "method": "Ratio-of-uniforms rejection",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.normalInversion": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{normal}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{normal}]",
       "method": "Approximate normal-CDF inversion",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.normalCLT": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{normal C L T}]",
+      "law": "\\mathsf{Grid}_s[\\text{normal C L T}]",
       "method": "Sum twelve centered grid uniforms",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.lognormal": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{lognormal}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{lognormal}]",
       "method": "Exponentiate a numerical normal draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.inverseGaussian": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{inverse Gaussian}]",
+      "law": "\\mathsf{Grid}_s[\\text{inverse Gaussian}]",
       "method": "Michael–Schucany–Haas inverse Gaussian, mean and shape strictly positive",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.halfNormal": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{half Normal}]",
+      "law": "\\mathsf{Grid}_s[\\text{half Normal}]",
       "method": "Absolute value of a normal draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.birnbaumSaunders": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{birnbaum Saunders}]",
+      "law": "\\mathsf{Grid}_s[\\text{birnbaum Saunders}]",
       "method": "Square a transformed normal draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.skewNormal": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{skew Normal}]",
+      "law": "\\mathsf{Grid}_s[\\text{skew Normal}]",
       "method": "Azzalini skew-normal construction from two independent standard normals",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.generalizedSkewNormal": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{generalized Skew Normal}]",
+      "law": "\\mathsf{Grid}_s[\\text{generalized Skew Normal}]",
       "method": "The selection construction for generalized skew-normal SNE(lambda,xi)",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.moyal": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{moyal}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{moyal}]",
       "method": "Moyal from -log(Z^2), Z standard normal",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.powerNormal": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{power Normal}]",
+      "law": "\\mathsf{Grid}_s[\\text{power Normal}]",
       "method": "Power-transformed uniform and normal quantile",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.powerLognormal": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{power Lognormal}]",
+      "law": "\\mathsf{Grid}_s[\\text{power Lognormal}]",
       "method": "Exponentiate a power-normal draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.normalCLTWarped": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{normal C L T Warped}]",
+      "law": "\\mathsf{Grid}_s[\\text{normal C L T Warped}]",
       "method": "Polynomial correction to twelve-uniform approximation",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.normalCLTK": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{normal C L T K}]",
+      "law": "\\mathsf{Grid}_s[\\text{normal C L T K}]",
       "method": "Normalize a sum of grid uniforms",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.qGaussian": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{q Gaussian}]",
+      "law": "\\mathsf{Grid}_s[\\text{q Gaussian}]",
       "method": "Generalized Box–Muller q-Gaussian pair, q<3",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.generalizedSkewNormalConditional": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{generalized Skew Normal Conditional}]",
+      "law": "\\mathsf{Grid}_s[\\text{generalized Skew Normal Conditional}]",
       "method": "Conditional-normal SNE(lambda,xi) construction, distinct from selection rejection",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.skewNormalExtremes": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Normal",
-      "law": "\\mathsf{Grid}_s[\\operatorname{skew Normal Extremes}]",
+      "law": "\\mathsf{Grid}_s[\\text{skew Normal Extremes}]",
       "method": "Weighted combination of normal minimum and maximum",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.hyperbolicSecant": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{hyperbolic Secant}]",
+      "law": "\\mathsf{Grid}_s[\\text{hyperbolic Secant}]",
       "method": "Hyperbolic secant density sech(x)/pi, by numerical inversion",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.epanechnikov": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{epanechnikov}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{epanechnikov}]",
       "method": "Devroye–Györfi's three-uniform Epanechnikov construction on [-1,1]",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.ratioUniforms": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{ratio Uniforms}]",
+      "law": "\\mathsf{Grid}_s[\\text{ratio Uniforms}]",
       "method": "Ratio of two independent grid uniforms",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.reciprocalUniform": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{reciprocal Uniform}]",
+      "law": "\\mathsf{Grid}_s[\\text{reciprocal Uniform}]",
       "method": "Reciprocate an interior grid uniform",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.reciprocalPowerUniform": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{reciprocal Power Uniform}]",
+      "law": "\\mathsf{Grid}_s[\\text{reciprocal Power Uniform}]",
       "method": "Negative power of a grid uniform",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.uniformOdds": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{uniform Odds}]",
+      "law": "\\mathsf{Grid}_s[\\text{uniform Odds}]",
       "method": "Divide a uniform by its complement",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.arcCosine": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{arc Cosine}]",
+      "law": "\\mathsf{Grid}_s[\\text{arc Cosine}]",
       "method": "CDF 1-cos(pi*x/2), x in [0,1], inverted with atan and sqrt",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.exponentialLogRate": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{exponential Log Rate}]",
+      "law": "\\mathsf{Grid}_s[\\text{exponential Log Rate}]",
       "method": "Exponential draw with logarithmic rate",
       "law_evidence": "numerical-family label"
     },
@@ -3974,287 +3974,287 @@
     "Occil.Specialized.tulap": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{tulap}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{tulap}]",
       "method": "Tulap(location,b,q)",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.continuousBernoulli": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{continuous Bernoulli}]",
+      "law": "\\mathsf{Grid}_s[\\text{continuous Bernoulli}]",
       "method": "Continuous Bernoulli by numerical inverse CDF; endpoints are limiting atoms",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.powerFunction": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{power Function}]",
+      "law": "\\mathsf{Grid}_s[\\text{power Function}]",
       "method": "Rescale a power of a grid uniform",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.lehmannWeibull": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{lehmann Weibull}]",
+      "law": "\\mathsf{Grid}_s[\\text{lehmann Weibull}]",
       "method": "Power and scale an exponential draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.marshallOlkin": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{marshall Olkin}]",
+      "law": "\\mathsf{Grid}_s[\\text{marshall Olkin}]",
       "method": "Rational transform of a grid uniform",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.slash": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{slash}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{slash}]",
       "method": "Divide normal by independent grid uniform",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.lomax": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{lomax}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{lomax}]",
       "method": "Shift and power-transform a uniform",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.powerLomax": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{power Lomax}]",
+      "law": "\\mathsf{Grid}_s[\\text{power Lomax}]",
       "method": "Power-transform a Lomax draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.toppLeone": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{topp Leone}]",
+      "law": "\\mathsf{Grid}_s[\\text{topp Leone}]",
       "method": "Complementary square-root uniform transform",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.generalizedPareto": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{generalized Pareto}]",
+      "law": "\\mathsf{Grid}_s[\\text{generalized Pareto}]",
       "method": "Generalized-Pareto inverse uniform transform",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.quarterRectellipse": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{quarter Rectellipse}]",
+      "law": "\\mathsf{Grid}_s[\\text{quarter Rectellipse}]",
       "method": "Reject rectangle proposals by implicit boundary",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.rectellipse": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{rectellipse}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{rectellipse}]",
       "method": "Reflect quarter-rectellipse coordinates by fair signs",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.cosine": {
       "role": "sampler",
       "group": "Numerical grid algorithms / SpecialDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{cosine}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{cosine}]",
       "method": "Main-index cosine distribution on [-1/2,1/2], via asin(U)/pi",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.geometricZeroTruncatedPoisson": {
       "role": "sampler",
       "group": "Numerical grid algorithms / StoppedDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{geometric Zero Truncated Poisson}]",
+      "law": "\\mathsf{Grid}_s[\\text{geometric Zero Truncated Poisson}]",
       "method": "Poisson-stopped maximum of geometric draws",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.exponentialPoisson": {
       "role": "sampler",
       "group": "Numerical grid algorithms / StoppedDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{exponential Poisson}]",
+      "law": "\\mathsf{Grid}_s[\\text{exponential Poisson}]",
       "method": "Poisson-stopped minimum of exponential draws",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.poissonExponential": {
       "role": "sampler",
       "group": "Numerical grid algorithms / StoppedDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{poisson Exponential}]",
+      "law": "\\mathsf{Grid}_s[\\text{poisson Exponential}]",
       "method": "Poisson-stopped maximum of exponential draws",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.rightTruncatedWeibull": {
       "role": "sampler",
       "group": "Numerical grid algorithms / StoppedDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{right Truncated Weibull}]",
+      "law": "\\mathsf{Grid}_s[\\text{right Truncated Weibull}]",
       "method": "Poisson-stopped minimum of power-function draws",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.bivariateGammaGeometric": {
       "role": "sampler",
       "group": "Numerical grid algorithms / StoppedDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{bivariate Gamma Geometric}]",
+      "law": "\\mathsf{Grid}_s[\\text{bivariate Gamma Geometric}]",
       "method": "Gamma/geometric episode: return (sum, number of summands)",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.bivariateExponentialGeometric": {
       "role": "sampler",
       "group": "Numerical grid algorithms / StoppedDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{bivariate Exponential Geometric}]",
+      "law": "\\mathsf{Grid}_s[\\text{bivariate Exponential Geometric}]",
       "method": "Return geometric-stopped exponential sum and count",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.unitLindley": {
       "role": "sampler",
       "group": "Numerical grid algorithms / StoppedDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{unit Lindley}]",
+      "law": "\\mathsf{Grid}_s[\\text{unit Lindley}]",
       "method": "Odds compression of a Lindley draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.zeroOneInflatedUnitLindley": {
       "role": "sampler",
       "group": "Numerical grid algorithms / StoppedDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{zero One Inflated Unit Lindley}]",
+      "law": "\\mathsf{Grid}_s[\\text{zero One Inflated Unit Lindley}]",
       "method": "Endpoint atoms mixed with unit Lindley",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.grassia": {
       "role": "sampler",
       "group": "Numerical grid algorithms / StoppedDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{grassia}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{grassia}]",
       "method": "Exponentiate negative gamma draw",
       "law_evidence": "numerical-family label"
     },
     "Occil.Specialized.gmdp": {
       "role": "sampler",
       "group": "Numerical grid algorithms / StoppedDistributions",
-      "law": "\\mathsf{Grid}_s[\\operatorname{gmdp}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{gmdp}]",
       "method": "GMDP episode: gamma summands, a discrete-Pareto stopping count",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.laplace": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{laplace}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{laplace}]",
       "method": "Sign and rescale a numerical exponential",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.logistic": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{logistic}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{logistic}]",
       "method": "Log-odds transform of a grid uniform",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.cauchy": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{cauchy}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{cauchy}]",
       "method": "Tangent transform of a grid angle",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.cauchyDisk": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{cauchy Disk}]",
+      "law": "\\mathsf{Grid}_s[\\text{cauchy Disk}]",
       "method": "Ratio of coordinates from disk rejection",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.weibull": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{weibull}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{weibull}]",
       "method": "Power-transform a numerical exponential",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.pareto": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{pareto}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{pareto}]",
       "method": "Negative power of a grid uniform",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.rayleigh": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{rayleigh}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{rayleigh}]",
       "method": "Square root of a scaled exponential",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.gumbel": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{gumbel}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{gumbel}]",
       "method": "Log-transform a numerical exponential",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.generalizedExtremeValue": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{generalized Extreme Value}]",
+      "law": "\\mathsf{Grid}_s[\\text{generalized Extreme Value}]",
       "method": "GEV parameterization used in Occil's index: (E^(-shape)-1)/shape",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.frechet": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{frechet}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{frechet}]",
       "method": "Negative power of a numerical exponential",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.triangular": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{triangular}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{triangular}]",
       "method": "Triangular on [lo,hi], with mode between the endpoints",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.triangularUniforms": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{triangular Uniforms}]",
+      "law": "\\mathsf{Grid}_s[\\text{triangular Uniforms}]",
       "method": "Stein–Keblis family (1-alpha)*min(U,V)+alpha*max(U,V), alpha in [0,1]",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.tukeyLambda": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{tukey Lambda}]",
+      "law": "\\mathsf{Grid}_s[\\text{tukey Lambda}]",
       "method": "Difference of uniform power transforms",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.generalizedTukeyLambda": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{generalized Tukey Lambda}]",
+      "law": "\\mathsf{Grid}_s[\\text{generalized Tukey Lambda}]",
       "method": "Asymmetric uniform power transforms",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.powerLaw": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{power Law}]",
+      "law": "\\mathsf{Grid}_s[\\text{power Law}]",
       "method": "Ordinary power law on a finite positive interval, with density proportional to x^exponent",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.logarithmicProduct": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{logarithmic Product}]",
+      "law": "\\mathsf{Grid}_s[\\text{logarithmic Product}]",
       "method": "Multiply two independent grid uniforms",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.doubleLogarithmic": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{double Logarithmic}]",
+      "law": "\\mathsf{Grid}_s[\\text{double Logarithmic}]",
       "method": "Center and sign a uniform product",
       "law_evidence": "numerical-family label"
     },
     "Occil.Numerical.bates": {
       "role": "sampler",
       "group": "Numerical grid algorithms / Univariate",
-      "law": "\\mathsf{Grid}_s[\\operatorname{bates}]",
+      "law": "\\mathsf{Grid}_s[\\mathrm{bates}]",
       "method": "Average independent grid uniforms",
       "law_evidence": "numerical-family label"
     },
@@ -4345,14 +4345,14 @@
     "Occil.PSRN.newBeta": {
       "role": "sampler",
       "group": "Lazy exact reals / BetaGamma",
-      "law": "\\mathsf{Lazy}[\\operatorname{Beta}(a,b)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Beta}(a,b)]",
       "method": "Beta PSRN by Occil's geometric-bag power rejection for a,b>=1",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newGammaInteger": {
       "role": "sampler",
       "group": "Lazy exact reals / BetaGamma",
-      "law": "\\mathsf{Lazy}[\\operatorname{Gamma}(k,\\lambda)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Gamma}(k,\\lambda)]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated against implementation"
     },
@@ -4366,14 +4366,14 @@
     "Occil.PSRN.newLindley": {
       "role": "sampler",
       "group": "Lazy exact reals / BetaGamma",
-      "law": "\\mathsf{Lazy}[\\operatorname{Lindley}]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Lindley}]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newGamma": {
       "role": "sampler",
       "group": "Lazy exact reals / BetaGamma",
-      "law": "\\mathsf{Lazy}[\\operatorname{Gamma}(a,b)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Gamma}(a,b)]",
       "method": "Gamma with arbitrary positive rational shape and rate",
       "law_evidence": "curated"
     },
@@ -4401,7 +4401,7 @@
     "Occil.PSRN.newUniform": {
       "role": "sampler",
       "group": "Lazy exact reals / Core",
-      "law": "\\mathsf{Lazy}[\\operatorname{Unif}(0,1)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Unif}(0,1)]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated"
     },
@@ -4457,161 +4457,161 @@
     "Occil.PSRN.coin": {
       "role": "sampler",
       "group": "Lazy exact reals / Core",
-      "law": "\\operatorname{Bern}(x)\\ \\text{conditional on cached }x",
+      "law": "\\mathrm{Bern}(x)\\ \\text{conditional on cached }x",
       "method": "Compare a fresh uniform with cached real",
       "law_evidence": "curated against implementation"
     },
     "Occil.PSRN.newInsideShape": {
       "role": "sampler",
       "group": "Lazy exact reals / Core",
-      "law": "\\mathsf{Lazy}[\\operatorname{Unif}(A)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Unif}(A)]",
       "method": "Generic exact rejection inside a cube, for predicates on a list of lazy coordinates",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newRayleigh": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Rayleigh}]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Rayleigh}]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newCauchy": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Cauchy}]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Cauchy}]",
       "method": "Exact Cauchy by rejection inside the unit disk and a coordinate ratio",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newContinuousBernoulli": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Continuous Bernoulli}]",
+      "law": "\\mathsf{Lazy}[\\text{Continuous Bernoulli}]",
       "method": "Continuous Bernoulli(lambda) for rational lambda in (0,1)",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newEpanechnikov": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Epanechnikov}]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Epanechnikov}]",
       "method": "Epanechnikov kernel on [-1,1]: twice the median of three uniforms minus one",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newFGMCopula": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{FGMCopula}(\\theta)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{FGMCopula}(\\theta)]",
       "method": "Farlie–Gumbel–Morgenstern copula by rejection under envelope two",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newHyperbolicSecant": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Hyperbolic Secant}]",
+      "law": "\\mathsf{Lazy}[\\text{Hyperbolic Secant}]",
       "method": "Hyperbolic-secant law in its natural scale, density sech(x)/pi",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newArcCosine": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Arc Cosine}]",
+      "law": "\\mathsf{Lazy}[\\text{Arc Cosine}]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newTulap": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Tulap}]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Tulap}]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newGarima": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Garima}]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Garima}]",
       "method": "Named Lindley-family specializations from the PSRN article's mixture table",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newIGarima": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{I Garima}]",
+      "law": "\\mathsf{Lazy}[\\text{I Garima}]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newWeightedExponentialGamma": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Weighted Exponential Gamma}]",
+      "law": "\\mathsf{Lazy}[\\text{Weighted Exponential Gamma}]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newXgamma": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Xgamma}]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Xgamma}]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newMirra": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Mirra}]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Mirra}]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newSushila": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Sushila}]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Sushila}]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newXLindley": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{X Lindley}]",
+      "law": "\\mathsf{Lazy}[\\text{X Lindley}]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newRectellipse": {
       "role": "sampler",
       "group": "Lazy exact reals / Distributions",
-      "law": "\\mathsf{Lazy}[\\operatorname{Rectellipse}]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Rectellipse}]",
       "method": "Uniform quarter/full rectellipse, integer radii and rational squareness in [0,1]",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newExponentialFromDecay": {
       "role": "sampler",
       "group": "Lazy exact reals / Exponential",
-      "law": "\\mathsf{Lazy}[\\operatorname{Exp}(\\lambda)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Exp}(\\lambda)]",
       "method": "An e-rand from exact exp(-rate/d) coins",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newExponential": {
       "role": "sampler",
       "group": "Lazy exact reals / Exponential",
-      "law": "\\mathsf{Lazy}[\\operatorname{Exp}(\\lambda)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Exp}(\\lambda)]",
       "method": "Exponential PSRN at an arbitrary positive rational rate",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newExponentialLogRate": {
       "role": "sampler",
       "group": "Lazy exact reals / Exponential",
-      "law": "\\mathsf{Lazy}[\\operatorname{Exp}(\\log(x/y))]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Exp}(\\log(x/y))]",
       "method": "Exponential PSRN with rate ln(x/y), x>y>0",
       "law_evidence": "curated against implementation"
     },
     "Occil.PSRN.newExponentialUnknownRate": {
       "role": "sampler",
       "group": "Lazy exact reals / Exponential",
-      "law": "\\mathsf{Lazy}[\\operatorname{Exp}(p)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Exp}(p)]",
       "method": "Exponential PSRN with unknown positive rate p<=1 supplied as a p-coin",
       "law_evidence": "curated"
     },
     "Occil.PSRN.expMinusCoin": {
       "role": "sampler",
       "group": "Lazy exact reals / Exponential",
-      "law": "\\operatorname{Bern}\\!\\left(e^{-x}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(e^{-x}\\right)",
       "method": "Conditional exp(-x) trial for a nonnegative lazy real x",
       "law_evidence": "curated"
     },
@@ -4660,42 +4660,42 @@
     "Occil.PSRN.newSphere": {
       "role": "sampler",
       "group": "Lazy exact reals / Geometry",
-      "law": "\\mathsf{Lazy}[\\operatorname{Unif}(S^{d-1})]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Unif}(S^{d-1})]",
       "method": "Uniform surface measure on the unit sphere in the requested dimension",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newBall": {
       "role": "sampler",
       "group": "Lazy exact reals / Geometry",
-      "law": "\\mathsf{Lazy}[\\operatorname{Unif}(B^d)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Unif}(B^d)]",
       "method": "Uniform volume measure on a unit ball",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newShell": {
       "role": "sampler",
       "group": "Lazy exact reals / Geometry",
-      "law": "\\mathsf{Lazy}[\\operatorname{Unif}(\\text{spherical shell})]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Unif}(\\text{spherical shell})]",
       "method": "Uniform shell with positive rational outer radius and nonnegative inner radius",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newDirichlet": {
       "role": "sampler",
       "group": "Lazy exact reals / Geometry",
-      "law": "\\mathsf{Lazy}[\\operatorname{Dirichlet}(\\alpha)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Dirichlet}(\\alpha)]",
       "method": "Construct a cached lazy real",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newSimplex": {
       "role": "sampler",
       "group": "Lazy exact reals / Geometry",
-      "law": "\\mathsf{Lazy}[\\operatorname{Unif}(\\Delta_d)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Unif}(\\Delta_d)]",
       "method": "Uniform positive components summing to one, via independent exponentials",
       "law_evidence": "curated"
     },
     "Occil.PSRN.newOrderStatistic": {
       "role": "sampler",
       "group": "Lazy exact reals / Uniform",
-      "law": "\\mathsf{Lazy}[\\operatorname{Beta}(k,n+1-k)]",
+      "law": "\\mathsf{Lazy}[\\mathrm{Beta}(k,n+1-k)]",
       "method": "Select k-th of n independent lazy uniforms without filling unsampled tails",
       "law_evidence": "curated"
     },
@@ -4709,7 +4709,7 @@
     "Occil.PSRN.powerCoin": {
       "role": "sampler",
       "group": "Lazy exact reals / Uniform",
-      "law": "\\operatorname{Bern}\\!\\left(p^{a/b}\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p^{a/b}\\right)",
       "method": "Raise an abstract coin's probability to a nonnegative rational power",
       "law_evidence": "curated"
     },
@@ -4758,63 +4758,63 @@
     "Occil.uniformInt": {
       "role": "sampler",
       "group": "Uniform primitives",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,n-1\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,n-1\\}",
       "method": "Primitive bounded integer draw",
       "law_evidence": "curated"
     },
     "Occil.rndInt": {
       "role": "sampler",
       "group": "Uniform primitives",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,h\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,h\\}",
       "method": "Inclusive bounded integer draw",
       "law_evidence": "curated"
     },
     "Occil.rndIntRange": {
       "role": "sampler",
       "group": "Uniform primitives",
-      "law": "\\operatorname{Unif}\\{\\ell,\\ldots,h\\}",
+      "law": "\\mathrm{Unif}\\{\\ell,\\ldots,h\\}",
       "method": "Shift an inclusive uniform rank",
       "law_evidence": "curated"
     },
     "Occil.rndIntExcRange": {
       "role": "sampler",
       "group": "Uniform primitives",
-      "law": "\\operatorname{Unif}\\{\\ell,\\ldots,h-1\\}",
+      "law": "\\mathrm{Unif}\\{\\ell,\\ldots,h-1\\}",
       "method": "Shift a half-open uniform rank",
       "law_evidence": "curated"
     },
     "Occil.fastDiceRoller": {
       "role": "sampler",
       "group": "Uniform primitives",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,n-1\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,n-1\\}",
       "method": "Lumbroso interval recycling",
       "law_evidence": "curated"
     },
     "Occil.uniformFromModulus": {
       "role": "sampler",
       "group": "Uniform primitives",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,n-1\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,n-1\\}",
       "method": "Recursive source-modulus expansion",
       "law_evidence": "curated"
     },
     "Occil.fairCoin": {
       "role": "sampler",
       "group": "Uniform primitives",
-      "law": "\\operatorname{Bern}\\!\\left(\\frac12\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(\\frac12\\right)",
       "method": "Test a uniform random bit",
       "law_evidence": "curated"
     },
     "Occil.rationalCoin": {
       "role": "sampler",
       "group": "Uniform primitives",
-      "law": "\\operatorname{Bern}\\!\\left(a/b\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(a/b\\right)",
       "method": "Compare a uniform integer rank",
       "law_evidence": "curated"
     },
     "Occil.realCoin": {
       "role": "sampler",
       "group": "Uniform primitives",
-      "law": "\\operatorname{Bern}\\!\\left(p\\right)",
+      "law": "\\mathrm{Bern}\\!\\left(p\\right)",
       "method": "Threshold a continuous uniform",
       "law_evidence": "curated"
     },
@@ -4828,35 +4828,35 @@
     "Occil.WeightedVariants.voseDraw": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Aliases",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Integer-weight sampling construction (valid table required)",
       "law_evidence": "curated"
     },
     "Occil.WeightedVariants.voseSamples": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Aliases",
-      "law": "\\operatorname{Cat}(w)^{\\otimes k}",
+      "law": "\\mathrm{Cat}(w)^{\\otimes k}",
       "method": "Integer-weight sampling construction",
       "law_evidence": "curated"
     },
     "Occil.WeightedVariants.sequentialCoins": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Choice",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Sequential conditional rational coins",
       "law_evidence": "curated"
     },
     "Occil.WeightedVariants.twoLevelChoice": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Choice",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Select block, then within-block category",
       "law_evidence": "curated"
     },
     "Occil.WeightedVariants.flatChoice": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Choice",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Expand weights into a uniform table",
       "law_evidence": "curated"
     },
@@ -4912,7 +4912,7 @@
     "Occil.WeightedVariants.fenwickDraw": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Dynamic",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Invert cumulative mass by binary lifting through a mutable Fenwick tree (valid table required)",
       "law_evidence": "curated"
     },
@@ -4926,35 +4926,35 @@
     "Occil.WeightedVariants.optimalDraw": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Optimal",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Traverse a finite cyclic probability matrix directly, as nextFromMatrix (valid table required)",
       "law_evidence": "curated"
     },
     "Occil.WeightedVariants.optimalChoice": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Optimal",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Integer-weight sampling construction",
       "law_evidence": "curated"
     },
     "Occil.Weighted.moduloReduction": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Reductions",
-      "law": "(x\\mapsto x\\bmod n)_*\\operatorname{Unif}\\{0,\\ldots,2^b-1\\}",
+      "law": "(x\\mapsto x\\bmod n)_*\\mathrm{Unif}\\{0,\\ldots,2^b-1\\}",
       "method": "Approximate modulo reduction",
       "law_evidence": "curated"
     },
     "Occil.Weighted.multiplyShift": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Reductions",
-      "law": "(x\\mapsto\\lfloor nx/2^b\\rfloor)_*\\operatorname{Unif}\\{0,\\ldots,2^b-1\\}",
+      "law": "(x\\mapsto\\lfloor nx/2^b\\rfloor)_*\\mathrm{Unif}\\{0,\\ldots,2^b-1\\}",
       "method": "Approximate multiply-and-shift reduction, with an explicit input bit count",
       "law_evidence": "curated"
     },
     "Occil.WeightedVariants.lemireUniform": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Reductions",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,n-1\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,n-1\\}",
       "method": "Reject multiply-high low-word bias",
       "law_evidence": "curated"
     },
@@ -4968,49 +4968,49 @@
     "Occil.WeightedVariants.floatingMultiply": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Reductions",
-      "law": "\\left(x\\mapsto\\lfloor\\operatorname{round}_p(nx)/2^b\\rfloor\\right)_*\\operatorname{Unif}\\{0,\\ldots,2^b-1\\}",
+      "law": "\\left(x\\mapsto\\lfloor\\mathrm{round}_p(nx)/2^b\\rfloor\\right)_*\\mathrm{Unif}\\{0,\\ldots,2^b-1\\}",
       "method": "O'Neill's biased floating-point multiply, emulated with integer arithmetic",
       "law_evidence": "curated"
     },
     "Occil.WeightedVariants.divisionRejection": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Reductions",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,n-1\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,n-1\\}",
       "method": "Reject excess quotient buckets",
       "law_evidence": "curated"
     },
     "Occil.WeightedVariants.debiasedModulo": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Reductions",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,n-1\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,n-1\\}",
       "method": "Discard incomplete low residue interval",
       "law_evidence": "curated"
     },
     "Occil.WeightedVariants.oneillUniform": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Reductions",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,n-1\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,n-1\\}",
       "method": "Lazy-threshold multiply-high rejection",
       "law_evidence": "curated"
     },
     "Occil.WeightedVariants.sortedChoice": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Rejection",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Integer-weight sampling construction",
       "law_evidence": "curated"
     },
     "Occil.WeightedVariants.succinctChoice": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Rejection",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Bringmann–Larsen's packed 20/32-bit weights",
       "law_evidence": "curated"
     },
     "Occil.Weighted.weightedReservoirOne": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Reservoir",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Running-weight replacement decisions",
       "law_evidence": "curated"
     },
@@ -5038,7 +5038,7 @@
     "Occil.weightedRejection": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Sequential",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Uniform category with envelope acceptance",
       "law_evidence": "curated"
     },
@@ -5052,7 +5052,7 @@
     "Occil.aliasSamples": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Sequential",
-      "law": "\\operatorname{Cat}(w)^{\\otimes k}",
+      "law": "\\mathrm{Cat}(w)^{\\otimes k}",
       "method": "Walker alias preprocessing and repeated draws",
       "law_evidence": "curated"
     },
@@ -5066,14 +5066,14 @@
     "Occil.Weighted.cumulativeDraw": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Tables",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Binary search cumulative weights (valid table required)",
       "law_evidence": "curated"
     },
     "Occil.Weighted.cumulativeChoice": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Tables",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Build cumulative table, then search",
       "law_evidence": "curated"
     },
@@ -5087,7 +5087,7 @@
     "Occil.Weighted.rationalChoice": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Tables",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Integer-weight sampling construction",
       "law_evidence": "curated"
     },
@@ -5101,42 +5101,42 @@
     "Occil.Weighted.knuthYao": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Trees",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Binary probability-matrix leaf walk",
       "law_evidence": "curated"
     },
     "Occil.Weighted.fastLoadedDiceRoller": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Trees",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Finite dyadic matrix with rejection",
       "law_evidence": "curated"
     },
     "Occil.Weighted.hanHoshi": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Trees",
-      "law": "\\operatorname{Cat}(w)",
+      "law": "\\mathrm{Cat}(w)",
       "method": "Refine a binary probability interval",
       "law_evidence": "curated"
     },
     "Occil.Weighted.randomBits": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Uniform",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,2^k-1\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,2^k-1\\}",
       "method": "Concatenate independent fair bits",
       "law_evidence": "curated"
     },
     "Occil.Weighted.bitmaskRejection": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Uniform",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,n-1\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,n-1\\}",
       "method": "Reject out-of-range binary candidates",
       "law_evidence": "curated"
     },
     "Occil.Weighted.fyky": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Uniform",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,n-1\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,n-1\\}",
       "method": "Upper-interval bit recycling",
       "law_evidence": "curated"
     },
@@ -5150,35 +5150,35 @@
     "Occil.Weighted.recycledUniform": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Uniform",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,n-1\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,n-1\\}",
       "method": "Exact quotient/remainder recycling",
       "law_evidence": "curated"
     },
     "Occil.Weighted.recycledSamples": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Uniform",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,n-1\\}^{\\otimes k}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,n-1\\}^{\\otimes k}",
       "method": "Repeated uniform draws using one persistent bit-recycling pool",
       "law_evidence": "curated"
     },
     "Occil.Weighted.uniformRational": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Uniform",
-      "law": "(K,m),\\ K\\sim\\operatorname{Unif}\\{0,\\ldots,m-1\\}",
+      "law": "(K,m),\\ K\\sim\\mathrm{Unif}\\{0,\\ldots,m-1\\}",
       "method": "Exact rational grid sample in [0,1): result (numerator,denominator)",
       "law_evidence": "curated against implementation"
     },
     "Occil.Weighted.uniformDyadic": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Uniform",
-      "law": "(K,2^b),\\ K\\sim\\operatorname{Unif}\\{0,\\ldots,2^b-1\\}",
+      "law": "(K,2^b),\\ K\\sim\\mathrm{Unif}\\{0,\\ldots,2^b-1\\}",
       "method": "Exact dyadic grid sample: the denominator is 2^bits",
       "law_evidence": "curated"
     },
     "Occil.Weighted.uniformFixed": {
       "role": "sampler",
       "group": "Integer and weighted sampling / Uniform",
-      "law": "\\operatorname{Unif}\\{0,\\ldots,s-1\\}",
+      "law": "\\mathrm{Unif}\\{0,\\ldots,s-1\\}",
       "method": "Fixed-point output uses an explicit integer scale, not an opaque real type",
       "law_evidence": "curated"
     },

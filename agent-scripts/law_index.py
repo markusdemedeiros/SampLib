@@ -103,6 +103,8 @@ def table_cell(text: str) -> str:
 
 
 def validate_math(name: str, law: str) -> None:
+    if re.search(r"\\operatorname\b", law):
+        raise ValueError(f"Unsupported macro in law index; use \\mathrm or \\text: {name}")
     if "|" in law:
         raise ValueError(f"Raw table pipe in law; use \\mid or \\lvert: {name}")
     if "$" in law:
@@ -134,7 +136,7 @@ def render(catalog: dict, sources: dict[str, dict], proofs: dict[str, str]) -> s
         f"{counts.get('sampler', 0)} sampler entries; {len(proofs)} accepted proofs. "
         "**Verified** links identify accepted proofs; **draft** links are unreviewed. "
         "A dash means unverified. Domains and parameter conventions are in the code/proof.", "",
-        r"$\operatorname{Geom}_0(p)$ counts failures. $\operatorname{Cat}(w)$ has masses "
+        r"$\mathrm{Geom}_0(p)$ counts failures. $\mathrm{Cat}(w)$ has masses "
         r"$w_i/\sum_jw_j$. $\mathsf{Lazy}[D]$ denotes the intended latent law of a stateful real. "
         r"$\mathsf{Grid}_s[D]$ labels a numerical algorithm targeting $D$; it does **not** "
         r"claim its output is an exact or exactly rounded draw from $D$.", "",
