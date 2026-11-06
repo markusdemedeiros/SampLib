@@ -148,8 +148,8 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | `Occil.choice` | $\frac1n\sum_i\delta_{x_i}$ | Uniform position and list lookup | [Basic.lean](code/Samplers/Combinatorial/Basic.lean#L11) | [**verified**](SampLib/Samplers/Choice.lean) |
 | `Occil.positiveComposition` | $\mathrm{Unif}\{x\in\mathbb N_{>0}^n:\sum_i x_i=t\}$ | Differences of uniformly chosen cut points | [Basic.lean](code/Samplers/Combinatorial/Basic.lean#L86) | [**verified**](SampLib/Samplers/PositiveComposition.lean) |
 | `Occil.randomGraph` | $G(n,p)$ | Independent Bernoulli edge indicators | [Basic.lean](code/Samplers/Combinatorial/Basic.lean#L105) | [**verified**](SampLib/Samplers/RandomGraph.lean) |
-| `Occil.reservoir` | $\mathrm{Unif}\{I\subseteq[n]:\#I=k\}\ \text{(unordered)}$ | Reservoir Algorithm R slot replacement | [Basic.lean](code/Samplers/Combinatorial/Basic.lean#L65) | [**verified**](SampLib/Samplers/Reservoir.lean) |
-| `Occil.sampleInOrder` | $\mathrm{Unif}\{I\subseteq[n]:\#I=k\}$ | Sequential subset inclusion decisions | [Basic.lean](code/Samplers/Combinatorial/Basic.lean#L25) | [**verified**](SampLib/Samplers/SampleInOrder.lean) |
+| `Occil.reservoir` | $\mathrm{Unif}\{I\subseteq[n]:\lvert I\rvert=k\}\ \text{(unordered)}$ | Reservoir Algorithm R slot replacement | [Basic.lean](code/Samplers/Combinatorial/Basic.lean#L65) | [**verified**](SampLib/Samplers/Reservoir.lean) |
+| `Occil.sampleInOrder` | $\mathrm{Unif}\{I\subseteq[n]:\lvert I\rvert=k\}$ | Sequential subset inclusion decisions | [Basic.lean](code/Samplers/Combinatorial/Basic.lean#L25) | [**verified**](SampLib/Samplers/SampleInOrder.lean) |
 | `Occil.sampleWithReplacement` | $\left(\frac1n\sum_i\delta_{x_i}\right)^{\otimes k}$ | Repeat independent uniform position draws | [Basic.lean](code/Samplers/Combinatorial/Basic.lean#L14) | [**verified**](SampLib/Samplers/SampleWithReplacement.lean) |
 | `Occil.sampleWithoutReplacement` | $\mathrm{Unif}(\text{ordered distinct positions})$ | Draw and remove a uniform position | [Basic.lean](code/Samplers/Combinatorial/Basic.lean#L17) | [**verified**](SampLib/Samplers/SampleWithoutReplacement.lean) |
 | `Occil.shuffle` | $\mathrm{Unif}(S_n)$ | Fisher–Yates in-place swaps | [Basic.lean](code/Samplers/Combinatorial/Basic.lean#L47) | [**verified**](SampLib/Samplers/Shuffle.lean) |
@@ -353,7 +353,7 @@ Unverified formulas describe intended laws, not established correctness. Removab
 | `Occil.General.metropolisHastings` | $K_{\mathrm{MH}}^n(x,\cdot)$ | Proposal followed by Hastings acceptance | [Core.lean](code/Samplers/General/Core.lean#L258) | [**verified**](SampLib/Samplers/CountableMetropolisHastings.lean) |
 | `Occil.General.pdfRejection` | $\Pr(X=x)\propto h(x),\ x\in\{\ell,\ldots,u-1\}$ | Uniform grid proposal and height test | [Core.lean](code/Samplers/General/Core.lean#L85) | [**verified**](SampLib/Samplers/PdfRejection.lean) |
 | `Occil.General.perfectFiniteChain` | $\pi,\quad\pi K=\pi$ | Shared random-map CFTP construction | [Core.lean](code/Samplers/General/Core.lean#L250) | [**verified**](SampLib/Samplers/PerfectFiniteChain.lean) |
-| `Occil.General.permutationTest` | $\frac{1+\#\{i:T(\Pi_i x)\ge T(x)\}}{B+1}$ | A Monte Carlo permutation-test p-value as an exact (numerator,denominator) pair | [Core.lean](code/Samplers/General/Core.lean#L344) | [**verified**](SampLib/Samplers/PermutationTest.lean) |
+| `Occil.General.permutationTest` | $\frac{1+\lvert\{i:T(\Pi_i x)\ge T(x)\}\rvert}{B+1}$ | A Monte Carlo permutation-test p-value as an exact (numerator,denominator) pair | [Core.lean](code/Samplers/General/Core.lean#L344) | [**verified**](SampLib/Samplers/PermutationTest.lean) |
 | `Occil.General.piecewiseConstant` | $\Pr(X=x)\propto h_i,\ a_i\le x<a_{i+1}$ | Choose bin by area, then uniform | [Core.lean](code/Samplers/General/Core.lean#L102) | [**verified**](SampLib/Samplers/PiecewiseConstant.lean) |
 | `Occil.General.piecewiseLinear` | $\Pr(X=x)\propto h_i+\frac{x-a_i}{a_{i+1}-a_i}(h_{i+1}-h_i)$ | Select bin, then reject by height | [Core.lean](code/Samplers/General/Core.lean#L123) | [**verified**](SampLib/Samplers/PiecewiseLinear.lean) |
 | `Occil.General.randomDateTime` | $\mathrm{Unif}\{\ell,\ldots,h\}$ | Uniform integral timestamp in an inclusive application-specified epoch range | [Core.lean](code/Samplers/General/Core.lean#L42) | [**verified**](SampLib/Samplers/RandomDateTime.lean) |
@@ -445,8 +445,8 @@ Unverified formulas describe intended laws, not established correctness. Removab
 
 | Sampler | Law | Method | Code | Proof |
 | --- | --- | --- | --- | --- |
-| `Occil.Weighted.inclusionSplitting` | $\#S=k,\quad\Pr(i\in S)=kw_i/\sum_jw_j\ \text{(marginals)}$ | Deville–Tillé splitting with prescribed inclusion marginals | [Reservoir.lean](code/Samplers/Weighted/Reservoir.lean#L44) | — |
-| `Occil.Weighted.inclusionSystematic` | $\#S=k,\quad\Pr(i\in S)=kw_i/\sum_jw_j\ \text{(marginals)}$ | Shifted lattice with prescribed inclusion marginals | [Reservoir.lean](code/Samplers/Weighted/Reservoir.lean#L86) | — |
+| `Occil.Weighted.inclusionSplitting` | $\lvert S\rvert=k,\quad\Pr(i\in S)=kw_i/\sum_jw_j\ \text{(marginals)}$ | Deville–Tillé splitting with prescribed inclusion marginals | [Reservoir.lean](code/Samplers/Weighted/Reservoir.lean#L44) | — |
+| `Occil.Weighted.inclusionSystematic` | $\lvert S\rvert=k,\quad\Pr(i\in S)=kw_i/\sum_jw_j\ \text{(marginals)}$ | Shifted lattice with prescribed inclusion marginals | [Reservoir.lean](code/Samplers/Weighted/Reservoir.lean#L86) | — |
 | `Occil.Weighted.weightedReservoirOne` | $\mathrm{Cat}(w)$ | Running-weight replacement decisions | [Reservoir.lean](code/Samplers/Weighted/Reservoir.lean#L17) | [**verified**](SampLib/Samplers/WeightedReservoirOne.lean) |
 ## Integer and weighted sampling / Sequential
 
