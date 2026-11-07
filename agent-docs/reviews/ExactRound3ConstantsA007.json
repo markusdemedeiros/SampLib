@@ -1,0 +1,74 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "af2156f750b0a47b7c4c76bb5eda3bf0fa00d1f3b5bef98af9a64eddfc055ddd"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactFactoriesBatch015Callers.lean",
+  "caller_sha256": "bd21549be54dfe3b12fc62522f930926973d9c199f5dc44fe9e6e1d42f9d8a6b",
+  "support": [],
+  "accepted": [
+    {
+      "sampler": "Occil.Constants.continuedLogarithm",
+      "public_spec": "SampLib.ContinuedLogarithm.continuedLogarithm_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "Arbitrary nonnegative integer exponent streams, finite final flags or infinite streams, any natural start, with a deterministic coefficient callback specified only at reachable positions. No bounded-exponent, uniform contraction or finite expected-time assumption.",
+      "proof_module": "SampLib.Constants.ContinuedLogarithm",
+      "sha256": "8a0a0a10107fa253d1170594343da4c4932f311c540676019061f5e0b0424f80",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Bernoulli/Laws/VonNeumann.lean": "e360fcbfd61a212fd5802546d5f0cf9240ee4a99e56df8c2849157a591890797",
+        "SampLib/Bernoulli/VonNeumann.lean": "20c5d951426b2c5a01de19eefba7d1e8a9010484c0ea80ceb11adf47ad765aab",
+        "SampLib/Constants/ContinuedLogarithm.lean": "8a0a0a10107fa253d1170594343da4c4932f311c540676019061f5e0b0424f80",
+        "SampLib/Constants/Laws/CriticalBranching.lean": "42d7ee1eb7f3d1f7cb9a2c8fa56117264668d851464276fa99b386cb0480a2f0",
+        "SampLib/Constants/Laws/CriticalCoin.lean": "edf32d77300eb3742d484bc6a429807b7dd7745ace9bffbdb795600e0d9fa805",
+        "SampLib/Constants/Laws/CriticalCoinKernel.lean": "c0c16ce98c38569ae9eb1bab60b8db36e1034f9b7536c4339cdf797d2ddd2f8a",
+        "SampLib/Constants/Laws/RealContinuedFraction.lean": "fcf9d1af281056cbe2a676266851761b07ec512357e0b9b3abe265ad21fb6a84",
+        "SampLib/Constants/Support/CriticalCoinRecursion.lean": "2e0edb5e5029b50e37f4475007069ef6b093a79d40bab60cfe27845b968c3880",
+        "SampLib/Core/Laws/Retry.lean": "a8a20f8760987a377493a0f561c185bd1e8e11a7e251f72e6f8a7d839d3e1416",
+        "SampLib/Core/Retry.lean": "b83c7961a28283b6c851671eaaa7f2a014de52107ad449c2dfe99c8c179d2041",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/Uniform/FairCoin.lean": "30da46b90898325cb41ca2977c15b932b412b32f6d5dc00ba063300a7d070781",
+        "SampLib/Uniform/Laws/FairCoin.lean": "65b3fcd3ad34497bec612b7c75e2229d66624b5005407944f7f1ec7604246a70",
+        "SampLib/Uniform/Laws/RationalCoin.lean": "4b334a518f47d959cd21cdb37324d0681d184642642c71f8fc0c028caf870e3b",
+        "SampLib/Uniform/Laws/RealCoin.lean": "80f801fd59de11cf5c7fe4512ba74fde4f55c14d15cc7177d28956a0fa0e590e",
+        "SampLib/Uniform/RationalCoin.lean": "30955f5b4a08f319faa777ebc284b0b2c0b37ca736abcc238e2f9d61bc581937",
+        "SampLib/Uniform/RealCoin.lean": "fe06f7612f50b7b17e67d94d9b112d8c8733a387c17b3961ab10711d95481253",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ]
+}

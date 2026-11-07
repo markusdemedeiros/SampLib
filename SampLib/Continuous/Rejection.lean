@@ -1,4 +1,5 @@
 import SampLib.Templates
+import SampLib.Core.Retry
 import Samplers.Continuous.Rejection
 import Metrology.Iris.LocalBI
 import SampLib.Continuous.Laws.Rejection
@@ -40,15 +41,10 @@ theorem twp_rejection (E : CoPset) (μ : MeasureTheory.Measure α)
     ⊢ ↯ (credit μ s hmass F) -∗
       tglWp E pl(&Occil.rejection &proposal.fst &accept.fst #())
         (fun v : Val rT => iprop(∃ x : α, ⌜v = encode x⌝ ∗ ↯ (F x))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (one_lt_terminationFactor μ s hmass) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (one_lt_terminationFactor μ s hmass)
+  iintro !> %ε %hε IH Hcredit
   twp_pures
   twp_bind pl(&proposal.fst #())
-  icombine Hcredit Hterm as Hcredit
   ihave Hcredit := ErrorCredit.weaken (expectation_preservation μ s hs hmass F ε) $$ Hcredit
   iapply (hproposal.wp (kernel μ s hmass F ε) (measurable_kernel μ s hs hmass F hF ε) _)
     $$ Hcredit
@@ -71,10 +67,9 @@ theorem twp_rejection (E : CoPset) (μ : MeasureTheory.Measure α)
   · simp only [hx, decide_false]
     twp_pure
     isimp only [kernel, ite_eq_right hx] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     twp_bind pl(&Occil.rejection &proposal.fst &accept.fst #())
     iapply (tglWp_mono fun _ => tglWp_value)
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
 
 /-- Typed conditional output law. -/
 theorem rejection_distSpec (E : CoPset) (μ : MeasureTheory.Measure α)

@@ -1,4 +1,4 @@
-import SampLib.PSRN.Support.PSRNGammaMixtureCore
+import SampLib.PSRN.Support.Gamma.MixtureCore
 import SampLib.PSRN.PSRNGammaInteger
 
 /-! # The original mixture of two positive integer gamma oracles -/

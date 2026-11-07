@@ -8,8 +8,8 @@ For how the directories fit together, see the [library layout](../README.md#layo
 
 The directory holds these modules:
 
-- Top level: 17 modules
-- [`Laws/`](Laws): 3 modules with target laws, kernels, and expectation lemmas
+- Top level: 18 modules
+- [`Laws/`](Laws): 4 modules with target laws, kernels, and expectation lemmas
 - [`Syntax/`](Syntax): 5 modules with unfolding lemmas for the `pl%` source terms
 
 ---

@@ -1,3 +1,4 @@
+import SampLib.Constants.FromBounds
 import SampLib.Constants.Laws.EulerPi
 import SampLib.Bernoulli.EulerBounds
 import SampLib.Bernoulli.Support.PiBounds

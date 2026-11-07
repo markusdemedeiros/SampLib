@@ -1,5 +1,6 @@
 import SampLib.Bernoulli.Laws.FractionalPower
 import SampLib.Common.Syntax.FractionalPower
+import SampLib.Common.AbsorbingChain
 
 /-! # Mendo's fractional-power Bernoulli factory
 

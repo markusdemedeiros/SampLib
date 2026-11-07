@@ -42,7 +42,8 @@ private theorem threshold {u t : ℝ} (hu : u ∈ Ico 0 1) (ht : 0 ≤ t) :
 /-- The odds distribution function, including its zero endpoint. -/
 theorem law_Iic (t : ℝ) : law (Iic t) = ENNReal.ofReal (if 0 ≤ t then t / (1 + t) else 0) := by
   rw [law, Measure.map_apply measurable_transform measurableSet_Iic,
-    DyadicPosterior.unitLaw, Measure.restrict_apply (measurableSet_Iic.preimage measurable_transform)]
+    DyadicPosterior.unitLaw,
+    Measure.restrict_apply (measurableSet_Iic.preimage measurable_transform)]
   by_cases ht : 0 ≤ t
   · rw [ite_eq_left ht]
     have hden : 0 < 1 + t := by linarith

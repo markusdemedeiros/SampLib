@@ -1,3 +1,4 @@
+import SampLib.Discrete.WeightedChoice
 import SampLib.General.Laws.PiecewiseLinear
 import SampLib.General.Support.LinearBinSampling
 import SampLib.Core.GeneralSyntax

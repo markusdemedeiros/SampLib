@@ -1,5 +1,6 @@
 import SampLib.Discrete.Laws.Multinomial
 import SampLib.Discrete.Binomial
+import SampLib.Uniform.RationalCoin
 import SampLib.Common.WeightedValidation
 import SampLib.Core.SupportedSpec
 import SampLib.Core.Syntax.ClosedExp

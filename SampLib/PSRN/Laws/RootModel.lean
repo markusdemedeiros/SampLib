@@ -1,5 +1,10 @@
-import SampLib.Latent.Laws.MeasuredError
-import SampLib.PSRN.Laws.IntervalRoots
+module
+
+public import Mathlib.MeasureTheory.Function.SpecialFunctions.Basic
+public import SampLib.Latent.Laws.MeasuredError
+public import SampLib.PSRN.Laws.IntervalRoots
+
+@[expose] public section
 
 /-! # The shared latent world of a nonnegative deferred root
 

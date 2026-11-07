@@ -17,8 +17,8 @@ Each of these samplers has an accepted proof in this directory:
 
 The directory holds these modules:
 
-- Top level: 9 modules
-- [`Laws/`](Laws): 32 modules with target laws, kernels, and expectation lemmas
+- Top level: 8 modules
+- [`Laws/`](Laws): 33 modules with target laws, kernels, and expectation lemmas
 - [`Syntax/`](Syntax): 3 modules with unfolding lemmas for the `pl%` source terms
 
 ---

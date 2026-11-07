@@ -80,6 +80,7 @@ private theorem twp_loop (E : CoPset) (input : α → Val rT) (xs : List α)
     simp only [Exp.open', Exp.openRec, Shuffle.shuffle_openRec,
       ProbLang.openRec_val_fst]
     iterate 4 twp_pure
+    simp only [Shuffle.shuffle_openRec]
     twp_bind pl(&Occil.shuffle &(listVal input xs).fst)
     isimp only [← expectation xs S n z F] at Hcredit
     iapply (Shuffle.shuffle_distSpec E input xs).wp

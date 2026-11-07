@@ -1,4 +1,4 @@
-import SampLib.Bernoulli.Laws.AlternatingSeries
+import SampLib.Bernoulli.Laws.AlternatingSeriesMean
 import SampLib.Bernoulli.Laws.ShiftedExponential
 import SampLib.Bernoulli.Laws.ReciprocalAffine
 import SampLib.Bernoulli.Laws.CoinConditional

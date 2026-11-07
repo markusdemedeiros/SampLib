@@ -1,3 +1,4 @@
+import SampLib.Uniform.UniformInt
 import SampLib.Common.Laws.BitRecycler
 import Samplers.Weighted.Uniform
 import Metrology.Iris.LocalBI

@@ -1,4 +1,5 @@
 import SampLib.Weighted.Laws.EnvelopeRejection
+import SampLib.Core.Retry
 import SampLib.Discrete.WeightedChoice
 import SampLib.Uniform.RationalCoin
 import Samplers.Weighted.Sequential
@@ -102,12 +103,8 @@ private theorem twp_loop (E : CoPset) (ws : List ℕ) (m : ℕ)
         (fun v : Val rT => iprop(∃ i : ℕ, ⌜v = Val.int (i : ℤ)⌝ ∗ ↯ (F i))) := by
   have hn := List.length_pos_of_sum_ne_zero ws hs.ne'
   have hlooplc := loop_lc (rT := rT) ws m
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (EnvelopeRejection.one_lt_factor ws m hn hm) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (EnvelopeRejection.one_lt_factor ws m hn hm)
+  iintro !> %ε %hε IH Hcredit
   twp_pure
   simp only [list_close]
   twp_pure
@@ -121,8 +118,7 @@ private theorem twp_loop (E : CoPset) (ws : List ℕ) (m : ℕ)
   iintro %v %hv
   subst v
   twp_bind pl(&Occil.uniformInt #int (ws.length : ℤ))
-  icombine Hcredit Hterm as Htotal
-  ihave Hsample := ErrorCredit.weaken (expectation ws m hs hm hbound F ε) $$ Htotal
+  ihave Hsample := ErrorCredit.weaken (expectation ws m hs hm hbound F ε) $$ Hcredit
   iapply tglWp_wand
   isplitl [Hsample]
   · iapply (UniformInt.twp_uniformInt E ws.length hn (proposalCredit ws m F ε)) $$ Hsample
@@ -150,9 +146,8 @@ private theorem twp_loop (E : CoPset) (ws : List ℕ) (m : ℕ)
   cases b
   · twp_pure
     isimp only [coinCredit, Bool.false_eq_true, ite_false] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     isimp [loop, Exp.close, Exp.closeRec] at IH
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
   · twp_pures
     twp_value
     imodintro

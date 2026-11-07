@@ -54,9 +54,9 @@ Each of these samplers has an accepted proof in this directory:
 The directory holds these modules:
 
 - Top level: 35 modules
-- [`Laws/`](Laws): 60 modules with target laws, kernels, and expectation lemmas
-- [`Syntax/`](Syntax): 14 modules with unfolding lemmas for the `pl%` source terms
-- [`Support/`](Support): 38 modules with CTE loop invariants and other program-level helpers
+- [`Laws/`](Laws): 80 modules with target laws, kernels, and expectation lemmas
+- [`Syntax/`](Syntax): 15 modules with unfolding lemmas for the `pl%` source terms
+- [`Support/`](Support): 42 modules with CTE loop invariants and other program-level helpers
 
 ---
 

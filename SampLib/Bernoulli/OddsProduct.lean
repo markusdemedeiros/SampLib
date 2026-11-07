@@ -1,4 +1,6 @@
+import SampLib.Core.Retry
 import SampLib.Bernoulli.Laws.BernoulliRetry
+import SampLib.Uniform.RealCoin
 import Samplers.Bernoulli.Rational
 import Metrology.Iris.LocalBI
 
@@ -79,16 +81,11 @@ theorem twp_oddsProduct (E : CoPset) (p μ : unitInterval)
     ⊢ ↯ (RealCoin.credit (bias p μ) F) -∗
       tglWp E pl(&Occil.FactoryExtra.oddsProduct &coin.fst &selector.fst #())
         (fun v : Val rT => iprop(∃ b : Bool, ⌜v = Val.bool b⌝ ∗ ↯ (F b))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε
-    (BernoulliRetry.one_lt_factor (retry p μ) (retry_lt_one p μ h)) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value
+    (BernoulliRetry.one_lt_factor (retry p μ) (retry_lt_one p μ h))
+  iintro !> %ε %hε IH Hcredit
   twp_pures
   twp_bind pl(&selector.fst #())
-  icombine Hcredit Hterm as Hcredit
   ihave Hcredit := ErrorCredit.weaken (expectation p μ h F ε) $$ Hcredit
   iapply (hselector.wp (selectorCredit p μ F ε) (measurable_of_countable _) _) $$ Hcredit
   iintro %b Hcredit
@@ -108,10 +105,9 @@ theorem twp_oddsProduct (E : CoPset) (p μ : unitInterval)
     cases b
     · twp_pure
       isimp only [coinCredit, Bool.false_eq_true, ite_false] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
       twp_bind pl(&Occil.FactoryExtra.oddsProduct &coin.fst &selector.fst #())
       iapply (tglWp_mono fun _ => tglWp_value)
-      iapply IH $$ Hterm Hcredit
+      iapply IH $$ Hcredit
     · twp_pures
       twp_value
       imodintro

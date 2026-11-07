@@ -1,0 +1,79 @@
+{
+  "reviewer": "/root/review_exact_b",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "af2156f750b0a47b7c4c76bb5eda3bf0fa00d1f3b5bef98af9a64eddfc055ddd"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactStructuredBatch008Callers.lean",
+  "caller_sha256": "558b545d483be28c0be3ae76830b7e92e98981b8ea0c943588676f2b0106a4e1",
+  "support": [],
+  "accepted": [
+    {
+      "sampler": "Occil.Weighted.knuthYao",
+      "public_spec": "SampLib.KnuthYao.knuthYao_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "Every finite natural-weight list with positive total, including zero weights, certain rows, dyadic and non-dyadic probabilities. The full canonical weighted-choice law uses original position labels. All measurable ENNReal output credit, including infinity, is allowed.",
+      "proof_module": "SampLib.Weighted.KnuthYao",
+      "sha256": "540f52556747fad2799f9807b267a470ee62eeed206276dd07847c20320e85e1",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Common/AbsorbingChain.lean": "76c30a7dc59f199b4c0a4c3d0d17abbe1fc622cf38bd200044454d6889b70e38",
+        "SampLib/Common/Laws/AbsorbingChain.lean": "d55e37d993e9ea78a6a8b1d926d02138484e304baef228716a7dd08d7fbf957f",
+        "SampLib/Common/WeightedValidation.lean": "0de7598b0cb534ba29af9a7dc17d2adcedc93187dd9e59b01c8453605e6b4d10",
+        "SampLib/Core/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/Core/Syntax/ClosedExp.lean": "0779879220a63feed000a472b6d85ee60eec3bbd7e77f7b50b5d2b0a82004d30",
+        "SampLib/Core/Syntax/ListValues.lean": "6f87b1082be3db81ff283d700cd090bdf97164bfc51af8cad43e19c209a7a47c",
+        "SampLib/Discrete/Laws/WeightedChoice.lean": "7c8ac8cc65a02313b0dcdb391dbd73cb3c8e263f3489b7fcde7e48889fc9814b",
+        "SampLib/Discrete/WeightedChoice.lean": "8fab5daabcabb73557dcbcdf53bb9c855993bd11732b3ca202967725e525fcd4",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/Uniform/Laws/UniformInt.lean": "343e922428ce573be78507e2e2b79816a72802c85a23bee72088934dabefec20",
+        "SampLib/Uniform/UniformInt.lean": "2e98026bfad60f17f2aed50857a1fb5d46b583894d25a29e66d563bd4502b63e",
+        "SampLib/Weighted/KnuthYao.lean": "540f52556747fad2799f9807b267a470ee62eeed206276dd07847c20320e85e1",
+        "SampLib/Weighted/Laws/DdgCredits.lean": "328adf473b531dabfcb090ce50cd40a79726be287f3552a9d11316015d5af600",
+        "SampLib/Weighted/Laws/KnuthYaoColumns.lean": "61cd770bb85ae19ff8c0d620efce1d9ef23db8a0dee895865438c30674353954",
+        "SampLib/Weighted/Laws/KnuthYaoCredits.lean": "c3b63ed6210730c15b125c91749f2860294fde5756be8ff1b4784af344b0bc56",
+        "SampLib/Weighted/Laws/WeightedSums.lean": "be69ce1f9efdcac7bb6013a80c2e170ce607a301f9927f6cfe64aff019c208c0",
+        "SampLib/Weighted/Support/Ddg.lean": "b25104935b8a4eea7b7981d9bfa47bb02b7f5e9cd6bd09a42c5ce68ac76c1d86",
+        "SampLib/Weighted/Support/DdgScan.lean": "369400b715aa9b20460360f63a329f403225c1516bf3df19210885c81df46622",
+        "SampLib/Weighted/Support/KnuthYaoCertain.lean": "1a3bb5f522d38e3414950bbe89b70e336b37c7c0de79c1f3036f955bc0448048",
+        "SampLib/Weighted/Support/KnuthYaoLoop.lean": "2ce65d468e19b25615d186be1805656763fd9da9da64a4592f21afe9704deccc",
+        "SampLib/Weighted/Syntax/KnuthYao.lean": "506e851036424959a372830d58cdcfd2c02f8aaa6ff764363f5117f5eb3a79e9",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb",
+        "code/Samplers/Weighted/Trees.lean": "2810813307430cc3ed2b332847eb0cdbbdeca8fa2cf57d679f7ffdf35f9f87f4"
+      }
+    }
+  ]
+}

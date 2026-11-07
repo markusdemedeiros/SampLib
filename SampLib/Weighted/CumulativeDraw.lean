@@ -1,4 +1,6 @@
 import SampLib.Weighted.Laws.CumulativeDraw
+import SampLib.Core.ListEncoding
+import SampLib.Uniform.UniformInt
 import SampLib.Core.GeneralSyntax
 import Samplers.Weighted.Tables
 

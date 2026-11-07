@@ -2,6 +2,7 @@ module
 
 public import SampLib.Combinatorial.Laws.CompositionCuts
 public import SampLib.Combinatorial.Laws.SampleInOrder
+public import Mathlib.Probability.Distributions.Uniform
 
 @[expose] public section
 
@@ -20,7 +21,7 @@ noncomputable section
 
 local instance : MeasurableSpace (List ℤ) := ⊤
 
-private theorem cut_count_le (n total : ℕ) (h : n ≤ total) :
+theorem cut_count_le (n total : ℕ) (h : n ≤ total) :
     n - 1 ≤ (IntegerRange.interval 1 (total - 1)).length := by
   rw [interval_length]
   omega

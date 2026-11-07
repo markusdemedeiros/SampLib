@@ -1,4 +1,5 @@
 import SampLib.Uniform.UniformInt
+import SampLib.Core.ListEncoding
 import Samplers.General.Points
 import SampLib.General.Laws.UniformBoxPoint
 

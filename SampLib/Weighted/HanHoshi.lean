@@ -1,4 +1,5 @@
 import SampLib.Weighted.Support.HanHoshi
+import SampLib.Latent.LatentDigitPrefix
 
 /-! # Exact categorical sampling by Han–Hoshi interval refinement -/
 

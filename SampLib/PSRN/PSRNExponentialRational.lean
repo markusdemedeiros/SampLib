@@ -1,6 +1,6 @@
 import SampLib.PSRN.Support.PSRNExponential
-import SampLib.PSRN.Support.PSRNExponentialCallbacks
-import SampLib.PSRN.Support.PSRNExponentialWrapperSource
+import SampLib.PSRN.Support.Exponential.Callbacks
+import SampLib.PSRN.Support.Exponential.WrapperSource
 
 /-! # Rational-rate exponential PSRNs -/
 

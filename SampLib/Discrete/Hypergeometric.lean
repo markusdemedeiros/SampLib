@@ -1,5 +1,5 @@
 import SampLib.Discrete.Laws.Hypergeometric
-import SampLib.Common.Laws.Urn
+import SampLib.Uniform.RationalCoin
 import SampLib.Combinatorial.SampleWithoutReplacement
 import Metrology.Iris.LocalBI
 

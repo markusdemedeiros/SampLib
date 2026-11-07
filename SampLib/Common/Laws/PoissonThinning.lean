@@ -1,7 +1,7 @@
 module
 
-public import SampLib.Common.Laws.PoissonMeasure
-public import SampLib.Common.Laws.BinomialMeasure
+public import Mathlib.Probability.Distributions.Poisson.Basic
+public import Mathlib.Probability.Distributions.Binomial
 
 @[expose] public section
 

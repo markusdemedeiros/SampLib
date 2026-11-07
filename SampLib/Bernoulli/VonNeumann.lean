@@ -1,3 +1,4 @@
+import SampLib.Core.Retry
 import SampLib.Bernoulli.Laws.VonNeumann
 import SampLib.Uniform.RealCoin
 import Samplers.Bernoulli.Basic
@@ -39,15 +40,10 @@ theorem twp_vonNeumann (E : CoPset) (p : unitInterval) (coin : Val rT)
     (F : Bool → ℝ≥0∞) :
     ⊢ ↯ (credit F) -∗ tglWp E pl(&Occil.vonNeumann &coin.fst #())
       (fun v : Val rT => iprop(∃ b : Bool, ⌜v = Val.bool b⌝ ∗ ↯ (F b))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (one_lt_terminationFactor p hp0 hp1) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (one_lt_terminationFactor p hp0 hp1)
+  iintro !> %ε %hε IH Hcredit
   twp_pures
   twp_bind pl(&coin.fst #())
-  icombine Hcredit Hterm as Hcredit
   isimp only [← lintegral_firstCredit p F ε] at Hcredit
   iapply (hcoin.wp (firstCredit p F ε) (measurable_of_countable _) _) $$ Hcredit
   iintro %a Hcredit
@@ -62,10 +58,9 @@ theorem twp_vonNeumann (E : CoPset) (p : unitInterval) (coin : Val rT)
   · rw [beq_iff_eq.mpr hab]
     twp_pure
     isimp only [pairCredit, ite_eq_left hab] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     twp_bind pl(&Occil.vonNeumann &coin.fst #())
     iapply (tglWp_mono fun _ => tglWp_value)
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
   · rw [beq_eq_false_iff_ne.mpr hab]
     twp_pures
     twp_value

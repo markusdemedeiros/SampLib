@@ -1,4 +1,5 @@
 import SampLib.Common.Laws.FiniteCDF
+import SampLib.Core.ListEncoding
 import SampLib.Core.GeneralSyntax
 import Samplers.General.Core
 

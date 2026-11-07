@@ -1,6 +1,6 @@
 module
 
-public import SampLib.Common.Laws.PoissonMeasure
+public import Mathlib.Probability.Distributions.Poisson.Basic
 public import Mathlib.Data.Nat.Choose.Sum
 public import Mathlib.Algebra.Group.Nat.Even
 public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Series

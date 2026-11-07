@@ -1,4 +1,5 @@
 import SampLib.Bernoulli.Laws.LogisticFactory
+import SampLib.Core.Retry
 import SampLib.Uniform.RationalCoin
 import Samplers.Bernoulli.Combinators
 import Metrology.Iris.LocalBI
@@ -43,19 +44,14 @@ theorem twp_logisticFactory (E : CoPset) (p r : unitInterval) (hr : 0 < (r : ℝ
     (F : Bool → ℝ≥0∞) :
     ⊢ ↯ (credit p r hr F) -∗ tglWp E pl(&Occil.logisticFactory &coin.fst #int x #int y #())
       (fun v : Val rT => iprop(∃ b : Bool, ⌜v = Val.bool b⌝ ∗ ↯ (F b))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (one_lt_terminationFactor r hr hr1) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (one_lt_terminationFactor r hr hr1)
+  iintro !> %ε %hε IH Hcredit
   twp_pures
   rw [positive_guard x y hx hy]
   twp_pure
   twp_pure
   simp only [RationalCoin.rationalCoin_openRec, RationalCoin.rationalCoin_closeRec]
   twp_bind pl(&Occil.rationalCoin #int y #int (x + y))
-  icombine Hcredit Hterm as Hcredit
   ihave Hcredit := ErrorCredit.weaken (expectation_preservation p r hr hr1 F ε) $$ Hcredit
   iapply (hselect.wp (selectorCredit p r hr F ε) (measurable_of_countable _) _) $$ Hcredit
   iintro %b Hcredit
@@ -68,10 +64,9 @@ theorem twp_logisticFactory (E : CoPset) (p r : unitInterval) (hr : 0 < (r : ℝ
     cases a
     · twp_pure
       isimp only [inputCredit, Bool.false_eq_true, ite_false] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
       twp_bind pl(&Occil.logisticFactory &coin.fst #int x #int y #())
       iapply (tglWp_mono fun _ => tglWp_value)
-      iapply IH $$ Hterm Hcredit
+      iapply IH $$ Hcredit
     · twp_pures
       twp_value
       imodintro

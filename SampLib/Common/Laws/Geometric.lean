@@ -4,6 +4,8 @@ public import Mathlib.Probability.Distributions.Geometric
 
 @[expose] public section
 
+/-! # One-step expansion of the geometric expectation -/
+
 open MeasureTheory
 open ENNReal (ofReal ofReal_mul ofReal_pow)
 open scoped ENNReal

@@ -4,11 +4,18 @@
 from __future__ import annotations
 
 import fcntl
+import os
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import time
+
+
+SLOTS = 3
+# Lake compiles one module per Lean worker thread; cap each job so the slots, not the
+# core count, bound memory.
+THREADS_PER_JOB = "2"
 
 
 def main() -> int:
@@ -19,12 +26,12 @@ def main() -> int:
         raise SystemExit("usage: lean_gate.py -- COMMAND [ARG ...]")
     directory = Path(tempfile.gettempdir()) / "samplib-lean-slots"
     directory.mkdir(exist_ok=True)
-    slots = [(directory / str(i)).open("a") for i in range(4)]
+    slots = [(directory / str(i)).open("a") for i in range(SLOTS)]
     admission = (directory / "admission").open("a")
     acquired = None
     try:
         # Serialize admission so new jobs cannot race every existing waiter for
-        # each freed slot. Running jobs retain the same three memory locks.
+        # each freed slot.
         fcntl.flock(admission, fcntl.LOCK_EX)
         while acquired is None:
             for slot in slots:
@@ -37,7 +44,9 @@ def main() -> int:
             if acquired is None:
                 time.sleep(0.25)
         fcntl.flock(admission, fcntl.LOCK_UN)
-        child = subprocess.Popen(command)
+        env = dict(os.environ)
+        env.setdefault("LEAN_NUM_THREADS", THREADS_PER_JOB)
+        child = subprocess.Popen(command, env=env)
         try:
             return child.wait()
         finally:

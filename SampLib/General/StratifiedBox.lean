@@ -1,4 +1,5 @@
 import SampLib.Core.DistributionMap
+import SampLib.Combinatorial.SampleWithReplacement
 import SampLib.Core.SamplerStep
 import SampLib.Core.ListOperations
 import SampLib.General.Syntax.Stratified
@@ -20,6 +21,12 @@ noncomputable section
 private def sampler {rT : Type _} [ProbLangℝ rT] (scale bins dimension cell : ℕ) : Val rT :=
   ⟨pl(fun u, &Occil.General.stratifiedCell #int (scale : ℤ) #int (bins : ℤ)
     #int (dimension : ℤ) #int (cell : ℤ)), .lam (by is_lc), by is_lc⟩
+
+private theorem sampler_fst {rT : Type _} [ProbLangℝ rT] (scale bins dimension cell : ℕ) :
+    (sampler (rT := rT) scale bins dimension cell).fst =
+      .lam pl(&Occil.General.stratifiedCell #int (scale : ℤ) #int (bins : ℤ)
+        #int (dimension : ℤ) #int (cell : ℤ)) := by
+  simp [sampler, Exp.close, Exp.closeRec]
 
 private def build {rT : Type _} [ProbLangℝ rT]
     (scale bins dimension perCell : ℕ) : Exp rT := pl%
@@ -57,6 +64,11 @@ variable {rT : Type _} [MeasurableSpace rT] [LawfulProbLangℝ rT]
 variable {hlc : HasLC} {GF : BundledGFunctors} [ErisGS rT hlc GF]
 local bi (IProp GF)
 
+attribute [local pl_step_simp] ListOperations.append_openRec ListOperations.append_closeRec
+  ListOperations.repeatSample_openRec ListOperations.repeatSample_closeRec
+  StratifiedCell.stratifiedCell_openRec StratifiedCell.stratifiedCell_closeRec
+  GeneralIntegerPower.integerPower_openRec GeneralIntegerPower.integerPower_closeRec
+
 private theorem sampler_spec (E : CoPset) (scale bins dimension cell : ℕ)
     (hb : 0 < bins) (h : bins ≤ scale) (hd : 0 < dimension) (hc : cell < bins ^ dimension) :
     IsDistSpec (GF := GF) E pl(&(sampler (rT := rT) scale bins dimension cell).fst #())
@@ -64,7 +76,6 @@ private theorem sampler_spec (E : CoPset) (scale bins dimension cell : ℕ)
   spec F hF := by
     iintro Hcredit
     twp_pure
-    simp only [StratifiedCell.stratifiedCell_openRec, StratifiedCell.stratifiedCell_closeRec]
     iapply (StratifiedCell.stratifiedCell_distSpec E scale bins dimension cell hb h hd hc).spec
       F hF $$ Hcredit
 
@@ -116,8 +127,6 @@ private theorem twp_build (E : CoPset) (scale bins dimension perCell : ℕ)
     rw [int_beq, beq_eq_false_iff_ne.mpr hnPow]
     twp_pure
     twp_pure
-    simp only [ListOperations.append_openRec, ListOperations.repeatSample_openRec,
-      StratifiedCell.stratifiedCell_openRec]
     rw [← Nat.cast_add_one]
     twp_bind pl(&(loopValue (rT := rT) scale bins dimension perCell).fst
       #int ((cell + 1 : ℕ) : ℤ))
@@ -130,6 +139,7 @@ private theorem twp_build (E : CoPset) (scale bins dimension perCell : ℕ)
         $$ Hcredit
     iintro %v ⟨%ys, %hv, Hcredit⟩
     subst v
+    rw [← sampler_fst]
     twp_bind pl(&Occil.repeatSample &(sampler (rT := rT) scale bins dimension cell).fst
       #int (perCell : ℤ))
     iapply ((chunk_spec E scale bins dimension perCell cell hb h hd hc).wp
@@ -162,8 +172,6 @@ theorem stratifiedBox_distSpec (E : CoPset) (scale bins dimension perCell : ℕ)
     simp only [Bool.or_false]
     rw [valid_test scale bins dimension hb h hd]
     twp_pure
-    simp only [GeneralIntegerPower.integerPower_closeRec,
-      GeneralIntegerPower.integerPower_openRec]
     twp_bind pl(&Occil.General.integerPower #int (bins : ℤ) #int (dimension : ℤ))
     iapply tglWp_wand
     isplitl []
@@ -172,9 +180,6 @@ theorem stratifiedBox_distSpec (E : CoPset) (scale bins dimension perCell : ℕ)
     subst v
     twp_pure
     twp_pure
-    simp only [ListOperations.append_openRec, ListOperations.append_closeRec,
-      ListOperations.repeatSample_openRec, ListOperations.repeatSample_closeRec,
-      StratifiedCell.stratifiedCell_openRec, StratifiedCell.stratifiedCell_closeRec]
     isimp only [law] at Hcredit
     iapply hbuild
     iexact Hcredit

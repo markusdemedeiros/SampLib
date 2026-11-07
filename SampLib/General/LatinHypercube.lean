@@ -1,4 +1,5 @@
 import SampLib.Core.SupportedSpec
+import SampLib.Combinatorial.SampleWithReplacement
 import SampLib.General.Syntax.LatinHypercube
 import SampLib.Core.Syntax.ListAccess
 import SampLib.Core.Syntax.ListValues

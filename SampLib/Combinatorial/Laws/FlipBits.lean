@@ -1,7 +1,7 @@
 module
 
 public import SampLib.Uniform.Laws.RealCoin
-public import Metrology.ProbLang.Measure
+public import Metrology.ProbLang.Discrete
 public import Mathlib.MeasureTheory.Measure.Prod
 
 @[expose] public section

@@ -1,4 +1,5 @@
 import SampLib.General.Laws.PiecewiseConstant
+import SampLib.General.Histogram
 import SampLib.Core.ProofMode.BindFrom
 import Samplers.General.Core
 

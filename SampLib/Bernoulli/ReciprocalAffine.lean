@@ -1,3 +1,4 @@
+import SampLib.Core.Retry
 import SampLib.Core.SamplerStep
 import SampLib.Bernoulli.Laws.ReciprocalAffine
 import SampLib.Uniform.UniformInt
@@ -62,14 +63,10 @@ theorem twp_reciprocalAffine (E : CoPset) (p : unitInterval) (a b x y : ℕ)
         (fun v : Val rT => iprop(∃ r : Bool, ⌜v = Val.bool r⌝ ∗ ↯ (F r))) := by
   have hc := Nat.mul_pos ha hy
   have ht := Nat.add_pos_left hc (b * y)
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε
+  iapply Retry.twp_loop solve_not_value
     (BernoulliRetry.one_lt_factor (retry p (a * y) (b * y) hc)
-      (retry_lt_one p (a * y) (b * y) hc)) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+      (retry_lt_one p (a * y) (b * y) hc))
+  iintro !> %ε %hε IH Hcredit
   rw [← source_fst (rT := rT)]
   iterate 7 (twp_step; simp [Exp.open', Exp.openRec, Exp.close, Exp.closeRec, Exp.ofVal,
     Var.internal.injEq, ProbLang.openRec_val_fst, UniformInt.uniformInt_openRec,
@@ -83,7 +80,6 @@ theorem twp_reciprocalAffine (E : CoPset) (p : unitInterval) (a b x y : ℕ)
   twp_pure
   simp only [← Int.natCast_mul, ← Int.natCast_add]
   twp_bind pl(&Occil.uniformInt #int ((a * y + b * y : ℕ) : ℤ))
-  icombine Hcredit Hterm as Hcredit
   ihave Hcredit := ErrorCredit.weaken (expectation p (a * y) (x * b) (b * y) hc hbound F ε)
     $$ Hcredit
   iapply tglWp_wand
@@ -125,11 +121,10 @@ theorem twp_reciprocalAffine (E : CoPset) (p : unitInterval) (a b x y : ℕ)
       cases r
       · twp_pure
         isimp only [coinCredit, Bool.false_eq_true, ite_false] at Hcredit
-        ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
         twp_bind pl(&(source (rT := rT)).fst &coin.fst
           #int (a : ℤ) #int (b : ℤ) #int (x : ℤ) #int (y : ℤ) #())
         iapply (tglWp_mono fun _ => tglWp_value)
-        iapply IH $$ Hterm Hcredit
+        iapply IH $$ Hcredit
       · twp_pures
         twp_value
         imodintro

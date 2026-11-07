@@ -1,7 +1,7 @@
 import SampLib.PSRN.Laws.UniformOdds
-import SampLib.PSRN.Support.LatentUniformRepresentation
-import SampLib.PSRN.Support.LatentRepresentedComplement
-import SampLib.PSRN.Support.LatentRepresentedDivision
+import SampLib.PSRN.Support.Represented.Uniform
+import SampLib.PSRN.Support.Represented.Complement
+import SampLib.PSRN.Support.Represented.Division
 import Samplers.PSRN.Uniform
 
 /-! # The odds of one shared deferred uniform

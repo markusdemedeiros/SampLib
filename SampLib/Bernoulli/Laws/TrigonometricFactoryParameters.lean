@@ -1,4 +1,4 @@
-import SampLib.Bernoulli.Laws.AlternatingSeries
+import SampLib.Bernoulli.Laws.AlternatingSeriesMean
 import SampLib.Bernoulli.Laws.TrigonometricFactorySeries
 
 /-! # Rational coefficient parameters for the trigonometric series engine -/

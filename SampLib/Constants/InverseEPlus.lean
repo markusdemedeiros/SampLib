@@ -1,3 +1,4 @@
+import SampLib.Constants.FromBounds
 import SampLib.Constants.InverseEPlusRational
 
 /-! # The integer-shifted reciprocal of Euler's number -/

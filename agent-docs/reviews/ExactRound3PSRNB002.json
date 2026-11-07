@@ -1,0 +1,75 @@
+{
+  "reviewer": "/root/review_exact_b",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "af2156f750b0a47b7c4c76bb5eda3bf0fa00d1f3b5bef98af9a64eddfc055ddd"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactLatentBatch002Callers.lean",
+  "caller_sha256": "1d8714d8de2f7073974a76082ee5f3607afa865ed4aceafa8b5da387b7105e78",
+  "support": [],
+  "accepted": [
+    {
+      "sampler": "Occil.PSRN.newRejection",
+      "public_spec": "SampLib.PSRNRejection.newRejection_latentDistSpec",
+      "spec_kind": "latent_real",
+      "classification": "core",
+      "reviewed_domain": "Any actual deferred proposal constructor with a normalized joint latent model, measurable positive-mass event and resource-preserving conditional event-test specification on that same latent world. The actual accepted oracle and its refined posterior/ownership are retained; arbitrary measurable joint ENNReal credits are supported.",
+      "proof_module": "SampLib.PSRN.PSRNRejection",
+      "sha256": "65d5dbefaaeb253b423032a6402f3f89815aa50ba0d525b5106a5a3248a974e2",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol",
+        "observation",
+        "aliases"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Continuous/Laws/Rejection.lean": "8bf270c0e3b792bb687af1894645d8bd01c7dfff212190ce284edd446a7996ce",
+        "SampLib/Continuous/Rejection.lean": "39df22b41e3f964c72f6aeb0a16ac109c747a89e52d57117133e10d163aca40c",
+        "SampLib/Core/Laws/Retry.lean": "a8a20f8760987a377493a0f561c185bd1e8e11a7e251f72e6f8a7d839d3e1416",
+        "SampLib/Core/Retry.lean": "b83c7961a28283b6c851671eaaa7f2a014de52107ad449c2dfe99c8c179d2041",
+        "SampLib/Latent/LatentPayloadSpec.lean": "783d66c7fed90d90aa73746d41639d03d820bbb581de0a0f7721e7e2c82d8f68",
+        "SampLib/Latent/LatentSpec.lean": "972e0719861de079271122b285db9158ce2ecba14659f4944a41694c3e5b2728",
+        "SampLib/Latent/Laws/Interval.lean": "cfd0309c47b43860ba937bfd374a76c67e0ee7f8b8e8108bbf4f0fc299281eac",
+        "SampLib/Latent/Laws/Model.lean": "cc7ea19ae87a3fcb1f80b7f232890cd00f999bedeae6361b4ca2f7a51ad3d189",
+        "SampLib/PSRN/PSRNRejection.lean": "65d5dbefaaeb253b423032a6402f3f89815aa50ba0d525b5106a5a3248a974e2",
+        "SampLib/PSRN/Support/Events/ConditionedOracle.lean": "34f87c8026d0a84ba6481989237470eea235e422ca173020a08719b700d8849d",
+        "SampLib/PSRN/Support/Events/Conditioning.lean": "96535841edd5abf71ae74fb750b3e981bedc32949c5cde05d9a51f4171a95527",
+        "SampLib/PSRN/Support/Events/EventSpec.lean": "e5732fe9aa378e133f95a5e963d6a17af5cb7b18308307b083fc579a4b617aae",
+        "SampLib/PSRN/Support/Events/RejectionKernel.lean": "e8e4bc564a3629340538de20400e4eb0ab898cee28628cb04f901afd66781224",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Continuous/Rejection.lean": "d89f971242d35ca1f0f4a4ec5b0a490db50db911c5176dc980a8dd61f469f7c5",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/PSRN/Core.lean": "2d1d66bf493fd5a4c23ae6a5d0bd86091559414f28fa3e2376051f42c48c016b",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ]
+}

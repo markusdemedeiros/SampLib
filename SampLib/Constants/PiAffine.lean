@@ -1,3 +1,4 @@
+import SampLib.Constants.FromBounds
 import SampLib.Bernoulli.Support.PiEncodings
 import SampLib.Bernoulli.Support.PiBounds
 import SampLib.Core.Syntax.ClosedExp

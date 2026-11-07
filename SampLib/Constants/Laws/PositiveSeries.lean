@@ -142,6 +142,54 @@ theorem enclosures_tight (a : Parameters) : FromBounds.Tight (enclosure a) := by
   obtain ⟨n, hn⟩ := a.tight ε hε
   exact ⟨n, by simpa only [enclosure_width] using hn⟩
 
+/-- The program's numerator update is the next accumulator numerator. -/
+theorem numerator_step (a : Parameters) (n : ℕ) :
+    ((accumulator a n).numerator : ℤ) * (a.coefficient n).denominator +
+        (a.coefficient n).numerator * ((accumulator a n).denominator : ℤ) =
+      ((accumulator a (n + 1)).numerator : ℤ) := by
+  simp [accumulator, Fraction.add, Nat.cast_add, Nat.cast_mul]
+
+/-- The program's denominator update is the next accumulator denominator. -/
+theorem denominator_step (a : Parameters) (n : ℕ) :
+    ((accumulator a n).denominator : ℤ) * (a.coefficient n).denominator =
+      ((accumulator a (n + 1)).denominator : ℤ) := by
+  simp [accumulator, Fraction.add, Nat.cast_mul]
+
+/-- The program's upper numerator is the enclosure's upper endpoint. -/
+theorem upper_numerator_step (a : Parameters) (n : ℕ) :
+    ((accumulator a (n + 1)).numerator : ℤ) * (a.coefficient n).errorDenominator +
+        (a.coefficient n).errorNumerator * ((accumulator a (n + 1)).denominator : ℤ) =
+      (enclosure a n).upper := by
+  simp [enclosure, Nat.cast_add, Nat.cast_mul]
+
+/-- The program's upper denominator is the enclosure's denominator. -/
+theorem upper_denominator_step (a : Parameters) (n : ℕ) :
+    ((accumulator a (n + 1)).denominator : ℤ) * (a.coefficient n).errorDenominator =
+      ((enclosure a n).denominator : ℤ) := by
+  simp [enclosure, Nat.cast_mul]
+
+theorem lower_denominator_pos (a : Parameters) (n : ℕ) :
+    (0 : ℤ) < (accumulator a (n + 1)).denominator := by
+  exact_mod_cast (accumulator a (n + 1)).positive
+
+theorem upper_denominator_pos (a : Parameters) (n : ℕ) :
+    (0 : ℤ) < (enclosure a n).denominator := by exact_mod_cast (enclosure a n).positive
+
+/-- Resolving the accumulator fraction resolves the left endpoint. -/
+theorem lower_resolves (a : Parameters) (n : ℕ) {q : List Bool} {b : Bool}
+    (h : DyadicPosterior.resolves q
+      ((((accumulator a (n + 1)).numerator : ℤ) : ℝ) /
+        (((accumulator a (n + 1)).denominator : ℤ) : ℝ)) b) :
+    DyadicPosterior.resolves q (enclosure a n).left b := by
+  simpa only [enclosure_left, Fraction.value, Int.cast_natCast] using h
+
+/-- Resolving the upper fraction resolves the right endpoint. -/
+theorem upper_resolves (a : Parameters) (n : ℕ) {q : List Bool} {b : Bool}
+    (h : DyadicPosterior.resolves q
+      (((enclosure a n).upper : ℝ) / (((enclosure a n).denominator : ℤ) : ℝ)) b) :
+    DyadicPosterior.resolves q (enclosure a n).right b := by
+  simpa only [FromBounds.Interval.right, Int.cast_natCast] using h
+
 end
 
 end SampLib.FromPositiveSeries

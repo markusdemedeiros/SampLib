@@ -1,4 +1,5 @@
 import SampLib.General.Laws.CouplingFromPast
+import SampLib.Combinatorial.SampleWithReplacement
 import SampLib.Core.ListEncoding
 import SampLib.Core.ListOperations
 import SampLib.Core.DistributionMap

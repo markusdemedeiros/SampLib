@@ -1,6 +1,7 @@
 import SampLib.Continuous.GaussianInteger
 import SampLib.Continuous.GaussianSelector
 import SampLib.Uniform.FairCoin
+import SampLib.Core.Retry
 
 /-! # Karney's exact standard Gaussian sampler
 
@@ -72,18 +73,13 @@ private theorem twp_loop (E : CoPset) (F : ℕ → ℝ → ℝ≥0∞)
     ⊢ ↯ (G2CreditV F) -∗ tglWp E pl(&loop #())
       (fun v : Val ℝ => iprop(∃ (k : ℕ) (x : ℝ),
         ⌜v = Val.real (x + k)⌝ ∗ ↯ (F k x))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε one_lt_G2Factor $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value one_lt_G2Factor
+  iintro !> %ε %hε IH Hcredit
   let c : ℝ≥0∞ := (G2Factor : ℝ≥0∞) * ε
   twp_pure
   twp_pure
   simp only [GaussianInteger.gaussianInteger_openRec, GaussianInteger.gaussianInteger_closeRec]
   twp_bind pl(&Occil.gaussianInteger #())
-  icombine Hcredit Hterm as Hcredit
   iapply tglWp_wand
   isplitl [Hcredit]
   · iapply (GaussianInteger.twp_gaussianInteger E (G2G1Credit F c))
@@ -116,11 +112,10 @@ private theorem twp_loop (E : CoPset) (F : ℕ → ℝ → ℝ≥0∞)
   obtain rfl : v = Val.bool b := Val.ext hv
   cases b
   · isimp only [G2IterContAmp, Bool.false_eq_true, ite_false] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     twp_pure
     twp_bind pl(&loop #())
     iapply (tglWp_mono fun _ => tglWp_value)
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
   · twp_pures
     twp_value
     imodintro

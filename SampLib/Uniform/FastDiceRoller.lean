@@ -1,3 +1,4 @@
+import SampLib.Uniform.UniformInt
 import SampLib.Common.Laws.BitRecycler
 
 /-! # Fast Dice Roller

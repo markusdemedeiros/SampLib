@@ -16,12 +16,6 @@ def observerBody {rT : Type} : Exp rT :=
 private theorem observerBody_lcb {rT : Type} : Exp.lcb 3 (observerBody : Exp rT) = true := by
   kernel_rfl
 
-/-- The constructor's guards, with the observer body left opaque. -/
-private theorem root_eq {rT : Type} : (Occil.PSRN.root : Exp rT) =
-    .lam (.lam (.cond pl({Exp.bvar 0} <= #0) .fail
-      (.cond pl({Exp.bvar 0} = #1) (.bvar 1) (.lam observerBody)))) := by
-  kernel_rfl
-
 /-- Open the two constructor parameters beneath the retained precision binder. -/
 def code {rT : Type} (source : Val rT) (degree : ℕ) : Exp rT :=
   .lam (Exp.openRec 1 (.lit (.int (degree : ℤ))) (Exp.openRec 2 source.fst observerBody))
@@ -51,14 +45,13 @@ variable {GF : BundledGFunctors} [ErisWpGS (rT := rT) GF]
 variable {S : Type}
 local bi (IProp GF)
 
-attribute [local irreducible] observerBody in
+set_option maxHeartbeats 600000 in
 /-- Constructing a nontrivial root only captures its source and degree. -/
 theorem twp_root (E : CoPset) (source : Val rT) (degree : ℕ) (hdegree : 2 ≤ degree)
     (P : S → IProp GF) (s : S) :
     iprop(P s) ⊢ tglWp E pl(&Occil.PSRN.root &source.fst #int (degree : ℤ))
       (fun v => ViewOwns (value source degree) P v s) := by
   iintro Hstate
-  rw [root_eq]
   twp_pures
   rw [decide_eq_false (show ¬(degree : ℤ) ≤ 0 by omega)]
   twp_pures

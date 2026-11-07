@@ -1,4 +1,5 @@
 import SampLib.Weighted.Laws.HanHoshi
+import SampLib.Latent.Laws.Uniform
 
 /-! # Posterior certificates and unresolved boundaries for Han–Hoshi -/
 

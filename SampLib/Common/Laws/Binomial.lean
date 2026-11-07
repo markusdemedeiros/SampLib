@@ -1,5 +1,15 @@
-import SampLib.Discrete.Laws.Binomial
-import SampLib.Common.Laws.BinomialMeasure
+module
+
+public import SampLib.Discrete.Laws.Binomial
+public import Mathlib.Probability.Distributions.Binomial
+
+@[expose] public section
+
+/-! # Binomial law as a convolution of Bernoulli trials
+
+The convolution law has the usual binomial point masses and agrees with mathlib's
+binomial distribution.
+-/
 
 open MeasureTheory
 open scoped ENNReal

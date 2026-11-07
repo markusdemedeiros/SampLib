@@ -1,5 +1,6 @@
 import SampLib.Discrete.Laws.Geometric
 import SampLib.Uniform.RealCoin
+import SampLib.Core.Retry
 import Samplers.Discrete
 import Metrology.Iris.LocalBI
 
@@ -35,25 +36,21 @@ theorem twp_geometric (E : CoPset) (p : unitInterval) (hp : 0 < (p : ℝ))
     ⊢ ↯ (credit p F) -∗ tglWp E pl(&Occil.geometric &coin.fst #())
       (fun v : Val rT => iprop(∃ n : ℕ, ⌜v = Val.int (n : ℤ)⌝ ∗ ↯ (F n))) := by
   iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
   irevert! %F
-  iapply ErrorCredit.Induction.simple hε (one_lt_terminationFactor p hp) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ %F Hcredit
+  iapply Retry.twp_loop_forall (fun _ => solve_not_value) (one_lt_terminationFactor p hp)
+  iintro !> %ε %hε %F IH Hcredit
   twp_pures
   twp_bind pl(&coin.fst #())
-  icombine Hcredit Hterm as Hcredit
   isimp only [← lintegral_coinCredit p hp F ε] at Hcredit
   iapply (hcoin.wp (coinCredit p F ε) (measurable_of_countable _) _) $$ Hcredit
   iintro %b Hcredit
   cases b
   · isimp only [coinCredit] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     twp_pure
     twp_bind pl(&Occil.geometric &coin.fst #())
     iapply tglWp_wand
-    isplitl [IH Hcredit Hterm]
-    · iapply IH $$ Hterm %(fun n => F (n + 1)) Hcredit
+    isplitl [IH Hcredit]
+    · iapply IH $$ %(fun n => F (n + 1)) Hcredit
     iintro %v ⟨%n, %hv, Hcredit⟩
     subst v
     twp_pures

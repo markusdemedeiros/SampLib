@@ -1,6 +1,9 @@
 import SampLib.Discrete.Laws.BinomialHalfRejection
 import SampLib.Discrete.Support.BinomialHalfBranchesSyntax
+import SampLib.Discrete.Geometric
+import SampLib.Discrete.UniformFin
 import SampLib.Uniform.RationalCoin
+import SampLib.Core.Retry
 
 /-! # Bringmann's half-binomial rejection loop
 
@@ -132,17 +135,12 @@ theorem twp_loop (E : CoPset) (n : ℕ) (hn : Even n) (F : ℕ → ℝ≥0∞) :
       (RealCoin.law VonNeumann.fairBias) Val.bool := FairCoin.fairCoin_distSpec E
   have hgeo := Geometric.geometric_distSpec E VonNeumann.fairBias
     (by norm_num [VonNeumann.fairBias]) coin hcoin
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε BinomialHalfProposal.one_lt_factor $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value BinomialHalfProposal.one_lt_factor
+  iintro !> %ε %hε IH Hcredit
   iterate 2 twp_pure
   twp_bind pl(&Occil.geometric &Occil.fairCoin #())
-  icombine Hcredit Hterm as Htotal
-  isimp [← proposal_expectation n hn F ε] at Htotal
-  iapply hgeo.wp (blockCredit n F ε) (measurable_of_countable _) _ $$ Htotal
+  isimp [← proposal_expectation n hn F ε] at Hcredit
+  iapply hgeo.wp (blockCredit n F ε) (measurable_of_countable _) _ $$ Hcredit
   iintro %block Hcredit
   isimp only [blockCredit] at Hcredit
   twp_pure
@@ -198,10 +196,9 @@ theorem twp_loop (E : CoPset) (n : ℕ) (hn : Even n) (F : ℕ → ℝ≥0∞) :
     cases accepted
     · twp_pure
       isimp only [coinCredit, Bool.false_eq_true, ↓reduceIte] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
       iapply loop_align E n
         (fun v : Val rT => iprop(∃ (k : ℕ), ⌜v = Val.int k⌝ ∗ ↯ (F k)))
-      iapply IH $$ Hterm Hcredit
+      iapply IH $$ Hcredit
     · twp_pure
       twp_value
       imodintro
@@ -213,10 +210,9 @@ theorem twp_loop (E : CoPset) (n : ℕ) (hn : Even n) (F : ℕ → ℝ≥0∞) :
   · rw [invalid_test n _ hvalid]
     twp_pure
     isimp only [signCredit, rejected_credit n F ε _ hvalid] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     iapply loop_align E n
       (fun v : Val rT => iprop(∃ (k : ℕ), ⌜v = Val.int k⌝ ∗ ↯ (F k)))
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
 
 end specification
 

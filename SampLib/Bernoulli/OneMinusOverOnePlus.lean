@@ -1,3 +1,4 @@
+import SampLib.Core.Retry
 import SampLib.Uniform.FairCoin
 import Samplers.Bernoulli.Elementary
 import Metrology.Iris.LocalBI
@@ -105,16 +106,11 @@ theorem twp_oneMinusOverOnePlus (E : CoPset) (p : unitInterval) (coin : Val rT)
     ⊢ ↯ (credit p F) -∗
       tglWp E pl(&Occil.FactoryExtra.oneMinusOverOnePlus &coin.fst #())
         (fun v : Val rT => iprop(∃ b : Bool, ⌜v = Val.bool b⌝ ∗ ↯ (F b))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple (k := terminationFactor) hε
-    (one_lt_two : (1 : ℝ≥0) < terminationFactor) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop (k := terminationFactor) solve_not_value
+    (one_lt_two : (1 : ℝ≥0) < terminationFactor)
+  iintro !> %ε %hε IH Hcredit
   twp_pures
   twp_bind pl(&coin.fst #())
-  icombine Hcredit Hterm as Hcredit
   isimp only [← expectation p F ε] at Hcredit
   iapply (hcoin.wp (inputCredit p F ε) (measurable_of_countable _) _) $$ Hcredit
   iintro %bit Hcredit
@@ -129,10 +125,9 @@ theorem twp_oneMinusOverOnePlus (E : CoPset) (p : unitInterval) (coin : Val rT)
     cases bit
     · twp_pure
       isimp only [pairCredit, Bool.false_eq_true, ite_false] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
       twp_bind pl(&Occil.FactoryExtra.oneMinusOverOnePlus &coin.fst #())
       iapply (tglWp_mono fun _ => tglWp_value)
-      iapply IH $$ Hterm Hcredit
+      iapply IH $$ Hcredit
     · twp_pures
       isimp only [pairCredit, Bool.false_eq_true, ite_false, ite_true] at Hcredit
       ihave ⟨Hcredit, _⟩ := ErrorCredit.split $$ Hcredit

@@ -1,5 +1,5 @@
-import SampLib.PSRN.Support.UniformVector
-import SampLib.PSRN.Support.LatentVectorRejection
+import SampLib.PSRN.Support.Uniform.Vector
+import SampLib.PSRN.Support.Events.VectorRejection
 import SampLib.Core.BetaStep
 import SampLib.Core.Syntax.ClosedExp
 

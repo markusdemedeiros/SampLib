@@ -1,4 +1,5 @@
 import SampLib.General.Laws.RandomMapSupport
+import SampLib.General.RandomMap
 import SampLib.General.CFTPDeterministic
 import SampLib.Core.DistributionMapSupported
 

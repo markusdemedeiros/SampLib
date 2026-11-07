@@ -1,5 +1,5 @@
 import SampLib.PSRN.Support.PSRNExponential
-import SampLib.PSRN.Support.PSRNExponentialCallbacks
+import SampLib.PSRN.Support.Exponential.Callbacks
 
 open ProbLang
 open scoped ENNReal

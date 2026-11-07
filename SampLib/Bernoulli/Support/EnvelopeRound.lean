@@ -1,5 +1,6 @@
 import SampLib.Bernoulli.Support.EnvelopeCallbacks
 import SampLib.Bernoulli.Support.EnvelopeState
+import SampLib.Bernoulli.Support.BinomialFinite
 import SampLib.Bernoulli.Syntax.EnvelopeFactory
 
 /-! # Symbolic execution of the degree, binomial and coefficient prefix of one envelope round -/

@@ -1,5 +1,6 @@
 import SampLib.Bernoulli.Laws.AlternatingPermutationKernel
 import SampLib.Core.Syntax.ClosedExp
+import SampLib.Templates
 
 /-! # Finite alternating comparisons
 

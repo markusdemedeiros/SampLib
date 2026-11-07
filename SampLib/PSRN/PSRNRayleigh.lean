@@ -1,7 +1,7 @@
 import SampLib.PSRN.PSRNExponentialRational
-import SampLib.PSRN.Support.LatentRoot
-import SampLib.PSRN.Support.LatentRootLaw
-import SampLib.PSRN.Support.LatentRealConstructors
+import SampLib.PSRN.Support.Root.Latent
+import SampLib.PSRN.Support.Root.Law
+import SampLib.PSRN.Support.Arithmetic.RealConstructors
 import Samplers.PSRN.Distributions
 
 /-! # Rayleigh sampling by an exponential draw and an exact square root -/

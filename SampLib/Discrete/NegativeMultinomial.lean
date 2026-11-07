@@ -1,3 +1,4 @@
+import SampLib.Discrete.WeightedChoice
 import SampLib.Discrete.Laws.NegativeMultinomial
 import SampLib.Common.Laws.WeightedSupport
 import SampLib.Discrete.Support.NatCounters

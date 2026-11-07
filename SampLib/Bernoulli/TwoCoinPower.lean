@@ -1,4 +1,5 @@
 import SampLib.Bernoulli.Laws.TwoCoinPower
+import SampLib.Common.AbsorbingChain
 import SampLib.Bernoulli.Syntax.TwoCoinPower
 
 /-! # The two-coin reciprocal-hazard power factory -/

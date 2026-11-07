@@ -1,4 +1,5 @@
 import SampLib.Weighted.Laws.OneillUniform
+import SampLib.Core.Retry
 import SampLib.Weighted.LemireUniform
 
 /-! # O'Neill's lazy-threshold multiply-high reduction
@@ -44,16 +45,11 @@ private theorem twp_draw (E : CoPset) (n bits : ℕ) (hn : 0 < n)
       tglWp E pl(&(accept n bits)
         (#int (n : ℤ) * &Occil.Weighted.randomBits #int (bits : ℤ)))
         (fun v : Val rT => iprop(∃ k : ℕ, ⌜v = Val.int (k : ℤ)⌝ ∗ ↯ (F k))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (by norm_num : 1 < (2 : ℝ≥0)) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (by norm_num : 1 < (2 : ℝ≥0))
+  iintro !> %ε %hε IH Hcredit
   twp_bind pl(&Occil.Weighted.randomBits #int (bits : ℤ))
-  icombine Hcredit Hterm as Htotal
   ihave Hkernel := ErrorCredit.weaken
-    (LemireUniform.expectation n (2 ^ bits) hn hnw F ε) $$ Htotal
+    (LemireUniform.expectation n (2 ^ bits) hn hnw F ε) $$ Hcredit
   iapply ((RandomBits.randomBits_distSpec E bits).wp
     (LemireUniform.kernel n (2 ^ bits) F ε) (measurable_of_countable _) _) $$ Hkernel
   iintro %k Hcredit
@@ -64,11 +60,10 @@ private theorem twp_draw (E : CoPset) (n bits : ℕ) (hn : 0 < n)
       ((2 ^ bits % n : ℕ) : ℤ)) = true by exact_mod_cast decide_eq_true hk]
     twp_pure
     isimp only [LemireUniform.kernel, ite_eq_left hk] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     isimp [accept, Exp.close, Exp.closeRec] at IH
     simp only [RandomBits.randomBits_openRec, RandomBits.randomBits_closeRec,
       Int.natCast_mod, Nat.cast_pow, Nat.cast_ofNat]
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
   · rw [show decide (((n * k % (2 ^ bits) : ℕ) : ℤ) <
       ((2 ^ bits % n : ℕ) : ℤ)) = false by exact decide_eq_false (by omega)]
     twp_pures

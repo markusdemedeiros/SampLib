@@ -1,4 +1,5 @@
 import SampLib.Weighted.Laws.RationalChoice
+import SampLib.Discrete.WeightedChoice
 import SampLib.Core.Syntax.ClosedExp
 import Samplers.Weighted.Tables
 

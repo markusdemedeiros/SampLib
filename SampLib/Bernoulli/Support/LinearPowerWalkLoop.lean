@@ -1,5 +1,6 @@
 import SampLib.Bernoulli.Laws.LinearPowerWalk
 import SampLib.Bernoulli.Syntax.LinearPowerWalk
+import SampLib.Bernoulli.LogisticFactory
 
 /-! # CTE verification of the adaptive power walk
 

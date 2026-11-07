@@ -1,3 +1,4 @@
+import SampLib.Core.Retry
 import SampLib.Bernoulli.Laws.OneDivOnePlus
 import SampLib.Uniform.FairCoin
 import Samplers.Bernoulli.Basic
@@ -33,20 +34,15 @@ theorem twp_oneDivOnePlus (E : CoPset) (p : unitInterval) (coin : Val rT)
     (F : Bool → ℝ≥0∞) :
     ⊢ ↯ (credit p F) -∗ tglWp E pl(&Occil.oneDivOnePlus &coin.fst #())
       (fun v : Val rT => iprop(∃ b : Bool, ⌜v = Val.bool b⌝ ∗ ↯ (F b))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple (k := 2) hε (by norm_num) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop (k := 2) solve_not_value (by norm_num)
+  iintro !> %ε %hε IH Hcredit
   isimp only [ENNReal.coe_ofNat] at IH
   twp_pure
   twp_pure
   twp_pure
   simp only [FairCoin.fairCoin_closeRec, FairCoin.fairCoin_openRec]
   twp_bind pl(&Occil.fairCoin #())
-  icombine Hcredit Hterm as Htotal
-  ihave Hsample := ErrorCredit.weaken (expectation p F ε) $$ Htotal
+  ihave Hsample := ErrorCredit.weaken (expectation p F ε) $$ Hcredit
   iapply ((FairCoin.fairCoin_distSpec E).wp (fairCredit p F ε)
     (measurable_of_countable _) _) $$ Hsample
   iintro %b Hcredit
@@ -59,10 +55,9 @@ theorem twp_oneDivOnePlus (E : CoPset) (p : unitInterval) (coin : Val rT)
     cases a
     · twp_pure
       isimp only [coinCredit, Bool.false_eq_true, ite_false] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
       twp_bind pl(&Occil.oneDivOnePlus &coin.fst #())
       iapply (tglWp_mono fun _ => tglWp_value)
-      iapply IH $$ Hterm Hcredit
+      iapply IH $$ Hcredit
     · twp_pures
       twp_value
       imodintro

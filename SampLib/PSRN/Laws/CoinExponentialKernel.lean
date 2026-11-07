@@ -1,5 +1,5 @@
 import SampLib.Latent.Laws.LatentCoin
-import SampLib.Bernoulli.ExpMinusFactory
+import SampLib.Bernoulli.Laws.ExpMinusFactory
 
 /-! # Joint credit kernels for the decreasing-uniform exponential factory
 

@@ -1,3 +1,4 @@
+import Metrology.ProbLang.Discrete
 import SampLib.Discrete.Laws.BinomialThinning
 import SampLib.Common.Laws.Urn
 import SampLib.Discrete.Laws.MultinomialCoefficients

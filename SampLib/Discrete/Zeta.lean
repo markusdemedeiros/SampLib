@@ -1,8 +1,10 @@
 import SampLib.Discrete.Laws.Zeta
+import SampLib.Discrete.UniformFin
 import SampLib.Discrete.Support.ZetaSyntax
 import SampLib.Uniform.FairCoin
 import SampLib.Bernoulli.Complement
 import SampLib.Core.Syntax.ClosedExp
+import SampLib.Core.Retry
 
 /-! # Exact zeta rejection from dyadic blocks
 
@@ -154,17 +156,12 @@ private theorem twp_loop (E : CoPset) (a b : ℕ) (hb : 0 < b) (hab : b < a)
         (fun v : Val rT => iprop(∃ (n : ℕ), ⌜v = Val.int n⌝ ∗ ↯ (F n))) := by
   have hgeo := Geometric.geometric_distSpec (rT := rT) (GF := GF) E (bias a b hb)
     (bias_pos a b hb hab) (proposalCoin a b) (proposalCoin_spec E a b hb hab)
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (one_lt_factor a b hb hab) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (one_lt_factor a b hb hab)
+  iintro !> %ε %hε IH Hcredit
   iterate 2 twp_pure
   simp only [ClosedExp.openRec, ClosedExp.closeRec]
   twp_bind pl(&Occil.geometric &(proposalCoin a b).fst #())
-  icombine Hcredit Hterm as Htotal
-  ihave Hsample := ErrorCredit.weaken (expectation a b hb hab F ε) $$ Htotal
+  ihave Hsample := ErrorCredit.weaken (expectation a b hb hab F ε) $$ Hcredit
   iapply hgeo.wp (levelCredit a b hb hab F ε) (measurable_of_countable _) _ $$ Hsample
   iintro %l Hcredit
   isimp only [levelCredit] at Hcredit
@@ -194,10 +191,9 @@ private theorem twp_loop (E : CoPset) (a b : ℕ) (hb : 0 < b) (hab : b < a)
   cases accepted
   · twp_pure
     isimp only [coinCredit, Bool.false_eq_true, ↓reduceIte] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     iapply loop_align E a b
       (fun v : Val rT => iprop(∃ (n : ℕ), ⌜v = Val.int n⌝ ∗ ↯ (F n)))
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
   · twp_pure
     twp_value
     imodintro

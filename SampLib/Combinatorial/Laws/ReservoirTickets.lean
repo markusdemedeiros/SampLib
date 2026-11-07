@@ -2,6 +2,7 @@ module
 
 public import SampLib.Combinatorial.Laws.Reservoir
 public import SampLib.Combinatorial.Laws.Choice
+public import SampLib.Core.Laws.Permutations
 
 @[expose] public section
 

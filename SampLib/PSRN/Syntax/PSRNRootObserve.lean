@@ -1,5 +1,5 @@
 import SampLib.PSRN.Syntax.PSRNRoot
-import SampLib.PSRN.Support.PSRNRootBelow
+import SampLib.PSRN.Support.Root.Below
 import SampLib.PSRN.Syntax.PSRNRootLoops
 
 /-! # Opening one root observation into named arithmetic and search stages -/

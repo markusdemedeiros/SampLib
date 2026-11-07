@@ -1,6 +1,10 @@
-import Mathlib.Data.Rat.Lemmas
-import Mathlib.Data.Real.Basic
-import Mathlib.Tactic.FieldSimp
+module
+
+public import Mathlib.Data.Rat.Lemmas
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.FieldSimp
+
+@[expose] public section
 
 /-! # Exact fractions for the factory engines
 

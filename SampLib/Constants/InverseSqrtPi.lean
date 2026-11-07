@@ -1,3 +1,4 @@
+import SampLib.Latent.UniformBagBracket
 import SampLib.Constants.PiConstants
 import SampLib.Bernoulli.FractionalPower
 import SampLib.Core.Syntax.ClosedExp

@@ -1,5 +1,6 @@
 import SampLib.Constants.Support.UniformVectorCoin
 import SampLib.Constants.Support.LatentCoinReciprocal
+import SampLib.Core.ListEncoding
 import Samplers.Constants.Special
 
 /-! # The owned bag list used by the zeta coin

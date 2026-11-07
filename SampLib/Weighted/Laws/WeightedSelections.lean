@@ -1,3 +1,4 @@
+import Metrology.ProbLang.Discrete
 import SampLib.Discrete.Laws.WeightedChoice
 import SampLib.Common.Laws.WeightedPositiveSupport
 

@@ -3,6 +3,7 @@ import SampLib.Core.SupportedSpec
 import SampLib.Constants.Support.OrderStatisticMaximum
 import SampLib.Common.DecreasingTrial
 import SampLib.Constants.Laws.ThresholdRejection
+import SampLib.Core.Retry
 import SampLib.Constants.Laws.IntegerGammaKernel
 import SampLib.Core.Syntax.ClosedExp
 import Samplers.Constants.Special
@@ -103,17 +104,11 @@ theorem twp_lowerGammaIntegerRatio (E : CoPset) (n : ℕ) (x : ℝ)
     ⊢ ↯ (RealCoin.credit (bias n x) F) -∗
       tglWp E pl(&Occil.Constants.lowerGammaIntegerRatio #int ((n + 1 : ℕ) : ℤ) #real x #())
         (fun v : Val ℝ => iprop(∃ b : Bool, ⌜v = Val.bool b⌝ ∗ ↯ (F b))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε
+  iapply Retry.twp_loop solve_not_value
     (AcceptedProposal.one_lt_factor (MaximumUniform.law n) acceptance (mass_ne_zero n))
-    $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iintro !> %ε %hε IH Hcredit
   iterate 6 twp_pure
   twp_bind pl(&Occil.orderStatistic #int ((n + 1 : ℕ) : ℤ) #int ((n + 1 : ℕ) : ℤ))
-  icombine Hcredit Hterm as Hcredit
   ihave Hcredit := ErrorCredit.weaken (expectation_preservation n x F ε) $$ Hcredit
   iapply ((OrderStatisticMaximum.orderStatistic_max_distSpec E n).wp_supported
     (fun t => t ∈ Set.Icc (0 : ℝ) 1) measurableSet_Icc (MaximumUniform.ae_mem_unit n)
@@ -143,12 +138,11 @@ theorem twp_lowerGammaIntegerRatio (E : CoPset) (n : ℕ) (x : ℝ)
     exact congrArg Val.bool (ThresholdRejection.event_eq_decide x t).symm
   · rw [natCast_emod_two, hk]
     isimp only [parityCredit, hk, Nat.one_ne_zero, ite_false] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     twp_pure
     twp_bind pl(&Occil.Constants.lowerGammaIntegerRatio
       #int ((n + 1 : ℕ) : ℤ) #real x #())
     iapply (tglWp_mono fun _ => tglWp_value)
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
 
 /-- Every positive integer shape and every unit-interval threshold, with ENNReal credits. -/
 theorem lowerGammaIntegerRatio_distSpec (E : CoPset) (m : ℕ) (hm : 0 < m)

@@ -1,4 +1,5 @@
 import SampLib.Bernoulli.Laws.EpsilonDivision
+import SampLib.Core.Retry
 import SampLib.Bernoulli.Support.LinearFactorySyntax
 import SampLib.Common.CoinComplement
 import Samplers.Bernoulli.Linear
@@ -132,18 +133,13 @@ private theorem twp_loop (E : CoPset) (p : unitInterval) (a b lowerNum lowerDen 
   have ht := LinearFactory.linear_distSpec E (unitInterval.symm p) b (b - a)
     (marginNum a b lowerNum lowerDen) (marginDen a b lowerDen)
     (linear_admissible p a b lowerNum lowerDen h ha hl) (CoinComplement.callback coin) hc
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε
+  iapply Retry.twp_loop solve_not_value
     (BernoulliRetry.one_lt_factor (unitInterval.symm p)
-      (retry_lt_one p a b lowerNum lowerDen h ha)) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+      (retry_lt_one p a b lowerNum lowerDen h ha))
+  iintro !> %ε %hε IH Hcredit
   iterate 2 (twp_step; simp [Exp.open', Exp.openRec, ProbLang.openRec_val_fst,
     LinearFactorySyntax.linear_openRec, RationalCoin.rationalCoin_openRec])
   twp_bind pl(&Occil.rationalCoin #int a #int b)
-  icombine Hcredit Hterm as Hcredit
   ihave Hcredit := ErrorCredit.weaken (expectation p a b lowerNum lowerDen h ha hl F ε)
     $$ Hcredit
   isimp only [← RealCoin.lintegral_law, selector] at Hcredit
@@ -172,8 +168,7 @@ private theorem twp_loop (E : CoPset) (p : unitInterval) (a b lowerNum lowerDen 
       itrivial
     · twp_pure
       isimp only [innerCredit, ite_true, retryCredit] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
-      iapply IH $$ Hterm Hcredit
+      iapply IH $$ Hcredit
   · twp_pure
     twp_value
     imodintro

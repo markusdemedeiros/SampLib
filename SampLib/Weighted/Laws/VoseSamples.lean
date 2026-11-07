@@ -1,4 +1,5 @@
 import SampLib.Combinatorial.Laws.SampleWithReplacement
+import Metrology.ProbLang.Discrete
 import SampLib.Discrete.Laws.WeightedChoice
 
 /-! # The law of independent categorical draws as a list -/

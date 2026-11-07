@@ -2,6 +2,8 @@ import SampLib.Uniform.Laws.ModulusReduction
 import SampLib.Uniform.Laws.UniformInt
 import SampLib.Core.SupportedSpec
 import SampLib.Core.Syntax.ClosedExp
+import Samplers.Uniform
+import SampLib.Core.Retry
 
 /-! # Exact uniform integers from another source modulus
 
@@ -107,17 +109,12 @@ private theorem twp_small (E : CoPset) (modulus n : ℕ) (hn : 0 < n)
       tglWp E pl(&(smallRetry modulus n) #())
         (fun v : Val rT => iprop(∃ k : ℕ, ⌜v = Val.int (k : ℤ)⌝ ∗ ↯ (F k))) := by
   let : NeZero modulus := ⟨by omega⟩
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (by norm_num : 1 < (2 : ℝ≥0)) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (by norm_num : 1 < (2 : ℝ≥0))
+  iintro !> %ε %_ IH Hcredit
   iterate 2 twp_pure
   twp_bind pl(rand(#int (modulus : ℤ), #()))
-  icombine Hcredit Hterm as Htotal
   ihave Hkernel := ErrorCredit.weaken
-    (ModulusReduction.small_expectation modulus n hn hnm F ε) $$ Htotal
+    (ModulusReduction.small_expectation modulus n hn hnm F ε) $$ Hcredit
   iapply ((native_distSpec E modulus).wp (ModulusReduction.smallKernel modulus n F ε)
     (measurable_of_countable _) _) $$ Hkernel
   iintro %k Hcredit
@@ -148,9 +145,8 @@ private theorem twp_small (E : CoPset) (modulus n : ℕ) (hn : 0 < n)
         exact decide_eq_false (by omega)]
       twp_pure
       isimp only [ModulusReduction.smallKernel, ite_eq_right hk, ite_eq_right hlimit] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
       isimp [smallRetry, Exp.close, Exp.closeRec] at IH
-      iapply IH $$ Hterm Hcredit
+      iapply IH $$ Hcredit
 
 private theorem twp_large (E : CoPset) (modulus n : ℕ) (hm : 2 ≤ modulus)
     (hmn : modulus < n) (lowDraw : Exp rT) [ClosedExp lowDraw]
@@ -162,18 +158,13 @@ private theorem twp_large (E : CoPset) (modulus n : ℕ) (hm : 2 ≤ modulus)
         (fun v : Val rT => iprop(∃ k : ℕ, ⌜v = Val.int (k : ℤ)⌝ ∗ ↯ (F k))) := by
   let : NeZero modulus := ⟨by omega⟩
   have hlow_lc : lowDraw.IsLocallyClosed := ClosedExp.lc
-  iintro Hcredit
   simp [largeRetry, Exp.subst, Exp.close, Exp.closeRec]
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (by norm_num : 1 < (2 : ℝ≥0)) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (by norm_num : 1 < (2 : ℝ≥0))
+  iintro !> %ε %_ IH Hcredit
   iterate 2 twp_pure
   twp_bind pl(rand(#int (modulus : ℤ), #()))
-  icombine Hcredit Hterm as Htotal
   ihave Hkernel := ErrorCredit.weaken
-    (ModulusReduction.large_expectation modulus n hm hmn F ε) $$ Htotal
+    (ModulusReduction.large_expectation modulus n hm hmn F ε) $$ Hcredit
   iapply ((native_distSpec E modulus).wp (fun high =>
     ∫⁻ low, UniformRejection.kernel n F ε (ModulusReduction.width modulus n * high + low)
       ∂UniformInt.law (ModulusReduction.width modulus n)) (measurable_of_countable _) _)
@@ -201,10 +192,9 @@ private theorem twp_large (E : CoPset) (modulus n : ℕ) (hm : 2 ≤ modulus)
         false by exact decide_eq_false (by omega)]
     twp_pure
     isimp only [UniformRejection.kernel, ite_eq_right hk] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     simp only [ClosedExp.openRec]
     isimp only [ENNReal.coe_two] at IH
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
 
 private theorem twp_uniformFromModulus (E : CoPset) (modulus n : ℕ) (hm : 2 ≤ modulus)
     (hn : 0 < n) (F : ℕ → ℝ≥0∞) :

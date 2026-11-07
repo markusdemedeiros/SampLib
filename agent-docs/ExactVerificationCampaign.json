@@ -214,14 +214,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.FractionalPower",
+      "proof_module": "SampLib.Bernoulli.FractionalPower",
       "public_spec": "SampLib.FractionalPower.fractionalPower_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch011.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch011.md",
-      "reviewed_sha256": "8699e04682cdd56f74ab695feb19402c6c4eec5a52b10779c0c5ed3272c7ef97",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA006.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "d457d7ca961ceea1bd2c7f40e77514d06aca07a79e0eedb70d07f0e22bd011e2",
       "reviewed_domain": "All p : unitInterval, a,b : Nat with 0 < a <= b, arbitrary input callback IsDistSpec with no closedness or finite-expectation assumption; output bias p^(a/b).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch011.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.complementOverLogInverse",
@@ -231,14 +234,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.LogRatioFactories",
+      "proof_module": "SampLib.Bernoulli.LogRatioFactories",
       "public_spec": "SampLib.LogRatioFactories.complementOverLogInverse_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch020.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch020.md",
-      "reviewed_sha256": "470bd334f5af01fe17c89af000da560e18612aad3ec0d5a61e3eb52d9f414d40",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA009.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "953a8b649bbf4abec0233f01919eceefeabb44c73d6224358dcbd865b62297e5",
       "reviewed_domain": "Every p : unitInterval with p>0, arbitrary input callback; law(1-p)/log(1/p), removable endpoint p=1 has value1.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch020.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.expIntegral",
@@ -248,16 +254,19 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ExpIntegral",
+      "proof_module": "SampLib.Bernoulli.ExpIntegral",
       "public_spec": "SampLib.ExpIntegral.expIntegral_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch022.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch022.md",
-      "reviewed_sha256": "78c45eac351b4d62133e82237fe2fe3ce1c88fbc4b4b31bc3c742a84b1817488",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA011.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "1e1162912923be16007f17681b8229d3de0e90470e60829e23184ca3f4a6cdac",
       "reviewed_domain": "Every p : unitInterval and m : Nat, arbitrary input callback IsDistSpec; law(1-exp(-(m+p)))/(m+p), with continuous value1 at m=p=0.",
       "finding": null,
       "previous_owners": [
         "/root/prove_series"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch022.json"
       ]
     },
     {
@@ -268,14 +277,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.LogRatioFactories",
+      "proof_module": "SampLib.Bernoulli.LogRatioFactories",
       "public_spec": "SampLib.LogRatioFactories.pOverLogInverseComplement_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch020.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch020.md",
-      "reviewed_sha256": "470bd334f5af01fe17c89af000da560e18612aad3ec0d5a61e3eb52d9f414d40",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA009.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "953a8b649bbf4abec0233f01919eceefeabb44c73d6224358dcbd865b62297e5",
       "reviewed_domain": "Every p : unitInterval with p<1, arbitrary input callback; law p/log(1/(1-p)), removable endpoint p=0 has value1.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch020.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.binaryExponential",
@@ -285,14 +297,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.BinaryExponential",
+      "proof_module": "SampLib.Bernoulli.BinaryExponential",
       "public_spec": "SampLib.BinaryExponential.binaryExponential_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch008.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch008.md",
-      "reviewed_sha256": "7b35ff845cb1ed03073954c1523bee98bc687f2392444a6dd43885e7204add5d",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA003.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "00227186e36a87d8671d91aef458d29de4a10e8fcfdc178143574e3fcd15924b",
       "reviewed_domain": "All p : unitInterval and m,k : Nat, with arbitrary input callback IsDistSpec; probability2^(-m*(k+p)).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch008.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.binaryExponentialRational",
@@ -302,14 +317,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.BinaryExponentialRational",
+      "proof_module": "SampLib.Bernoulli.BinaryExponentialRational",
       "public_spec": "SampLib.BinaryExponentialRational.binaryExponentialRational_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch007.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch007.md",
-      "reviewed_sha256": "de7da91b344dce2ae86f5d21c7789c10c12e92d5c056e7b21c808cbea4649379",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA002.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "22e8b5d08f360507f07525fe15d1aa99469239fc483988631a5418c2b67d00e6",
       "reviewed_domain": "All p : unitInterval, a,b : Nat with 0 < b and arbitrary input callback IsDistSpec; probability 2^(-(a/b)*p).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch007.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.expDivThree",
@@ -319,14 +337,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ExpDivThree",
+      "proof_module": "SampLib.Bernoulli.ExpDivThree",
       "public_spec": "SampLib.ExpDivThree.expDivThree_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch007.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch007.md",
-      "reviewed_sha256": "b6eec37ba5363dcdf26d5b81032ee09bbef0398629af5a1aa6b8d54ef1118869",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA002.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "349384e0fe6befc7b12f9f8dce48c2ed7b63e4c91053cdf5afbc5cebc025e41e",
       "reviewed_domain": "All p : unitInterval with arbitrary input callback IsDistSpec; probability exp(p)/3.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch007.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.expMinusExp",
@@ -336,14 +357,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ExpMinusExp",
+      "proof_module": "SampLib.Bernoulli.ExpMinusExp",
       "public_spec": "SampLib.ExpMinusExp.expMinusExp_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch013.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch013.md",
-      "reviewed_sha256": "feee3e67858cd908218e4c3160988b236ad0cb3aba6239208214d757526f206f",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA007.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "0962c7b1e8d6cafa31b86d07c7f7417e4feb37c507dd03ae4d7cd2e7c012b8e4",
       "reviewed_domain": "All p : unitInterval and m : Nat, with arbitrary input callback IsDistSpec; probability exp(-exp(m+p)).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch013.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.expSquareTimesComplement",
@@ -353,14 +377,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ExpSquareTimesComplement",
+      "proof_module": "SampLib.Bernoulli.ExpSquareTimesComplement",
       "public_spec": "SampLib.ExpSquareTimesComplement.expSquareTimesComplement_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch022.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch022.md",
-      "reviewed_sha256": "e2390622b7e6b6cac35bd79cea0c3a65b64308eb7cdda33d0cbdc7c688515da8",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA011.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "70a60215376e4bbc0987815d79b1aaba01e6586ae5e557d53c795d44bbe61ffe",
       "reviewed_domain": "Every p : unitInterval, arbitrary input callback IsDistSpec; law exp(p^2)*(1-p), both endpoints included.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch022.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.linear2014",
@@ -370,14 +397,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.Linear2014",
+      "proof_module": "SampLib.Bernoulli.Linear2014",
       "public_spec": "SampLib.Linear2014.linear2014_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch028.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch028.md",
-      "reviewed_sha256": "965f34a0ad1ba6d7ca84d81db01b415265b22aa2f7c37384f2b6cd9466953e55",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA014.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "b95430f88c4247958fa2266028eda7f4deb5048e45f47807100422bdedc989c3",
       "reviewed_domain": "Every p : unitInterval; a,b,e,f : Int with0<=a,0<b and, only on expanding b<a,0<e<f and(a/b)*p<=1-e/f; arbitrary input callbacks. Both source margin-clamp branches, zero bias/coefficient, contracting and identity cases covered.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch028.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.linearLowProbability",
@@ -387,14 +417,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.LinearLowProbability",
+      "proof_module": "SampLib.Bernoulli.LinearLowProbability",
       "public_spec": "SampLib.LinearLowProbability.linearLowProbability_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch009.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch009.md",
-      "reviewed_sha256": "426da3737465edbde10ea09762600c30d3ef0e64b1a1de97eff5ae14d06361c3",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA004.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "f6e8cf2b53bae61e33648935a2148e7ea0ec558582b5ceff0aa73b99d5093e2f",
       "reviewed_domain": "All p : unitInterval and a,b,m,n : Int with 0 <= a, 0 < b, 0 <= m, 2*m < n and (a/b)*p <= m/n; includes contracting, zero-bound and expanding cases. Canonical half-margin repair registered separately.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch009.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.linearPowerWalk",
@@ -404,14 +437,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.LinearPowerWalk",
+      "proof_module": "SampLib.Bernoulli.LinearPowerWalk",
       "public_spec": "SampLib.LinearPowerWalk.linearPowerWalk_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch024.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch024.md",
-      "reviewed_sha256": "4c338f54831b18908e0e831b41ef6841472e586457e641e4eacebbf20b07077b",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA013.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "ccb2f6652f25ed176b2ed6ebf88c75e7bfef7a4636996d097fa8eb45d6aab521",
       "reviewed_domain": "Every p : unitInterval and n : Nat; a,b,e,f : Int with0<=a,0<b and, only when b<a,0<e<f and(a/b)*p<=1-e/f. All initial exponents, zero powers, zero bias/coefficient and arbitrary input callbacks are covered. Contracting coefficients impose no unused-margin constraint.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch024.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.polynomial",
@@ -421,16 +457,19 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.PolynomialFactory",
+      "proof_module": "SampLib.Bernoulli.PolynomialFactory",
       "public_spec": "SampLib.PolynomialFactory.polynomial_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch030.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch030.md",
-      "reviewed_sha256": "3abff1fed534147509c1902d452d69c774947346358d9dfea6ae43bd43ca6f4c",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliMZA007.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "reviewed_sha256": "842e1e54790f4f1d192d10a3ba6fa2e8cb3804dc8fa7532883c55722baa4da2a",
       "reviewed_domain": "Every p : unitInterval and arbitrary input callback; every nonempty signed rational power-basis list xs admitting a finite degree N>=degree(xs) whose exact converted Bernstein coefficients all lie in [0,1]. Unreduced coefficients and endpoint-valued laws included. Strict closed-unit-interval range in (0,1) is a proved sufficient corollary, not a premise of the primary theorem.",
       "finding": null,
       "previous_owners": [
         "/root/prove_series"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch030.json"
       ]
     },
     {
@@ -441,16 +480,19 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.RationalFunction",
+      "proof_module": "SampLib.Bernoulli.RationalFunction",
       "public_spec": "SampLib.PolynomialFactory.rationalFunction_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch030.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch030.md",
-      "reviewed_sha256": "ce5e8ec0ebd8349f972107d828f4fc32f6d7fc3779b976afe39ec6520c9a0f77",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliMZA007.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "reviewed_sha256": "7ce5f1628d82ee609144b946145cac7e3ae2b5ad4780209f6dbf3bef40c0fd13",
       "reviewed_domain": "Every p : unitInterval and arbitrary input callback; two nonempty signed rational polynomial lists each admitting an admissible elevated degree, and A(p)+B(p)>0 at the supplied bias. Output probability A(p)/(A(p)+B(p)); either individual value may be zero.",
       "finding": null,
       "previous_owners": [
         "/root/prove_series"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch030.json"
       ]
     },
     {
@@ -461,14 +503,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ThreePointPiecewise",
+      "proof_module": "SampLib.Bernoulli.ThreePointPiecewise",
       "public_spec": "SampLib.MinimumComplement.threePointPiecewise_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch027.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch027.md",
-      "reviewed_sha256": "2c574b4e0906d83459d293062837f8e23f008ce6c98a43e775a036ef8ad19637",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliMZA006.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "reviewed_sha256": "654ba7594aa381e815cb744d79487d2fd698bf264f4dbf6185446272153aad1a",
       "reviewed_domain": "All p,mu,nu : unitInterval and all six source modes Fin6, with arbitrary callbacks for all three probabilities. Explicit six piecewise-linear hinge formulas.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch027.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.rationalPower",
@@ -478,14 +523,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.RationalPower",
+      "proof_module": "SampLib.Common.RationalPower",
       "public_spec": "SampLib.RationalPower.rationalPower_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch017.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch017.md",
-      "reviewed_sha256": "6952c1001f194403d6e8e0eb80021456a31e2970531e521eaf55812d7c0c0c33",
+      "review_receipt": "agent-docs/reviews/ExactRound3DiscreteCommonA001.json",
+      "review_evidence": "agent-docs/reviews/Round3DiscreteCommon.md",
+      "reviewed_sha256": "686c19d494d5886d7c943f3ba51eed0f76f40e5f3eb08860a754b9dbed7d997a",
       "reviewed_domain": "Every a,b : Nat with b>0 and every p : unitInterval; arbitrary input callback, includes exponent0 and both input endpoints.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch017.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.twoCoinPower",
@@ -495,14 +543,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.TwoCoinPower",
+      "proof_module": "SampLib.Bernoulli.TwoCoinPower",
       "public_spec": "SampLib.TwoCoinPower.twoCoinPower_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch017.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch017.md",
-      "reviewed_sha256": "867929217cc4ce92e6855b7f0a439af3470a066d5380d841424b235551f8cf9d",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliMZA004.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "reviewed_sha256": "e2388f150b12768e3c38312e50966a8cf857dfaf6171872ae8a585c13ae43e52",
       "reviewed_domain": "All p,q : unitInterval with p>0 or q>0, and arbitrary abstract callbacks for both input biases. Exactly the nonterminating zero-zero pair is excluded; law p^q.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch017.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.alternatingSeries",
@@ -512,14 +563,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.AlternatingSeries",
+      "proof_module": "SampLib.Bernoulli.AlternatingSeries",
       "public_spec": "SampLib.AlternatingSeries.alternatingSeries_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch021.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch021.md",
-      "reviewed_sha256": "86a9e513361e75b56e8e31f98c1bc5b6d3b229dfcd09bae2dd1751b733ed67ba",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA010.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "0e1e5322e0bddb3d9fa3b62d8f39686d5a38b54ce920166d64466dff03a1ce4b",
       "reviewed_domain": "Every rational nonnegative antitone coefficient sequence with initial value<=1 and tending to0; all p : unitInterval including1; arbitrary exact positive-denominator rational callback representations and abstract input-coin callbacks. Full sequential alternating-series law, including conditional convergence.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch021.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.envelopeFactory",
@@ -529,16 +583,19 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.EnvelopeFactory",
+      "proof_module": "SampLib.Bernoulli.EnvelopeFactory",
       "public_spec": "SampLib.EnvelopeFactory.envelopeFactory_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch031.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch031.md",
-      "reviewed_sha256": "9f2dc08cffc0ae3a0dbd023622a9a4c696b312abba2f4eb27b6894dc05cbaff3",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA015.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "4cc4876727748189371ab8d2775e0918b644f9121ca71129290491442a52f312",
       "reviewed_domain": "Every p : unitInterval (endpoints included) and coin callback with IsDistSpec RealCoin.law p; Parameters p: degrees with degree 0 = 0 and strictly increasing, rational rows with 0<=lower<=upper<=1, initial row 0/1, reverse-hypergeometric degree-elevation consistency, and lower/upper Bernstein means converging at the input p to a common target in [0,1] (no convergence assumed at other biases); deterministic bounds callback returning, at every positive visited degree and valid head count, any raw signed unreduced fraction pair whose values are that row's coefficients; additionally degree t = t (the wrapper's own n+1 callback). Output RealCoin.law target, Bool encoding.",
       "finding": null,
       "previous_owners": [
         "/root/prove_series"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch031.json"
       ]
     },
     {
@@ -549,16 +606,19 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.EnvelopeFactory",
+      "proof_module": "SampLib.Bernoulli.EnvelopeFactory",
       "public_spec": "SampLib.EnvelopeFactory.envelopeFactoryDegrees_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch031.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch031.md",
-      "reviewed_sha256": "9f2dc08cffc0ae3a0dbd023622a9a4c696b312abba2f4eb27b6894dc05cbaff3",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA015.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "4cc4876727748189371ab8d2775e0918b644f9121ca71129290491442a52f312",
       "reviewed_domain": "Every p : unitInterval (endpoints included) and coin callback with IsDistSpec RealCoin.law p; Parameters p: degrees with degree 0 = 0 and strictly increasing, rational rows with 0<=lower<=upper<=1, initial row 0/1, reverse-hypergeometric degree-elevation consistency, and lower/upper Bernstein means converging at the input p to a common target in [0,1] (no convergence assumed at other biases); deterministic bounds callback returning, at every positive visited degree and valid head count, any raw signed unreduced fraction pair whose values are that row's coefficients; deterministic next callback mapping degree t to degree (t+1). Output RealCoin.law target, Bool encoding.",
       "finding": null,
       "previous_owners": [
         "/root/prove_series"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch031.json"
       ]
     },
     {
@@ -569,14 +629,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.MinimumComplement",
+      "proof_module": "SampLib.Bernoulli.MinimumComplement",
       "public_spec": "SampLib.MinimumComplement.minimumComplement_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch027.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch027.md",
-      "reviewed_sha256": "34a5866be039a4d81b1e928649f723aa7418009a53d5db935174421ceb3c82c4",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliMZA006.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "reviewed_sha256": "7d5185fb008ce8a413a0422bada8eeed256bb15b3511d99814fb452e642381b5",
       "reviewed_domain": "Every p : unitInterval with arbitrary input callback; exact bias min(p,1-p), including0,1/2,1.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch027.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.minimumHalf",
@@ -586,14 +649,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.MinimumHalf",
+      "proof_module": "SampLib.Bernoulli.MinimumHalf",
       "public_spec": "SampLib.MinimumComplement.minimumHalf_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch027.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch027.md",
-      "reviewed_sha256": "74c8d80e729844b662820caf75d1de6d4fdc48619a666424886503c6beadaab2",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliMZA006.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "reviewed_sha256": "6e5ff69f90fa27e7dee830c85dd3c69380c5ea4a3d2d4816003f318d56f38efc",
       "reviewed_domain": "Every p : unitInterval with arbitrary input callback; exact bias min(p,1/2), including both endpoints.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch027.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.powerSeriesHazards",
@@ -603,14 +669,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.PowerSeriesHazards",
+      "proof_module": "SampLib.Bernoulli.PowerSeriesHazards",
       "public_spec": "SampLib.PowerSeriesHazards.powerSeriesHazards_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch012.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch012.md",
-      "reviewed_sha256": "cf199bf7a5503897a87547f41be3ee53ed8770e8905664cdc961027890efd276",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliMZA003.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "reviewed_sha256": "631202783470aed16695006436b0b5ba07b45c77e6cb563859ccd275b70c85e1",
       "reviewed_domain": "All p : unitInterval; arbitrary input coin IsDistSpec; exact deterministic rational hazards0<=numerator<=positive denominator; vanishing product of continuation probabilities. Normalized coefficient mass supplies this criterion for every p, including0.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch012.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.alternatingPermutation",
@@ -620,14 +689,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.AlternatingPermutation",
+      "proof_module": "SampLib.Bernoulli.AlternatingPermutation",
       "public_spec": "SampLib.AlternatingPermutation.alternatingPermutation_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch019.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch019.md",
-      "reviewed_sha256": "9212462216c729cfcbb7d515e8677b5eb00c804046d761cd55359f230c53ed54",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA008.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "b34ad22a99fe8c4e3818649d2d7d026f45669f00a0bd45275cde82be23441150",
       "reviewed_domain": "Every p : unitInterval with p<1, both Bool parities, arbitrary unknown-bias input callback; exact real uniforms. Even law(1-p)/cos(p), odd law(1-p)*tan(p).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch019.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.arcsineHalf",
@@ -637,14 +709,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ArcsineFactories",
+      "proof_module": "SampLib.Bernoulli.ArcsineFactories",
       "public_spec": "SampLib.ArcsineFactories.arcsineHalf_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch023.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch023.md",
-      "reviewed_sha256": "c661dc648dda0b91b2835b52acaa8be720ac4a4ed19a2c3595ba902855a9c99e",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA012.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "a8a4f03fd9794cfb0eb35b33d215424c94928d51461fe57d8a5eaeca850c08a1",
       "reviewed_domain": "Every p : unitInterval and arbitrary callback, including0/1; law asin(p)/2.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch023.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.arcsinePlusSqrtMinusOne",
@@ -654,14 +729,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ArcsineFactories",
+      "proof_module": "SampLib.Bernoulli.ArcsineFactories",
       "public_spec": "SampLib.ArcsineFactories.arcsinePlusSqrtMinusOne_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch023.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch023.md",
-      "reviewed_sha256": "c661dc648dda0b91b2835b52acaa8be720ac4a4ed19a2c3595ba902855a9c99e",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA012.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "a8a4f03fd9794cfb0eb35b33d215424c94928d51461fe57d8a5eaeca850c08a1",
       "reviewed_domain": "Every p : unitInterval and arbitrary callback, including0/1; law asin(p)+sqrt(1-p^2)-1.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch023.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.arctanOverPi",
@@ -671,17 +749,18 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ArctanOverPi",
+      "proof_module": "SampLib.Bernoulli.ArctanOverPi",
       "public_spec": "SampLib.ArctanOverPi.arctanOverPi_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch010.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch010.md",
-      "reviewed_sha256": "77cb98bf852a3a85d92b30625e1d7b154dcd03098d697da85c7e2cd3852c1810",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA005.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "2c58b9ccb9f519ffc002678bed04e64b98aaf01c65702b2ce71eef2ace4f1cba",
       "reviewed_domain": "All p : unitInterval; arbitrary input callback IsDistSpec without closedness assumption; probability atan(p)/pi.",
       "finding": null,
       "revision_reason": "Canonical low-probability margin repaired; transitive snapshot needs independent rollover.",
       "review_history": [
-        "agent-docs/reviews/ExactFactoriesBatch006.json"
+        "agent-docs/reviews/ExactFactoriesBatch006.json",
+        "agent-docs/reviews/ExactFactoriesBatch010.json"
       ]
     },
     {
@@ -692,14 +771,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.AlternatingPermutation",
+      "proof_module": "SampLib.Bernoulli.AlternatingPermutation",
       "public_spec": "SampLib.AlternatingPermutation.complementOverCosine_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch019.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch019.md",
-      "reviewed_sha256": "9212462216c729cfcbb7d515e8677b5eb00c804046d761cd55359f230c53ed54",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA008.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "b34ad22a99fe8c4e3818649d2d7d026f45669f00a0bd45275cde82be23441150",
       "reviewed_domain": "Every p : unitInterval with p<1 and arbitrary input callback; exact real uniforms; law(1-p)/cos(p).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch019.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.complementTimesTangent",
@@ -709,14 +791,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.AlternatingPermutation",
+      "proof_module": "SampLib.Bernoulli.AlternatingPermutation",
       "public_spec": "SampLib.AlternatingPermutation.complementTimesTangent_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch019.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch019.md",
-      "reviewed_sha256": "9212462216c729cfcbb7d515e8677b5eb00c804046d761cd55359f230c53ed54",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA008.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "b34ad22a99fe8c4e3818649d2d7d026f45669f00a0bd45275cde82be23441150",
       "reviewed_domain": "Every p : unitInterval with p<1 and arbitrary input callback; exact real uniforms; law(1-p)*tan(p).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch019.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.cosineSqrt",
@@ -726,14 +811,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.TrigonometricSeriesFactories",
+      "proof_module": "SampLib.Bernoulli.TrigonometricSeriesFactories",
       "public_spec": "SampLib.TrigonometricSeriesFactories.cosineSqrt_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch023.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch023.md",
-      "reviewed_sha256": "35df1cb7d6f653c188295efd3e2ab20eb714d609b9e4d6628cabb076df7ab335",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliMZA005.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "reviewed_sha256": "04ef229b3b1548ea46fda1539a4385533008800c32330523ab5b0328b1318c23",
       "reviewed_domain": "Every p : unitInterval and arbitrary callback; law cos(sqrt(p)).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch023.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.pOverTangent",
@@ -743,17 +831,18 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.POverTangent",
+      "proof_module": "SampLib.Bernoulli.POverTangent",
       "public_spec": "SampLib.POverTangent.pOverTangent_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch010.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch010.md",
-      "reviewed_sha256": "0899376099784974a5f10d4ae5dcaa8a52d3244a8a9dafc2f862f6d3d1483e31",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliMZA002.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "reviewed_sha256": "e5c4a891f87c29a9affea3279fad8f48e8cb63352b69c58569d8f028f9b5fa51",
       "reviewed_domain": "p : unitInterval; arbitrary input-coin IsDistSpec; e,f : Int with 0 < e < f and e/f <= sin(p)-p*cos(p).",
       "finding": null,
       "revision_reason": "Canonical low-probability margin repaired; transitive snapshot needs independent rollover.",
       "review_history": [
-        "agent-docs/reviews/ExactFactoriesBatch004.json"
+        "agent-docs/reviews/ExactFactoriesBatch004.json",
+        "agent-docs/reviews/ExactFactoriesBatch010.json"
       ]
     },
     {
@@ -764,14 +853,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.TrigonometricSeriesFactories",
+      "proof_module": "SampLib.Bernoulli.TrigonometricSeriesFactories",
       "public_spec": "SampLib.TrigonometricSeriesFactories.sincScaled_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch023.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch023.md",
-      "reviewed_sha256": "35df1cb7d6f653c188295efd3e2ab20eb714d609b9e4d6628cabb076df7ab335",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliMZA005.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "reviewed_sha256": "04ef229b3b1548ea46fda1539a4385533008800c32330523ab5b0328b1318c23",
       "reviewed_domain": "All natural a,b with0<a,0<b,a<=6*b, every p : unitInterval and arbitrary callback; law sinc(p*sqrt(a/b)).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch023.json"
+      ]
     },
     {
       "sampler": "Occil.FactoryExtra.sincSqrtScaled",
@@ -781,14 +873,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.TrigonometricSeriesFactories",
+      "proof_module": "SampLib.Bernoulli.TrigonometricSeriesFactories",
       "public_spec": "SampLib.TrigonometricSeriesFactories.sincSqrtScaled_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch023.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch023.md",
-      "reviewed_sha256": "35df1cb7d6f653c188295efd3e2ab20eb714d609b9e4d6628cabb076df7ab335",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliMZA005.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "reviewed_sha256": "04ef229b3b1548ea46fda1539a4385533008800c32330523ab5b0328b1318c23",
       "reviewed_domain": "All natural a,b with0<a,0<b,a<=6*b, every p : unitInterval and arbitrary callback; law sinc(sqrt((a/b)*p)).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch023.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.continuedLogarithm",
@@ -798,14 +893,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ContinuedLogarithm",
+      "proof_module": "SampLib.Constants.ContinuedLogarithm",
       "public_spec": "SampLib.ContinuedLogarithm.continuedLogarithm_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch015.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch015.md",
-      "reviewed_sha256": "78e96b458be615d58656eb53df4bbd5ccb25039a55557878f34c85f3a20726a7",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA007.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "8a0a0a10107fa253d1170594343da4c4932f311c540676019061f5e0b0424f80",
       "reviewed_domain": "Arbitrary nonnegative integer exponent streams, finite final flags or infinite streams, any natural start, with a deterministic coefficient callback specified only at reachable positions. No bounded-exponent, uniform contraction or finite expected-time assumption.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch015.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.rationalContinuedFraction",
@@ -815,14 +913,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.FiniteRationalContinuedFraction",
+      "proof_module": "SampLib.Constants.FiniteRationalContinuedFraction",
       "public_spec": "SampLib.FiniteRationalContinuedFraction.rationalContinuedFraction_finite_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch016.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch016.md",
-      "reviewed_sha256": "2c1a521825502b8dcf664db6dfced97e4dfd61ad2275e1eb52dd4cd6d81a3f6b",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA008.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "ad9f8af051c711af36c3b58b97d6f88ff8b24d9a4049a19c806fd555477ab3ed",
       "reviewed_domain": "All finite sourceguard-valid coefficient prefixes: positive integer numerator b<=denominator a, arbitrary positive scale d, a final flag at or before given depth, arbitrary natural start and exact deterministic coefficient callback. Companion RationalContinuedFraction.rationalContinuedFraction_distSpec additionally covers infinite streams with d<=b<=a. Unrestricted positive infinite streams are not claimed to terminate.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch016.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.eContinuedFraction",
@@ -832,14 +933,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.EContinuedFraction",
+      "proof_module": "SampLib.Constants.EContinuedFraction",
       "public_spec": "SampLib.EContinuedFraction.eContinuedFraction_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch014.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch014.md",
-      "reviewed_sha256": "b1ce35368b6d853a82a9c7ab6dd5b814afe9a1c8551ef37d0a482da4f3f2dfc9",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA006.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "613a1eecb604ef93dc523e8e73c810f0af4596398e1c7761f82ba128fa105821",
       "reviewed_domain": "All a,b,j : Nat with 0 < b <= a and 0 < j; the canonical tail of the actual Euler coefficient sequence.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch014.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.eDivThree",
@@ -849,14 +953,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.EulerScaledConstants",
+      "proof_module": "SampLib.Constants.EulerScaledConstants",
       "public_spec": "SampLib.EulerScaledConstants.eDivThree_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch003.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch003.md",
-      "reviewed_sha256": "db36a43c18f1d531ce92b5f012441c2d4f2fa5de3edcbc4d1410fe8efd161695",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA003.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "f2652d778ffc544ddb6c13429ab8cbe032926cbdc7142a459d6572524036fe53",
       "reviewed_domain": "Fixed probability exp(1)/3.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch003.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.eMinusTwo",
@@ -866,14 +973,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.EulerAffineConstants",
+      "proof_module": "SampLib.Constants.EulerAffineConstants",
       "public_spec": "SampLib.EulerAffineConstants.eMinusTwo_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch003.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch003.md",
-      "reviewed_sha256": "cf608ac66f18bc6e5b22dde484691d700e1e7054bd06248cc8f43a9a4406748a",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA003.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "10962fe5f5f2ea9d2295daff68728e3448e01127b14c2e7a3c17f264af197ea9",
       "reviewed_domain": "Fixed probability exp(1)-2.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch003.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.eMinusTwoContinuedFraction",
@@ -883,14 +993,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.EContinuedFractionConstants",
+      "proof_module": "SampLib.Constants.EContinuedFractionConstants",
       "public_spec": "SampLib.EContinuedFractionConstants.eMinusTwoContinuedFraction_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch014.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch014.md",
-      "reviewed_sha256": "d04a308b749301c91cee91e5da7bd21b3835638c654934d05eb73fa77ec23058",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA006.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "5b6e6fe63fd69f45efa96120b9245e4ed26c0d79d59541786c56d2ff9c1c2377",
       "reviewed_domain": "Fixed source parameters1,1,2; probability exp(1)-2.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch014.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.eQuarter",
@@ -900,14 +1013,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.EulerScaledConstants",
+      "proof_module": "SampLib.Constants.EulerScaledConstants",
       "public_spec": "SampLib.EulerScaledConstants.eQuarter_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch003.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch003.md",
-      "reviewed_sha256": "db36a43c18f1d531ce92b5f012441c2d4f2fa5de3edcbc4d1410fe8efd161695",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA003.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "f2652d778ffc544ddb6c13429ab8cbe032926cbdc7142a459d6572524036fe53",
       "reviewed_domain": "Fixed probability exp(1)/4.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch003.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.inverseEPlus",
@@ -917,14 +1033,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.InverseEPlus",
+      "proof_module": "SampLib.Constants.InverseEPlus",
       "public_spec": "SampLib.InverseEPlus.inverseEPlus_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch003.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch003.md",
-      "reviewed_sha256": "b455b815ced7eb4d3642b299d913aee64b1e52da6d46084f764cb6019688ebfe",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA003.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "2af09d4f6a033863658c1731936e3cb871c750f7d9441cfcd1edf03339351f25",
       "reviewed_domain": "All c : Nat with 1 <= c; probability 1/(exp(1)+c-2).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch003.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.inverseEPlusContinuedFraction",
@@ -934,14 +1053,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.EContinuedFractionConstants",
+      "proof_module": "SampLib.Constants.EContinuedFractionConstants",
       "public_spec": "SampLib.EContinuedFractionConstants.inverseEPlusContinuedFraction_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch014.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch014.md",
-      "reviewed_sha256": "d04a308b749301c91cee91e5da7bd21b3835638c654934d05eb73fa77ec23058",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA006.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "5b6e6fe63fd69f45efa96120b9245e4ed26c0d79d59541786c56d2ff9c1c2377",
       "reviewed_domain": "All a,b : Nat with 0 < b <= a; probability1/(exp(1)+a/b-2), including a=b.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch014.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.tanhHalf",
@@ -951,14 +1073,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.TanhHalf",
+      "proof_module": "SampLib.Constants.TanhHalf",
       "public_spec": "SampLib.TanhHalf.tanhHalf_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch007.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch007.md",
-      "reviewed_sha256": "2e3e777be4a144980659a189ba0ae44a152b7c3ddc35bab31ef9c6e1b9e3fb52",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA004.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "e80d5774e1948899a131edbe786a2f5b33e75010a187280d1c13a66e1a40f688",
       "reviewed_domain": "Fixed probability tanh(1/2)=(exp(1)-1)/(exp(1)+1).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch007.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.threeMinusE",
@@ -968,14 +1093,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.EulerAffineConstants",
+      "proof_module": "SampLib.Constants.EulerAffineConstants",
       "public_spec": "SampLib.EulerAffineConstants.threeMinusE_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch003.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch003.md",
-      "reviewed_sha256": "cf608ac66f18bc6e5b22dde484691d700e1e7054bd06248cc8f43a9a4406748a",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA003.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "10962fe5f5f2ea9d2295daff68728e3448e01127b14c2e7a3c17f264af197ea9",
       "reviewed_domain": "Fixed probability 3-exp(1).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch003.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.arctanRationalOverRatio",
@@ -985,14 +1113,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ArctanRationalOverRatio",
+      "proof_module": "SampLib.Constants.ArctanRationalOverRatio",
       "public_spec": "SampLib.ArctanRationalOverRatio.arctanRationalOverRatio_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch008.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch008.md",
-      "reviewed_sha256": "8a1ac9bdf0ffa1d9fcf275387268652d3753bcaa9dcd88a85c89685de799956c",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA005.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "2e0b507798e0e027a239fd2663b1340217143e31e194bd659b3af3eca8625266",
       "reviewed_domain": "x,y : Int with 0 <= x <= y and 0 < y; probability atan(x/y)/(x/y), continuous value1 when x=0.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch008.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.fourOverThreePi",
@@ -1002,14 +1133,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.PiConstants",
+      "proof_module": "SampLib.Constants.PiConstants",
       "public_spec": "SampLib.PiConstants.fourOverThreePi_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch001.md",
-      "reviewed_sha256": "8582059fcd9c448a8ec460e938dfec7389a3ff971edc859c2c600fe7894bf4bc",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA001.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "ad901ceedd0666de40ed27b61111a5690693f234f56c9e2d89c887dc94496666",
       "reviewed_domain": "The named fixed pi probability; no sampler parameters.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch001.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.inversePi",
@@ -1019,14 +1153,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.PiConstants",
+      "proof_module": "SampLib.Constants.PiConstants",
       "public_spec": "SampLib.PiConstants.inversePi_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch001.md",
-      "reviewed_sha256": "8582059fcd9c448a8ec460e938dfec7389a3ff971edc859c2c600fe7894bf4bc",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA001.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "ad901ceedd0666de40ed27b61111a5690693f234f56c9e2d89c887dc94496666",
       "reviewed_domain": "The named fixed pi probability; no sampler parameters.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch001.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.inverseSqrtPi",
@@ -1036,14 +1173,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.InverseSqrtPi",
+      "proof_module": "SampLib.Constants.InverseSqrtPi",
       "public_spec": "SampLib.InverseSqrtPi.inverseSqrtPi_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch008.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch008.md",
-      "reviewed_sha256": "ddaea09f8efac7273398306da1a86cdb69da7a4025584938eda61fb38f7d02c0",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA005.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "ac1ab85c5a9eddfef534ac17b2fbb020a1087ed790bd91b21277861c2f701e4e",
       "reviewed_domain": "Fixed probability1/sqrt(pi).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch008.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.logPiOverPi",
@@ -1053,14 +1193,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.LogPiOverPi",
+      "proof_module": "SampLib.Constants.LogPiOverPi",
       "public_spec": "SampLib.LogPiOverPi.logPiOverPi_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch008.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch008.md",
-      "reviewed_sha256": "b7733e0112842d3ab2607ded35b6b00e6ae185f9e97af760545435eede138ef4",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA005.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "d303b057378b59de724c95c3df4c93b4251c3cb2564e3c9f8db987deb7631330",
       "reviewed_domain": "Fixed probability log(pi)/pi.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch008.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.piMinusThree",
@@ -1070,14 +1213,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.PiConstants",
+      "proof_module": "SampLib.Constants.PiConstants",
       "public_spec": "SampLib.PiConstants.piMinusThree_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch001.md",
-      "reviewed_sha256": "8582059fcd9c448a8ec460e938dfec7389a3ff971edc859c2c600fe7894bf4bc",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA001.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "ad901ceedd0666de40ed27b61111a5690693f234f56c9e2d89c887dc94496666",
       "reviewed_domain": "The named fixed pi probability; no sampler parameters.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch001.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.piMinusThreeOverFour",
@@ -1087,14 +1233,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.PiConstants",
+      "proof_module": "SampLib.Constants.PiConstants",
       "public_spec": "SampLib.PiConstants.piMinusThreeOverFour_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch001.md",
-      "reviewed_sha256": "8582059fcd9c448a8ec460e938dfec7389a3ff971edc859c2c600fe7894bf4bc",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA001.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "ad901ceedd0666de40ed27b61111a5690693f234f56c9e2d89c887dc94496666",
       "reviewed_domain": "The named fixed pi probability; no sampler parameters.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch001.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.piQuarter",
@@ -1104,14 +1253,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.PiConstants",
+      "proof_module": "SampLib.Constants.PiConstants",
       "public_spec": "SampLib.PiConstants.piQuarter_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch001.md",
-      "reviewed_sha256": "8582059fcd9c448a8ec460e938dfec7389a3ff971edc859c2c600fe7894bf4bc",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA001.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "ad901ceedd0666de40ed27b61111a5690693f234f56c9e2d89c887dc94496666",
       "reviewed_domain": "The named fixed pi probability; no sampler parameters.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch001.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.piQuarterMinusHalf",
@@ -1121,14 +1273,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.PiConstants",
+      "proof_module": "SampLib.Constants.PiConstants",
       "public_spec": "SampLib.PiConstants.piQuarterMinusHalf_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch001.md",
-      "reviewed_sha256": "8582059fcd9c448a8ec460e938dfec7389a3ff971edc859c2c600fe7894bf4bc",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA001.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "ad901ceedd0666de40ed27b61111a5690693f234f56c9e2d89c887dc94496666",
       "reviewed_domain": "The named fixed pi probability; no sampler parameters.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch001.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.piTwelfth",
@@ -1138,14 +1293,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.PiConstants",
+      "proof_module": "SampLib.Constants.PiConstants",
       "public_spec": "SampLib.PiConstants.piTwelfth_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch001.md",
-      "reviewed_sha256": "8582059fcd9c448a8ec460e938dfec7389a3ff971edc859c2c600fe7894bf4bc",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA001.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "ad901ceedd0666de40ed27b61111a5690693f234f56c9e2d89c887dc94496666",
       "reviewed_domain": "The named fixed pi probability; no sampler parameters.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch001.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.erfRatio",
@@ -1155,16 +1313,19 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ErfRatio",
+      "proof_module": "SampLib.Constants.ErfRatio",
       "public_spec": "SampLib.ErfRatio.erfRatio_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch026.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch026.md",
-      "reviewed_sha256": "a82b823337089efeee2232f40b27df860b68797403ebe1cb8fd15915e70b0a6f",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA011.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "5a6bc8fe797c5b373c76ec089ad633afae29bbda90e9c620ef7769722d65f045",
       "reviewed_domain": "Every unitInterval threshold x; exact-real uniforms; Bernoulli erf(x)/erf(1).",
       "finding": null,
       "previous_owners": [
         "/root/prove_constants"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch026.json"
       ]
     },
     {
@@ -1175,14 +1336,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.EulerMascheroni",
+      "proof_module": "SampLib.Constants.EulerMascheroni",
       "public_spec": "SampLib.EulerMascheroni.eulerMascheroni_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch018.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch018.md",
-      "reviewed_sha256": "c669c3ee1c7cd8225ba393e5bec43611883f6fe6e2d855c64c07b5aaf8263e9d",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA009.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "8bdd97b4beb07e2279a9024fcca93785a3a03720baf9c1e91c0ac7e4fa08e523",
       "reviewed_domain": "Fixed Euler-Mascheroni constant probability; exact natural bit-count getter and positive rational series, no external analytic identity assumption.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch018.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.logOnePlusRational",
@@ -1192,14 +1356,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.LogOnePlusRational",
+      "proof_module": "SampLib.Constants.LogOnePlusRational",
       "public_spec": "SampLib.LogOnePlusRational.logOnePlusRational_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch002.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch002.md",
-      "reviewed_sha256": "3e80398d70d33e48c74255529b03974ba1b48a2b57940b8bb6643b1d6caccfd6",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA002.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "f3730cd368cd06c00f7458455357e0eb7c653c112692c111a5f144babfad8b2a",
       "reviewed_domain": "a,b : Int, 0 <= a, 0 < b, a <= b; both endpoints included.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch002.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.lowerGammaIntegerRatio",
@@ -1209,16 +1376,19 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.LowerGammaIntegerRatio",
+      "proof_module": "SampLib.Constants.LowerGammaIntegerRatio",
       "public_spec": "SampLib.LowerGammaIntegerRatio.lowerGammaIntegerRatio_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch026.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch026.md",
-      "reviewed_sha256": "a913c3da261cb37db7b3fbb8b5941c29a138acee79d21392dfc48d76714a66c6",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA011.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "b4665d6d021cb6a744b478ec99a59127b551422344702204d2038c9adc7f3d03",
       "reviewed_domain": "Every positive natural shape m and unitInterval threshold x; exact-real uniforms; normalized lower incomplete-gamma gamma(m,x)/gamma(m,1).",
       "finding": null,
       "previous_owners": [
         "/root/prove_constants"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch026.json"
       ]
     },
     {
@@ -1229,14 +1399,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.RationalIntegerPower",
+      "proof_module": "SampLib.Constants.RationalIntegerPower",
       "public_spec": "SampLib.RationalIntegerPower.rationalIntegerPower_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch002.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch002.md",
-      "reviewed_sha256": "86616d1fd219d7fb58e2b3c46b2bf725b24ea4a2e33df9873b194f69085d80e9",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA002.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "0b006eb4b0d045ab6f5cdf989fd28d31b8b0f7e057f188d2e0055a492ed24dd7",
       "reviewed_domain": "a,b : Int, 0 <= a, 0 < b, a <= b; every n : Nat, including 0^0 = 1.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch002.json"
+      ]
     },
     {
       "sampler": "Occil.Constants.zetaRelated",
@@ -1246,14 +1419,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ZetaRelated",
+      "proof_module": "SampLib.Constants.ZetaRelated",
       "public_spec": "SampLib.ZetaRelated.zetaRelated_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch025.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch025.md",
-      "reviewed_sha256": "612e8e8007fd7c45e6c8b805cf17d809608037adc70e4d7e77190ea83d704284",
+      "review_receipt": "agent-docs/reviews/ExactRound3ConstantsA010.json",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "reviewed_sha256": "8f30cc33ca2f4e3c0f2bf7d2fe83b9dce626b496e2777662d52421042a0999c5",
       "reviewed_domain": "Every natural dimension k>=2; actual allocated independent geometric-bag vector and all repeated product trials; output Bernoulli eta(k)=(1-2^(1-k))*Re(riemannZeta k).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch025.json"
+      ]
     },
     {
       "sampler": "Occil.DiscreteExtra.binomialHalfRejection",
@@ -1263,14 +1439,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.BinomialHalfRejection",
+      "proof_module": "SampLib.Discrete.BinomialHalfRejection",
       "public_spec": "SampLib.BinomialHalfRejection.binomialHalfRejection_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactDiscreteBatch004.json",
-      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch004.md",
-      "reviewed_sha256": "3e04b91a288a1272e26694046c138450db1f300db57b51a056c48ca31837ab0e",
+      "review_receipt": "agent-docs/reviews/ExactRound3DiscreteCommonB004.json",
+      "review_evidence": "agent-docs/reviews/Round3DiscreteCommon.md",
+      "reviewed_sha256": "2aedd9b256644e23905fdfc6e82738802a5cdfc882f00afc68e41d591c14f87e",
       "reviewed_domain": "Every natural number of trials, including zero, small sizes, odd sizes and even sizes. The target is the canonical fair binomial law. UniformInt is the only random primitive assumption; arbitrary ENNReal continuation credit, including infinity, is supported.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactDiscreteBatch004.json"
+      ]
     },
     {
       "sampler": "Occil.DiscreteExtra.betaNegativeBinomial",
@@ -1280,14 +1459,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.BetaNegativeBinomial",
+      "proof_module": "SampLib.Discrete.BetaNegativeBinomial",
       "public_spec": "SampLib.BetaNegativeBinomial.betaNegativeBinomial_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactDiscreteBatch002.json",
-      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch002.md",
-      "reviewed_sha256": "d0f9c60b6e956b7bd0bd0434b8d225e1ef47d211248c6956998cef2b0077e85e",
+      "review_receipt": "agent-docs/reviews/ExactRound3DiscreteCommonB002.json",
+      "review_evidence": "agent-docs/reviews/Round3DiscreteCommon.md",
+      "reviewed_sha256": "3967a7f9fdf5ea7a72a52b78315a329014b73a0ae43aeace67514d6f7ea19992",
       "reviewed_domain": "All natural success counts and positive rational beta shapes represented by arbitrary positive numerator/denominator pairs, including unreduced and subunit shapes.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactDiscreteBatch002.json"
+      ]
     },
     {
       "sampler": "Occil.DiscreteExtra.inversePolya",
@@ -1297,14 +1479,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.InversePolya",
+      "proof_module": "SampLib.Discrete.InversePolya",
       "public_spec": "SampLib.InversePolya.inversePolya_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactDiscreteBatch002.json",
-      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch002.md",
-      "reviewed_sha256": "4a958247cccdd2bd0ab7a8a9ecb5dff8211f41370b962e5d4f9c9b6e7b1a3dff",
+      "review_receipt": "agent-docs/reviews/ExactRound3DiscreteCommonB002.json",
+      "review_evidence": "agent-docs/reviews/Round3DiscreteCommon.md",
+      "reviewed_sha256": "e23402a263f076eb50263c43de5d5d9e09269fa7f80e68a596ea28189162d753",
       "reviewed_domain": "All natural success counts, unmarked counts and reinforcements, with positive marked count; includes zero requested successes, no unmarked balls and zero reinforcement. No finite-mean assumption.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactDiscreteBatch002.json"
+      ]
     },
     {
       "sampler": "Occil.DiscreteExtra.polyaRational",
@@ -1314,14 +1499,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.PolyaRational",
+      "proof_module": "SampLib.Discrete.PolyaRational",
       "public_spec": "SampLib.PolyaRational.polyaRational_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactDiscreteBatch006.json",
-      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch006.md",
-      "reviewed_sha256": "5dcf44f6432a5671829cb62b154b4925f582feaf29d5f598890ee78dc6d79423",
+      "review_receipt": "agent-docs/reviews/ExactRound3DiscreteCommonB006.json",
+      "review_evidence": "agent-docs/reviews/Round3DiscreteCommon.md",
+      "reviewed_sha256": "25fd93d60a5450a125ecd636b8b080f94059c6a2d6159317a10f312e0836f406",
       "reviewed_domain": "Every positive rational shape A/B and success probability s/t with naturals A, B, s > 0 and s <= t, including s = t (point mass at zero) and shapes below one; every other integer input makes the source fail, so the domain is complete. The law is the canonical real-shape negative binomial NegativeBinomialShape.law with mass multichoose(A/B, n) (s/t)^(A/B) (1 - s/t)^n on failure counts n, output Val.int n. Arbitrary ENNReal credit, including infinity, is supported. No externally assumed sampler callbacks are needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactDiscreteBatch006.json"
+      ]
     },
     {
       "sampler": "Occil.DiscreteExtra.waringYule",
@@ -1331,14 +1519,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.WaringYule",
+      "proof_module": "SampLib.Discrete.WaringYule",
       "public_spec": "SampLib.WaringYule.waringYule_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactDiscreteBatch002.json",
-      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch002.md",
-      "reviewed_sha256": "97194f39e9d8687e3fe91274928dcf380c6b00eae66f058de9b9927f57bc3cec",
+      "review_receipt": "agent-docs/reviews/ExactRound3DiscreteCommonB002.json",
+      "review_evidence": "agent-docs/reviews/Round3DiscreteCommon.md",
+      "reviewed_sha256": "eb27d1b7c15cdd70612b865b33e70f58d5ccc0ab98d7ad662e796d7662c4b03a",
       "reviewed_domain": "Positive rational alpha and beta, including subunit and unreduced shapes; zero-based failures before the first marked draw.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactDiscreteBatch002.json"
+      ]
     },
     {
       "sampler": "Occil.DiscreteExtra.yuleSimon",
@@ -1348,14 +1539,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.YuleSimon",
+      "proof_module": "SampLib.Discrete.YuleSimon",
       "public_spec": "SampLib.YuleSimon.yuleSimon_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactDiscreteBatch002.json",
-      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch002.md",
-      "reviewed_sha256": "a9f5d465d184ab070e14acddc5a0a3625f3d64f2bd33a154e109c7f8db2db22e",
+      "review_receipt": "agent-docs/reviews/ExactRound3DiscreteCommonB002.json",
+      "review_evidence": "agent-docs/reviews/Round3DiscreteCommon.md",
+      "reviewed_sha256": "7055f240d5df2ca30562fb4917a1c4226ffd97eb17e6d7b11e3f4a3b7d625636",
       "reviewed_domain": "Any positive rational shape, including subunit and unreduced shapes; positive integer output, obtained by adding one to the beta-geometric failure count.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactDiscreteBatch002.json"
+      ]
     },
     {
       "sampler": "Occil.DiscreteExtra.generalizedGeometric",
@@ -1365,14 +1559,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.GeneralizedGeometric",
+      "proof_module": "SampLib.Discrete.GeneralizedGeometric",
       "public_spec": "SampLib.GeneralizedGeometric.generalizedGeometric_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactDiscreteBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch001.md",
-      "reviewed_sha256": "d54ba2f9b3123cd1b7494092cd323f899507c49e245cf3ebd09a69f2e6c9b4d7",
+      "review_receipt": "agent-docs/reviews/ExactRound3DiscreteCommonB001.json",
+      "review_evidence": "agent-docs/reviews/Round3DiscreteCommon.md",
+      "reviewed_sha256": "3bca73aa077fb01e4f45f29d1347d376d15c0b2f68c46739476922516659af96",
       "reviewed_domain": "Any indexed fresh continuation-coin family, queried only at positive source indices, whose survival product from the first index tends to zero. No geometric rate, finite mean, or uniform-integer primitive assumption is required. The output is the positive first stopping index.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactDiscreteBatch001.json"
+      ]
     },
     {
       "sampler": "Occil.DiscreteExtra.generalizedSibuya",
@@ -1382,14 +1579,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.GeneralizedSibuya",
+      "proof_module": "SampLib.Discrete.GeneralizedSibuya",
       "public_spec": "SampLib.GeneralizedSibuya.generalizedSibuya_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactDiscreteBatch003.json",
-      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch003.md",
-      "reviewed_sha256": "afac9b71cb6d4ce70f4b3da21faee1087d81f7584dde79932524a1c717a78d20",
+      "review_receipt": "agent-docs/reviews/ExactRound3DiscreteCommonB003.json",
+      "review_evidence": "agent-docs/reviews/Round3DiscreteCommon.md",
+      "reviewed_sha256": "b42f3221cef3f1d6273c1e791ff43cd2c560adcc4da8d8ffb108290a6afa92b3",
       "reviewed_domain": "All positive rational alpha and nonnegative rational nu with alpha < nu+1, represented by unreduced natural numerator/positive denominator pairs. Includes nu=0 and alpha>1 where admissible. Output is positive; no finite-mean assumption.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactDiscreteBatch003.json"
+      ]
     },
     {
       "sampler": "Occil.DiscreteExtra.rationalPowerCoin",
@@ -1399,14 +1599,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.RationalPower",
+      "proof_module": "SampLib.Common.RationalPower",
       "public_spec": "SampLib.RationalPower.rationalPowerCoin_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch017.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch017.md",
-      "reviewed_sha256": "6952c1001f194403d6e8e0eb80021456a31e2970531e521eaf55812d7c0c0c33",
+      "review_receipt": "agent-docs/reviews/ExactRound3DiscreteCommonA001.json",
+      "review_evidence": "agent-docs/reviews/Round3DiscreteCommon.md",
+      "reviewed_sha256": "686c19d494d5886d7c943f3ba51eed0f76f40e5f3eb08860a754b9dbed7d997a",
       "reviewed_domain": "Every a,b : Nat with b>0 and every p : unitInterval; arbitrary input callback, includes exponent0 and both input endpoints.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch017.json"
+      ]
     },
     {
       "sampler": "Occil.DiscreteExtra.zeta",
@@ -1416,14 +1619,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.Zeta",
+      "proof_module": "SampLib.Discrete.Zeta",
       "public_spec": "SampLib.Zeta.zeta_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactDiscreteBatch006.json",
-      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch006.md",
-      "reviewed_sha256": "8184966ff8b6bd4da4db2f4c8e12bb23b08705d116000602fc5c79d9f4f40a0f",
+      "review_receipt": "agent-docs/reviews/ExactRound3DiscreteCommonB006.json",
+      "review_evidence": "agent-docs/reviews/Round3DiscreteCommon.md",
+      "reviewed_sha256": "8b07c344a171ba5554af27b0ff85c9d8c885a14e0e5dc79ba321e83a0e1790c3",
       "reviewed_domain": "Every rational exponent a/b > 1 with naturals 0 < b < a; integer inputs with b <= 0 or a <= b make the source fail, so the domain is complete. The law on the naturals has no mass at 0 and mass (n+1)^(-a/b) / sum_m (m+1)^(-a/b) at n+1; the output is Val.int n. Arbitrary ENNReal credit, including infinity, is supported. No externally assumed sampler callbacks are needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactDiscreteBatch006.json"
+      ]
     },
     {
       "sampler": "Occil.DiscreteExtra.zipf",
@@ -1433,14 +1639,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.Zipf",
+      "proof_module": "SampLib.Discrete.Zipf",
       "public_spec": "SampLib.Zipf.zipf_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactDiscreteBatch005.json",
-      "review_evidence": "agent-docs/reviews/ExactDiscreteBatch005.md",
-      "reviewed_sha256": "03808b22a3b2909e8871e20fb4758e66e7e65befd68d25316f86266426bb41c4",
+      "review_receipt": "agent-docs/reviews/ExactRound3DiscreteCommonB005.json",
+      "review_evidence": "agent-docs/reviews/Round3DiscreteCommon.md",
+      "reviewed_sha256": "8aff3252095ddd4cd8c23d5ac408dbd90db28f8f67ee82bf62d429c0ff00ace2",
       "reviewed_domain": "Every positive finite bound n and nonnegative rational exponent a/b, with natural a and positive natural b. The target law is on Fin n and the actual output integer is k+1. Arbitrary ENNReal credit, including infinity, is supported. No externally assumed sampler callbacks are needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactDiscreteBatch005.json"
+      ]
     },
     {
       "sampler": "Occil.General.incompleteInformation",
@@ -1450,14 +1659,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.IncompleteInformation",
+      "proof_module": "SampLib.General.IncompleteInformation",
       "public_spec": "SampLib.IncompleteInformation.incompleteInformation_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch004.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch004.md",
-      "reviewed_sha256": "ba31674fb28b24d44572d845c2eed6c389f93f1f15102ae83dcc962780aef974",
+      "review_receipt": "agent-docs/reviews/ExactRound3GeneralB002.json",
+      "review_evidence": "agent-docs/reviews/Round3General.md",
+      "reviewed_sha256": "be4442e3df693c6efe1537b657659a728eca2db846e79aceea1a6b5997fcfc47",
       "reviewed_domain": "Any positive finite support size and monotone real-valued finite CDF reaching one, including irrational masses and zero-mass plateaus. Valid dyadic enclosure callbacks are required only at in-range indices.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch004.json"
+      ]
     },
     {
       "sampler": "Occil.General.markovStep",
@@ -1467,14 +1679,17 @@
       "status": "accepted",
       "classification": "support",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.MarkovChain",
+      "proof_module": "SampLib.General.MarkovChain",
       "public_spec": "SampLib.MarkovChain.markovStep_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch001.md",
-      "reviewed_sha256": "325114027310e598ac3353f76dd5d3abd357f3c3e135e01b1ec9e2b197a74b89",
+      "review_receipt": "agent-docs/reviews/ExactRound3GeneralB001.json",
+      "review_evidence": "agent-docs/reviews/Round3General.md",
+      "reviewed_sha256": "56224c487a39afd990278b97b5ddb0c216cb2834ad804f2576688b414714cc4e",
       "reviewed_domain": "Any finite list of positive-total nonnegative integer rows and any valid row index; rectangular matrices and zero weights are permitted.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch001.json"
+      ]
     },
     {
       "sampler": "Occil.General.refinedCDFComparison",
@@ -1484,14 +1699,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "latent_coin",
-      "proof_module": "SampLib.Samplers.RefinedCDFComparison",
+      "proof_module": "SampLib.General.RefinedCDFComparison",
       "public_spec": "SampLib.RefinedCDFComparison.refinedCDFComparison_coinSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch004.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch004.md",
-      "reviewed_sha256": "270c01fa4c0f49825902a2e10b02e8d2209dc1149d44296f18d07cf405eb9e9f",
+      "review_receipt": "agent-docs/reviews/ExactRound3GeneralB002.json",
+      "review_evidence": "agent-docs/reviews/Round3General.md",
+      "reviewed_sha256": "cc5db5533d56dc693a93dc40aacffe117307c23716bb1ac2210d77780baf81f3",
       "reviewed_domain": "Any initial owned cache, index and arbitrarily tight valid dyadic threshold enclosures. The returned comparison keeps the same latent uniform, refined prefix and arbitrary joint output/latent credits.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch004.json"
+      ]
     },
     {
       "sampler": "Occil.General.refinedCoin",
@@ -1501,14 +1719,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.RefinedCoin",
+      "proof_module": "SampLib.General.RefinedCoin",
       "public_spec": "SampLib.RefinedCoin.refinedCoin_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch004.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch004.md",
-      "reviewed_sha256": "66fa542c7b155b691668036e5ce558baa69bdbb541e95cb304c39aff9b1587fd",
+      "review_receipt": "agent-docs/reviews/ExactRound3GeneralB002.json",
+      "review_evidence": "agent-docs/reviews/Round3General.md",
+      "reviewed_sha256": "4f295b295ae530c47796fb47db6ff4997060919b0db089c0c1552a15cec6f085",
       "reviewed_domain": "Arbitrarily tight dyadic probability enclosures, not necessarily nested and with no known convergence rate; both probability endpoints allowed. Bounds callbacks return the actual positive-level lower/upper numerators.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch004.json"
+      ]
     },
     {
       "sampler": "Occil.General.shapeRejection",
@@ -1518,14 +1739,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ShapeRejection",
+      "proof_module": "SampLib.General.ShapeRejection",
       "public_spec": "SampLib.ShapeRejection.shapeRejection_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch001.md",
-      "reviewed_sha256": "c5522cc5bd5d4d37f505fdaa32c935bc2d2274ac23ea86b856e9648d5a15ed55",
+      "review_receipt": "agent-docs/reviews/ExactRound3GeneralB001.json",
+      "review_evidence": "agent-docs/reviews/Round3General.md",
+      "reviewed_sha256": "0594bc45de1a3b6978372c6284c825c80173104514879801d6fb49c201216df2",
       "reviewed_domain": "Any probability proposal on a measurable output type, measurable positive-mass acceptance set (including mass one), a proposal IsDistSpec and a correct deterministic membership-test specification.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch001.json"
+      ]
     },
     {
       "sampler": "Occil.WeightedVariants.voseDraw",
@@ -1535,14 +1759,17 @@
       "status": "accepted",
       "classification": "support",
       "spec_kind": "owned",
-      "proof_module": "SampLib.AliasTable",
+      "proof_module": "SampLib.Weighted.Support.AliasTable",
       "public_spec": "SampLib.AliasTable.voseDraw_ownedDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch002.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch002.md",
-      "reviewed_sha256": "18963a0ba6a5e216c05ccd8ae8b247867e61608f954c26de34edc71e52021a60",
+      "review_receipt": "agent-docs/reviews/ExactRound3WeightedB001.json",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "reviewed_sha256": "0356fbedef3039f447ae5908106f480f9e6f20dd201357b58a972afaa34f14db",
       "reviewed_domain": "Every finite natural weight list with positive total and every owned alias table whose category mass equals length times the corresponding weight; zero-weight categories are allowed and both arrays are retained.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch002.json"
+      ]
     },
     {
       "sampler": "Occil.WeightedVariants.optimalChoice",
@@ -1552,12 +1779,12 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.OptimalChoice",
+      "proof_module": "SampLib.Weighted.OptimalChoice",
       "public_spec": "SampLib.Optimal.optimalChoice_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch011.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch011.md",
-      "reviewed_sha256": "25a858d89237ff490b3960e5330a291e225a83b456317bf6a2de706edae2d60a",
+      "review_receipt": "agent-docs/reviews/ExactRound3WeightedA001.json",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "reviewed_sha256": "e6302d292ec9d92d111706e17b2847e85014767d8bc7dacc5df0fd8b5a406547",
       "reviewed_domain": "Every finite natural-weight list with positive total, encoded as integer list values: zero-weight rows, a certain row (repaired all-ones endpoint, e.g. [2,0] and [0,0,5]), the length-one shortcut, exact totals 2^k-2^l without padding and padded totals with an appended rejection label. The full canonical weighted-choice law on original integer position labels supports arbitrary ENNReal continuation credit, including infinity.",
       "finding": null,
       "previous_owners": [
@@ -1565,6 +1792,9 @@
       ],
       "previous_reviewers": [
         "/root/review_exact_b"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch011.json"
       ]
     },
     {
@@ -1575,12 +1805,12 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.OptimalDraw",
+      "proof_module": "SampLib.Weighted.OptimalDraw",
       "public_spec": "SampLib.OptimalTable.optimalDraw_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch012.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch012.md",
-      "reviewed_sha256": "3b912400a413ea83274ca1d5fc162f1980cf13dc2c07ca6c6c5da248a5f042de",
+      "review_receipt": "agent-docs/reviews/ExactRound3WeightedA002.json",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "reviewed_sha256": "59dba21dbc5f4fccdea40726f063d51b7ace12c0d231a0eeccec6216870be194",
       "reviewed_domain": "Every valid cyclic probability table given as the source tuple (matrix,(k,(l,rejected))): arbitrary natural rows rows : Fin n -> N (bits above 2^k ignored, as the scan reads only the low k bits), any l<k, any integer rejection label (outside [0,n) means no rejection), cyclic row numerators summing to 2^k-2^l (total mass one), and positive accepted mass (rejected row mass below one, any rejection probability below one). The law is the canonical weighted-choice law on row labels of the accepted numerators, for arbitrary ENNReal continuation credit including infinity.",
       "finding": null,
       "previous_owners": [
@@ -1588,6 +1818,9 @@
       ],
       "previous_reviewers": [
         "/root/review_exact_b"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch012.json"
       ]
     },
     {
@@ -1598,14 +1831,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.SortedChoice",
+      "proof_module": "SampLib.Weighted.SortedChoice",
       "public_spec": "SampLib.SortedChoice.sortedChoice_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch010.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch010.md",
-      "reviewed_sha256": "b941da3c35ea08595b001baacbea71d7361f45063a6aa7869ca7378b836ab827",
+      "review_receipt": "agent-docs/reviews/ExactRound3WeightedB007.json",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "reviewed_sha256": "c660db5d60ae7820a42ad27acd24a7ce4a319f7cf24dba022778c4fe248e8cb0",
       "reviewed_domain": "Every positive-total natural-weight list that is monotone (nondecreasing or nonincreasing), including zero rows, constant lists, all-zero envelope groups and the length-one shortcut. Unsorted lists fail the source's adjacent-pair check, so this is the complete domain. FLDR's IsDistSpec is used at every group draw. The full canonical weighted-choice law on original integer position labels supports arbitrary ENNReal continuation credit, including infinity.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch010.json"
+      ]
     },
     {
       "sampler": "Occil.WeightedVariants.succinctChoice",
@@ -1615,14 +1851,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.SuccinctChoice",
+      "proof_module": "SampLib.Weighted.SuccinctChoice",
       "public_spec": "SampLib.SuccinctChoice.succinctChoice_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch009.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch009.md",
-      "reviewed_sha256": "23444b16c6706bfd41367b76451974859873952977af24c64460f9ad11030cdb",
+      "review_receipt": "agent-docs/reviews/ExactRound3WeightedB006.json",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "reviewed_sha256": "2a14d11d001dcae2dac8cb114407bbf6d727f799844e19078525cc6a6837c194",
       "reviewed_domain": "Every finite natural-weight list with positive total and either density 2^19*length<=sum, or all weights strictly below2^32. Dense lists may contain arbitrarily large weights. Sparse packed lists satisfy precisely the source32-bit field guard. The full canonical weighted-choice law on original integer position labels supports arbitrary ENNReal continuation credit, including infinity.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch009.json"
+      ]
     },
     {
       "sampler": "Occil.Weighted.inclusionSplitting",
@@ -1632,14 +1871,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.InclusionSplitting",
+      "proof_module": "SampLib.Weighted.InclusionSplitting",
       "public_spec": "SampLib.InclusionSplitting.inclusionSplitting_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch005.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch005.md",
-      "reviewed_sha256": "3fcca04ecfbbae4bb28038827e9cf436b85f25ed1935589b41b6b168af70465f",
+      "review_receipt": "agent-docs/reviews/ExactRound3WeightedB003.json",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "reviewed_sha256": "432849d43be63264c4ecbdb9133d4243d7cf826cb2928557ea3e4118b5a3b874",
       "reviewed_domain": "All positive-total natural weights, count≤population length, and count*weight≤total at each position. Includes zero weights, full samples and capacity equality. A separate zero-count theorem covers every natural-weight list, including empty/all-zero populations, without uniform-integer assumptions. The target is the exact ordered full joint splitting law, with fixed size, no duplicates and prescribed inclusion probabilities.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch005.json"
+      ]
     },
     {
       "sampler": "Occil.Weighted.inclusionSystematic",
@@ -1649,14 +1891,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.InclusionSystematic",
+      "proof_module": "SampLib.Weighted.InclusionSystematic",
       "public_spec": "SampLib.InclusionSystematic.inclusionSystematic_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch003.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch003.md",
-      "reviewed_sha256": "cab6f93920df36d9a2f3befc630f1e825f471bd07a927a055b029e37b7b65982",
+      "review_receipt": "agent-docs/reviews/ExactRound3WeightedB002.json",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "reviewed_sha256": "a949361dd70ecefed41093a1296a47111abba57d9288cd98566b8653405e7bca",
       "reviewed_domain": "Any finite nonnegative integer weight list of positive total, natural count at most the population size, and count*weight<=total for each item. A supplementary zero-count spec covers every natural weight list, including empty/all-zero populations, without uniform-integer assumptions.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch003.json"
+      ]
     },
     {
       "sampler": "Occil.Weighted.fastLoadedDiceRoller",
@@ -1666,16 +1911,19 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.FastLoadedDiceRoller",
+      "proof_module": "SampLib.Weighted.FastLoadedDiceRoller",
       "public_spec": "SampLib.FastLoadedDice.fastLoadedDiceRoller_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch010.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch010.md",
-      "reviewed_sha256": "43af143ad4e0f81f49dec79fa296cfb0c846c9b8561668e47add1212de1dd461",
+      "review_receipt": "agent-docs/reviews/ExactRound3WeightedB007.json",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "reviewed_sha256": "a3cff0e8c8e14e8c594c99bc29a8b7c39b37a5c6a0af43fe10460c9fad3f007e",
       "reviewed_domain": "Every finite natural-weight list with positive total, including zero rows, certain rows and singletons; negative or zero-total inputs make the source fail. The source pads the total to the next power of two with one implicit rejection row that restarts the walk and is never returned. The full canonical weighted-choice law on original integer position labels supports arbitrary ENNReal continuation credit, including infinity.",
       "finding": null,
       "previous_owners": [
         "/root/prove_weighted"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch010.json"
       ]
     },
     {
@@ -1686,14 +1934,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.HanHoshi",
+      "proof_module": "SampLib.Weighted.HanHoshi",
       "public_spec": "SampLib.HanHoshi.hanHoshi_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch007.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch007.md",
-      "reviewed_sha256": "0ff63c38853a14afa12bfa4202e44e5cfba52824977e6235db392f5809831500",
+      "review_receipt": "agent-docs/reviews/ExactRound3WeightedB004.json",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "reviewed_sha256": "7609a5fa6266af55020a8e707cca2e955f9a0d43c62f314c38a3464167499f03",
       "reviewed_domain": "Every finite natural-weight vector of positive total, including zero weights, non-dyadic probabilities and certain rows. The output is the original-position integer label with the canonical categorical law. Arbitrary ENNReal output credit, including infinity, is supported; no finite runtime or continuation-moment premise is required.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch007.json"
+      ]
     },
     {
       "sampler": "Occil.Weighted.knuthYao",
@@ -1703,16 +1954,19 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.KnuthYao",
+      "proof_module": "SampLib.Weighted.KnuthYao",
       "public_spec": "SampLib.KnuthYao.knuthYao_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch008.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch008.md",
-      "reviewed_sha256": "9139a8ce544bc30f02728c2a5b4125865ce5f577dc064e119b790a7d51020b1b",
+      "review_receipt": "agent-docs/reviews/ExactRound3WeightedB005.json",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "reviewed_sha256": "540f52556747fad2799f9807b267a470ee62eeed206276dd07847c20320e85e1",
       "reviewed_domain": "Every finite natural-weight list with positive total, including zero weights, certain rows, dyadic and non-dyadic probabilities. The full canonical weighted-choice law uses original position labels. All measurable ENNReal output credit, including infinity, is allowed.",
       "finding": null,
       "previous_owners": [
         "/root/prove_weighted"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch008.json"
       ]
     },
     {
@@ -1723,16 +1977,19 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.RecycledSamples",
+      "proof_module": "SampLib.Weighted.RecycledSamples",
       "public_spec": "SampLib.RecycledSamples.recycledSamples_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch013.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch013.md",
-      "reviewed_sha256": "8e72a83c2d97e4c9ec13e3b3fafc6c750c75aa089ef0ffc08218080c7fea7df1",
+      "review_receipt": "agent-docs/reviews/ExactRound3WeightedB008.json",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "reviewed_sha256": "78f6d985224f0f98bfc10c4150ddc04a4462326dd67ddb232382c551c0e8595b",
       "reviewed_domain": "Every positive bound n and nonnegative count, including count 0; recycledSamples_zero_distSpec additionally covers count 0 for every integer bound. Negative counts fail at the source guard, and a positive count with n <= 0 fails in recycledUniform, so the domain is complete. The law is count IID uniform draws on [0,n), decoded as a list in sampling order. Arbitrary ENNReal credit, including infinity, is supported. The internal fresh pool is allocated and dropped.",
       "finding": null,
       "previous_owners": [
         "/root/prove_weighted"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch013.json"
       ]
     },
     {
@@ -1743,16 +2000,19 @@
       "status": "accepted",
       "classification": "support",
       "spec_kind": "owned",
-      "proof_module": "SampLib.Samplers.RecycledUniform",
+      "proof_module": "SampLib.Weighted.RecycledUniform",
       "public_spec": "SampLib.RecycledUniform.recycledUniform_ownedDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch013.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch013.md",
-      "reviewed_sha256": "a3671c1466ff46bcfa1dbb895812c5276da79f637cb1ae5f88e5b1161a309f2f",
+      "review_receipt": "agent-docs/reviews/ExactRound3WeightedB008.json",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "reviewed_sha256": "5adf332059a8df3a91423259eebe88f5fceed7d361e03a8222c9fcf772f85c64",
       "reviewed_domain": "Every positive bound n with an owned pool holding the reset state (0,1); n <= 0 makes the source fail. The output is uniform on [0,n) as Val.int r and the owned pool is returned holding (0,1). The reset state is the only reachable pool state in the source: newRecycler allocates (0,1), and from (0,1) every acceptance has quotient one, so the store writes (0,1). Arbitrary ENNReal credit, including infinity, is supported. The stronger joint theorem twp_recycledUniform covers every valid stored rank value < width.",
       "finding": null,
       "previous_owners": [
         "/root/prove_weighted"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch013.json"
       ]
     },
     {
@@ -1763,14 +2023,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ArctanFactory",
+      "proof_module": "SampLib.Bernoulli.ArctanFactory",
       "public_spec": "SampLib.ArctanFactory.arctanFactory_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch006.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch006.md",
-      "reviewed_sha256": "8d59d3777c3cd512863aa064ac7c3ee59227ad7a2e7ef1819185e0e1a8dde3e3",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA001.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "fe692bac84651ee0b89c452a86a597321de60f470b2c338b1d1311669b12bad3",
       "reviewed_domain": "All p : unitInterval; arbitrary input callback IsDistSpec without closedness assumption; probability atan(p).",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch006.json"
+      ]
     },
     {
       "sampler": "Occil.arctanOverPFactory",
@@ -1780,14 +2043,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.ArctanOverPFactory",
+      "proof_module": "SampLib.Bernoulli.ArctanOverPFactory",
       "public_spec": "SampLib.ArctanOverPFactory.arctanOverPFactory_distSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch006.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch006.md",
-      "reviewed_sha256": "19fe52ceb13c0eb22a5d74fe282a35fcf25f8d223bb8a4b376795a9bb1229974",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliALA001.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "reviewed_sha256": "cc7351fccae7dab00efd691e01b068c556a54839f3708013f39ee3f82bd71cd8",
       "reviewed_domain": "All p : unitInterval, including p=0 via continuous extension atan(p)/p=1; arbitrary input callback IsDistSpec without closedness assumption.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch006.json"
+      ]
     },
     {
       "sampler": "Occil.sampleGeometricBag",
@@ -1797,14 +2063,17 @@
       "status": "accepted",
       "classification": "support",
       "spec_kind": "latent_coin",
-      "proof_module": "SampLib.Samplers.SampleGeometricBag",
+      "proof_module": "SampLib.Bernoulli.SampleGeometricBag",
       "public_spec": "SampLib.SampleGeometricBag.sampleGeometricBag_coinSpec",
       "reviewer": "/root/review_exact_a",
-      "review_receipt": "agent-docs/reviews/ExactFactoriesBatch005.json",
-      "review_evidence": "agent-docs/reviews/ExactFactoriesBatch005.md",
-      "reviewed_sha256": "804eea01e0c02095bbc7dc1a5b7ae354c0d43f83cd580cf47b60ec7e7eafa1c5",
+      "review_receipt": "agent-docs/reviews/ExactRound3BernoulliMZA001.json",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "reviewed_sha256": "f0f6e252438c62483d0127a2279a2982b8b2abb79d335283b69d6053ac619179",
       "reviewed_domain": "Any owned bag root l and cached prefix p; conditional Bernoulli(U) with arbitrary measurable joint output/latent credit G:Bool->Real->ENNReal. The same root and refined cache remain owned across calls.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactFactoriesBatch005.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newBeta",
@@ -1851,16 +2120,19 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNGammaInteger",
+      "proof_module": "SampLib.PSRN.PSRNGammaInteger",
       "public_spec": "SampLib.PSRNGammaInteger.newGammaInteger_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch008.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch008.md",
-      "reviewed_sha256": "e474d53afed7e53e0369a05e7877a4277abfb71b38cd2dfee43fe8e3c7ee8bf0",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB006.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "d8e49b905519340c721f4f16c205c064b70eecfb822b44690f67ab50af879d58",
       "reviewed_domain": "All positive integer shapes and positive rational rates, with unrestricted positive integer numerator and denominator; shape zero is excluded because the actual source rejects it. Every finite precision and repeated alias retains all actual component ownership and arbitrary measurable joint latent-world ENNReal continuation credit, including infinity. Only UniformInt randomness is needed.",
       "finding": null,
       "previous_owners": [
         "/root/prove_psrn_geometry"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch008.json"
       ]
     },
     {
@@ -1871,16 +2143,19 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNGammaMixture",
+      "proof_module": "SampLib.PSRN.PSRNGammaMixture",
       "public_spec": "SampLib.PSRNGammaMixture.newGammaMixture_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch008.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch008.md",
-      "reviewed_sha256": "a2e19057e5eea01ccf88b50f8f94e36b462659b87b86e42005f6e66f964827a2",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB006.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "62525bb93c93dda113604c4e8905bf377cbc95605426b58a64c758ec50620a6d",
       "reviewed_domain": "All two positive integer shapes, positive rational common rates and rational selector weights0<=wa<=wb with wb>0, including selector endpoints0 and1. Every finite precision and repeated alias retains all actual component ownership and arbitrary measurable joint latent-world ENNReal continuation credit, including infinity. Only UniformInt randomness is needed.",
       "finding": null,
       "previous_owners": [
         "/root/prove_psrn_geometry"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch008.json"
       ]
     },
     {
@@ -1891,16 +2166,19 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNLindley",
+      "proof_module": "SampLib.PSRN.PSRNLindley",
       "public_spec": "SampLib.PSRNLindley.newLindley_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch008.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch008.md",
-      "reviewed_sha256": "49cce8c840477a50245049031328ad4fe9bbb6830b369b8f6a9a481d5f3c1971",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB006.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "eebfb0896a257a88b93610d8dbd79927c8fd681b7ac21ae2263d72a47d5ffa56",
       "reviewed_domain": "Every positive rational rate, including rates below one and unreduced fractions. The target is the canonical Lindley density, not merely an unnamed shape mixture. Every finite precision and repeated alias retains all actual component ownership and arbitrary measurable joint latent-world ENNReal continuation credit, including infinity. Only UniformInt randomness is needed.",
       "finding": null,
       "previous_owners": [
         "/root/prove_psrn_geometry"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch008.json"
       ]
     },
     {
@@ -1911,16 +2189,19 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "conditional_coin",
-      "proof_module": "SampLib.PSRNCoin",
+      "proof_module": "SampLib.PSRN.Support.PSRNCoin",
       "public_spec": "SampLib.LatentReal.Coin.coin_programSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactConditionalCoinBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactConditionalCoinBatch001.md",
-      "reviewed_sha256": "58a3c01266e12ada888393ca65db7de4686252968feccdecb9107bfc23b9d714",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNRestB001.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "548db82062c52f33f6dc95a0678c3457447de9bc36654b9f67b9fa25d6d29c97",
       "reviewed_domain": "Any owned deferred real model with measurable observation errors and a valid source observation protocol. Every finite real source value is allowed, including arbitrary atoms and values outside the unit interval; the conditional output bias is clamp(value,0,1). The same source ownership, refined posterior and arbitrary measurable output/world ENNReal credit are retained. Repeated trials keep their common latent dependency.",
       "finding": null,
       "previous_owners": [
         "/root/prove_psrn_core"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactConditionalCoinBatch001.json"
       ]
     },
     {
@@ -1931,14 +2212,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "latent_vector",
-      "proof_module": "SampLib.Samplers.PSRNInsideShape",
+      "proof_module": "SampLib.PSRN.PSRNInsideShape",
       "public_spec": "SampLib.PSRNInsideShape.newInsideShape_vectorSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentVectorBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentVectorBatch001.md",
-      "reviewed_sha256": "3c903f5e4205a77430218850f06a5908faab59f97431fed73fc0f91e988326f0",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB010.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "72ec8482d9a731697ce24f04214097e53208bb47ab88956d9736307e735473bd",
       "reviewed_domain": "Every positive finite dimension, measurable positive-volume shape event under the independent unit-uniform product, and a correctly specified actual shape callback. The result is the actual list of jointly owned deferred coordinate oracles, with the full conditional vector law, arbitrary joint ENNReal credits and all natural read precisions. Dimension zero is excluded by the actual source guard.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentVectorBatch001.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newRejection",
@@ -1948,14 +2232,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNRejection",
+      "proof_module": "SampLib.PSRN.PSRNRejection",
       "public_spec": "SampLib.PSRNRejection.newRejection_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch002.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch002.md",
-      "reviewed_sha256": "9f945860fbd67150ce1a0ef408065e6eacedeeefb31a26031adeb0f16f08e8f1",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB002.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "65d5dbefaaeb253b423032a6402f3f89815aa50ba0d525b5106a5a3248a974e2",
       "reviewed_domain": "Any actual deferred proposal constructor with a normalized joint latent model, measurable positive-mass event and resource-preserving conditional event-test specification on that same latent world. The actual accepted oracle and its refined posterior/ownership are retained; arbitrary measurable joint ENNReal credits are supported.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch002.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newUniform",
@@ -1965,14 +2252,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.LatentUniform",
+      "proof_module": "SampLib.Latent.LatentUniform",
       "public_spec": "SampLib.LatentUniform.newUniform_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch001.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch001.md",
-      "reviewed_sha256": "0ac202f892546ce47dafbb8b61307d250bfcf7868cb11d13432769f235781199",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB001.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "bb0812fce158c74d487ebe10facdad0f8b0bef23b0716a7fa62cc5d045330032",
       "reviewed_domain": "Construction of one ideal unit-uniform deferred real; every natural observation precision, including zero and repeated/decreasing reads, through aliases of the same returned closure. The actual heap root and arbitrary measurable joint posterior ENNReal credit are preserved.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch001.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newArcCosine",
@@ -2067,14 +2357,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNGammaFamilies",
+      "proof_module": "SampLib.PSRN.PSRNGammaFamilies",
       "public_spec": "SampLib.PSRNGammaFamilies.newGarima_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch010.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch010.md",
-      "reviewed_sha256": "be52aa3eea10aa06e088c7750e0c255ed82ebd07ee0270d542ba260f81b305a4",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB008.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "a7713f036d9d86d55e7a6a6f14403197b95aa75a7cb1fe2d83dfd59971fa7525",
       "reviewed_domain": "All positive rational rates theta=n/d with n>0, d>0, including unreduced fractions; the target is the canonical Garima density theta/(theta+2)(1+theta+theta x)e^{-theta x}. Outside the domain every branch fails in newExponential's guard. Every finite precision and repeated alias retains all actual component ownership and arbitrary measurable joint latent-world ENNReal continuation credit, including infinity. Only UniformInt randomness is needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch010.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newHyperbolicSecant",
@@ -2101,14 +2394,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNGammaFamilies",
+      "proof_module": "SampLib.PSRN.PSRNGammaFamilies",
       "public_spec": "SampLib.PSRNGammaFamilies.newIGarima_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch010.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch010.md",
-      "reviewed_sha256": "be52aa3eea10aa06e088c7750e0c255ed82ebd07ee0270d542ba260f81b305a4",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB008.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "a7713f036d9d86d55e7a6a6f14403197b95aa75a7cb1fe2d83dfd59971fa7525",
       "reviewed_domain": "All positive rational rates theta=n/d with n>0, d>0, including unreduced fractions; the target is the canonical i-Garima density theta/(theta+3)(2+theta+theta x)e^{-theta x}. Outside the domain every branch fails in newExponential's guard. Every finite precision and repeated alias retains all actual component ownership and arbitrary measurable joint latent-world ENNReal continuation credit, including infinity. Only UniformInt randomness is needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch010.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newMirra",
@@ -2118,14 +2414,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNGammaFamilies",
+      "proof_module": "SampLib.PSRN.PSRNGammaFamilies",
       "public_spec": "SampLib.PSRNGammaFamilies.newMirra_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch010.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch010.md",
-      "reviewed_sha256": "be52aa3eea10aa06e088c7750e0c255ed82ebd07ee0270d542ba260f81b305a4",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB008.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "a7713f036d9d86d55e7a6a6f14403197b95aa75a7cb1fe2d83dfd59971fa7525",
       "reviewed_domain": "All positive rational rates theta=n/d and second parameters alpha=an/ad with n,d,an,ad>0; the target is the canonical Mirra density theta^3/(alpha+theta^2)(1+alpha x^2/2)e^{-theta x}. Outside the domain the source guard or newExponential's guard fails. Every finite precision and repeated alias retains all actual component ownership and arbitrary measurable joint latent-world ENNReal continuation credit, including infinity. Only UniformInt randomness is needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch010.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newRayleigh",
@@ -2135,14 +2434,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNRayleigh",
+      "proof_module": "SampLib.PSRN.PSRNRayleigh",
       "public_spec": "SampLib.PSRNRayleigh.newRayleigh_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch009.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch009.md",
-      "reviewed_sha256": "4dedbbeb0e9c59f19b9db426bb777f176cf392b4617f8d635d09ff3920aab0d2",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB007.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "4c4846b6a8dbc04540e1d39b1b59b00eee14df711bc318c98753c6f826068f01",
       "reviewed_domain": "The parameter-free standard unit-scale Rayleigh sampler, using only UniformInt randomness. The actual returned deferred square-root oracle retains its single exponential whole/fraction world and physical cache. All finite observation precisions, repeated aliases, arbitrary measurable whole-world ENNReal continuation credit and infinity are supported.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch009.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newRectellipse",
@@ -2169,14 +2471,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNLindleyFamilies",
+      "proof_module": "SampLib.PSRN.PSRNLindleyFamilies",
       "public_spec": "SampLib.PSRNLindleyFamilies.newSushila_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch010.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch010.md",
-      "reviewed_sha256": "8c475ef87fa79f545de20089afe2b374eb3b4fbbc7bc8fde7981a73fe160311e",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB008.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "eee3ddca6c7694f16933d6fe92a074065ea884aec87e4091f361c2a611dffaa3",
       "reviewed_domain": "All positive rational Lindley rates theta=n/d and scales alpha=a/b with n,d,a,b>0; the target is Occil's definition, alpha times a canonical Lindley(theta) variate (the reviewer caller derives Shanker et al.'s density theta^2/(alpha(theta+1))(1+x/alpha)e^{-theta x/alpha} from it). Outside the domain the source guard or newLindley's guard fails. Every finite precision and repeated alias retains all actual component ownership and arbitrary measurable joint latent-world ENNReal continuation credit, including infinity. Only UniformInt randomness is needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch010.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newTulap",
@@ -2203,14 +2508,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNGammaFamilies",
+      "proof_module": "SampLib.PSRN.PSRNGammaFamilies",
       "public_spec": "SampLib.PSRNGammaFamilies.newWeightedExponentialGamma_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch010.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch010.md",
-      "reviewed_sha256": "be52aa3eea10aa06e088c7750e0c255ed82ebd07ee0270d542ba260f81b305a4",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB008.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "a7713f036d9d86d55e7a6a6f14403197b95aa75a7cb1fe2d83dfd59971fa7525",
       "reviewed_domain": "All positive rational rates theta=n/d with n>0, d>0, including unreduced fractions; the target is the canonical weighted exponential-gamma density theta^3 x(2+x)/(2(1+theta))e^{-theta x}. Outside the domain every branch fails in newExponential's guard. Every finite precision and repeated alias retains all actual component ownership and arbitrary measurable joint latent-world ENNReal continuation credit, including infinity. Only UniformInt randomness is needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch010.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newXLindley",
@@ -2220,14 +2528,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNLindleyFamilies",
+      "proof_module": "SampLib.PSRN.PSRNLindleyFamilies",
       "public_spec": "SampLib.PSRNLindleyFamilies.newXLindley_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch010.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch010.md",
-      "reviewed_sha256": "8c475ef87fa79f545de20089afe2b374eb3b4fbbc7bc8fde7981a73fe160311e",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB008.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "eee3ddca6c7694f16933d6fe92a074065ea884aec87e4091f361c2a611dffaa3",
       "reviewed_domain": "All positive rational rates theta=n/d with n>0, d>0; the target is the canonical XLindley density theta^2(2+theta+x)/(1+theta)^2 e^{-theta x}, with the selector-indexed exponential-or-Lindley world retained. Outside the domain both branches fail in their guards. Every finite precision and repeated alias retains all actual component ownership and arbitrary measurable joint latent-world ENNReal continuation credit, including infinity. Only UniformInt randomness is needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch010.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newXgamma",
@@ -2237,14 +2548,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNGammaFamilies",
+      "proof_module": "SampLib.PSRN.PSRNGammaFamilies",
       "public_spec": "SampLib.PSRNGammaFamilies.newXgamma_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch010.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch010.md",
-      "reviewed_sha256": "be52aa3eea10aa06e088c7750e0c255ed82ebd07ee0270d542ba260f81b305a4",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB008.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "a7713f036d9d86d55e7a6a6f14403197b95aa75a7cb1fe2d83dfd59971fa7525",
       "reviewed_domain": "All positive rational rates theta=n/d with n>0, d>0, including unreduced fractions; the target is the canonical xgamma density theta^2/(1+theta)(1+theta x^2/2)e^{-theta x}. Outside the domain every branch fails in newExponential's guard. Every finite precision and repeated alias retains all actual component ownership and arbitrary measurable joint latent-world ENNReal continuation credit, including infinity. Only UniformInt randomness is needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch010.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.expMinusCoin",
@@ -2254,16 +2568,19 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "conditional_coin",
-      "proof_module": "SampLib.Samplers.PSRNExpMinusCoin",
+      "proof_module": "SampLib.PSRN.PSRNExpMinusCoin",
       "public_spec": "SampLib.LatentReal.ExpMinusCoin.expMinusCoin_programSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactConditionalCoinBatch002.json",
-      "review_evidence": "agent-docs/reviews/ExactConditionalCoinBatch002.md",
-      "reviewed_sha256": "93709efaaa4747f79aa838f46d8a3748117406278822da69a6d47a7540af69cb",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNRestB002.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "ca1f83567a71da4da22019d4f3d8466d1045f4de3669591d48395c1aeea1b078",
       "reviewed_domain": "An owned deferred real oracle with measurable errors, AE nonnegative values, and either global AE avoidance of the integer grid or global AE first-observation error zero. The conditional bias is exp(-value) almost everywhere. The same source ownership and admissibility invariant are retained with arbitrary measurable joint output/world ENNReal credit, including infinity.",
       "finding": null,
       "previous_owners": [
         "/root/prove_psrn_core"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactConditionalCoinBatch002.json"
       ]
     },
     {
@@ -2274,16 +2591,19 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNExponentialRational",
+      "proof_module": "SampLib.PSRN.PSRNExponentialRational",
       "public_spec": "SampLib.PSRNExponential.newExponential_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch007.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch007.md",
-      "reviewed_sha256": "0dc2498969045cca81529efd13722e118231bd8eddfdf1c74835c92f60d2f868",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNRestB004.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "bdd247ef4a267a3d4eac2508b288e4b8ccce356f1e05b9588e094104bbf1997c",
       "reviewed_domain": "All strictly positive integer numerator and denominator, representing every positive rational rate, including unreduced fractions. Each returns a canonical Exp(rate) deferred real with one retained whole/fraction joint world. Every finite observation precision, repeated alias, arbitrary measurable whole-world ENNReal credit and infinity is supported.",
       "finding": null,
       "previous_owners": [
         "/root/prove_psrn_core"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch007.json"
       ]
     },
     {
@@ -2294,14 +2614,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.PSRNExponential",
+      "proof_module": "SampLib.PSRN.Support.PSRNExponential",
       "public_spec": "SampLib.PSRNExponential.newExponentialFromDecay_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch006.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch006.md",
-      "reviewed_sha256": "96a07dbfa6706273a73add51a79ac57921c136e5b721896f123fa67dc7d5a621",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNRestB003.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "dd165bc75f8515d9160a67532254f96f711bd1a3314ae1028e79406e8caf582b",
       "reviewed_domain": "Every positive finite real rate, supplied through a unary callback whose ordinary compositional contract gives an exact exp(-rate/d) coin at each positive natural divisor d. The sampler owns one whole/fraction joint world, returns a shared deferred exponential oracle with the canonical Exp(rate) law, and supports every finite precision and arbitrary measurable joint ENNReal credit, including infinity.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch006.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newExponentialLogRate",
@@ -2311,14 +2634,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNExponentialLogRate",
+      "proof_module": "SampLib.PSRN.PSRNExponentialLogRate",
       "public_spec": "SampLib.PSRNExponential.newExponentialLogRate_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch007.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch007.md",
-      "reviewed_sha256": "5ac652646901aae0e1f2db97cac6ad4ce1bfac0cdda7c3280156a68a98165f60",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNRestB004.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "98ab634c9eaeb2a226b450b0d106de4936552a68f85cedd2cac9a96f757cb1e9",
       "reviewed_domain": "Every pair of integers with 0<y<x, representing rate log(x/y). Each returns a canonical Exp(rate) deferred real with one retained whole/fraction joint world. Every finite observation precision, repeated alias, arbitrary measurable whole-world ENNReal credit and infinity is supported.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch007.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newExponentialUnknownRate",
@@ -2328,14 +2654,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNExponentialUnknownRate",
+      "proof_module": "SampLib.PSRN.PSRNExponentialUnknownRate",
       "public_spec": "SampLib.PSRNExponential.newExponentialUnknownRate_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch007.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch007.md",
-      "reviewed_sha256": "a9dad0f95000ba50ff9b442cbd9d218f571810e2f5e8aef1d402131801c45d40",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNRestB004.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "872c32fe66d2f3791bbc9c4c8ec929d7caaca56c387db4efc4b139b001089041",
       "reviewed_domain": "Every supplied ordinary coin of unknown positive bias p in (0,1], including p=1. The implementation is over real ProbLang with UniformInt and UniformReal, as required by its actual exponential factory; rational and logarithmic wrappers need UniformInt only. Each returns a canonical Exp(rate) deferred real with one retained whole/fraction joint world. Every finite observation precision, repeated alias, arbitrary measurable whole-world ENNReal credit and infinity is supported.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch007.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newGaussian",
@@ -2439,16 +2768,19 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "latent_vector",
-      "proof_module": "SampLib.Samplers.PSRNSimplex",
+      "proof_module": "SampLib.PSRN.PSRNSimplex",
       "public_spec": "SampLib.PSRNSimplex.newSimplex_vectorSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentVectorBatch003.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentVectorBatch003.md",
-      "reviewed_sha256": "2fc4e76b118ddd234477945bc0ef8b05aeb4f693bb26fed08e09f94dca9d3e79",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB011.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "27e52ae10e6bc5c8d4a58dd0dd88cab621bec44cd70662f46378861815107031",
       "reviewed_domain": "Every dimension n>=1; n<=0 fails in the actual source guard. Target law: uniform on the open standard simplex, i.e. m! times Lebesgue measure on {y>0, sum y<1} in R^m embedded by appending 1-sum y (n=m+1), proved for the spec's own world/output/initial (output_law_uniform). The result is the actual list of n jointly owned deferred coordinate oracles over one unit-rate exponential world (n=1: constant 1/1, world unobserved; n>=2: actual exponentials normalized by one shared sum), with arbitrary joint ENNReal credits including infinity, all natural read precisions and repeated aliases. Only UniformInt randomness is needed.",
       "finding": null,
       "previous_owners": [
         "/root/prove_psrn_geometry"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactLatentVectorBatch003.json"
       ]
     },
     {
@@ -2476,14 +2808,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.LatentDigits",
+      "proof_module": "SampLib.Latent.LatentDigits",
       "public_spec": "SampLib.LatentDigits.newByDigits_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch004.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch004.md",
-      "reviewed_sha256": "96054cb6065cfa68f0dcb6512bc92009f957ca6f6002ffed620a6c51823b2df7",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB004.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "40de6f6aefd71d574e8dc342bba327b7cbd0dbed44f82b315015d7ea4f393bc4",
       "reviewed_domain": "Every probability measure on an arbitrary measurable latent world, with any measurable Bool digit stream and a verified callback supplying its conditional next-bit law at each positive-mass reachable prefix. Digits may be dependent or atomic. The owned deferred real is the full binary-stream value, including the all-ones value one. All finite precisions, repeated aliases, arbitrary measurable whole-world ENNReal credit and infinity are supported.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch004.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newOddsUniform",
@@ -2493,14 +2828,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNOddsUniform",
+      "proof_module": "SampLib.PSRN.PSRNOddsUniform",
       "public_spec": "SampLib.PSRNOddsUniform.newOddsUniform_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch011.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch011.md",
-      "reviewed_sha256": "170e7d0e0429ee3c822079658e6067d3da6fdcc0eb743985d11a5d79599413c9",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB009.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "5edb044dca5a5795bb2422f6861b0bdaf9957361e0d41fbd7b255d45de52fe20",
       "reviewed_domain": "Target law U/(1-U) for one unit uniform U, identified as the shifted Pareto(1,1) with CDF t/(1+t); numerator and complement read one cache. The unit argument only (the source has no guard). The returned closure is the actual lazy oracle; every finite precision and repeated alias retains its ownership and arbitrary measurable joint latent-world ENNReal continuation credit, including infinity. Only UniformInt randomness is needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch011.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newOrderStatistic",
@@ -2530,14 +2868,17 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNPowerUniform",
+      "proof_module": "SampLib.PSRN.PSRNPowerUniform",
       "public_spec": "SampLib.PSRNPowerUniform.newPowerUniform_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch011.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch011.md",
-      "reviewed_sha256": "1f1451f2c06c145b89dcbd30780039a34bb2281cecdd03ebf15b7ee09e9bbe87",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB009.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "043269f11907890ca817b15e60463d170af5d8ef3940a5597d8b6be56d38886c",
       "reviewed_domain": "Target law U^(a/b) for one unit uniform U. Every integer numerator a and natural denominator b>0 (passed as #int b); b<=0 fails in powerRational's guard. All branches: a=0 constant 1/1, a>0 with b=1 repeated squaring, a>0 with b>=2 bisection root, a<0 reciprocal of either. Root.Admissible and the reciprocal's nonzero denominator are proved under every posterior from u>0 a.s. Every finite precision and repeated alias retains the one uniform's ownership and arbitrary measurable joint latent-world ENNReal credit, including infinity. Only UniformInt randomness is needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch011.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newRatioUniforms",
@@ -2547,14 +2888,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNRatioUniforms",
+      "proof_module": "SampLib.PSRN.PSRNRatioUniforms",
       "public_spec": "SampLib.PSRNRatioUniforms.newRatioUniforms_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch011.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch011.md",
-      "reviewed_sha256": "8fdda81a6d22b31c3a368c4fa0f3a2ad5f50561c7a711de0dfb79e346b38571e",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB009.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "e00e89e349b5d271637ef6bdd570149e0be9033d7202eeb2a84a91ecd0848c06",
       "reviewed_domain": "Target law U/V for independent unit uniforms U, V (Occil's Lazy[U/V]), as the pushforward of the product uniform by division; both caches live in one product world. The unit argument only (the source has no guard). The returned closure is the actual lazy oracle; every finite precision and repeated alias retains its ownership and arbitrary measurable joint latent-world ENNReal continuation credit, including infinity. Only UniformInt randomness is needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch011.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newReciprocalPowerUniform",
@@ -2564,14 +2908,17 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNReciprocalPowerUniform",
+      "proof_module": "SampLib.PSRN.PSRNReciprocalPowerUniform",
       "public_spec": "SampLib.PSRNReciprocalPowerUniform.newReciprocalPowerUniform_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch011.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch011.md",
-      "reviewed_sha256": "4d1b4fa412cd2763d26a46dc44281f460b4ffab95f0dfd045ad72f6633626750",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB009.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "69974517d31ccdb676bbad63677e32d0453a3b83574c4e7ca1f6414d86ccb2ed",
       "reviewed_domain": "Target law U^(-a/b) for one unit uniform U, via the actual reciprocal of newPowerUniform's oracle. Every integer numerator a and natural denominator b>0 (passed as #int b); b<=0 fails in powerRational's guard. All branches: a=0 constant 1/1, a>0 with b=1 repeated squaring, a>0 with b>=2 bisection root, a<0 reciprocal of either. Root.Admissible and the reciprocal's nonzero denominator are proved under every posterior from u>0 a.s. Every finite precision and repeated alias retains the one uniform's ownership and arbitrary measurable joint latent-world ENNReal credit, including infinity. Only UniformInt randomness is needed.",
-      "finding": null
+      "finding": null,
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch011.json"
+      ]
     },
     {
       "sampler": "Occil.PSRN.newReciprocalUniform",
@@ -2581,16 +2928,19 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNReciprocalUniform",
+      "proof_module": "SampLib.PSRN.PSRNReciprocalUniform",
       "public_spec": "SampLib.PSRNReciprocalUniform.newReciprocalUniform_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch005.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch005.md",
-      "reviewed_sha256": "e8b9cd2bbf9997c7b559305f4edc7f57d979f40cc170f4b2534a4d652806d700",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB005.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "ab6f18d1a0276a869916996ce9c884ceb51d504ecdf7f6ba2e93882927d51628",
       "reviewed_domain": "The parameter-free reciprocal of a single unit-uniform deferred real, with canonical Pareto(scale=1,shape=1) law. Every finite observation precision and repeated alias is supported. The one underlying uniform cache and arbitrary measurable whole-world ENNReal credit, including infinity, are retained.",
       "finding": null,
       "previous_owners": [
         "/root/prove_psrn_core"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch005.json"
       ]
     },
     {
@@ -2601,16 +2951,19 @@
       "status": "accepted",
       "classification": "core",
       "spec_kind": "latent_real",
-      "proof_module": "SampLib.Samplers.PSRNUniformSum",
+      "proof_module": "SampLib.PSRN.PSRNUniformSum",
       "public_spec": "SampLib.PSRNUniformSum.newUniformSum_latentDistSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactLatentBatch003.json",
-      "review_evidence": "agent-docs/reviews/ExactLatentBatch003.md",
-      "reviewed_sha256": "eda829670c822a67a3789094a0d7d89492bc3f512799edc10835ea9f8b200ae4",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB003.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "2c4b4c9bff462c1dbb2445e280e1df3e65700e212c0a4592e4af40e01d2dd929",
       "reviewed_domain": "Every natural number of summands, including zero. The actual returned interval oracle owns one nested product world of uniform sources, preserves arbitrary measurable joint ENNReal credits and supports every natural precision and repeated aliases. Its observable law is the canonical Irwin–Hall convolution, with a point mass at zero for no summands.",
       "finding": null,
       "previous_owners": [
         "/root/prove_psrn_core"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactLatentBatch003.json"
       ]
     },
     {
@@ -2621,16 +2974,19 @@
       "status": "accepted",
       "classification": "derived",
       "spec_kind": "plain",
-      "proof_module": "SampLib.Samplers.PSRNPowerCoin",
+      "proof_module": "SampLib.PSRN.PSRNPowerCoin",
       "public_spec": "SampLib.PSRNPowerCoin.powerCoin_distSpec",
       "reviewer": "/root/review_exact_b",
-      "review_receipt": "agent-docs/reviews/ExactStructuredBatch006.json",
-      "review_evidence": "agent-docs/reviews/ExactStructuredBatch006.md",
-      "reviewed_sha256": "3ec10c19c5a2c08ffe09db4c401c04ee246e104d74fb52c78168af5e5deb8ba4",
+      "review_receipt": "agent-docs/reviews/ExactRound3PSRNB012.json",
+      "review_evidence": "agent-docs/reviews/Round3PSRN.md",
+      "reviewed_sha256": "a150054377447187e1e718737ce0253b378668111bbac9e95f668326524aeb1e",
       "reviewed_domain": "Every nonnegative natural numerator and positive natural denominator, with any input Bernoulli probability in the closed unit interval and a correctly specified ordinary input-coin callback. Includes p=0, p=1, exponent zero with0^0=1, integral and fractional exponents, and arbitrary ENNReal continuation credits.",
       "finding": null,
       "previous_owners": [
         "/root/prove_psrn_core"
+      ],
+      "review_history": [
+        "agent-docs/reviews/ExactStructuredBatch006.json"
       ]
     }
   ],
@@ -2638,5 +2994,5 @@
     "agent-docs/reviews/ExactLowProbabilitySourceRepair001.json",
     "agent-docs/reviews/ExactOptimalSourceRepair001.json"
   ],
-  "baseline_revalidation": "agent-docs/reviews/ExactBaselineRevalidation002.json"
+  "baseline_revalidation": "agent-docs/reviews/ExactBaselineRevalidation003.json"
 }

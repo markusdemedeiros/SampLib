@@ -1,4 +1,5 @@
 import SampLib.Bernoulli.Laws.PowerSeriesHazards
+import SampLib.Common.AbsorbingChain
 import Samplers.Bernoulli.Series
 import SampLib.Uniform.RationalCoin
 

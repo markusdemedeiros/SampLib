@@ -1,6 +1,10 @@
-import Mathlib.MeasureTheory.Measure.GiryMonad
-import Mathlib.MeasureTheory.Integral.Lebesgue.Countable
-import Metrology.ProbLang.Discrete
+module
+
+public import Mathlib.MeasureTheory.Measure.GiryMonad
+public import Mathlib.MeasureTheory.Integral.Lebesgue.Countable
+public import Metrology.ProbLang.Discrete
+
+@[expose] public section
 
 /-! # Finite iteration of countable-state probability kernels -/
 

@@ -3,6 +3,9 @@ module
 public import SampLib.Combinatorial.Laws.IntegerRange
 public import Mathlib.Data.List.Sublists
 public import Mathlib.Algebra.BigOperators.Group.List.Basic
+public import Mathlib.Algebra.Order.Ring.Int
+public import Mathlib.Data.List.Nodup
+public import Mathlib.Tactic.Ring
 
 @[expose] public section
 

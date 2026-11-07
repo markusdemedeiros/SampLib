@@ -1,6 +1,7 @@
 import SampLib.Constants.Support.SquaredDecreasingChain
 import SampLib.Constants.Laws.ErrorFunctionKernel
 import SampLib.Constants.Laws.ThresholdRejection
+import SampLib.Core.Retry
 import Samplers.Constants.Special
 
 /-! # Error-function ratios from a maximum-uniform decreasing chain
@@ -84,16 +85,11 @@ attribute [local pl_step_simp] ClosedExp.openRec ClosedExp.closeRec
 private theorem twp_loop (E : CoPset) (x : ℝ) (F : Bool → ℝ≥0∞) :
     ⊢ ↯ (RealCoin.credit (bias x) F) -∗ tglWp E pl(&loop #real x #())
       (fun v : Val ℝ => iprop(∃ b : Bool, ⌜v = Val.bool b⌝ ∗ ↯ (F b))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε
-    (AcceptedProposal.one_lt_factor unifUnit SquaredDecreasing.decay mass_ne_zero) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value
+    (AcceptedProposal.one_lt_factor unifUnit SquaredDecreasing.decay mass_ne_zero)
+  iintro !> %ε %hε IH Hcredit
   twp_pures
   twp_bind pl(urand)
-  icombine Hcredit Hterm as Hcredit
   iapply (twp_urand_exp (ε₂ := drawCredit x F ε)
     (ThresholdRejection.measurable_kernel _ _ SquaredDecreasing.measurable_decay
       mass_ne_zero x F ε) (expectation_preservation x F ε)) $$ Hcredit
@@ -124,11 +120,10 @@ private theorem twp_loop (E : CoPset) (x : ℝ) (F : Bool → ℝ≥0∞) :
   · rw [natCast_emod_two, hk]
     isimp only [SquaredDecreasingChain.terminal, hk, Nat.one_ne_zero, ite_false,
       branchCredit] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     twp_pure
     twp_bind pl(&loop #real x #())
     iapply (tglWp_mono fun _ => tglWp_value)
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
 
 /-- Exact-real correctness of Occil's maximum-chain implementation. -/
 theorem erfRatio_distSpec (E : CoPset) (x : unitInterval) :

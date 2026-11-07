@@ -1,4 +1,5 @@
 import SampLib.Core.SamplerStep
+import SampLib.Core.Retry
 import SampLib.Bernoulli.SigmoidRational
 import SampLib.Bernoulli.Laws.BernoulliRetry
 
@@ -158,20 +159,15 @@ private theorem twp_term (E : CoPset) (p : unitInterval) (a b : ℤ)
       Exp.openRec k e (term selector) = term selector := (Exp.open_lc k e _ hterm).symm
   have hcoinOpen (k : ℕ) (e : Exp rT) : Exp.openRec k e coin.fst = coin.fst :=
     (Exp.open_lc k e _ coin.lc).symm
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε
-    (BernoulliRetry.one_lt_factor (retry p a b) (retry_lt_one p a b)) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value
+    (BernoulliRetry.one_lt_factor (retry p a b) (retry_lt_one p a b))
+  iintro !> %ε %hε IH Hcredit
   iterate 5
     twp_step
     simp (failIfUnchanged := false) only [Exp.open', Exp.openRec, hopen, htermOpen, hcoinOpen,
       Nat.reduceAdd, Nat.reduceEqDiff, ↓reduceIte]
   twp_bind pl(&coin.fst #())
-  icombine Hcredit Hterm as Htotal
-  ihave Hsample := ErrorCredit.weaken (expectation p a b F ε) $$ Htotal
+  ihave Hsample := ErrorCredit.weaken (expectation p a b F ε) $$ Hcredit
   iapply (hcoin.wp (inputCredit p a b F ε) (measurable_of_countable _) _) $$ Hsample
   iintro %bit Hcredit
   twp_step
@@ -195,19 +191,17 @@ private theorem twp_term (E : CoPset) (p : unitInterval) (a b : ℤ)
       simp (failIfUnchanged := false) only [Exp.open', Exp.openRec, htermOpen, hcoinOpen,
         ↓reduceIte]
     isimp only [pairCredit, Bool.false_eq_true, ite_false, ite_true] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     twp_bind pl(&(term selector) &coin.fst #int a #int b #())
     iapply (tglWp_mono fun _ => tglWp_value)
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
   · iterate 3
       twp_step
       simp (failIfUnchanged := false) only [Exp.open', Exp.openRec, htermOpen, hcoinOpen,
         ↓reduceIte]
     isimp only [pairCredit, Bool.false_eq_true, ite_false, ite_true] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     twp_bind pl(&(term selector) &coin.fst #int a #int b #())
     iapply (tglWp_mono fun _ => tglWp_value)
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
   · twp_pures
     twp_value
     imodintro

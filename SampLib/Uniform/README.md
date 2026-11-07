@@ -25,7 +25,7 @@ Each of these samplers has an accepted proof in this directory:
 The directory holds these modules:
 
 - Top level: 9 modules
-- [`Laws/`](Laws): 3 modules with target laws, kernels, and expectation lemmas
+- [`Laws/`](Laws): 9 modules with target laws, kernels, and expectation lemmas
 
 ---
 

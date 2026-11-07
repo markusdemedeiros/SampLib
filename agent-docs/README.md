@@ -59,6 +59,16 @@ This document collects findings about verification at scale:
 - [ScalingObservations.md](ScalingObservations.md): The size of the proofs and of the
   review record, and the problems that the 2026 reorganization exposed.
 
+## Future samplers
+
+These documents survey samplers that the repository does not implement yet. Neither one
+is an approved plan:
+
+- [OccilBibliography.md](OccilBibliography.md): The sources that Occil's articles cite, and
+  the algorithms that each one contributes.
+- [ExternalCandidates.md](ExternalCandidates.md): Exact samplers from free books and
+  papers, checked against the sources themselves.
+
 ## Source data and plans
 
 These files hold source data and plans for future work:

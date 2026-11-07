@@ -1,4 +1,4 @@
-import SampLib.Constants.Laws.RealContinuedFraction
+import SampLib.Constants.Laws.RealContinuedFractionBudget
 import SampLib.Uniform.Laws.RationalCoin
 import SampLib.Bernoulli.Laws.CoinConditional
 

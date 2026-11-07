@@ -1,4 +1,5 @@
 import SampLib.Combinatorial.Laws.SampleWithReplacement
+import Metrology.ProbLang.Discrete
 
 /-! # Independent finite lists
 

@@ -1,3 +1,4 @@
+import Metrology.ProbLang.Discrete
 import SampLib.Discrete.Laws.BinomialBinary
 import SampLib.Common.Laws.AcceptedProposal
 

@@ -1,4 +1,5 @@
 import SampLib.Discrete.Laws.FisherHypergeometric
+import SampLib.Discrete.WeightedChoice
 import SampLib.Discrete.Support.IntegerChoose
 import SampLib.Discrete.Support.IntegerPower
 import SampLib.Core.Syntax.ClosedExp

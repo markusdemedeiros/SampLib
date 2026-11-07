@@ -1,4 +1,7 @@
+import SampLib.Discrete.WeightedChoice
+import SampLib.Core.ListEncoding
 import SampLib.Weighted.Laws.WeightedSelections
+import SampLib.Core.SupportedSpec
 import SampLib.Core.MarkovTerms
 import Samplers.Weighted.Sequential
 

@@ -1,0 +1,73 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "af2156f750b0a47b7c4c76bb5eda3bf0fa00d1f3b5bef98af9a64eddfc055ddd"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactFactoriesBatch005Callers.lean",
+  "caller_sha256": "8457050240f4b100ddbf14580b0fcfae213bb9c25146f350cb5f17ab75ebb841",
+  "support": [],
+  "accepted": [
+    {
+      "sampler": "Occil.sampleGeometricBag",
+      "public_spec": "SampLib.SampleGeometricBag.sampleGeometricBag_coinSpec",
+      "spec_kind": "latent_coin",
+      "classification": "support",
+      "reviewed_domain": "Any owned bag root l and cached prefix p; conditional Bernoulli(U) with arbitrary measurable joint output/latent credit G:Bool->Real->ENNReal. The same root and refined cache remain owned across calls.",
+      "proof_module": "SampLib.Bernoulli.SampleGeometricBag",
+      "sha256": "f0f6e252438c62483d0127a2279a2982b8b2abb79d335283b69d6053ac619179",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliMZ.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Bernoulli/Laws/CoinConditional.lean": "fe4d9f0f69c3ca9e42c237dd88defad90a80047353caffe64a4eb45ed4a903c4",
+        "SampLib/Bernoulli/Laws/CoinMean.lean": "8ba8f29e2aa733e4a0c018201259952bf3510b7bc49aee1a626fa0cae3191373",
+        "SampLib/Bernoulli/Laws/VonNeumann.lean": "e360fcbfd61a212fd5802546d5f0cf9240ee4a99e56df8c2849157a591890797",
+        "SampLib/Bernoulli/SampleGeometricBag.lean": "f0f6e252438c62483d0127a2279a2982b8b2abb79d335283b69d6053ac619179",
+        "SampLib/Bernoulli/VonNeumann.lean": "20c5d951426b2c5a01de19eefba7d1e8a9010484c0ea80ceb11adf47ad765aab",
+        "SampLib/Common/Laws/DyadicPosterior.lean": "47aee6086b85b501470624626940b55ef333d20e4bd9f21e3e698e66cad716e0",
+        "SampLib/Common/Laws/DyadicRefinement.lean": "66058978b34dadef72bb008a1a9ac884c764adda687502bc6fe3f071977f7011",
+        "SampLib/Core/Laws/Retry.lean": "a8a20f8760987a377493a0f561c185bd1e8e11a7e251f72e6f8a7d839d3e1416",
+        "SampLib/Core/Retry.lean": "b83c7961a28283b6c851671eaaa7f2a014de52107ad449c2dfe99c8c179d2041",
+        "SampLib/Latent/Laws/LatentBernoulli.lean": "e39171e401e2f4bcb46ea4405fa5b5280d2c3359eed3a7c3dd6e0017cdb074ce",
+        "SampLib/Latent/UniformBag.lean": "5a0f3a812581abc5c77fe9336b926a430c00f416e91b09cec2635e8a81e498ec",
+        "SampLib/Latent/UniformBagCoin.lean": "d898a6300169654ab1122b5203059a5400c9d5af20a6c968ecac966370f3f044",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/Uniform/FairCoin.lean": "30da46b90898325cb41ca2977c15b932b412b32f6d5dc00ba063300a7d070781",
+        "SampLib/Uniform/Laws/FairCoin.lean": "65b3fcd3ad34497bec612b7c75e2229d66624b5005407944f7f1ec7604246a70",
+        "SampLib/Uniform/Laws/RealCoin.lean": "80f801fd59de11cf5c7fe4512ba74fde4f55c14d15cc7177d28956a0fa0e590e",
+        "SampLib/Uniform/RealCoin.lean": "fe06f7612f50b7b17e67d94d9b112d8c8733a387c17b3961ab10711d95481253",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ]
+}

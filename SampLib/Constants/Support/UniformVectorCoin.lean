@@ -1,4 +1,5 @@
 import SampLib.Constants.Laws.UniformVectorCoin
+import SampLib.Latent.LatentCoinSpec
 import SampLib.Latent.UniformVectorOwnership
 import SampLib.Bernoulli.SampleGeometricBag
 

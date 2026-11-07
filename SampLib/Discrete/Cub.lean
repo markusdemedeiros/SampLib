@@ -1,4 +1,6 @@
+import SampLib.Discrete.Laws.Cub
 import SampLib.Discrete.BinomialBinary
+import SampLib.Uniform.RationalCoin
 import SampLib.Continuous.Mixture
 import Samplers.Discrete.Compound
 import Metrology.Iris.LocalBI
@@ -15,45 +17,6 @@ open scoped ENNReal
 namespace SampLib.Cub
 
 noncomputable section
-
-section mathematics
-
-open MeasureTheory
-
-/-- The standard combination of uniform and shifted-binomial responses. -/
-def law (m : ℕ) (p ξ : unitInterval) : Measure ℕ :=
-  (Mixture.law p (Binomial.law (unitInterval.symm ξ) (m - 1))
-    (UniformInt.law (m - 1 + 1))).map Nat.succ
-
-instance (m : ℕ) (p ξ : unitInterval) : IsProbabilityMeasure (law m p ξ) := by
-  unfold law
-  infer_instance
-
-/-- A response expectation is the mixture of its two shifted component expectations. -/
-theorem expectation (m : ℕ) (p ξ : unitInterval) (hm : 0 < m)
-    (F : ℕ → ℝ≥0∞) :
-    (∫⁻ k, F k ∂law m p ξ) = RealCoin.credit p
-      (fun b => if b then ∫⁻ k, F (k + 1) ∂Binomial.law (unitInterval.symm ξ) (m - 1)
-        else ∫⁻ k, F (k + 1) ∂UniformInt.law m) := by
-  rw [law, Nat.sub_add_cancel (by omega : 1 ≤ m),
-    lintegral_map (measurable_of_countable _) (measurable_of_countable _),
-    Mixture.expectation_preservation]
-
-private theorem rational_bias (a b : ℕ) (hb : 0 < b) (ha : a ≤ b) :
-    RationalCoin.bias a b (by omega) (by omega) (by omega) = BinomialBinary.bias a b := by
-  apply Subtype.ext
-  rw [BinomialBinary.bias_coe a b hb ha]
-  simp [RationalCoin.bias]
-
-private theorem complement_bias (a b : ℕ) (hb : 0 < b) (ha : a ≤ b) :
-    BinomialBinary.bias (b - a) b = unitInterval.symm (BinomialBinary.bias a b) := by
-  apply Subtype.ext
-  rw [BinomialBinary.bias_coe (b - a) b hb (by omega), unitInterval.coe_symm_eq,
-    BinomialBinary.bias_coe a b hb ha, Nat.cast_sub ha]
-  have hbR : (b : ℝ) ≠ 0 := by exact_mod_cast hb.ne'
-  field_simp
-
-end mathematics
 
 private instance binary_closed {rT : Type _} :
     ClosedExp (Occil.DiscreteExtra.binomialBinary : Exp rT) where
@@ -100,7 +63,9 @@ theorem twp_cub (E : CoPset) (m a b c d : ℕ) (hm : 3 ≤ m) (hb : 0 < b)
   iterate 6 twp_pure
   rw [size_test m hm]
   twp_pure
-  simp only [ClosedExp.openRec, ClosedExp.closeRec]
+  simp only [ClosedExp.openRec, ClosedExp.closeRec, RationalCoin.rationalCoin_openRec,
+    RationalCoin.rationalCoin_closeRec, UniformInt.uniformInt_openRec,
+    UniformInt.uniformInt_closeRec]
   twp_bind pl(&Occil.rationalCoin #int (a : ℤ) #int (b : ℤ))
   isimp only [expectation m _ _ (by omega), ← RealCoin.lintegral_law] at Hcredit
   iapply ((selector_distSpec E a b hb ha).wp _ (measurable_of_countable _) _) $$ Hcredit

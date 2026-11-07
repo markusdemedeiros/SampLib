@@ -1,6 +1,6 @@
 import SampLib.PSRN.PSRNLindley
-import SampLib.PSRN.Support.LatentRealConstructors
-import SampLib.PSRN.Support.LatentMixture
+import SampLib.PSRN.Support.Arithmetic.RealConstructors
+import SampLib.PSRN.Support.Gamma.Mixture
 import SampLib.PSRN.Laws.PSRNDistributionMixtures
 import SampLib.PSRN.Syntax.PSRNLindleyFamilies
 

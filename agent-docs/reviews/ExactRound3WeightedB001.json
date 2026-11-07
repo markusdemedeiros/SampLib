@@ -1,0 +1,72 @@
+{
+  "reviewer": "/root/review_exact_b",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "af2156f750b0a47b7c4c76bb5eda3bf0fa00d1f3b5bef98af9a64eddfc055ddd"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactStructuredBatch002Callers.lean",
+  "caller_sha256": "40b4c5123c31f454e61fa63a8a542fa914360033dd538da2216fa35c624b3ad8",
+  "support": [],
+  "accepted": [
+    {
+      "sampler": "Occil.WeightedVariants.voseDraw",
+      "public_spec": "SampLib.AliasTable.voseDraw_ownedDistSpec",
+      "spec_kind": "owned",
+      "classification": "support",
+      "reviewed_domain": "Every finite natural weight list with positive total and every owned alias table whose category mass equals length times the corresponding weight; zero-weight categories are allowed and both arrays are retained.",
+      "proof_module": "SampLib.Weighted.Support.AliasTable",
+      "sha256": "0356fbedef3039f447ae5908106f480f9e6f20dd201357b58a972afaa34f14db",
+      "review_evidence": "agent-docs/reviews/Round3Weighted.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Combinatorial/Choice.lean": "a09eb2ce36822fd422cfe7d75e47020b6900bdc516364cadcf936d120859f126",
+        "SampLib/Combinatorial/Laws/Choice.lean": "a99690d56e7f2df2a2615cad3de46219b7ac1d19222b6d5bf9681e6d3e0c4e40",
+        "SampLib/Combinatorial/Laws/SampleWithReplacement.lean": "57e2f492310bff6edefd235f968f56693ea4c6a3e2d9a0302f44d6f45496a447",
+        "SampLib/Combinatorial/SampleWithReplacement.lean": "3dab991328cd65ba32e0ed99ed22b40b6c3db16b9b680312d20c7ede36a1f4cb",
+        "SampLib/Core/ArrayOwnership.lean": "bac5db3646e3f7bb0e3056759c2f24da622114b6338e02b3d858782cb0c67c85",
+        "SampLib/Core/ListEncoding.lean": "cfe9af21bfe11aeaf92b70f170c6026bfffc0d8aa589811c56776df1259ae6f0",
+        "SampLib/Core/OwnedDistSpec.lean": "0856090e7a95181c0f3e1091746434a51ca027b6c38da62ebd2467adaf63bba0",
+        "SampLib/Discrete/Laws/WeightedChoice.lean": "7c8ac8cc65a02313b0dcdb391dbd73cb3c8e263f3489b7fcde7e48889fc9814b",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/Uniform/Laws/UniformInt.lean": "343e922428ce573be78507e2e2b79816a72802c85a23bee72088934dabefec20",
+        "SampLib/Uniform/UniformInt.lean": "2e98026bfad60f17f2aed50857a1fb5d46b583894d25a29e66d563bd4502b63e",
+        "SampLib/Weighted/Laws/AliasMass.lean": "a085b3bfe7dfa2376e1e73ae6a5c87d556e42e4d7d13492eba188fec87c909fb",
+        "SampLib/Weighted/Support/AliasTable.lean": "0356fbedef3039f447ae5908106f480f9e6f20dd201357b58a972afaa34f14db",
+        "code/Samplers/Combinatorial/Basic.lean": "057cb83371a7b642594e82c4198759750926a95dfec0a6225bd41e9ea6f492cd",
+        "code/Samplers/Data.lean": "1185a53a857cf5bf2777e51ad29dd7c0d3c18ac36dfa1e435961c166e03e38d8",
+        "code/Samplers/Discrete.lean": "f0b7871b743144d3395e4153784cd9650b02244a632300c06bf3b1147088f27e",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72",
+        "code/Samplers/Weighted/Aliases.lean": "04f5c9bd41b087a5ecb3e0baae1886e54358e3b254bcab51d20fd8dd8cafda7f",
+        "code/Samplers/Weighted/Core.lean": "5bf80d3a506c7a9a8d029be1273270bf8fd4532d0b1db101a9752bf43b0f08bb"
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import SampLib.PSRN.Support.PSRNSimplexOutput
+import SampLib.PSRN.Support.Simplex.Output
 
 /-! # Uniform lazy vectors on the open simplex
 

@@ -4,6 +4,11 @@ public import SampLib.Constants.Laws.AlgebraicConstants
 
 @[expose] public section
 
+/-! # Golden-family quadratic roots
+
+Each parameter pair defines a quadratic whose root lies strictly between zero and one.
+-/
+
 namespace SampLib.GoldenFamily
 
 noncomputable section

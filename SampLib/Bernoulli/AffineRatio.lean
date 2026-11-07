@@ -1,4 +1,5 @@
 import SampLib.Bernoulli.Laws.AffineRatio
+import SampLib.Core.Retry
 import SampLib.Bernoulli.OffsetRace
 import SampLib.Bernoulli.Division
 import SampLib.Bernoulli.Support.AffineRankCoin
@@ -59,19 +60,14 @@ private theorem twp_direct (E : CoPset) (p q : unitInterval) (c d s : ℕ) (hs :
     ⊢ ↯ (RealCoin.credit (directBias p q c d s hs h) F) -∗
       tglWp E pl(&(directLoop pcoin qcoin c d s).fst #())
         (fun v : Val rT => iprop(∃ b : Bool, ⌜v = Val.bool b⌝ ∗ ↯ (F b))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε
-    (BernoulliRetry.one_lt_factor (retry p c s hs) (retry_lt_one p c d s hs h)) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value
+    (BernoulliRetry.one_lt_factor (retry p c s hs) (retry_lt_one p c d s hs h))
+  iintro !> %ε %hε IH Hcredit
   iterate 2 (twp_step; simp [directBody, Exp.open', Exp.openRec,
     ProbLang.openRec_val_fst, UniformInt.uniformInt_openRec])
   twp_pure
   rw [← Int.natCast_add]
   twp_bind pl(&Occil.uniformInt #int ((c + s : ℕ) : ℤ))
-  icombine Hcredit Hterm as Hcredit
   ihave Hcredit := ErrorCredit.weaken (direct_expectation p q c d s hs h F ε) $$ Hcredit
   iapply tglWp_wand
   isplitl [Hcredit]
@@ -122,10 +118,9 @@ private theorem twp_direct (E : CoPset) (p q : unitInterval) (c d s : ℕ) (hs :
         cases b
         · twp_pure
           isimp only [coinCredit, Bool.false_eq_true, ite_false] at Hcredit
-          ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
           twp_bind pl(&(directLoop pcoin qcoin c d s).fst #())
           iapply (tglWp_mono fun _ => tglWp_value)
-          iapply IH $$ Hterm Hcredit
+          iapply IH $$ Hcredit
         · twp_pure
           twp_value
           imodintro

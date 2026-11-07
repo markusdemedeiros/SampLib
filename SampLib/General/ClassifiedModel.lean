@@ -1,3 +1,4 @@
+import SampLib.Discrete.WeightedChoice
 import SampLib.Core.GeneralSyntax
 import SampLib.Combinatorial.Choice
 import SampLib.Common.Laws.WeightedSupport

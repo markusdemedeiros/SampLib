@@ -3,4 +3,8 @@ module
 public import Mathlib.Analysis.PSeries
 public import Mathlib.Tactic
 
-/-! Modern Mathlib imports for the reciprocal-cube series proof. -/
+/-! # Mathlib imports for the reciprocal-cube series
+
+`ZetaThree` is not a module file. Importing these Mathlib modules through this module file
+avoids the module-system import warning.
+-/

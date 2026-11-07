@@ -1,4 +1,4 @@
-import SampLib.PSRN.Support.PSRNLindleyCore
+import SampLib.PSRN.Support.Gamma.LindleyCore
 import SampLib.PSRN.PSRNGammaInteger
 
 /-! # The original Lindley sampler at every positive rational rate -/

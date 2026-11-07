@@ -1,6 +1,8 @@
 import SampLib.Discrete.Laws.Geometric
-import SampLib.Bernoulli.PLogInverse
+import SampLib.Bernoulli.Laws.PLogInverse
 import SampLib.Common.Laws.AcceptedProposal
+import SampLib.Discrete.Laws.BinomialBinary
+import SampLib.Uniform.Laws.RationalCoin
 
 /-! # Logarithmic-series sampling by reciprocal rejection
 
@@ -109,6 +111,57 @@ theorem expectation (p : unitInterval) (hp : 0 < (p : ℝ)) (hp1 : (p : ℝ) < 1
       ∂AcceptedProposal.law (proposal p) acceptance (mass_pos p hp hp1) =
       ∫⁻ n, F n ∂law p hp hp1 := by
   rw [law, lintegral_map (measurable_of_countable _) (measurable_of_countable _)]
+
+open MeasureTheory
+
+theorem bias_pos (a b : ℕ) (ha : 0 < a) (hab : a < b) :
+    0 < (BinomialBinary.bias a b : ℝ) := by
+  rw [BinomialBinary.bias_coe a b (by omega) hab.le]
+  exact div_pos (by exact_mod_cast ha) (by exact_mod_cast lt_trans ha hab)
+
+theorem bias_lt_one (a b : ℕ) (ha : 0 < a) (hab : a < b) :
+    (BinomialBinary.bias a b : ℝ) < 1 := by
+  rw [BinomialBinary.bias_coe a b (by omega) hab.le]
+  exact (div_lt_one (by exact_mod_cast lt_trans ha hab)).mpr (by exact_mod_cast hab)
+
+/-- The standard logarithmic-series law at a valid rational parameter. -/
+abbrev rationalLaw (a b : ℕ) (ha : 0 < a) (hab : a < b) :=
+  law (BinomialBinary.bias a b) (bias_pos a b ha hab) (bias_lt_one a b ha hab)
+
+/-- Accept the positive successor or retain the amplified retry budget. -/
+def branchCredit (p : unitInterval) (hp : 0 < (p : ℝ)) (hp1 : (p : ℝ) < 1)
+    (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞) (n : ℕ) (accepted : Bool) : ℝ≥0∞ :=
+  if accepted then F (n + 1) else
+    (∫⁻ k, F k ∂law p hp hp1) + AcceptedProposal.factor (proposal p) acceptance * ε
+
+/-- Conditional expectation of the reciprocal acceptance coin. -/
+def proposalCredit (p : unitInterval) (hp : 0 < (p : ℝ)) (hp1 : (p : ℝ) < 1)
+    (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞) (n : ℕ) : ℝ≥0∞ :=
+  RealCoin.credit (acceptance n) (branchCredit p hp hp1 F ε n)
+
+/-- Reciprocal weighting preserves the logarithmic-series expectation and retry slack. -/
+theorem expectation_preservation (p : unitInterval) (hp : 0 < (p : ℝ))
+    (hp1 : (p : ℝ) < 1) (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞) :
+    (∫⁻ n, proposalCredit p hp hp1 F ε n ∂proposal p) ≤
+      (∫⁻ k, F k ∂law p hp hp1) + ε := by
+  have hC : AcceptedProposal.credit (proposal p) acceptance (mass_pos p hp hp1)
+      (fun n => F (n + 1)) = ∫⁻ k, F k ∂law p hp hp1 := expectation p hp hp1 F
+  simpa only [proposalCredit, branchCredit, RealCoin.credit, RealCoin.pmf,
+    ite_true, Bool.false_eq_true, ite_false, AcceptedProposal.kernel,
+    AcceptedProposal.weight, AcceptedProposal.rejectedWeight, hC] using
+    AcceptedProposal.expectation_preservation (proposal p) acceptance
+      (measurable_of_countable _) (mass_pos p hp hp1) (fun n => F (n + 1))
+      (measurable_of_countable _) ε
+
+theorem proposal_bias (a b : ℕ) (ha : 0 < a) (hab : a < b) :
+    RationalCoin.bias (b - a : ℕ) b (by omega) (by omega) (by omega) =
+      unitInterval.symm (BinomialBinary.bias a b) := by
+  apply Subtype.ext
+  rw [unitInterval.coe_symm_eq, BinomialBinary.bias_coe a b (by omega) hab.le]
+  simp only [RationalCoin.bias, Int.cast_natCast, Nat.cast_sub hab.le]
+  push_cast
+  have hbR : (b : ℝ) ≠ 0 := by exact_mod_cast (lt_trans ha hab).ne'
+  field_simp
 
 end
 

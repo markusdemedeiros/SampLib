@@ -1,6 +1,7 @@
 import SampLib.Common.DecreasingTrial
 import SampLib.Common.Laws.Exponential
 import Metrology.TotalEris.Examples.Samplers.NegExp
+import SampLib.Core.Retry
 import Metrology.Iris.LocalBI
 
 /-! # Von Neumann's exponential sampler
@@ -97,15 +98,11 @@ local bi (IProp GF)
 private theorem twp_loop (E : CoPset) (F : ℝ → ℝ≥0∞) (hF : Measurable F) (n : ℕ) :
     ⊢ ↯ (credit F n) -∗ tglWp E pl(&loop #int (n : ℤ))
       (fun v : Val ℝ => iprop(∃ z : ℝ, ⌜v = Val.real z⌝ ∗ ↯ (F z))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert %n Hcredit
-  iapply ErrorCredit.Induction.simple hε one_lt_NegExpFactor $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ %n Hcredit
+  irevert! %n
+  iapply Retry.twp_loop_forall (fun _ => solve_not_value) one_lt_NegExpFactor
+  iintro !> %ε %hε %n IH Hcredit
   twp_pures
   twp_bind pl(urand)
-  icombine Hcredit Hterm as Hcredit
   iapply (twp_urand_exp
     (ε₂ := drawCredit F n ((NegExpFactor : ℝ≥0∞) * ε))
     (measurable_drawCredit F hF n _) ?_) $$ Hcredit
@@ -135,13 +132,12 @@ private theorem twp_loop (E : CoPset) (F : ℝ → ℝ≥0∞) (hF : Measurable 
     exact Val.ext (by simp)
   · rw [natCast_emod_two, hk]
     isimp only [parityCredit, hk, Nat.one_ne_zero, ite_false] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     twp_pure
     twp_pure
     rw [← Nat.cast_add_one]
     twp_bind pl(&loop #int ((n + 1 : ℕ) : ℤ))
     iapply (tglWp_mono fun _ => tglWp_value)
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ %(n + 1) Hcredit
 
 /-- Execute the wrapper around the integer-part loop. -/
 theorem twp_exponential (E : CoPset) (F : ℝ → ℝ≥0∞) (hF : Measurable F) :

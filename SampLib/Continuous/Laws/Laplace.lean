@@ -1,6 +1,10 @@
-import SampLib.Bernoulli.Laws.VonNeumann
-import Mathlib.Probability.Distributions.Exponential
-import Mathlib.MeasureTheory.Measure.Prod
+module
+
+public import Mathlib.Probability.Distributions.Exponential
+public import Mathlib.MeasureTheory.Measure.Prod
+public import SampLib.Bernoulli.Laws.VonNeumann
+
+@[expose] public section
 
 /-! # Laplace law as a unit exponential with a fair sign
 

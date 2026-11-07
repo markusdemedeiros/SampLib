@@ -1,3 +1,4 @@
+import Metrology.ProbLang.Discrete
 import SampLib.Discrete.Laws.WalleniusWeights
 
 /-! # Wallenius color words

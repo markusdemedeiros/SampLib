@@ -22,9 +22,11 @@ section specification
 open Iris Iris.BI Iris.ProofMode TotalEris ErisWpGS
 
 variable {rT : Type _} [MeasurableSpace rT] [LawfulProbLangℝ rT]
-  [ProbLangDist rT] [ProbLangDist.IsUniformInt rT] [ProbLangFFI rT] [ProbLangObs rT]
+  [ProbLangDist rT] [ProbLangFFI rT] [ProbLangObs rT]
 variable {hlc : HasLC} {GF : BundledGFunctors} [ErisGS rT hlc GF]
 local bi (IProp GF)
+
+variable [ProbLangDist.IsUniformInt rT]
 
 /-- Conditional block sampling realizes the canonical categorical law for every positive size. -/
 theorem twoLevelChoice_distSpec (E : CoPset) (ws : List ℕ) (size : ℕ)

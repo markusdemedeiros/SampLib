@@ -1,0 +1,67 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "af2156f750b0a47b7c4c76bb5eda3bf0fa00d1f3b5bef98af9a64eddfc055ddd"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactFactoriesBatch011Callers.lean",
+  "caller_sha256": "4e348fb63779cb19d61fbd0afc94af721258254fb92ebc380cb0098f33571b53",
+  "support": [],
+  "accepted": [
+    {
+      "sampler": "Occil.fractionalPower",
+      "public_spec": "SampLib.FractionalPower.fractionalPower_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "All p : unitInterval, a,b : Nat with 0 < a <= b, arbitrary input callback IsDistSpec with no closedness or finite-expectation assumption; output bias p^(a/b).",
+      "proof_module": "SampLib.Bernoulli.FractionalPower",
+      "sha256": "d457d7ca961ceea1bd2c7f40e77514d06aca07a79e0eedb70d07f0e22bd011e2",
+      "review_evidence": "agent-docs/reviews/Round3BernoulliAL.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Bernoulli/FractionalPower.lean": "d457d7ca961ceea1bd2c7f40e77514d06aca07a79e0eedb70d07f0e22bd011e2",
+        "SampLib/Bernoulli/Laws/FractionalPower.lean": "58f7062d74998c56b8263111d039d99d475103329b595bdbba3d1b1edeecccb0",
+        "SampLib/Common/AbsorbingChain.lean": "76c30a7dc59f199b4c0a4c3d0d17abbe1fc622cf38bd200044454d6889b70e38",
+        "SampLib/Common/Laws/AbsorbingChain.lean": "d55e37d993e9ea78a6a8b1d926d02138484e304baef228716a7dd08d7fbf957f",
+        "SampLib/Common/Laws/FractionalPower.lean": "460cba06d7bbdb41ed90c51a6801eaf53897a53124bd8ef4db12003aa0f22c58",
+        "SampLib/Common/Laws/FractionalPowerCore.lean": "55ac152d2d01a1a148b1550d70936035c183002faca498ec07eefad79b8cf368",
+        "SampLib/Common/Syntax/FractionalPower.lean": "6326b3d16cbc5f33200867e52f24a991d648fcf4d5cca95726e6a59e13876159",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/Uniform/Laws/RationalCoin.lean": "4b334a518f47d959cd21cdb37324d0681d184642642c71f8fc0c028caf870e3b",
+        "SampLib/Uniform/Laws/RealCoin.lean": "80f801fd59de11cf5c7fe4512ba74fde4f55c14d15cc7177d28956a0fa0e590e",
+        "SampLib/Uniform/RationalCoin.lean": "30955f5b4a08f319faa777ebc284b0b2c0b37ca736abcc238e2f9d61bc581937",
+        "SampLib/Uniform/RealCoin.lean": "fe06f7612f50b7b17e67d94d9b112d8c8733a387c17b3961ab10711d95481253",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ]
+}

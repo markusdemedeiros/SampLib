@@ -1,3 +1,4 @@
+import SampLib.Constants.FromBounds
 import SampLib.Bernoulli.EulerBounds
 import SampLib.Bernoulli.Laws.RationalEnclosureScale
 import SampLib.Bernoulli.Syntax.Exponential

@@ -1,4 +1,4 @@
-import SampLib.Bernoulli.Laws.AlternatingSeries
+import SampLib.Bernoulli.Laws.AlternatingSeriesCredit
 import SampLib.Bernoulli.Laws.FactoryFractions
 
 /-! # Rational accumulator invariants for the alternating-series engine -/

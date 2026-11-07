@@ -1,6 +1,6 @@
 module
 
-public import Mathlib.MeasureTheory.Integral.Lebesgue.Add
+public import SampLib.Core.Laws.Retry
 public import Mathlib.MeasureTheory.Measure.Typeclasses.Probability
 
 @[expose] public section
@@ -60,26 +60,10 @@ theorem expectation_preservation (hs : MeasurableSet s) (hmass : μ s ≠ 0)
   have hcredit : ∫⁻ x in s, F x ∂μ = μ s * credit μ s hmass F := by
     rw [credit, law, lintegral_smul_measure, smul_eq_mul, ← mul_assoc,
       ENNReal.mul_inv_cancel hmass (measure_ne_top μ s), one_mul]
-  have hamp : μ sᶜ * (terminationFactor μ s : ℝ≥0∞) ≤ 1 := by
-    calc
-      _ = μ sᶜ + μ sᶜ * μ s := by
-        simp [terminationFactor, ENNReal.coe_toNNReal (measure_ne_top μ s), mul_add]
-      _ ≤ μ sᶜ + μ s := by
-        gcongr
-        exact mul_le_of_le_one_left (show 0 ≤ μ s from zero_le) (prob_le_one (μ := μ))
-      _ = 1 := by rw [add_comm, prob_add_prob_compl hs]
-  calc
-    _ = μ s * credit μ s hmass F +
-        μ sᶜ * (credit μ s hmass F + terminationFactor μ s * ε) := by
-      change ∫⁻ x, s.piecewise F (fun _ => _) x ∂μ = _
-      rw [lintegral_piecewise hs.nullMeasurableSet, setLIntegral_const, hcredit]
-      ring
-    _ = credit μ s hmass F + (μ sᶜ * (terminationFactor μ s : ℝ≥0∞)) * ε := by
-      calc
-        _ = (μ s + μ sᶜ) * credit μ s hmass F +
-            (μ sᶜ * (terminationFactor μ s : ℝ≥0∞)) * ε := by ring
-        _ = _ := by rw [prob_add_prob_compl hs, one_mul]
-    _ ≤ _ := add_le_add le_rfl (mul_le_of_le_one_left (show 0 ≤ ε from zero_le) hamp)
+  refine Retry.lintegral_kernel_le (R := fun _ => credit μ s hmass F) hs (le_of_eq ?_)
+    (Retry.mul_factor_le_one (prob_add_prob_compl hs).le) ε
+  rw [hcredit, setLIntegral_const, mul_comm (credit μ s hmass F), ← add_mul,
+    prob_add_prob_compl hs, one_mul]
 
 end mathematics
 

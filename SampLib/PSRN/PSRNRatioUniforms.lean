@@ -1,7 +1,7 @@
-import SampLib.PSRN.Support.LatentUniformRepresentation
-import SampLib.PSRN.Support.LatentProduct
-import SampLib.PSRN.Support.LatentRepresentedProduct
-import SampLib.PSRN.Support.LatentRepresentedDivision
+import SampLib.PSRN.Support.Represented.Uniform
+import SampLib.PSRN.Support.Arithmetic.Product
+import SampLib.PSRN.Support.Represented.Product
+import SampLib.PSRN.Support.Represented.Division
 import Samplers.PSRN.Uniform
 
 /-! # The ratio of two independent deferred uniforms

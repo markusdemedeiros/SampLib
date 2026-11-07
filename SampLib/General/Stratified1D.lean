@@ -1,4 +1,5 @@
 import SampLib.General.Laws.Stratified1D
+import SampLib.Core.ListEncoding
 import SampLib.Core.Syntax.UniformRanges
 import Samplers.General.Points
 

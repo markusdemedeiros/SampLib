@@ -1,4 +1,5 @@
 import SampLib.Weighted.Support.SuccinctChoice
+import SampLib.Core.Retry
 import SampLib.Weighted.Laws.EnvelopeRejection
 
 /-! # Dense and packed proposal loops for succinct categorical choice
@@ -79,7 +80,7 @@ theorem twp_width (E : CoPset) (w : ℕ) :
 theorem twp_accept (E : CoPset) (ws : List ℕ) (m : ℕ) (hm : 0 < m)
     (hbound : ∀ w ∈ ws, w ≤ m) (F : ℕ → ℝ≥0∞) (ε : ℝ≥0∞)
     (i : Fin ws.length) (retry : Exp rT) :
-    ⊢ (↯ (factor ws m * ε) -∗ ↯ (∫⁻ j, F j ∂WeightedChoice.law ws) -∗
+    ⊢ (↯ ((∫⁻ j, F j ∂WeightedChoice.law ws) + factor ws m * ε) -∗
         tglWp E pl(&retry #())
           (fun v => iprop(∃ j : ℕ, ⌜v = Val.int (j : ℤ)⌝ ∗ ↯ (F j)))) -∗
       ↯ (proposalCredit ws m F ε i) -∗
@@ -99,8 +100,7 @@ theorem twp_accept (E : CoPset) (ws : List ℕ) (m : ℕ) (hm : 0 < m)
   | false =>
     twp_pure
     isimp only [coinCredit, Bool.false_eq_true, ite_false] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
-    iapply Hretry $$ Hterm Hcredit
+    iapply Hretry $$ Hcredit
   | true =>
     twp_pure
     twp_value
@@ -119,17 +119,12 @@ theorem twp_dense (E : CoPset) (ws : List ℕ) (m : ℕ) (ht : 0 < ws.sum)
       tglWp E pl(&(Program.dense ws (m : ℤ)) #())
         (fun v => iprop(∃ i : ℕ, ⌜v = Val.int (i : ℤ)⌝ ∗ ↯ (F i))) := by
   have hn := length_pos ws ht
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (EnvelopeRejection.one_lt_factor ws m hn hm) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (EnvelopeRejection.one_lt_factor ws m hn hm)
+  iintro !> %ε %hε IH Hcredit
   iterate 2 twp_pure
   twp_bind pl(&Occil.uniformInt #int (ws.length : ℤ))
-  icombine Hcredit Hterm as Htotal
   ihave Hsample := ErrorCredit.weaken
-    (WeightedRejection.expectation ws m ht hm hbound F ε) $$ Htotal
+    (WeightedRejection.expectation ws m ht hm hbound F ε) $$ Hcredit
   iapply tglWp_wand
   isplitl [Hsample]
   · iapply UniformInt.twp_uniformInt E ws.length hn (proposalCredit ws m F ε) $$ Hsample
@@ -154,17 +149,12 @@ theorem twp_packed (E : CoPset) (ws : List ℕ) (m : ℕ) (ht : 0 < ws.sum)
         (PackedWeights.bits ws : ℤ) (PackedWeights.mask ws : ℤ)) #())
         (fun v => iprop(∃ i : ℕ, ⌜v = Val.int (i : ℤ)⌝ ∗ ↯ (F i))) := by
   have hn := length_pos ws ht
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (EnvelopeRejection.one_lt_factor ws m hn hm) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (EnvelopeRejection.one_lt_factor ws m hn hm)
+  iintro !> %ε %hε IH Hcredit
   iterate 2 twp_pure
   twp_bind pl(&Occil.uniformInt #int (ws.length : ℤ))
-  icombine Hcredit Hterm as Htotal
   ihave Hsample := ErrorCredit.weaken
-    (WeightedRejection.expectation ws m ht hm hbound F ε) $$ Htotal
+    (WeightedRejection.expectation ws m ht hm hbound F ε) $$ Hcredit
   iapply tglWp_wand
   isplitl [Hsample]
   · iapply UniformInt.twp_uniformInt E ws.length hn (proposalCredit ws m F ε) $$ Hsample

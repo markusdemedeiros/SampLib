@@ -1,5 +1,6 @@
 import SampLib.Bernoulli.Laws.EvenParity
 import SampLib.Uniform.RealCoin
+import SampLib.Core.Retry
 import Samplers.Bernoulli.Basic
 import Metrology.Iris.LocalBI
 
@@ -34,16 +35,11 @@ theorem twp_evenParity (E : CoPset) (p : unitInterval) (coin : Val rT)
     (F : Bool → ℝ≥0∞) :
     ⊢ ↯ (credit p F) -∗ tglWp E pl(&Occil.evenParity &coin.fst #())
       (fun v : Val rT => iprop(∃ b : Bool, ⌜v = Val.bool b⌝ ∗ ↯ (F b))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (one_lt_factor p hp) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (one_lt_factor p hp)
+  iintro !> %ε %hε IH Hcredit
   twp_pures
   twp_bind pl(&coin.fst #())
-  icombine Hcredit Hterm as Htotal
-  ihave Hsample := ErrorCredit.weaken (expectation p F ε) $$ Htotal
+  ihave Hsample := ErrorCredit.weaken (expectation p F ε) $$ Hcredit
   iapply (hcoin.wp (firstCredit p F ε) (measurable_of_countable _) _) $$ Hsample
   iintro %a Hcredit
   cases a
@@ -69,10 +65,9 @@ theorem twp_evenParity (E : CoPset) (p : unitInterval) (coin : Val rT)
       itrivial
     · twp_pure
       isimp only [pairCredit, ite_true] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
       twp_bind pl(&Occil.evenParity &coin.fst #())
       iapply (tglWp_mono fun _ => tglWp_value)
-      iapply IH $$ Hterm Hcredit
+      iapply IH $$ Hcredit
 
 /-- Typed distribution specification. -/
 theorem evenParity_distSpec (E : CoPset) (p : unitInterval) (coin : Val rT)

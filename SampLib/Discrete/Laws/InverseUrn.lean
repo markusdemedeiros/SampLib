@@ -1,4 +1,9 @@
-import SampLib.Discrete.Laws.UrnWaiting
+module
+
+public import Mathlib.MeasureTheory.Measure.GiryMonad
+public import SampLib.Discrete.Laws.UrnWaiting
+
+@[expose] public section
 
 /-! # Failure counts before successive marked draws in a reinforced urn
 

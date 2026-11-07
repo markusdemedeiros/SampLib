@@ -1,4 +1,4 @@
-import SampLib.PSRN.Support.LatentRepresentedSpec
+import SampLib.PSRN.Support.Represented.Spec
 import SampLib.Core.BetaStep
 import Samplers.PSRN.Arithmetic
 

@@ -3,6 +3,7 @@ import SampLib.Discrete.BinomialBinary
 import SampLib.Discrete.Support.NatUrnOps
 import SampLib.Discrete.Syntax.Urns
 import SampLib.Core.ProofMode.BindFrom
+import SampLib.Core.Retry
 
 /-! # Multivariate Fisher sampling by conditioning independent binomials
 
@@ -173,19 +174,14 @@ private theorem twp_loop (E : CoPset) (draws : ℕ) (counts odds : List ℕ)
       tglWp E pl(&(loop draws counts odds) #())
         (fun v : Val rT => iprop(∃ xs : List ℕ,
           ⌜v = NatCounters.encode xs⌝ ∗ ↯ (F xs))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε
+  iapply Retry.twp_loop solve_not_value
     (AcceptedProposal.one_lt_factor (proposal counts odds) (acceptance draws)
-      (mass_nonzero draws counts odds hlen hodds hdraws)) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+      (mass_nonzero draws counts odds hlen hodds hdraws))
+  iintro !> %ε %hε IH Hcredit
   iterate 2 twp_pure
   twp_bind pl(&proposals &(NatCounters.encode counts).fst &(NatCounters.encode odds).fst)
-  icombine Hcredit Hterm as Htotal
   ihave Hcredit := ErrorCredit.weaken (expectation draws counts odds hlen hodds hdraws F ε)
-    $$ Htotal
+    $$ Hcredit
   iapply ((proposals_distSpec E counts odds hlen).wp
     (kernel draws counts odds hlen hodds hdraws F ε) (measurable_of_countable _) _) $$ Hcredit
   iintro %xs Hcredit
@@ -208,11 +204,10 @@ private theorem twp_loop (E : CoPset) (draws : ℕ) (counts odds : List ℕ)
     itrivial
   · rw [decide_eq_false h]
     isimp only [kernel_eq, ite_eq_right h] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     twp_pure
     twp_bind pl(&(loop draws counts odds) #())
     iapply (tglWp_mono fun _ => tglWp_value)
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
 
 /-- Exact multivariate Fisher counts on the full finite positive-odds urn domain. -/
 theorem fisherMultivariate_distSpec (E : CoPset) (draws : ℕ) (counts odds : List ℕ)

@@ -1,4 +1,4 @@
-import SampLib.Bernoulli.Laws.AlternatingSeries
+import SampLib.Bernoulli.Laws.AlternatingSeriesMean
 
 /-! # Uniform approximation of alternating-series factory probabilities
 

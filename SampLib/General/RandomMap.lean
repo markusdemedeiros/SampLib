@@ -1,3 +1,4 @@
+import SampLib.Discrete.WeightedChoice
 import SampLib.General.Laws.RandomMap
 import SampLib.Core.ProofMode.BindFrom
 import SampLib.Core.ListEncoding

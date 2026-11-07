@@ -1,4 +1,5 @@
 import SampLib.Bernoulli.Support.EnvelopeRound
+import SampLib.Bernoulli.Support.EnvelopeOpening
 import SampLib.Bernoulli.Support.EnvelopeStateStep
 import SampLib.Bernoulli.Support.EnvelopeCompare
 

@@ -1,6 +1,6 @@
 module
 
-public import SampLib.Common.Laws.PoissonMeasure
+public import Mathlib.Probability.Distributions.Poisson.Basic
 
 @[expose] public section
 

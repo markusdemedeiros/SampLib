@@ -1,4 +1,5 @@
 import SampLib.Discrete.Laws.WalleniusTwoColor
+import SampLib.Uniform.RationalCoin
 import SampLib.Core.SupportedSpec
 import SampLib.Core.ProofMode.BindFrom
 import Samplers.Discrete.Urns

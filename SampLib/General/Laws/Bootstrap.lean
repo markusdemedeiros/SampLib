@@ -1,4 +1,5 @@
 import SampLib.Combinatorial.Laws.SampleWithReplacement
+import SampLib.Combinatorial.Laws.Choice
 
 /-! # Bootstrap law -/
 

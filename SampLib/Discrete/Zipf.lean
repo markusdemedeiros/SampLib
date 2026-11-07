@@ -1,6 +1,8 @@
 import SampLib.Discrete.Laws.Zipf
+import SampLib.Discrete.UniformFin
 import SampLib.Discrete.Support.RationalPowerCoinSyntax
 import SampLib.Uniform.RationalCoin
+import SampLib.Core.Retry
 
 /-! # Exact finite Zipf rejection
 
@@ -83,16 +85,11 @@ private theorem twp_loop (E : CoPset) (n a b : ℕ) [NeZero n] (hb : 0 < b)
     ⊢ ↯ (∫⁻ k, F k ∂law n a b hb) -∗
       tglWp E pl(&(loop n a b) #())
         (fun v : Val rT => iprop(∃ (k : Fin n), ⌜v = Val.int (k + 1 : ℕ)⌝ ∗ ↯ (F k))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (one_lt_factor n a b hb) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (one_lt_factor n a b hb)
+  iintro !> %ε %hε IH Hcredit
   iterate 2 twp_pure
   twp_bind pl(&Occil.uniformInt #int (n : ℤ))
-  icombine Hcredit Hterm as Htotal
-  ihave Hsample := ErrorCredit.weaken (expectation n a b hb F ε) $$ Htotal
+  ihave Hsample := ErrorCredit.weaken (expectation n a b hb F ε) $$ Hcredit
   iapply (UniformFin.uniformFin_distSpec E n).wp (proposalCredit n a b hb F ε)
     (measurable_of_countable _) _ $$ Hsample
   iintro %k Hcredit
@@ -108,10 +105,9 @@ private theorem twp_loop (E : CoPset) (n a b : ℕ) [NeZero n] (hb : 0 < b)
   cases accepted
   · twp_pure
     isimp only [coinCredit, Bool.false_eq_true, ↓reduceIte] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     iapply loop_align E n a b
       (fun v : Val rT => iprop(∃ (k : Fin n), ⌜v = Val.int (k + 1 : ℕ)⌝ ∗ ↯ (F k)))
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
   · twp_pure
     twp_value
     imodintro

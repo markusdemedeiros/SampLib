@@ -1,6 +1,7 @@
 import SampLib.Constants.Laws.Digits
 import SampLib.Uniform.RealCoin
 import SampLib.Uniform.UniformInt
+import SampLib.Core.Retry
 import Samplers.Constants.Engines
 
 /-! # Comparing a uniform digit stream with a fixed expansion
@@ -124,12 +125,9 @@ private theorem twp_read (E : CoPset) (b : ℕ) (hb : 1 < b)
     ⊢ ↯ (RealCoin.credit (bias d k) F) -∗
       tglWp E pl(&(read b digit) #int ((k + 1 : ℕ) : ℤ))
         (fun v : Val rT => iprop(∃ a : Bool, ⌜v = Val.bool a⌝ ∗ ↯ (F a))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert %k Hcredit
-  iapply ErrorCredit.Induction.simple (k := 2) hε (by norm_num) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ %k Hcredit
+  irevert %k
+  iapply Retry.twp_loop_forall (k := 2) (fun _ => solve_not_value) (by norm_num)
+  iintro !> %ε %hε %k IH Hcredit
   isimp only [ENNReal.coe_ofNat] at IH
   twp_pures
   simp only [UniformInt.uniformInt_openRec]
@@ -144,8 +142,7 @@ private theorem twp_read (E : CoPset) (b : ℕ) (hb : 1 < b)
   twp_pure
   simp only [UniformInt.uniformInt_openRec]
   twp_bind pl(&Occil.uniformInt #int (b : ℤ))
-  icombine Hcredit Hterm as Htotal
-  ihave Hsample := ErrorCredit.weaken (expectation hb d k F ε) $$ Htotal
+  ihave Hsample := ErrorCredit.weaken (expectation hb d k F ε) $$ Hcredit
   iapply tglWp_wand
   isplitl [Hsample]
   · iapply (UniformInt.twp_uniformInt E b (by omega) (rankCredit d k F ε)) $$ Hsample
@@ -175,12 +172,11 @@ private theorem twp_read (E : CoPset) (b : ℕ) (hb : 1 < b)
     · rw [show decide ((d k : ℤ) < (j : ℤ)) = false by exact_mod_cast decide_eq_false hgt]
       twp_pure
       isimp only [rankCredit, ite_eq_right hlt, ite_eq_right hgt] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
       twp_pure
       simp only [UniformInt.uniformInt_openRec]
       isimp [read, Exp.openRec, ProbLang.openRec_val_fst,
         UniformInt.uniformInt_openRec] at IH
-      iapply IH $$ Hterm Hcredit
+      iapply IH $$ Hcredit
 
 /-- The digit algorithm samples the real represented by the supplied expansion. -/
 theorem twp_fromDigits (E : CoPset) (b : ℕ) (hb : 1 < b)

@@ -1,4 +1,5 @@
 import SampLib.Weighted.Laws.BitmaskRejection
+import SampLib.Core.Retry
 import SampLib.Weighted.RandomBits
 import SampLib.Weighted.Support.PowerOfTwoCeiling
 import SampLib.Common.Laws.UniformRejection
@@ -116,17 +117,12 @@ private theorem twp_retry (E : CoPset) (n : ℕ) (hn : 0 < n) (F : ℕ → ℝ�
     ⊢ ↯ (∫⁻ k, F k ∂UniformInt.law n) -∗
       tglWp E pl(&(retry n) #())
         (fun v : Val rT => iprop(∃ k : ℕ, ⌜v = Val.int (k : ℤ)⌝ ∗ ↯ (F k))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (by norm_num : 1 < (2 : ℝ≥0)) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (by norm_num : 1 < (2 : ℝ≥0))
+  iintro !> %ε %hε IH Hcredit
   iterate 2 twp_pure
   simp only [candidate_openRec, candidate_closeRec]
   twp_bind pl(&candidate #int (PowerOfTwoCeiling.width n : ℤ) #0)
-  icombine Hcredit Hterm as Htotal
-  ihave Hkernel := ErrorCredit.weaken (expectation n hn F ε) $$ Htotal
+  ihave Hkernel := ErrorCredit.weaken (expectation n hn F ε) $$ Hcredit
   iapply ((candidate_distSpec E n).wp (UniformRejection.kernel n F ε)
     (measurable_of_countable _) _) $$ Hkernel
   iintro %k Hcredit
@@ -143,10 +139,9 @@ private theorem twp_retry (E : CoPset) (n : ℕ) (hn : 0 < n) (F : ℕ → ℝ�
   · rw [show decide ((k : ℤ) < (n : ℤ)) = false by exact decide_eq_false (by omega)]
     twp_pure
     isimp only [UniformRejection.kernel, ite_eq_right hk] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     isimp [retry, Exp.close, Exp.closeRec] at IH
     simp only [candidate_openRec]
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
 
 /-- Bitmask rejection is exactly uniform for every positive target width. -/
 theorem bitmaskRejection_distSpec (E : CoPset) (n : ℕ) [NeZero n] :

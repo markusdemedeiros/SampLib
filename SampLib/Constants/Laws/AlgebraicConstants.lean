@@ -5,6 +5,8 @@ public import Mathlib.Topology.UnitInterval
 
 @[expose] public section
 
+/-! # Algebraic constants in the unit interval -/
+
 namespace SampLib.AlgebraicConstants
 
 noncomputable section

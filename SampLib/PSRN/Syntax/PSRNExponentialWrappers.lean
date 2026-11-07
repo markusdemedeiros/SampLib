@@ -1,7 +1,7 @@
 import SampLib.PSRN.Syntax.PSRNExponential
-import SampLib.PSRN.Support.PSRNRationalRateDecay
-import SampLib.PSRN.Support.PSRNLogRateDecay
-import SampLib.PSRN.Support.PSRNUnknownRateDecay
+import SampLib.PSRN.Support.Exponential.RationalRateDecay
+import SampLib.PSRN.Support.Exponential.LogRateDecay
+import SampLib.PSRN.Support.Exponential.UnknownRateDecay
 
 /-! # Literal source wrappers for the exponential rate interfaces -/
 

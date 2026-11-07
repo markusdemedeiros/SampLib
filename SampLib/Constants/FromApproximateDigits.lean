@@ -1,4 +1,6 @@
 import SampLib.Constants.Laws.ApproximateDigits
+import SampLib.Uniform.UniformInt
+import SampLib.Uniform.RealCoin
 import Samplers.Constants.Engines
 
 /-! # Exact coins from approximate radix digits

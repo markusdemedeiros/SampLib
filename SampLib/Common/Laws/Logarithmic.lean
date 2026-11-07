@@ -4,6 +4,8 @@ public import Mathlib.Analysis.SpecialFunctions.Log.Deriv
 
 @[expose] public section
 
+/-! # The reciprocal-weighted geometric series -/
+
 namespace ProbabilityTheory
 
 /-- Weighting positive geometric counts by their reciprocals gives `p log(1/p)`. -/

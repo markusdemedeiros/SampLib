@@ -1,4 +1,5 @@
 import SampLib.Weighted.Support.SortedChoicePreparation
+import SampLib.Core.Retry
 import SampLib.Weighted.Laws.SortedEnvelope
 import SampLib.Weighted.InclusiveOffset
 import SampLib.Core.Laws.IntegerIntervals
@@ -128,17 +129,12 @@ theorem twp_loop (E : CoPset) (ws : List ℕ) (asc : Bool) [NeZero ws.sum]
     simpa only [GroupedEnvelope.masses_sum] using envelopes_pos ws asc ht hs
   have hsupport := (WeightedChoice.ae_lt_length (envelopes ws asc)).and
     (WeightedChoice.ae_pos_weight (envelopes ws asc))
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (GroupedEnvelope.one_lt_factor _ htotal) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (GroupedEnvelope.one_lt_factor _ htotal)
+  iintro !> %ε %hε IH Hcredit
   iterate 2 twp_pure
   twp_bind pl(&Occil.Weighted.fastLoadedDiceRoller
     &(listVal (fun n : ℕ => Val.int n) (envelopes ws asc)).fst #())
-  icombine Hcredit Hterm as Htotal
-  ihave Hsample := ErrorCredit.weaken (expectation_preservation ws asc ht hs F ε) $$ Htotal
+  ihave Hsample := ErrorCredit.weaken (expectation_preservation ws asc ht hs F ε) $$ Hcredit
   iapply (hdraw.wp_supported
     (fun k => k < (envelopes ws asc).length ∧ 0 < (envelopes ws asc)[k]?.getD 0)
     (Set.to_countable _).measurableSet hsupport (groupCredit ws asc F ε)
@@ -209,9 +205,7 @@ theorem twp_loop (E : CoPset) (ws : List ℕ) (asc : Bool) [NeZero ws.sum]
   twp_pure
   ihave Hretry : (↯ R -∗ tglWp E pl(&(Program.loop ws (envelopes ws asc) asc) #())
     (fun v => iprop(∃ i : ℕ, ⌜v = Val.int (i : ℤ)⌝ ∗ ↯ (F i)))) $$ [IH]
-  · iintro Hretry
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hretry
-    iapply IH $$ Hterm Hcredit
+  · iexact IH
   iapply twp_accept E ws asc hs k r hkn hr he F R (Program.loop ws (envelopes ws asc) asc)
     $$ Hretry Hcredit
 

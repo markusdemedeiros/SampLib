@@ -1,6 +1,9 @@
-import SampLib.Common.Laws.AbsorbingChain
-import SampLib.Discrete.Laws.HazardProduct
+module
 
+public import SampLib.Common.Laws.AbsorbingChain
+public import SampLib.Discrete.Laws.HazardProduct
+
+@[expose] public section
 
 /-! # Divergent cumulative hazards force absorption
 

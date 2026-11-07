@@ -1,5 +1,9 @@
-import Mathlib.MeasureTheory.Measure.GiryMonad
-import Mathlib.MeasureTheory.Measure.Prod
+module
+
+public import Mathlib.MeasureTheory.Measure.GiryMonad
+public import Mathlib.MeasureTheory.Measure.Prod
+
+@[expose] public section
 
 /-! # Stopped sum law -/
 

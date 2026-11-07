@@ -1,3 +1,4 @@
+import Metrology.ProbLang.Discrete
 import SampLib.Discrete.Laws.DyadicBlocks
 import SampLib.Discrete.Laws.Geometric
 import SampLib.Discrete.Laws.UniformFin

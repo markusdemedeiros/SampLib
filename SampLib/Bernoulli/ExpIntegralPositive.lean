@@ -1,4 +1,5 @@
 import SampLib.Bernoulli.Laws.ExpIntegral
+import SampLib.Bernoulli.ReciprocalAffine
 import SampLib.Bernoulli.ExpMinusShifted
 import Samplers.Bernoulli.Elementary
 

@@ -1,4 +1,8 @@
-import SampLib.Uniform.Laws.RealCoin
+module
+
+public import SampLib.Uniform.Laws.RealCoin
+
+@[expose] public section
 
 /-! # Binomial trial sums
 

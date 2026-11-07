@@ -57,7 +57,8 @@ theorem reset_expectation (n : ℕ) (hn : 0 < n) (hlarge : 1 < n) (F : ℕ → �
       ∫⁻ r, F r ∂UniformInt.law n := by
   change (∫⁻ r, F r ∂boundedKernel n 1 0) = _
   rw [UniformInt.lintegral_law]
-  simpa only [sum_range_one, Nat.cast_one, one_div, div_eq_mul_inv, mul_comm, mul_one, one_mul] using
+  simpa only [sum_range_one, Nat.cast_one, one_div, div_eq_mul_inv, mul_comm, mul_one,
+    one_mul] using
     ensemble_expectation n 1 hn hlarge F
 
 /-- Expected eventual credit and the explicit geometric tail fund a finite source execution. -/

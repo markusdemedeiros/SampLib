@@ -1,5 +1,9 @@
-import SampLib.Common.Laws.AbsorbingChain
-import SampLib.Discrete.Laws.HazardSurvival
+module
+
+public import SampLib.Common.Laws.AbsorbingChain
+public import SampLib.Discrete.Laws.HazardSurvival
+
+@[expose] public section
 
 /-! # Waiting for the first marked draw of a reinforced urn
 

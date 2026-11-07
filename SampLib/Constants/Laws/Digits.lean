@@ -4,6 +4,8 @@ public import Mathlib.Analysis.Real.OfDigits
 
 @[expose] public section
 
+/-! # Leading digits of a base-`b` expansion -/
+
 namespace Real
 
 /-- Removing the first digit leaves the fractional tail, scaled by the base. -/

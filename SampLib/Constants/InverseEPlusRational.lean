@@ -1,3 +1,4 @@
+import SampLib.Constants.FromBounds
 import SampLib.Constants.Laws.EulerReciprocal
 import SampLib.Bernoulli.EulerBounds
 import SampLib.Bernoulli.Syntax.Exponential

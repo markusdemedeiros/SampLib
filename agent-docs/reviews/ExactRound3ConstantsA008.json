@@ -1,0 +1,72 @@
+{
+  "reviewer": "/root/review_exact_a",
+  "context": {
+    "files": {
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "lakefile.toml": "64f4be1c60f679244e593e1ea52934be36f3e5f0c570134222dd85c9e5f3fb25",
+      "lake-manifest.json": "378dd68517f9c123581f12978e83fd618b4c2349cefe9f7c2081d02f5a465252",
+      "AGENTS.md": "f325ba00642a8d862d4d0a69581bcb7882822c52fe0917ddd28ba85ef1f6bdbd",
+      "agent-docs/VerifyingSamplers.md": "af2156f750b0a47b7c4c76bb5eda3bf0fa00d1f3b5bef98af9a64eddfc055ddd"
+    },
+    "packages": {
+      "clutch-lean": "06a7b3e2b26f3e58c01edb12e39bdf439ba5a982",
+      "iris-fix": "a35450f002db425cda5ee6f83b834ab3780635f9",
+      "iris": "38194312b4e1bb3007ab0002bfce0a89572d0d1e",
+      "cslib": "5b56df99362532c46e1175381fbbdd755bd56030",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+      "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  },
+  "caller_evidence": "agent-docs/reviews/ExactFactoriesBatch016Callers.lean",
+  "caller_sha256": "51658495d7902009bf63b5563dfe8899e6444d72fee00aa4ba9e4c8f659672b9",
+  "support": [],
+  "accepted": [
+    {
+      "sampler": "Occil.Constants.rationalContinuedFraction",
+      "public_spec": "SampLib.FiniteRationalContinuedFraction.rationalContinuedFraction_finite_distSpec",
+      "spec_kind": "plain",
+      "classification": "core",
+      "reviewed_domain": "All finite sourceguard-valid coefficient prefixes: positive integer numerator b<=denominator a, arbitrary positive scale d, a final flag at or before given depth, arbitrary natural start and exact deterministic coefficient callback. Companion RationalContinuedFraction.rationalContinuedFraction_distSpec additionally covers infinite streams with d<=b<=a. Unrestricted positive infinite streams are not claimed to terminate.",
+      "proof_module": "SampLib.Constants.FiniteRationalContinuedFraction",
+      "sha256": "ad9f8af051c711af36c3b58b97d6f88ff8b24d9a4049a19c806fd555477ab3ed",
+      "review_evidence": "agent-docs/reviews/Round3Constants.md",
+      "checks": [
+        "source",
+        "build",
+        "axioms",
+        "caller",
+        "boundaries",
+        "protocol"
+      ],
+      "source_snapshot": {
+        "SampLib/Basic.lean": "0afe7a2b4c19fe736c985bf582bb3c166fad68754bb695058b713317044a6276",
+        "SampLib/Bernoulli/Laws/CoinConditional.lean": "fe4d9f0f69c3ca9e42c237dd88defad90a80047353caffe64a4eb45ed4a903c4",
+        "SampLib/Common/WeightedAmplification.lean": "027bdd1e8378eb09cb5a560ee74f53291eb907fb9ccd4db9e7ed74919274f1dc",
+        "SampLib/Constants/FiniteRationalContinuedFraction.lean": "ad9f8af051c711af36c3b58b97d6f88ff8b24d9a4049a19c806fd555477ab3ed",
+        "SampLib/Constants/Laws/FiniteRationalContinuedFraction.lean": "8228c55ce63f1b73e3dc343d24d5e2e040d1bf677ed5ef353c29859c08d34e92",
+        "SampLib/Constants/Laws/RationalContinuedFraction.lean": "c67e3ef246d91401f1eb62b9213c2f9cedf8bfa0ca8516ef4b3b99c7849f68fd",
+        "SampLib/Constants/Laws/RealContinuedFraction.lean": "fcf9d1af281056cbe2a676266851761b07ec512357e0b9b3abe265ad21fb6a84",
+        "SampLib/Constants/Laws/RealContinuedFractionBudget.lean": "e57a30debc50f4ccc863c0a8725467994af953c9d0dbdbb46038c811de06a67a",
+        "SampLib/Constants/RationalContinuedFraction.lean": "afbfdaa93d81369fbfd6b4e163f7e6da5e3ebbcf7166ec0a10512818686e188e",
+        "SampLib/Core/Laws/Retry.lean": "a8a20f8760987a377493a0f561c185bd1e8e11a7e251f72e6f8a7d839d3e1416",
+        "SampLib/Core/Retry.lean": "b83c7961a28283b6c851671eaaa7f2a014de52107ad449c2dfe99c8c179d2041",
+        "SampLib/Templates.lean": "84b8fcdd4245d45887235f4becd5c6900f9a8932d09bb80cc41b90fd9f999eef",
+        "SampLib/Uniform/Laws/RationalCoin.lean": "4b334a518f47d959cd21cdb37324d0681d184642642c71f8fc0c028caf870e3b",
+        "SampLib/Uniform/Laws/RealCoin.lean": "80f801fd59de11cf5c7fe4512ba74fde4f55c14d15cc7177d28956a0fa0e590e",
+        "SampLib/Uniform/RationalCoin.lean": "30955f5b4a08f319faa777ebc284b0b2c0b37ca736abcc238e2f9d61bc581937",
+        "SampLib/Uniform/RealCoin.lean": "fe06f7612f50b7b17e67d94d9b112d8c8733a387c17b3961ab10711d95481253",
+        "code/Samplers/Bernoulli/Basic.lean": "44add5a1ad4bbb789ee64126003e55d482c8a9da567894900318ba5429f20e27",
+        "code/Samplers/Constants/Engines.lean": "7c9e904b0e7da87921be1d7d77ecac98f6f19b047f330e00d90979d2993291ee",
+        "code/Samplers/Lazy.lean": "24f52d88b4190a96aba19e254de313ce68f1af90061f5934016d54ffbbd81f72",
+        "code/Samplers/Uniform.lean": "593c9d02d5828897803bf2fb073f81440c5a312ed96cdf4b9619f59d41eb2c72"
+      }
+    }
+  ]
+}

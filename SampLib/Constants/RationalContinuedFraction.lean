@@ -21,11 +21,10 @@ def encodeCoefficient {rT : Type _} (c : Coefficient) : Val rT :=
   Val.pair (Val.int c.numerator)
     (Val.pair (Val.int c.denominator) (Val.pair (Val.int c.scale) (Val.bool c.last)))
 
-private theorem valid_guard (c : Coefficient) :
-    ((decide ((c.numerator : ℤ) ≤ 0) || decide ((c.denominator : ℤ) < c.numerator)) ||
-      decide ((c.scale : ℤ) ≤ 0)) = false := by
-  have hab : (c.numerator : ℤ) ≤ c.denominator := by exact_mod_cast c.bounded
-  simp [c.positive.ne', c.scale_pos.ne', not_lt.mpr hab]
+private theorem valid_guard (b a d : ℕ) (hb : 0 < b) (hba : b ≤ a) (hd : 0 < d) :
+    ((decide ((b : ℤ) ≤ 0) || decide ((a : ℤ) < b)) || decide ((d : ℤ) ≤ 0)) = false := by
+  simp only [Bool.or_eq_false_iff, decide_eq_false_iff_not]
+  omega
 
 theorem rationalContinuedFraction_lc {rT : Type _} :
     (Occil.Constants.rationalContinuedFraction : Exp rT).IsLocallyClosed := by is_lc
@@ -69,7 +68,45 @@ private theorem selector_distSpec (E : CoPset) (c : Coefficient) :
   RationalCoin.rationalCoin_distSpec E _ _ (by positivity)
     (by have := c.denominator_pos; have := c.scale_pos; omega) (by omega)
 
+/-- One round of the source after it reads and checks the coefficient `(b,(a,(d,last)))`. -/
+def round {rT : Type _} (coefficient : Val rT) (i : ℕ) (b a d : ℕ) (last : Bool) : Exp rT :=
+  if last then pl(&Occil.rationalCoin #int (b : ℤ) #int (a : ℤ))
+  else pl(if &Occil.rationalCoin #int (a : ℤ) #int ((a : ℤ) + d)
+    then &Occil.rationalCoin #int (b : ℤ) #int (a : ℤ)
+    else if &Occil.Constants.rationalContinuedFraction &coefficient.fst (#int (i : ℤ) + #1)
+      then #false
+      else &Occil.Constants.rationalContinuedFraction &coefficient.fst #int (i : ℤ))
+
 set_option maxHeartbeats 1200000 in
+omit [ProbLangDist.IsUniformInt rT] in
+/-- Reading and checking a valid coefficient leaves one round of the source. -/
+theorem twp_entry (E : CoPset) (coefficient : Val rT) (i b a d : ℕ) (last : Bool)
+    (hb : 0 < b) (hba : b ≤ a) (hd : 0 < d)
+    (hentry : ⊢ tglWp E pl(&coefficient.fst #int (i : ℤ)) (fun v : Val rT =>
+      iprop(⌜v = Val.pair (Val.int b) (Val.pair (Val.int a) (Val.pair (Val.int d)
+        (Val.bool last)))⌝)))
+    (Φ : Val rT → IProp GF) :
+    tglWp E (round coefficient i b a d last) Φ ⊢
+      tglWp E pl(&Occil.Constants.rationalContinuedFraction &coefficient.fst #int (i : ℤ)) Φ := by
+  iintro Hround
+  iterate 3 twp_pure
+  twp_bind pl(&coefficient.fst #int (i : ℤ))
+  iapply tglWp_wand
+  isplitl []
+  · iapply hentry
+  iintro %v %hv
+  subst v
+  twp_pures
+  rw [valid_guard b a d hb hba hd]
+  twp_pure
+  cases last
+  · iterate 2 twp_pure
+    ieval (change _ ⊢ tglWp E (round coefficient i b a d false) Φ)
+    iexact Hround
+  · twp_pure
+    ieval (change _ ⊢ tglWp E (round coefficient i b a d true) Φ)
+    iexact Hround
+
 private theorem twp_weighted (E : CoPset) (a : ℕ → Coefficient) (start : ℕ)
     (coefficient : Val rT)
     (hcoefficient : ∀ i, Reachable a start i →
@@ -85,18 +122,11 @@ private theorem twp_weighted (E : CoPset) (a : ℕ → Coefficient) (start : ℕ
     (fun i => one_le_potential (a i.val)) _ ε hε (4 / 3) (by norm_num) $$ []
   iintro !> %ε %hε #IH %i Hterm %F Hcredit
   isimp only [ENNReal.coe_div (by norm_num : (3 : ℝ≥0) ≠ 0), ENNReal.coe_ofNat] at IH
-  iterate 3 twp_pure
-  twp_bind pl(&coefficient.fst #int (i.val : ℤ))
-  iapply tglWp_wand
-  isplitl []
-  · iapply hcoefficient i.val i.property
-  iintro %v %hv
-  subst v
-  twp_pures
-  rw [valid_guard (a i.val)]
-  twp_pure
+  iapply twp_entry E coefficient i.val (a i.val).numerator (a i.val).denominator
+    (a i.val).scale (a i.val).last (a i.val).positive (a i.val).bounded (a i.val).scale_pos
+    (hcoefficient i.val i.property)
   cases hlast : (a i.val).last
-  · iterate 2 twp_pure
+  · simp only [round, Bool.false_eq_true, ite_false]
     twp_bind pl(&Occil.rationalCoin #int ((a i.val).denominator : ℤ)
       #int ((a i.val).denominator + (a i.val).scale : ℤ))
     icombine Hcredit Hterm as Htotal
@@ -138,7 +168,7 @@ private theorem twp_weighted (E : CoPset) (a : ℕ → Coefficient) (start : ℕ
       isimp only [selectorCredit, ite_true] at Hcredit
       isimp only [← RealCoin.lintegral_law] at Hcredit
       iapply (direct_distSpec E (a i.val)).spec F (measurable_of_countable _) $$ Hcredit
-  · twp_pure
+  · simp only [round, ite_true]
     isimp only [value_last a i.val hlast, ← RealCoin.lintegral_law] at Hcredit
     iapply (direct_distSpec E (a i.val)).spec F (measurable_of_countable _) $$ Hcredit
 

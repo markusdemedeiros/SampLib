@@ -1,4 +1,8 @@
-import SampLib.Uniform.Laws.RealCoin
+module
+
+public import SampLib.Uniform.Laws.RealCoin
+
+@[expose] public section
 
 /-! # Laws of von Neumann's fair-coin extractor
 
@@ -33,7 +37,7 @@ section termination
 /-- Probability of equal input flips. -/
 def retryProbability (p : unitInterval) : ℝ := (p : ℝ) ^ 2 + (1 - (p : ℝ)) ^ 2
 
-private theorem retryProbability_pos (p : unitInterval) : 0 < retryProbability p := by
+theorem retryProbability_pos (p : unitInterval) : 0 < retryProbability p := by
   dsimp [retryProbability]
   nlinarith [sq_nonneg ((p : ℝ) - 1 / 2)]
 

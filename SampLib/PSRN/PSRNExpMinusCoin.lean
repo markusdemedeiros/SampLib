@@ -1,9 +1,10 @@
+import SampLib.Bernoulli.ExpMinusRational
 import SampLib.PSRN.Laws.ExpMinusCoinKernel
 import SampLib.PSRN.Syntax.PSRNExpMinusCoin
-import SampLib.PSRN.Support.LatentExactFloor
+import SampLib.PSRN.Support.Arithmetic.ExactFloor
 import SampLib.PSRN.Support.PSRNCoin
-import SampLib.PSRN.Support.LatentRationalSubtract
-import SampLib.PSRN.Support.LatentCoinExponential
+import SampLib.PSRN.Support.Arithmetic.RationalSubtract
+import SampLib.PSRN.Support.Exponential.CoinExponential
 
 /-! # Conditional negative-exponential trials from an owned PSRN
 

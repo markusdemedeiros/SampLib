@@ -61,7 +61,6 @@ variable {rT : Type} [MeasurableSpace rT] [LawfulProbLangℝ rT]
 variable {hlc : HasLC} {GF : BundledGFunctors} [ErisGS rT hlc GF]
 local bi (IProp GF)
 
-set_option maxHeartbeats 1000000 in
 private theorem twp_round (E : CoPset) (p : unitInterval) (a : ℕ → FromBounds.Interval p)
     (hlo : ∀ n, 0 ≤ (a n).lower) (hhi : ∀ n, (a n).upper ≤ (a n).denominator)
     (hden : ∀ n, (a n).denominator = 2 ^ (n + 1)) (lookup : Exp rT)
@@ -99,6 +98,7 @@ private theorem twp_round (E : CoPset) (p : unitInterval) (a : ℕ → FromBound
   rw [valid_guard (a n) (hlo n) (hhi n)]
   twp_pure
   rw [Program.loopValue_fst lookup l hlookup]
+  simp only [UniformBag.uniformBagLess_openRec]
   ieval (
     change _ ⊢ tglWp E
       (UniformBag.bracket l (a n).lower (a n).denominator (a n).upper (a n).denominator

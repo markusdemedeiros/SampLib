@@ -1,4 +1,4 @@
-import SampLib.PSRN.Support.PSRNGammaIntegerCore
+import SampLib.PSRN.Support.Gamma.IntegerCore
 import SampLib.PSRN.PSRNExponentialRational
 
 /-! # The original positive-integer gamma constructor

@@ -1,7 +1,11 @@
 import SampLib.Discrete.Laws.DiscreteLaplaceCredits
 import SampLib.Uniform.FairCoin
+import SampLib.Uniform.UniformInt
+import SampLib.Bernoulli.ExpMinusRational
+import SampLib.Continuous.GeometricFailures
 import SampLib.Core.Syntax.ClosedExp
 import Samplers.Discrete.Tails
+import SampLib.Core.Retry
 
 /-! # Exact discrete Laplace from a rational positive rate
 
@@ -93,17 +97,12 @@ private theorem twp_loop (E : CoPset) (s t : ℕ) (hs : 0 < s) (ht : 0 < t)
   have hlooplc := loop_lc (rT := rT) s t
   have hgeom := GeometricFailures.geometricFailures_distSpec (rT := rT) (GF := GF) E
     wholeBias whole_lt_one wholeCoin (wholeCoin_distSpec E) 0
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (one_lt_factor s t ht) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (one_lt_factor s t ht)
+  iintro !> %ε %hε IH Hcredit
   twp_pure
   twp_pure
   twp_bind pl(&Occil.uniformInt #int (t : ℤ))
-  icombine Hcredit Hterm as Htotal
-  ihave Hcredit := ErrorCredit.weaken (expectation_preservation s t hs ht F ε) $$ Htotal
+  ihave Hcredit := ErrorCredit.weaken (expectation_preservation s t hs ht F ε) $$ Hcredit
   iapply tglWp_wand
   isplitl [Hcredit]
   · iapply (UniformInt.twp_uniformInt E t ht (rankCredit s t hs ht F ε)) $$ Hcredit
@@ -120,9 +119,8 @@ private theorem twp_loop (E : CoPset) (s t : ℕ) (hs : 0 < s) (ht : 0 < t)
   | false =>
     twp_pure
     isimp only [expCredit, Bool.false_eq_true, ite_false, retryCredit] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     isimp [loop, Exp.close, Exp.closeRec] at IH
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
   | true =>
     twp_pure
     twp_bind pl(&Occil.geometricFailures &(wholeCoin (rT := rT)).fst #0)
@@ -145,9 +143,8 @@ private theorem twp_loop (E : CoPset) (s t : ℕ) (hs : 0 < s) (ht : 0 < t)
       · rw [hm]
         iterate 2 twp_pure
         isimp only [signCredit, hm, _root_.and_self, ite_true, retryCredit] at Hcredit
-        ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
         isimp [loop, Exp.close, Exp.closeRec] at IH
-        iapply IH $$ Hterm Hcredit
+        iapply IH $$ Hcredit
       · twp_pure
         rw [zero_test _ hm]
         twp_pure

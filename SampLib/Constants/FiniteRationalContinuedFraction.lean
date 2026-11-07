@@ -1,6 +1,7 @@
 import SampLib.Constants.Laws.FiniteRationalContinuedFraction
 import SampLib.Constants.RationalContinuedFraction
 import SampLib.Uniform.RationalCoin
+import SampLib.Core.Retry
 import Samplers.Constants.Engines
 
 /-! # Finite positive rational continued fractions
@@ -21,12 +22,6 @@ noncomputable section
 def encodeCoefficient {rT : Type} (c : Coefficient) : Val rT :=
   Val.pair (Val.int c.numerator)
     (Val.pair (Val.int c.denominator) (Val.pair (Val.int c.scale) (Val.bool c.last)))
-
-private theorem valid_guard (c : Coefficient) :
-    ((decide ((c.numerator : ℤ) ≤ 0) || decide ((c.denominator : ℤ) < c.numerator)) ||
-      decide ((c.scale : ℤ) ≤ 0)) = false := by
-  have hab : (c.numerator : ℤ) ≤ c.denominator := by exact_mod_cast c.bounded
-  simp [c.positive.ne', c.scale_pos.ne', not_lt.mpr hab]
 
 section specification
 
@@ -64,22 +59,12 @@ private theorem twp_terminal (E : CoPset) (c : Coefficient) (position : ℕ)
       tglWp E pl(&Occil.Constants.rationalContinuedFraction &coefficient.fst #int (position : ℤ))
         (fun v : Val rT => iprop(∃ b : Bool, ⌜v = Val.bool b⌝ ∗ ↯ (F b))) := by
   iintro Hcredit
-  iterate 3 twp_pure
-  twp_bind pl(&coefficient.fst #int (position : ℤ))
-  iapply tglWp_wand
-  isplitl []
-  · iapply hentry
-  iintro %v %hv
-  subst v
-  twp_pures
-  rw [valid_guard c]
-  twp_pure
-  rw [hlast]
-  twp_pure
+  iapply RationalContinuedFraction.twp_entry E coefficient position c.numerator c.denominator
+    c.scale c.last c.positive c.bounded c.scale_pos hentry
+  simp only [RationalContinuedFraction.round, hlast, ite_true]
   isimp only [← RealCoin.lintegral_law] at Hcredit
   iapply (direct_spec E c).spec F (measurable_of_countable _) $$ Hcredit
 
-set_option maxHeartbeats 1600000 in
 private theorem twp_nonterminal (E : CoPset) (c : Coefficient) (position : ℕ)
     (coefficient : Val rT) (hlast : c.last = false)
     (hentry : ⊢ tglWp E pl(&coefficient.fst #int (position : ℤ))
@@ -91,28 +76,15 @@ private theorem twp_nonterminal (E : CoPset) (c : Coefficient) (position : ℕ)
     ⊢ ↯ (RealCoin.credit (step c tail) F) -∗
       tglWp E pl(&Occil.Constants.rationalContinuedFraction &coefficient.fst #int (position : ℤ))
         (fun v : Val rT => iprop(∃ b : Bool, ⌜v = Val.bool b⌝ ∗ ↯ (F b))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert %F Hcredit
-  iapply ErrorCredit.Induction.simple hε (one_lt_factor c) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ %F Hcredit
-  iterate 3 twp_pure
-  twp_bind pl(&coefficient.fst #int (position : ℤ))
-  iapply tglWp_wand
-  isplitl []
-  · iapply hentry
-  iintro %v %hv
-  subst v
-  twp_pures
-  rw [valid_guard c]
-  twp_pure
-  rw [hlast]
-  iterate 2 twp_pure
+  irevert %F
+  iapply Retry.twp_loop_forall (fun _ => solve_not_value) (one_lt_factor c)
+  iintro !> %ε %hε %F IH Hcredit
+  iapply RationalContinuedFraction.twp_entry E coefficient position c.numerator c.denominator
+    c.scale c.last c.positive c.bounded c.scale_pos hentry
+  simp only [RationalContinuedFraction.round, hlast, Bool.false_eq_true, ite_false]
   twp_bind pl(&Occil.rationalCoin #int (c.denominator : ℤ)
     #int ((c.denominator : ℤ) + c.scale))
-  icombine Hcredit Hterm as Htotal
-  ihave Hsample := ErrorCredit.weaken (expectation c tail F ε) $$ Htotal
+  ihave Hsample := ErrorCredit.weaken (expectation c tail F ε) $$ Hcredit
   isimp only [← RealCoin.lintegral_law] at Hsample
   iapply ((selector_spec E c).wp (selectorCredit c tail F ε)
     (measurable_of_countable _) _) $$ Hsample
@@ -129,11 +101,10 @@ private theorem twp_nonterminal (E : CoPset) (c : Coefficient) (position : ℕ)
     cases b
     · twp_pure
       isimp only [tailCredit, Bool.false_eq_true, ite_false] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
       ieval (
         change _ ⊢ tglWp E
           pl(&Occil.Constants.rationalContinuedFraction &coefficient.fst #int (position : ℤ)) _)
-      iapply IH $$ Hterm %F Hcredit
+      iapply IH $$ %F Hcredit
     · twp_pures
       twp_value
       imodintro

@@ -1,4 +1,9 @@
-import SampLib.Latent.Laws.SameWorld
+module
+
+public import Mathlib.MeasureTheory.Measure.Prod
+public import SampLib.Latent.Laws.SameWorld
+
+@[expose] public section
 
 /-! # Independent latent worlds with shared product views
 

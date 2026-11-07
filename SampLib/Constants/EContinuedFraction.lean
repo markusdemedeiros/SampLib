@@ -145,15 +145,6 @@ private theorem selector_spec (E : CoPset) (a b : ℕ) (hb : 0 < b) (hab : b ≤
         have := scale_pos b j hb
         omega) (by omega)
 
-private theorem initial_budget (a b j : ℕ) (hb : 0 < b) (hab : b ≤ a) (δ : ℝ≥0∞) :
-    δ / 2 * (RationalContinuedFraction.potential (coefficients a b hb hab j) : ℝ≥0∞) ≤ δ := by
-  have ht : (RationalContinuedFraction.potential (coefficients a b hb hab j) : ℝ≥0∞) ≤ 2 := by
-    exact_mod_cast RationalContinuedFraction.potential_le_two (coefficients a b hb hab j)
-  calc
-    _ ≤ δ / 2 * 2 := mul_le_mul_of_nonneg_left ht (by positivity)
-    _ = δ := ENNReal.div_mul_cancel (by norm_num) (by norm_num)
-
-set_option maxHeartbeats 800000 in
 private theorem twp_weighted (E : CoPset) (a b : ℕ) (hb : 0 < b) (hab : b ≤ a)
     (ε : ℝ≥0∞) (hε : 0 < ε) :
     ⊢ ∀ j : {j : ℕ // 0 < j},
@@ -222,7 +213,8 @@ theorem twp_eContinuedFraction (E : CoPset) (a b j : ℕ) (hb : 0 < b)
   iapply twp_err_pos solve_not_value
   iintro %δ %hδ Hterm
   have hε : 0 < δ / 2 := ENNReal.div_pos hδ.ne' (by norm_num)
-  ihave Hterm := ErrorCredit.weaken (initial_budget a b j hb hab δ) $$ Hterm
+  ihave Hterm := ErrorCredit.weaken
+    (RationalContinuedFraction.initial_budget (coefficients a b hb hab j) δ) $$ Hterm
   iapply twp_weighted E a b hb hab (δ / 2) hε $$ %⟨j, hj⟩ Hterm %F Hcredit
 
 /-- Every positive source position samples its unique continued-fraction tail. -/

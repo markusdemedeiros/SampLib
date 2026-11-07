@@ -1,4 +1,5 @@
 import SampLib.Core.Laws.IntegerIntervals
+import SampLib.Core.Retry
 import SampLib.General.Support.IntegerThreshold
 import SampLib.Core.GeneralSyntax
 import SampLib.Core.SupportedSpec
@@ -57,20 +58,15 @@ private theorem twp_loop (E : CoPset) (D : Model) (density : Val rT)
     ⊢ ↯ (AcceptedProposal.credit (proposal D) (acceptance D) hmass F) -∗
       tglWp E pl(&(loop D density) #())
         (fun v : Val rT => iprop(∃ x : ℤ, ⌜v = Val.int x⌝ ∗ ↯ (F x))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε
-    (AcceptedProposal.one_lt_factor (proposal D) (acceptance D) hmass) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value
+    (AcceptedProposal.one_lt_factor (proposal D) (acceptance D) hmass)
+  iintro !> %ε %hε IH Hcredit
   isimp [loop, Exp.subst, Exp.close, Exp.closeRec]
   iterate 2 twp_pure
   twp_bind pl(&Occil.rndIntExcRange #int D.lower #int D.upper)
-  icombine Hcredit Hterm as Htotal
   ihave Hsample := ErrorCredit.weaken
     (AcceptedProposal.expectation_preservation (proposal D) (acceptance D)
-      (measurable_of_countable _) hmass F (measurable_of_countable _) ε) $$ Htotal
+      (measurable_of_countable _) hmass F (measurable_of_countable _) ε) $$ Hcredit
   iapply ((RndIntExcRange.rndIntExcRange_distSpec E D.lower D.upper D.interval).wp_supported
     (fun x => x ∈ Set.Ico D.lower D.upper) measurableSet_Ico
     (RndIntExcRange.ae_mem D.lower D.upper D.interval)
@@ -96,9 +92,8 @@ private theorem twp_loop (E : CoPset) (D : Model) (density : Val rT)
   cases b
   · twp_pure
     isimp only [coinCredit, Bool.false_eq_true, ite_false] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     isimp [loop, Exp.subst, Exp.close, Exp.closeRec] at IH
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
   · twp_pures
     twp_value
     imodintro

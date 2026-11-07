@@ -1,4 +1,5 @@
 import SampLib.Bernoulli.Laws.BernoulliRace
+import SampLib.Core.Retry
 import SampLib.Uniform.FairCoin
 import Samplers.Bernoulli.Basic
 import Metrology.Iris.LocalBI
@@ -36,20 +37,15 @@ theorem twp_bernoulliRace (E : CoPset) (p q : unitInterval) (hsum : 0 < (p : ℝ
     (F : Bool → ℝ≥0∞) :
     ⊢ ↯ (credit p q F) -∗ tglWp E pl(&Occil.bernoulliRace &left.fst &right.fst #())
       (fun v : Val rT => iprop(∃ b : Bool, ⌜v = Val.bool b⌝ ∗ ↯ (F b))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε (one_lt_factor p q hsum) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value (one_lt_factor p q hsum)
+  iintro !> %ε %hε IH Hcredit
   twp_pure
   twp_pure
   twp_pure
   twp_pure
   simp only [FairCoin.fairCoin_closeRec, FairCoin.fairCoin_openRec]
   twp_bind pl(&Occil.fairCoin #())
-  icombine Hcredit Hterm as Htotal
-  ihave Hsample := ErrorCredit.weaken (expectation p q hsum F ε) $$ Htotal
+  ihave Hsample := ErrorCredit.weaken (expectation p q hsum F ε) $$ Hcredit
   iapply ((FairCoin.fairCoin_distSpec E).wp (fairCredit p q F ε)
     (measurable_of_countable _) _) $$ Hsample
   iintro %side Hcredit
@@ -62,10 +58,9 @@ theorem twp_bernoulliRace (E : CoPset) (p q : unitInterval) (hsum : 0 < (p : ℝ
     cases success
     · twp_pure
       isimp only [coinCredit, Bool.false_eq_true, ite_false] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
       twp_bind pl(&Occil.bernoulliRace &left.fst &right.fst #())
       iapply (tglWp_mono fun _ => tglWp_value)
-      iapply IH $$ Hterm Hcredit
+      iapply IH $$ Hcredit
     · twp_pures
       twp_value
       imodintro
@@ -81,10 +76,9 @@ theorem twp_bernoulliRace (E : CoPset) (p q : unitInterval) (hsum : 0 < (p : ℝ
     cases success
     · twp_pure
       isimp only [coinCredit, Bool.false_eq_true, ite_false] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
       twp_bind pl(&Occil.bernoulliRace &left.fst &right.fst #())
       iapply (tglWp_mono fun _ => tglWp_value)
-      iapply IH $$ Hterm Hcredit
+      iapply IH $$ Hcredit
     · twp_pures
       twp_value
       imodintro

@@ -1,6 +1,6 @@
 import SampLib.PSRN.Syntax.PSRNExponentialWrappers
 import SampLib.PSRN.Syntax.PSRNCoordinateSum
-import SampLib.PSRN.Support.LatentDivideCoordinates
+import SampLib.PSRN.Support.Simplex.DivideCoordinates
 import SampLib.Core.GeneralSyntax
 
 /-! # Source opening for the exponential construction of a simplex vector -/

@@ -1,4 +1,5 @@
 import SampLib.General.Laws.LinearBin
+import SampLib.Core.Retry
 import SampLib.General.Support.IntegerThreshold
 import SampLib.Core.SupportedSpec
 
@@ -66,21 +67,17 @@ theorem twp_draw (E : CoPset) (D : Model) (F : ℤ → ℝ≥0∞) :
       (fun v : Val rT => iprop(∃ x : ℤ, ⌜v = Val.int x⌝ ∗ ↯ (F x))) := by
   iintro Hcredit
   isimp only [credit_eq] at Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
   irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε
+  iapply Retry.twp_loop solve_not_value
     (AcceptedProposal.one_lt_factor (UniformInt.law D.width) (acceptance D) (mass_ne_zero D))
-    $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iintro !> %ε %hε IH Hcredit
   iterate 2 twp_pure
   simp only [UniformInt.uniformInt_openRec, UniformInt.uniformInt_closeRec]
   twp_bind pl(&Occil.uniformInt #int (D.width : ℤ))
-  icombine Hcredit Hterm as Htotal
   ihave Hsample := ErrorCredit.weaken
     (AcceptedProposal.expectation_preservation (UniformInt.law D.width) (acceptance D)
       (measurable_of_countable _) (mass_ne_zero D) (fun j => F (D.left + (j : ℤ)))
-      (measurable_of_countable _) ε) $$ Htotal
+      (measurable_of_countable _) ε) $$ Hcredit
   iapply ((UniformInt.uniformInt_distSpec E D.width).wp_supported
     (fun k => k < D.width) (Set.to_countable _).measurableSet (UniformInt.ae_lt D.width)
     (AcceptedProposal.kernel (UniformInt.law D.width) (acceptance D) (mass_ne_zero D)
@@ -101,9 +98,8 @@ theorem twp_draw (E : CoPset) (D : Model) (F : ℤ → ℝ≥0∞) :
   cases b
   · twp_pure
     isimp only [coinCredit, Bool.false_eq_true, ite_false] at Hcredit
-    ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
     isimp [draw, Exp.close, Exp.closeRec] at IH
-    iapply IH $$ Hterm Hcredit
+    iapply IH $$ Hcredit
   · twp_pures
     twp_value
     imodintro

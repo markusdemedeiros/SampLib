@@ -1,3 +1,4 @@
+import SampLib.Core.Retry
 import SampLib.Core.SamplerStep
 import SampLib.Bernoulli.Laws.TwoCoin
 import SampLib.Uniform.RationalCoin
@@ -50,13 +51,9 @@ theorem twp_twoCoin (E : CoPset) (p q r β : unitInterval)
       tglWp E pl(&Occil.FactoryExtra.twoCoin &left.fst &right.fst
         #int (x : ℤ) #int (y : ℤ) #int (a : ℤ) #int (b : ℤ) #())
         (fun v : Val rT => iprop(∃ z : Bool, ⌜v = Val.bool z⌝ ∗ ↯ (F z))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert Hcredit
-  iapply ErrorCredit.Induction.simple hε
-    (BernoulliRetry.one_lt_factor (retry p q r β) (retry_lt_one p q r β h)) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ Hcredit
+  iapply Retry.twp_loop solve_not_value
+    (BernoulliRetry.one_lt_factor (retry p q r β) (retry_lt_one p q r β h))
+  iintro !> %ε %hε IH Hcredit
   rw [← source_fst (rT := rT)]
   iterate 8 (twp_step; simp [Exp.open', Exp.openRec, Exp.close, Exp.closeRec, Exp.ofVal,
     Var.internal.injEq, ProbLang.openRec_val_fst, RationalCoin.rationalCoin_openRec,
@@ -65,7 +62,6 @@ theorem twp_twoCoin (E : CoPset) (p q r β : unitInterval)
   rw [guard_false x y hxy, Bool.or_false]
   twp_pure
   twp_bind pl(&Occil.rationalCoin #int (a : ℤ) #int (b : ℤ))
-  icombine Hcredit Hterm as Hcredit
   ihave Hcredit := ErrorCredit.weaken (expectation p q r β h F ε) $$ Hcredit
   iapply (hportkey.wp (portkeyCredit p q r β F ε) (measurable_of_countable _) _) $$ Hcredit
   iintro %proceed Hcredit
@@ -93,11 +89,10 @@ theorem twp_twoCoin (E : CoPset) (p q r β : unitInterval)
       cases accepted
       · twp_pure
         isimp only [inputCredit, Bool.false_eq_true, ite_false] at Hcredit
-        ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
         twp_bind pl(&(source (rT := rT)).fst &left.fst &right.fst
           #int (x : ℤ) #int (y : ℤ) #int (a : ℤ) #int (b : ℤ) #())
         iapply (tglWp_mono fun _ => tglWp_value)
-        iapply IH $$ Hterm Hcredit
+        iapply IH $$ Hcredit
       · twp_pures
         twp_value
         imodintro
@@ -113,11 +108,10 @@ theorem twp_twoCoin (E : CoPset) (p q r β : unitInterval)
       cases accepted
       · twp_pure
         isimp only [inputCredit, Bool.false_eq_true, ite_false] at Hcredit
-        ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
         twp_bind pl(&(source (rT := rT)).fst &left.fst &right.fst
           #int (x : ℤ) #int (y : ℤ) #int (a : ℤ) #int (b : ℤ) #())
         iapply (tglWp_mono fun _ => tglWp_value)
-        iapply IH $$ Hterm Hcredit
+        iapply IH $$ Hcredit
       · twp_pures
         twp_value
         imodintro

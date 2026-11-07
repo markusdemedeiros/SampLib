@@ -2,7 +2,9 @@ import SampLib.Core.Syntax.ClosedExp
 import SampLib.Latent.UniformBagBracket
 import Samplers.Constants.Engines
 
-/-! Closedness of the positive-series engine, without unfolding it in consumers. -/
+/-! # Closedness of the positive-series engine
+
+Consumers use these facts without unfolding the engine. -/
 
 open ProbLang
 

@@ -1,4 +1,4 @@
-import SampLib.PSRN.Support.LatentRejectionKernel
+import SampLib.PSRN.Support.Events.RejectionKernel
 
 /-! # Rejection preserving an accepted deferred real
 

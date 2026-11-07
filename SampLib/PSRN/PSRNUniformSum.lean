@@ -1,7 +1,7 @@
 import SampLib.Latent.LatentUniform
-import SampLib.PSRN.Support.LatentRational
-import SampLib.PSRN.Support.LatentProduct
-import SampLib.PSRN.Support.LatentAddition
+import SampLib.PSRN.Support.Arithmetic.Rational
+import SampLib.PSRN.Support.Arithmetic.Product
+import SampLib.PSRN.Support.Arithmetic.Addition
 import SampLib.Continuous.UniformSum
 import SampLib.PSRN.Syntax.PSRNUniformSum
 

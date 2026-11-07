@@ -1,7 +1,7 @@
 import SampLib.Core.CurriedStep
 import SampLib.Latent.Syntax.PSRNDigits
 import SampLib.PSRN.Syntax.ExponentialCount
-import SampLib.PSRN.Support.PSRNExponentialLogistic
+import SampLib.PSRN.Support.Exponential.Logistic
 
 /-! # The decay-based exponential constructor's literal nested closures -/
 

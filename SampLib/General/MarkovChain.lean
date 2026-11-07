@@ -1,3 +1,4 @@
+import SampLib.Discrete.WeightedChoice
 import SampLib.General.Laws.Markov
 import SampLib.Core.SupportedSpec
 import SampLib.Core.MarkovTerms

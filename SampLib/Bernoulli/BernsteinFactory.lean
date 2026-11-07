@@ -1,5 +1,6 @@
 import SampLib.Core.ListEncoding
 import SampLib.Common.Laws.Binomial
+import SampLib.Discrete.Binomial
 import SampLib.Uniform.RationalCoin
 import Samplers.Bernoulli.Combinators
 

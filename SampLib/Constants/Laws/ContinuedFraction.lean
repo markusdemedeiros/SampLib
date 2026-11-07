@@ -1,6 +1,6 @@
 module
 
-public import SampLib.Constants.Laws.RealContinuedFraction
+public import SampLib.Constants.Laws.RealContinuedFractionBudget
 
 @[expose] public section
 
@@ -73,6 +73,13 @@ theorem exists_value (a : ℕ → Coefficient) (i : ℕ) :
     (⋂ n : ℕ, range (expand a i n)).Nonempty := by
   simpa only [expand_eq] using RealContinuedFraction.exists_value (sequence a) i
 
+/-- No two values can remain in every finite-prefix interval. -/
+theorem unique_value (a : ℕ → Coefficient) (i : ℕ) (x y : unitInterval)
+    (hx : ∀ n, x ∈ range (expand a i n)) (hy : ∀ n, y ∈ range (expand a i n)) :
+    x = y :=
+  RealContinuedFraction.unique_value (sequence a) i x y
+    (fun n => by simpa only [expand_eq] using hx n) (fun n => by simpa only [expand_eq] using hy n)
+
 /-- The real value enclosed by all finite continued-fraction prefixes. -/
 def value (a : ℕ → Coefficient) (i : ℕ) : unitInterval :=
   Classical.choose (exists_value a i)
@@ -112,7 +119,7 @@ theorem recursive_budget (a : ℕ → Coefficient) (i : ℕ) :
       (3 / 4 : ℝ) * (potential (a i) : ℝ) := by
   rw [value_eq]
   exact RealContinuedFraction.recursive_budget (sequence a) i
-    (by exact_mod_cast (a (i + 1)).positive)
+    (show (1 : ℝ) ≤ (a (i + 1)).numerator from Nat.one_le_cast.mpr (a (i + 1)).positive)
 
 end
 

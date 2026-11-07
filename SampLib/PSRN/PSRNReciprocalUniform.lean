@@ -1,6 +1,6 @@
 import SampLib.PSRN.Laws.ReciprocalUniform
-import SampLib.PSRN.Support.LatentUniformRepresentation
-import SampLib.PSRN.Support.LatentRepresentedReciprocal
+import SampLib.PSRN.Support.Represented.Uniform
+import SampLib.PSRN.Support.Represented.Reciprocal
 import Samplers.PSRN.Uniform
 
 /-! # A reciprocal uniform with shared deferred digits

@@ -1,5 +1,6 @@
 import SampLib.Constants.Laws.AlgebraicRoot
 import SampLib.Uniform.UniformInt
+import SampLib.Core.Retry
 import Samplers.Constants.Engines
 
 /-! # Bernoulli sampling by rational sign tests
@@ -90,18 +91,14 @@ private theorem twp_loop (E : CoPset) (p : unitInterval) (hp : (p : ℝ) < 1)
     ⊢ ↯ (RealCoin.credit c.probability F) -∗
       tglWp E pl(&(loop oracle s) #int (c.index : ℤ) #int ((2 * c.scale : ℕ) : ℤ))
         (fun v : Val rT => iprop(∃ a : Bool, ⌜v = Val.bool a⌝ ∗ ↯ (F a))) := by
-  iintro Hcredit
-  iapply twp_err_pos solve_not_value
-  iintro %ε %hε Hterm
-  irevert %c Hcredit
-  iapply ErrorCredit.Induction.simple (k := 2) hε (by norm_num) $$ [] Hterm
-  iintro !> ⟨IH, Hterm⟩ %c Hcredit
+  irevert %c
+  iapply Retry.twp_loop_forall (k := 2) (fun _ => solve_not_value) (by norm_num)
+  iintro !> %ε %hε %c IH Hcredit
   isimp only [ENNReal.coe_ofNat] at IH
   iterate 3 twp_pure
   simp only [UniformInt.uniformInt_openRec]
   twp_bind pl(&Occil.uniformInt #2)
-  icombine Hcredit Hterm as Htotal
-  ihave Hsample := ErrorCredit.weaken (expectation c F ε) $$ Htotal
+  ihave Hsample := ErrorCredit.weaken (expectation c F ε) $$ Hcredit
   iapply tglWp_wand
   isplitl [Hsample]
   · iapply (UniformInt.twp_uniformInt E 2 (by decide) (bitCredit c F ε)) $$ Hsample
@@ -127,8 +124,7 @@ private theorem twp_loop (E : CoPset) (p : unitInterval) (hp : (p : ℝ) < 1)
       rw [int_beq, neg_sign_ne_self s hs]
       iterate 4 twp_pure
       isimp [bitCredit, hlt.ne, hlt.le] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
-      ispecialize IH $$ Hterm %(c.left hlt.le) Hcredit
+      ispecialize IH $$ %(c.left hlt.le) Hcredit
       isimp [loop, Cell.left, Exp.openRec, ProbLang.openRec_val_fst,
         UniformInt.uniformInt_openRec] at IH
       isimp [Exp.ofVal, UniformInt.uniformInt_openRec]
@@ -176,8 +172,7 @@ private theorem twp_loop (E : CoPset) (p : unitInterval) (hp : (p : ℝ) < 1)
       rw [int_beq, beq_self_eq_true]
       iterate 4 twp_pure
       isimp [bitCredit, ne_of_gt hgt, not_le_of_gt hgt] at Hcredit
-      ihave ⟨Hcredit, Hterm⟩ := ErrorCredit.split $$ Hcredit
-      ispecialize IH $$ Hterm %(c.right hgt.le) Hcredit
+      ispecialize IH $$ %(c.right hgt.le) Hcredit
       isimp [loop, Cell.right, Exp.openRec, ProbLang.openRec_val_fst,
         UniformInt.uniformInt_openRec] at IH
       isimp [Exp.ofVal, UniformInt.uniformInt_openRec]

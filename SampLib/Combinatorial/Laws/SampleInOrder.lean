@@ -1,7 +1,7 @@
 module
 
 public import Mathlib.MeasureTheory.Measure.Dirac.Basic
-public import Mathlib.MeasureTheory.Integral.Lebesgue.Add
+public import Mathlib.MeasureTheory.Integral.Lebesgue.Countable
 public import Mathlib.Data.List.Sublists
 public import Mathlib.Tactic.FieldSimp
 

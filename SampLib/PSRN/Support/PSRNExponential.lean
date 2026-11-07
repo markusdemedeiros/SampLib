@@ -1,5 +1,5 @@
-import SampLib.PSRN.Support.PSRNExponentialOracle
-import SampLib.PSRN.Support.LatentExponentialSource
+import SampLib.PSRN.Support.Exponential.Oracle
+import SampLib.PSRN.Support.Exponential.Source
 
 /-! # The decay-based exponential sampler
 

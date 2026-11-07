@@ -1,4 +1,4 @@
-import SampLib.Bernoulli.Laws.AlternatingSeries
+import SampLib.Bernoulli.Laws.AlternatingSeriesMean
 
 /-! # Pairing the factorial coefficients of `exp(p²)(1-p)` -/
 

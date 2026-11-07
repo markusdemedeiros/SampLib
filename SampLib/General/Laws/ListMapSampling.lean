@@ -1,5 +1,9 @@
-import Metrology.ProbLang.Discrete
-import Mathlib.MeasureTheory.Measure.Prod
+module
+
+public import Metrology.ProbLang.Discrete
+public import Mathlib.MeasureTheory.Measure.Prod
+
+@[expose] public section
 
 /-! # Independent list map law -/
 
